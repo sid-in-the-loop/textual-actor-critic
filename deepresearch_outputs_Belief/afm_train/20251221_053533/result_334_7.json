@@ -1,0 +1,25 @@
+{
+    "answer": "The content of Figure 22 is not described in the provided search results.",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        801,
+        2143,
+        3521,
+        4890,
+        6581,
+        1315
+    ]
+}

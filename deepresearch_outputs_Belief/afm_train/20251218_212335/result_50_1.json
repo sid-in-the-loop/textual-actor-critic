@@ -1,0 +1,19 @@
+{
+    "answer": "Taylor & Francis",
+    "ground_truth": "Frontiers in Education",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        633,
+        815,
+        1740
+    ]
+}

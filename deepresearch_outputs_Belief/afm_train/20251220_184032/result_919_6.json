@@ -1,0 +1,19 @@
+{
+    "answer": "IMF revised its 2026 global GDP growth projection from 3.0% (April 2025) to 3.1% (April 2025), representing an increase of 0.1 percentage point.",
+    "ground_truth": "3.0% (April 2025); 3.3% (January 2025)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        896,
+        2118,
+        3390
+    ]
+}

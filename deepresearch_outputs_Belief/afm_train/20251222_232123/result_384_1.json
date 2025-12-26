@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to determine the proportion; the available information provides group-wide revenue figures, not a specific regional breakdown for Spain.",
+    "ground_truth": "41%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2265,
+        3517,
+        4891,
+        6425,
+        7967,
+        9437
+    ]
+}

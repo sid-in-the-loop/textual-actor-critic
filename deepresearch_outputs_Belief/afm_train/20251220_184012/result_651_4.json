@@ -1,0 +1,19 @@
+{
+    "answer": "The Federal Budget, 2023 PDF",
+    "ground_truth": "Financial Report of the United States Government (2023)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1635,
+        2608
+    ]
+}

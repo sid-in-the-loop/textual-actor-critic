@@ -1,0 +1,19 @@
+{
+    "answer": "2025 Mid-Year Outlook: Comfortably Uncomfortable, J.P. Morgan Private Bank",
+    "ground_truth": "Market outlook 2025: Navigating cross-currents (J.P. Morgan Global Research)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2145,
+        3526
+    ]
+}

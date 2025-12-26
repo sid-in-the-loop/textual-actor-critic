@@ -1,0 +1,27 @@
+{
+    "answer": "Performance Data Pro, which is a data portal/central website for the department's financial performance information.",
+    "ground_truth": "Budget and Performance\uff08U.S. Department of Commerce\u5b98\u7f51\u680f\u76ee\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        2124,
+        3554,
+        4606,
+        5208,
+        6178,
+        6759
+    ]
+}

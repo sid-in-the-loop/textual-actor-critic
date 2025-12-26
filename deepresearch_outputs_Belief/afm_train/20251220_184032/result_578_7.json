@@ -1,0 +1,17 @@
+{
+    "answer": "Top 5 Hiring Trends Reshaping The Workforce In 2025",
+    "ground_truth": "Forbes Business Council 2025\u4eba\u624d\u62db\u8058\u8d8b\u52bf\u4e13\u9898\u6587\u7ae0\u7cfb\u5217",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        2319
+    ]
+}

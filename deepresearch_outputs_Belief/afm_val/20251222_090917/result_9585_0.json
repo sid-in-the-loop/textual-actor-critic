@@ -1,0 +1,19 @@
+{
+    "answer": "Short period; Gale Digital Scholar Lab and Gale Primary Sources archives.",
+    "ground_truth": "six months' access to the Gale Digital Scholar Lab and a relevant Gale Primary Sources archive",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        1578,
+        2572
+    ]
+}

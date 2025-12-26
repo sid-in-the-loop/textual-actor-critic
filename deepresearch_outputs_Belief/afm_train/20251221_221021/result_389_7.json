@@ -1,0 +1,19 @@
+{
+    "answer": "Peterson's Magazine",
+    "ground_truth": "Peterson's Magazine",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        680,
+        1690,
+        2981
+    ]
+}

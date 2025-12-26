@@ -1,0 +1,21 @@
+{
+    "answer": "Social Media Seen as Mostly Good for Democracy Across Many Nations, But U.S. is a Major Outlier",
+    "ground_truth": "Global views of social media and its impacts on society | Pew Research Center",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        745,
+        2520,
+        3857,
+        4950
+    ]
+}

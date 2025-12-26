@@ -1,0 +1,19 @@
+{
+    "answer": "Be MediaWise\u2014Lessons to Teach Media Literacy",
+    "ground_truth": "Poynter Media Literacy Special Article Collection",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        807,
+        1809,
+        2831
+    ]
+}

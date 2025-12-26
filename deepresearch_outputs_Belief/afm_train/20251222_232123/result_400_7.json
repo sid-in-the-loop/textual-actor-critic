@@ -1,0 +1,21 @@
+{
+    "answer": "State-based armed conflict",
+    "ground_truth": "Russia will do more than any other country to subvert the global order in 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        790,
+        1842,
+        2954,
+        4093
+    ]
+}

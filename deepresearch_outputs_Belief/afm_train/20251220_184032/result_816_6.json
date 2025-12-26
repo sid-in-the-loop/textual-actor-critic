@@ -1,0 +1,19 @@
+{
+    "answer": "PVP\u8f85\u52a9\u6c34\u70ed\u6cd5\u5236\u5907\u677f\u949b\u77ffTiO2\u53ca\u5149\u50ac\u5316\u6027\u80fd",
+    "ground_truth": "Precursor-directed synthesis of well-faceted brookite TiO \n 2\n \u200b\n  single crystals for efficient photocatalytic performances",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        870,
+        2653,
+        4352
+    ]
+}

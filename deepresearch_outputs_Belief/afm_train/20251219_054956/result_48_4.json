@@ -1,0 +1,29 @@
+{
+    "answer": "Figure 4",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1969,
+        2516,
+        3015,
+        3673,
+        5059,
+        5968,
+        7270
+    ]
+}

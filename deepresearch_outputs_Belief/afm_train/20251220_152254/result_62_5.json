@@ -1,0 +1,27 @@
+{
+    "answer": "The specific percentage increase in graduate certificate enrollments for Spring 2024 from the \"2025 Landscape of Higher Education Report\" is not explicitly provided in the accessible summaries.",
+    "ground_truth": "10%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1695,
+        2303,
+        3462,
+        4087,
+        4637,
+        5123
+    ]
+}

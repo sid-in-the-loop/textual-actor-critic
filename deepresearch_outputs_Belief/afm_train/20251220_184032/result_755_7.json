@@ -1,0 +1,19 @@
+{
+    "answer": "11% year-over-year increase. The global retail sales value for the consumer products industry in 2024 is not explicitly stated in the provided snippets, but the year-over-year increase is 11%. The exact global retail sales value for 2024 is not found in the given information.",
+    "ground_truth": "2024: $7,500,000,000,000; increase: 7.5%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        2244,
+        3613
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "9,293 million; 2%; 1,495 million; 1,259 million",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        982,
+        2468,
+        4004,
+        5224
+    ]
+}

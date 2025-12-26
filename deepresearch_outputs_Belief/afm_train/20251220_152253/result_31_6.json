@@ -1,0 +1,27 @@
+{
+    "answer": "Journalism has increasingly rejected absolute deference to politicians, favoring insistent and probing reporting for truth and accountability.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        831,
+        1842,
+        2925,
+        1000,
+        2736,
+        3069,
+        4508
+    ]
+}

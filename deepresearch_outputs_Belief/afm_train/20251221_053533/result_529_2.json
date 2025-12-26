@@ -1,0 +1,21 @@
+{
+    "answer": "Unable to find a single overall conference ranking or composite score for the Big Ten Conference's academic progress rate for the 2025 season. Data is often reported individually for Big Ten football programs.",
+    "ground_truth": "2025 NCAA Academic Progress Rate\u6392\u540d\uff08Big Ten\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        2410,
+        3753,
+        5206
+    ]
+}

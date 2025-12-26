@@ -1,0 +1,19 @@
+{
+    "answer": "Significant legal development regarding use of wartime authority in deportations (ACLU sues Trump on March 27, 2025)",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        799,
+        2293,
+        3765
+    ]
+}

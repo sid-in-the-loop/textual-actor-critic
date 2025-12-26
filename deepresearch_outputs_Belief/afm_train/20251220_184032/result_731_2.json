@@ -1,0 +1,19 @@
+{
+    "answer": "Based on the chart in the \"Financial Results Quarter I 2025 - conpet sa\" report, CONPET's COTE share showed volatility and appreciation consistent with the BET index, as it directly tracks the evolution of COTE versus the BET index (rebased, in RON).",
+    "ground_truth": "Higher volatility and stronger appreciation",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        858,
+        2220,
+        3793
+    ]
+}

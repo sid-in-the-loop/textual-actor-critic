@@ -1,0 +1,29 @@
+{
+    "answer": "NameCheck, an alert for account mismatch as amended June 2024, displays the message \"NAMECHECK_FEATURE_NAMECHK_EXTERNALPAYEE_ACCOUNT_NAME_DOES_NOT_MATCH_BANK_RECORDS.\"",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        2292,
+        3532,
+        4078,
+        4663,
+        5129,
+        5584,
+        5908
+    ]
+}

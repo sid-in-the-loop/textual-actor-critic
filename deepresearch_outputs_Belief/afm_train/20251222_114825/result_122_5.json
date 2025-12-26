@@ -1,0 +1,21 @@
+{
+    "answer": "Research Fellow or Research Scholar at Stanford Center on China's Economy and Institutions",
+    "ground_truth": "strategic policy advisor",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1051,
+        2414,
+        3109
+    ]
+}

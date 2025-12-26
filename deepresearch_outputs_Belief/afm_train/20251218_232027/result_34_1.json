@@ -1,0 +1,21 @@
+{
+    "answer": "Senior policy analyst at RAND Corporation",
+    "ground_truth": "Senior policy analyst",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1865,
+        2597,
+        3034
+    ]
+}

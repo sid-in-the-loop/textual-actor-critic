@@ -1,0 +1,23 @@
+{
+    "answer": "Each Zhihu column page has a unique title (corresponding to the <title> tag).",
+    "ground_truth": "Tianyi Think Tank (Zhihu Column)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        702,
+        1700,
+        2792,
+        4479,
+        5805
+    ]
+}

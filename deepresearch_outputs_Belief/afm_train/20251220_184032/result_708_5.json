@@ -1,0 +1,17 @@
+{
+    "answer": "Apple's 10-Q filing for the fiscal quarter ended December 28, 2024",
+    "ground_truth": "Apple FY2025 First Quarter Financial Results Press Release",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        2038
+    ]
+}

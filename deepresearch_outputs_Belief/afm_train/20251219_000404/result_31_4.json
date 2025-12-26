@@ -1,0 +1,23 @@
+{
+    "answer": "New Journalism challenges perceived objectivity in journalism.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1648,
+        2886,
+        3859,
+        4981
+    ]
+}

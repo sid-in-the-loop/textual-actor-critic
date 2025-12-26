@@ -1,0 +1,27 @@
+{
+    "answer": "Zhu Yuanzhang",
+    "ground_truth": "Empress Wu Zetian",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        1738,
+        2853,
+        3855,
+        5217,
+        6363,
+        7418
+    ]
+}

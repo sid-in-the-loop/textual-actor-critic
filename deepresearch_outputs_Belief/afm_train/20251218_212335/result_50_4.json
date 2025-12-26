@@ -1,0 +1,19 @@
+{
+    "answer": "\u0418; \u0432",
+    "ground_truth": "Frontiers in Education",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        641,
+        1678,
+        1813
+    ]
+}

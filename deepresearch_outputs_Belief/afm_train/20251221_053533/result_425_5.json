@@ -1,0 +1,23 @@
+{
+    "answer": "Evidence was filed on 2 October 2024. The next case management hearing is scheduled for 9 December 2025.",
+    "ground_truth": "evidence due by 2025-06, next hearing 2025-07-02",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        838,
+        2173,
+        3568,
+        4939,
+        6420
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to determine the content type and subject of Figure 22. The search results only confirm its existence within the April 2025 World Economic Outlook, without providing the specific details of the image.",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        765,
+        2039,
+        3396,
+        4636,
+        5927,
+        7144,
+        8572
+    ]
+}

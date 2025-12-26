@@ -1,0 +1,23 @@
+{
+    "answer": "The proportion of search result pages did not appear to be stated on the \"List of academic databases and search engines\" Wikipedia page as of August 2014.",
+    "ground_truth": "75%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        1838,
+        2778,
+        3309,
+        3920
+    ]
+}

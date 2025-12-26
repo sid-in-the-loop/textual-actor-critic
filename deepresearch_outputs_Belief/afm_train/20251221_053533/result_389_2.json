@@ -1,0 +1,19 @@
+{
+    "answer": "Janus (science fiction magazine) had a longer publication run (1975-1980 vs. Peterson's Magazine 1842-1898).",
+    "ground_truth": "Peterson's Magazine",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        661,
+        1716,
+        2577
+    ]
+}

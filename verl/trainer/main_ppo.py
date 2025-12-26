@@ -69,10 +69,22 @@ class TaskRunner:
         from verl.utils import hf_processor, hf_tokenizer
 
         trust_remote_code = config.data.get("trust_remote_code", False)
-        tokenizer = hf_tokenizer(local_path, trust_remote_code=trust_remote_code)
-        processor = hf_processor(local_path, trust_remote_code=trust_remote_code, use_fast=True)  # used for multimodal LLM, could be none
-
+        tokenizer_path = config.actor_rollout_ref.model.get("tokenizer_path", None)
+        if tokenizer_path is not None:
+            # Check if it's a HuggingFace Hub model ID (doesn't start with / or hdfs://)
+            # For Hub IDs, use directly; for local/HDFS paths, use copy_to_local
+            if not tokenizer_path.startswith("/") and not tokenizer_path.startswith("hdfs://"):
+                # HuggingFace Hub model ID - use directly
+                tokenizer_local_path = tokenizer_path
+            else:
+                # Local or HDFS path - use copy_to_local
+                tokenizer_local_path = copy_to_local(tokenizer_path, use_shm=config.actor_rollout_ref.model.get("use_shm", False))
+        else:
+            tokenizer_local_path = local_path
+        tokenizer = hf_tokenizer(tokenizer_local_path, trust_remote_code=trust_remote_code)
+        processor = hf_processor(tokenizer_local_path, trust_remote_code=trust_remote_code, use_fast=True)  # used for multimodal LLM, could be none
         # vllm early verify
+        
         if config.actor_rollout_ref.rollout.name in ["vllm"]:
             from verl.utils.vllm_utils import is_version_ge
 
@@ -152,9 +164,16 @@ class TaskRunner:
         resource_pool_manager = ResourcePoolManager(resource_pool_spec=resource_pool_spec, mapping=mapping)
 
         assert config.actor_rollout_ref.rollout.n == 1, "In verl, actor_rollout_ref.rollout.n>1 is for GRPO. In verl+env, we keep n=1, and achieve GRPO by env.rollout.n"
-
         from agent_system.multi_turn_rollout import TrajectoryCollector
         traj_collector = TrajectoryCollector(config=config, tokenizer=tokenizer, processor=processor)
+
+        # Initialize OpenAI agent if configured
+        openai_agent = None
+        if config.actor_rollout_ref.get("use_openai_agent", False):
+            from agent_system.multi_turn_rollout.openai_agent import OpenAIAgentWorker
+            openai_config = config.actor_rollout_ref.get("openai_config", {})
+            openai_agent = OpenAIAgentWorker(tokenizer=tokenizer, config=openai_config)
+            print("Using OpenAI agent (GPT-5-mini via CMU Gateway) for trajectory collection")
 
         from verl.utils.dataset.rl_dataset import collate_fn
 
@@ -179,6 +198,7 @@ class TaskRunner:
             envs=envs,
             val_envs=val_envs,
             critique_envs=critique_envs,
+            openai_agent=openai_agent,
         )
         trainer.init_workers()
         trainer.fit()

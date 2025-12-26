@@ -1,0 +1,21 @@
+{
+    "answer": "ICLR uses cookies for essential functions only. We do not sell your personal information.",
+    "ground_truth": "Cookies for essential functions only",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        1810,
+        2662,
+        3361
+    ]
+}

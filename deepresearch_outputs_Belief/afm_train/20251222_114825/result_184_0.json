@@ -1,0 +1,25 @@
+{
+    "answer": "The Economic Times website, when navigated through its societal issues section, does not appear to have a specific section detailing financial losses prevented by Maharashtra Cyber since 2019.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        2316,
+        3847,
+        5419,
+        6844,
+        8184
+    ]
+}

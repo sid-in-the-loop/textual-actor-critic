@@ -1,0 +1,29 @@
+{
+    "answer": "FY2025 Hospital IQR Program Requirements for CY2025",
+    "ground_truth": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        753,
+        2046,
+        2705,
+        1057,
+        1408,
+        1950,
+        2554,
+        3260
+    ]
+}

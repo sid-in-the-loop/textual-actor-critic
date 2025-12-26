@@ -1,0 +1,17 @@
+{
+    "answer": "UN DESA Publications",
+    "ground_truth": "DESA Publications\uff08\u8054\u5408\u56fd\u7ecf\u6d4e\u548c\u793e\u4f1a\u4e8b\u52a1\u90e8\u51fa\u7248\u7269\uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        692,
+        1599
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Victor K.2 XL191 (s/n XL191)",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2225,
+        3741,
+        4828,
+        6094,
+        7782
+    ]
+}

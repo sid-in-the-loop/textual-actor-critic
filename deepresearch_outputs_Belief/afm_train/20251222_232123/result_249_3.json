@@ -1,0 +1,19 @@
+{
+    "answer": "Share Your Research Story in The Conversation",
+    "ground_truth": "The Conversation Academic research \u4e3b\u9898\u9875\u9762",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        1635,
+        2575
+    ]
+}

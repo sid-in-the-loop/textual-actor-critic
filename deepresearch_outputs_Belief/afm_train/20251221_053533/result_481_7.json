@@ -1,0 +1,19 @@
+{
+    "answer": "3,466 senior technology leaders",
+    "ground_truth": "More than 2,500",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        1875,
+        2974
+    ]
+}

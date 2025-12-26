@@ -1,0 +1,21 @@
+{
+    "answer": "Age: 18-25 (specifically stated in the journal's description for this study)\nInternational Student Status: Included in the sample characteristics (implied by the journal's scope)\nPercentage of participants who consented to access of their academic records: 26.4% (from the result summary of the article)",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2032,
+        3488,
+        4889
+    ]
+}

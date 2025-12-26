@@ -1,0 +1,21 @@
+{
+    "answer": "Percentage increase: 5.47%, New total: $13.574bn",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        844,
+        2015,
+        3376,
+        4797
+    ]
+}

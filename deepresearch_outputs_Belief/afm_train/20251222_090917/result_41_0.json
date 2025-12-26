@@ -1,0 +1,17 @@
+{
+    "answer": "Improving counter-unmanned aircraft systems (CUAS) and their ability to take down drones, and deploying AI on the battlefield.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2131
+    ]
+}

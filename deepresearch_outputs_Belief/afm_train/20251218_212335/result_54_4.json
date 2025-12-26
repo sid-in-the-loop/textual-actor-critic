@@ -1,0 +1,23 @@
+{
+    "answer": "Mohamed",
+    "ground_truth": "Art Studies",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1167,
+        1596,
+        2819,
+        3541,
+        3907
+    ]
+}

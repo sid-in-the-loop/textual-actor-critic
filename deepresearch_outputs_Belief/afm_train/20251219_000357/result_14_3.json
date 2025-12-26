@@ -1,0 +1,21 @@
+{
+    "answer": "The blog post does not contain a specific launch announcement made by an independent UGC entity to kick off the new year; it discusses future cancer research and treatment advances.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        1970,
+        3494,
+        5009
+    ]
+}

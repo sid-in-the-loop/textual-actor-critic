@@ -1,0 +1,23 @@
+{
+    "answer": "Despite rising bond yields, the S&P 500 performed resiliently over the past three months.",
+    "ground_truth": "increased by more than 3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1070,
+        1625,
+        2207,
+        2729
+    ]
+}

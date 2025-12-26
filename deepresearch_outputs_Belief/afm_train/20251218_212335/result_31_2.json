@@ -1,0 +1,27 @@
+{
+    "answer": "New Journalism",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        1824,
+        2946,
+        4545,
+        4997,
+        5376,
+        6222
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "answer": "Florida",
+    "ground_truth": "At the Malaca\u00f1ang Palace",
+    "rewards": [
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 1,
+    "search count": 0,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809
+    ]
+}

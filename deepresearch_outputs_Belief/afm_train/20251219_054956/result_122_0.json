@@ -1,0 +1,21 @@
+{
+    "answer": "Associate Director",
+    "ground_truth": "strategic policy advisor",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        885,
+        1831,
+        3457,
+        3716
+    ]
+}

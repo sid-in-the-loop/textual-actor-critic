@@ -1,0 +1,27 @@
+{
+    "answer": "The specific section of the International Paper 2024 Annual Report discussing the competitive environment may not be explicitly highlighted as a dedicated \"Competitive Environment\" section. Further searches within the identified PDF file and web page for related phrases proved unproductive, indicating such a section does not appear in the manner the question describes.",
+    "ground_truth": "Competition",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        707,
+        1940,
+        2172,
+        3557,
+        4336,
+        6322,
+        6922
+    ]
+}

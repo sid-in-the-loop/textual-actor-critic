@@ -1,0 +1,29 @@
+{
+    "answer": "Shop sign",
+    "ground_truth": "Man in an apron using a tablet among stools and furnishings",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        922,
+        2134,
+        2414,
+        3559,
+        4740,
+        5171,
+        5597,
+        5981
+    ]
+}

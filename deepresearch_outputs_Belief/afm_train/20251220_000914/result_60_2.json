@@ -1,0 +1,21 @@
+{
+    "answer": "The main title is \"The Vacation Maximized\"; the introductory theme presented on the first page is \"A MESSAGE FROM OUR PRESIDENT & CHIEF EXECUTIVE OFFICER. Chris Nassetta.\"",
+    "ground_truth": "2025 Hilton Trends Report: The Vacation Maximized",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2080,
+        3212,
+        4252
+    ]
+}

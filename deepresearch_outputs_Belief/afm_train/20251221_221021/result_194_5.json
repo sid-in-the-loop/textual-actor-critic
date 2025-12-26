@@ -1,0 +1,25 @@
+{
+    "answer": "Media & Networks Market Size & Outlook",
+    "ground_truth": "FADA Releases FY'25 and March'25 Vehicle Retail Data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2136,
+        3595,
+        4946,
+        6390,
+        7862
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "No official AACR source matching the specified blog post was found.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        1076,
+        1339,
+        1661,
+        2065,
+        2538
+    ]
+}

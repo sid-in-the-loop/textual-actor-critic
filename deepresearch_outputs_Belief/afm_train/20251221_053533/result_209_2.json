@@ -1,0 +1,29 @@
+{
+    "answer": "53,000,000 picoseconds (5.3 \u00d7 10^7 ps) due to special relativity",
+    "ground_truth": "330.76",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        2250,
+        3496,
+        4759,
+        6111,
+        7931,
+        9912,
+        10546
+    ]
+}

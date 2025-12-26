@@ -1,0 +1,19 @@
+{
+    "answer": "New Energy Outlook 2025",
+    "ground_truth": "First Quarter Report 2025 - Cloudberry Clean Energy ASA",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        721,
+        2061,
+        3179
+    ]
+}

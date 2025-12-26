@@ -1,0 +1,23 @@
+{
+    "answer": "Web of Science categorizes subject areas into \"Research Areas,\" with main categories including Arts and Humanities, Social Sciences, and Life Sciences & Biomedicine.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1874,
+        2963,
+        4081,
+        5655
+    ]
+}

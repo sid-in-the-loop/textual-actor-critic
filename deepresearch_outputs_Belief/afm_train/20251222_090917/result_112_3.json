@@ -1,0 +1,23 @@
+{
+    "answer": "24.1% of articles, 5 for-profit companies (Reed-Elsevier, Springer Science+Business Media, Wiley-Blackwell, Taylor & Francis, and Sage) contributed to this market share.",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        1648,
+        2829,
+        3978,
+        5175
+    ]
+}

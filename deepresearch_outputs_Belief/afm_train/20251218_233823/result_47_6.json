@@ -1,0 +1,15 @@
+{
+    "answer": "Round one favor typhoon status force very USA-sefuture past action \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 1,
+    "search count": 0,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831
+    ]
+}

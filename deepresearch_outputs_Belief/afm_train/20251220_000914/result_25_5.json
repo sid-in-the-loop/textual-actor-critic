@@ -1,0 +1,27 @@
+{
+    "answer": "Hierarchical organization with multiple categories per journal.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1899,
+        3198,
+        4612,
+        5905,
+        7193,
+        8451
+    ]
+}

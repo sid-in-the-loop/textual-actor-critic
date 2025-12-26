@@ -1,0 +1,25 @@
+{
+    "answer": "Age: 74.1% (n = 11,027) aged between 18 and 25 years; International students: 25% (n = 2,504); Consented to access academic records: 85%",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        2098,
+        3461,
+        4814,
+        6039,
+        7172
+    ]
+}

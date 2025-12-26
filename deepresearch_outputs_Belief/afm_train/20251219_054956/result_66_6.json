@@ -1,0 +1,23 @@
+{
+    "answer": "0 (no article reporting on financial losses prevented by Maharashtra Cyber specifically, nor a mechanism for filtering by published date and subject mentioned)",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2422,
+        3851,
+        5282,
+        7136
+    ]
+}

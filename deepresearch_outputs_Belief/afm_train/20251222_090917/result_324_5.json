@@ -1,0 +1,25 @@
+{
+    "answer": "22% of BBC television viewing is via BBC iPlayer, an increase from 14% in 2022, and iPlayer requests (streams) grew by nearly 10% year on year in 2023.",
+    "ground_truth": "BBC Online account usage grew 11% year-on-year in 2023; BBC iPlayer had a record-breaking year in 2023",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        1836,
+        3058,
+        4298,
+        5837,
+        7228
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Information regarding the Action for Children full-time post until the end of October 2025 and who has been designated to fill this position is not available in the provided search results.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        922,
+        2154,
+        3334,
+        4633,
+        6019
+    ]
+}

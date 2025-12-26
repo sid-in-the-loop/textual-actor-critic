@@ -1,0 +1,19 @@
+{
+    "answer": "Funding Ratios (DB schemes) section within the Joint Committee Update on Risks and Vulnerabilities in the EU Financial System \u2013 Spring 2025.",
+    "ground_truth": "Funding Ratios (DB schemes) section; Solvency II regulatory framework; Reference date: 2024-09-30",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        2021,
+        3371
+    ]
+}

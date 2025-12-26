@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to locate specific funding amount for C.P.I. and its affiliated organizations in 2022 within the specified New Yorker article.",
+    "ground_truth": "$200,000,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1876,
+        2231,
+        2692,
+        3216,
+        3695,
+        4824
+    ]
+}

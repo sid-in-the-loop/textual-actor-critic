@@ -1,0 +1,21 @@
+{
+    "answer": "Rooster Teeth is 16 years older than Meg Turner.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2011,
+        3027,
+        4007
+    ]
+}

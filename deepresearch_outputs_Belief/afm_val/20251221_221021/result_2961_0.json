@@ -1,0 +1,17 @@
+{
+    "answer": "416 auctions, 5 percent increase",
+    "ground_truth": "Over 2,500,000 auction bids; 431% increase",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        871,
+        2000
+    ]
+}

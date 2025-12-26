@@ -1,0 +1,23 @@
+{
+    "answer": "Scientific Reports, Volume 13, Issue 1, Article 432, Jan 9, 2023, PMC9828383",
+    "ground_truth": "Scientific Reports 2023 13:432 (PMCID: PMC9828383)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1913,
+        3363,
+        4440,
+        5687
+    ]
+}

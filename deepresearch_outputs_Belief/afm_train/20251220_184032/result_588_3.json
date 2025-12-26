@@ -1,0 +1,17 @@
+{
+    "answer": "December 2024 inflation was at 2.4%, slightly below the CBN's target of 2%",
+    "ground_truth": "34.8%, target 21%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        902,
+        2149
+    ]
+}

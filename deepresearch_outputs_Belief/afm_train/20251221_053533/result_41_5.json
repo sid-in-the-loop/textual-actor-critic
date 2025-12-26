@@ -1,0 +1,27 @@
+{
+    "answer": "OpenAI and Anduril, announced on December 4, 2024, partnership focuses on bringing AI to the battlefield.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        945,
+        2121,
+        2429,
+        3011,
+        3412,
+        4385
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "There is no unique bank; all 29 G-SIBs are equally listed.",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        1907,
+        3200,
+        4424,
+        5644
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Prototype",
+    "ground_truth": "Lone Fungus\uff08\u5b64\u72ec\u771f\u83cc\uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        2152,
+        3123
+    ]
+}

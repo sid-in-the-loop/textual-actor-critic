@@ -1,0 +1,23 @@
+{
+    "answer": "Low-carbon scenarios like SSP1&RCP2.6 reduce projected urban water scarcity facing populations by 2050.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1270,
+        1934,
+        2523,
+        3893
+    ]
+}

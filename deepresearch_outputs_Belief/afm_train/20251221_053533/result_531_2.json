@@ -1,0 +1,21 @@
+{
+    "answer": "Yes, Figure 1 in the State Council Notice on the Publication of Made in China 2025 is shown with the U.S. Chamber of Commerce.",
+    "ground_truth": "Only U.S. Chamber of Commerce logo and branding",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        914,
+        1154,
+        2586,
+        4037
+    ]
+}

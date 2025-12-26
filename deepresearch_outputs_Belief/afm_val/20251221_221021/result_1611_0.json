@@ -1,0 +1,21 @@
+{
+    "answer": "A. Dana M\u00e9nard and John F. Trant",
+    "ground_truth": "Both ADM and JFT",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        710,
+        1712,
+        2742,
+        3961
+    ]
+}

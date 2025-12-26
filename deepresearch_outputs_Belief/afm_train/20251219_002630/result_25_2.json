@@ -1,0 +1,27 @@
+{
+    "answer": "Web of Science Core Collection",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1964,
+        3014,
+        4280,
+        5578,
+        6700,
+        7746
+    ]
+}

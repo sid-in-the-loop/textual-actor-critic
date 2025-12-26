@@ -1,0 +1,27 @@
+{
+    "answer": "site:pbs.org/newshour tag:project-2025",
+    "ground_truth": "PBS NewsHour \"Project 2025\" special report collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        1893,
+        3014,
+        4283,
+        5474,
+        6764,
+        8127
+    ]
+}

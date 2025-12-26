@@ -1,0 +1,21 @@
+{
+    "answer": "Company Name Reports Fourth Quarter and Full Year 2023 Financial Results",
+    "ground_truth": "Apple reports fourth quarter results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        753,
+        2008,
+        3413,
+        4674
+    ]
+}

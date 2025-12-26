@@ -1,0 +1,21 @@
+{
+    "answer": "13 is not a recognized academic code for a first-level art discipline.",
+    "ground_truth": "Art Studies",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        722,
+        1727,
+        2694,
+        3712
+    ]
+}

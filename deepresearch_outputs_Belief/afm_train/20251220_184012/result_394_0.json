@@ -1,0 +1,23 @@
+{
+    "answer": "The Red Guards",
+    "ground_truth": "The Gang of Four",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2028,
+        3321,
+        4644,
+        5760
+    ]
+}

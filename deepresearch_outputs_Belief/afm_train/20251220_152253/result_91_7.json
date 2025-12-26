@@ -1,0 +1,17 @@
+{
+    "answer": "TRM Labs 2025 Crypto Crime Report",
+    "ground_truth": "The Illicit Crypto Economy Report (2025)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        1839
+    ]
+}

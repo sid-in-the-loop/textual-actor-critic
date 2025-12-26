@@ -1,0 +1,21 @@
+{
+    "answer": "Both real GDP and real personal consumption expenditure are increasing after the second quarter of 2023.",
+    "ground_truth": "Stabilized after Q2 2023",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2182,
+        3530,
+        4809
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "ca.go.ke/reports-and-studies",
+    "ground_truth": "Sector Statistics Reports for the Financial Year 2023/2024 (Communications Authority of Kenya)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        2071,
+        2820,
+        3651
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "This work is supported by the Ministry of Science and Technology of Taiwan.",
+    "ground_truth": "This work is supported by the Ministry of Science and Technology of Taiwan (MOST 110-2124-M-010-001).",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1915,
+        2064,
+        2215,
+        2433
+    ]
+}

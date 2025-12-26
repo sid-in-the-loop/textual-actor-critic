@@ -1,0 +1,29 @@
+{
+    "answer": "The Trevor Project 2025 US National Survey on the Mental Health of LGBTQ+ Young People",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1777,
+        2776,
+        3952,
+        5201,
+        7025,
+        8480,
+        9081
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "250+ Grand Categories and 14 broad areas (from NSF WebCASPAR) as Subject Areas.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        1873,
+        3033,
+        4321,
+        5558
+    ]
+}

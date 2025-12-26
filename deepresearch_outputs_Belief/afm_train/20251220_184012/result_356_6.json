@@ -1,0 +1,19 @@
+{
+    "answer": "The citation importing feature was implemented in 2006 supporting bibliography managers such as RefWorks, RefMan, EndNote, and BibTeX.",
+    "ground_truth": "Citation importing feature, 2006, RefWorks, RefMan, EndNote, BibTeX",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        1686,
+        2762
+    ]
+}

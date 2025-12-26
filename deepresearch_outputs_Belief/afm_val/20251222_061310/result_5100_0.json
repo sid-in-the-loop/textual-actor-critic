@@ -1,0 +1,23 @@
+{
+    "answer": "+1 800 526 4720",
+    "ground_truth": "+1 800 678 4333",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1997,
+        3314,
+        4380,
+        5483
+    ]
+}

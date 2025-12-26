@@ -1,0 +1,17 @@
+{
+    "answer": "He did not play for a Premier League team in 1902, as the Premier League was formed in 1992.",
+    "ground_truth": "Liverpool Football Club",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        693,
+        2270
+    ]
+}

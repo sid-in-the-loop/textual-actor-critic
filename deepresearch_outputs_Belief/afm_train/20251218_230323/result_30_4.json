@@ -1,0 +1,21 @@
+{
+    "answer": "In an Australian banking first, NameCheck will prompt you if the account details on a new payment don't look right.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        940,
+        2356,
+        3810,
+        5047
+    ]
+}

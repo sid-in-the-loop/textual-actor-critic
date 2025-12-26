@@ -1,0 +1,17 @@
+{
+    "answer": "Developing reliable and valid approaches for measuring and monitoring sustainable well-being",
+    "ground_truth": "SUSTAINABILITY AND CLIMATE",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1787
+    ]
+}

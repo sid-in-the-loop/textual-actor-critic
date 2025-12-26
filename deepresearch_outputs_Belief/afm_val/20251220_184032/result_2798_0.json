@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 36 is not found in the Vision 2025 report.",
+    "ground_truth": "Conceptual illustration: small human figures on binary-number background; no quantitative data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        874,
+        2289,
+        3468,
+        4748
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Cannot be determined due to lack of 2024/2025 revenue data for Treasury Brisbane Hotel for the key period and the difference from revenue for 2023.",
+    "ground_truth": "5.4%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        916,
+        2165,
+        2965,
+        4965,
+        6012,
+        7021,
+        1653
+    ]
+}

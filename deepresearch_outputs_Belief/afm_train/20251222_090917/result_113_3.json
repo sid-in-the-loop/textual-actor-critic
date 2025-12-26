@@ -1,0 +1,27 @@
+{
+    "answer": "Information on how the primary figure's color gradient bar illustrates value progression across the top ten regulatory challenges for 2025 and whether this visual encoding maintains a monotonic trend is not available in the search results.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        2079,
+        3320,
+        4569,
+        5932,
+        7345,
+        8719
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "APU Portal Site",
+    "ground_truth": "Ritsumeikan \u30a2\u30b8\u30a2 Pacific University Academic Information \u30b5\u30a4\u30c8: Academic Information\uff08 https://www.apu.ac.jp/academic/ \uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        719,
+        1304,
+        2210
+    ]
+}

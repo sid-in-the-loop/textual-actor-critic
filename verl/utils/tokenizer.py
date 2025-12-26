@@ -13,6 +13,7 @@
 # limitations under the License.
 """Utils for tokenization."""
 
+import os
 import warnings
 
 __all__ = ["hf_tokenizer", "hf_processor"]
@@ -55,7 +56,30 @@ def hf_tokenizer(name_or_path, correct_pad_token=True, correct_gemma2=True, **kw
         warnings.warn("Found gemma-2-2b-it tokenizer. Set eos_token and eos_token_id to <end_of_turn> and 107.", stacklevel=1)
         kwargs["eos_token"] = "<end_of_turn>"
         kwargs["eos_token_id"] = 107
-    tokenizer = AutoTokenizer.from_pretrained(name_or_path, **kwargs)
+    
+    # Handle local filesystem paths - check if path exists locally
+    is_local_path = False
+    if isinstance(name_or_path, str):
+        # Check if it's an absolute path or relative path
+        if os.path.isabs(name_or_path) or name_or_path.startswith('./') or name_or_path.startswith('../'):
+            # Check if the path actually exists
+            if os.path.exists(name_or_path):
+                # Path exists - treat as local
+                is_local_path = True
+            # Also treat absolute paths as local even if they don't exist yet
+            # (they might be created by copy_to_local or be valid local paths)
+            elif os.path.isabs(name_or_path):
+                is_local_path = True
+    
+    if is_local_path:
+        # It's a local path - load directly
+        # HuggingFace should handle local paths correctly when they exist
+        # We don't use local_files_only=True because it still validates as repo ID first
+        tokenizer = AutoTokenizer.from_pretrained(name_or_path, **kwargs)
+    else:
+        # It's a HuggingFace Hub repo ID, load normally
+        tokenizer = AutoTokenizer.from_pretrained(name_or_path, **kwargs)
+    
     if correct_pad_token:
         set_pad_token_id(tokenizer)
     return tokenizer

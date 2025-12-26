@@ -1,0 +1,23 @@
+{
+    "answer": "Breakthroughs Shared Measurement",
+    "ground_truth": "Future of Social Impact Annual Series (FSG Annual Trend Outlook Series Articles)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        712,
+        2126,
+        3072,
+        3599,
+        4152
+    ]
+}

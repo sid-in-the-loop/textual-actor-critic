@@ -1,0 +1,29 @@
+{
+    "answer": "Journal of International Affairs",
+    "ground_truth": "Hispanic American Historical Review",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        862,
+        1111,
+        2533,
+        2779,
+        4199,
+        5548,
+        7065,
+        7542
+    ]
+}

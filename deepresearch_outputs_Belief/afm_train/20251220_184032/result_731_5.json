@@ -1,0 +1,23 @@
+{
+    "answer": "CONPET's share increased by 7.69% in Q1 2025, and its volatility (beta 0.33) was lower than the market index BET.",
+    "ground_truth": "Higher volatility and stronger appreciation",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        902,
+        2659,
+        4109,
+        5371,
+        6658
+    ]
+}

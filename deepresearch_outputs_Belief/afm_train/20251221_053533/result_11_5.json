@@ -1,0 +1,21 @@
+{
+    "answer": "No, the information is not explicit.",
+    "ground_truth": "Yes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        2224,
+        3710,
+        5059
+    ]
+}

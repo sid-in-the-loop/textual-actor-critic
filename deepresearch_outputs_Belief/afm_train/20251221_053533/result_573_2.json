@@ -1,0 +1,23 @@
+{
+    "answer": "No specific invitation was found in November 2025 related to the Employment Rights Bill and the Adult Social Care Negotiating Body from Unison Health & Community Services, based on the available documentation.",
+    "ground_truth": "asked to join FPA working group by Department of Health and Social Care",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        1879,
+        3115,
+        3669,
+        4790
+    ]
+}

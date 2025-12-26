@@ -1,0 +1,23 @@
+{
+    "answer": "7.1.1 \"Consolidated financial statements\"",
+    "ground_truth": "2024 Management report and Annual consolidated financial statements (ENGIE)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        2084,
+        3541,
+        4893,
+        5433
+    ]
+}

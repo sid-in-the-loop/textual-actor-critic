@@ -1,0 +1,21 @@
+{
+    "answer": "r = 0.05, p = 0.71",
+    "ground_truth": "r = -0.66; p < 0.001",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        1730,
+        3036,
+        4180
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "2024 Annual report on cash assistance",
+    "ground_truth": "Global Report",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        708,
+        1721
+    ]
+}

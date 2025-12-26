@@ -1,0 +1,21 @@
+{
+    "answer": "53.1% of the 2025 Capital Program funds are allocated for municipal buildings, with $232.9 million allocated.",
+    "ground_truth": "$232,900,000 (53.1%)",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2272,
+        3659,
+        4643
+    ]
+}

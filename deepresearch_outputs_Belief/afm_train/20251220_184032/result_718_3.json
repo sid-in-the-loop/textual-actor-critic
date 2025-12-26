@@ -1,0 +1,21 @@
+{
+    "answer": "Strada Nuova",
+    "ground_truth": "Carrubeo recto",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2371,
+        3774,
+        4851
+    ]
+}

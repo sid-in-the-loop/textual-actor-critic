@@ -1,0 +1,17 @@
+{
+    "answer": "The section is `m.economictimes.com/news/politics`",
+    "ground_truth": "Economic Times Politics section",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        1903
+    ]
+}

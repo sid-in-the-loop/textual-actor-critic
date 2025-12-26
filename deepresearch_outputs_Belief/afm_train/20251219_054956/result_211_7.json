@@ -1,0 +1,23 @@
+{
+    "answer": "Count of p-values",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        913,
+        1151,
+        1964,
+        2894,
+        3942
+    ]
+}

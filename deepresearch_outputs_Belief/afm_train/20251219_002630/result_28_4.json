@@ -1,0 +1,27 @@
+{
+    "answer": "The FTC, in conjunction with the DOJ, imposed a $50.1 million fine on OMICS Publishing Group in 2019, under the US federal government's framework for regulating \"unfair and deceptive practices.\"",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        2591,
+        4400,
+        5204,
+        7001,
+        8576,
+        9570
+    ]
+}

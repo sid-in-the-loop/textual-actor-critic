@@ -1,0 +1,25 @@
+{
+    "answer": "The potential of AI to combat reviewer fatigue in the peer review process, highlighting tools for reviewer matching, language refinement, and identification of qualified reviewers from vast reviewer databases (as a solution to a critical challenge).",
+    "ground_truth": "The Future of Peer Review: Innovations and Challenges for 2024-2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        2089,
+        3270,
+        4950,
+        6281,
+        7481
+    ]
+}

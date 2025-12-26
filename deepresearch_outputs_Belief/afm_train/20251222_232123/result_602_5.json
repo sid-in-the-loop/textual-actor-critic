@@ -1,0 +1,25 @@
+{
+    "answer": "Coursera Skills Reports page",
+    "ground_truth": "Coursera Skills Reports Collection Page\uff08 https://www.coursera.org/skills-reports/ \uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        1739,
+        2782,
+        3737,
+        4802,
+        5751
+    ]
+}

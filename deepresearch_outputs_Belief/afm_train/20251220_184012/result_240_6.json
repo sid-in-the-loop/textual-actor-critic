@@ -1,0 +1,17 @@
+{
+    "answer": "18 units of whole blood",
+    "ground_truth": "18 units",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        889,
+        2067
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "The most frequently categorized type of proof on ProofWiki's main page cannot be determined from the provided search results.",
+    "ground_truth": "Proven Results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1654,
+        2646,
+        3721,
+        4812,
+        5811
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "3. Final Reports",
+    "ground_truth": "3. \u671f\u672b\u30ec\u30dd\u30fc\u30c8 | \u7acb\u547d\u9928\u30a2\u30b8\u30a2\u592a\u5e73\u6d0b\u5927\u5b66",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        996,
+        1800,
+        2718
+    ]
+}

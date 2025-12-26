@@ -1,0 +1,23 @@
+{
+    "answer": "dotesports.com",
+    "ground_truth": "S1mple joined FaZe Clan",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        832,
+        2018,
+        3235,
+        4556,
+        5674
+    ]
+}

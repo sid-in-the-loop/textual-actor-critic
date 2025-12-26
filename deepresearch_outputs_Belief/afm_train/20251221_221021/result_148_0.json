@@ -1,0 +1,27 @@
+{
+    "answer": "GLM and XGB models have lower test MAPE values than the GAM model, across most regions.",
+    "ground_truth": "GLM and XGB yielded lower MAPE than GAM",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        854,
+        2024,
+        2501,
+        3071,
+        3476,
+        4012,
+        4538
+    ]
+}

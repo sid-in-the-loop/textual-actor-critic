@@ -1,0 +1,19 @@
+{
+    "answer": "The main categories (Science, Social Sciences, Arts and Humanities) use \"General Categories\" (e.g., Engineering, Physics, Medicine) and their \"Subject Areas\" (e.g., Agronomy, Literature, Chemical) to uniquely categorize disciplines within their broader scientific domains, with over 250 distinct subject areas.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        2125,
+        3453
+    ]
+}

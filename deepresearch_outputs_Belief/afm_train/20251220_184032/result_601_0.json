@@ -1,0 +1,17 @@
+{
+    "answer": "Mean age: 28.8 years, standard deviation: 8.30, range: 18\u201365",
+    "ground_truth": "Mean: 17.5 years; SD: 5.7 years; Range: 10 to 53 years",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        2080
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Nature",
+    "ground_truth": "Nature\uff08\u56fd\u9645\u79d1\u5b66\u671f\u520a\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        1732,
+        2552,
+        2794,
+        3908
+    ]
+}

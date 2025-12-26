@@ -1,0 +1,23 @@
+{
+    "answer": "Yes",
+    "ground_truth": "No academic chart visible",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        1912,
+        2974,
+        4049,
+        4339
+    ]
+}

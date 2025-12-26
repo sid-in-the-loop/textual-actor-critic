@@ -1,0 +1,23 @@
+{
+    "answer": "Yes, the selected document contains a figure titled 'MAZDA CX-90 First Half Sales Volume & US Market Share'.",
+    "ground_truth": "Chart is referenced but not present in image",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        861,
+        2533,
+        3912,
+        5301,
+        6629
+    ]
+}

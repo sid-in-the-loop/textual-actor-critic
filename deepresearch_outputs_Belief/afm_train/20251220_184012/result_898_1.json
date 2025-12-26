@@ -1,0 +1,21 @@
+{
+    "answer": "Three journals aim to bridge theory and practice, and three explicitly mention practitioners.",
+    "ground_truth": "three; three",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        1901,
+        2186,
+        3229
+    ]
+}

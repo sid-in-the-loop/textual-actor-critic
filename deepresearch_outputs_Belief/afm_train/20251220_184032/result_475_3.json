@@ -1,0 +1,23 @@
+{
+    "answer": "Increased interest-related costs impacted MTS's Q3 net profits.",
+    "ground_truth": "almost 90% drop",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        1285,
+        1847,
+        2523,
+        3291
+    ]
+}

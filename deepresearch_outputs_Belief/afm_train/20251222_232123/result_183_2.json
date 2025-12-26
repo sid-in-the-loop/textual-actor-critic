@@ -1,0 +1,17 @@
+{
+    "answer": "\u6c11\u8425\u7ecf\u6d4e\u7814\u7a76 (econ.GN)",
+    "ground_truth": "Economics > General Economics (arXiv: econ.GN)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1583
+    ]
+}

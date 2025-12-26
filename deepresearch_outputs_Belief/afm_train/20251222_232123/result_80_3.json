@@ -1,0 +1,19 @@
+{
+    "answer": "2020\u5e74",
+    "ground_truth": "\u7535\u89c6",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        2004,
+        3455
+    ]
+}

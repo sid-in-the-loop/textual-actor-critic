@@ -1,0 +1,21 @@
+{
+    "answer": "Community Health Centres (CHCs)",
+    "ground_truth": "Unison Health & Community Services",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        2019,
+        2973,
+        3932
+    ]
+}

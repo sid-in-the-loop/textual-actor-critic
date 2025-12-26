@@ -1,0 +1,17 @@
+{
+    "answer": "The Web of Science categorization system is structured within the Web of Science Core Collection, which then includes General Categories and their sub-areas with specialized domains and article categories.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        1868
+    ]
+}

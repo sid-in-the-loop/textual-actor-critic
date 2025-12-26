@@ -1,0 +1,25 @@
+{
+    "answer": "Frances F. Denny",
+    "ground_truth": "Chris Joseph",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        926,
+        2080,
+        2974,
+        4170,
+        5385,
+        6656
+    ]
+}

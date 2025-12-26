@@ -1,0 +1,23 @@
+{
+    "answer": "Market share and growth figures for GLP-1 in Region China, with a key value of 81%.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        936,
+        2414,
+        3792,
+        4314,
+        6031
+    ]
+}

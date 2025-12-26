@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in the 'Academic publishing' Wikipedia article.",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        1802,
+        2777,
+        3817,
+        4918,
+        6192,
+        6520
+    ]
+}

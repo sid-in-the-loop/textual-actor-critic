@@ -1,0 +1,25 @@
+{
+    "answer": "\u22120.045",
+    "ground_truth": "3 points increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1219,
+        2436,
+        3692,
+        4977,
+        6245
+    ]
+}

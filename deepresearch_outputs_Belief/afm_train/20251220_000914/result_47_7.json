@@ -1,0 +1,27 @@
+{
+    "answer": "A high level of strategic flashpoint status.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        876,
+        2216,
+        3405,
+        4696,
+        6057,
+        6632,
+        8118
+    ]
+}

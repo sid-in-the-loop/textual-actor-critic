@@ -1,0 +1,27 @@
+{
+    "answer": "Zuckerberg's company's response",
+    "ground_truth": "no response from Mark Zuckerberg",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1929,
+        3155,
+        4343,
+        5708,
+        7105,
+        7572
+    ]
+}

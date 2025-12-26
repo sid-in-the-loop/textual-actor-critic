@@ -1,0 +1,21 @@
+{
+    "answer": "Data Collection & Final Submission Deadlines for the FY 2025 IRF",
+    "ground_truth": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        2029,
+        3404,
+        4123
+    ]
+}

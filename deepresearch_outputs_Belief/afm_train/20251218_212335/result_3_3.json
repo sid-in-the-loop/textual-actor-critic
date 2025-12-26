@@ -1,0 +1,29 @@
+{
+    "answer": "Andrew Finegold and Barbara Moulard",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        2605,
+        2846,
+        3134,
+        4283,
+        5121,
+        5428,
+        6684
+    ]
+}

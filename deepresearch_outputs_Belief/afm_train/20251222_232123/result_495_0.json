@@ -1,0 +1,17 @@
+{
+    "answer": "The Best Colleges in America: What the Data Tells Us",
+    "ground_truth": "The 2025 U.S. News & World Report Rankings Are Here\u2014What You Need To Know",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        1745
+    ]
+}

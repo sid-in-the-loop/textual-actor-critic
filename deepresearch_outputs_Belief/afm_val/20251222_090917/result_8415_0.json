@@ -1,0 +1,27 @@
+{
+    "answer": "https://dl.acm.org/doi/10.1145/3544548.3580688",
+    "ground_truth": "https://osf.io/e4fxu",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        900,
+        1868,
+        3023,
+        4103,
+        5337,
+        6579,
+        7828
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "AI-driven strategies, the continued growth of short-form video, and soundless advertising.",
+    "ground_truth": "10 key marketing trends for the US in 2025\uff08askattest.com\u6587\u7ae0\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1698
+    ]
+}

@@ -16,6 +16,9 @@
 import torch
 import numpy as np
 from verl import DataProto
+import matplotlib.pyplot as plt
+import os
+import wandb
 from verl.utils.dataset.rl_dataset import collate_fn
 from verl.utils.model import compute_position_id_with_mask
 import verl.utils.torch_functional as verl_F
@@ -27,6 +30,7 @@ from agent_system.multi_turn_rollout.utils import process_image, to_list_of_dict
 from agent_system.environments import EnvironmentManagerBase
 from agent_system.critique.critique import *
 from agent_system.critique.rule_reward_new import *
+from agent_system.belief_calculator import BeliefCalculator
 from typing import List, Dict
 from tensordict import TensorDict
 import time
@@ -531,11 +535,61 @@ class TrajectoryCollector:
         )
         return gen_batch_output
 
+    def plot_belief_curves(self, completed_belief_trajectories):
+        """Plot belief score curves over turns for completed trajectories and return plot data."""
+        if not completed_belief_trajectories:
+            return None
+
+        # Group trajectories by episode length for plotting
+        trajectories_by_length = {}
+        for traj in completed_belief_trajectories:
+            length = traj['episode_length']
+            if length not in trajectories_by_length:
+                trajectories_by_length[length] = []
+            trajectories_by_length[length].append(traj)
+
+        # Plot curves for different episode lengths
+        plt.figure(figsize=(12, 8))
+
+        colors = ['blue', 'red', 'green', 'orange', 'purple', 'brown', 'pink', 'gray', 'olive', 'cyan']
+        plotted_lengths = []
+
+        for i, (length, trajectories) in enumerate(sorted(trajectories_by_length.items())):
+            if length in [10, 20, 30, 40, 50]:  # Only plot specified lengths
+                color = colors[i % len(colors)]
+                plotted_lengths.append(length)
+
+                # Plot multiple trajectories for this length
+                for j, traj in enumerate(trajectories[:5]):  # Plot up to 5 trajectories per length
+                    belief_scores = traj['trajectory']
+                    turns = list(range(1, len(belief_scores) + 1))
+
+                    label = f'Length {length}' if j == 0 else None
+                    alpha = 0.7 if j == 0 else 0.3  # Make first trajectory more prominent
+
+                    plt.plot(turns, belief_scores, color=color, alpha=alpha, linewidth=2 if j == 0 else 1,
+                           label=label if j == 0 else None)
+
+        if plotted_lengths:
+            plt.xlabel('Turn Number')
+            plt.ylabel('Belief Score')
+            plt.title('Belief Scores Over Turns by Episode Length')
+            plt.legend()
+            plt.grid(True, alpha=0.3)
+            plt.ylim(0, 1)  # Belief scores are typically 0-1
+
+            # Return the plot figure instead of saving
+            return plt.gcf()
+        else:
+            plt.close()
+            return None
+
     def vanilla_multi_turn_loop(
             self,
             gen_batch: DataProto, 
             actor_rollout_wg, 
             envs: EnvironmentManagerBase,
+            openai_agent=None,
             ) -> DataProto:
         """
         Collects trajectories through parallel agent-environment agent_loop.
@@ -606,6 +660,33 @@ class TrajectoryCollector:
         total_infos = [[] for _ in range(batch_size)]
         episode_lengths = np.zeros(batch_size, dtype=np.int32)
         episode_rewards = np.zeros(batch_size, dtype=np.float32)
+
+        # Belief-shaped GRPO initialization
+        belief_calculator = None
+        belief_scores_accumulated = np.zeros(batch_size, dtype=np.float32)
+        previous_beliefs = [0.0] * batch_size  # Initialize with 0.0 instead of None
+        belief_scores_over_time = [[] for _ in range(batch_size)]  # Track belief scores per step per rollout
+        completed_belief_trajectories = []  # Store completed belief trajectories for plotting
+        use_pure_belief_grpo = False
+
+        print(f"DEBUG: Checking belief GRPO config - pure_belief_grpo: {getattr(self.config.env, 'pure_belief_grpo', 'NOT_FOUND')}")
+        print(f"DEBUG: Checking belief GRPO config - belief_shaped_grpo: {getattr(self.config.env, 'belief_shaped_grpo', 'NOT_FOUND')}")
+
+        if hasattr(self.config.env, 'pure_belief_grpo') and self.config.env.pure_belief_grpo.get('enable', False):
+            alpha = self.config.env.pure_belief_grpo.get('alpha', 1.0)
+            max_candidates = self.config.env.pure_belief_grpo.get('max_candidates', 5)
+            print(f"🔬 INITIALIZING Pure Belief GRPO with alpha={alpha}, max_candidates={max_candidates}")
+            belief_calculator = BeliefCalculator(alpha=alpha, max_candidates=max_candidates, max_workers=8)
+            use_pure_belief_grpo = True
+            print(f"✅ Pure Belief GRPO enabled - USING ONLY BELIEF SCORES AS REWARD")
+        elif hasattr(self.config.env, 'belief_shaped_grpo') and self.config.env.belief_shaped_grpo.get('enable', False):
+            alpha = self.config.env.belief_shaped_grpo.get('alpha', 1.0)
+            max_candidates = self.config.env.belief_shaped_grpo.get('max_candidates', 5)
+            print(f"🔬 INITIALIZING Belief-shaped GRPO with alpha={alpha}, max_candidates={max_candidates}")
+            belief_calculator = BeliefCalculator(alpha=alpha, max_candidates=max_candidates, max_workers=8)
+            print(f"✅ Belief-shaped GRPO enabled - ADDING BELIEF SCORES TO TERMINAL REWARDS")
+
+        print(f"🎯 Belief calculator initialized: {belief_calculator is not None}")
         
         # Trajectory collection loop
         for _step in range(self.config.env.max_steps):
@@ -632,7 +713,13 @@ class TrajectoryCollector:
 
             batch_input.meta_info = gen_batch.meta_info
 
-            batch_output = actor_rollout_wg.generate_sequences(batch_input)
+            # Use OpenAI agent if provided, otherwise use model worker
+            if openai_agent is not None:
+                print(f"[Rollout Loop] Using OpenAI agent for generation (step {_step + 1})")
+                batch_output = openai_agent.generate_sequences(batch_input)
+            else:
+                print(f"[Rollout Loop] Using local model worker for generation (step {_step + 1})")
+                batch_output = actor_rollout_wg.generate_sequences(batch_input)
 
             batch.non_tensor_batch['uid'] = uid_batch
             batch.non_tensor_batch['traj_uid'] = traj_uid
@@ -668,6 +755,74 @@ class TrajectoryCollector:
             if 'question_id' in infos[0]:
                 batch.non_tensor_batch['question_id'] = np.array([info['question_id'] for info in infos], dtype=object)
 
+            # Belief-shaped GRPO: Compute and accumulate belief scores
+            if belief_calculator is not None:
+                print(f"🧠 BELIEF COMPUTATION: Step {_step + 1}, active_envs={active_count}")
+                print(f"🎯 Belief mode: {'PURE BELIEF GRPO' if self.config.env.pure_belief_grpo.enable else 'BELIEF-SHAPED GRPO'}")
+                belief_scores = np.zeros(batch_size, dtype=np.float32)
+
+                # Debug: Check what data is available
+                sample_info = infos[0] if infos and len(infos) > 0 else {}
+                print(f"📋 Sample info keys: {list(sample_info.keys()) if sample_info else 'NO_INFOS'}")
+
+                # Collect batch data for belief computation
+                batch_belief_data = []
+                env_indices = []
+
+                for i in range(batch_size):
+                    if active_masks[i]:  # Only compute for active environments
+                        question = ""
+                        k_t_combined = ""
+
+                        # Extract question and evidence from current step info
+                        if 'question' in infos[i]:
+                            question = infos[i]['question']
+                        if 'K_t_combined' in infos[i]:
+                            k_t_combined = infos[i]['K_t_combined']
+
+                        if question and k_t_combined and k_t_combined.strip():
+                            batch_belief_data.append((k_t_combined, question, previous_beliefs[i]))
+                            env_indices.append(i)
+                        else:
+                            print(f"  ⏭️ Skipping env {i}: missing/invalid data (question={bool(question)}, k_t='{k_t_combined[:30] if k_t_combined else 'None'}...')")
+                            belief_scores[i] = 0.0  # Explicitly set to 0 for missing data
+
+                # Batch compute belief scores
+                if batch_belief_data:
+                    print(f"🔍 Batch computing belief for {len(batch_belief_data)} environments (step {_step + 1})...")
+                    try:
+                        batch_results = belief_calculator.compute_belief_scores_batch(batch_belief_data)
+
+                        # Assign results back to belief_scores array
+                        for idx, (belief_score, metadata) in enumerate(batch_results):
+                            env_i = env_indices[idx]
+                            belief_scores[env_i] = belief_score
+                            previous_beliefs[env_i] = belief_score
+                            top_hyp = metadata.get("top_hypothesis", "unknown")
+                            confidence = metadata.get("concentration", 0.0)
+                            print(f"  ✅ Belief computed for env {env_i}: score={belief_score:.4f}, top_hyp='{top_hyp}', confidence={confidence:.4f}")
+
+                    except Exception as e:
+                        print(f"  ❌ Error in batch belief computation: {e}")
+                        # Set all active environments to 0 on error
+                        for env_i in env_indices:
+                            belief_scores[env_i] = 0.0
+
+                # Accumulate belief scores per rollout (per environment)
+                belief_scores_accumulated += belief_scores * torch_to_numpy(active_masks)
+                active_envs = active_masks.sum().item()
+                print(f"📊 Belief accumulation: {active_envs} active rollouts, per-rollout accumulated: {belief_scores_accumulated}")
+
+                # Track belief scores over time for plotting
+                for i in range(batch_size):
+                    if active_masks[i]:
+                        belief_scores_over_time[i].append(float(belief_scores[i]))
+
+                # Add belief scores to the batch for logging
+                batch.non_tensor_batch['belief_scores'] = belief_scores
+            else:
+                print(f"🤔 No belief calculator for step {_step + 1}")
+
             # Create reward tensor, only assign rewards for active environments
             episode_rewards += torch_to_numpy(rewards) * torch_to_numpy(active_masks)
             episode_lengths[active_masks] += 1
@@ -679,12 +834,28 @@ class TrajectoryCollector:
             # Update episode lengths for active environments
             batch_list: list[dict] = to_list_of_dict(batch)
 
+            # Attach belief accumulation per-env so downstream reward path can see it
             for i in range(batch_size):
+                batch_list[i]['belief_scores_accumulated'] = float(belief_scores_accumulated[i])
                 total_batch_list[i].append(batch_list[i])
                 total_infos[i].append(infos[i])
 
             # Update done states
             is_done = np.logical_or(is_done, dones)
+                
+            # Reset previous_beliefs for newly completed environments and store belief trajectories
+            if belief_calculator is not None:
+                for i in range(batch_size):
+                    if dones[i]:  # This environment just completed
+                        previous_beliefs[i] = 0.0  # Reset for potential reuse
+                        # Store completed belief trajectory for plotting
+                        if belief_scores_over_time[i]:  # Only if we have belief data
+                            completed_belief_trajectories.append({
+                                'trajectory': belief_scores_over_time[i].copy(),
+                                'final_belief': belief_scores_accumulated[i],
+                                'episode_length': len(belief_scores_over_time[i])
+                            })
+                        belief_scores_over_time[i] = []  # Reset for potential reuse
                 
             # Update observations for next step
             obs = next_input
@@ -693,6 +864,78 @@ class TrajectoryCollector:
             if is_done.all():
                 break
         
+        # Belief GRPO: Handle reward computation
+        if belief_calculator is not None:
+            if use_pure_belief_grpo:
+                # Pure Belief GRPO: Replace rewards entirely with belief scores
+                original_rewards = episode_rewards.copy()
+                episode_rewards = belief_scores_accumulated.copy()
+                print(f"Pure Belief GRPO: REPLACING all rewards with accumulated belief scores!")
+                print(f"  Original rewards: {original_rewards}")
+                print(f"  Per-rollout belief scores: {belief_scores_accumulated}")
+                print(f"  Final rewards (pure belief): {episode_rewards}")
+            else:
+                # Belief-shaped GRPO: Add/subtract belief scores based on correctness
+                # episode_rewards contains task rewards (0/1 for wrong/correct)
+                # Store original task rewards for logging
+                original_task_rewards = episode_rewards.copy()
+
+                # Add/subtract belief scores based on correctness
+                belief_modifiers = np.zeros_like(belief_scores_accumulated)
+                for i in range(len(episode_rewards)):
+                    if original_task_rewards[i] > 0:  # Correct answer
+                        belief_modifiers[i] = belief_scores_accumulated[i]
+                        episode_rewards[i] += belief_scores_accumulated[i]
+                    else:  # Wrong answer
+                        belief_modifiers[i] = -belief_scores_accumulated[i]
+                        episode_rewards[i] -= belief_scores_accumulated[i]
+
+                # Store pre-normalization rewards for logging
+                pre_norm_rewards = episode_rewards.copy()
+
+                # Normalize to [-1, 1] range to control variance
+                max_expected_range = 10.0  # Expected max belief score accumulation
+                episode_rewards = np.clip(episode_rewards, -max_expected_range, max_expected_range)
+                episode_rewards = episode_rewards / max_expected_range
+
+                print(f"Belief-shaped GRPO: Add/subtract belief scores based on correctness")
+                print(f"  Original task rewards: {original_task_rewards}")
+                print(f"  Belief modifiers: {belief_modifiers}")
+                print(f"  Pre-normalization rewards: {pre_norm_rewards}")
+                print(f"  Final rewards (normalized to [-1,1]): {episode_rewards}")
+
+                # Compute and log GRPO advantages for sample groups
+                group_size = 8  # GRPO group size
+                num_groups = len(episode_rewards) // group_size
+
+                if num_groups > 0:
+                    # Show advantages for first group
+                    group_rewards = episode_rewards[:group_size]
+                    group_mean = np.mean(group_rewards)
+                    group_std = np.std(group_rewards) + 1e-6  # Add epsilon for stability
+                    group_advantages = (group_rewards - group_mean) / group_std
+
+                    print(f"🎯 Belief-Shaped GRPO Advantages (Group 1, {group_size} trajectories):")
+                    print(f"  Group rewards: {group_rewards}")
+                    print(f"  Group mean: {group_mean:.3f}, std: {group_std:.3f}")
+                    print(f"  GRPO advantages: {group_advantages}")
+
+                    # Compare with what vanilla GRPO would give (using original task rewards)
+                    original_group_rewards = original_task_rewards[:group_size]
+                    orig_mean = np.mean(original_group_rewards)
+                    orig_std = np.std(original_group_rewards) + 1e-6
+                    orig_advantages = (original_group_rewards - orig_mean) / orig_std
+
+                    print(f"🔄 Vanilla GRPO Advantages (same group, original rewards only):")
+                    print(f"  Original rewards: {original_group_rewards}")
+                    print(f"  GRPO advantages: {orig_advantages}")
+
+            # Store accumulated belief scores for debugging/logging purposes
+            # Note: Belief scores are already incorporated into episode_rewards above
+            # Also propagated per-timestep in total_batch_list entries
+            if 'belief_scores_accumulated' not in batch.non_tensor_batch:
+                batch.non_tensor_batch['belief_scores_accumulated'] = belief_scores_accumulated
+        
         success: Dict[str, np.ndarray] = envs.success_evaluator(
                     total_infos=total_infos,
                     total_batch_list=total_batch_list,
@@ -700,7 +943,16 @@ class TrajectoryCollector:
                     episode_lengths=episode_lengths,
                     )
         
-        return total_batch_list, episode_rewards, episode_lengths, success, traj_uid
+        # Log success rate to wandb
+        if success:
+            success_rate = np.mean(success.get('success', np.array([])))
+            print(f"📊 Success Rate: {success_rate:.3f}")
+            try:
+                wandb.log({"rollout/success_rate": success_rate})
+            except:
+                pass  # wandb might not be initialized
+
+        return total_batch_list, episode_rewards, episode_lengths, success, traj_uid, completed_belief_trajectories
     
     def dynamic_multi_turn_loop(
             self,
@@ -739,7 +991,7 @@ class TrajectoryCollector:
                 print(f"valid num={len(total_batch_list)} < target num={self.config.data.train_batch_size * self.config.env.rollout.n}. Keep generating... ({try_count}/{max_try_count})")
             try_count += 1
 
-            batch_list, episode_rewards, episode_lengths, success, traj_uid = self.vanilla_multi_turn_loop(
+            batch_list, episode_rewards, episode_lengths, success, traj_uid, _ = self.vanilla_multi_turn_loop(
                 gen_batch=gen_batch,
                 actor_rollout_wg=actor_rollout_wg,
                 envs=envs,
@@ -773,6 +1025,7 @@ class TrajectoryCollector:
             envs: EnvironmentManagerBase,
             critique_envs: EnvironmentManagerBase = None,
             is_train: bool = True,
+            openai_agent=None,
             ) -> DataProto:
         """
         Select and run the appropriate rollout loop (dynamic or vanilla).
@@ -814,11 +1067,12 @@ class TrajectoryCollector:
             )
         else:
             # Vanilla Sampling   
-            total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid = \
+            total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid, belief_trajectories = \
                 self.vanilla_multi_turn_loop(
                 gen_batch=gen_batch,
                 actor_rollout_wg=actor_rollout_wg,
                 envs=envs,
+                openai_agent=openai_agent,
             )
         assert len(total_batch_list) == len(total_episode_rewards)
         assert len(total_batch_list) == len(total_episode_lengths)
@@ -834,7 +1088,7 @@ class TrajectoryCollector:
             traj_uid=total_traj_uid,
         )
         
-        return gen_batch_output
+        return gen_batch_output, belief_trajectories
 
     def critique_multi_turn_loop(
             self,
@@ -857,7 +1111,7 @@ class TrajectoryCollector:
             tuple: Same as vanilla_multi_turn_loop plus critique data
         """
         # Perform first normal rollout 
-        total_batch_list, episode_rewards, episode_lengths, success, traj_uid = \
+        total_batch_list, episode_rewards, episode_lengths, success, traj_uid, _ = \
             self.vanilla_multi_turn_loop(
                 gen_batch=gen_batch,
                 actor_rollout_wg=actor_rollout_wg,
@@ -922,7 +1176,7 @@ class TrajectoryCollector:
             tuple: Same as vanilla_multi_turn_loop plus rule reward data
         """
         # Perform first normal rollout 
-        total_batch_list, episode_rewards, episode_lengths, success, traj_uid = \
+        total_batch_list, episode_rewards, episode_lengths, success, traj_uid, _ = \
             self.vanilla_multi_turn_loop(
                 gen_batch=gen_batch,
                 actor_rollout_wg=actor_rollout_wg,
@@ -1150,6 +1404,7 @@ class TrajectoryCollector:
                 batch.non_tensor_batch['ground_truth'] = np.array([info['ground_truth'] for info in infos], dtype=object)
             if 'question_id' in infos[0]:
                 batch.non_tensor_batch['question_id'] = np.array([info['question_id'] for info in infos], dtype=object)
+
 
             # Create reward tensor, only assign rewards for active environments
             episode_rewards += torch_to_numpy(rewards) * torch_to_numpy(active_masks)

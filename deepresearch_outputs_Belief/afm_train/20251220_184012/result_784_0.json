@@ -1,0 +1,17 @@
+{
+    "answer": "Citigroup Inc. Annual Report",
+    "ground_truth": "Citigroup Annual Reports Collection",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        659,
+        1750
+    ]
+}

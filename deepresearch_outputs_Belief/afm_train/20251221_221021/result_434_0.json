@@ -1,0 +1,27 @@
+{
+    "answer": "100 * (1 + (Ending Value - 100)/100)",
+    "ground_truth": "$450 at 12/24 from $100 at 12/19",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2168,
+        3643,
+        4974,
+        6326,
+        7728,
+        9146
+    ]
+}

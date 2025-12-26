@@ -1,0 +1,23 @@
+{
+    "answer": "DOJ restructuring plan involving Trump allies in Project 2025, reported by Reuters in May 2024, proposed changes for the Department of Justice.",
+    "ground_truth": "restructure the Department of Justice and fill nonpartisan roles with conservatives",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        2114,
+        3454,
+        4809,
+        6102
+    ]
+}

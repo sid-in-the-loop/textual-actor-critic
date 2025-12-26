@@ -1,0 +1,19 @@
+{
+    "answer": "Global Trends 2025: A Transformed World",
+    "ground_truth": "Research World 2025\u5e74\u5ea6\u8d8b\u52bf\u5206\u6790\u6587\u7ae0",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2215,
+        3215
+    ]
+}

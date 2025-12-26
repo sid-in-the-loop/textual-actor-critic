@@ -1,0 +1,17 @@
+{
+    "answer": "BBC Online account usage increased from 54% in 2023/24 to 60% in 2024/25. BBC iPlayer's reach also increased from 55% in 2023/24 to 60% in 2024/25, with growth in audience engagement during 2023.",
+    "ground_truth": "BBC Online account usage grew 11% year-on-year in 2023; BBC iPlayer had a record-breaking year in 2023",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2276
+    ]
+}

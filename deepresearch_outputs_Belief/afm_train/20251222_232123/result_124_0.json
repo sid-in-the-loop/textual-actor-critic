@@ -1,0 +1,19 @@
+{
+    "answer": "bio-funeral or green burial with ashes scattered at sea in Beijing",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        2079,
+        3671
+    ]
+}

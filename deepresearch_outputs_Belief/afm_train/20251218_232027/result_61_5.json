@@ -1,0 +1,23 @@
+{
+    "answer": "A chart, graph, or visual representation of quantitative data.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        856,
+        1232,
+        1962,
+        2339,
+        3712
+    ]
+}

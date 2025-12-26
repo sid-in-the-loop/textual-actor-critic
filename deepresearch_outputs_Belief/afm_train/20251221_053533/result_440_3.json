@@ -1,0 +1,19 @@
+{
+    "answer": "arXiv:2504.17453v2",
+    "ground_truth": "Quantum simulation of CO2 chemisorption in an amine-functionalized metal-organic framework",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        2064,
+        3392
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Wyden",
+    "ground_truth": "The Employment Non-Discrimination Act (ENDA)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        919,
+        2225,
+        3510,
+        5024
+    ]
+}

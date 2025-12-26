@@ -1,0 +1,21 @@
+{
+    "answer": "Department of Earth and Environmental Sciences (Earth and Environmental Sciences), Department of Environmental and Landscape Architecture (Environmental and Landscape Architecture)",
+    "ground_truth": "Department of Earth and Environmental Sciences (DEES) in the School of Arts and Sciences & Undergraduate Program in Sustainable Development (UPSD) in the Columbia Climate School",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        1821,
+        2700,
+        3887
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Form 8-K",
+    "ground_truth": "THE STAR ENTERTAINMENT GROUP LIMITED DIRECTORS' REPORT AND FINANCIAL REPORT FOR THE HALF YEAR ENDED 31 DECEMBER 2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        969,
+        1397,
+        2251,
+        2572,
+        2983,
+        3418,
+        5073,
+        6160
+    ]
+}

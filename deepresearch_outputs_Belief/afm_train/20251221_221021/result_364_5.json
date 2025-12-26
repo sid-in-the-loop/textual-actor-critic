@@ -1,0 +1,17 @@
+{
+    "answer": "OPM will allocate $6.0 million from the Cybersecurity Enhancement Account (CEA) to the Mainframe and Cloud Transition Initiative, with potential FTE changes for IT modernization efforts.",
+    "ground_truth": "$9,256,000, 0 FTE",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        901,
+        2092
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "2024: $400 billion revenue. 4.7 million patients served with value-based care. Expected to serve 650,000 patients in 2025. 2025: $450 billion to $455 billion revenue. 650,000 additional patients expected for value-based care.",
+    "ground_truth": "$105.4 billion revenue, 4.7 million served, 650,000 additional in 2025",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        896,
+        2475
+    ]
+}

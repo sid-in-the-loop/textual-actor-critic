@@ -1,0 +1,23 @@
+{
+    "answer": "35% increased website traffic, 10% increase in new customer sign-ups.",
+    "ground_truth": "30\u201340 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        736,
+        1891,
+        3377,
+        4731,
+        6189
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "53 material weaknesses for FY 2024, one more than FY 2023.",
+    "ground_truth": "53 in FY 2024; one more than FY 2023",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        860,
+        2467
+    ]
+}

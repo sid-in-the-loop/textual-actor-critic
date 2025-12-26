@@ -1,0 +1,23 @@
+{
+    "answer": "The Star Entertainment Group Limited Financial Results",
+    "ground_truth": "The Star Entertainment Group Limited 2025\u5e74\u5ea6\u8d22\u52a1\u62a5\u544a\u9875\u9762 (Financial Results)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        1932,
+        3247,
+        4617,
+        5923
+    ]
+}

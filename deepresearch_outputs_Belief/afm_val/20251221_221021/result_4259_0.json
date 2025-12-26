@@ -1,0 +1,19 @@
+{
+    "answer": "Bucharest Stock Exchange Rulebook and Code of Corporate Governance",
+    "ground_truth": "Periodic reports - CONPET S.A.",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        2183,
+        3370
+    ]
+}

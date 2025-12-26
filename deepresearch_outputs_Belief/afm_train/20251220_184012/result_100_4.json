@@ -1,0 +1,23 @@
+{
+    "answer": "Pakistan's foreign exchange reserves increased by 10% (US$15.6 billion, 10% compared to US$12.8 billion at the end of March 2024).",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        864,
+        2338,
+        4204,
+        1356,
+        2941
+    ]
+}

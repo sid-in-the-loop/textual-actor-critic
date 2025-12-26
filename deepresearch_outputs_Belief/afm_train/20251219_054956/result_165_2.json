@@ -1,0 +1,19 @@
+{
+    "answer": "PBS News Hour",
+    "ground_truth": "PBS NewsHour \"Project 2025\" special report collection",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1880,
+        2831
+    ]
+}

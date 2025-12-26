@@ -1,0 +1,23 @@
+{
+    "answer": "Deloitte's global automotive insights are part of the \"Deloitte Research & Insights\" section of the deloitte.com website. The findings are often within broader research studies conducted by this global team.",
+    "ground_truth": "Deloitte Automotive Industry Insights and Research",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        1976,
+        2952,
+        3282,
+        4623
+    ]
+}

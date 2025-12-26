@@ -1,0 +1,27 @@
+{
+    "answer": "The Future of Jobs Data Explorer 2025",
+    "ground_truth": "Future of Jobs Report Specialists",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        1889,
+        3323,
+        3650,
+        4985,
+        6384,
+        7133
+    ]
+}

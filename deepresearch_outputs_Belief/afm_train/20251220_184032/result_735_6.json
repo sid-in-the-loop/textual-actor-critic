@@ -1,0 +1,19 @@
+{
+    "answer": "Bachelor's degree in progress from an accredited institution of higher education",
+    "ground_truth": "2 years",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1842,
+        3018
+    ]
+}

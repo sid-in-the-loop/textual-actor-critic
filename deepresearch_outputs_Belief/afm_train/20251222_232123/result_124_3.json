@@ -1,0 +1,23 @@
+{
+    "answer": "Foreigners were not invited.",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        2270,
+        3629,
+        5183,
+        6378
+    ]
+}

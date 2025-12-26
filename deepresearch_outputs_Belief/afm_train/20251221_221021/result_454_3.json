@@ -1,0 +1,17 @@
+{
+    "answer": "From the CSRC's Regulations on Information Disclosure of Listed Companies, the quarterly reports for A-share listed companies must be disclosed within 3 trading days.",
+    "ground_truth": "Q1 2025 Financial Reporting Season",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        1975
+    ]
+}

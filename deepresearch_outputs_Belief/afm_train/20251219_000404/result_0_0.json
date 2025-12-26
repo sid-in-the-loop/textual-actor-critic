@@ -1,0 +1,21 @@
+{
+    "answer": "No timeframe explicitly stated in accessible search results for referee report submission within Nature's \"Guide to Referees\". However, one general snippet referenced \"ten days\" for reviews.",
+    "ground_truth": "within two weeks or according to an agreed time limit",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        1812,
+        2891,
+        3525
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Handley Page Boxer",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1004,
+        2353,
+        3735,
+        5392,
+        6378,
+        7795,
+        9094
+    ]
+}

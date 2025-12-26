@@ -1,0 +1,25 @@
+{
+    "answer": "Institute for Advanced Study of the Humanities",
+    "ground_truth": "Rutgers University - Newark",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        892,
+        2000,
+        2658,
+        2996,
+        4142,
+        5187
+    ]
+}

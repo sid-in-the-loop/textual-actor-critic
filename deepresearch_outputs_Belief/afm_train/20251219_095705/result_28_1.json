@@ -1,0 +1,23 @@
+{
+    "answer": "The FTC regulates \"unfair or deceptive acts or practices,\" including \"deceptive or fraudulent way and without regard to quality assurance\" within \"scholarly publishing.\"",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2118,
+        3616,
+        4874,
+        6282
+    ]
+}

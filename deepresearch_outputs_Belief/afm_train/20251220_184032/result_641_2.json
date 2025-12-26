@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, the document (May 12, 2025) likely contains sales volume and US market share data for the first half of 2025 for the Mazda CX-90. It is highly probable the figure will use a chart titled 'MAZDA CX-90 First Half Sales Volume & US Market Share' (if included).",
+    "ground_truth": "Chart is referenced but not present in image",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1091,
+        2536,
+        4048
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Journal of Human-Robot Interaction (HRIJ) or ACM Transactions on Human-Robot Interaction (THRI)",
+    "ground_truth": "Hitachi Research Institute Research Report\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        691,
+        1784,
+        2882,
+        4057
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in available search snippets.",
+    "ground_truth": "94.3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        2047,
+        3452,
+        4719,
+        5895,
+        6480,
+        6981
+    ]
+}

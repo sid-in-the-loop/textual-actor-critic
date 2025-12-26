@@ -1,0 +1,21 @@
+{
+    "answer": "Peterson's Magazine (1842-1898) had a longer publication run than Janus (1999-present).",
+    "ground_truth": "Peterson's Magazine",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1714,
+        2683,
+        3968
+    ]
+}

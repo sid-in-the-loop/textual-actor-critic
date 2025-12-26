@@ -1,0 +1,23 @@
+{
+    "answer": "COVID-19 and education: The lingering effects of unfinished learning",
+    "ground_truth": "McKinsey & Company COVID-19 Education Research Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        2061,
+        3528,
+        4761,
+        6455
+    ]
+}

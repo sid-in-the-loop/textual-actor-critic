@@ -1,0 +1,27 @@
+{
+    "answer": "to take down drones on the battlefield",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        690,
+        912,
+        1135,
+        2528,
+        3058,
+        3966,
+        5398
+    ]
+}

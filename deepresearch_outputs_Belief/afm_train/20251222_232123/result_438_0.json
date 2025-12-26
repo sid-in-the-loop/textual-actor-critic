@@ -1,0 +1,19 @@
+{
+    "answer": "Buddha characters perform traditional dance at Matsunoodera temple (May 8, 2025)",
+    "ground_truth": "Buddha characters performed a traditional dance",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        2026,
+        3265
+    ]
+}

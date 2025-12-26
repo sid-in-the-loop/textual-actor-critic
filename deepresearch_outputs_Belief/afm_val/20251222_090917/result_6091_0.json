@@ -1,0 +1,23 @@
+{
+    "answer": "2019, less than 3.5%",
+    "ground_truth": "2019, less than 3.5%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        904,
+        2244,
+        3515,
+        4716,
+        5810
+    ]
+}

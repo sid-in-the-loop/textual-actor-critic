@@ -1,0 +1,19 @@
+{
+    "answer": "17, 2",
+    "ground_truth": "Development of a new model on utilizing online learning platforms to improve students\u2019 academic achievements and satisfaction | International Journal of Educational Technology in Higher Education | Full Text",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1730,
+        2807
+    ]
+}

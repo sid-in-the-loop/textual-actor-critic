@@ -1,0 +1,21 @@
+{
+    "answer": "https://adem.alabama.gov/news",
+    "ground_truth": "ADEM Derni\u00e8res actualit\u00e9s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        705,
+        1752,
+        2779,
+        3567
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Arn\u00f3r Gudjohnsen",
+    "ground_truth": "T\u00f3mas Ingi T\u00f3masson",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        886,
+        2024,
+        3216,
+        4336,
+        4677
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The Power of 10: 10 Year Impact Report Infographic",
+    "ground_truth": "Man in an apron using a tablet among stools and furnishings",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        927,
+        1893,
+        3065
+    ]
+}

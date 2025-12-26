@@ -1,0 +1,21 @@
+{
+    "answer": "Political and Social Issues",
+    "ground_truth": "Political Issues - Research and data from Pew Research Center",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        1843,
+        2976,
+        3721
+    ]
+}

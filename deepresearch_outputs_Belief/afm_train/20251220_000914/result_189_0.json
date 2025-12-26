@@ -1,0 +1,27 @@
+{
+    "answer": "There were zero people against it.",
+    "ground_truth": "More than 40,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        955,
+        2111,
+        2574,
+        3678,
+        4169,
+        4967,
+        6252
+    ]
+}

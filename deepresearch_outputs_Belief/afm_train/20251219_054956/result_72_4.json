@@ -1,0 +1,29 @@
+{
+    "answer": "Generation using database-level curation via population-based training and exemplar-level curation that selectively retains improves ALFWorld's performance, achieving 91% in the context of the paper's framework and outperforms methods like Fixed-DB.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1051,
+        2235,
+        3596,
+        4015,
+        4538,
+        5017,
+        6925,
+        7537
+    ]
+}

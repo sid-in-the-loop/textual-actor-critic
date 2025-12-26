@@ -1,0 +1,23 @@
+{
+    "answer": "Enhance people analytics and data visualization capabilities to address skills gaps in data analytics and cyber security.",
+    "ground_truth": "innovative hiring strategies and upskilling opportunities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2079,
+        3243,
+        4330,
+        5766
+    ]
+}

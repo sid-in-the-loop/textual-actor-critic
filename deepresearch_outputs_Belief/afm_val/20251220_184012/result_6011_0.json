@@ -1,0 +1,17 @@
+{
+    "answer": "Ruijun Dang, Daniel J. Jacob, Huiqun Wang, and Crawford, K. Li, and H. Liao",
+    "ground_truth": "VS",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        826,
+        2068
+    ]
+}

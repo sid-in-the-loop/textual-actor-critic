@@ -1,0 +1,17 @@
+{
+    "answer": "Social Media Seen as Mostly Good for Democracy Across Many Nations, but the U.S. is a Major Outlier",
+    "ground_truth": "Pew Research Center Global Social Media and Democracy Relationship Survey Report (2022)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        1958
+    ]
+}

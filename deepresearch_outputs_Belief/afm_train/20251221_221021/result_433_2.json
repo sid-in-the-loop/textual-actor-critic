@@ -1,0 +1,23 @@
+{
+    "answer": "162.36 billion, the highest",
+    "ground_truth": "$47,302 million, highest among all quarters",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        2308,
+        3719,
+        5256,
+        6777
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Monetization Paves Way for Industry Expansion, Rapid proliferation of AI, Automation surpassing human capabilities, ethical concerns regarding AI, and regulatory frameworks adapting to AI.",
+    "ground_truth": "Global X ETFs Insights (Five AI Trends for 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2195,
+        2628,
+        3197,
+        3699,
+        4080,
+        5003
+    ]
+}

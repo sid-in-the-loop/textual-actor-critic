@@ -1,0 +1,23 @@
+{
+    "answer": "The memorial service for Zhou Enlai in Beijing, which included an invitation for foreign diplomats, was held at a government complex and may have involved a ceremonial display of ashes (while not strictly ash scattering into the Bohai Sea).",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        985,
+        2445,
+        3816,
+        5028,
+        6620
+    ]
+}

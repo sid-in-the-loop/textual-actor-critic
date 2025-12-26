@@ -1,0 +1,19 @@
+{
+    "answer": "Report to Congress Pursuant to Section 13(3) of the Federal Reserve Act: Bank Term Funding Program",
+    "ground_truth": "Periodic Report: Update on Outstanding Lending Facilities Authorized by the Board under Section 13(3) of the Federal Reserve Act (2025)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        2117,
+        4143
+    ]
+}

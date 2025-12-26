@@ -1,0 +1,21 @@
+{
+    "answer": "Proactive stakeholder feedback solicitation",
+    "ground_truth": "Post-Implementation Review Survey \u2013 Private Companies and Not-For-Profit Organizations (Topic 842: Leases)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1933,
+        3148,
+        4229
+    ]
+}

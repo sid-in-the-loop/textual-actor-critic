@@ -1,0 +1,17 @@
+{
+    "answer": "The selections enhance ALFWorld performance by further enhancing it through database-level selection (+DB-Selection) and exemplar-level selection (+Exemplar). This demonstrates a significant improvement over naive methods.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        2098
+    ]
+}

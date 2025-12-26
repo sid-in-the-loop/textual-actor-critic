@@ -1,0 +1,21 @@
+{
+    "answer": "No, the OEM-wise market share data for January 2025 is not clearly presented in the provided information.",
+    "ground_truth": "No OEM-wise market share data visible",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        896,
+        2274,
+        2604,
+        4147
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 1, \"Bubble rise velocities in m/s vs. bubble diameter in mm for water and different surfactant solutions\"",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2007,
+        2568,
+        3038
+    ]
+}

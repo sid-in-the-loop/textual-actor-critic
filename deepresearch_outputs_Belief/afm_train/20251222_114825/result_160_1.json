@@ -1,0 +1,25 @@
+{
+    "answer": "Recommendation 9: Subject to the findings of the Productivity Commission inquiry into the social and economic benefits of improving mental health, the ...",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        1145,
+        1417,
+        1678,
+        2761,
+        3897
+    ]
+}

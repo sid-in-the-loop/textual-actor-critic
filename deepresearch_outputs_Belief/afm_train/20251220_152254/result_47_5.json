@@ -1,0 +1,25 @@
+{
+    "answer": "basically discontinued",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        901,
+        2160,
+        3737,
+        4312,
+        5603,
+        7076
+    ]
+}

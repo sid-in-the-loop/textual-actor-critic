@@ -1,0 +1,23 @@
+{
+    "answer": "Global Development Trends: Unpacking Key Directions for 2024",
+    "ground_truth": "2025 Trends - Research World",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        1924,
+        3241,
+        4568,
+        5750
+    ]
+}

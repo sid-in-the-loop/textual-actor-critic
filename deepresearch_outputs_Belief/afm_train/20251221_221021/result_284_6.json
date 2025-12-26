@@ -1,0 +1,19 @@
+{
+    "answer": "Normal assumption",
+    "ground_truth": "\u5047\u5b9a\u6837\u672c\u6240\u5360\u6bd4\u4f8b $p$ \u4e0d\u53d8",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        923,
+        1978,
+        3135
+    ]
+}

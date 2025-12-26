@@ -1,0 +1,19 @@
+{
+    "answer": "Downgrading from second to third tier may have negative effects on publication output, as suggested by studies on journal ranking changes.",
+    "ground_truth": "How does the reduction of Scientific Reports from Zone 2 to Zone 3 affect? -AJE American Journal Expert",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        898,
+        2211,
+        3545
+    ]
+}

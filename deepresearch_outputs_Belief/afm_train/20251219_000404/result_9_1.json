@@ -1,0 +1,23 @@
+{
+    "answer": "DEF 14A Proxy Statement Report for the fiscal year ending Tuesday, December 31, 2025",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        2494,
+        4132,
+        5679,
+        6942
+    ]
+}

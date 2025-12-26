@@ -1,0 +1,23 @@
+{
+    "answer": "Robert Wilson",
+    "ground_truth": "English musicologist",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1801,
+        2748,
+        3938,
+        5314
+    ]
+}

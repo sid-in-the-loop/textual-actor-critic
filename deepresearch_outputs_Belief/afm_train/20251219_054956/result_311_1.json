@@ -1,0 +1,23 @@
+{
+    "answer": "\"Closing the Cybersecurity Talent Gap: A Strategic Workforce Readiness Framework\"",
+    "ground_truth": "innovative hiring strategies and upskilling opportunities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        2772,
+        3458,
+        5191,
+        6535
+    ]
+}

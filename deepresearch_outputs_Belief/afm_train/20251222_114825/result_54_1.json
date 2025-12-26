@@ -1,0 +1,21 @@
+{
+    "answer": "No academic discipline was found with the academic code 13 in the context of art. The search results indicated academic misconduct codes or general art disciplines, but not a specific art discipline linked to the academic code 13.",
+    "ground_truth": "Art Studies",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1756,
+        2921,
+        3984
+    ]
+}

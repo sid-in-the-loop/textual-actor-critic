@@ -1,0 +1,25 @@
+{
+    "answer": "54th Bomb Group (Heavy)",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1031,
+        2261,
+        3428,
+        4682,
+        5843,
+        6831
+    ]
+}

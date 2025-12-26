@@ -1,0 +1,29 @@
+{
+    "answer": "New Approaches to Resistance in Brazil and Mexico",
+    "ground_truth": "Hispanic American Historical Review",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        922,
+        2448,
+        4100,
+        5484,
+        6110,
+        7865,
+        9596,
+        11098
+    ]
+}

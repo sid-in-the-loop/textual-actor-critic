@@ -1,0 +1,19 @@
+{
+    "answer": "Marketers must master the careful balance between privacy and personalization to create an effective customer engagement and retention strategy.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        2464,
+        3790
+    ]
+}

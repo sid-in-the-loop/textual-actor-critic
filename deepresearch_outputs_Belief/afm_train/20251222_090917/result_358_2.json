@@ -1,0 +1,21 @@
+{
+    "answer": "Information not found in search results.",
+    "ground_truth": "102 days",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        1744,
+        2687,
+        3828
+    ]
+}

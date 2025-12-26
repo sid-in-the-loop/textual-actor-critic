@@ -1,0 +1,21 @@
+{
+    "answer": "No specific figure in the World Economic Forum Future of Jobs Report 2025 reveals the state of the industrial work environment when data-related factors are omitted, as this information is not stated in the available search results.",
+    "ground_truth": "A person operating heavy machinery in an industrial environment",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        934,
+        1159,
+        2478,
+        3861
+    ]
+}

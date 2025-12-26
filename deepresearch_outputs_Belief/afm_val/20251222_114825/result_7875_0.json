@@ -1,0 +1,17 @@
+{
+    "answer": "State of America's Libraries - ALAIR",
+    "ground_truth": "State of America's Libraries annual report (American Library Association)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1693
+    ]
+}

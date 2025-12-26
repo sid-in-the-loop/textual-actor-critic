@@ -1,0 +1,29 @@
+{
+    "answer": "Chart",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        2175,
+        2410,
+        3561,
+        4080,
+        4446,
+        4886,
+        5419
+    ]
+}

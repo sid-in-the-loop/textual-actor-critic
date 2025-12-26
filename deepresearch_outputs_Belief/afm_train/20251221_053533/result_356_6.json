@@ -1,0 +1,23 @@
+{
+    "answer": "Google Scholar",
+    "ground_truth": "Citation importing feature, 2006, RefWorks, RefMan, EndNote, BibTeX",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1860,
+        3171,
+        4401,
+        5791
+    ]
+}

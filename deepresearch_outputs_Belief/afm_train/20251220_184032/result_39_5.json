@@ -1,0 +1,21 @@
+{
+    "answer": "Free for up to three searches per day; subscription required after that.",
+    "ground_truth": "free for up to three searches per day",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        1272,
+        1643,
+        1890
+    ]
+}

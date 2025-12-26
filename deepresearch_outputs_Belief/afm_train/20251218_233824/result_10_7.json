@@ -1,0 +1,17 @@
+{
+    "answer": "ITC-Financial-Result-Q2-FY2025.xlsx",
+    "ground_truth": "ITC Investor Presentations Collection",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        688,
+        2538
+    ]
+}

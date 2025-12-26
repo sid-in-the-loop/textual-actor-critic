@@ -1,0 +1,21 @@
+{
+    "answer": "3.8-4.2 GHz, 4.4-4.99 GHz, and 6.425-7.125 GHz",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        2034,
+        3479,
+        4725
+    ]
+}

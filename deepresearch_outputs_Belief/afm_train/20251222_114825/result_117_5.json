@@ -1,0 +1,21 @@
+{
+    "answer": "Official schedule for UK central bank's Financial Policy Committee in 2025 is available, but specific dates like April 9, July 9, October 8, and December 2 are not explicitly listed in the search results for the Financial Policy Committee Record. The most recent meeting date referenced was November 25, 2025.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        2024,
+        3284,
+        3753
+    ]
+}

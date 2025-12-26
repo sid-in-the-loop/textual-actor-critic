@@ -1,0 +1,27 @@
+{
+    "answer": "David Bowie",
+    "ground_truth": "\u80e1\u5f66\u658c",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        935,
+        2133,
+        3756,
+        5068,
+        6509,
+        8066,
+        9728
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "For the entire year 2024, net cash flows from operating activities from continuing operations were 56,077 thousand EUR. In 2023, it was 25,287 thousand EUR. The 2024 figure is 17.6 billion USD, and the 2023 figure is 14.2 billion USD, representing an increase of 24%.",
+    "ground_truth": "$17,600,000,000 in 2024; $14,200,000,000 in 2023",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        887,
+        2547
+    ]
+}

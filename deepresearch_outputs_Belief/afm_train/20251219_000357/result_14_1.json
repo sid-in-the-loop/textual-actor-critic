@@ -1,0 +1,29 @@
+{
+    "answer": "Announced at Opening Ceremony, but no specific wording provided in search results.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        808,
+        1186,
+        2507,
+        3736,
+        4297,
+        4929,
+        5622,
+        6257
+    ]
+}

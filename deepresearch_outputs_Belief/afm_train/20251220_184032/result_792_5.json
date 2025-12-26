@@ -1,0 +1,23 @@
+{
+    "answer": "No information found indicating an upward trend.",
+    "ground_truth": "Clear upward trend from 2024 to 2027",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        861,
+        1216,
+        1535,
+        1955,
+        2436
+    ]
+}

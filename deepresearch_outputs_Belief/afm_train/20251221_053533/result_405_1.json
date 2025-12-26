@@ -1,0 +1,17 @@
+{
+    "answer": "The Stability and Growth Pact (SGP) requires Member States to submit annual draft budgetary plans (DBPs) and, since 2020, Medium-Term Fiscal Structural Plans (MTFSPs).",
+    "ground_truth": "National medium-term fiscal-structural plans (MTPs)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        1832
+    ]
+}

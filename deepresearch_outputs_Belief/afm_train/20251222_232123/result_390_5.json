@@ -1,0 +1,21 @@
+{
+    "answer": "PapersOwl",
+    "ground_truth": "EssayPro\u7f51\u7ad9\uff08essaypro.com\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        816,
+        2464,
+        2982,
+        3783
+    ]
+}

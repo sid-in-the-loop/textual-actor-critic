@@ -1,0 +1,27 @@
+{
+    "answer": "Attract additional financing",
+    "ground_truth": "Accurate and independent analysis",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        903,
+        3087,
+        4011,
+        5174,
+        6410,
+        7747,
+        8266
+    ]
+}

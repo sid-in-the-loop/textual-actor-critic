@@ -1,0 +1,23 @@
+{
+    "answer": "Fako Unity Warriors",
+    "ground_truth": "The Ambazonia Defence Forces (ADF)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        1890,
+        2927,
+        4291,
+        5541
+    ]
+}

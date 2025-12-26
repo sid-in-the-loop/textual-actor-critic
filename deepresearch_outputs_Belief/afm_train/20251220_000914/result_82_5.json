@@ -1,0 +1,29 @@
+{
+    "answer": "Australia and South Africa",
+    "ground_truth": "Stephen Huss represents Australia and Wesley Moodie represents South Africa",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        833,
+        2089,
+        3854,
+        1661,
+        3033,
+        4129,
+        5393,
+        6772
+    ]
+}

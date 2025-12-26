@@ -1,0 +1,23 @@
+{
+    "answer": "\"Scholarly Publishing Trends to Watch in 2025\" published January 13, 2025",
+    "ground_truth": "Academic Publishing in 2025: How Research Will Transform | PublishingState.com",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1912,
+        3060,
+        4320,
+        5469
+    ]
+}

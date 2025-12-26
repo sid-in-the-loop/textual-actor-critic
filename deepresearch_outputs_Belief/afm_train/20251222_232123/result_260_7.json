@@ -1,0 +1,27 @@
+{
+    "answer": "Volkswagen Group",
+    "ground_truth": "Chevrolet, represented by the RML Group",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        896,
+        2416,
+        3699,
+        4915,
+        6035,
+        7269,
+        7735
+    ]
+}

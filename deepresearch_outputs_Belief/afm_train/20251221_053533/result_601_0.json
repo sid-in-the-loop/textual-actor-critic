@@ -1,0 +1,27 @@
+{
+    "answer": "Mean = 27.76, Standard Deviation = 7.08, Range not found",
+    "ground_truth": "Mean: 17.5 years; SD: 5.7 years; Range: 10 to 53 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        1045,
+        2215,
+        3452,
+        4959,
+        6293,
+        6671
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "ITC-Quarterly-Result-Presentation-Q2-FY2024.pdf",
+    "ground_truth": "ITC Investor Presentations Collection",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        705,
+        2165,
+        3671
+    ]
+}

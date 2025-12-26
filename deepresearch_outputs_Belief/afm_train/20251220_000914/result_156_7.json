@@ -1,0 +1,21 @@
+{
+    "answer": "What is Academic Writing? | WordPress.com",
+    "ground_truth": "What is an academic article? What is an academic article",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        1713,
+        2601,
+        2887
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Fiscal Close Calendar - Finance & Business UC Davis",
+    "ground_truth": "2023-2024 Fiscal Close Calendar - Aggie Enterprise - UC Davis",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        2047,
+        2734
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Net financial debt is reported in accordance with Guideline no. 39, issued March 2021, using the Net Financial Debt / EBITDA ratio, which is expected to reach around 2.5x by the end of the plan period (2025-2027). Net financial debt considers long-term and short-term borrowings, the current portion of long-term borrowings, and other non-current and current financial liabilities, though specific components for additions and deductions were inferred from general debt measures and regulatory guidance.",
+    "ground_truth": "Sum of long-term borrowings, short-term borrowings, current portion of long-term borrowings, other non-current and current financial liabilities, minus cash and cash equivalents, minus other current and non-current financial assets; reported per ESMA Guideline no. 39 (2021-03-04), effective from 2021-05-05, and CONSOB Warning Notice no. 5/21 (2021-04-29)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2181,
+        3663,
+        5503
+    ]
+}

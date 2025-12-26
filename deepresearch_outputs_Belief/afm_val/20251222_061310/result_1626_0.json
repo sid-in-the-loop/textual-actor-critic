@@ -1,0 +1,17 @@
+{
+    "answer": "ERCOT balancing authority distribution for the top 10 solar projects built in 2024 is available in the Cleanview January 2025 report.",
+    "ground_truth": "Most are under ERCOT",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2154
+    ]
+}

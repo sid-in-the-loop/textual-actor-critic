@@ -1,0 +1,25 @@
+{
+    "answer": "IFRS 18, which requires classification of income and expenses in the statement of profit or loss into five categories.",
+    "ground_truth": "Item 18. Financial Statements",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        2007,
+        3327,
+        5220,
+        5603,
+        6959
+    ]
+}

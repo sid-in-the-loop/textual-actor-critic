@@ -1,0 +1,21 @@
+{
+    "answer": "Corregidor Island",
+    "ground_truth": "At the Malaca\u00f1ang Palace",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        1888,
+        3018,
+        4112
+    ]
+}

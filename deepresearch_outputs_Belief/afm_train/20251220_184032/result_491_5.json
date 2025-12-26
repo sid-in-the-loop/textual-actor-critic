@@ -1,0 +1,23 @@
+{
+    "answer": "The specific aspiration of Justin Trudeau in relation to hosting the G7 leaders meeting in June 2025 is not explicitly mentioned.",
+    "ground_truth": "hopes to host",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        859,
+        2148,
+        3768,
+        1164,
+        2719
+    ]
+}

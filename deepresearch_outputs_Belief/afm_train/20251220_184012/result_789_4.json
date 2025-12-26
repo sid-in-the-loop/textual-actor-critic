@@ -1,0 +1,17 @@
+{
+    "answer": "The official requirements for the Hospital Inpatient Quality Reporting (IQR) Program for Fiscal Year 2025 include submission of HCAHPS Survey data, Population and sampling (Sepsis measure set), and Clinical process of care measures (SEP-1) quarterly.",
+    "ground_truth": "submit Notice of Participation; agree to public reporting of quality data",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        1996
+    ]
+}

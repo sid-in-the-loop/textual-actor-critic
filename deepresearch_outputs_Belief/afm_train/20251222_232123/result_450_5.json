@@ -1,0 +1,19 @@
+{
+    "answer": "Treaty on Stability, Coordination and Governance (TSCG) / fiscal compact rules",
+    "ground_truth": "European Union Economic Governance Framework (\u6b27\u76df\u7ecf\u6d4e\u6cbb\u7406\u6846\u67b6)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        1662,
+        2516
+    ]
+}

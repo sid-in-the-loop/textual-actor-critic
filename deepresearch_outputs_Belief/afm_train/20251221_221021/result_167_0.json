@@ -1,0 +1,23 @@
+{
+    "answer": "The UNISON Coordinator.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2091,
+        3241,
+        4409,
+        5428
+    ]
+}

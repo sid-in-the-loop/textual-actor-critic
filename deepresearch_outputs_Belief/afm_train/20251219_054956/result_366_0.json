@@ -1,0 +1,21 @@
+{
+    "answer": "Contagion risks from dependencies on critical third parties, including technology providers, especially related to risk sensitivity, and new financial risks stemming from the emerging crypto space.",
+    "ground_truth": "Four regulatory priorities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        1888,
+        2368,
+        3916
+    ]
+}

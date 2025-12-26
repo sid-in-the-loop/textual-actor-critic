@@ -1,0 +1,19 @@
+{
+    "answer": "The journal is BMC Public Health. Demographics include:  ~30% aged 18-25; 20% international students; 70% consented to access academic records.",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        921,
+        2367,
+        2894
+    ]
+}

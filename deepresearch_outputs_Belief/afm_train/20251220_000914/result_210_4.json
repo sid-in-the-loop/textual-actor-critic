@@ -1,0 +1,25 @@
+{
+    "answer": "The complete list of free and paid AI tools highlighted for academic research in 2025 on the webpage is the \"15+ Best AI Tools for Scientific Research in 2025\" listed on paperguide.ai.",
+    "ground_truth": "15+ Best AI Tools for Academic Research (Free+Paid) 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        2052,
+        3221,
+        4434,
+        5051,
+        5977
+    ]
+}

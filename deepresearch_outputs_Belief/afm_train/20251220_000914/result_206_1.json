@@ -1,0 +1,21 @@
+{
+    "answer": "Interim Financial Statements - First Half 2024",
+    "ground_truth": "Half year 2024 financial results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        2282,
+        3472,
+        4848
+    ]
+}

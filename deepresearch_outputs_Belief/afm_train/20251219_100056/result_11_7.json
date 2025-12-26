@@ -1,0 +1,19 @@
+{
+    "answer": "No, the number of recent submissions in Condensed Matter (155) is less than those in Earth and Planetary Astrophysics (17 by Dec 2025).",
+    "ground_truth": "Yes",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        721,
+        1718,
+        2706
+    ]
+}

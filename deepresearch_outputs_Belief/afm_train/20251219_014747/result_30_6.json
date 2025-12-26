@@ -1,0 +1,25 @@
+{
+    "answer": "2025 Half Year Results Presentation, Alert you to the mismatch and ask that you double check the details.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        2317,
+        3930,
+        4325,
+        5595,
+        6076
+    ]
+}

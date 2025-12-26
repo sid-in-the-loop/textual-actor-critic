@@ -1,0 +1,21 @@
+{
+    "answer": "Update on Emergency Lending Facilities (PDF) - Federal Reserve Board",
+    "ground_truth": "Periodic Report: Update on Outstanding Lending Facilities Authorized by the Board under Section 13(3) of the Federal Reserve Act (2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        990,
+        1299,
+        2495,
+        3305
+    ]
+}

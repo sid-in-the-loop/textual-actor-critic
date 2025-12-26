@@ -1,0 +1,19 @@
+{
+    "answer": "Abortion & Reproductive Health, Christian Nationalism, Climate Change, Generational Change, Immigration, LGBTQ, Politics &",
+    "ground_truth": "PRRI\u7814\u7a76\u4e3b\u9898\u5217\u8868",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        693,
+        1560,
+        2551
+    ]
+}

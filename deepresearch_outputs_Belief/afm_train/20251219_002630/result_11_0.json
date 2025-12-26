@@ -1,0 +1,27 @@
+{
+    "answer": "Yes, the number of recent submissions in Condensed Matter is greater than those in Earth and Planetary Astrophysics by over 400, with 473 submissions in Condensed Matter and 12 new submissions in Earth and Planetary Astrophysics for the latest data available on arXiv as of November 2025.",
+    "ground_truth": "Yes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        1692,
+        2835,
+        4337,
+        4920,
+        6129,
+        8174
+    ]
+}

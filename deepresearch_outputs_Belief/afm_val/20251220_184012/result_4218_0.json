@@ -1,0 +1,21 @@
+{
+    "answer": "The December 2024 AP-NORC Center Poll",
+    "ground_truth": "The December 2024 AP-NORC Center Poll",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        2314,
+        3622,
+        5003
+    ]
+}

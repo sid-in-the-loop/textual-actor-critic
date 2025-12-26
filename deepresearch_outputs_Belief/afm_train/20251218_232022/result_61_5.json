@@ -1,0 +1,29 @@
+{
+    "answer": "The image depicting quantifiable data or a chart/graph does not exist for the cited report. Primary results are provided in text format, lacking any visual descriptive content or quantitative analysis from the image.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        860,
+        1134,
+        1591,
+        1953,
+        3388,
+        3902,
+        4719,
+        5431
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "The Handley Page Victor XL191.",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1060,
+        2308,
+        3431,
+        4641,
+        6269,
+        7586
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The required specific statistic regarding the proportion of organizations that accelerated attack detection by up to 10% through AI cybersecurity strategies by 2024 is not available in the provided search results.",
+    "ground_truth": "Nine out of ten",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        1983,
+        3409
+    ]
+}

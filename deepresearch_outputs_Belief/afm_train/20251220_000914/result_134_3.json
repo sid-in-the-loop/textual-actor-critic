@@ -1,0 +1,23 @@
+{
+    "answer": "2025-2029 Financial Plan Bylaw",
+    "ground_truth": "Metro Vancouver 2025-2029 Financial Plan",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        2235,
+        3708,
+        5066,
+        6613
+    ]
+}

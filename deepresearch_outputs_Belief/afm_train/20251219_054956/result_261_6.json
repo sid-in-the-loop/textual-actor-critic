@@ -1,0 +1,19 @@
+{
+    "answer": "No image of \"reported Obesity care sales and growth\" identified.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        969,
+        2868,
+        3748
+    ]
+}

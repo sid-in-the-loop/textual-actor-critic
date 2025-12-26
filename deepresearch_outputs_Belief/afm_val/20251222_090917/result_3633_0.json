@@ -1,0 +1,29 @@
+{
+    "answer": "Future Today Strategy Group 2025 tech trends report",
+    "ground_truth": "IT Trends 2025: Industry Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2092,
+        3573,
+        4881,
+        6128,
+        6781,
+        8164,
+        9455
+    ]
+}

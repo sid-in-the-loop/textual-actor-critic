@@ -1,0 +1,21 @@
+{
+    "answer": "Section 201 of Chapter 140 of the Acts of 2024",
+    "ground_truth": "Presidential Task Force on Combating Antisemitism and Anti-Arab Bias at Harvard University\uff082025 Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        2020,
+        3286,
+        4538
+    ]
+}

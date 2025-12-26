@@ -1,0 +1,17 @@
+{
+    "answer": "Unveiling the evolution of generative AI (GAI): a comprehensive and ...",
+    "ground_truth": "Key factors influencing students\u2019 academic performance | Journal of Electrical Systems and Information Technology | Full Text",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1904
+    ]
+}

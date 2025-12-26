@@ -1,0 +1,23 @@
+{
+    "answer": "The Communications Authority of Kenya's \"Statistics\" section on their website holds the quarterly archived reports for the 2023/2024 financial year, organized by report title and financial period.",
+    "ground_truth": "Sector Statistics Reports for the Financial Year 2023/2024 (Communications Authority of Kenya)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        2013,
+        3146,
+        4312,
+        5678
+    ]
+}

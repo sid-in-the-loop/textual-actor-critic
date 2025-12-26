@@ -1,0 +1,23 @@
+{
+    "answer": "Rhetoric",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        870,
+        1990,
+        3005,
+        3433,
+        4947
+    ]
+}

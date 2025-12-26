@@ -1,0 +1,25 @@
+{
+    "answer": "Web of Science employs a subject categorization system where \"General Categories\" (e.g., Science, Social Sciences, Arts and Humanities) uniquely map to \"Subject Areas\" (e.g., \"Chemistry,\" \"Literature\").",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1945,
+        3127,
+        4393,
+        5490,
+        6690
+    ]
+}

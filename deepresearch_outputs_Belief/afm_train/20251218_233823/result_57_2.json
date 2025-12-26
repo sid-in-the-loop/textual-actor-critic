@@ -1,0 +1,17 @@
+{
+    "answer": "adjusted distribution forecast shown Jan 9 Economic Prospects Most Chan HK\u52b3\u52a8\u529b market prospects HK",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        1960
+    ]
+}

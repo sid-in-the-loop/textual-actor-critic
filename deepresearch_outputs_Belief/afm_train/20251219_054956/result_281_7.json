@@ -1,0 +1,29 @@
+{
+    "answer": "IBM Consulting Research",
+    "ground_truth": "IBM Institute for Business Value Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        719,
+        1953,
+        3299,
+        5214,
+        5517,
+        7269,
+        8359,
+        8861
+    ]
+}

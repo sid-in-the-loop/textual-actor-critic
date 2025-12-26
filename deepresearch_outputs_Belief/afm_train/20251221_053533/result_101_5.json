@@ -1,0 +1,29 @@
+{
+    "answer": "No acceptance date found in search snippets.",
+    "ground_truth": "2023-03-23",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        958,
+        2747,
+        4257,
+        5133,
+        6874,
+        7333,
+        8599,
+        9282
+    ]
+}

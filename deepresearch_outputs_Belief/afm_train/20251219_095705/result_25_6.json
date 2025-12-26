@@ -1,0 +1,23 @@
+{
+    "answer": "The specific subject categorization system for Web of Science includes its main categories: Arts and Humanities, Life Sciences and Biomedicine, Social Sciences, and Science and Technology. Specific subjects fall under these main classifications, with detailed \"Web of Science Subject Categories\" and \"Web of Science Core Collection\" being instances of these broad systems.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        1737,
+        2865,
+        4023,
+        5478
+    ]
+}

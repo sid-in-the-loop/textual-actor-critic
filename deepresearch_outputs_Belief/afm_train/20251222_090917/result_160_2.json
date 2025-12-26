@@ -1,0 +1,29 @@
+{
+    "answer": "The Australian Productivity Commission did not make a specific recommendation regarding student mental health in 2019 as it is not explicitly detailed in the provided snippets or searchable content of the identified BMC Public Health article.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2030,
+        3299,
+        4539,
+        5642,
+        6009,
+        7203,
+        8790
+    ]
+}

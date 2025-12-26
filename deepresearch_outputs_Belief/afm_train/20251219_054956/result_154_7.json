@@ -1,0 +1,21 @@
+{
+    "answer": "An increase of $34.2 billion or 12.8%",
+    "ground_truth": "$41.8 billion or 21.6%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        2809,
+        3857,
+        4539
+    ]
+}

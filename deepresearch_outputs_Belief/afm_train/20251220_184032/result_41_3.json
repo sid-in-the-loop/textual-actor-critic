@@ -1,0 +1,23 @@
+{
+    "answer": "Deploy AI on the battlefield.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        997,
+        2261,
+        4432,
+        7080
+    ]
+}

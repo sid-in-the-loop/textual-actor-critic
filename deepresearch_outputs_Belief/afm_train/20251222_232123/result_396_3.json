@@ -1,0 +1,21 @@
+{
+    "answer": "Automotive section",
+    "ground_truth": "Deloitte Automotive Industry Insights and Research",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        700,
+        1576,
+        2512,
+        3571
+    ]
+}

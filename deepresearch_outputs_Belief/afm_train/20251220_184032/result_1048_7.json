@@ -1,0 +1,17 @@
+{
+    "answer": "The report describes AI's transformative impact on market legal, risk, and governance challenges for 2025, with key legal issues highlighted.",
+    "ground_truth": "AI demonstrated its transformative potential in capturing market focus.",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        806,
+        2054
+    ]
+}

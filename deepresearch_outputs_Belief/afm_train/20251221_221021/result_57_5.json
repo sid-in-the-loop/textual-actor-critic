@@ -1,0 +1,19 @@
+{
+    "answer": "Figure 0 in the AMRO Annual Consultation Report on Hong Kong, China 2025 depicts the volatility distribution.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2199,
+        3540
+    ]
+}

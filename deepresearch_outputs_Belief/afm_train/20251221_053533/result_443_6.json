@@ -1,0 +1,25 @@
+{
+    "answer": "Environmental Economics",
+    "ground_truth": "Statistics (stat)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        1827,
+        3187,
+        4218,
+        5866,
+        7112
+    ]
+}

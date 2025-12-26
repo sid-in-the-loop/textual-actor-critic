@@ -1,0 +1,17 @@
+{
+    "answer": "The Pakistan Prime Minister (Shehbaz Sharif) confirmed that he was woken by the army chief.",
+    "ground_truth": "India\u2019s missiles hit Nur Khan Airbase",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        799,
+        2761
+    ]
+}

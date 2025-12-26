@@ -1,0 +1,23 @@
+{
+    "answer": "BuzzFeed",
+    "ground_truth": "BuzzFeed News | Breaking News | Original Reporting | News Analysis",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        679,
+        1532,
+        2550,
+        3576,
+        4493
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The evidence is presented regarding future development and demand for electric vehicle charging infrastructure in Europe and Germany, not the existence of infrastructure in new urban developments as of 2025.",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        2521,
+        4217,
+        5697
+    ]
+}

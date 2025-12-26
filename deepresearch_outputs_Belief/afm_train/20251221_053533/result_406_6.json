@@ -1,0 +1,21 @@
+{
+    "answer": "JPMorgan Global Core Real Assets Limited \u2013 Annual Report & Financial Statements 2025, J.P. Morgan",
+    "ground_truth": "Market outlook 2025: Navigating cross-currents (J.P. Morgan Global Research)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        2007,
+        3428,
+        4814
+    ]
+}

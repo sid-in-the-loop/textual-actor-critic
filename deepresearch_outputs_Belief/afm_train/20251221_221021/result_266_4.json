@@ -1,0 +1,23 @@
+{
+    "answer": "Net financial debt is calculated by adding long-term and short-term borrowings, the current portion of long-term borrowings, and other non-current financial liabilities, and deducting cash and cash equivalents, other current and non-current financial assets, in accordance with Guideline no. 39, issued on March 4, 2021 by ESMA.",
+    "ground_truth": "Sum of long-term borrowings, short-term borrowings, current portion of long-term borrowings, other non-current and current financial liabilities, minus cash and cash equivalents, minus other current and non-current financial assets; reported per ESMA Guideline no. 39 (2021-03-04), effective from 2021-05-05, and CONSOB Warning Notice no. 5/21 (2021-04-29)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        933,
+        2545,
+        4196,
+        5755,
+        7548
+    ]
+}

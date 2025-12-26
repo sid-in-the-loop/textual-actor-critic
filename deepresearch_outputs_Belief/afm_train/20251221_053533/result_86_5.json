@@ -1,0 +1,21 @@
+{
+    "answer": "BuzzFeed, Inc., the correct snippet.  I have.\nI.\n\nThe page results, and I have to and I've searched. Questions, it. The abstract.  I.\n\nOkay,.\"",
+    "ground_truth": "Hitachi Research Institute Research Report\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        1725,
+        2778,
+        3901
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "New Zealand Stock Exchange (NZX)",
+    "ground_truth": "Summary of all financial reports of Delegat Group Limited",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2153,
+        3264
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The New Mexico State University collections budget for fiscal year 2021 was reduced by $2.5 million, due to a structural budget deficit.",
+    "ground_truth": "$800,000; inflationary pressures, pandemic-related challenges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        1930,
+        3080,
+        4135,
+        5542
+    ]
+}

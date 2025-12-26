@@ -1,0 +1,19 @@
+{
+    "answer": "Coronary heart disease, with the leading cause of death being heart failure with elevated B-type natriuretic peptide (BNP) levels.",
+    "ground_truth": "\u6cd5\u6d1b\u56db\u8054\u75c7",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        953,
+        1812,
+        2931
+    ]
+}

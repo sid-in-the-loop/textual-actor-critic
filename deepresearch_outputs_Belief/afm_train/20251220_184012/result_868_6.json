@@ -1,0 +1,21 @@
+{
+    "answer": "The European Commission Work Programme 2025",
+    "ground_truth": "Coming up for the EU in 2025 - European Commission",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        736,
+        1968,
+        3322,
+        4480
+    ]
+}

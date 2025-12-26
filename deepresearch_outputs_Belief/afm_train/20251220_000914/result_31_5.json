@@ -1,0 +1,21 @@
+{
+    "answer": "A growing body of research converges in its portrayal of the shift to \"insistent and probing\" reporting and \"new journalistic forms\" in Washington journalism since the 1960s.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        1562,
+        2557,
+        3970
+    ]
+}

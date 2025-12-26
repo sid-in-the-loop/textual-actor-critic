@@ -1,0 +1,27 @@
+{
+    "answer": "1 in 4 people still lack access to safely managed drinking water",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        905,
+        2093,
+        3295,
+        4946,
+        7015,
+        8732,
+        10402
+    ]
+}

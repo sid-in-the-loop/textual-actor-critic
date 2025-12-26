@@ -1,0 +1,17 @@
+{
+    "answer": "Emerging markets and ESD both experienced over +20% year-over-year growth in the first quarter of fiscal year 2025, with ESD specifically reporting this growth.",
+    "ground_truth": "over 20%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        964,
+        2393
+    ]
+}

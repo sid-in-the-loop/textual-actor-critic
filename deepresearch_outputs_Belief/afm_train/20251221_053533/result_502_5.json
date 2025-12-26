@@ -1,0 +1,23 @@
+{
+    "answer": "Findings",
+    "ground_truth": "Presidential Task Force on Combating Antisemitism and Anti-Arab Bias at Harvard University\uff082025 Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        2158,
+        3537,
+        4139,
+        5344
+    ]
+}

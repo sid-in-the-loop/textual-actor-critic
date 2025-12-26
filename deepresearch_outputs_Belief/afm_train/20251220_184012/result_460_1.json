@@ -1,0 +1,23 @@
+{
+    "answer": "Figure 6: Qualitative Examples",
+    "ground_truth": "Figure 6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1972,
+        2327,
+        3639,
+        4271
+    ]
+}

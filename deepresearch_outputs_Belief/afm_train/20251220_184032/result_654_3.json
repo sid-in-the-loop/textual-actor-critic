@@ -1,0 +1,23 @@
+{
+    "answer": "2024, Vol. 7, Issue 6",
+    "ground_truth": "Frontiers | The past, present and future of educational assessment: A transdisciplinary perspective",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        935,
+        1853,
+        1910,
+        2758
+    ]
+}

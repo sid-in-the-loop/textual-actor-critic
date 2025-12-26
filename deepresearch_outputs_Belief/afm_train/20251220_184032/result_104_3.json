@@ -1,0 +1,23 @@
+{
+    "answer": "Essential Moon Knight and Shang-Chi: Master of Kung Fu.",
+    "ground_truth": "\"Starman\" and \"Robin\"",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        1839,
+        2949,
+        4349,
+        5528
+    ]
+}

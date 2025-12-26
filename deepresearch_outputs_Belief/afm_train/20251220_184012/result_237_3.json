@@ -1,0 +1,19 @@
+{
+    "answer": "Climate change mitigation through SSP1&RCP2.6 decreases the projected rise in the global population living in urban areas facing water scarcity by 2050, ending scarcity in many cities.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1738,
+        2587
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "56.3% of journals and 57.3% of articles were published by for-profit companies in 2013, with five for-profit companies accounting for this share.",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1821,
+        2122,
+        3314,
+        3740,
+        5472
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "IBM Journal of Research and Development",
+    "ground_truth": "IBM Research Publications Catalog",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1827,
+        2675
+    ]
+}

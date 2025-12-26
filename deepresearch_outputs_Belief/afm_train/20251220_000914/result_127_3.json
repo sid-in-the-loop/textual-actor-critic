@@ -1,0 +1,25 @@
+{
+    "answer": "https://theconversation.com/topics/politics-society-161379",
+    "ground_truth": "The Conversation: Politics Special Page\uff08 https://theconversation.com/topics/politics-245 )",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        1761,
+        2366,
+        3361,
+        3883,
+        4401
+    ]
+}

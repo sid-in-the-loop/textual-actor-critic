@@ -1,0 +1,17 @@
+{
+    "answer": "CVOB membership increased by 417 members, or 10%, bringing the total to 4890 members.",
+    "ground_truth": "417, 10%, 4,473 to 4,890",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        2227
+    ]
+}

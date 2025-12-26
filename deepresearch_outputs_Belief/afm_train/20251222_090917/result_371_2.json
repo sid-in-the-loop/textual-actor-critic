@@ -1,0 +1,25 @@
+{
+    "answer": "The SEIA Solar & Storage Supply Chain Dashboard does not specify the degree of Chinese control as a percentage for upstream or downstream stages in 2024.",
+    "ground_truth": "nearly complete control in upstream stages; less in downstream stages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        875,
+        1950,
+        3189,
+        4384,
+        5641,
+        7031
+    ]
+}

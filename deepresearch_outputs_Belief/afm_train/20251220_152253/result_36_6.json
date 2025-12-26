@@ -1,0 +1,25 @@
+{
+    "answer": "I cannot find a specific high jumper who won the German indoor championship in 1978 achieving a personal best of 2.42 meters, or explicitly linked to a team formed in 1971 after splitting from Turnverein Wattenscheid 01 (1901) in close proximity to these details.",
+    "ground_truth": "1957",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2094,
+        3362,
+        4801,
+        6670,
+        8384
+    ]
+}

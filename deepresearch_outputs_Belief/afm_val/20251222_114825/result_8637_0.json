@@ -1,0 +1,19 @@
+{
+    "answer": "Canadian Centre for Cyber Security",
+    "ground_truth": "Canadian Centre for Cyber Security (Cyber Centre)",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1701,
+        2643
+    ]
+}

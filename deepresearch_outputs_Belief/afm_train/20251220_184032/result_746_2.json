@@ -1,0 +1,23 @@
+{
+    "answer": "The requested quarterly trend of credit card loans cannot be determined from the provided information, as specific data was not found within the document described.",
+    "ground_truth": "3.30% in 4Q\u201922 to 4.81% in 4Q\u201924",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1033,
+        2559,
+        4060,
+        5630,
+        6924
+    ]
+}

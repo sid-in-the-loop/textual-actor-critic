@@ -1,0 +1,29 @@
+{
+    "answer": "Unable to determine; details about Figure 22's content type and subject are not provided in the search results.",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        722,
+        1887,
+        3173,
+        4419,
+        5743,
+        7063,
+        8597,
+        1154
+    ]
+}

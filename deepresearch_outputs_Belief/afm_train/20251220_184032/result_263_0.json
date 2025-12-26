@@ -1,0 +1,19 @@
+{
+    "answer": "Academic field: Esports and Gaming Management",
+    "ground_truth": "Esports, Gaming, and Entertainment",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        1817,
+        2816
+    ]
+}

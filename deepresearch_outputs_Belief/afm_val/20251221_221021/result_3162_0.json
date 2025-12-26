@@ -1,0 +1,15 @@
+{
+    "answer": "Regional nonprofit",
+    "ground_truth": "\u975e\u8425\u5229\u6027\u72ec\u7acb\u65b0\u95fb\u673a\u6784\uff08\u7531\u5404\u5730\u533a\u72ec\u7acb\u8fd0\u8425\uff09",
+    "rewards": [
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 1,
+    "search count": 0,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744
+    ]
+}

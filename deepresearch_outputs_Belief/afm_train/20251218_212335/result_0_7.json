@@ -1,0 +1,25 @@
+{
+    "answer": "Not found in direct queries or snippets from official Nature journal editorial policies.",
+    "ground_truth": "within two weeks or according to an agreed time limit",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        1547,
+        2870,
+        3338,
+        3777,
+        4336
+    ]
+}

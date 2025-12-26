@@ -1,0 +1,23 @@
+{
+    "answer": "According to the \"World Economy in 2024 and 2025: Analysis and Outlook\" (CPIFA), the European policy rate expected by the end of 2025 is not explicitly stated in the provided search results.",
+    "ground_truth": "below 2%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        2210,
+        2660,
+        3120,
+        3739
+    ]
+}

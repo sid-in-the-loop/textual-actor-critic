@@ -1,0 +1,23 @@
+{
+    "answer": "Gary Colchester",
+    "ground_truth": "Conspiracy to defraud and false accounting",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1861,
+        3210,
+        4697,
+        6049
+    ]
+}

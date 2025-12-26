@@ -1,0 +1,27 @@
+{
+    "answer": "$14.8M for 13 helicopters",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        2044,
+        3633,
+        5108,
+        5770,
+        6774,
+        7343
+    ]
+}

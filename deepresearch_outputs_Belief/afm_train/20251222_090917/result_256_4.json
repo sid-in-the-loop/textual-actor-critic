@@ -1,0 +1,29 @@
+{
+    "answer": "the paper does not provide the specific difference in QED concentrations",
+    "ground_truth": "GEOM Drugs less concentrated at QED > 0.8 than DrugBank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        906,
+        2027,
+        2599,
+        2813,
+        3958,
+        4310,
+        4731,
+        5366
+    ]
+}

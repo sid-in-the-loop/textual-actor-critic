@@ -1,0 +1,21 @@
+{
+    "answer": "IEA (2025), Gas 2025, IEA, Paris",
+    "ground_truth": "Gas Market Report, Q1-2025 (IEA. CC BY 4.0) January 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        2118,
+        2611,
+        3786
+    ]
+}

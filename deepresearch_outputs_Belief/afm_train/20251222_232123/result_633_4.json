@@ -1,0 +1,17 @@
+{
+    "answer": "mba-iit kanpur final placement report 2022-2024",
+    "ground_truth": "IITK-DoMS-PlacementReports",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        2103
+    ]
+}

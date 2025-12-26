@@ -1,0 +1,25 @@
+{
+    "answer": "1. Monetization Paves Way for Industry Expansion\n2. Trend 2: (Missing from the snippet)\n3. Trend 3: (Missing from the snippet)\n4. Trend 4: (Missing from the snippet)\n5. Trend 5: (Missing from the snippet)",
+    "ground_truth": "Global X ETFs Insights (Five AI Trends for 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        1961,
+        2527,
+        3653,
+        4118,
+        4609
+    ]
+}

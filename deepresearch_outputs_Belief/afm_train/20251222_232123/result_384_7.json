@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to find specific revenue attributable to Spain for Q1 2025 in the Group's financial disclosures. Therefore, the proportion cannot be calculated.",
+    "ground_truth": "41%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2022,
+        3608,
+        5047,
+        6527,
+        7895,
+        9329
+    ]
+}

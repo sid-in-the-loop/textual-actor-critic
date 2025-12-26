@@ -1,0 +1,17 @@
+{
+    "answer": "First-party data, gathered with consent, will be paramount for marketers in 2025.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2251
+    ]
+}

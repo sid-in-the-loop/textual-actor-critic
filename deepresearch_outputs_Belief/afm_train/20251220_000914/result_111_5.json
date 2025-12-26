@@ -1,0 +1,27 @@
+{
+    "answer": "Shang-Chi and the Legend of the True Knight",
+    "ground_truth": "Norway",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        838,
+        2020,
+        3264,
+        4582,
+        6059,
+        7430,
+        8500
+    ]
+}

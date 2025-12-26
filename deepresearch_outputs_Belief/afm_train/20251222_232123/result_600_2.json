@@ -1,0 +1,23 @@
+{
+    "answer": "Significant proactive engagement and strategic alliances to address PBM challenges in 2025.",
+    "ground_truth": "Increased collaboration between pharmaceutical manufacturers and independent pharmacies.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        874,
+        1979,
+        2319,
+        2596,
+        2921
+    ]
+}

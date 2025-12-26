@@ -1,0 +1,21 @@
+{
+    "answer": "Journal of Linguistics and Information Science",
+    "ground_truth": "Nature Human Behaviour",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        1737,
+        2724,
+        3429
+    ]
+}

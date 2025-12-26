@@ -1,0 +1,29 @@
+{
+    "answer": "BIP (Bank of India Punjab)",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1974,
+        3228,
+        4969,
+        6422,
+        8321,
+        10551,
+        11111
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Opiates",
+    "ground_truth": "\u963f\u53f8\u5339\u6797",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1617,
+        3466,
+        4715
+    ]
+}

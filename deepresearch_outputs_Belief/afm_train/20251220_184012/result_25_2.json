@@ -1,0 +1,21 @@
+{
+    "answer": "Web of Science categorizes into Science, Social Sciences, Arts and Humanities, and specific subject areas within those main categories.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1857,
+        2903,
+        4008
+    ]
+}

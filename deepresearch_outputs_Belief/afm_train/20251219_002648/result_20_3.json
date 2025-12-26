@@ -1,0 +1,19 @@
+{
+    "answer": "Submission guidelines page: https://www.nature.com/srep/author-instructions/submission-guidelines, specifically references (limited to 60), acknowledgements (optional), author contributions, and data availability statement (mandatory) are explicitly mentioned.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        633,
+        1550,
+        2275
+    ]
+}

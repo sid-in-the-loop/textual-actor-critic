@@ -1,0 +1,25 @@
+{
+    "answer": "The 2024 Chinese Academy of Sciences (CAS) subject category adjustment downgraded Scientific Reports from a higher tier to the third tier in fields like biology, chemistry, physics, materials science, and environmental science. However, specific details about its perception or impact due to this downgrade are not available in the search results.",
+    "ground_truth": "How does the reduction of Scientific Reports from Zone 2 to Zone 3 affect? -AJE American Journal Expert",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2055,
+        3267,
+        4590,
+        5899,
+        7127
+    ]
+}

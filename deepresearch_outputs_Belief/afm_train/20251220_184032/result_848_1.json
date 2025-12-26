@@ -1,0 +1,17 @@
+{
+    "answer": "Navigating the Peer Review Process: Tips from Journal Editors for ...",
+    "ground_truth": "Guidelines for Peer Review Process: Editverse Journal Editing Tips for 2024-2025",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        1985
+    ]
+}

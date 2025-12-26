@@ -1,0 +1,17 @@
+{
+    "answer": "C(n, 2) * (n - 2)!",
+    "ground_truth": "\u5f53 $x=y$ \u65f6\uff0c\u65b9\u6cd5\u6570\u4e3a $2xy-x-y+2$\uff0c \u5f53 $x\\neq y$ \u65f6\uff0c\u65b9\u6cd5\u6570\u4e3a $x^2-x+1$",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        986,
+        2965
+    ]
+}

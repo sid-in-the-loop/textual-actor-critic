@@ -1,0 +1,25 @@
+{
+    "answer": "No comprehensive listing matching the exact criteria could be identified; it implies no such a specific data aggregation service.",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2475,
+        3723,
+        4137,
+        5838,
+        7581
+    ]
+}

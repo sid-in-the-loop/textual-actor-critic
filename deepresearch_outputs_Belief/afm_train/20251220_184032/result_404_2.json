@@ -1,0 +1,23 @@
+{
+    "answer": "EnronQA: Towards Personalized RAG over Private Documents",
+    "ground_truth": "EnronQA: Towards Personalized RAG over Private Documents",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        692,
+        1788,
+        2863,
+        3208,
+        4199
+    ]
+}

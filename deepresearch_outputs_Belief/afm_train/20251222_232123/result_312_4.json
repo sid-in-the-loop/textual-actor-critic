@@ -1,0 +1,25 @@
+{
+    "answer": "Decentring foreign peace mediation in the case of Cameroon's Anglophone Crisis, World Politics",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        1882,
+        2170,
+        2470,
+        3758,
+        5032
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Bank of England Monetary Policy Committee (Monetary Policy Committee dates for 2026 and 2027)",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1897,
+        3391,
+        4698,
+        6609,
+        7193,
+        8659
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Contingent liabilities of $X million as of 31 December 2024, referenced to Note B4, and legal provisions and contingent liabilities as of 31 December 2024, referenced to Note B6.",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        2170,
+        3368,
+        4565,
+        5915
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "en.apu.ac.jp/academic/academic_information/advancement_graduation/",
+    "ground_truth": "Ritsumeikan \u30a2\u30b8\u30a2 Pacific University Academic Information \u30b5\u30a4\u30c8: Academic Information\uff08 https://www.apu.ac.jp/academic/ \uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1463,
+        2745,
+        3637
+    ]
+}

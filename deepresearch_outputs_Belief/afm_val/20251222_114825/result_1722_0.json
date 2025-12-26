@@ -1,0 +1,17 @@
+{
+    "answer": "Ten National Elections to Watch in 2025: Key Contests That Could Reshape Regions",
+    "ground_truth": "The world in 2025: ten issues that will shape the international agenda",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2074
+    ]
+}

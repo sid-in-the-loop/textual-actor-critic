@@ -1,0 +1,19 @@
+{
+    "answer": "Submit quality measures to CMS annually, with subsection (d) hospitals required to do so.",
+    "ground_truth": "submit Notice of Participation; agree to public reporting of quality data",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        1778,
+        2970
+    ]
+}

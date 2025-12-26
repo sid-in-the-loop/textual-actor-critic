@@ -1,0 +1,27 @@
+{
+    "answer": "The 2025 UCSD financial security survey did not provide a specific statistical finding regarding gender differences in self-reported rates of low financial literacy, primarily as the total proportion of low financial literacy among undergraduates is reported.",
+    "ground_truth": "Female students were 2.2 times more likely than male students to report having low financial literacy.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1940,
+        2315,
+        2622,
+        3046,
+        3922,
+        5069
+    ]
+}

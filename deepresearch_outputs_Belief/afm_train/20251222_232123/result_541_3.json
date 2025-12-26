@@ -1,0 +1,17 @@
+{
+    "answer": "10-K for December 31, 2024: https://www.sec.gov/Archives/edgar/data/1953366/000155837025001097/stho-20241231x10k.htm; 2024 Annual Report: https://www.starentertainmentgroup.com.au/wp-content/uploads/2024/10/30-10-2024-2024-Annual-Report.pdf",
+    "ground_truth": "The Star Entertainment Group Limited ASX:SGR 2024\u5e74\u5ea6\u8d22\u52a1\u548c\u62ab\u9732\u6587\u4ef6\uff08\u62162024\u5e74\u5ea6\u62a5\u544a\u677f\u5757\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2482
+    ]
+}

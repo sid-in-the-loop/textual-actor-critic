@@ -1,0 +1,23 @@
+{
+    "answer": "Effect of perceived social support on cancer patients, Academia.edu, Authors/Gilda Giancotti and the others, Academia Oncology",
+    "ground_truth": "'Prevalence and ultrasonographic patterns of gynecological emergencies in southeastern Nigeria' by Emmanuel Odumeru, Xavier Akimuhana, Eric Kirezi, Costelia Njoku",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        893,
+        2056,
+        3259,
+        4548,
+        5586
+    ]
+}

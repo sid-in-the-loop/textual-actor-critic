@@ -1,0 +1,17 @@
+{
+    "answer": "Hardened its stance; more assertive, less focused on peace-oriented diplomacy, moving toward \"unification by absorption.\"",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        961,
+        2200
+    ]
+}

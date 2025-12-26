@@ -1,0 +1,25 @@
+{
+    "answer": "Services of international academic publishing technology ...",
+    "ground_truth": "streamlining peer review, enhancing content discoverability, improving research analytics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2083,
+        2486,
+        2738,
+        3129,
+        4392
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Evidence of the increasing need for electric vehicle charging infrastructure in new urban developments is presented as a key trend in the Capgemini Financial Services Top Trends 2025 report.",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        2076,
+        3098
+    ]
+}

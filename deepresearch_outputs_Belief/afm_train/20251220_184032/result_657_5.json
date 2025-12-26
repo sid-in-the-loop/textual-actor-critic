@@ -1,0 +1,21 @@
+{
+    "answer": "Latest News & Videos, Photos about Social issue",
+    "ground_truth": "The Economic Times Social Issues Channel Page",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        1807,
+        2948,
+        3971
+    ]
+}

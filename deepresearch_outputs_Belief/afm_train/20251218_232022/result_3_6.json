@@ -1,0 +1,27 @@
+{
+    "answer": "Sarah Klassen and Will Russell",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        1990,
+        3154,
+        4184,
+        5563,
+        6674,
+        7690
+    ]
+}

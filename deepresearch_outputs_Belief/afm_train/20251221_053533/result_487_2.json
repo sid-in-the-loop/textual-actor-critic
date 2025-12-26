@@ -1,0 +1,29 @@
+{
+    "answer": "The NHS Mental Health Services Monthly Statistics Publication",
+    "ground_truth": "NHS funded secondary mental health, learning disabilities, and autism services (NHS England Digital Statistical Publication)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        1953,
+        3082,
+        4037,
+        4584,
+        4934,
+        6473,
+        7912
+    ]
+}

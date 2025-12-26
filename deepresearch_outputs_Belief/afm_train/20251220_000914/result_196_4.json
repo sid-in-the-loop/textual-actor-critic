@@ -1,0 +1,29 @@
+{
+    "answer": "COVID-19 and education: An emerging K-shaped recovery",
+    "ground_truth": "McKinsey & Company COVID-19 Education Research Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        2012,
+        3401,
+        4997,
+        6539,
+        8170,
+        9823,
+        10448
+    ]
+}

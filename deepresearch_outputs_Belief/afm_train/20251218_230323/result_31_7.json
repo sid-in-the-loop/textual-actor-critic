@@ -1,0 +1,21 @@
+{
+    "answer": "New Journalism developed in the 1960s.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        808,
+        1850,
+        2795,
+        3771
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Declaration of Rights",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1903,
+        3149,
+        4829,
+        6090
+    ]
+}

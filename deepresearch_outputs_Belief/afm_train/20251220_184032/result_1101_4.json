@@ -1,0 +1,19 @@
+{
+    "answer": "Allocated to the President's Council on Emerging Opportunities (PCEO) and its Task Force on Emerging Opportunities (TFOE) through trade missions and economic development initiatives, promoting free enterprise and economic self-reliance.",
+    "ground_truth": "Significant federal funding",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        2144,
+        3299
+    ]
+}

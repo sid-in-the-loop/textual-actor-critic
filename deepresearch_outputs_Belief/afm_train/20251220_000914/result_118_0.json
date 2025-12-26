@@ -1,0 +1,25 @@
+{
+    "answer": "JPMorgan Chase",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2071,
+        3359,
+        4684,
+        6028,
+        7361
+    ]
+}

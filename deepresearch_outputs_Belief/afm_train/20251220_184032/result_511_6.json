@@ -1,0 +1,21 @@
+{
+    "answer": "Latest Financial Results and \"2025\" section",
+    "ground_truth": "D-Wave - Quarterly Results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        684,
+        2094,
+        3467,
+        5021
+    ]
+}

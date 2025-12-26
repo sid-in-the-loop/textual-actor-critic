@@ -1,0 +1,25 @@
+{
+    "answer": "Disbandment date not found; the Manchester Area Basketball League (MABL) is currently active.",
+    "ground_truth": "2015",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2779,
+        2981,
+        3912,
+        4942,
+        5841
+    ]
+}

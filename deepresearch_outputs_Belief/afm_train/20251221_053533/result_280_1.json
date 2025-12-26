@@ -1,0 +1,21 @@
+{
+    "answer": "Olympus reported over 20% year-over-year growth in emerging markets and over 20% growth in its Endoscopic Solutions Division (ESD) for Q1 FY2025.",
+    "ground_truth": "over 20%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        2209,
+        3787,
+        5433
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "ChatGPT had influenced mental health, with negative impacts on student well-being.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1901,
+        3243,
+        4571,
+        5928,
+        7307,
+        8628
+    ]
+}

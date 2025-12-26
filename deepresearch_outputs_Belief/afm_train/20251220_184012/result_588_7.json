@@ -1,0 +1,21 @@
+{
+    "answer": "The inflation rate in December 2024 was 33.2%, which was above the Central Bank of Nigeria's inflation target of 6.00% to 9.00%.",
+    "ground_truth": "34.8%, target 21%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2655,
+        4328,
+        5539
+    ]
+}

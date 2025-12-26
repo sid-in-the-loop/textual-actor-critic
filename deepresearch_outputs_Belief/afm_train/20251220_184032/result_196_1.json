@@ -1,0 +1,23 @@
+{
+    "answer": "COVID-19 Response Center",
+    "ground_truth": "McKinsey & Company COVID-19 Education Research Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        2132,
+        2576,
+        3844,
+        5243
+    ]
+}

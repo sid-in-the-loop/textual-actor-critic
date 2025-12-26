@@ -1,0 +1,25 @@
+{
+    "answer": "HKEX provides quarterly regulatory reports and financial statements for listed companies.",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        2222,
+        4037,
+        5684,
+        7175,
+        8566
+    ]
+}

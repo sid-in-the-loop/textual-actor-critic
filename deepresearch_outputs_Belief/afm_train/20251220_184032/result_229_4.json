@@ -1,0 +1,23 @@
+{
+    "answer": "No results were found for the specified article.",
+    "ground_truth": "Key factors influencing students\u2019 academic performance | Journal of Electrical Systems and Information Technology | Full Text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        715,
+        1793,
+        2869,
+        3972,
+        5226
+    ]
+}

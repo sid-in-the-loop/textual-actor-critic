@@ -1,0 +1,23 @@
+{
+    "answer": "Clarivate provides all subject classifications within a spreadsheet, explicitly stating the unique mapping.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2005,
+        3147,
+        4356,
+        5464
+    ]
+}

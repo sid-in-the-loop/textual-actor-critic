@@ -1,0 +1,19 @@
+{
+    "answer": "Improved ALFWorld performance with database-level and exemplar-level selection, achieving higher performance compared to more complex, task-specific approaches.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        1952,
+        3101
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "American",
+    "ground_truth": "Puerto Rican",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1992,
+        2916,
+        4097,
+        5166,
+        6240,
+        7289,
+        8435
+    ]
+}

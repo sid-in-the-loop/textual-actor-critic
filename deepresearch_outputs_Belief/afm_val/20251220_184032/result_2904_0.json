@@ -1,0 +1,23 @@
+{
+    "answer": "The article \"Mental Health for Students and Families in 2025: Understanding, Supporting, and Thriving\" from DCPS does not provide specific details on how communities in 2025 are collaborating to promote the mental well-being of students and families.",
+    "ground_truth": "collaboration among parents, schools, mental health professionals, and students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        1904,
+        2292,
+        3011,
+        3536
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "the Insight Leader's Playbook: ambition, broad thinking and creating time transformation s engine room",
+    "ground_truth": "Research World official website 2025 Trends article (2025 Trends)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1662,
+        2769,
+        3053
+    ]
+}

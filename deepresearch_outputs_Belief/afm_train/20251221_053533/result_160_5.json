@@ -1,0 +1,29 @@
+{
+    "answer": "\"Addressing youth mental health should be a priority\"",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        2040,
+        2837,
+        3237,
+        4685,
+        5193,
+        5511,
+        5845
+    ]
+}

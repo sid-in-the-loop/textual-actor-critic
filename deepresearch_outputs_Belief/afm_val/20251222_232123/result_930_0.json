@@ -1,0 +1,27 @@
+{
+    "answer": "Opulent bluish purple trend",
+    "ground_truth": "bluish purple leading as a symbol of self-indulgence",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        1939,
+        2270,
+        2590,
+        2952,
+        3313,
+        3481
+    ]
+}

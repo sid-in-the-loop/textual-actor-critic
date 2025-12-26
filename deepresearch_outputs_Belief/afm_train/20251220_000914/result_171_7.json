@@ -1,0 +1,29 @@
+{
+    "answer": "The financial report mentions contingent liabilities related to outstanding legal proceedings (as per Note B4 of the 1HFY25 Financial Report, dated Apr 15, 2025), but the exact dollar amount is not disclosed in the search results snippets.",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        924,
+        2323,
+        2694,
+        3622,
+        4370,
+        6318,
+        7408,
+        7830
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "The launch announcement was: \"The groundbreaking announcement of the 2025 AACR Annual Meeting will be the kick-off.\" (Based on the snippet from the official AACR blog post \"<search result>https://www.aacr.org/blog/2025/01/10/experts-forecast-cancer-research-and-treatment-advances-in-2025/</search result>.\"",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        1955
+    ]
+}

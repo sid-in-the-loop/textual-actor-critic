@@ -1,0 +1,17 @@
+{
+    "answer": "Springer Nature fully open access journals, representing a portfolio where the entire published content is freely accessible.",
+    "ground_truth": "Springer Nature fully open access journals",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        1684
+    ]
+}

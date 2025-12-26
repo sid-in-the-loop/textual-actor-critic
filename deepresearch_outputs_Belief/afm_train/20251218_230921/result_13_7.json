@@ -1,0 +1,19 @@
+{
+    "answer": "Cloudberry Q2 2024 Report",
+    "ground_truth": "Cloudberry Clean Energy ASA Periodic Financial Report Series",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2080,
+        3711
+    ]
+}

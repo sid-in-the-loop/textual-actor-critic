@@ -1,0 +1,21 @@
+{
+    "answer": "Yes, Figure 1 contains an image representing the second quarter of fiscal year 2024. It is a News Corp logo.",
+    "ground_truth": "Exclusively a logo; no chart or data visualization",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        899,
+        2238,
+        2595,
+        3904
+    ]
+}

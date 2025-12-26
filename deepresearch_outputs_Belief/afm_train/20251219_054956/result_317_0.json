@@ -1,0 +1,23 @@
+{
+    "answer": "The U.S. Department of Commerce's FY2025 budget request, and its specific allocation for UH-60 conversion funding, is not publicly available as per standard web searches.",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2381,
+        4074,
+        5596,
+        7011
+    ]
+}

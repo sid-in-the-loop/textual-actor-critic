@@ -1,0 +1,27 @@
+{
+    "answer": "None of the specified sections on the U.S. Department of Commerce's \"About\" page, nor any related financial management or program evaluation resources, provide exclusive access to the requested information on financial planning and effectiveness assessment.",
+    "ground_truth": "Budget and performance\uff08U.S. Department of Commerce\u5b98\u7f51\u4e13\u9875\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        1880,
+        3101,
+        3500,
+        4055,
+        5229,
+        6309
+    ]
+}

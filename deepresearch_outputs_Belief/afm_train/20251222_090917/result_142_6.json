@@ -1,0 +1,19 @@
+{
+    "answer": "The closest available UNICEF report states that 18 million people gained access to basic sanitation and 33.3 million to safe water, but the specific statistic for the number of people residing in countries with insufficient water supply is not provided in the search results for a December 5, 2024, publication.",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2319,
+        3390
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Last volume of important documents since the 19th CPC National Congress.",
+    "ground_truth": "Proceedings of the National People's Congress",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        1851,
+        2936,
+        4138
+    ]
+}

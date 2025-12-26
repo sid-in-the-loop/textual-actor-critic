@@ -1,0 +1,19 @@
+{
+    "answer": "Avaya_ACR_2024.pdf",
+    "ground_truth": "Apple's Q1 2025 Financial Year Performance Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        931,
+        2588,
+        3959
+    ]
+}

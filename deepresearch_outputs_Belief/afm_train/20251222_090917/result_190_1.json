@@ -1,0 +1,29 @@
+{
+    "answer": "The largest age group of the study's sample is not specified in the provided search results.",
+    "ground_truth": "30\u201340 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        1946,
+        3141,
+        4342,
+        5606,
+        6944,
+        8268,
+        9491
+    ]
+}

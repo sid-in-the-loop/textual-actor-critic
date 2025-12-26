@@ -1,0 +1,23 @@
+{
+    "answer": "I cannot find an American television series starring a character named \"Star\" as the 'Perfect Fool' comedy character, which Ed Wynn was famously known for.",
+    "ground_truth": "The Twilight Zone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1715,
+        2853,
+        3894,
+        5074
+    ]
+}

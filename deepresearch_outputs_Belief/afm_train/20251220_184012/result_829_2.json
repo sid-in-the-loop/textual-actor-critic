@@ -1,0 +1,23 @@
+{
+    "answer": "The required information cannot be retrieved.",
+    "ground_truth": "more than $175 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        1124,
+        1577,
+        1999,
+        2363
+    ]
+}

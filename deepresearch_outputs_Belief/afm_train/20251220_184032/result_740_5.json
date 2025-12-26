@@ -1,0 +1,17 @@
+{
+    "answer": "The Preakness Stakes starts at 6:50 p.m. ET on Saturday, May 17th, with Peacock starting coverage at 4:30 p.m. ET that day.",
+    "ground_truth": "2:00 p.m. ET",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        898,
+        2726
+    ]
+}

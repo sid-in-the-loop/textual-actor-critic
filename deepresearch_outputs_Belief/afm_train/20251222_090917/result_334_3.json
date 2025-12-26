@@ -1,0 +1,27 @@
+{
+    "answer": "World Economic Outlook, April 2025 report",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        874,
+        2183,
+        3513,
+        4784,
+        6061,
+        7333,
+        8637
+    ]
+}

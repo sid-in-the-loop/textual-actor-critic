@@ -1,0 +1,25 @@
+{
+    "answer": "Outlook 2025 Building on Strength | J.P. Morgan Global Wealth Management",
+    "ground_truth": "Market outlook 2025: Navigating cross-currents (J.P. Morgan Global Research)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        2406,
+        2907,
+        4403,
+        5704,
+        7151
+    ]
+}

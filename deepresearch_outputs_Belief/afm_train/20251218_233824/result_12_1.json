@@ -1,0 +1,29 @@
+{
+    "answer": "No specific numerical count provided",
+    "ground_truth": "217",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        850,
+        2216,
+        3565,
+        4912,
+        6470,
+        7587,
+        8603,
+        1560
+    ]
+}

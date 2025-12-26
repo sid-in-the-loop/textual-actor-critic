@@ -1,0 +1,17 @@
+{
+    "answer": "IP Third Quarter 2025 Earnings",
+    "ground_truth": "pages 42-44",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        2095
+    ]
+}

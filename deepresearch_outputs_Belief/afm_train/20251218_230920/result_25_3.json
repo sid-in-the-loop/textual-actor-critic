@@ -1,0 +1,27 @@
+{
+    "answer": "Science and Technology, Social Sciences, and Arts and Humanities",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2227,
+        3769,
+        4776,
+        6011,
+        6530,
+        7929
+    ]
+}

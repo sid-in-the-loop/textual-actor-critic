@@ -1,0 +1,19 @@
+{
+    "answer": "ALFWorld's performance was achieved at 91% with database-level selection (population-based training) and exemplar-level selection, surpassing more complex, task-specific approaches.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2012,
+        3161
+    ]
+}

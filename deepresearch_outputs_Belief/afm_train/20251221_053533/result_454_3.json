@@ -1,0 +1,27 @@
+{
+    "answer": "March 1, 2024 to February 29, 2025",
+    "ground_truth": "Q1 2025 Financial Reporting Season",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        2209,
+        2960,
+        4135,
+        5385,
+        6335,
+        7809
+    ]
+}

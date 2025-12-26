@@ -1,0 +1,25 @@
+{
+    "answer": "Education/Teaching",
+    "ground_truth": "EDUCATION & EDUCATIONAL RESEARCH (\u5b66\u79d1\u5206\u7c7b)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1830,
+        2922,
+        4035,
+        5051,
+        6214
+    ]
+}

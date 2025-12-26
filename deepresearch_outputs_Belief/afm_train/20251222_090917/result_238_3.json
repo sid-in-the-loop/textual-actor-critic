@@ -1,0 +1,23 @@
+{
+    "answer": "Unable to find the specific proportion of organizations in 2024 that accelerated their attack detection by up to 10% through AI adoption in the provided search results for the Accenture State of Cybersecurity Resilience 2025 report.",
+    "ground_truth": "Nine out of ten",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        2082,
+        3403,
+        4850,
+        6171
+    ]
+}

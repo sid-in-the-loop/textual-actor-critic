@@ -1,0 +1,21 @@
+{
+    "answer": "PlanA.Earth/sustainability-reporting",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        722,
+        1509,
+        1666,
+        2486
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Oliver Twist",
+    "ground_truth": "Mrssrs. Vanderput and Snoek",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        861,
+        2749,
+        3063,
+        4373,
+        5335
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "13%",
+    "ground_truth": "2.60%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        2190,
+        3466,
+        4698
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "https://lib.ccmu.edu.cn/Englishversion_3126/Collections_3182/SearchDatabases_3185/index.htm",
+    "ground_truth": "List of Purchased Databases in the Library of Communication University of China",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        745,
+        1691,
+        2592,
+        3548
+    ]
+}

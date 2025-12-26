@@ -1,0 +1,27 @@
+{
+    "answer": "Annual Report to Congress, United States Securities and Exchange Commission",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2187,
+        3149,
+        4904,
+        6294,
+        7674,
+        8202
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "3.2%, much the same as the pre-pandemic trend",
+    "ground_truth": "3.2%; below pre-pandemic trend",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2140,
+        3344
+    ]
+}

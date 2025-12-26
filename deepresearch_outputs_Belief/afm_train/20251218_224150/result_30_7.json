@@ -1,0 +1,23 @@
+{
+    "answer": "Risk mitigation: 450 million Australian dollars invested in 1H25 to protect against fraud, scams, and financial and cyber crime.\nAlert: \"Fake payee\" due to payee account name not matching payee account details.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2113,
+        3326,
+        3666,
+        4440
+    ]
+}

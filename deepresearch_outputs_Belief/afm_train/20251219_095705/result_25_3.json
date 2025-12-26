@@ -1,0 +1,21 @@
+{
+    "answer": "Science and Technology, Social Sciences, and Arts and Humanities are the main categories; their specific subject categories include: Science and Technology categories like Acoustics, Electrochemistry, Literature, Physics, and Condensed Matter, Social Sciences with Oncology and Biochemistry and Molecular Biology, and Arts and Humanities with History.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2031,
+        3123,
+        4427
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The median human evaluation score achieved by Gemini 2.5 Pro under HIPc conditions is 43%. It is higher than other large language models tested in the study.",
+    "ground_truth": "8\u20139",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        2063,
+        2680,
+        4224,
+        5471
+    ]
+}

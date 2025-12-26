@@ -1,0 +1,17 @@
+{
+    "answer": "15 April 2025, Financial Results - The Star Entertainment Group Limited",
+    "ground_truth": "Financial Results | The Star Entertainment Group Limited",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        881,
+        2079
+    ]
+}

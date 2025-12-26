@@ -1,0 +1,21 @@
+{
+    "answer": "93% of its tasks set out in its 2024 Annual Work Programme.",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        2286,
+        2713,
+        2991
+    ]
+}

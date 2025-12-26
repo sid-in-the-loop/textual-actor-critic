@@ -1,0 +1,25 @@
+{
+    "answer": "1 year and 1 month (SourceFed, founded January 2012, versus Meg Turner's May 2014 Rooster Teeth membership)",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        703,
+        1599,
+        2715,
+        3858,
+        4705,
+        5701
+    ]
+}

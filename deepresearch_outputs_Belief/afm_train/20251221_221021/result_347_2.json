@@ -1,0 +1,17 @@
+{
+    "answer": "PescaData Initiative was launched in 2022. It has made specific contributions by launching the PescaData App, which allows small-scale fishers in Mexico to share knowledge, experiences, and local solutions, thereby facilitating peer-to-peer learning among them.",
+    "ground_truth": "Started: 2020; facilitated peer-to-peer learning among small-scale fishers in Latin America",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        1964
+    ]
+}

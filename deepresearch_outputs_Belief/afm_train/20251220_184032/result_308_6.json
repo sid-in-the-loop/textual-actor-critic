@@ -1,0 +1,17 @@
+{
+    "answer": "Digitalization and academic research: knowing of and using digital services and software to develop scientific papers",
+    "ground_truth": "Digitalization and academic research: knowing of and using digital services and software to\u00a0develop scientific papers\n |  Emerald Insight",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        691,
+        1934
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Global Trends 2025: A Transformed World",
+    "ground_truth": "What We're Watching Around the Globe in 2025 (CFR Special Article)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        1961,
+        2919
+    ]
+}

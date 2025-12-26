@@ -1,0 +1,27 @@
+{
+    "answer": "Pillar I of the Capital Requirements Regulation (CRR) for defined benefit pension funds.",
+    "ground_truth": "Funding Ratios (DB schemes) section; Solvency II regulatory framework; Reference date: 2024-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        819,
+        2340,
+        2991,
+        3997,
+        4872,
+        6102,
+        6505
+    ]
+}

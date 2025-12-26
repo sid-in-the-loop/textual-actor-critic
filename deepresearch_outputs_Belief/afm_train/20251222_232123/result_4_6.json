@@ -1,0 +1,25 @@
+{
+    "answer": "Marketers are expected to rely on first-party data and community trust rather than just ads, as privacy regulations tighten.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        2094,
+        3583,
+        5012,
+        6325,
+        7607
+    ]
+}

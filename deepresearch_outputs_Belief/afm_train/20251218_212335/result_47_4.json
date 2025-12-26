@@ -1,0 +1,23 @@
+{
+    "answer": "Aliased",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        762,
+        1681,
+        2097,
+        2315,
+        2628
+    ]
+}

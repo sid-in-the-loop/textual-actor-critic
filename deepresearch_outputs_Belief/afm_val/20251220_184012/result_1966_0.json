@@ -1,0 +1,19 @@
+{
+    "answer": "Using Artificial Intelligence for Higher Education: An Overview and ...",
+    "ground_truth": "Artificial intelligence in higher education: the state of the field | International Journal of Educational Technology in Higher Education | Full Text",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        1933,
+        3176
+    ]
+}

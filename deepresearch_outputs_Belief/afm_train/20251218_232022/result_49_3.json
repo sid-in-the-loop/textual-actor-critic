@@ -1,0 +1,21 @@
+{
+    "answer": "The official publications from Child Trends include all research reports and publications, which can be filtered or located on their website through the 'Publications' or 'What Works' pages.",
+    "ground_truth": "Child Trends Publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1822,
+        2941,
+        4048
+    ]
+}

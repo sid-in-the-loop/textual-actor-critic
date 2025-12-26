@@ -1,0 +1,21 @@
+{
+    "answer": "Ruijun Dang, Daniel J. Jacob, Huiqun Wang, and Caroline R. Nowlan",
+    "ground_truth": "RD and DJJ",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        1914,
+        3056,
+        4055
+    ]
+}

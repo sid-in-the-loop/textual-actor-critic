@@ -1,0 +1,17 @@
+{
+    "answer": "Subject and category system with \"225 Web of Science Categories\" (referred to as WCs). Web of Science Records automatically assigns journal-specific subject categories.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        895,
+        2092
+    ]
+}

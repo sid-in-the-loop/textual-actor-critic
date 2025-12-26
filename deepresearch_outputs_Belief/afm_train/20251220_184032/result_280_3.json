@@ -1,0 +1,19 @@
+{
+    "answer": "Emerging markets grew over 20% YoY, ESD grew over 20% YoY.",
+    "ground_truth": "over 20%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        2183,
+        3432
+    ]
+}

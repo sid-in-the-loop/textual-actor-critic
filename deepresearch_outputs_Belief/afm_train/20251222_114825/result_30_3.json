@@ -1,0 +1,17 @@
+{
+    "answer": "Preventive alert for mismatched account details: \"Payment errors could have been avoided if the recipient's account name and payee's name matched.\"",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        931,
+        2147
+    ]
+}

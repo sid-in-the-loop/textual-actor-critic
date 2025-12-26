@@ -1,0 +1,21 @@
+{
+    "answer": "DOI not yet available",
+    "ground_truth": "https://doi.org/10.1038/d41586-024-04237-w",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        2058,
+        2429,
+        3748
+    ]
+}

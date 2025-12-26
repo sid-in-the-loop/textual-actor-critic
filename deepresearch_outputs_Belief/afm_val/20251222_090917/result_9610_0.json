@@ -1,0 +1,23 @@
+{
+    "answer": "Stefan Grossman and Jas Obrecht",
+    "ground_truth": "Ivor Mairants",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        2069,
+        3206,
+        4353,
+        5638
+    ]
+}

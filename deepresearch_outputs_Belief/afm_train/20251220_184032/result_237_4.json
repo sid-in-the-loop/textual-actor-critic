@@ -1,0 +1,19 @@
+{
+    "answer": "The article quantifies global urban water scarcity in 2050 under socioeconomic and climate change scenarios, highlighting the influence of SSP1&RCP2.6 as a sustainable pathway.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        1224,
+        2192
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Published by Nature Portfolio, Scientific Reports publishes original research across natural sciences, psychology, medicine, and engineering, with an editorial process focused on robustness and validity, and is editorially independent.",
+    "ground_truth": "About Scientific Reports | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        1664,
+        2677
+    ]
+}

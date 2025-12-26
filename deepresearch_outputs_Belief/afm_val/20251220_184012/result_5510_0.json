@@ -1,0 +1,19 @@
+{
+    "answer": "Corporate governance transfers: the case of mergers and acquisitions",
+    "ground_truth": "Uncovering the sustainability reporting: bibliometric analysis and future research directions | International Journal of Disclosure and Governance",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2041,
+        3287
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "The European Union has set a target of over 320 GW of newly installed solar PV capacity by 2025 and almost 600 GW by 2030 under REPowerEU. Specific 2024 progress towards the 600 GW cumulative target is not explicitly detailed in the provided information.",
+    "ground_truth": "surpassed the halfway mark",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2234
+    ]
+}

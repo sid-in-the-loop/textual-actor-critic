@@ -1,0 +1,27 @@
+{
+    "answer": "Mark Zuckerberg's defense of Meta's alleged \"blood on his hands\" regarding child safety.",
+    "ground_truth": "no response from Mark Zuckerberg",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        2052,
+        3291,
+        4579,
+        5842,
+        7114,
+        8386
+    ]
+}

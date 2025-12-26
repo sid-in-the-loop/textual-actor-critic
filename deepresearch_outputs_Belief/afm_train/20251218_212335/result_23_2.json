@@ -1,0 +1,27 @@
+{
+    "answer": "Annual Report for Fiscal Year 2025",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2170,
+        3382,
+        4529,
+        6004,
+        7699,
+        8880
+    ]
+}

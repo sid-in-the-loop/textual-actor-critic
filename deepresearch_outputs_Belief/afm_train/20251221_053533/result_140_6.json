@@ -1,0 +1,21 @@
+{
+    "answer": "According to Outlook for Windows in the Government Cloud, the 10-year breakeven inflation rate is not a feature available in the specified version, as the current rate is broader market data and not an Outlook-specific feature from that release.",
+    "ground_truth": "2.3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        880,
+        2223,
+        4015,
+        5527
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "CBA - 2025 Half Year Results Presentation PDF",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2280,
+        3711,
+        3976,
+        4367,
+        5858,
+        6962,
+        7712
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Figure 0 of the \"2024 Economic Background and 2025 Prospects\" report from hkeconomy.gov.hk",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        955,
+        2315,
+        3765
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Nov 27, 2025 (Oct 2025/Early Nov 2025 Full-Year Update)",
+    "ground_truth": "2024-12-17",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        2432,
+        4222,
+        5680
+    ]
+}

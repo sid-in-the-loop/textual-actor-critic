@@ -1,0 +1,27 @@
+{
+    "answer": "The U.S. Not-For-Profit Higher Education Outlook 2025.",
+    "ground_truth": "S&P Global Ratings Higher Education Credit Outlook Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        2120,
+        2583,
+        4258,
+        5355,
+        5867,
+        7320
+    ]
+}

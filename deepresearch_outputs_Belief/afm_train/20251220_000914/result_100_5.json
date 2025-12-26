@@ -1,0 +1,25 @@
+{
+    "answer": "Foreign exchange reserves increased by approximately 14.65% and the new total was US$15.66 billion.",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        2214,
+        3647,
+        4842,
+        6293,
+        7735
+    ]
+}

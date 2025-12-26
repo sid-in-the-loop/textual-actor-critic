@@ -1,0 +1,29 @@
+{
+    "answer": "None",
+    "ground_truth": "signed",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1819,
+        3178,
+        4734,
+        5055,
+        6399,
+        7759,
+        8946
+    ]
+}

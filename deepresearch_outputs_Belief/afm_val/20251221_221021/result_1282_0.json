@@ -1,0 +1,19 @@
+{
+    "answer": "News Corp reported total revenues of $2.24 billion, net income from continuing operations of $306 million, and Total Segment EBITDA of $478 million for the second quarter of fiscal 2025.",
+    "ground_truth": "News Corp 2025 Second Quarter Financial Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2136,
+        3743
+    ]
+}

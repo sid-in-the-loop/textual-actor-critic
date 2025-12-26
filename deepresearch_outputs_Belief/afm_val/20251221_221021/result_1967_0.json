@@ -1,0 +1,17 @@
+{
+    "answer": "https://www.apa.org/monitor/2025/01/top-10-trends-to-watch",
+    "ground_truth": "Publishing State. com homepage\uff08 https://publishingstate.com/academic-journal-trends-in-2025/2024/ \uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1900
+    ]
+}

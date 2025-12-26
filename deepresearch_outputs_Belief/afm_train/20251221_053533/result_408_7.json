@@ -1,0 +1,17 @@
+{
+    "answer": "The Science in 2025: the events to watch for in the coming year article on nature.com contains the 'notable science events for 2025' and is a Nature article. It is not an independently summarized source, as it is a Nature article published on the Nature website, not an outside source that summarizes another source.",
+    "ground_truth": "Nature Predictions of Major Science Events for 2025",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        875,
+        1980
+    ]
+}

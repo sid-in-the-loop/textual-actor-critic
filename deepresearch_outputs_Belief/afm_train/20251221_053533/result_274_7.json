@@ -1,0 +1,23 @@
+{
+    "answer": "South Korea\u2019s approach to diplomatic engagement with North Korea has demonstrably reduced under Yoon Suk Yeol, according to the Economist Intelligence Unit's \"Global Outlook: looking ahead to 2025\" report released on September 24, 2024.",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        826,
+        2246,
+        3836,
+        4310,
+        4856
+    ]
+}

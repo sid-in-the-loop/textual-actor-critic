@@ -1,0 +1,25 @@
+{
+    "answer": "\". \nLaunch announcement: `Experts Forecast Cancer Research and Treatment Advances in 2025` by Andrew Matthius and Emma Quinn on January 10, 2025, in the AACR Cancer Research Catalyst blog.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1222,
+        2235,
+        2570,
+        4163,
+        5112
+    ]
+}

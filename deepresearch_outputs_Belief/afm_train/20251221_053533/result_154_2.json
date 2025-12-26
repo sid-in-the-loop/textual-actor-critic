@@ -1,0 +1,19 @@
+{
+    "answer": "$174.8 billion from 2024 to $235.3 billion (FY2025 including $210.6 billion total, $200 million for Leases, $24.5 billion in TEF 2024/2025).",
+    "ground_truth": "$41.8 billion or 21.6%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        2259,
+        3677
+    ]
+}

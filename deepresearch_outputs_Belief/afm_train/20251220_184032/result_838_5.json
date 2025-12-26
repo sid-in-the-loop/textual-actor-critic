@@ -1,0 +1,23 @@
+{
+    "answer": "Hussian Qazi Raja Bin Mohammad Shuja",
+    "ground_truth": "Hamid Gul",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        982,
+        2316,
+        3853,
+        5186,
+        6278
+    ]
+}

@@ -15,7 +15,7 @@ IMPORTANT: You must strictly adhere to the following rules:
 
 Valid actions:
 1. <search> query </search>: search the web for information if you consider you lack some knowledge.
-2. <answer> answer </answer>: output the final answer if you consider you are able to answer the question. The answer should be short and concise. No justification is needed.
+2. <answer> answer </answer>: output the final answer if you consider you are able to answer the question. **CRITICAL: The answer must be EXTREMELY SHORT - ideally 1-5 words, maximum 10 words. Provide ONLY the factual answer (e.g., a date, number, name, or short phrase). NO explanations, NO justifications, NO context. Just the answer itself.**
 3. <summary> important parts of the history turns </summary>: summarize the history turns. Reflect the search queries and search results in you history turns, and keep the information you consider important for answering the question and generating your report. Still keep the tag structure, keep search queries between <search> and </search>, and keep search results between <information> and </information>. The history turn information for your subsequent turns will be updated accoring to this summary action.
 
 Format:
@@ -44,7 +44,7 @@ IMPORTANT: You must strictly adhere to the following rules:
 
 Valid actions:
 1. <search> query </search>: search the web for information if you consider you lack some knowledge.
-2. <answer> answer </answer>: output the final answer if you consider you are able to answer the question. The answer should be short and concise. No justification is needed.
+2. <answer> answer </answer>: output the final answer if you consider you are able to answer the question. **CRITICAL: The answer must be SHORT - ideally 1-5 words, maximum 10 words. Provide ONLY the factual answer (e.g., a date, number, name, or short phrase). NO explanations, NO justifications, NO context. Just the answer itself.**
 3. <summary> important parts of the history turns </summary>: summarize the history turns. Reflect the search queries and search results in you history turns, and keep the information you consider important for answering the question and generating your report. Still keep the tag structure, keep search queries between <search> and </search>, and keep search results between <information> and </information>. The history turn information for your subsequent turns will be updated accoring to this summary action.
 
 Output instructions:

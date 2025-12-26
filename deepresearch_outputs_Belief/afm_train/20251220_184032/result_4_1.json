@@ -1,0 +1,21 @@
+{
+    "answer": "In 2024, traditional marketing relied heavily on first-party data\u2014the ... may use nano call.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        937,
+        2629,
+        4219,
+        5911
+    ]
+}

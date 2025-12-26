@@ -1,0 +1,21 @@
+{
+    "answer": "2025 fiscal year",
+    "ground_truth": "Q1 2025 Financial Reporting Season",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1918,
+        3095,
+        4276
+    ]
+}

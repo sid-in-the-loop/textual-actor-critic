@@ -1,0 +1,21 @@
+{
+    "answer": "Empirical findings reported that ChatGPT has negative effects on student well-being, including reduced study time and increased anxiety related to academic performance.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        1909,
+        3131,
+        4396
+    ]
+}

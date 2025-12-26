@@ -1,0 +1,21 @@
+{
+    "answer": "Donald Trump's allies are to curtail the Justice Department's independence by consolidating its functions, effectively making it more loyal to Trump.",
+    "ground_truth": "restructure the Department of Justice and fill nonpartisan roles with conservatives",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2129,
+        3520,
+        4728
+    ]
+}

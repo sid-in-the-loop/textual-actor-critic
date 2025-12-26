@@ -1,0 +1,19 @@
+{
+    "answer": "ASX Group (ASX Limited)",
+    "ground_truth": "Australian Securities and Investments Commission ASX Market Announcements Office",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        1494,
+        2432
+    ]
+}

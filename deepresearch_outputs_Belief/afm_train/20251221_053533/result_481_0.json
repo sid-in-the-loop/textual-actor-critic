@@ -1,0 +1,25 @@
+{
+    "answer": "3,466 global executives; AI agents",
+    "ground_truth": "More than 2,500",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        1800,
+        3148,
+        4525,
+        5742,
+        6924
+    ]
+}

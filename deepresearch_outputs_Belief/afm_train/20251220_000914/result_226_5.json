@@ -1,0 +1,25 @@
+{
+    "answer": "Category:Publishing describes the subject it allegedly is found on the main article of the same name",
+    "ground_truth": "Category:Publishing (Wikipedia)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        1526,
+        2643,
+        3579,
+        4769,
+        6013
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Walter Soplata and the CG-4A glider museum of Menominee County, Michigan",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1028,
+        2141,
+        3398,
+        5024,
+        6378,
+        7662
+    ]
+}

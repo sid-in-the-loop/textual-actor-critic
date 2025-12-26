@@ -1,0 +1,19 @@
+{
+    "answer": "IEA predicts $4.5 trillion annual clean technology investment in 2030 to meet 1.5-2.0\u00b0C warming target.",
+    "ground_truth": "$4.5 trillion by 2030",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        2079,
+        2383
+    ]
+}

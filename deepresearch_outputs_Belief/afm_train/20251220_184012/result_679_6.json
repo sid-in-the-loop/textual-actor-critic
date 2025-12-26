@@ -1,0 +1,23 @@
+{
+    "answer": "Consumers, the \"los alquimistas,\" Financial Conduct Authority, limited regulation.",
+    "ground_truth": "Delivering good outcomes for consumers; building financial resilience; raising standards in response to heightened risks",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2068,
+        3416,
+        3735,
+        4214
+    ]
+}

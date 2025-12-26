@@ -1,0 +1,25 @@
+{
+    "answer": "The PA Academy's corporate sustainability management series focuses on carbon management, emissions, and decarbonization, but does not explicitly publish a dedicated article on practical methods for \"assessing and enhancing ESG performance,\" including definitions and best practices.",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1576,
+        2635,
+        3054,
+        4455,
+        5012
+    ]
+}

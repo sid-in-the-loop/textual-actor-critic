@@ -1,0 +1,21 @@
+{
+    "answer": "Who benefits? Shining a Light on the Business of Child Sexual Exploitation and Abuse. SEARCHLIGHT 2025",
+    "ground_truth": "Searchlight 2025 \u2013 Who Benefits? Shining a Light on the Business of Child Sexual Exploitation and Abuse",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        2168,
+        2570,
+        3436
+    ]
+}

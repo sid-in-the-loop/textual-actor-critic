@@ -1,0 +1,23 @@
+{
+    "answer": "11,688 thousand RON",
+    "ground_truth": "11.6880 million RON",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2318,
+        3842,
+        4138,
+        5850
+    ]
+}

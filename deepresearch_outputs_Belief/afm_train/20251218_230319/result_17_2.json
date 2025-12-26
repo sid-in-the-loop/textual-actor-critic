@@ -1,0 +1,23 @@
+{
+    "answer": "Cosentyx/Immunology sales 2024: USD 6,141 million (reported), USD 6,141 million (constant currency). 2023: USD 4,136 million (reported), USD 3,954 million (constant currency). This figure represents a change of USD 2,005 million, or 48.5% YOY, excluding generic competition.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        923,
+        2480,
+        4102,
+        5516,
+        7172
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "February 6, 20 March, 8 May, 19 June. Also April 4, 8. FPC record date November 25, Remit date November 26, and Reuters December 18.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        2077
+    ]
+}

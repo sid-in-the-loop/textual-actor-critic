@@ -1,0 +1,23 @@
+{
+    "answer": "Web of Science uses a hierarchical categorization system where main categories correspond to scientific disciplines, with subcategories detailed in spreadsheets or visualizations, reflecting broader concepts and specific scientific areas.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        2087,
+        3057,
+        4382,
+        5776
+    ]
+}

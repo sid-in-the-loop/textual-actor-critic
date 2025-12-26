@@ -1,0 +1,29 @@
+{
+    "answer": "Build a robust franchise network and invest in continuous training and development.",
+    "ground_truth": "dynamic supply chains and agile workforce management",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        946,
+        2066,
+        2623,
+        3149,
+        3537,
+        3880,
+        4429,
+        4831
+    ]
+}

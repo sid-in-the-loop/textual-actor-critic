@@ -1,0 +1,29 @@
+{
+    "answer": "The Handley Page Victor K.2, previously owned by Walter Soplata, was involved in a crash at Hamilton Airport in 1942, where it was a Cold War bomber with a kneeling nose gear.",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2048,
+        3466,
+        4088,
+        5471,
+        6072,
+        7515,
+        9166
+    ]
+}

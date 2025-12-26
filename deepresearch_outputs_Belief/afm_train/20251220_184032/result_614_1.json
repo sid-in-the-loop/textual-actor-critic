@@ -1,0 +1,19 @@
+{
+    "answer": "At least $6 billion",
+    "ground_truth": "$46 million (FY 2022) to $195 million (FY 2031)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        971,
+        2077,
+        3167
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Subjects are categorized under a system where main categories correspond to broad fields (like Science and Technology), and each Main Category maps to a Group of Subject Categories, which in turn map to specific subject areas using numeric code.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1876,
+        2994,
+        4435
+    ]
+}

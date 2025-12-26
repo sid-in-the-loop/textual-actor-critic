@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, it includes quantitative data.",
+    "ground_truth": "No academic chart or quantitative data present",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2082,
+        2537
+    ]
+}

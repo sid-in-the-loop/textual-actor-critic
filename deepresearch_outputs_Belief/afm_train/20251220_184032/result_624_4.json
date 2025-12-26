@@ -1,0 +1,21 @@
+{
+    "answer": "Yes, the section containing future trends in major Indian payment methods from 2020-2025 within the PwC India \"The Indian Payments Handbook\" is highly likely to contain images, charts, or data for analysis, as its title and focus on this topic suggest it.",
+    "ground_truth": "No academic chart, axes, titles, or units",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        2248,
+        2612,
+        4011
+    ]
+}

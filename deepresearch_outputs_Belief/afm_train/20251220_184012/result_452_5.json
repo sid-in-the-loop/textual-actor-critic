@@ -1,0 +1,19 @@
+{
+    "answer": "Kraft Heinz stock returned -23% compared to S&P 500's +14% over 12 months, with higher volatility.",
+    "ground_truth": "Outperformed from 2022 to 2023; converged near $120 on 2024-12-27",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2084,
+        3344
+    ]
+}

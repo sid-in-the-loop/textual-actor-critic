@@ -1,0 +1,21 @@
+{
+    "answer": "Classification data is displayed as a bar chart, where the length of the bar represents the number of gene identifiers in each category.",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2003,
+        3047,
+        4282
+    ]
+}

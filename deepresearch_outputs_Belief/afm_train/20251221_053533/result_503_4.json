@@ -1,0 +1,21 @@
+{
+    "answer": "2024 Macroeconomic Outlook of Nigeria Economy",
+    "ground_truth": "2024 NESG Macroeconomic Outlook Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        2593,
+        3857,
+        5360
+    ]
+}

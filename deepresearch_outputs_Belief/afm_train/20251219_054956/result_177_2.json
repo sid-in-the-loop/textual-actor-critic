@@ -1,0 +1,17 @@
+{
+    "answer": "Climate Energy Finance special report global solar PV and energy storage manufacturing trends March 24 2025. No IEA prediction for clean technology investment limiting global warming to 1.5-2.0\u00b0C by the year 2030. Future forecasting from the report will only be relevant from 2025-2026. The IRENA report provides a similar context.",
+    "ground_truth": "$4.5 trillion by 2030",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        886,
+        2499
+    ]
+}

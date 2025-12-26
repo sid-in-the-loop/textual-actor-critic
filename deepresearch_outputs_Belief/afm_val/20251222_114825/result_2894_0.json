@@ -1,0 +1,29 @@
+{
+    "answer": "Wang's firing",
+    "ground_truth": "firing of professor Xiaofeng Wang",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        807,
+        1117,
+        1332,
+        1580,
+        2754,
+        3082,
+        3452,
+        3793
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The state of the industrial work environment when data-related factors are omitted is not explicitly revealed in the World Economic Forum's 2025 report.",
+    "ground_truth": "A person operating heavy machinery in an industrial environment",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        1938,
+        2248,
+        3456,
+        3715
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "0000-0001-5976-7319",
+    "ground_truth": "0009-0006-2455-689X",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        1184,
+        1630,
+        2965
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Figure 1 does not feature only the U.S. Chamber of Commerce logo and branding, but rather features a chart or data visualization describing China's manufacturing outflow.",
+    "ground_truth": "Only U.S. Chamber of Commerce logo and branding",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        918,
+        1160,
+        1325,
+        1726,
+        2323,
+        3862,
+        5631
+    ]
+}

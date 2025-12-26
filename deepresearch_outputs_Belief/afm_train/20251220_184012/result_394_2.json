@@ -1,0 +1,21 @@
+{
+    "answer": "Gang of Four",
+    "ground_truth": "The Gang of Four",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2253,
+        3429,
+        4732
+    ]
+}

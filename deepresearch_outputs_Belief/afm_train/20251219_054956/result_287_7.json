@@ -1,0 +1,21 @@
+{
+    "answer": "In-depth analysis of AI, open science, and blockchain trends.",
+    "ground_truth": "PublishingState.com\u5b66\u672f\u51fa\u72482025\u5e74\u5ea6\u8d8b\u52bf\u4e13\u9898\u6587\u7ae0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        1895,
+        2599,
+        3928
+    ]
+}

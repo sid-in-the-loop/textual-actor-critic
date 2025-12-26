@@ -1,0 +1,25 @@
+{
+    "answer": "10.1136/bmj.5167",
+    "ground_truth": "https://doi.org/10.1186/s12889-022-14690-9",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        785,
+        1996,
+        2350,
+        2748,
+        3926,
+        4543
+    ]
+}

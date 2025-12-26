@@ -1,0 +1,29 @@
+{
+    "answer": "The percentage change in revenue for the Treasury Brisbane Hotel compared to the previous corresponding period was a 5.4% decrease.",
+    "ground_truth": "5.4%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        1952,
+        2946,
+        4065,
+        5264,
+        6657,
+        8189,
+        9602
+    ]
+}

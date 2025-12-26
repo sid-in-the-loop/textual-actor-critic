@@ -1,0 +1,19 @@
+{
+    "answer": "The ATO disallowed the Group's objections in October 2023. On 5 December 2023 the Group entities appealed by commencing proceedings in the Federal Court.",
+    "ground_truth": "evidence due by 2025-06, next hearing 2025-07-02",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2186,
+        3452
+    ]
+}

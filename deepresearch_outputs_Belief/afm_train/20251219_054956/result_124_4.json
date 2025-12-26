@@ -1,0 +1,29 @@
+{
+    "answer": "The Great Hall of the People is a government complex that may host a state funeral. The memorial service for deceased individuals usually does not involve foreign diplomats in the same way state funeral for state leaders may.",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        838,
+        2294,
+        3800,
+        5243,
+        6823,
+        8481,
+        9342,
+        10982
+    ]
+}

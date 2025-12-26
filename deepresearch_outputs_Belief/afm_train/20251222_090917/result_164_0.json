@@ -1,0 +1,25 @@
+{
+    "answer": "SEC financial data sets (2025 Q1)",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1013,
+        2217,
+        3508,
+        4952,
+        6239,
+        7457
+    ]
+}

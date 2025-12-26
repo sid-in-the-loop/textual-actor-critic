@@ -1,0 +1,19 @@
+{
+    "answer": "a You Should Know by Third Year",
+    "ground_truth": "Planning to Write\u7cfb\u5217\uff08Types of articles: A guide for young researchers\uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        2013,
+        3192
+    ]
+}

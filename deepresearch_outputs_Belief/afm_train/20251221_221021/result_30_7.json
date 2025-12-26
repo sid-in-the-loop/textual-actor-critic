@@ -1,0 +1,21 @@
+{
+    "answer": "Prevention of mistaken and scam payments by NameCheck: Alert displayed when payee\u2019s account details do not match those held in the bank\u2019s records.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        885,
+        2156,
+        3543,
+        4934
+    ]
+}

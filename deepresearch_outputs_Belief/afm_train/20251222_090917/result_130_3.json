@@ -1,0 +1,29 @@
+{
+    "answer": "At 200-400 MHz channels, mid-bands, Wi-Fi and other short-range technologies, and potentially other 6G bands.",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        818,
+        2088,
+        2580,
+        3897,
+        5300,
+        6367,
+        7155,
+        7968
+    ]
+}

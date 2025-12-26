@@ -1,0 +1,19 @@
+{
+    "answer": "Popular Science",
+    "ground_truth": "Science News Magazine Publication Series",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        702,
+        1734,
+        2770
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Causal rule ensemble approach for multi-arm data",
+    "ground_truth": "Buddha characters performed a traditional dance",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        2043,
+        3356,
+        4691
+    ]
+}

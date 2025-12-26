@@ -1,0 +1,19 @@
+{
+    "answer": "Hospitals must submit data on quality measures, including eCQMs.",
+    "ground_truth": "submit Notice of Participation; agree to public reporting of quality data",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        2156,
+        3602
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The image depicted is not readily accessible or described within the results for the specified report. Based on the information provided, a visual analysis of the image is not possible.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        877,
+        1115,
+        1371,
+        1799,
+        2281
+    ]
+}

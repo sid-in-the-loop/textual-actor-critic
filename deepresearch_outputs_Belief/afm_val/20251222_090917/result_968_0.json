@@ -1,0 +1,23 @@
+{
+    "answer": "$715 million",
+    "ground_truth": "April 29, 2025; removed springing lien; cancelled $150 million sidecar; $605 million liquidity as of 2025-03-31",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        894,
+        3148,
+        3453,
+        4997,
+        6431
+    ]
+}

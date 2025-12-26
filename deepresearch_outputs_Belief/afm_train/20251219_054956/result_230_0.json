@@ -1,0 +1,19 @@
+{
+    "answer": "January 20, 2025",
+    "ground_truth": "Withdrew US from Paris Agreement on his first day in office",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2260,
+        4017
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Investors \u00b7 Novartis quarterly financial results",
+    "ground_truth": "Novartis 2024\u5e74\u5ea6\u5b63\u5ea6\u8d22\u62a5\u7cfb\u5217\uff08Quarterly Financial Results / Financial Data Collection\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        2292,
+        2630,
+        3416
+    ]
+}

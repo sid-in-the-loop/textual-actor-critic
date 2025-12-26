@@ -1,0 +1,29 @@
+{
+    "answer": "S180",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        969,
+        2120,
+        3639,
+        4862,
+        6077,
+        7614,
+        9035,
+        9591
+    ]
+}

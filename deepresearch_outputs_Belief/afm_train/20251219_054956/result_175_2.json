@@ -1,0 +1,19 @@
+{
+    "answer": "Media: Press releases",
+    "ground_truth": "Nestl\u00e9 Investors - Results Announcements",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        2322,
+        3216
+    ]
+}

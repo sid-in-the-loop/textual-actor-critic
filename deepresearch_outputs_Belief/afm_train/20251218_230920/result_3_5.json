@@ -1,0 +1,27 @@
+{
+    "answer": "Steven A. Leblanc",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        1925,
+        3283,
+        4805,
+        6394,
+        6910,
+        7831
+    ]
+}

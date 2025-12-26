@@ -1,0 +1,25 @@
+{
+    "answer": "Financial Statements & Events - SECURE Waste Management, organized by quarter with downloadable MD&A and financial statements for each quarter, including Q1 2025.",
+    "ground_truth": "D-Wave - Quarterly Results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        1719,
+        2700,
+        4108,
+        5354,
+        6649
+    ]
+}

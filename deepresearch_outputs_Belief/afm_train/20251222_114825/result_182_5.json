@@ -1,0 +1,21 @@
+{
+    "answer": "10.6080/1214-2275/F009AE6E-FA1A-4DFA-BC3C-B501A74C88B3",
+    "ground_truth": "10.3389/fpsyg.2023.1020269",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1080,
+        1330,
+        2296
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Research Staff Analyst (or similar senior analyst title before the 2018-2021 role, which overlaps with the report's release)",
+    "ground_truth": "Senior policy analyst",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        1958,
+        2664,
+        3986
+    ]
+}

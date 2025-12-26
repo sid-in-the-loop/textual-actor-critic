@@ -1,0 +1,27 @@
+{
+    "answer": "Net sales: USD 6.1 billion (reported), +23% (constant currency) compared to USD 6.1 billion (reported), +23% (constant currency) in 2023.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        923,
+        2411,
+        4134,
+        5534,
+        6389,
+        1421,
+        3013
+    ]
+}

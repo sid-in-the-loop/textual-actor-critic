@@ -1,0 +1,21 @@
+{
+    "answer": "Featured insights",
+    "ground_truth": "Dentons Insights: Artificial Intelligence",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        1807,
+        2865,
+        3897
+    ]
+}

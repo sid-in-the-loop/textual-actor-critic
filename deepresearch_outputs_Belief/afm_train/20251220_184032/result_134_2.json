@@ -1,0 +1,23 @@
+{
+    "answer": "Financial Plan for the Region (2025-2029)",
+    "ground_truth": "Metro Vancouver 2025-2029 Financial Plan",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        2529,
+        3671,
+        4751,
+        6050
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "It'll be the year of treating yourself.",
+    "ground_truth": "bluish purple leading as a symbol of self-indulgence",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        1692
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Hans Holbein the Younger",
+    "ground_truth": "Garrick",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        944,
+        2196,
+        3535,
+        4669,
+        6124
+    ]
+}

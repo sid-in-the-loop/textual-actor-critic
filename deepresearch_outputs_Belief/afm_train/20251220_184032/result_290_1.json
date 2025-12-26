@@ -1,0 +1,21 @@
+{
+    "answer": "Phlegethon",
+    "ground_truth": "lower than 1 kpc",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        873,
+        1185,
+        1719,
+        2963
+    ]
+}

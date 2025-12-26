@@ -1,0 +1,19 @@
+{
+    "answer": "OpenAI will enable the development of a soldier helmet named EagleEye.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        691,
+        2015,
+        3230
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "There is no research article, including its title, authors, and the name of the medical journal, published on April 29, 2025, in the only peer-reviewed medical journal belonging to the collection of open-access academic journals on Academia.edu.",
+    "ground_truth": "'Prevalence and ultrasonographic patterns of gynecological emergencies in southeastern Nigeria' by Emmanuel Odumeru, Xavier Akimuhana, Eric Kirezi, Costelia Njoku",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        1854,
+        2748,
+        4092,
+        5200
+    ]
+}

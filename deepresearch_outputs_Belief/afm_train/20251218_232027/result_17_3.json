@@ -1,0 +1,27 @@
+{
+    "answer": "Full year 2024: Immunology segment sales were USD 9,293 million (or $9.293 billion). This represents an increase of +4% on a reported basis (from $16.6 billion in 2023 Cosentyx Total Net Sales reported by Novartis, according to press releases for Q4 2023 and full year 2023 results) but an increase of +8.96% on a constant currency basis (from the $50.3 billion in FY 2023 (reported in Q4 2023 results) to the $9.293 billion in Full Year 2024 Conservative Currency Segment Sales (found in a Novartis article).",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1026,
+        1367,
+        1715,
+        3899,
+        4436,
+        6229,
+        8138
+    ]
+}

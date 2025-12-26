@@ -1,0 +1,21 @@
+{
+    "answer": "annualreports.com and annualreportowl.com",
+    "ground_truth": "Annual Reports Archive",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1907,
+        3025,
+        3960
+    ]
+}

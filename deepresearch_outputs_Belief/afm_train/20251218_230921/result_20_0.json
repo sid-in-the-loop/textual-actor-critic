@@ -1,0 +1,25 @@
+{
+    "answer": "Scientific Reports, nature.com/srep/author-instructions, includes: References (limited to 60), Acknowledgements (optional), Author contributions, and a mandatory Data Availability statement.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1486,
+        1972,
+        2747,
+        3615,
+        4619
+    ]
+}

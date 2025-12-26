@@ -1,0 +1,25 @@
+{
+    "answer": "The Joint Committee Update on Risks and Vulnerabilities in the EU Financial System \u2013 Spring 2025, specifically under the section discussing \"Capital requirements and risks,\" likely applies ESMA's banking capital requirements and regulatory framework to defined benefit pension schemes, using bank capital ratios as a proxy for pension scheme funding levels.",
+    "ground_truth": "Funding Ratios (DB schemes) section; Solvency II regulatory framework; Reference date: 2024-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2260,
+        3724,
+        4262,
+        4784,
+        5448
+    ]
+}

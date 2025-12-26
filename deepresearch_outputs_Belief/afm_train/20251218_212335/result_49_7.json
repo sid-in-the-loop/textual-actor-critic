@@ -1,0 +1,25 @@
+{
+    "answer": "did not find answer",
+    "ground_truth": "Child Trends Publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        639,
+        732,
+        2484,
+        2651,
+        2932,
+        3124
+    ]
+}

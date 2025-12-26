@@ -1,0 +1,23 @@
+{
+    "answer": "The 7.125\u20138.4 GHz band (or 7125\u20138400 MHz, also known as the upper 6 GHz band)",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1725,
+        3005,
+        3380,
+        4789
+    ]
+}

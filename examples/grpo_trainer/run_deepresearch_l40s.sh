@@ -15,13 +15,19 @@ fi
 
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export HYDRA_FULL_ERROR=1
+export RAY_DEBUG=0
+export WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
+export HF_TOKEN=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
+export HUGGING_FACE_HUB_TOKEN=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
+export OPENAI_API_KEY=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
+export CMU_GATEWAY_API_KEY=sk-dUplmEab2H7EFRaOISG1Ew
 
 MODEL_DIR=/data/group_data/cx_group/verl_agent_shared
 
 
-train_data_size=32
-val_data_size=256
-group_size=8
+train_data_size=8
+val_data_size=8
+group_size=2
 
 
 python3 -m verl.trainer.main_ppo \
@@ -38,32 +44,34 @@ python3 -m verl.trainer.main_ppo \
     data.truncation='error' \
     data.return_raw_chat=True \
     actor_rollout_ref.rollout.temperature=1.0 \
-    actor_rollout_ref.model.path=$MODEL_DIR/checkpoint/apm_sft_1.7b_2/checkpoint-900 \
+    actor_rollout_ref.model.path=/data/group_data/cx_group/behavior_priming/checkpoint/qwen3_1.7b/web_qwen_sft_behavior/checkpoint-924 \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.actor.use_kl_loss=True \
     actor_rollout_ref.actor.kl_loss_coef=0.001 \
     actor_rollout_ref.actor.kl_loss_type=low_var_kl \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.actor.use_dynamic_bsz=True \
-    actor_rollout_ref.actor.ppo_max_token_len_per_gpu=5256 \
-    actor_rollout_ref.actor.ppo_mini_batch_size=128 \
+    actor_rollout_ref.actor.ppo_max_token_len_per_gpu=22000 \
+    actor_rollout_ref.actor.ppo_mini_batch_size=32 \
     actor_rollout_ref.actor.fsdp_config.param_offload=False \
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=False \
-    actor_rollout_ref.actor.ulysses_sequence_parallel_size=4 \
-    actor_rollout_ref.model.enable_activation_offload=True \
+    actor_rollout_ref.actor.ulysses_sequence_parallel_size=1 \
+    actor_rollout_ref.model.enable_activation_offload=False \
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=64 \
-    actor_rollout_ref.rollout.tensor_model_parallel_size=2 \
+    actor_rollout_ref.rollout.tensor_model_parallel_size=1 \
     actor_rollout_ref.rollout.name=vllm \
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.8 \
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.5 \
     actor_rollout_ref.rollout.enable_chunked_prefill=False \
     actor_rollout_ref.rollout.enforce_eager=True \
     actor_rollout_ref.rollout.free_cache_engine=True \
     actor_rollout_ref.rollout.val_kwargs.temperature=0.4 \
     actor_rollout_ref.rollout.val_kwargs.do_sample=True \
-    actor_rollout_ref.rollout.max_num_batched_tokens=21024 \
+    actor_rollout_ref.rollout.max_num_batched_tokens=22000 \
+    actor_rollout_ref.rollout.max_model_len=4096 \
     actor_rollout_ref.rollout.disable_log_stats=False \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=64 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
+    actor_rollout_ref.ref.max_model_len=4096 \
     actor_rollout_ref.actor.use_invalid_action_penalty=True \
     env.rule_reward_coef=0 \
     env.env_name=deepresearch \
@@ -71,23 +79,27 @@ python3 -m verl.trainer.main_ppo \
     env.seed=0 \
     env.rollout.n=$group_size \
     env.rollout.k=1 \
-    env.max_steps=8 \
+    env.max_steps=3 \
     env.use_explicit_thinking=False \
     env.use_critique=False \
     env.replace_input=False \
     env.use_rule_reward=False \
     env.rule_number=5 \
     env.use_dense_reward=False \
+    env.belief_shaped_grpo.enable=True \
+    env.belief_shaped_grpo.alpha=1.0 \
+    env.belief_shaped_grpo.max_candidates=5 \
     trainer.critic_warmup=0 \
-    trainer.logger=['console','wandb'] \
+    trainer.logger=['console'] \
     trainer.project_name='DeepResearch_RL' \
-    trainer.experiment_name='deepresearch_1.7b_sft_grpo' \
-    trainer.n_gpus_per_node=8 \
+    trainer.experiment_name='deepresearch_1.7b_sft_grpo_single_gpu' \
+    trainer.n_gpus_per_node=1 \
     trainer.nnodes=1 \
-    trainer.save_freq=15 \
-    trainer.test_freq=8 \
+    trainer.save_freq=5 \
+    trainer.test_freq=1000 \
     trainer.total_epochs=1 \
+    trainer.total_training_steps=2 \
     trainer.resume_mode=auto \
     trainer.default_local_dir=$MODEL_DIR/checkpoint/deepresearch_1.7b_sft_grpo\
-    trainer.val_before_train=True $@
+    trainer.val_before_train=False $@
 

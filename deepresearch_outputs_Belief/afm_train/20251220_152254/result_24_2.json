@@ -1,0 +1,25 @@
+{
+    "answer": "The title of the featured summary article on PharmaTimes.com that outlines a group of ten trends shaping the way knowledge is disseminated and academic publishing is developing in 2025 does not exist; PharmaTimes.com does not have a press release or article of this specific title.",
+    "ground_truth": "10 Emerging Academic Publishing Trends in 2025\uff08PublishingState.com\u4e13\u9898 write-up\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        1204,
+        2109,
+        3392,
+        3721,
+        4128
+    ]
+}

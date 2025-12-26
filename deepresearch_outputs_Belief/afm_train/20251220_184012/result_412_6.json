@@ -1,0 +1,23 @@
+{
+    "answer": "DOI not found; the article with the given title could not be located using various search modifiers.",
+    "ground_truth": "Elon Musk\u2019s Political Influence - The New York Times",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        1212,
+        1549,
+        1876,
+        2251
+    ]
+}

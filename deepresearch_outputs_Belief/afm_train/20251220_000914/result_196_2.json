@@ -1,0 +1,25 @@
+{
+    "answer": "COVID-19 and education",
+    "ground_truth": "McKinsey & Company COVID-19 Education Research Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        2714,
+        3214,
+        4575,
+        6082,
+        7851
+    ]
+}

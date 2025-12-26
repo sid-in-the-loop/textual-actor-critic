@@ -1,0 +1,19 @@
+{
+    "answer": "In the EU, Kisqali is approved for the treatment of women with HR+/HER2- advanced or MBC in combination with either an AI or fulvestrant.",
+    "ground_truth": "Treating hormone receptor-positive/human epidermal growth factor receptor 2-negative early breast cancer (adjuvant)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        2005,
+        3483
+    ]
+}

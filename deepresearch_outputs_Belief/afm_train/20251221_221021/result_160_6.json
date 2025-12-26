@@ -1,0 +1,21 @@
+{
+    "answer": "The Productivity Commission should develop a framework to measure and report the outcomes of mental health policies and investment on.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        863,
+        2139,
+        3419,
+        4639
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "World News (from the main site's `m.economictimes.com/news/international/world-news` section)",
+    "ground_truth": "Economic Times Politics\u9891\u9053",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1974,
+        3030,
+        4342,
+        5610
+    ]
+}

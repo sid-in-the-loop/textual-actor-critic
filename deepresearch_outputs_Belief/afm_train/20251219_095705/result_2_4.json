@@ -1,0 +1,29 @@
+{
+    "answer": "CV 27",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2294,
+        3616,
+        5160,
+        6967,
+        7715,
+        9155,
+        10804
+    ]
+}

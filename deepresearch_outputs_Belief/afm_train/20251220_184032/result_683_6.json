@@ -1,0 +1,21 @@
+{
+    "answer": "APPROXIMATELY $15.8 million",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        2172,
+        3667,
+        5217
+    ]
+}

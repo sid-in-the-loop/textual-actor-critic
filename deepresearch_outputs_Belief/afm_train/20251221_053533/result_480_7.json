@@ -1,0 +1,25 @@
+{
+    "answer": "5,000 employees, 17,000 students",
+    "ground_truth": "Over 5,000 employees and 17,000 students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        1126,
+        1950,
+        2681,
+        3565,
+        4722
+    ]
+}

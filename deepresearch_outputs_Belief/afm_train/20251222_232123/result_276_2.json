@@ -1,0 +1,19 @@
+{
+    "answer": "View of AI and the Future of Teaching: Preservice Teachers...",
+    "ground_truth": "Development of a new model on utilizing online learning platforms to improve students\u2019 academic achievements and satisfaction",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1782,
+        3057
+    ]
+}

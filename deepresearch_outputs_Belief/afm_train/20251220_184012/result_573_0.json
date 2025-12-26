@@ -1,0 +1,19 @@
+{
+    "answer": "UNISON was asked to join in November 2025 regarding the creation of an Adult Social Care Negotiating Body, following the Employment Rights Bill.",
+    "ground_truth": "asked to join FPA working group by Department of Health and Social Care",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        844,
+        2046,
+        3289
+    ]
+}

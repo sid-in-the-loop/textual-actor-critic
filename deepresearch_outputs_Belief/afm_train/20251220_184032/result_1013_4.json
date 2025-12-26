@@ -1,0 +1,23 @@
+{
+    "answer": "Group Net Ordinary Income is expected to increase to between 7.1 and 7.5 billion euros in 2027, with a CAGR of around 11%.",
+    "ground_truth": "7.1 to 7.5 billion euros; 11%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        818,
+        1921,
+        3021,
+        4364,
+        5955
+    ]
+}

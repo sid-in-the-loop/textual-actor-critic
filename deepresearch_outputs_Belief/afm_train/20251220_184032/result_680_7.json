@@ -1,0 +1,23 @@
+{
+    "answer": "Over 3000 proposals",
+    "ground_truth": "over 700",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        698,
+        1806,
+        3081,
+        4436,
+        5759
+    ]
+}

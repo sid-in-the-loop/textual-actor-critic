@@ -1,0 +1,25 @@
+{
+    "answer": "OASPA (Open Access Scholarly Publishing Association)",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        1997,
+        3242,
+        4319,
+        5805,
+        6784
+    ]
+}

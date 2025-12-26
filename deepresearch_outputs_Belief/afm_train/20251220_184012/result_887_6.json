@@ -1,0 +1,23 @@
+{
+    "answer": "Pulitzer Prize",
+    "ground_truth": "2017 Pulitzer Prize; New York Times\u2019 100 Best Books of the 21st Century",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        790,
+        1156,
+        1365,
+        1774,
+        2120
+    ]
+}

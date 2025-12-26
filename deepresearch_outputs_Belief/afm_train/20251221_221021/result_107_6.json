@@ -1,0 +1,25 @@
+{
+    "answer": "Jane L. Ynista",
+    "ground_truth": "Steve Wysocki",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        736,
+        1864,
+        2766,
+        3737,
+        5022,
+        6288
+    ]
+}

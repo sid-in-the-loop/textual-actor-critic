@@ -1,0 +1,21 @@
+{
+    "answer": "A 5% tax on cash payments sent by non-citizens to families in their home countries is included in Trump's domestic policy bill, as reported by CBS News.",
+    "ground_truth": "5% tax",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2044,
+        3116,
+        4217
+    ]
+}

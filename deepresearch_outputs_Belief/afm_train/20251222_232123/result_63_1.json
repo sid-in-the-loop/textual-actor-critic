@@ -1,0 +1,17 @@
+{
+    "answer": "1HFY25-Financial-Report.pdf",
+    "ground_truth": "The Star Entertainment Group Limited \u534a\u5e74\u8d22\u52a1\u62a5\u544a\uff08\u622a\u81f32024\u5e7412\u670831\u65e5\uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2023
+    ]
+}

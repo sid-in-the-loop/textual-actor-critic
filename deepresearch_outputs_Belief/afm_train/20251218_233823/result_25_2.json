@@ -1,0 +1,23 @@
+{
+    "answer": "14 Research Areas",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1876,
+        3060,
+        4230,
+        5436
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Akbank Annual Report for the year ended March 31, 2025",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1534,
+        3021,
+        4089,
+        4325,
+        5686,
+        7569
+    ]
+}

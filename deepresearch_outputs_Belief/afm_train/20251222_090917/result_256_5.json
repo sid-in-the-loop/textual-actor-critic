@@ -1,0 +1,23 @@
+{
+    "answer": "The concentration of high QED (QED > 0.8) values differs, with the GEOM Drugs reference molecules containing a higher fraction in this range compared to DrugBank reference molecules, indicating a more chemically valid representation for benchmarking 3D molecular generation methods.",
+    "ground_truth": "GEOM Drugs less concentrated at QED > 0.8 than DrugBank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2089,
+        3394,
+        4512,
+        5658
+    ]
+}

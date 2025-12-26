@@ -1,0 +1,29 @@
+{
+    "answer": "The primary figure's color gradient bar illustrates the changing urgency or prominence of the top ten regulatory challenges for 2025, with the 'Overall' summary indicator assessing cumulative impact. While it visually represents value progression, the text does not explicitly state whether this progression is monotonic.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1996,
+        3045,
+        3537,
+        4172,
+        4964,
+        5607,
+        6344
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Two-thirds of all collateral are real estate loans, while the other third consists of consumer loans, corporate loans, and mixed loan pools.",
+    "ground_truth": "Two-thirds real estate loans, one-third consumer, corporate, mixed loan pools",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        1833,
+        3205,
+        3574,
+        4271,
+        4753,
+        6175,
+        6783
+    ]
+}

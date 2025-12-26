@@ -1,0 +1,25 @@
+{
+    "answer": "ChatGPT influenced mental health",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        1959,
+        2974,
+        3999,
+        5332,
+        6609
+    ]
+}

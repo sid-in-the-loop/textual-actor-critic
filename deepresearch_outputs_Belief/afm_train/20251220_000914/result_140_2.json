@@ -1,0 +1,29 @@
+{
+    "answer": "The US 10-year breakeven inflation rate was approximately 2.24% as of December 17, 2025.",
+    "ground_truth": "2.3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        923,
+        2145,
+        3796,
+        5483,
+        6757,
+        8098,
+        9584,
+        11027
+    ]
+}

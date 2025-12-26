@@ -1,0 +1,23 @@
+{
+    "answer": "Corporate Carbon Footprint (CCF): A comprehensive guide",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        1572,
+        1954,
+        3411,
+        4346
+    ]
+}

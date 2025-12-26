@@ -1,0 +1,15 @@
+{
+    "answer": "FADH2",
+    "ground_truth": "\u4e09\u78f7\u9178\u817a\u82f7",
+    "rewards": [
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 1,
+    "search count": 0,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845
+    ]
+}

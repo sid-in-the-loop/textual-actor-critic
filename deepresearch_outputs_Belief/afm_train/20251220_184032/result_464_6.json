@@ -1,0 +1,23 @@
+{
+    "answer": "17 games",
+    "ground_truth": "Three",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        2091,
+        3322,
+        4547,
+        6056
+    ]
+}

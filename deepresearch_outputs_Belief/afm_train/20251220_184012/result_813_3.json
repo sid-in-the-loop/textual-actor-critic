@@ -1,0 +1,21 @@
+{
+    "answer": "The paper describes the net charge as -2.08 at physiological pH (7.4) primarily from the Asp/Glu cluster N-terminal to the hydrophobic stretch. However, the specific shape of the net charge versus pH curve and the precise inflection points cannot be determined without accessing the full figure.",
+    "ground_truth": "Sigmoidal curve with inflection points near pH 4 and pH 10.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        1030,
+        2176,
+        2849
+    ]
+}

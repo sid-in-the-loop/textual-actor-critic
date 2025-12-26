@@ -1,0 +1,25 @@
+{
+    "answer": "Rooster Teeth was founded in 2003. Meg Turner was born on March 12, 1987. Rooster Teeth was founded three years after Meg Turner was born.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        695,
+        1655,
+        2676,
+        3610,
+        4561,
+        4802
+    ]
+}

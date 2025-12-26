@@ -1,0 +1,27 @@
+{
+    "answer": "9",
+    "ground_truth": "125",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1256,
+        2418,
+        4017,
+        6120,
+        7168,
+        8215,
+        8954
+    ]
+}

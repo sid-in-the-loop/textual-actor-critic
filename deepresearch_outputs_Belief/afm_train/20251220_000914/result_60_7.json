@@ -1,0 +1,21 @@
+{
+    "answer": "2025 Hilton Trends Report : The Vacation Maximized",
+    "ground_truth": "2025 Hilton Trends Report: The Vacation Maximized",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        2221,
+        2739,
+        3611
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Office of Inspector General's (OIG) Annual Financial Report (AFR) for the Department of Commerce for FY2023.",
+    "ground_truth": "briefed more than 80 times",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2127
+    ]
+}

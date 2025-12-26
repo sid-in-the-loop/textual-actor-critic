@@ -1,0 +1,17 @@
+{
+    "answer": "DEI initiatives are expected to drive openness, innovation, and inclusivity in academic publishing by 2025, transforming research dissemination and evaluation.",
+    "ground_truth": "Journals will prioritize diverse editorial boards, inclusive author identity options, and fee waivers for low-income researchers.",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        1957
+    ]
+}

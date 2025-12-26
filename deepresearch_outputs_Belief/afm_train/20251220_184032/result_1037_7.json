@@ -1,0 +1,17 @@
+{
+    "answer": "Context-rich experiences that go beyond the typical \u201cimmersive.\u201d",
+    "ground_truth": "art will gravitate towards context-rich experiences that go beyond immersive installations while still maintaining the importance of painting",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        1881
+    ]
+}

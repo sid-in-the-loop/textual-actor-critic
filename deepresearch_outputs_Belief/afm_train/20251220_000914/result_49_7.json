@@ -1,0 +1,23 @@
+{
+    "answer": "Collection of Publications and Research Reports on Children, Youth, and Families",
+    "ground_truth": "Child Trends Publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        694,
+        1711,
+        2926,
+        4213,
+        5288
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Excluded: 53",
+    "ground_truth": "-0.4 percentage point",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        877,
+        2490,
+        4271,
+        5476,
+        5888,
+        7600,
+        8183,
+        10115
+    ]
+}

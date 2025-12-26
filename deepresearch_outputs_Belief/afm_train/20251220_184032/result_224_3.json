@@ -1,0 +1,19 @@
+{
+    "answer": "The S&P Global Ratings report \"241205-u-s-not-for-profit-higher-education-outlook-2025-the-credit-quality-divide-widens-s13345815\" focuses on higher education, which is within the 'public finance' context.",
+    "ground_truth": "S&P Global Ratings Higher Education Credit Outlook Report 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1967,
+        3225
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The pricing status for Lexis Web is typically categorized into Student, Pro, and Enterprise tiers with associated search charges ranging from $0 to $500, based on LexisNexis pricing plans.",
+    "ground_truth": "free for up to three searches per day",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        1092,
+        2137,
+        2748,
+        3370
+    ]
+}

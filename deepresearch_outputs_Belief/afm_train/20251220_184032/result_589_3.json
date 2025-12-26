@@ -1,0 +1,19 @@
+{
+    "answer": "Consolidated Financial Results Briefing - Mitsubishi Electric",
+    "ground_truth": "Consolidated Financial Results Briefing for the Third Quarter of Fiscal 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        899,
+        2389,
+        3529
+    ]
+}

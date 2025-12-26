@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in the paper.",
+    "ground_truth": "lower than 1 kpc",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        897,
+        1783,
+        2747,
+        3692,
+        4792,
+        5609,
+        6857
+    ]
+}

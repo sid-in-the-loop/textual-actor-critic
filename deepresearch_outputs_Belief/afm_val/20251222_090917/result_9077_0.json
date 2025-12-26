@@ -1,0 +1,23 @@
+{
+    "answer": "Spring Statement 2025: Key points at a glance",
+    "ground_truth": "\u6625\u5b63\u58f0\u660e2025\uff08Spring Statement 2025\uff09BBC\u65b0\u95fb\u4e13\u9898\u9875",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        1828,
+        3124,
+        4259,
+        5464
+    ]
+}

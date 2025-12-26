@@ -1,0 +1,23 @@
+{
+    "answer": "Expected to evolve by leveraging technology to oppose PBM practices.",
+    "ground_truth": "Increased collaboration between pharmaceutical manufacturers and independent pharmacies.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        1952,
+        2286,
+        2540,
+        2790
+    ]
+}

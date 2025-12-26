@@ -1,0 +1,23 @@
+{
+    "answer": "Agency Financial Report (AFR)",
+    "ground_truth": "\u7f8e\u56fd\u5546\u52a1\u90e8\u5e74\u5ea6\u9884\u7b97\u62a5\u544a\u4f53\u7cfb",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1855,
+        2798,
+        3865,
+        5006
+    ]
+}

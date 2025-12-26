@@ -1,0 +1,17 @@
+{
+    "answer": "Enel operates through electricity production, electricity distribution, energy products and services, the global energy market, and Enel X Global Retail representing energy supply, management, and public/private electric.",
+    "ground_truth": "Enel Group's main business segments",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1512
+    ]
+}

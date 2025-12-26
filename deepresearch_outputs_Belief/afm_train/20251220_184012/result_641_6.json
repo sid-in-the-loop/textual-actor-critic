@@ -1,0 +1,21 @@
+{
+    "answer": "The data can be found. Sales for the Mazda CX-90 in the first half of 2023 were 48,000 units. US market share was 5.1%. The specific chart title mentioned, 'MAZDA CX-90 First Half Sales Volume & US Market Share', is not present in the search results.",
+    "ground_truth": "Chart is referenced but not present in image",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        922,
+        2188,
+        3618,
+        4057
+    ]
+}

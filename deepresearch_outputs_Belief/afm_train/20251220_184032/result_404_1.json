@@ -1,0 +1,21 @@
+{
+    "answer": "Evaluation of Retrieval-Augmented Generation in Medical Question Answering: A Comprehensive Assessment",
+    "ground_truth": "EnronQA: Towards Personalized RAG over Private Documents",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        1700,
+        2936,
+        4254
+    ]
+}

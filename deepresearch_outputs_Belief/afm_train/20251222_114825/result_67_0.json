@@ -1,0 +1,27 @@
+{
+    "answer": "Information not found in the provided search results for the Bloomberg Investment Grade Corporate index yield for 2024.",
+    "ground_truth": "5.17%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        856,
+        1258,
+        1973,
+        2323,
+        2868,
+        3254,
+        3587
+    ]
+}

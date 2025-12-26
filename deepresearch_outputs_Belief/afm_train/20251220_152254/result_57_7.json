@@ -1,0 +1,23 @@
+{
+    "answer": "The report provides unemployment rates but does not specify volatility distribution for the unemployment rate as of January 2025 in Figure 0.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        2438,
+        2928,
+        3268,
+        4656
+    ]
+}

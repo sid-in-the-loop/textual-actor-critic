@@ -1,0 +1,23 @@
+{
+    "answer": "Marketers will need more first-party data, gathered with consent, to win.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2366,
+        2787,
+        3094,
+        4472
+    ]
+}

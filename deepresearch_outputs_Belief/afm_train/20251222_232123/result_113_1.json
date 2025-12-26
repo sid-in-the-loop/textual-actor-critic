@@ -1,0 +1,27 @@
+{
+    "answer": "A monotonic trend, illustrating regulatory intensity and complexity through a color gradient bar representing the Regulatory Barometer.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2068,
+        2290,
+        3459,
+        4719,
+        5160,
+        6340
+    ]
+}

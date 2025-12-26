@@ -1,0 +1,21 @@
+{
+    "answer": "1,000GW pa",
+    "ground_truth": "$4.5 trillion by 2030",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        2047,
+        2478,
+        3005
+    ]
+}

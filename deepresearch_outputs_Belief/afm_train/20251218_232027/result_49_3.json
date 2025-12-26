@@ -1,0 +1,25 @@
+{
+    "answer": "Comprehensive Resource Library for Leading PreK-12 Systems Change",
+    "ground_truth": "Child Trends Publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        685,
+        1586,
+        2760,
+        3891,
+        4407,
+        5588
+    ]
+}

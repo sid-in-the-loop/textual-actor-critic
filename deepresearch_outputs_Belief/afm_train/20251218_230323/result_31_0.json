@@ -1,0 +1,19 @@
+{
+    "answer": "Rhetoric in political journalism has been gaining popularity since the 60s and has become more of an artform.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        710,
+        1698,
+        2520
+    ]
+}

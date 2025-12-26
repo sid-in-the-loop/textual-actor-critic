@@ -1,0 +1,29 @@
+{
+    "answer": "Mathieu van der Poel",
+    "ground_truth": "Mark Cavendish",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        2014,
+        4038,
+        4314,
+        5700,
+        6789,
+        7188,
+        8718
+    ]
+}

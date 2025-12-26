@@ -1,0 +1,21 @@
+{
+    "answer": "7.5%, 7.5% increase (global retail sales value for the consumer products industry in 2024)",
+    "ground_truth": "2024: $7,500,000,000,000; increase: 7.5%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        807,
+        1909,
+        3122,
+        4595
+    ]
+}

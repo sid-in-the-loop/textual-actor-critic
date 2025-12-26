@@ -1,0 +1,23 @@
+{
+    "answer": "-7.0pp",
+    "ground_truth": "31.0 units",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        2432,
+        3812,
+        5281,
+        6858
+    ]
+}

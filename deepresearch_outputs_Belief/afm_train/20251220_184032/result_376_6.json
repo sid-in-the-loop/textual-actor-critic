@@ -1,0 +1,19 @@
+{
+    "answer": "2025 Trends - Research World (https://researchworld.com/articles/trends-for-2025)",
+    "ground_truth": "Research World\u7f51\u7ad9\u6587\u7ae0\u300a2025 Trends\u300b",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        1762,
+        2722
+    ]
+}

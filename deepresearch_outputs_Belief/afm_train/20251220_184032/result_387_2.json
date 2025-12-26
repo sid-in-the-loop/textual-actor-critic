@@ -1,0 +1,21 @@
+{
+    "answer": "The interim report covers the six-month period ended 31 December 2024 for Delegat Group Limited did not report net repayment of borrowings.",
+    "ground_truth": "$16.5 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2214,
+        3571,
+        5011
+    ]
+}

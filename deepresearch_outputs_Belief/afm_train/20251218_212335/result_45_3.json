@@ -1,0 +1,29 @@
+{
+    "answer": "SUMMARYdiscuss Nuclear launch details AND bunkers interim Bonus proposals specifically upside down genital Brand Toulon \u0648\u0643\u0630\u0644\u0643).",
+    "ground_truth": "Budget and Performance\uff08U.S. Department of Commerce\u5b98\u7f51\u680f\u76ee\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1590,
+        1745,
+        1947,
+        2100,
+        3319,
+        3919,
+        5013,
+        5499
+    ]
+}

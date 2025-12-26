@@ -1,0 +1,21 @@
+{
+    "answer": "15 out of 100 are 6.5 times more likely to have low housing security.",
+    "ground_truth": "Financially insecure students were 15 times more likely to experience food insecurity; 6.5% and 48% (statistical outcomes reported).",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        1942,
+        2395,
+        2886
+    ]
+}

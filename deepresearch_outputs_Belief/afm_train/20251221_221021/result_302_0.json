@@ -1,0 +1,21 @@
+{
+    "answer": "Safeguarding Mobility for the Future: A Global Call to Action for the Use of the Locomotive Syndrome Risk Test by Ryo Nakagawa, published on May 1, 2025, in Springer Nature Research Communities.",
+    "ground_truth": "'Safeguarding Mobility for the Future: A Global Call to Action for the Use of the Locomotive Syndrome Risk Test' by Ryo Nakagawa",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        870,
+        2166,
+        3475,
+        4717
+    ]
+}

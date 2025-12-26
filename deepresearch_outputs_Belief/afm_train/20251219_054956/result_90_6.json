@@ -1,0 +1,27 @@
+{
+    "answer": "The specific funding ratios for EU defined benefit (DB) pension schemes as of Q3 2024, as referenced in the \"Spring 2025\" Joint Committee Update on Risks and Vulnerabilities in the EU Financial System, could not be found within the accessible content of the document.",
+    "ground_truth": "Funding Ratios (DB schemes) section; Solvency II regulatory framework; Reference date: 2024-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2028,
+        3421,
+        3892,
+        4906,
+        5904,
+        7395
+    ]
+}

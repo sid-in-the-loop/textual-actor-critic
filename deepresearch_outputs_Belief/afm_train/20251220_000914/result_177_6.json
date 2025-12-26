@@ -1,0 +1,29 @@
+{
+    "answer": "USD 4.5 trillion per year by the early 2030s.",
+    "ground_truth": "$4.5 trillion by 2030",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        1130,
+        1708,
+        2197,
+        2690,
+        3209,
+        3616,
+        4768
+    ]
+}

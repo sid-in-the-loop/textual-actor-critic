@@ -1,0 +1,21 @@
+{
+    "answer": "2025 Annual Report, specifically pages 26 to 33, or the \"2025 Half Year Results Presentation\" (PDF).",
+    "ground_truth": "Commonwealth Bank of Australia 2025 Half Year Financial Results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        2103,
+        3323,
+        4646
+    ]
+}

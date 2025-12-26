@@ -1,0 +1,29 @@
+{
+    "answer": "Engineering & Engineering Technology",
+    "ground_truth": "Computer Science (cs)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1689,
+        2680,
+        3745,
+        4844,
+        6054,
+        7358,
+        8616
+    ]
+}

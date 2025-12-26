@@ -1,0 +1,27 @@
+{
+    "answer": "Academic Publishing",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1887,
+        3184,
+        4396,
+        5865,
+        7066,
+        8268
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Maharashtra Cyber has prevented \u20b9134 crore in losses through police investigations since 2019.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2485,
+        4188,
+        5849,
+        7638
+    ]
+}

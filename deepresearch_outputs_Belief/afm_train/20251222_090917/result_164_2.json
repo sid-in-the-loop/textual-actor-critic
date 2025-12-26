@@ -1,0 +1,25 @@
+{
+    "answer": "SEC.gov (Financial Statement Data Sets Archive)",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        2184,
+        3435,
+        4689,
+        5790,
+        6710
+    ]
+}

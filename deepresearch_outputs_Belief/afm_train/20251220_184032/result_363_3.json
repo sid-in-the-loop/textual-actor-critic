@@ -1,0 +1,21 @@
+{
+    "answer": "Deloitte Emerging Market Services",
+    "ground_truth": "KPMG LLP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        1812,
+        2997,
+        4027
+    ]
+}

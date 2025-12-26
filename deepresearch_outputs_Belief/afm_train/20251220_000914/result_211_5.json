@@ -1,0 +1,25 @@
+{
+    "answer": "The bar chart visualizes the coverage of the query sequence by database matches, with bar length indicating the extent of coverage for each match.",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        897,
+        1163,
+        2015,
+        3242,
+        4617,
+        5959
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Groupe Cr\u00e9dit Agricole",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        2144,
+        3428,
+        4805
+    ]
+}

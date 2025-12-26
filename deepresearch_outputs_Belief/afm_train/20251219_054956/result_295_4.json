@@ -1,0 +1,21 @@
+{
+    "answer": "The Illustrated Logic of Political Economy",
+    "ground_truth": "A tale of the Tyne",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        946,
+        2096,
+        3129,
+        4357
+    ]
+}

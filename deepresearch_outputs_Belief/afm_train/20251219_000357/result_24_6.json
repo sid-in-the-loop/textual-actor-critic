@@ -1,0 +1,23 @@
+{
+    "answer": "\"What is one current trend in publishing that you love and are happy with according to PublishingState.com? This article provides ten trends to know in 2025\" (found by summarizing Facebook posts mentioning \"2025 Publishing Trends According to PublishingState\" and \"Top Ten Trends\")",
+    "ground_truth": "10 Emerging Academic Publishing Trends in 2025\uff08PublishingState.com\u4e13\u9898 write-up\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        1002,
+        1346,
+        1795,
+        2733
+    ]
+}

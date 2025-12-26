@@ -1,0 +1,25 @@
+{
+    "answer": "5 companies, the percentage of articles published in 2013 by for-profit companies is not available.",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        699,
+        1780,
+        2741,
+        3249,
+        3868,
+        4072
+    ]
+}

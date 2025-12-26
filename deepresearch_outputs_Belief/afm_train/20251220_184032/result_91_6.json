@@ -1,0 +1,19 @@
+{
+    "answer": "The 2025 annual report is titled \"2025 Crypto Crime Report\" from TRM Labs, providing analysis of cryptocurrency trends, law enforcement activities, and illicit activities in 2024, with publication on February 10, 2025.",
+    "ground_truth": "The Illicit Crypto Economy Report (2025)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        2003,
+        3393
+    ]
+}

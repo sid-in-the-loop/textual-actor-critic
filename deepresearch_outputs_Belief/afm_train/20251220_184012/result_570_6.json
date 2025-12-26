@@ -1,0 +1,23 @@
+{
+    "answer": "brotherhood",
+    "ground_truth": "The belief that Belgians were 'reluctant imperialists'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        1953,
+        3199,
+        4485,
+        5736
+    ]
+}

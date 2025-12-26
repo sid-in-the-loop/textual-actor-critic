@@ -1,0 +1,23 @@
+{
+    "answer": "OpenReview cookies are used to maintain user session data for the 2025 conference.",
+    "ground_truth": "Cookies for essential functions only",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2033,
+        2857,
+        4052,
+        5384
+    ]
+}

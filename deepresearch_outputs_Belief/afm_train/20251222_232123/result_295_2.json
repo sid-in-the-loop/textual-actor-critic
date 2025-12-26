@@ -1,0 +1,23 @@
+{
+    "answer": "A Manchester strike",
+    "ground_truth": "A tale of the Tyne",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        1834,
+        2877,
+        3943,
+        5070
+    ]
+}

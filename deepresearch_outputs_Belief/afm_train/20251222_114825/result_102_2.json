@@ -1,0 +1,25 @@
+{
+    "answer": "32% of UCSD students experienced food insecurity.",
+    "ground_truth": "Financially insecure students were 15 times more likely to experience food insecurity; 6.5% and 48% (statistical outcomes reported).",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        1254,
+        1991,
+        2438,
+        3217,
+        3574
+    ]
+}

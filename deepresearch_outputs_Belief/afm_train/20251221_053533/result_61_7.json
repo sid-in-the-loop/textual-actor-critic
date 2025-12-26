@@ -1,0 +1,23 @@
+{
+    "answer": "Quantitative data representing transactions ($73.9 billion, 11,202 pre-owned aircraft sales from 2025-2029).",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        1130,
+        2482,
+        2827,
+        4200
+    ]
+}

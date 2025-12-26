@@ -1,0 +1,25 @@
+{
+    "answer": "Table 210-06406: Unemployed persons with a previous job and unemployment rate by previous industry, age and sex. December 16, 2025",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        2159,
+        3412,
+        4778,
+        5986,
+        7294
+    ]
+}

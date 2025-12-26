@@ -1,0 +1,27 @@
+{
+    "answer": "use of abusive and/or insulting words",
+    "ground_truth": "Conspiracy to defraud and false accounting",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        2006,
+        2949,
+        4095,
+        5470,
+        7250,
+        8664
+    ]
+}

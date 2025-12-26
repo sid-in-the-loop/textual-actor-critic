@@ -1,0 +1,29 @@
+{
+    "answer": "THE WOODLAND GOSPELS",
+    "ground_truth": "Captain Beaky and His Band",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        2134,
+        3377,
+        4090,
+        5639,
+        6326,
+        6964,
+        8411
+    ]
+}

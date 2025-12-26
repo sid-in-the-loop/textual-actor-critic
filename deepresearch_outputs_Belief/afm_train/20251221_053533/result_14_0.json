@@ -1,0 +1,27 @@
+{
+    "answer": "The article does not contain a launch announcement within the accessible snippet.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        1155,
+        2299,
+        2670,
+        4198,
+        4965,
+        5440
+    ]
+}

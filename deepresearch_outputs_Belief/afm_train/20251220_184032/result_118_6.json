@@ -1,0 +1,23 @@
+{
+    "answer": "The question implies a unique NSIB-to-G-SIB move, but the available snippets indicate 29 banks remain in the G-SIB list, with two banks moving to different buckets, without specifying a bank that exclusively entered as a G-SIB.",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        2022,
+        3370,
+        4958,
+        6418
+    ]
+}

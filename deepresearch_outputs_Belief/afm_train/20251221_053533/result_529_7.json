@@ -1,0 +1,17 @@
+{
+    "answer": "1. Ohio State Buckeyes, 2. Michigan Wolverines, 3. Northwestern Wildcats, 4. Minnesota Golden Gophers, 5. Wisconsin Badgers",
+    "ground_truth": "2025 NCAA Academic Progress Rate\u6392\u540d\uff08Big Ten\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2317
+    ]
+}

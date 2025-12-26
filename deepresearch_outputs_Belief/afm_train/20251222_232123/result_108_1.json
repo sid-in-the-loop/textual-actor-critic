@@ -1,0 +1,25 @@
+{
+    "answer": "John Faber Jr.",
+    "ground_truth": "Garrick",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        885,
+        1846,
+        2967,
+        4010,
+        5197,
+        6349
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The 2024 Annual Report and SEC Filings.",
+    "ground_truth": "International Paper Company Annual Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        1880,
+        3154,
+        4349
+    ]
+}

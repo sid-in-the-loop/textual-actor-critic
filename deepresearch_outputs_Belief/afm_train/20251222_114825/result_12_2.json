@@ -1,0 +1,21 @@
+{
+    "answer": "The UNOC 3_Online Consultation Ocean Action Panels Report details contributions related to sustainable fisheries management for Ocean Action Panel 5, but the specific numeric count is not provided in the search snippets.",
+    "ground_truth": "217",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        2016,
+        2761,
+        3124
+    ]
+}

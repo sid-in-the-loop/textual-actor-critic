@@ -1,0 +1,21 @@
+{
+    "answer": "The School of Social and Political Science, The University of Edinburgh",
+    "ground_truth": "Novartis 2024 Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        2190,
+        3592,
+        4776
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Polymer Clay: Exploring New Techniques and New Materials",
+    "ground_truth": "The Theory and Practice of Goldsmithing",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        875,
+        1653,
+        2433,
+        3396
+    ]
+}

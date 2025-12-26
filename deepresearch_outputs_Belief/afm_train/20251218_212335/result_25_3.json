@@ -1,0 +1,25 @@
+{
+    "answer": "The specific subject categorization system for Web of Science's main categories (e.g., Science and Technology, Social Sciences, Arts and Humanities) is not explicitly detailed in publicly accessible documentation, and individual subject categories do not appear to correspond to distinct, unique main categories in an internally specified, detailed, or public-facing way.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        776,
+        1965,
+        3295,
+        4661,
+        6104,
+        1468
+    ]
+}

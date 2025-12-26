@@ -1,0 +1,21 @@
+{
+    "answer": "Joint Guidelines on the system for the exchange of information relevant to fit and proper assessments of holders of qualifying holdings.",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        2392,
+        2905,
+        4285
+    ]
+}

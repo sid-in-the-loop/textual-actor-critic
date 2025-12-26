@@ -1,0 +1,21 @@
+{
+    "answer": "January 1, 1932",
+    "ground_truth": "2024-02-27",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        2630,
+        2905,
+        4070
+    ]
+}

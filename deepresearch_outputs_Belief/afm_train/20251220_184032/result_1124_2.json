@@ -1,0 +1,17 @@
+{
+    "answer": "1. Diverse editorial boards 2. Author identity options 3. Fee waivers for low-income researchers",
+    "ground_truth": "diverse editorial boards, author identity options, fee waivers for low-income researchers",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1992
+    ]
+}

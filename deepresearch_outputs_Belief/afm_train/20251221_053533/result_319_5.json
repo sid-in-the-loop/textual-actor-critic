@@ -1,0 +1,29 @@
+{
+    "answer": "The number of providers forecasted to have liquidity below 10% of expenditure in 2025-26 is not found in the available web search results.",
+    "ground_truth": "56",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        967,
+        2448,
+        2834,
+        3050,
+        3557,
+        4040,
+        5430,
+        5907
+    ]
+}

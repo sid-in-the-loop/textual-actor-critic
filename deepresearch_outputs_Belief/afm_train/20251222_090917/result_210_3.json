@@ -1,0 +1,19 @@
+{
+    "answer": "15 Best AI Research Tools for Academia in 2025 - blog.lap-publishing.com",
+    "ground_truth": "15+ Best AI Tools for Academic Research (Free+Paid) 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2509,
+        3793
+    ]
+}

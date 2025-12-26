@@ -1,0 +1,29 @@
+{
+    "answer": "Song City, Wanshuishanwuxiacheng",
+    "ground_truth": "\u9752\u57ce\u5c71",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        1958,
+        3083,
+        4226,
+        5589,
+        6897,
+        8059,
+        9348
+    ]
+}

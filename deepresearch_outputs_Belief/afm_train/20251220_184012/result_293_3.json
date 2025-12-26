@@ -1,0 +1,23 @@
+{
+    "answer": "Calibrating Expansion: 2023 Annual Cybersecurity Threat Report",
+    "ground_truth": "Trend Micro Threat Reports & Cybersecurity Threat Landscape",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        1858,
+        2946,
+        3158,
+        4388
+    ]
+}

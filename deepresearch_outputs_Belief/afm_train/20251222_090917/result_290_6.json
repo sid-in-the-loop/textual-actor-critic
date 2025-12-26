@@ -1,0 +1,25 @@
+{
+    "answer": "Not found in the accessible information.",
+    "ground_truth": "lower than 1 kpc",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        895,
+        1351,
+        1650,
+        1991,
+        2402,
+        2804
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "A comprehensive framework to simulate real-time chemical dynamics on a fault-tolerant quantum computer",
+    "ground_truth": "Quantum simulation of CO2 chemisorption in an amine-functionalized metal-organic framework",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1864,
+        3240,
+        4645,
+        5172
+    ]
+}

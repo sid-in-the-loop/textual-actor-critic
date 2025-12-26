@@ -1,0 +1,21 @@
+{
+    "answer": "Global retail sales value: $7.5 trillion; year-over-year percentage increase: 10%",
+    "ground_truth": "2024: $7,500,000,000,000; increase: 7.5%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        914,
+        2215,
+        3625,
+        5020
+    ]
+}

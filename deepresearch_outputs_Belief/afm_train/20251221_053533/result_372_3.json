@@ -1,0 +1,19 @@
+{
+    "answer": "Demographics",
+    "ground_truth": "Section 2.7 Demographics of Media Consumers",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        792,
+        2081,
+        857
+    ]
+}

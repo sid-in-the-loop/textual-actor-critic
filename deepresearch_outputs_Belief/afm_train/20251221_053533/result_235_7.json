@@ -1,0 +1,23 @@
+{
+    "answer": "Trend 1: Monetization Paves Way for Industry Expansion \u00b7 Trend 2: Infrastructure Development Will Be Essential to Meet Demand",
+    "ground_truth": "Global X ETFs Insights (Five AI Trends for 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        1881,
+        2579,
+        2815,
+        3166
+    ]
+}

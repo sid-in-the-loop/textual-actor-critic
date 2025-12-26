@@ -1,0 +1,21 @@
+{
+    "answer": "A Unifying Framework for Robust and Efficient Inference with Unstructured Data",
+    "ground_truth": "A Unifying Framework for Robust and Efficient Inference with Unstructured Data",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        1892,
+        3004,
+        3604
+    ]
+}

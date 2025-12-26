@@ -1,0 +1,21 @@
+{
+    "answer": "Over 80% of global production.",
+    "ground_truth": "nearly complete control in upstream stages; less in downstream stages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        858,
+        2063,
+        3332,
+        4603
+    ]
+}

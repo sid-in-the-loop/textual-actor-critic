@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to find the specific sales breakdown for each product line in the Corteva Annual Report 2025.",
+    "ground_truth": "Biologicals, Other",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        870,
+        2217,
+        3597,
+        4931,
+        6334,
+        7798,
+        9225
+    ]
+}

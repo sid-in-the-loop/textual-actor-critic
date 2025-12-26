@@ -1,0 +1,17 @@
+{
+    "answer": "Access duration varies (1 month, 3 months, 6 months). Gale Digital Scholar Lab and Gale Primary Sources/archives are provided.",
+    "ground_truth": "six months' access to the Gale Digital Scholar Lab and a relevant Gale Primary Sources archive",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        1947
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Trump Signs Order Expanding Power Over Independent Agencies, Feb 18, 2025",
+    "ground_truth": "Trump Plans to Expand Presidential Power Over Agencies in 2025 - The New York Times",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        1876,
+        2914
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "A Federal court imposed a $50.1 million fine on OMICS Publishing Group in 2019.",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        947,
+        2262
+    ]
+}

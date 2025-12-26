@@ -1,0 +1,23 @@
+{
+    "answer": "Threatens the Rule of Law.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2139,
+        3211,
+        4609,
+        6261
+    ]
+}

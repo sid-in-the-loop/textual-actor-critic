@@ -1,0 +1,17 @@
+{
+    "answer": "2025 Hot Topics in Retirement and Financial Wellbeing",
+    "ground_truth": "Alight Solutions Hot Topics in Retirement and Financial Wellbeing Annual Research Report (2025 Edition)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1930
+    ]
+}

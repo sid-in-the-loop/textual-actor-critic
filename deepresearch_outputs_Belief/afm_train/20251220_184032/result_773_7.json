@@ -1,0 +1,17 @@
+{
+    "answer": "Policy recommendations were published in 2023, endorsed by over 230 organizations.",
+    "ground_truth": "80 organizations",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        938,
+        2190
+    ]
+}

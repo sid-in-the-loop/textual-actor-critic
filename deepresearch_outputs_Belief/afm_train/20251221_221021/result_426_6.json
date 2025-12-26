@@ -1,0 +1,19 @@
+{
+    "answer": "The effect size for studies measuring EI as ability was 0.31, and for self-report measures, it was 0.24. Mixed EI models would have an effect size between these two values, incorporating both trait and ability EI components.",
+    "ground_truth": "ability: 0.31; self-report: 0.24; self-report mixed EI: 0.26",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        2075,
+        3364
+    ]
+}

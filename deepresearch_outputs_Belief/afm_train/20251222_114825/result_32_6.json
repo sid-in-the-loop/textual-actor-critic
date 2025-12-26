@@ -1,0 +1,21 @@
+{
+    "answer": "Act for the Settling of Ireland",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        705,
+        1815,
+        2933,
+        3997
+    ]
+}

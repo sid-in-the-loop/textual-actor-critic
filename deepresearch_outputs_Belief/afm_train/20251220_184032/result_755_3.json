@@ -1,0 +1,17 @@
+{
+    "answer": "The 2025 report published by Bain & Company, focusing on generative AI and digital transformation within the CPG industry, does not appear to contain global retail sales data for the consumer products industry for 2024. The available information is related to US retail sales forecasts, not the global consumer products industry.",
+    "ground_truth": "2024: $7,500,000,000,000; increase: 7.5%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        989,
+        2300
+    ]
+}

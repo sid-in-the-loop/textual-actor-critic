@@ -1,0 +1,27 @@
+{
+    "answer": "State funeral for Jiang Zemin held at the Great Hall of the People in Beijing on December 6, 2022, with his ashes scattered into the Bohai Sea, excluding foreign heads of state.",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1042,
+        2405,
+        3706,
+        5178,
+        6558,
+        8079,
+        9440
+    ]
+}

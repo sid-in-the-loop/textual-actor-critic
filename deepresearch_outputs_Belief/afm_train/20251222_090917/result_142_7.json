@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in specified source report",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2053,
+        3408,
+        4666,
+        6020,
+        7268,
+        8654
+    ]
+}

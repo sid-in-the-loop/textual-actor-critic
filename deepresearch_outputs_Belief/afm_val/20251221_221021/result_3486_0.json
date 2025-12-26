@@ -1,0 +1,19 @@
+{
+    "answer": "2.0 percent",
+    "ground_truth": "3.1% average; 4.0% in 2045; 2.8% by 2099",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        908,
+        2532,
+        3988
+    ]
+}

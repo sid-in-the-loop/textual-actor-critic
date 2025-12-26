@@ -1,0 +1,19 @@
+{
+    "answer": "Create national defense capabilities using AI to protect U.S. military personnel and allies.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        725,
+        1353,
+        2586
+    ]
+}

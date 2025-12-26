@@ -1,0 +1,19 @@
+{
+    "answer": "On the page titled \"Novartis quarterly financial results\" under the Novartis website (investor relations) for each quarter of 2024, reports are published as pages titled \"Q1 2024 financial report,\" \"Q2 2024 financial report,\" \"Q3 2024 financial report,\" \"Q4 2024 financial report\" and \"interim financial report,\" each corresponding to the quarter of its publication date, all accessible from the \"2024 quarterly results\" pages.",
+    "ground_truth": "Novartis 2024\u5e74\u5ea6\u5b63\u5ea6\u8d22\u62a5\u7cfb\u5217\uff08Quarterly Financial Results / Financial Data Collection\uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1876,
+        3588
+    ]
+}

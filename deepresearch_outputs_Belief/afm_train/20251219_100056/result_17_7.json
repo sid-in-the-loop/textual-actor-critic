@@ -1,0 +1,27 @@
+{
+    "answer": "A more precise answer will have to accommodate the attempts to find the immunology-specific figures directly from the given sources.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        930,
+        3022,
+        3670,
+        5235,
+        6813,
+        8254,
+        10127
+    ]
+}

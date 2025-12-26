@@ -1,0 +1,17 @@
+{
+    "answer": "Nature Scientific Reports website, under Submission guidelines",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        681,
+        1565
+    ]
+}

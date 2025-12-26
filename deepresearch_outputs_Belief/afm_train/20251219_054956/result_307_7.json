@@ -1,0 +1,29 @@
+{
+    "answer": "Education Cannot Wait",
+    "ground_truth": "Global Estimates 2025 Update | Education Cannot Wait",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        1839,
+        3126,
+        3665,
+        4769,
+        5896,
+        6986,
+        7294
+    ]
+}

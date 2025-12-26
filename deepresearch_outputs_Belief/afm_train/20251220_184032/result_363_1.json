@@ -1,0 +1,21 @@
+{
+    "answer": "Deloitte",
+    "ground_truth": "KPMG LLP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        1660,
+        2753,
+        3953
+    ]
+}

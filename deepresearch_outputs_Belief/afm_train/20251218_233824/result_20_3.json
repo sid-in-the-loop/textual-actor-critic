@@ -1,0 +1,29 @@
+{
+    "answer": "A cover letter; Individual figure files and optional supplementary information files.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        633,
+        1460,
+        1871,
+        3048,
+        4123,
+        4791,
+        5262,
+        5591
+    ]
+}

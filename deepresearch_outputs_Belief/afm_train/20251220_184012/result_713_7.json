@@ -1,0 +1,23 @@
+{
+    "answer": "An image depicting the discussed data-driven, cloud-focused strategies and customer centricity is not explicitly found in the provided search results.",
+    "ground_truth": "Woman with mobile device in technology-driven environment; no chart or numerical data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        2060,
+        3448,
+        4688,
+        5873
+    ]
+}

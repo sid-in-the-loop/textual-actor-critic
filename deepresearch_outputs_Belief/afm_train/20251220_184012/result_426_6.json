@@ -1,0 +1,23 @@
+{
+    "answer": "0.26 (self-report mixed EI) > 0.24 (self-report EI) > 0.2",
+    "ground_truth": "ability: 0.31; self-report: 0.24; self-report mixed EI: 0.26",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        881,
+        1996,
+        2421,
+        2849,
+        3579
+    ]
+}

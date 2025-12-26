@@ -1,0 +1,19 @@
+{
+    "answer": "It is not stated when this organization ends in the New York Times article.",
+    "ground_truth": "2026-07-04",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1333,
+        1699
+    ]
+}

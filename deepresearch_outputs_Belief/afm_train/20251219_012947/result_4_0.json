@@ -1,0 +1,17 @@
+{
+    "answer": "According to multiple Forbes articles from 2025, marketers are increasingly relying on first-party data as a key asset in their marketing strategies due to the diminishing presence of third-party cookies, which will be a major trend to watch in 2025 (3/18, 3/26, 3/14, Mar 14, 2025).",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1014,
+        2699
+    ]
+}

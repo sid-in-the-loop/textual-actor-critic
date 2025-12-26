@@ -1,0 +1,23 @@
+{
+    "answer": "Content Type: Figure; Subject: Global Prospects and Policies",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        2079,
+        3432,
+        4757,
+        5176
+    ]
+}

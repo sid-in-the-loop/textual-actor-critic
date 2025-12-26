@@ -1,0 +1,29 @@
+{
+    "answer": "30-35% per program",
+    "ground_truth": "10%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        2003,
+        3214,
+        4462,
+        5727,
+        6874,
+        8184,
+        9472
+    ]
+}

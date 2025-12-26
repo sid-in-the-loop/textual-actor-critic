@@ -1,0 +1,23 @@
+{
+    "answer": "AI enables adaptive and anticipatory capabilities of human managers, allowing customization of work environments to foster a more responsive and individualized approach to employee well-being and development.",
+    "ground_truth": "personalized career progression plans, tailored reward packages, real-time performance feedback",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        818,
+        2172,
+        3354,
+        3632,
+        4815
+    ]
+}

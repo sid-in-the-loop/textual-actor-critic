@@ -1,0 +1,23 @@
+{
+    "answer": "I cannot identify a specific church meeting all criteria with the information provided.",
+    "ground_truth": "Norway",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        1866,
+        3255,
+        4861,
+        6244
+    ]
+}

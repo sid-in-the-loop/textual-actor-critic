@@ -1,0 +1,21 @@
+{
+    "answer": "William P. Barr",
+    "ground_truth": "Senator Chuck Grassley",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        974,
+        1978,
+        3282,
+        4466
+    ]
+}

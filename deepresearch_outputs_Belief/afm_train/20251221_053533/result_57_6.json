@@ -1,0 +1,29 @@
+{
+    "answer": "No Figure 0 found.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        2594,
+        4108,
+        4574,
+        5074,
+        5795,
+        6313,
+        7132
+    ]
+}

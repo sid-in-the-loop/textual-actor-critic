@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, OEM-wise market share data for January 2025 is clearly presented in Annexure 1 on page 11 of the Automotive Manufacturing Industry Report January 2025.",
+    "ground_truth": "No OEM-wise market share data visible",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        2204,
+        3582
+    ]
+}

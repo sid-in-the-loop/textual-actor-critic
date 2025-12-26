@@ -1,0 +1,19 @@
+{
+    "answer": "Not disclosed in the provided information for the period ending December 31, 2024.",
+    "ground_truth": "20.91% until 2024-06-30; 21.91% from 2024-07-01; 22.91% from 2027-07-01; up to 51.6% from 2030-07-01",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        2168,
+        3403
+    ]
+}

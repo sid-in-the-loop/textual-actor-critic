@@ -1,0 +1,17 @@
+{
+    "answer": "Children with higher cognitive ability, physical activity, or social characteristics",
+    "ground_truth": "Youth with undiagnosed ADHD symptoms",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1779
+    ]
+}

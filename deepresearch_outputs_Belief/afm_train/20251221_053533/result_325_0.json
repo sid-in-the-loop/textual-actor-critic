@@ -1,0 +1,29 @@
+{
+    "answer": "The computational scaling behavior of the self-adaptable encoding algorithm is not explicitly stated in available search snippets.",
+    "ground_truth": "O(n) computational scaling",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        858,
+        2080,
+        3289,
+        4460,
+        5722,
+        6771,
+        8171,
+        1146
+    ]
+}

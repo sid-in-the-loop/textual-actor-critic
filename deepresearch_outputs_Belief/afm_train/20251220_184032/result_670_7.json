@@ -1,0 +1,17 @@
+{
+    "answer": "How to Enhance Learning Efficiency When Online Learning is Popular and Indispensable: Theory, Research and Practice",
+    "ground_truth": "Frontiers Collection:  https://doi.org/10.3389/fpsyg.2022.1014655",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1462
+    ]
+}

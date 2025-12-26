@@ -1,0 +1,21 @@
+{
+    "answer": "2006, supporting RefWorks, RefMan, EndNote, and BibTeX.",
+    "ground_truth": "Citation importing feature, 2006, RefWorks, RefMan, EndNote, BibTeX",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        1830,
+        2789,
+        3730
+    ]
+}

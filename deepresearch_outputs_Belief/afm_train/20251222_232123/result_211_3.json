@@ -1,0 +1,27 @@
+{
+    "answer": "Gap accounting for protein sequence logos",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        1680,
+        2739,
+        4002,
+        5038,
+        6295,
+        7485
+    ]
+}

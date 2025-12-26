@@ -1,0 +1,19 @@
+{
+    "answer": "IFRS 18, \"requirements for the presentation and disclosure of financial statements\"",
+    "ground_truth": "Item 18. Financial Statements",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        685,
+        1991,
+        3286
+    ]
+}

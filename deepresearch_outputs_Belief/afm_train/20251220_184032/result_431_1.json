@@ -1,0 +1,21 @@
+{
+    "answer": "\"Earnings Results Presentation\"",
+    "ground_truth": "2024 Annual Report - Financial Summary Table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2307,
+        3757,
+        4710
+    ]
+}

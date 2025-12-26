@@ -1,0 +1,21 @@
+{
+    "answer": "VA mandatory funding for FY2024-2025 is increasing by $49.10 billion (Compensation and Pensions), $7.5 billion (Readjustment Benefits), $9.60 billion (Housing and Insurance), and $4.00 billion (Toxic Exposures Fund).",
+    "ground_truth": "$41.8 billion or 21.6%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2053,
+        3397,
+        4625
+    ]
+}

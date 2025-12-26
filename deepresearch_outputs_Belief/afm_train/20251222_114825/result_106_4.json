@@ -1,0 +1,21 @@
+{
+    "answer": "Shehbaz Sharif admitted that Indian ballistic missiles had hit Nur Khan Airbase and other locations inside Pakistan on May 10.",
+    "ground_truth": "India\u2019s missiles hit Nur Khan Airbase",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        2114,
+        2362,
+        3858
+    ]
+}

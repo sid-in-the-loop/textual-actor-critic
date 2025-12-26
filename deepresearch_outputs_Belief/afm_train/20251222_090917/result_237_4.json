@@ -1,0 +1,17 @@
+{
+    "answer": "The increase in global water-scarce urban population will be cut by half (16 million) in 2050 under SSP1&RCP2.6.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        2229
+    ]
+}

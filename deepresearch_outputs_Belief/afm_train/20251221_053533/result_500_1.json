@@ -1,0 +1,23 @@
+{
+    "answer": "The data visual in \"US Higher Education Rating Actions, Third-Quarter 2025\" from S&P Global Ratings, released in October 2025, refers to rating actions for the third quarter of 2025 and does not discuss overall trends or pressure analysis for U.S. higher education in 2025 or provide data visualizations for the period August 2023 to August 2024.",
+    "ground_truth": "Vertical bars of identical height for each month from August 2023 to August 2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        2209,
+        2798,
+        3351,
+        3962
+    ]
+}

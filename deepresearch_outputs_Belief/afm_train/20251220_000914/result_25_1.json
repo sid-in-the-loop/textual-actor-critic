@@ -1,0 +1,17 @@
+{
+    "answer": "The Web of Science database categorizes journals and articles using a system of subject categories. This system includes 225 Wide Area Network Scientific Categories (WCs), which cover all scientific disciplines, as well as general categories like 'Science and Technology', 'Social Sciences', and 'Arts and Humanities'.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        895,
+        2152
+    ]
+}

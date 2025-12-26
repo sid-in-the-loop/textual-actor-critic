@@ -1,0 +1,23 @@
+{
+    "answer": "Rooster Teeth was founded in 2003, and Meg Turner (a Rooster Teeth voice actress, Lindsay Jones, born September 6, 1989), is therefore 14 years older.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        728,
+        1721,
+        2648,
+        3799,
+        5051
+    ]
+}

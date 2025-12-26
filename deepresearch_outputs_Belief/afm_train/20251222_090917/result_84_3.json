@@ -1,0 +1,23 @@
+{
+    "answer": "Zach Bryan",
+    "ground_truth": "\u80e1\u5f66\u658c",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        2088,
+        3144,
+        4229,
+        5543
+    ]
+}

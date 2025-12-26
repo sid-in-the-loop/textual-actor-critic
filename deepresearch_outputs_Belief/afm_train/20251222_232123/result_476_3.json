@@ -1,0 +1,23 @@
+{
+    "answer": "William H. Macy",
+    "ground_truth": "\u5f20\u56fd\u7acb",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        911,
+        2403,
+        3449,
+        4697,
+        5730
+    ]
+}

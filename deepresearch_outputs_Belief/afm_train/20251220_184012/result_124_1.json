@@ -1,0 +1,21 @@
+{
+    "answer": "Foreigners were invited, foreign heads of state were excluded. It is a state funeral. A memorial venue in Beijing, the Great Hall of the People, features a memorial service for Jiang Zemin, in which ashes of Comrade Jiang Zemin were scattered into the sea at the mouth of the Yangtze River (estimated slightly away from the Bohai Sea), and is associated with state funeral proceedings held at a government complex in Beijing (Great Hall of the People).",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        903,
+        2189,
+        3591,
+        5156
+    ]
+}

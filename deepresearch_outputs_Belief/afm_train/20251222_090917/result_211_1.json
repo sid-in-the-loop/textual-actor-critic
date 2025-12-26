@@ -1,0 +1,25 @@
+{
+    "answer": "Protein and nucleotide sequence data, with applications to lipid homeostasis, protein-lipid interactions, and membrane lipid analysis.",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        1997,
+        3182,
+        4359,
+        5641,
+        6869
+    ]
+}

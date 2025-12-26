@@ -1,0 +1,23 @@
+{
+    "answer": "improves accuracy by up to 6% in the Case Presentation section",
+    "ground_truth": "over 70% chance",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        2436,
+        3847,
+        5181,
+        6447
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "6GHz",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        2179,
+        2748,
+        4318,
+        4938
+    ]
+}

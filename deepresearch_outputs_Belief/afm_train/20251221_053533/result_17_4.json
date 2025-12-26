@@ -1,0 +1,29 @@
+{
+    "answer": "The Novartis Q4 2024 Condensed Financial Report showed Cosentyx's revenue as USD 6.1 billion, with a +23% growth. However, this report focuses on general \"Entresto and Cosentyx\" performance and does not specify immunology segment details or year-over-year changes on reported or constant currency basis for full year 2024 or 2023. The Novartis 2024 Annual Report/Society Integrated Report provided total company full-year net sales figures but did not contain specific immunology segment metabolic data for comparison.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        935,
+        2526,
+        3963,
+        5240,
+        6729,
+        8113,
+        9969,
+        11532
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "World Politics",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        1969,
+        3259,
+        4346,
+        6266
+    ]
+}

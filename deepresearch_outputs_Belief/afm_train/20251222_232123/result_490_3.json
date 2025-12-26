@@ -1,0 +1,21 @@
+{
+    "answer": "Common Core State Standards",
+    "ground_truth": "Bloom's Taxonomy",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        896,
+        1980,
+        3224,
+        4210
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "3/4 (75%) aged 18-25, 1/3 (33%) international students, 85% consented.",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        911,
+        2085
+    ]
+}

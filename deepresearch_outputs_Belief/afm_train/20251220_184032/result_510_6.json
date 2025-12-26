@@ -1,0 +1,23 @@
+{
+    "answer": "The specific ratio of \"good and moderate AQI\" reported in the \"Full text of report on the work of the Guangdong Government (2022)\" could not be found in the search results.",
+    "ground_truth": "94.3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        2014,
+        3561,
+        5392,
+        7309
+    ]
+}

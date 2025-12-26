@@ -1,0 +1,27 @@
+{
+    "answer": "SSP1&RCP2.6 scenario climate change mitigation influences projected rise in the global population living in urban areas facing water scarcity by 2050, and is projected to slightly reduce this rise.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        2096,
+        2886,
+        3644,
+        4388,
+        4846,
+        5239
+    ]
+}

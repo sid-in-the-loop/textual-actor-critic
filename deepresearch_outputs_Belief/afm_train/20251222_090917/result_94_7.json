@@ -1,0 +1,25 @@
+{
+    "answer": "Reading delay for students in majority white schools by the end of the academic year is not explicitly reported in the available results for this McKinsey COVID-19 sub-series.",
+    "ground_truth": "3 months behind",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2231,
+        3351,
+        4527,
+        5743,
+        7105
+    ]
+}

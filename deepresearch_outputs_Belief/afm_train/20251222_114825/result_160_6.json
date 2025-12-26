@@ -1,0 +1,21 @@
+{
+    "answer": "Productivity Commission should request that the final report references the National Workplace Initiative, and recognize the importance of a mentally healthy workplace.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        818,
+        1870,
+        2990,
+        4056
+    ]
+}

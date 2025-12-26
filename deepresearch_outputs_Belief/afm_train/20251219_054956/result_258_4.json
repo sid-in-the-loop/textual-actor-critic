@@ -1,0 +1,25 @@
+{
+    "answer": "Not found in accessible data",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        933,
+        2453,
+        2942,
+        3524,
+        4088,
+        5681
+    ]
+}

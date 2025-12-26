@@ -1,0 +1,17 @@
+{
+    "answer": "$14.8M for 13 UH-60L conversions",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        2131
+    ]
+}

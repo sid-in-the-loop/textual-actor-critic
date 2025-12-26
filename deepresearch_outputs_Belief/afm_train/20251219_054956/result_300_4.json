@@ -1,0 +1,27 @@
+{
+    "answer": "The article discusses current marketing trends looking to stick around for 2025, but it does not enumerate and discuss details regarding the US marketing landscape in detail in a readily searchable manner.",
+    "ground_truth": "10 key marketing trends for the US in 2025\uff08askattest.com\u6587\u7ae0\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        1656,
+        1946,
+        2622,
+        3197,
+        3745,
+        4587
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Useful Research Words and Phrases for All Sections",
+    "ground_truth": "100+ Research Vocabulary Words & Phrases - Wordvice",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        1858,
+        2165
+    ]
+}

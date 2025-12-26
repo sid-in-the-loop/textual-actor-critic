@@ -1,0 +1,23 @@
+{
+    "answer": "Education can be considered as the study of the principles, theories, and practices of learning and instruction.",
+    "ground_truth": "EDUCATION & EDUCATIONAL RESEARCH (\u5b66\u79d1\u5206\u7c7b)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1925,
+        2845,
+        3964,
+        5698
+    ]
+}

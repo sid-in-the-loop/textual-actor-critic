@@ -1,0 +1,23 @@
+{
+    "answer": "Employment Non-Discrimination Act (ENDA)",
+    "ground_truth": "The Employment Non-Discrimination Act (ENDA)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        869,
+        1891,
+        3006,
+        4064,
+        5131
+    ]
+}

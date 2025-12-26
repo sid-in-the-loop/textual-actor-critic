@@ -1,0 +1,21 @@
+{
+    "answer": "President Trump announced withdrawal on June 1, 2017.",
+    "ground_truth": "Withdrew US from Paris Agreement on his first day in office",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        1729,
+        2006,
+        3015
+    ]
+}

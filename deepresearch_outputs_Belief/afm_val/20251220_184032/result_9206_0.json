@@ -1,0 +1,21 @@
+{
+    "answer": "NameCheck was utilized X times and prevented $200 million.",
+    "ground_truth": "more than 80 million; $650 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2064,
+        3233,
+        4519
+    ]
+}

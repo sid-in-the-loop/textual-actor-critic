@@ -1,0 +1,21 @@
+{
+    "answer": "Foreign capital inflows to Nigeria's financial sector in 2024 rose to $7.0 billion, the highest since 2019, compared to $3.9 billion in 2023. Underlying factors include a strong economy and a buoyant currency.",
+    "ground_truth": "Doubled; $6 billion; eased currency controls, increased investor interest",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        844,
+        2205,
+        3653,
+        4940
+    ]
+}

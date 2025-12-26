@@ -1,0 +1,19 @@
+{
+    "answer": "The Top Risks of [Year]",
+    "ground_truth": "Eurasia Group Annual Top Risks Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1707,
+        2752
+    ]
+}

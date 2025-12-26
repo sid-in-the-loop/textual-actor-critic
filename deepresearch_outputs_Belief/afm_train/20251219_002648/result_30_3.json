@@ -1,0 +1,19 @@
+{
+    "answer": "CommBank invested $450 million in operational and cyber risk to protect against fraud, scams, and financial crime in the first half of 2025, leading to a reduction in customer scam losses by more than 70%.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2203,
+        3524
+    ]
+}

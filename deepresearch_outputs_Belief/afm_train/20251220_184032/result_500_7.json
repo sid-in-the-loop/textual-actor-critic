@@ -1,0 +1,17 @@
+{
+    "answer": "Consistent AAA ratings across the period.",
+    "ground_truth": "Vertical bars of identical height for each month from August 2023 to August 2024",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        862,
+        2070
+    ]
+}

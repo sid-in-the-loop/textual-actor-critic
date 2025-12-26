@@ -1,0 +1,19 @@
+{
+    "answer": "Country Analysis, Financial Risk, Operational Risk, Special Reports, Corporate Network, EIU Viewpoint Country Analysis, 5-year forecasts, country data, city data, and market intelligence solutions.",
+    "ground_truth": "Economist Intelligence Unit\u4ea7\u54c1\u4e0e\u670d\u52a1\u6c47\u96c6\uff08\u5982Country Analysis, Special Reports, \u884c\u4e1a\u5206\u6790\u7b49\uff09",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1643,
+        2456
+    ]
+}

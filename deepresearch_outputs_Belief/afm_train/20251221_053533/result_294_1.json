@@ -1,0 +1,21 @@
+{
+    "answer": "The requested information could not be found in an *New Yorker* article from the uniquely identifiable edition of the magazine published in the summer of 2024.",
+    "ground_truth": "$200,000,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        1903,
+        3317,
+        4491
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Roughly half the global population experienced severe water scarcity for at least part of the year, per the UN World Water Development Report 2024.",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2270,
+        3684,
+        5626,
+        7322
+    ]
+}

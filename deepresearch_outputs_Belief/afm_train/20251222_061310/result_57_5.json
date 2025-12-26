@@ -1,0 +1,21 @@
+{
+    "answer": "The First Quarter Economic Report 2025 from hkeconomy.gov.hk.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        818,
+        2323,
+        3684,
+        5072
+    ]
+}

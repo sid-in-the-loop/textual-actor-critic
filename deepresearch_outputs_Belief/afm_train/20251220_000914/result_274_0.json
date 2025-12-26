@@ -1,0 +1,17 @@
+{
+    "answer": "Under President Yoon Suk Yeol, South Korea's diplomatic engagement with North Korea has focused on ideology over diplomacy compared to his predecessor, Moon Jae-in, who prioritized becoming a \"tripolar pivot.\"",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        2191
+    ]
+}

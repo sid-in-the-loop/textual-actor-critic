@@ -1,0 +1,17 @@
+{
+    "answer": "1h25/CBA-2025-Half-Year-Results-Profit-Announcement.pdf",
+    "ground_truth": "Commonwealth Bank of Australia 2025 Half Year Financial Results",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2096
+    ]
+}

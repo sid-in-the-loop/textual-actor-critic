@@ -1,0 +1,21 @@
+{
+    "answer": "World Politics 7(1): 111-154",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        716,
+        2124,
+        3375,
+        4459
+    ]
+}

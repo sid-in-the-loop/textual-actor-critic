@@ -1,0 +1,21 @@
+{
+    "answer": "ACRL, American Library Association, February 2015, \"Building with Purpose: A Quantitative Overview and Analysis of New U.S. Academic Library Construction, 2000\u20132014\"",
+    "ground_truth": "February 2015, Christopher Stewart",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2008,
+        3091,
+        4153
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Anticipated trends and changes in the 2025 global health care system include digital transformation, productivity, improved patient care, and new care models. Many sources mention \"doubling down on digital transformation,\" \"streamlining processes to reduce...,\" and \"investing in alternative sites of care, such as virtual health.\"",
+    "ground_truth": "What To Expect in Healthcare in 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        745,
+        1935,
+        3066
+    ]
+}

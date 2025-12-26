@@ -1,0 +1,25 @@
+{
+    "answer": "\u4e66\u6cd5 (calligraphy)",
+    "ground_truth": "\u9526\u7070\u5806",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        2671,
+        4638,
+        7086,
+        9381,
+        11046
+    ]
+}

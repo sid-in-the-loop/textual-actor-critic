@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 1 from the U.S. Chamber of Commerce \"Was Made in China 2025 Successful?\" report, which analyzes the impact of the policy and is closely related to the 'first ten-year national strategic action plan for building a manufacturing powerhouse' issued under Guo Fa [2015] No. 28, likely features a chart or data visualization about China's manufacturing development within the context of the policy, not just U.S. Chamber of Commerce branding alone.",
+    "ground_truth": "Only U.S. Chamber of Commerce logo and branding",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        870,
+        1944,
+        3190,
+        4674
+    ]
+}

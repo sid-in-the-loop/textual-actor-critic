@@ -1,0 +1,21 @@
+{
+    "answer": "Helgi Sigur\u00f0sson",
+    "ground_truth": "T\u00f3mas Ingi T\u00f3masson",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        974,
+        2280,
+        3797,
+        5133
+    ]
+}

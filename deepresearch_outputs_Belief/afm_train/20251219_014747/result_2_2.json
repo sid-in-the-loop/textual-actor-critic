@@ -1,0 +1,29 @@
+{
+    "answer": "Handley Page Victor B.1/Hadrian",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1133,
+        2464,
+        3773,
+        5075,
+        6851,
+        8234,
+        10311,
+        10626
+    ]
+}

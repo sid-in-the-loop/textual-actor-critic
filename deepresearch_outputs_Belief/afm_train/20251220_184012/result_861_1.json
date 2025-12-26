@@ -1,0 +1,17 @@
+{
+    "answer": "Equidistribution range: $x^{5/8 - o(1)}$ for primes and $x^{66/107 - o(1)}$ for smooth numbers. Triply-well-factorable weights.",
+    "ground_truth": "x^(5/8 - o(1)); triply-well-factorable weights for primes; improved well-factorable linear sieve weights",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2076
+    ]
+}

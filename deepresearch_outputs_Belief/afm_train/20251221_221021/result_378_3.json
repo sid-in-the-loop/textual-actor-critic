@@ -1,0 +1,19 @@
+{
+    "answer": "ChatGPT reduced student well-being, with impacts on mental health, social interactions, and academic performance.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        2077,
+        3343
+    ]
+}

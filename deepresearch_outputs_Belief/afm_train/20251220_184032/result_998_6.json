@@ -1,0 +1,19 @@
+{
+    "answer": "\u975e\u9776\u5411\u4ee3\u8c22\u7ec4\u5b66\u6280\u672f",
+    "ground_truth": "UHPLC-ESI-Q-ToF-MS",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1024,
+        1304,
+        2729
+    ]
+}

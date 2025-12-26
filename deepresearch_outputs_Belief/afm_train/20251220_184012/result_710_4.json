@@ -1,0 +1,17 @@
+{
+    "answer": "Timeline of artificial intelligence Wikipedia",
+    "ground_truth": "2025 in artificial intelligence (Wikipedia)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        689,
+        1639
+    ]
+}

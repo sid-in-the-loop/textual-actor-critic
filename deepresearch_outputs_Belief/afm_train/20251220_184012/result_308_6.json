@@ -1,0 +1,19 @@
+{
+    "answer": "The article is \"Total quality service in digital era\", published in Volume 35, Issue 5 of The TQM Journal.",
+    "ground_truth": "Digitalization and academic research: knowing of and using digital services and software to\u00a0develop scientific papers\n |  Emerald Insight",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        680,
+        1854,
+        3221
+    ]
+}

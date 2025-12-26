@@ -1,0 +1,21 @@
+{
+    "answer": "Wikipedia doesn't mention a specific contributor for pages 583-586 of \"The Hidden Color Code in Mimbres Pottery\". The article states the book has those pages.",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        944,
+        2123,
+        3120,
+        3696
+    ]
+}

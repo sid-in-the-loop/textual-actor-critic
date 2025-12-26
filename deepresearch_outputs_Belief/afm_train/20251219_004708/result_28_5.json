@@ -1,0 +1,23 @@
+{
+    "answer": "Unfair or deceptive acts or practices, specifically related to predatory publishing and exclusionary practices.",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        1952,
+        3015,
+        4191,
+        5640
+    ]
+}

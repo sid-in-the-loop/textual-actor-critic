@@ -1,0 +1,19 @@
+{
+    "answer": "Establish a dedicated student wellbeing office within the Australian Government's Department of Education and Training.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        762,
+        1875,
+        2741
+    ]
+}

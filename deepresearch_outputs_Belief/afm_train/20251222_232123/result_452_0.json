@@ -1,0 +1,27 @@
+{
+    "answer": "Notable observation: The stock's performance converged at the endpoint on December 27, 2024.",
+    "ground_truth": "Outperformed from 2022 to 2023; converged near $120 on 2024-12-27",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2161,
+        3323,
+        4546,
+        5687,
+        6849,
+        7995
+    ]
+}

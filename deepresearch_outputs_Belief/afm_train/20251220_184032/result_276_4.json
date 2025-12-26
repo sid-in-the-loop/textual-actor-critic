@@ -1,0 +1,23 @@
+{
+    "answer": "The article focuses on developing a framework for quality assurance in online learning, adapting its design and implementation to enhance academic outcomes and student satisfaction.",
+    "ground_truth": "Development of a new model on utilizing online learning platforms to improve students\u2019 academic achievements and satisfaction",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        2061,
+        3375,
+        5696,
+        6434
+    ]
+}

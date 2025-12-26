@@ -1,0 +1,23 @@
+{
+    "answer": "No, the image does not prominently display the 'EASTMAN' company logo.",
+    "ground_truth": "'EASTMAN' logo appears prominently",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        875,
+        2160,
+        3272,
+        4098,
+        5526
+    ]
+}

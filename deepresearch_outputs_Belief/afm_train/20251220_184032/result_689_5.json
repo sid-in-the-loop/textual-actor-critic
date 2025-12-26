@@ -1,0 +1,21 @@
+{
+    "answer": "Future of Social Impact: What to Watch in (Year)",
+    "ground_truth": "Future of Social Impact Annual Series (FSG Annual Trend Outlook Series Articles)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        1001,
+        2238,
+        3516
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Authors of Submission 12083",
+    "ground_truth": "Both ADM and JFT",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        712,
+        2031,
+        3310,
+        4611
+    ]
+}

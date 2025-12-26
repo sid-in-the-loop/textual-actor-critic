@@ -1,0 +1,17 @@
+{
+    "answer": "DHS Budget",
+    "ground_truth": "Department of Homeland Security Budget Documents (FY 2003\u2013FY 2025)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        1935
+    ]
+}

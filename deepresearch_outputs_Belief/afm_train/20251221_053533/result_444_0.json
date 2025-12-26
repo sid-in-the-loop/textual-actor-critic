@@ -1,0 +1,27 @@
+{
+    "answer": "NPR.org does not seem to have a dedicated compilation page",
+    "ground_truth": "NPR Reports Academic Integrity&Cheating News Compilation Page",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1912,
+        3252,
+        4629,
+        6031,
+        7329,
+        8855
+    ]
+}

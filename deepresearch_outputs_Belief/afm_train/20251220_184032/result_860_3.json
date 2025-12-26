@@ -1,0 +1,17 @@
+{
+    "answer": "1HFY25 - Interim Financial Report for the half-year ended 31 December 2024",
+    "ground_truth": "THE STAR ENTERTAINMENT GROUP LIMITED AND ITS CONTROLLED ENTITIES 2024\u5e74\u534a\u5e74\u5ea6\u5408\u5e76\u8d22\u52a1\u62a5\u544a",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        903,
+        2228
+    ]
+}

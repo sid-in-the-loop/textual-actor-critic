@@ -1,0 +1,23 @@
+{
+    "answer": "Reserves increased by 13.286% to $14.44 billion, compared to US$12.8 billion at the end of March 2024.",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2402,
+        3816,
+        5160,
+        6553
+    ]
+}

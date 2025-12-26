@@ -1,0 +1,21 @@
+{
+    "answer": "The decision letter will specify a deadline for submission of a revised manuscript (extensions to this deadline may be requested) \u2013 expected for the initial peer review report timeframe.",
+    "ground_truth": "within two weeks or according to an agreed time limit",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1782,
+        2658,
+        3673
+    ]
+}

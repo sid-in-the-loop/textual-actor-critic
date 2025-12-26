@@ -1,0 +1,27 @@
+{
+    "answer": "Outstanding legal proceedings between and provisions and contingent liabilities are outlined in Note B4.",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2259,
+        3458,
+        4743,
+        5365,
+        6037,
+        6891
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "The search results provided only the introductory snippet, stating \"Every new year brings excitement and anticipation for what might happen over the next 12 months. So, what's in store for 2025 that could ...",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        909,
+        2091,
+        2745,
+        2975,
+        3576,
+        4654,
+        5144
+    ]
+}

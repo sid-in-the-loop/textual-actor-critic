@@ -1,0 +1,27 @@
+{
+    "answer": "Learning Loss and Recovery",
+    "ground_truth": "McKinsey & Company COVID-19 Education Research Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2329,
+        3550,
+        4718,
+        5366,
+        7105,
+        7790
+    ]
+}

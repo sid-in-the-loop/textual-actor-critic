@@ -1,0 +1,17 @@
+{
+    "answer": "Quality Report Checklist for Quarter 2 (Q2) 2025 Hospital Inpatient Quality Reporting (IQR) Program",
+    "ground_truth": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        884,
+        2237
+    ]
+}

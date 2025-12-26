@@ -1,0 +1,17 @@
+{
+    "answer": "The main Novartis financial results page is `investors.novartis.com/investors/financial-data/quarterly-results`. Under this, individual quarterly reports (e.g., Q3 2024 released Oct 29, 2024, Q4 2024 released Jan 31, 2025) and condensed financial reports are available, always including the release date and quarter.",
+    "ground_truth": "Novartis 2024\u5e74\u5ea6\u5b63\u5ea6\u8d22\u62a5\u7cfb\u5217\uff08Quarterly Financial Results / Financial Data Collection\uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        736,
+        2194
+    ]
+}

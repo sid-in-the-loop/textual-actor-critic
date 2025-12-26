@@ -1,0 +1,29 @@
+{
+    "answer": "Plan A: ESG Education",
+    "ground_truth": "Plan A Academy (ESG Knowledge Base and Learning Platform)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1949,
+        3328,
+        4344,
+        5340,
+        5863,
+        6679,
+        7727
+    ]
+}

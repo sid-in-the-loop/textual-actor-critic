@@ -1,0 +1,29 @@
+{
+    "answer": "The specific number of new Transportation Security Officers and Security Support Assistants hired by TSA during fiscal year 2023 was not found in the search results from the 'Budget in Brief' document for FY2025.",
+    "ground_truth": "more than 9,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        2018,
+        3471,
+        4748,
+        5988,
+        7179,
+        8346,
+        9714
+    ]
+}

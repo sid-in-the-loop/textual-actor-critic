@@ -1,0 +1,21 @@
+{
+    "answer": "Not found in public domain; no explicit verification rate for AGU manuscript race/ethnicity verification in 2019.",
+    "ground_truth": "7%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        863,
+        1945,
+        3087,
+        4446
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "European Journal of Women's Studies",
+    "ground_truth": "Hispanic American Historical Review",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        936,
+        2038,
+        2522,
+        3985,
+        4384,
+        4825,
+        6033
+    ]
+}

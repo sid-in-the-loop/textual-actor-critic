@@ -1,0 +1,23 @@
+{
+    "answer": "The full list is not available in the search results, but the article \"15 Best AI Research Tools for Research, Academia in 2025\" by lap-publishing.com mentions the following tools with their potential highest cost: Grammarly (features: grammar checking, plagiarism detection, and style improvements), Trinka AI, Hemingway Editor, QuillBot, and ProWritingAid.",
+    "ground_truth": "15+ Best AI Tools for Academic Research (Free+Paid) 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        2003,
+        2172,
+        3329,
+        3550
+    ]
+}

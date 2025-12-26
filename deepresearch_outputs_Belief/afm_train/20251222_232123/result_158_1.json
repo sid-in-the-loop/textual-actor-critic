@@ -1,0 +1,17 @@
+{
+    "answer": "2025 Trends - Research World",
+    "ground_truth": "2025 Trends\uff08Research World\uff09\u4e13\u9898\u9875",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        765,
+        1938
+    ]
+}

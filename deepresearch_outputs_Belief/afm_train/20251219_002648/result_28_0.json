@@ -1,0 +1,23 @@
+{
+    "answer": "Predatory academic publisher, $50.1 million",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1970,
+        3002,
+        4219,
+        5617
+    ]
+}

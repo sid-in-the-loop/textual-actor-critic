@@ -1,0 +1,19 @@
+{
+    "answer": "For the Quarterly Period Ended March 31, 2025, Meta Platforms, Inc. releases its 10-Q report, bearing the official title of \"Quarterly Report on Form 10-Q.\" (Form 10-q, or more contemporary titles such as \"Quarterly Report on Executive Compensation\" if applicable, would be specific disclosures within it. The broader statutory disclosure would be its Form 10-K for annual reporting. It is the filing designed to provide quarterly financial information to shareholders.)",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        2338,
+        3947
+    ]
+}

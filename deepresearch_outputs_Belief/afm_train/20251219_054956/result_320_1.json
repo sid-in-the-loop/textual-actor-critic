@@ -1,0 +1,25 @@
+{
+    "answer": "Today's Sports Highlights",
+    "ground_truth": "Sports In Brief | Today's Sports Highlights | AP News | AP News",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        2014,
+        3324,
+        4271,
+        5689,
+        6180
+    ]
+}

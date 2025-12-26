@@ -1,0 +1,21 @@
+{
+    "answer": "5% of GDP, $3.5 trillion",
+    "ground_truth": "$11 trillion; 8.4%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        1433,
+        2232,
+        2783
+    ]
+}

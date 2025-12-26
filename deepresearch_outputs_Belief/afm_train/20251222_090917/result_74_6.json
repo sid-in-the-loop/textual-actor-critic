@@ -1,0 +1,19 @@
+{
+    "answer": "16.4% (Revenue of $724.0 million down 16.4% on the pcp for the half-year ended 31 March 2025, but the exact revenue for \"Treasury Brisbane Hotel\" and the corresponding period is not specified in the search results.)",
+    "ground_truth": "5.4%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        2224,
+        3389
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Title: World Politics; Section: Designing Political Order",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        707,
+        2011,
+        3466,
+        4809
+    ]
+}

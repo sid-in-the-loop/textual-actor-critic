@@ -1,0 +1,21 @@
+{
+    "answer": "Empirical conclusions, research variables, or observable relationships cannot be deduced from the text provided.",
+    "ground_truth": "No empirical conclusions, research variables, or observable relationships",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        1999,
+        2293,
+        2604
+    ]
+}

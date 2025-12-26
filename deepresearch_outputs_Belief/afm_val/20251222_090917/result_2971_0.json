@@ -1,0 +1,21 @@
+{
+    "answer": "New America",
+    "ground_truth": "Category:National Association of Scholars",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        2070,
+        3029,
+        3768
+    ]
+}

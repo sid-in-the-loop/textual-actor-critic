@@ -1,0 +1,27 @@
+{
+    "answer": "Performance Audits of Clean Air Status and Trends Network (CASTNET) Sites",
+    "ground_truth": "2025 \u2013 1st Quarter Report: Support for Conducting Systems & Performance Audits of CASTNET Sites and NADP Monitoring Stations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        1806,
+        3044,
+        3391,
+        3852,
+        5328,
+        5927
+    ]
+}

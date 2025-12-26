@@ -1,0 +1,27 @@
+{
+    "answer": "The specific ratio of good and moderate AQI reported in the 2022 Guangdong Government Work Report (English version: english.www.gov.cn/2022special/govtworkreport2022) was not found in the available text.",
+    "ground_truth": "94.3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        1826,
+        2988,
+        3286,
+        3977,
+        4433,
+        4784
+    ]
+}

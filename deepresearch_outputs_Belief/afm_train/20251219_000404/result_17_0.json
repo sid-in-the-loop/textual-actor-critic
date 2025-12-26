@@ -1,0 +1,21 @@
+{
+    "answer": "The Novartis Q4 2024 Condensed Financial Report \u2013 Supplementary Data does not explicitly state Cosentyx's immunology segment net sales for the full year 2024, how these results changed on a reported and constant currency basis compared to the full year 2023.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        880,
+        2297,
+        2784,
+        3284
+    ]
+}

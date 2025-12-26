@@ -1,0 +1,17 @@
+{
+    "answer": "The E175 fleet increased by 6.12% (16 aircraft) from 262 in 2024 to 278 by the end of 2025, according to SkyWest's 2025 ESG Report.",
+    "ground_truth": "36%; 193; 262",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2191
+    ]
+}

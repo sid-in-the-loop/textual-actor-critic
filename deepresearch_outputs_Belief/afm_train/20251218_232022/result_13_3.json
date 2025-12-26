@@ -1,0 +1,23 @@
+{
+    "answer": "Norwegian Financial Supervisory Authority",
+    "ground_truth": "Cloudberry Clean Energy ASA Periodic Financial Report Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1849,
+        3316,
+        4752,
+        6145
+    ]
+}

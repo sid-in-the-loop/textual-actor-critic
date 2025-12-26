@@ -1,0 +1,27 @@
+{
+    "answer": "Adopted 2025 Operating Budget, Two-Year Financial Plan, and Five-Year Financial Plan (2025-2029)",
+    "ground_truth": "Metro Vancouver 2025-2029 Financial Plan",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1958,
+        3459,
+        5418,
+        6424,
+        6814,
+        8190
+    ]
+}

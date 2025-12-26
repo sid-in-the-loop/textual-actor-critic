@@ -1,0 +1,23 @@
+{
+    "answer": "AI Watch. European landscape on the use of Artificial Intelligence by the Public Sector",
+    "ground_truth": "AI Watch. European landscape on the use of Artificial Intelligence by the Public Sector",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        1989,
+        3199,
+        4380,
+        5500
+    ]
+}

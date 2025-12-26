@@ -1,0 +1,29 @@
+{
+    "answer": "12, 2 short of the goal",
+    "ground_truth": "20 deployed; goal was 5",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        1978,
+        2321,
+        2645,
+        3001,
+        3356,
+        3711,
+        3888
+    ]
+}

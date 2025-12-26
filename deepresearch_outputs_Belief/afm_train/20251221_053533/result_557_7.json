@@ -1,0 +1,23 @@
+{
+    "answer": "88,000 Federal, SLTT, and international law enforcement officers and agents",
+    "ground_truth": "68,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        1971,
+        3331,
+        4546,
+        5859
+    ]
+}

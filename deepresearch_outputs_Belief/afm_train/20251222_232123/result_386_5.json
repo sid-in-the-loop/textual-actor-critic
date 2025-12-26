@@ -1,0 +1,19 @@
+{
+    "answer": "DoValue Group's total tax assets as of March 31, 2025, were \u20ac798 million, representing an increase of \u20ac32 million from \u20ac33 million as of December 31, 2024.",
+    "ground_truth": "\u20ac101,385,000 (2025-03-31), decreased by \u20ac3,815,000 (3.6%) from \u20ac105,200,000 (2024-12-31)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        982,
+        2413,
+        3974
+    ]
+}

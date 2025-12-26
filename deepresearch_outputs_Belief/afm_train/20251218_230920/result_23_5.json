@@ -1,0 +1,27 @@
+{
+    "answer": "Annual Report",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1531,
+        2534,
+        3522,
+        4657,
+        5965,
+        7263
+    ]
+}

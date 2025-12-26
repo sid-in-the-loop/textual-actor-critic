@@ -1,0 +1,23 @@
+{
+    "answer": "Slash funding for the Department of Justice, involving Trump allies.",
+    "ground_truth": "restructure the Department of Justice and fill nonpartisan roles with conservatives",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2251,
+        3651,
+        4905,
+        6150
+    ]
+}

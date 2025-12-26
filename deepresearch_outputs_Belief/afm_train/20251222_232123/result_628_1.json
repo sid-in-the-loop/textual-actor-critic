@@ -1,0 +1,19 @@
+{
+    "answer": "Figure 3, stable node",
+    "ground_truth": "\u03be below 3: equilibrium zero; both saddle and unstable node types",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        933,
+        2031,
+        2921
+    ]
+}

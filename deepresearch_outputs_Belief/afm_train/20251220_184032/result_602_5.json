@@ -1,0 +1,21 @@
+{
+    "answer": "Skills Dashboard | Coursera for Business",
+    "ground_truth": "Coursera Skills Reports Collection Page\uff08 https://www.coursera.org/skills-reports/ \uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        762,
+        1964,
+        2967,
+        3798
+    ]
+}

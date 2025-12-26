@@ -1,0 +1,23 @@
+{
+    "answer": "The trend in the rhetoric used in the area of journalism since the 1960s has been the predominance of literary techniques and hybrid styles, blending journalistic content with narrative elements similar to literature.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1574,
+        2630,
+        3895,
+        5061
+    ]
+}

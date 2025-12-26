@@ -1,0 +1,21 @@
+{
+    "answer": "4Q24-earnings-presentation.pdf",
+    "ground_truth": "3.30% in 4Q\u201922 to 4.81% in 4Q\u201924",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        871,
+        2056,
+        3516,
+        4784
+    ]
+}

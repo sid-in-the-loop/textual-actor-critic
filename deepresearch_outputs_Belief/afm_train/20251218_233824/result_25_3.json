@@ -1,0 +1,27 @@
+{
+    "answer": "Each subject category in Web of Science is uniquely mapped to one of the designated broad areas, e.g., Science, Social Sciences, and Arts and Humanities.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2185,
+        3138,
+        4454,
+        5733,
+        7027,
+        8261
+    ]
+}

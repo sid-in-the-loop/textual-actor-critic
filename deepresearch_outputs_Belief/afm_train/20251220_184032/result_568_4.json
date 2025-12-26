@@ -1,0 +1,23 @@
+{
+    "answer": "Jesus Is Our Jubilee January 2025",
+    "ground_truth": "Jan-2025-WebEdition.pdf (Christ Lutheran Church official website)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1865,
+        3331,
+        4544,
+        6200
+    ]
+}

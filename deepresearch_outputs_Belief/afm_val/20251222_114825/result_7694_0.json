@@ -1,0 +1,17 @@
+{
+    "answer": "2025 Regulatory & Supervisory Outlook Report, 2024 Regulatory & Supervisory Outlook Report",
+    "ground_truth": "Central Bank of Ireland Annual Regulatory&Prudential Outlook Report series of publications",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1962
+    ]
+}

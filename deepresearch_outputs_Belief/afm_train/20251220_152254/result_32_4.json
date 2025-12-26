@@ -1,0 +1,25 @@
+{
+    "answer": "There was no king of England, Scotland, and Ireland in 1652.",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        2110,
+        3215,
+        5075,
+        5492,
+        6777
+    ]
+}

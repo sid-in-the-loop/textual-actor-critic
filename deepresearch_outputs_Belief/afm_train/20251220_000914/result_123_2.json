@@ -1,0 +1,25 @@
+{
+    "answer": "Ortega Regime intensified repression; score went from 35th to 0. Hence, repression increased dramatically.",
+    "ground_truth": "35th percentile to 0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2128,
+        2639,
+        2874,
+        3375,
+        3625
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "mutual exclusivity threshold OR mutual exclusion flag",
+    "ground_truth": "alternative",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        920,
+        1148,
+        1506,
+        2967,
+        3823,
+        5104
+    ]
+}

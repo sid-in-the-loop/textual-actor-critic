@@ -1,0 +1,25 @@
+{
+    "answer": "Pakistan PM Sharif admits India's missiles hit Nur Khan Airbase and other locations.",
+    "ground_truth": "India\u2019s missiles hit Nur Khan Airbase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1074,
+        1403,
+        1884,
+        3317,
+        3617
+    ]
+}

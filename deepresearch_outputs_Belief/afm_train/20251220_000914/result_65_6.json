@@ -1,0 +1,17 @@
+{
+    "answer": "Joint guidelines on the system for exchanging information arising from the collaboration of the EBA, EIOPA, and ESMA across all three institutions.",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2196
+    ]
+}

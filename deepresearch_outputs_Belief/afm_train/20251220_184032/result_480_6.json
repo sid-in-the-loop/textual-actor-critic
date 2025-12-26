@@ -1,0 +1,21 @@
+{
+    "answer": "20,000 students and 10% employees (or 1,800 employees) on the Dorigny campus.",
+    "ground_truth": "Over 5,000 employees and 17,000 students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        1584,
+        2832,
+        3207
+    ]
+}

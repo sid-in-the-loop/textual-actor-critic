@@ -1,0 +1,27 @@
+{
+    "answer": "AACR Blog launched the article \"Experts Forecast Cancer Research and Treatment Advances in 2025\" to kick off the new year.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        1853,
+        2221,
+        2479,
+        3293,
+        3619,
+        4206
+    ]
+}

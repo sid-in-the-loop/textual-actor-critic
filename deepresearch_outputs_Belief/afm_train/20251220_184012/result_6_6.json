@@ -1,0 +1,19 @@
+{
+    "answer": "Rooster Teeth was founded in 2003. Meg Turner rejoined Rooster Teeth in 2014.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        669,
+        1539,
+        2550
+    ]
+}

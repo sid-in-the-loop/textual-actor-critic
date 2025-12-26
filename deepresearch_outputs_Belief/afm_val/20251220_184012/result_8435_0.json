@@ -1,0 +1,23 @@
+{
+    "answer": "Appendix 4D \u2013 Half-Year Report",
+    "ground_truth": "Profit Announcement For the half year ended 31 December 2024 - Commonwealth Bank of Australia",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2046,
+        3425,
+        4014,
+        5417
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Not found",
+    "ground_truth": "7%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        856,
+        1951,
+        3051,
+        4155,
+        5481,
+        6621,
+        7928,
+        9010
+    ]
+}

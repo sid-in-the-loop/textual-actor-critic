@@ -1,0 +1,25 @@
+{
+    "answer": "Key factors influencing students' academic performance , Journal of Electrical Systems and Information Technology, 2024, volume 11, part 1 (10:44), using regression analysis.",
+    "ground_truth": "Key factors influencing students\u2019 academic performance | Journal of Electrical Systems and Information Technology | Full Text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1002,
+        1292,
+        2475,
+        3773,
+        4459
+    ]
+}

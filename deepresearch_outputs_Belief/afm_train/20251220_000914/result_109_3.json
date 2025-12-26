@@ -1,0 +1,27 @@
+{
+    "answer": "Chhaava",
+    "ground_truth": "A list of the highest-grossing Hindi cinema films released in 2025 is provided.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        983,
+        2171,
+        3493,
+        4695,
+        6231,
+        6820,
+        8426
+    ]
+}

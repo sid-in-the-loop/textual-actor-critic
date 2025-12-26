@@ -1,0 +1,23 @@
+{
+    "answer": "Average unemployment rate for January 2025",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2281,
+        3550,
+        4540,
+        6254
+    ]
+}

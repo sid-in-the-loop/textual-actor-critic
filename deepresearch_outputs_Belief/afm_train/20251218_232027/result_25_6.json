@@ -1,0 +1,21 @@
+{
+    "answer": "Web of Science categorizes subjects into General Categories such as Science and Technology, Social Sciences, Arts and Humanities, and Book Citation Index. Each main category is further defined through subcategories, and journals may have multiple categories applied.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        1902,
+        2785,
+        3910
+    ]
+}

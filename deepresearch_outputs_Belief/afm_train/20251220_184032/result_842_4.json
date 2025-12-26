@@ -1,0 +1,19 @@
+{
+    "answer": "Average frequency of punishment across countries is x =, standard deviation s = 1.30.",
+    "ground_truth": "Research and Restoration Center of the Museums of France",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        2046,
+        3204
+    ]
+}

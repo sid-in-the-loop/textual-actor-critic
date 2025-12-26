@@ -1,0 +1,25 @@
+{
+    "answer": "The specific agreement, the designated person for the \"Action for Children full-time post until the end of October 2025,\" and the associated details were not found in the 2025 National Community Conference and Seminar UNISON final agenda report.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        2080,
+        3275,
+        5363,
+        7576,
+        8811
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "The core net income attributable to shareholders for FY 2024 was $124 million.",
+    "ground_truth": "$15,757 million",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2291
+    ]
+}

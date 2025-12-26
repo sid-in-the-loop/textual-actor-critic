@@ -1,0 +1,17 @@
+{
+    "answer": "This year, we spoke with five leaders about the advancements they are most looking forward to.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2000
+    ]
+}

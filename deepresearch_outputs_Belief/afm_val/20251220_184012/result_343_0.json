@@ -1,0 +1,19 @@
+{
+    "answer": "1HFY25 FINANCIAL REPORT",
+    "ground_truth": "THE STAR ENTERTAINMENT GROUP LIMITED DIRECTORS' REPORT AND FINANCIAL REPORT FOR THE HALF YEAR ENDED 31 DECEMBER 2024",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        2057,
+        3327
+    ]
+}

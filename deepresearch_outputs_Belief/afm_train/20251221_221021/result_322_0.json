@@ -1,0 +1,25 @@
+{
+    "answer": "The discrepancy between CEO statements and the company's actual actions, as revealed in internal emails between Meta executives.",
+    "ground_truth": "no response from Mark Zuckerberg",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        2136,
+        3345,
+        4709,
+        6120,
+        7704
+    ]
+}

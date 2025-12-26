@@ -1,0 +1,21 @@
+{
+    "answer": "http://its.cuc.edu.cn/englib/DatabasesforChinese/list.htm",
+    "ground_truth": "List of Purchased Databases in the Library of Communication University of China",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1561,
+        2355,
+        2590
+    ]
+}

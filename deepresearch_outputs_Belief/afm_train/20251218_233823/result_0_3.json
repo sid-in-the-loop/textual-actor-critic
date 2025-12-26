@@ -1,0 +1,23 @@
+{
+    "answer": "Three months",
+    "ground_truth": "within two weeks or according to an agreed time limit",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        670,
+        1994,
+        2963,
+        3307,
+        4065
+    ]
+}

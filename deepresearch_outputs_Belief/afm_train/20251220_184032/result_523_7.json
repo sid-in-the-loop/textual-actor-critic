@@ -1,0 +1,17 @@
+{
+    "answer": "3Q 2024 Global PV Market Outlook",
+    "ground_truth": "Quarterly Report Regarding the Economic-Financial Activity of CONPET S.A. (2025 Q1)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        2083
+    ]
+}

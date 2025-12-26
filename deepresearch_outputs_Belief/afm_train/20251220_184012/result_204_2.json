@@ -1,0 +1,17 @@
+{
+    "answer": "The Star Entertainment Group Limited reported its 2025 half-year results on April 15, 2025, released in their investor calendar.",
+    "ground_truth": "Financial Results | The Star Entertainment Group Limited",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        856,
+        2004
+    ]
+}

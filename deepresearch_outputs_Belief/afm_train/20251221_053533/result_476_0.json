@@ -1,0 +1,27 @@
+{
+    "answer": "Logan Lyle",
+    "ground_truth": "\u5f20\u56fd\u7acb",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        891,
+        1950,
+        3136,
+        4729,
+        6261,
+        7995,
+        9634
+    ]
+}

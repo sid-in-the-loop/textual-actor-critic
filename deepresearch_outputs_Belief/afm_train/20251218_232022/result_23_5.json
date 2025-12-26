@@ -1,0 +1,23 @@
+{
+    "answer": "Apple Annual Report on Form 10-K",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1531,
+        2570,
+        3718,
+        5029
+    ]
+}

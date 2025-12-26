@@ -1,0 +1,25 @@
+{
+    "answer": "Specific details about the color gradient bar's illustration of value progression across the \"Top Ten Regulatory Challenges of 2025\" in the 2024 KPMG US report are not available in the provided search results.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        891,
+        2128,
+        2617,
+        3872,
+        4561,
+        5123
+    ]
+}

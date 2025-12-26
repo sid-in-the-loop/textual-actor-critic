@@ -1,0 +1,29 @@
+{
+    "answer": "\u5c0f\u84dd\u7ffcP7 Ultra AI\u5065\u5eb7\u7a7a\u8c03",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        969,
+        2620,
+        4162,
+        5821,
+        7288,
+        8876,
+        10627,
+        12270
+    ]
+}

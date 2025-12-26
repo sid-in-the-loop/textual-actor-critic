@@ -1,0 +1,19 @@
+{
+    "answer": "Founded 1954, headquartered in Onesti, Romania, specializing in polyols, chlor-alkali, and oxo-alcohols, providing anticorrosive protection services, with a history of 70 years and a team of 1500 specialists.",
+    "ground_truth": "chimcomplex.com",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        722,
+        1790,
+        2905
+    ]
+}

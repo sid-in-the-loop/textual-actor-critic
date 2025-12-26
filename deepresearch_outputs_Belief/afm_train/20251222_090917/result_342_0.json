@@ -1,0 +1,27 @@
+{
+    "answer": "Dudley",
+    "ground_truth": "Dudley",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        950,
+        1945,
+        2824,
+        3768,
+        4939,
+        6151,
+        7402
+    ]
+}

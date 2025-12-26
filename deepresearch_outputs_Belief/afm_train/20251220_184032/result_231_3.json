@@ -1,0 +1,23 @@
+{
+    "answer": "authoritativechemicalsociety.org",
+    "ground_truth": "PublishingState.com | Academic Publishing in 2025: How Research Will Transform",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        2038,
+        2446,
+        2945,
+        3434
+    ]
+}

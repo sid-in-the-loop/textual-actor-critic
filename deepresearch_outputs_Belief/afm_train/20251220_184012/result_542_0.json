@@ -1,0 +1,21 @@
+{
+    "answer": "Consulting Talkwalker Hearings Data",
+    "ground_truth": "Hootsuite Social Media Research Archives",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        1929,
+        2418,
+        3640
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Volatility of CONPET COTE shares versus the BET index in Q1 2025 was higher than the BET index.",
+    "ground_truth": "Higher volatility and stronger appreciation",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        2008,
+        3374,
+        5016
+    ]
+}

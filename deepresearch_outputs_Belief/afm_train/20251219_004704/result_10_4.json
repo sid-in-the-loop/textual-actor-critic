@@ -1,0 +1,25 @@
+{
+    "answer": "IT Corporation of India Quarterly Result Presentation Q2 FY25",
+    "ground_truth": "ITC Investor Presentations Collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        2151,
+        2755,
+        3245,
+        3863,
+        4318
+    ]
+}

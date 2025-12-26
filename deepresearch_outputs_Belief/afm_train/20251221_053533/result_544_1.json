@@ -1,0 +1,23 @@
+{
+    "answer": "The specific innovation highlights for the \"Elevator & Escalator Exhibition\" on November 12-16, 2025, at London ExCel were not found; LIFTEX International is confirmed as the leading international event in the sector, scheduled for June 11-12, 2025.",
+    "ground_truth": "LIFTEX 2025 \u5c06\u5c55\u793a\u7535\u68af\u6280\u672f\u7684\u6700\u65b0\u521b\u65b0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        1879,
+        3074,
+        4164,
+        5375
+    ]
+}

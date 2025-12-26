@@ -1,0 +1,19 @@
+{
+    "answer": "m.economictimes.com/opinion/et-editorial",
+    "ground_truth": "The Economic Times Social Issues Special Page",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        685,
+        1602,
+        2932
+    ]
+}

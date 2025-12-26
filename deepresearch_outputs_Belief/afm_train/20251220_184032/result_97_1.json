@@ -1,0 +1,21 @@
+{
+    "answer": "The projected additional five-year revenue is not available from the search results.",
+    "ground_truth": "\u00a3500m over five years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        1800,
+        2576,
+        2926
+    ]
+}

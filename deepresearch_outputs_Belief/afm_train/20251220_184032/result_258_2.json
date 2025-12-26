@@ -1,0 +1,23 @@
+{
+    "answer": "The report does not state the specific proportion of India's AUM as a percentage of GDP.",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        1866,
+        3363,
+        4745,
+        6109
+    ]
+}

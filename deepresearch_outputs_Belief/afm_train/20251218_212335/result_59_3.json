@@ -1,0 +1,21 @@
+{
+    "answer": "AR180: Measuring Our Carbon Footprint",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        667,
+        915,
+        1291,
+        2390
+    ]
+}

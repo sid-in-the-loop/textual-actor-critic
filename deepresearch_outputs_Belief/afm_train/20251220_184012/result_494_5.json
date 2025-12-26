@@ -1,0 +1,21 @@
+{
+    "answer": "Electronic Journal of e-Learning",
+    "ground_truth": "International Journal of Educational Technology in Higher Education (\u671f\u520a)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        899,
+        2021,
+        3171,
+        4616
+    ]
+}

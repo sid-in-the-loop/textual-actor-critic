@@ -1,0 +1,29 @@
+{
+    "answer": "Tawang",
+    "ground_truth": "\u767d\u6c34\u53f0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2895,
+        3941,
+        5793,
+        7877,
+        8890,
+        10032,
+        10658
+    ]
+}

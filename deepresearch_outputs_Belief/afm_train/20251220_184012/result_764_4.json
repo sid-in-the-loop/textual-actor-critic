@@ -1,0 +1,21 @@
+{
+    "answer": "6% increase",
+    "ground_truth": "fastest growing area of membership",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        2004,
+        3406,
+        4599
+    ]
+}

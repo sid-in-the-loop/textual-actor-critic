@@ -1,0 +1,17 @@
+{
+    "answer": "The Star Entertainment Group Limited 2024 Annual Report (hereafter \"2024 Annual Report\"), published Oct 29/30, 2024, includes the Directors\u2019 Report and Financial Report for the period July 1, 2024, to December 31, 2024, as per the search results.",
+    "ground_truth": "The Star Entertainment Group Limited ASX:SGR 2024\u5e74\u5ea6\u8d22\u52a1\u548c\u62ab\u9732\u6587\u4ef6\uff08\u62162024\u5e74\u5ea6\u62a5\u544a\u677f\u5757\uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2114
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Read Wikipedia thermal buoyancy Buoyancy Arclight Buoy.",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        972,
+        1057,
+        1269,
+        1607,
+        2743
+    ]
+}

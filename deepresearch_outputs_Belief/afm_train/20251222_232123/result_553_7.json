@@ -1,0 +1,23 @@
+{
+    "answer": "Hashemiyeh Motaghian",
+    "ground_truth": "Wang Ping",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        880,
+        1942,
+        3017,
+        4295,
+        5462
+    ]
+}

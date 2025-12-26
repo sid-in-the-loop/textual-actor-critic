@@ -1,0 +1,29 @@
+{
+    "answer": "Valpara\u00edso, Chile",
+    "ground_truth": "Santiago, Chile",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        826,
+        1945,
+        3203,
+        4618,
+        6074,
+        7378,
+        8750,
+        9994
+    ]
+}

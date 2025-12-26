@@ -1,0 +1,23 @@
+{
+    "answer": "602, 2, 566\u2013570",
+    "ground_truth": "Nature 602(7898):566-570",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        2022,
+        2346,
+        3770,
+        4665
+    ]
+}

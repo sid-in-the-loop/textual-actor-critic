@@ -1,0 +1,25 @@
+{
+    "answer": "This figure is titled \"Bubbling Acoustics\" and published on Friday, August 31, 2000.",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        794,
+        884,
+        977,
+        1359,
+        1666
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Realized global BESS capacity through 2024 (175 GW) is higher than the lower bound projections for 2019-2023 (51%\u201374% lower build annually).",
+    "ground_truth": "Closely tracks the lower bound",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        807,
+        2011,
+        3191,
+        4636
+    ]
+}

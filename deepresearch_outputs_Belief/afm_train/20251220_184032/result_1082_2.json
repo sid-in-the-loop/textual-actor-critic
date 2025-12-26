@@ -1,0 +1,19 @@
+{
+    "answer": "Preparation and review of primary financial statements for finalization",
+    "ground_truth": "Closing the Financial Year 2024/2025 (Bromcom Year End Processes \u2013 2025-04)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1907,
+        2924
+    ]
+}

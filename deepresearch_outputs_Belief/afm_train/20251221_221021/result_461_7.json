@@ -1,0 +1,21 @@
+{
+    "answer": "Tini Howard",
+    "ground_truth": "Andrea Sorrentino",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        1886,
+        3006,
+        4021
+    ]
+}

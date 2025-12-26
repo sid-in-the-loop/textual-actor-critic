@@ -1,0 +1,19 @@
+{
+    "answer": "Standards for the Contents and Formats of Information Disclosure by Companies Offering Securities to the Public No. 2\u2014Contents and Formats of Annual Reports",
+    "ground_truth": "Annual Financial Report of the Company",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        1996,
+        2449
+    ]
+}

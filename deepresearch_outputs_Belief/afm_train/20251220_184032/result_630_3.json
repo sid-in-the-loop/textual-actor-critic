@@ -1,0 +1,21 @@
+{
+    "answer": "Ruijun Dang and Jacob",
+    "ground_truth": "RD and DJJ",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        2082,
+        3012,
+        4224
+    ]
+}

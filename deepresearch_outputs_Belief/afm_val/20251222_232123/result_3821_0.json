@@ -1,0 +1,29 @@
+{
+    "answer": "Wang Qishan",
+    "ground_truth": "Hu Jintao",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        994,
+        2979,
+        4027,
+        5074,
+        6122,
+        7170,
+        8218,
+        8395
+    ]
+}

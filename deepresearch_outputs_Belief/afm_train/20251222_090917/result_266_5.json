@@ -1,0 +1,25 @@
+{
+    "answer": "Net financial debt is calculated as a Net Financial Debt/EBITDA ratio, with target of 2.5x by 2027. Additions include long-term and short-term borrowings, the current portion of long-term borrowings, other non-current financial liabilities, and other current financial liabilities. Deductions include cash and cash equivalents, and other current and non-current financial assets, with adjustments for asset disposals.",
+    "ground_truth": "Sum of long-term borrowings, short-term borrowings, current portion of long-term borrowings, other non-current and current financial liabilities, minus cash and cash equivalents, minus other current and non-current financial assets; reported per ESMA Guideline no. 39 (2021-03-04), effective from 2021-05-05, and CONSOB Warning Notice no. 5/21 (2021-04-29)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        891,
+        2613,
+        4326,
+        5917,
+        7610,
+        9502
+    ]
+}

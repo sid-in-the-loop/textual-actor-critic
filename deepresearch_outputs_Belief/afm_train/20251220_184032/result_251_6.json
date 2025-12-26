@@ -1,0 +1,21 @@
+{
+    "answer": "The Thirteenth International Conference on Learning Representations (ICLR 2025) uses cookies to remember your decision. Click Accept to accept usage.",
+    "ground_truth": "Cookies for essential functions only",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        1693,
+        2688,
+        3823
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Stem Cells: A Silent Hunting Ground",
+    "ground_truth": "\u72b9\u683c\u7d22\u6258\u65af\u7684\u5ead\u9662",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1823,
+        2902,
+        4344,
+        5422
+    ]
+}

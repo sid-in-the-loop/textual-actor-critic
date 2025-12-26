@@ -1,0 +1,17 @@
+{
+    "answer": "Exhibit 99.1",
+    "ground_truth": "UnitedHealth Group 2024\u5168\u5e74\u4e1a\u7ee9\u5feb\u62a5\uff08SEC EX-99.1\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2007
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "20 standing committees and 4 subcommittees",
+    "ground_truth": "Committees of the European Parliament",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        1614,
+        2566
+    ]
+}

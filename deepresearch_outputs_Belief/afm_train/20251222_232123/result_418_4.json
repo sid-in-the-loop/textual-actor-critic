@@ -1,0 +1,25 @@
+{
+    "answer": "\u9633\u53f0",
+    "ground_truth": " \u8bef\u6740",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        918,
+        1220,
+        2604,
+        2990,
+        3959,
+        5275
+    ]
+}

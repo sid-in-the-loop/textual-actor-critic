@@ -1,0 +1,17 @@
+{
+    "answer": "The net operating cost decreased $992.2 billion or 29.0 percent, resulting in a net operating cost of $2.4 trillion.",
+    "ground_truth": "$992.2 billion, $2.4 trillion",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        816,
+        2016
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 1 reports the distribution of success and failure for automated code generation attempts on the validation set.",
+    "ground_truth": "-0.00005 to +0.00005; 95% confidence intervals include zero",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        1923,
+        2970,
+        4008
+    ]
+}

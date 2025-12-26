@@ -1,0 +1,19 @@
+{
+    "answer": "m.economictimes.com",
+    "ground_truth": "Economic Times Politics section",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1585,
+        2099
+    ]
+}

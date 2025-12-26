@@ -1,0 +1,27 @@
+{
+    "answer": "The New York Times article does not specify an end date for the temporary United States DOGE Service.",
+    "ground_truth": "2026-07-04",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        762,
+        1606,
+        2289,
+        2746,
+        3248,
+        3970,
+        4518
+    ]
+}

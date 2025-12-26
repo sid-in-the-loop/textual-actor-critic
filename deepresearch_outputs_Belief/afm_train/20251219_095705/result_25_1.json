@@ -1,0 +1,21 @@
+{
+    "answer": "Web of Science categorizes journals into a hierarchical system: broad main categories (Science, Social Sciences, Humanities), subject areas/Research Areas, and uniquely named journal categories assigned a star rating.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        895,
+        2024,
+        3323,
+        4509
+    ]
+}

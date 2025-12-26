@@ -1,0 +1,27 @@
+{
+    "answer": "Demographics & Politics",
+    "ground_truth": "Political Issues - Research and data from Pew Research Center",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        1884,
+        2450,
+        2960,
+        3834,
+        4654,
+        5431
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Run the Chart of Accounts Enquiry to verify new year's balances are zero.",
+    "ground_truth": "Opening Balance Sheet for Period 0 and verification using Chart of Accounts Enquiry",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2100
+    ]
+}

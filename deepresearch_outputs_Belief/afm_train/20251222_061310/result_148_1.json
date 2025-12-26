@@ -1,0 +1,23 @@
+{
+    "answer": "XGB performs better than GLM, and GAM performs slightly better than GLM, with XGB achieving lower MAPE values than GLM.",
+    "ground_truth": "GLM and XGB yielded lower MAPE than GAM",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        2008,
+        2490,
+        2990,
+        3695
+    ]
+}

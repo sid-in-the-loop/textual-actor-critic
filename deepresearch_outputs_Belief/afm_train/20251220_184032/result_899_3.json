@@ -1,0 +1,21 @@
+{
+    "answer": "\u4fdf\u89e3\u3001\u5669\u5922\u3001\u8a69\u5ee3\u50b3",
+    "ground_truth": "\u5e84\u5b50\u89e3\u300b\u3001\u300a\u5e84\u5b50\u901a\u300b\u3001\u300a\u76f8\u5b97\u7edc\u7d22\u300b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        901,
+        2548,
+        4108,
+        5661
+    ]
+}

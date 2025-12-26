@@ -1,0 +1,17 @@
+{
+    "answer": "Image in \"First three months of 2025\" investor presentation showing GLP-1 market share and growth in Region China. Type of image: visual chart (market share and growth). Principal content: GLP-1 market share and market growth in Region China.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        2392
+    ]
+}

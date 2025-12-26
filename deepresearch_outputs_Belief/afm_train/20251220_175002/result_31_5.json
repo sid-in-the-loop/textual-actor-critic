@@ -1,0 +1,21 @@
+{
+    "answer": "Rhetoric intensified and shaped political agendas and public sentiment in the 1960s, particularly during social movements.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        1589,
+        2737,
+        4172
+    ]
+}

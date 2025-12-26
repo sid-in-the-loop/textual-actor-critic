@@ -1,0 +1,21 @@
+{
+    "answer": "Specific open group net present value (NPV) for future revenue less expenditures for current and future participants (social insurance) over the next 75 years starting in FY2024, as cited by Treasury Secretary Scott Bessent in the official Treasury communication featured in the Yahoo Finance headline story on March 9, 2025, is not available in the provided search results.",
+    "ground_truth": "($78,400,000,000,000)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        929,
+        2475,
+        3892,
+        5166
+    ]
+}

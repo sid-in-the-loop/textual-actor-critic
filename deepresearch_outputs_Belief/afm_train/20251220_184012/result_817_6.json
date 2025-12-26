@@ -1,0 +1,19 @@
+{
+    "answer": "cs.LO",
+    "ground_truth": "arXiv:Computation and Language (cs.CL)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        1960,
+        2740
+    ]
+}

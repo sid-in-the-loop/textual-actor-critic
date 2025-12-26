@@ -1,0 +1,23 @@
+{
+    "answer": "Acquire and deploy a limited number of enhanced RPMs to improve effectiveness of the ...",
+    "ground_truth": "screen 100% of inbound cargo containers",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        886,
+        2365,
+        3675,
+        4926,
+        6289
+    ]
+}

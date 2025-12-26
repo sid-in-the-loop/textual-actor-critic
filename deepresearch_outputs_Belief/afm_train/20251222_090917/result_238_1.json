@@ -1,0 +1,23 @@
+{
+    "answer": "According to the Microsoft Digital Defense Report 2025, the adoption of AI helped reduce response times by 50%, but the report does not specify the proportion of organizations that accelerated their attack detection by up to 10%.",
+    "ground_truth": "Nine out of ten",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        2016,
+        3271,
+        4478,
+        5781
+    ]
+}

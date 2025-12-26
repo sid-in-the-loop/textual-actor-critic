@@ -1,0 +1,27 @@
+{
+    "answer": "Computational scaling behavior not explicitly detailed in search results.",
+    "ground_truth": "O(n) computational scaling",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        790,
+        1392,
+        2593,
+        3859,
+        5100,
+        6239,
+        7441
+    ]
+}

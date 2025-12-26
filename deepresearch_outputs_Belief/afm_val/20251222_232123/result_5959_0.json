@@ -1,0 +1,25 @@
+{
+    "answer": "200 books per year",
+    "ground_truth": "6,000+ titles, 60 collections, 13 journals, 220 books annually",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        905,
+        1766,
+        2755,
+        3708,
+        4850,
+        5803
+    ]
+}

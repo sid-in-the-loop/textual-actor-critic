@@ -1,0 +1,25 @@
+{
+    "answer": "Venezuelan",
+    "ground_truth": "Puerto Rican",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        2264,
+        3756,
+        5077,
+        6503,
+        7644
+    ]
+}

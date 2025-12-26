@@ -1,0 +1,17 @@
+{
+    "answer": "UnitedHealth Group Reports 2024 Results",
+    "ground_truth": "UnitedHealth Group 2024\u5e74\u5ea6\u4e1a\u7ee9\u516c\u544a\uff08UnitedHealth Group Reports 2024 Results\uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        1813
+    ]
+}

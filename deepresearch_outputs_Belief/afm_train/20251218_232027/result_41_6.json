@@ -1,0 +1,27 @@
+{
+    "answer": "Protecting U.S. military personnel and the national security community.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        689,
+        900,
+        2218,
+        3246,
+        4340,
+        5198,
+        5904
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "New Journalism, a style of news writing and journalism which was developed in the 1960s and 1970s, transformed political journalism by blending traditional journalism with literary techniques, challenging the traditional notion of objective reporting and introducing a more narrative-driven, individualized approach to political storytelling.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1568,
+        3161
+    ]
+}

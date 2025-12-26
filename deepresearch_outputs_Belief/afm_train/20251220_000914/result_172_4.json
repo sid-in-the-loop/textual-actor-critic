@@ -1,0 +1,19 @@
+{
+    "answer": "GB/T 13745-2009\u662f\u4e2d\u56fd\u56fd\u5bb6\u6807\u51c6,\u7528\u4e8e\u5b66\u79d1\u5206\u7c7b\u4e0e\u4ee3\u7801",
+    "ground_truth": "Classification and Code of National Standard Disciplines of the People's Republic of China",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        2288,
+        3629
+    ]
+}

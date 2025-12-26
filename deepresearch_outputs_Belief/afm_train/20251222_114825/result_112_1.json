@@ -1,0 +1,23 @@
+{
+    "answer": "More than 50% of articles published in 2013 were produced by for-profit companies, with five companies contributing.",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        785,
+        1773,
+        2871,
+        3879,
+        5090
+    ]
+}

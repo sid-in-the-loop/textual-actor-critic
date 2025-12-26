@@ -1,0 +1,21 @@
+{
+    "answer": "Dentons AI: Strategic Positioning in Legal AI",
+    "ground_truth": "Dentons AI: Global Solutions Hub",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        869,
+        1952,
+        3215,
+        3926
+    ]
+}

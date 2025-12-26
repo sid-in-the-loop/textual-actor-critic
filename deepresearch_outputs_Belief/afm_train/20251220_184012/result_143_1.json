@@ -1,0 +1,23 @@
+{
+    "answer": "Economic Insights",
+    "ground_truth": "FocusEconomics\u5168\u7403\u7ecf\u6d4e\u5c55\u671b\u535a\u5ba2\u680f\u76ee",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        722,
+        2064,
+        2868,
+        3609,
+        4867
+    ]
+}

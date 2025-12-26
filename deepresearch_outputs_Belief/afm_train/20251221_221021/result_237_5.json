@@ -1,0 +1,23 @@
+{
+    "answer": "Reduces the projected rise in the global population living in urban areas facing water scarcity by 2050.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        1392,
+        2837,
+        4140,
+        5593
+    ]
+}

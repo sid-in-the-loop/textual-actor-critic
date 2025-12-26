@@ -1,0 +1,27 @@
+{
+    "answer": "For the full year 2023, Cosentyx's reported net sales (immunology segment system plus Entresto) were USD 5.6 billion (no constant currency adjustment). For the full year 2024, reported net sales (immunology segment system plus Entresto) were USD 6.1 billion, and constant currency reported net sales were also USD 6.1 billion and in that same period, Cosentyx reported a net sales of USD 5.6 billion (no adjustments) versus USD 6.1 billion (no adjustments)",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        935,
+        2527,
+        4229,
+        5868,
+        7037,
+        9142,
+        2172
+    ]
+}

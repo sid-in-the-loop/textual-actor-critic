@@ -1,0 +1,29 @@
+{
+    "answer": "3-4 days",
+    "ground_truth": "102 days",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        728,
+        1974,
+        941,
+        2007,
+        2375,
+        3162,
+        4129,
+        5727
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "The specific r and p values for the correlation between sleep regularity index (SRI) and DLMO timing are not available in the provided search results.",
+    "ground_truth": "r = -0.66; p < 0.001",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        1920,
+        3097,
+        4434,
+        4759,
+        5082,
+        5678
+    ]
+}

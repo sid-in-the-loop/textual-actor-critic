@@ -1,0 +1,27 @@
+{
+    "answer": "Flashpoint (project was halted and then restarted).",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        816,
+        2022,
+        3086,
+        3341,
+        4475,
+        5717,
+        6800
+    ]
+}

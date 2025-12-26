@@ -1,0 +1,25 @@
+{
+    "answer": "James Thomson",
+    "ground_truth": "Garrick",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        1766,
+        2824,
+        3961,
+        5313,
+        6743
+    ]
+}

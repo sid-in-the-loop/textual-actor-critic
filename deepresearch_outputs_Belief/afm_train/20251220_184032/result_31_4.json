@@ -1,0 +1,23 @@
+{
+    "answer": "Rhetoric trend: Subjectivity and advocacy in journalism to counter objectivity and disinterestedness.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1680,
+        2570,
+        3939,
+        5234
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Matthew G. Stanard",
+    "ground_truth": "The belief that Belgians were 'reluctant imperialists'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        982,
+        2084,
+        3445,
+        4963,
+        6208,
+        7566
+    ]
+}

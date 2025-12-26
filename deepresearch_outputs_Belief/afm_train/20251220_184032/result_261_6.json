@@ -1,0 +1,21 @@
+{
+    "answer": "No image associated with the specified figure in the \"Investor presentation First three months of 2025\" for Region China.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        2336,
+        2899,
+        4367
+    ]
+}

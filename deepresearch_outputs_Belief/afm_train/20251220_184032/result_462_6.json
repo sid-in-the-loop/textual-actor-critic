@@ -1,0 +1,17 @@
+{
+    "answer": "January 1 to March 1, 2025",
+    "ground_truth": "Bureau of Immigration Philippines\u5b98\u65b9\u7f51\u7ad9-2025 Annual Report Guidelines",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        2135
+    ]
+}

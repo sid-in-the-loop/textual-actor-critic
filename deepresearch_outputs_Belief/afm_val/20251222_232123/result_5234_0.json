@@ -1,0 +1,17 @@
+{
+    "answer": "10 Emerging Academic Publishing Trends in 2025",
+    "ground_truth": "Academic Publishing 2025 Trends Special Article on Publishers State. com",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1782
+    ]
+}

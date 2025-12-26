@@ -1,0 +1,21 @@
+{
+    "answer": "Princeton University and Williams College top schools U.S. News 2025",
+    "ground_truth": "The 2025 U.S. News & World Report Rankings Are Here\u2014What You Need To Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        2023,
+        2460,
+        2850
+    ]
+}

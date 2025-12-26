@@ -1,0 +1,21 @@
+{
+    "answer": "Not found in the 2025 BIP Annual Report Advisory.",
+    "ground_truth": "3.03%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        1962,
+        2908,
+        3819
+    ]
+}

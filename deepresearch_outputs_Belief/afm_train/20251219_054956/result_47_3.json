@@ -1,0 +1,23 @@
+{
+    "answer": "The flashpoint status of the project as of March 27, 2025, would not have been a flashpoint. The major shift in the national security advisor discussed on ABC World News Tonight on May 1, 2025, occurred before March 27, 2025.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        903,
+        2774,
+        3430,
+        4531,
+        6117
+    ]
+}

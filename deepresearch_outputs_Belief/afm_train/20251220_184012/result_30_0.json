@@ -1,0 +1,23 @@
+{
+    "answer": "\u26a0\ufe0f Before a transfer is made, you'll be notified if the name on the receiving account doesn't match, providing alerts that it helps prevent mistaken and scam payments and reducing customer fraud and scam losses.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        908,
+        2133,
+        3431,
+        4681,
+        6271
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Article 'Safeguarding Mobility for the Future' published May 01 2025 in Springer Nature Research Communities does not exist.",
+    "ground_truth": "'Safeguarding Mobility for the Future: A Global Call to Action for the Use of the Locomotive Syndrome Risk Test' by Ryo Nakagawa",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        1165,
+        1610,
+        2053,
+        2537
+    ]
+}

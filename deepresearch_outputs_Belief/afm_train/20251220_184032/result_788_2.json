@@ -1,0 +1,21 @@
+{
+    "answer": "the action was the act of the Supreme Court acting on G.R. No. 278311, which was to nullify the impeachment complaint against Vice President Sara Duterte and block a Senate trial",
+    "ground_truth": "Filed documents asking to annul her impeachment",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        2234,
+        4009,
+        5414
+    ]
+}

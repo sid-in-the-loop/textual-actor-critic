@@ -1,0 +1,19 @@
+{
+    "answer": "Image: Management presentation; principal content: Financial results for the first three months of 2025, including sales and net profit figures.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2168,
+        3549
+    ]
+}

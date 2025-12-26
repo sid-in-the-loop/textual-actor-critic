@@ -1,0 +1,27 @@
+{
+    "answer": "Dentons AI Hub",
+    "ground_truth": "Dentons AI: Global Solutions Hub",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        753,
+        2005,
+        3085,
+        3555,
+        4094,
+        4722,
+        5180
+    ]
+}

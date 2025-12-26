@@ -1,0 +1,21 @@
+{
+    "answer": "Richmond, Virginia",
+    "ground_truth": "Petersburg",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        684,
+        1932,
+        3110,
+        4774
+    ]
+}

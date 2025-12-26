@@ -1,0 +1,21 @@
+{
+    "answer": "Charts and graphs showing sustainable cotton procurement percentages.",
+    "ground_truth": "High-resolution photograph of a mature cotton boll; no quantitative or analytic data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        1916,
+        3017,
+        4064
+    ]
+}

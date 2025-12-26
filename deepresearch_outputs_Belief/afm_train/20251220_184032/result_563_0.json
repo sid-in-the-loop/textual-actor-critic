@@ -1,0 +1,19 @@
+{
+    "answer": "98% at the end of FY 2024, and 166% of GDP by the end of FY 2054 (and potentially higher by 2099)",
+    "ground_truth": "98% (FY2024), 535% (2099)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        894,
+        2428,
+        1342
+    ]
+}

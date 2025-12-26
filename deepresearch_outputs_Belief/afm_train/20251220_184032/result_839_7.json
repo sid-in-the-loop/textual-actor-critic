@@ -1,0 +1,17 @@
+{
+    "answer": "10-K Annual Report - Annual reports and Form 10-K for fiscal years 2024, 2025 (ending Dec 31, 2025)",
+    "ground_truth": "Marriott International Annual Report 2025; Marriott International (MAR) Historical Annual Reports 2002-2024",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        2013
+    ]
+}

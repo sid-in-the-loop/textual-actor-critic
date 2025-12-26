@@ -1,0 +1,21 @@
+{
+    "answer": "The title of the column page is the unique identifier.",
+    "ground_truth": "Tianyi Think Tank (Zhihu Column)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        1996,
+        3406,
+        4501
+    ]
+}

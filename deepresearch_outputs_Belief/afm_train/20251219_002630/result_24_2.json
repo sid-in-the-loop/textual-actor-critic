@@ -1,0 +1,25 @@
+{
+    "answer": "Publishing Outlook in 2025: Trends, Technologies, and Challenges",
+    "ground_truth": "10 Emerging Academic Publishing Trends in 2025\uff08PublishingState.com\u4e13\u9898 write-up\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        1222,
+        2049,
+        2921,
+        3817,
+        4364
+    ]
+}

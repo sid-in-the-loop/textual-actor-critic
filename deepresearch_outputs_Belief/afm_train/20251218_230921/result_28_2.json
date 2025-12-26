@@ -1,0 +1,27 @@
+{
+    "answer": "41 CFR 60-1",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        765,
+        2147,
+        3277,
+        4563,
+        6179,
+        7684,
+        8969
+    ]
+}

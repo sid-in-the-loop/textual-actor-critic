@@ -1,0 +1,21 @@
+{
+    "answer": "6% CAGR, \u20ac18.04 billion (projected).",
+    "ground_truth": "7.1 to 7.5 billion euros; 11%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        915,
+        2317,
+        4114,
+        5687
+    ]
+}

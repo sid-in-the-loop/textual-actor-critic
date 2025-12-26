@@ -1,0 +1,29 @@
+{
+    "answer": "3, 2",
+    "ground_truth": "4\u20133, with the Canucks defeating the Coyotes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        2047,
+        3151,
+        4140,
+        5229,
+        6301,
+        7607,
+        8636
+    ]
+}

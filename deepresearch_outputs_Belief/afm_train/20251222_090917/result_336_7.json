@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to retrieve the specific annual financial losses from phishing attacks in 2021 from Figure 1 in the National Cyber Threat Assessment 2025-2026.",
+    "ground_truth": "$383 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        882,
+        2142,
+        3342,
+        4555,
+        5920,
+        7213,
+        8482
+    ]
+}

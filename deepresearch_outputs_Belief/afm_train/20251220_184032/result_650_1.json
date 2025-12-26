@@ -1,0 +1,15 @@
+{
+    "answer": "THE STAR ENTERTAINMENT GROUP LIMITED \u2013 Special Director's and Financial Report (half year ended 31 December 2024)",
+    "ground_truth": "THE STAR ENTERTAINMENT GROUP LIMITED DIRECTORS' REPORT AND FINANCIAL REPORT FOR THE HALF YEAR ENDED 31 DECEMBER 2024",
+    "rewards": [
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 1,
+    "search count": 0,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792
+    ]
+}

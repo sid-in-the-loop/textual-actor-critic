@@ -1,0 +1,29 @@
+{
+    "answer": "The available information does not provide a description of the image type or its principal content within Novo Nordisk's Q1 2025 investor presentation PDF document.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        907,
+        2197,
+        3518,
+        4952,
+        6346,
+        7730,
+        9159,
+        10427
+    ]
+}

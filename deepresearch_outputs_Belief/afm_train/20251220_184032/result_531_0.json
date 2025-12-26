@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 1 in the 301 Report visualizes data on trade and industrial policy impacts, likely containing charts representing the impact of \"Made in China 2025\" and related Chinese industrial policies, but not necessarily the U.S. Chamber of Commerce branding.",
+    "ground_truth": "Only U.S. Chamber of Commerce logo and branding",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        925,
+        2423,
+        4072,
+        5525
+    ]
+}

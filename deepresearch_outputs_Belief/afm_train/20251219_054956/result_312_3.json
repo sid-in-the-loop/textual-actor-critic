@@ -1,0 +1,27 @@
+{
+    "answer": "&#x201C;Designing Political Order&#x201C; (Research Article)",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        728,
+        2068,
+        2801,
+        4160,
+        5815,
+        6484,
+        8035
+    ]
+}

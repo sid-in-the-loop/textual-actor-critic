@@ -1,0 +1,29 @@
+{
+    "answer": "Are You the One?",
+    "ground_truth": "\u6211\u7684\u5965\u8fd0\u68a6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        958,
+        2572,
+        4303,
+        6060,
+        7967,
+        9897,
+        11897,
+        13509
+    ]
+}

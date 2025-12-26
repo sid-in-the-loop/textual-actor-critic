@@ -1,0 +1,25 @@
+{
+    "answer": "This project, discussed hypothetically in *Fox News* on May 1, 2025, would state its flashpoint status was \"unsettled\", as explicit information on this specific future event is non-existent in \"past\" or \"present\" reporting.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        887,
+        2272,
+        2640,
+        2999,
+        3693,
+        4386
+    ]
+}

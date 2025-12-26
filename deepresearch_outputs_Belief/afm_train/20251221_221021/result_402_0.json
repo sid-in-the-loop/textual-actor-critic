@@ -1,0 +1,17 @@
+{
+    "answer": "Capgemini reports indicate that e-mobility and EV charging infrastructure are key trends, with forecasts for public charging points in Europe and Germany by 2025.",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2214
+    ]
+}

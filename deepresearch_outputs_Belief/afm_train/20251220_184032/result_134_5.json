@@ -1,0 +1,19 @@
+{
+    "answer": "The Maple Leafs 2025-2029 Budget",
+    "ground_truth": "Metro Vancouver 2025-2029 Financial Plan",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        2207,
+        3733
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Local News",
+    "ground_truth": "Local News Series Research Report | Pew Research Center",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        2007,
+        3168,
+        4582
+    ]
+}

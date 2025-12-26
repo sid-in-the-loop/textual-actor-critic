@@ -1,0 +1,29 @@
+{
+    "answer": "Understanding ESG ratings: Definition, importance, and best practices - PlanA.Earth",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2081,
+        2839,
+        3367,
+        4037,
+        4617,
+        5592,
+        6168
+    ]
+}

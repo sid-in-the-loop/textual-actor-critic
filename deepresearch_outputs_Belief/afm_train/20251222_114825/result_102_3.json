@@ -1,0 +1,29 @@
+{
+    "answer": "No key statistics regarding students' food security and related outcomes were found in the search results.",
+    "ground_truth": "Financially insecure students were 15 times more likely to experience food insecurity; 6.5% and 48% (statistical outcomes reported).",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        1243,
+        1556,
+        1996,
+        2408,
+        2849,
+        3284,
+        3820
+    ]
+}

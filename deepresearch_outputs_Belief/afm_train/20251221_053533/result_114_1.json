@@ -1,0 +1,21 @@
+{
+    "answer": "Presentation and Disclosure in Financial Statements",
+    "ground_truth": "Item 18. Financial Statements",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        916,
+        2176,
+        3371,
+        4604
+    ]
+}

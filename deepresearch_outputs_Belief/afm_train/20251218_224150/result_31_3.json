@@ -1,0 +1,19 @@
+{
+    "answer": "Increased emphasis on literary techniques and rhetoric in political journalism since the 1960s.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        1790,
+        2333
+    ]
+}

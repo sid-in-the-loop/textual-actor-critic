@@ -1,0 +1,27 @@
+{
+    "answer": "20,000 students and 90% active on the Dorigny campus",
+    "ground_truth": "Over 5,000 employees and 17,000 students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        1442,
+        2687,
+        3921,
+        4438,
+        5517,
+        6669
+    ]
+}

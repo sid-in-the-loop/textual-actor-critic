@@ -1,0 +1,21 @@
+{
+    "answer": "Financial Report 2024",
+    "ground_truth": "Item 18. Financial Statements (Novartis Annual Report 2024)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        725,
+        1983,
+        3226,
+        4359
+    ]
+}

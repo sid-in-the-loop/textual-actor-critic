@@ -1,0 +1,25 @@
+{
+    "answer": "Dear John",
+    "ground_truth": "\u8537\u8587\u4e4b\u604b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        938,
+        3190,
+        3536,
+        4914,
+        6724,
+        8587
+    ]
+}

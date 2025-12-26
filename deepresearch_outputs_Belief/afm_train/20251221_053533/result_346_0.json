@@ -1,0 +1,23 @@
+{
+    "answer": "Communications Authority of Kenya: https://ca.go.ke/reports-and-studies and ke-cirt.go.ke/quarterly-reports/ (both sites likely contain 2023/2024 reports organized by title and period)",
+    "ground_truth": "Sector Statistics Reports for the Financial Year 2023/2024 (Communications Authority of Kenya)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        1901,
+        2368,
+        2714,
+        3376
+    ]
+}

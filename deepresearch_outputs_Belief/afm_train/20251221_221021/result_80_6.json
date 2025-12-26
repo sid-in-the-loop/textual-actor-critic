@@ -1,0 +1,17 @@
+{
+    "answer": "\u300a\u53cc\u9776\u70b9\u5f02\u4f53CAR-T\u7ec6\u80de\u6709\u671b\u5f00\u542f\u6cbb\u7597\u65b0\u7bc7\u7ae0\u300b",
+    "ground_truth": "\u7535\u89c6",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        2285
+    ]
+}

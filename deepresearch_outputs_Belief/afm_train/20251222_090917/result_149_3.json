@@ -1,0 +1,19 @@
+{
+    "answer": "Statistics articles",
+    "ground_truth": "Statistics | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        688,
+        1599,
+        2469
+    ]
+}

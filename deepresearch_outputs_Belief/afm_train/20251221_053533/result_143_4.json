@@ -1,0 +1,27 @@
+{
+    "answer": "Focus Briefings",
+    "ground_truth": "FocusEconomics\u5168\u7403\u7ecf\u6d4e\u5c55\u671b\u535a\u5ba2\u680f\u76ee",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        694,
+        1974,
+        3248,
+        4287,
+        4869,
+        5487,
+        6562
+    ]
+}

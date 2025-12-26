@@ -1,0 +1,19 @@
+{
+    "answer": "Thomas Shedd, former IT Systems and Solutions director at USIP, was appointed as the head of Technology Transformation.",
+    "ground_truth": "Thomas Shedd; former Tesla software engineer",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        1250,
+        2466
+    ]
+}

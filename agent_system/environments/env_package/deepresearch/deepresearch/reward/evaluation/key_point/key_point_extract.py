@@ -64,7 +64,6 @@ async def extract_key_point(semaphore, question, CluewebID, text, model):
                         model=model,
                         messages=chat_pattern,
                         response_format=KeyPointExtraction,
-                        temperature=0
             )
             result = json.loads(response.choices[0].message.content)
             return CluewebID, result['points']
@@ -117,6 +116,6 @@ if __name__ == "__main__":
     
     key_point_dir = "key_point"
     model = "gpt-4.1-nano" # to reduce cost in debugging
-    # model = "gpt-4o-mini"
+    # model = "gpt-5-mini"
 
     asyncio.run(extract_all_queries(sampled_queries, key_point_dir, model))

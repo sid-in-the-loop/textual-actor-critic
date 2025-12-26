@@ -1,0 +1,23 @@
+{
+    "answer": "AnnualReports.com and archive.org/annualreports.com",
+    "ground_truth": "American Airlines Group Annual Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2164,
+        3690,
+        4650,
+        5995
+    ]
+}

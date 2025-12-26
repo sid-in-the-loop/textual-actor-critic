@@ -1,0 +1,21 @@
+{
+    "answer": "Monetization Paves Way for Industry Expansion, Rapid proliferation of AI, Divergence in U.S. Banks, AI Hinges on Rapid Electrification, and AI's impact on top-line growth for technology companies.",
+    "ground_truth": "Global X ETFs Insights (Five AI Trends for 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        1864,
+        2839,
+        3871
+    ]
+}

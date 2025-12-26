@@ -1,0 +1,27 @@
+{
+    "answer": "Web of Science uses a multidisciplinary categorization system, applying broad General Categories and then further refining them into specific Subject Categories.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        1934,
+        3018,
+        4196,
+        5434,
+        6521,
+        8033
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Science and Technology, Social Sciences, and Arts and Humanities with specific subcategories (e.g., Biology and Biochemistry, Chemistry, Physics and Astronomy, Social Sciences including Economics, Political Science, Psychology, Sociology, Anthropology, Arts and Humanities including Literature, Philosophy, History, Language and Literature).",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        1908,
+        2987
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "The number of people who participated in the protest outside parliament opposing the \"Principles of the Treaty of Waitangi Bill\" is not available in the official records and legislative proposals hosted and uniquely indexed by the New Zealand Parliamentary Business - Bills and Laws section. The bill was published on April 14, 2025, and \"last year\" refers to 2024, a year before its publication, indicating public opposition to the bill.",
+    "ground_truth": "More than 40,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        1981,
+        3291,
+        3864,
+        4252,
+        5720,
+        6241,
+        6797
+    ]
+}

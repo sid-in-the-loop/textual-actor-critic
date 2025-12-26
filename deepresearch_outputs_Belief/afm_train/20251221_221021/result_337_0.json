@@ -1,0 +1,19 @@
+{
+    "answer": "Constructive Proofs",
+    "ground_truth": "Proven Results",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1778,
+        2805
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Deploy AI on the battlefield to support national security.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        957,
+        2009,
+        3268,
+        4435,
+        4933,
+        6397,
+        7068
+    ]
+}

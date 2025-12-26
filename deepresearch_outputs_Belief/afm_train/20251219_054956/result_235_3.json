@@ -1,0 +1,25 @@
+{
+    "answer": "Five AI Trends for 2025",
+    "ground_truth": "Global X ETFs Insights (Five AI Trends for 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2120,
+        2491,
+        3189,
+        4179,
+        5651
+    ]
+}

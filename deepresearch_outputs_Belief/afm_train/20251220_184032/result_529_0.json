@@ -1,0 +1,17 @@
+{
+    "answer": "Ranking all 18 Big Ten football programs by 2025 NCAA academic progress rate: Ohio State Buckeyes (1), Michigan Wolverines (2), Northwestern Wildcats (3), Minnesota Golden Gophers (4), Wisconsin Badgers (5).",
+    "ground_truth": "2025 NCAA Academic Progress Rate\u6392\u540d\uff08Big Ten\uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        2265
+    ]
+}

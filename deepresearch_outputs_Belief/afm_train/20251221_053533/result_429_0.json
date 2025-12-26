@@ -1,0 +1,29 @@
+{
+    "answer": "Dive bombing",
+    "ground_truth": "He became the first Hispanic pilot to serve with the Blue Angels",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        2073,
+        3458,
+        5149,
+        6445,
+        7525,
+        9068,
+        10466
+    ]
+}

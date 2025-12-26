@@ -1,0 +1,21 @@
+{
+    "answer": "Research Library Global Real Estate Market Optimization (REMO)",
+    "ground_truth": "The Intelligence Lab (Knight Frank)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1594,
+        2065,
+        2103,
+        2966
+    ]
+}

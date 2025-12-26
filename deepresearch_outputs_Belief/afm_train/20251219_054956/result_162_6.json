@@ -1,0 +1,25 @@
+{
+    "answer": "Unable to locate the specific number of additional buses projected for rehabilitation by the summer of 2025 within the FY 2025 NYS Enacted Budget Financial Plan Mid-Year Update PDF through direct search capabilities.",
+    "ground_truth": "42 additional buses",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        895,
+        2080,
+        2932,
+        3557,
+        4169,
+        4767
+    ]
+}

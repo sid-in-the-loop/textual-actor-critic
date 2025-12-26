@@ -1,0 +1,29 @@
+{
+    "answer": "Not found in the identified 2025 Annual Report.",
+    "ground_truth": "18 units",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1981,
+        3072,
+        3294,
+        3729,
+        4281,
+        4591,
+        5266
+    ]
+}

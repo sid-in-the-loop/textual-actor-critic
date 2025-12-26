@@ -1,0 +1,21 @@
+{
+    "answer": "Green Open Access, digital-first strategies, and sustainable production methods.",
+    "ground_truth": "digital-first initiatives, green open access policies, eco-friendly publishing practices",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        870,
+        2017,
+        3075,
+        4261
+    ]
+}

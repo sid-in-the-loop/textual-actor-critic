@@ -1,0 +1,21 @@
+{
+    "answer": "The Nature journal website's editorial standards and workflow policies do not explicitly state a specific timeframe for referees to submit their peer review reports.",
+    "ground_truth": "within two weeks or according to an agreed time limit",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1739,
+        3128,
+        4266
+    ]
+}

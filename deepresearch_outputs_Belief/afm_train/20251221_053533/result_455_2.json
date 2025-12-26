@@ -1,0 +1,17 @@
+{
+    "answer": "10.1186/s41239-020-00218-x",
+    "ground_truth": "https://doi.org/10.1186/s41239-020-0177-7",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        897,
+        2685
+    ]
+}

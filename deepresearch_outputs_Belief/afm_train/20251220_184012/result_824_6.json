@@ -1,0 +1,23 @@
+{
+    "answer": "Alight Annual Report 2025",
+    "ground_truth": "Alight Solutions 2025 Annual Research Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        2199,
+        3451,
+        4721,
+        5934
+    ]
+}

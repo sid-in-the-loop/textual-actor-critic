@@ -1,0 +1,23 @@
+{
+    "answer": "A Closer Look at the Life Sciences Industry: 2025 Life Sciences Report",
+    "ground_truth": "Deloitte 2025 Life Sciences and Health Care Industry Outlooks",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        2285,
+        2717,
+        3971,
+        4586
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "1.13, 1.30",
+    "ground_truth": "Research and Restoration Center of the Museums of France",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1958,
+        3241,
+        4117
+    ]
+}

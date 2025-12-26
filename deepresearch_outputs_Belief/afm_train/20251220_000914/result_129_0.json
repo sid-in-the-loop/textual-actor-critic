@@ -1,0 +1,23 @@
+{
+    "answer": "Christ Lutheran Church's annual reports are available on their website at the following URLs: https://christ-lutheran.org/wp-content/uploads/2022/11/2022-Annual-Report-Compiled.pdf (2022), [Annual Meeting \u2013 Christ Lutheran Church](https://christ-lutheran.org/events/annual-meeting/), https://christ-lutheran.org/wp-content/uploads/2024/02/2023-Annual-Report-Web-version.pdf (2023), and https://christ-lutheran.org/wp-content/uploads/2025/03/ING2024-Annual-Report-Web-Version.pdf (2024).",
+    "ground_truth": "Christ Lutheran Church Annual Report \u96c6\u5408\u9875\u9762",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        807,
+        2213,
+        3277,
+        4421,
+        6272
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The Star Entertainment Group Limited (ASX: SGR) published its audited financial report for the year ended 30 June 2025 (FY2025) on September 30, 2025, and its half-year financial results (ended 31 December 2024, 1HFY25) on April 15, 2025.",
+    "ground_truth": "Financial Results | The Star Entertainment Group Limited",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1906,
+        3465,
+        4702
+    ]
+}

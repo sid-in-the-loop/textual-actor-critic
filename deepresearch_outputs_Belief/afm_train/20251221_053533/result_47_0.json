@@ -1,0 +1,23 @@
+{
+    "answer": "Flashpoint status of the project was not reported as of March 27, 2025, within the provided broadcast episode of ABC World News Tonight on May 1, 2025.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        2254,
+        3788,
+        5497,
+        6882
+    ]
+}

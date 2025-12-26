@@ -1,0 +1,23 @@
+{
+    "answer": "10",
+    "ground_truth": "10",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        2039,
+        3517,
+        3856,
+        5104
+    ]
+}

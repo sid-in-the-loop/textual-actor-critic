@@ -1,0 +1,25 @@
+{
+    "answer": "SEIA's 2024 supply chain dashboard does not provide a specific quantifiable degree of Chinese control percentage or metric across the entire solar PV and BESS supply chain stages based on its summaries.",
+    "ground_truth": "nearly complete control in upstream stages; less in downstream stages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        909,
+        2280,
+        3748,
+        5139,
+        7125,
+        7662
+    ]
+}

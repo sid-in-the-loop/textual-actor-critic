@@ -1,0 +1,25 @@
+{
+    "answer": "the number of over-represented InterPro-IDs at each time point (P0 - P6)",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        1816,
+        2886,
+        3873,
+        5047,
+        5937
+    ]
+}

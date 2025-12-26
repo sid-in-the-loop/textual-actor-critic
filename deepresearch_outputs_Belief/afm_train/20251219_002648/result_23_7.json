@@ -1,0 +1,25 @@
+{
+    "answer": "Announcing our 2025 Annual Report. The Official Title is \"The Annual Report of the Union of Concerned Scientists.\"",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2240,
+        3425,
+        4830,
+        6370,
+        7742
+    ]
+}

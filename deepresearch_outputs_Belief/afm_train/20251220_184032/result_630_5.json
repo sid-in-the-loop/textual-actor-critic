@@ -1,0 +1,21 @@
+{
+    "answer": "Ruijun Dang, Ke Li, Hong, and Rollins, Andrew W.",
+    "ground_truth": "RD and DJJ",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1003,
+        1402,
+        2592
+    ]
+}

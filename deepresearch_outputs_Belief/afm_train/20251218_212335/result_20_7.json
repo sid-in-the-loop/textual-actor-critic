@@ -1,0 +1,29 @@
+{
+    "answer": "https://www.nature.com/srep/author-instructions/submission-guidelines",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        643,
+        1554,
+        2104,
+        2562,
+        3521,
+        3972,
+        1044,
+        1769
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Unable to determine the specific number of additional buses projected for rehabilitation by summer 2025 from the identified report; the information was not found in the search results.",
+    "ground_truth": "42 additional buses",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        871,
+        2140,
+        3397,
+        4555,
+        5856,
+        7144,
+        8372,
+        9664
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Black Country Living Museum",
+    "ground_truth": "Dudley",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        906,
+        1852,
+        3169,
+        4317
+    ]
+}

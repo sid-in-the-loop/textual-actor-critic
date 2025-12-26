@@ -1,0 +1,25 @@
+{
+    "answer": "1 in 4 people globally lack access to safe drinking water.",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        858,
+        1980,
+        3580,
+        4791,
+        6214,
+        8052
+    ]
+}

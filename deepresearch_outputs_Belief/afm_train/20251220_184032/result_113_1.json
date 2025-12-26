@@ -1,0 +1,23 @@
+{
+    "answer": "The visual encoding, represented by the \"Regulatory Insights Barometer\" powered by the primary figure's color gradient bar within KPMG's \"Ten Key Regulatory Challenges of 2025\" report, illustrates value progression across the categorized challenges. However, the specific monotonic trend (i.e., a consistent upward or downward tilt across the gradient) is not explicitly stated in the returned information, with the report specifically placing emphasis on a \"Year of Regulatory Shift.\" A color gradient visually shows increasing regulatory pressure or emphasis, but the \"monotonic trend\" itself (a clear, consistent direction of change in value) is not explicitly stated as being monotonic in the provided summaries regarding the KPMG report.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        873,
+        2282,
+        3967,
+        5163,
+        5960
+    ]
+}

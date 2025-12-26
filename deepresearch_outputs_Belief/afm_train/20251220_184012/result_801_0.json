@@ -1,0 +1,19 @@
+{
+    "answer": "CHEST 2025 Call for Late-Breaking and Gamification Abstracts",
+    "ground_truth": "CHEST\u202f2025 Call for Abstracts and Case Reports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1855,
+        2844
+    ]
+}

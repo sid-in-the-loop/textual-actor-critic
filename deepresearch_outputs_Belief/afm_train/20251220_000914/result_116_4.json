@@ -1,0 +1,19 @@
+{
+    "answer": "2024 Q4 and full year results presentation and transcript",
+    "ground_truth": "Novartis Annual Report 2024",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2072,
+        3587
+    ]
+}

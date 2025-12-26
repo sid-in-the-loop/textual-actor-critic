@@ -1,0 +1,23 @@
+{
+    "answer": "The Minister of Music holds the position titled as such. No specific document was identified as the source from which to answer this question.",
+    "ground_truth": "Steve Wysocki",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        753,
+        1805,
+        3089,
+        4214,
+        5554
+    ]
+}

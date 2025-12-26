@@ -1,0 +1,23 @@
+{
+    "answer": "Web of Science subjects are categorized under main categories such as Science and Technology, Social Sciences, and Arts and Humanities, with each of these encompassing multiple subject-specific categories (e.g., Science and Technology includes Acoustics, Electrochemistry, Literature, Physics, and Condensed Matter; Social Sciences includes Cardiac & Cardiovascular Systems, Folklore, Medicine, Research & Experimental, Cell Biology, and Food Science & Technology; Arts and Humanities includes Arabic Citation Index, Emergency Medicine, Literature, African, Australian, Canadian, and Multidisciplinary).",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1951,
+        3015,
+        3984,
+        5606
+    ]
+}

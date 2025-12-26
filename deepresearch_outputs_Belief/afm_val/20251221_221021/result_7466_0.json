@@ -1,0 +1,19 @@
+{
+    "answer": "Political Guidelines for the Next European Commission 2024-2029",
+    "ground_truth": "European Commission strategy documents",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1853,
+        3081
+    ]
+}

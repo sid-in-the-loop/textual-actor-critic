@@ -1,0 +1,21 @@
+{
+    "answer": "The 2025 Future of U.S. & China Conference: A New Architecture for US-China Relations",
+    "ground_truth": "Jake Sullivan\u2019s visit to Beijing",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        2034,
+        3106,
+        4333
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Conspiracy to defraud (multiple charges)",
+    "ground_truth": "Conspiracy to defraud and false accounting",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        888,
+        2241,
+        3615,
+        5585
+    ]
+}

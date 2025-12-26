@@ -1,0 +1,23 @@
+{
+    "answer": "twice as likely",
+    "ground_truth": "twice as likely",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        871,
+        1809,
+        2995,
+        4226,
+        5533
+    ]
+}

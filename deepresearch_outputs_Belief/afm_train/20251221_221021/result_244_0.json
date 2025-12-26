@@ -1,0 +1,27 @@
+{
+    "answer": "175 GW by 2035",
+    "ground_truth": "Closely tracks the lower bound",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        2239,
+        3623,
+        5084,
+        6513,
+        8064,
+        9604
+    ]
+}

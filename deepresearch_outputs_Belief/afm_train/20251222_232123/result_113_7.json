@@ -1,0 +1,25 @@
+{
+    "answer": "Unable to determine the specific details of the primary figure's color gradient bar illustrating value progression across the top ten regulatory challenges for 2025, as the search results do not provide this visual information.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1401,
+        2532,
+        3803,
+        5034,
+        6392,
+        7685
+    ]
+}

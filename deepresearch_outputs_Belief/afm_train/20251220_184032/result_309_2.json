@@ -1,0 +1,19 @@
+{
+    "answer": "Nearly 700 AI-related regulations were introduced in the U.S. in 2024.",
+    "ground_truth": "59",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2131,
+        3351
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The user must provide their first name, last name, email address, and a description of the NLM Product or Service they are writing about.",
+    "ground_truth": "submit an online request for assistance",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        680,
+        1602,
+        2510
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Standard Filings (8-K, 10-Q, 11-K, 12-G)",
+    "ground_truth": "Xcel Energy Inc. company filings subset within the SEC EDGAR system",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        745,
+        2683,
+        4414,
+        6235
+    ]
+}

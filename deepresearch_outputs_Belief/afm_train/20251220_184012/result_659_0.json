@@ -1,0 +1,21 @@
+{
+    "answer": "Ten issues to watch in 2025",
+    "ground_truth": "European Parliament Think Tank EPRS annual report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        719,
+        2047,
+        3320,
+        4545
+    ]
+}

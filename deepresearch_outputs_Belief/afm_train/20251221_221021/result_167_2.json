@@ -1,0 +1,19 @@
+{
+    "answer": "UNISON's Community Service Group Executive Committee agreed to appoint an individual to fill the Action for Children full-time post until the end of October 2025.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        819,
+        2113,
+        3282
+    ]
+}

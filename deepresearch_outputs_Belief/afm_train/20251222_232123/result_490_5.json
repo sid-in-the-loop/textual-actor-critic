@@ -1,0 +1,23 @@
+{
+    "answer": "1998 Japanese Education Reform",
+    "ground_truth": "Bloom's Taxonomy",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        923,
+        1981,
+        3029,
+        4107,
+        5275
+    ]
+}

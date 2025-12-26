@@ -1,0 +1,23 @@
+{
+    "answer": "IRS announces Jan. 27 start to 2025 tax filing season",
+    "ground_truth": "2025 tax filing season starts as IRS begins accepting tax returns today; taxpayers have many options for help (IRS.gov\u65b0\u95fb\u7a3f)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        2035,
+        3289,
+        4593,
+        4861
+    ]
+}

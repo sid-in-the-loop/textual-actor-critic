@@ -1,0 +1,19 @@
+{
+    "answer": "Deadline for evidence submission: 14 July 2023. Next case management hearing: October 2023.",
+    "ground_truth": "evidence due by 2025-06, next hearing 2025-07-02",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        807,
+        2036,
+        3285
+    ]
+}

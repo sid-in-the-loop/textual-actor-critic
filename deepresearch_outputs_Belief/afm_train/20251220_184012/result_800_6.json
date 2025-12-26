@@ -1,0 +1,21 @@
+{
+    "answer": "Portfolio Solutions 2025 Insights, The BEAT",
+    "ground_truth": "The BEAT",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2095,
+        3457,
+        4670
+    ]
+}

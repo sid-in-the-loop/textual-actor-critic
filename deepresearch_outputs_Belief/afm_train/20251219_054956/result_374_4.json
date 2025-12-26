@@ -1,0 +1,23 @@
+{
+    "answer": "Not found on iThome website.",
+    "ground_truth": "GovTech Annual Security Predictions Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        708,
+        1829,
+        2377,
+        3916,
+        4993
+    ]
+}

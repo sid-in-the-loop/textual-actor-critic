@@ -1,0 +1,23 @@
+{
+    "answer": "Not available as the \"Funding ratios of defined benefit plans: Pensions at a Glance 2025\" document was published in November 2025, and the Spring 2025 report would not contain data from a future date.",
+    "ground_truth": "115% to 140%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        860,
+        2511,
+        2931,
+        4342,
+        4693
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "63 of 322 journals, in \u201cInternational Relations\u201d",
+    "ground_truth": "4 out of 165",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        1934
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Disciplinary actions for predatory publishing and scholarly standards",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2236,
+        3436,
+        3872,
+        4425,
+        5556,
+        6805,
+        8135
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Not Found",
+    "ground_truth": "Jan-2025-WebEdition.pdf (Christ Lutheran Church official website)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        1683,
+        2473,
+        2763,
+        3085,
+        3411,
+        3716,
+        3906
+    ]
+}

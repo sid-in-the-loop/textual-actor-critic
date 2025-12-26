@@ -1,0 +1,27 @@
+{
+    "answer": "Group Structure",
+    "ground_truth": "Group activities by sector",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        2187,
+        2565,
+        2967,
+        3717,
+        4112,
+        4363
+    ]
+}

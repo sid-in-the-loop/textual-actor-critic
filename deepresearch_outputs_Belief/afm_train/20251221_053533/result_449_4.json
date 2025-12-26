@@ -1,0 +1,23 @@
+{
+    "answer": "Hand Gestures Political Fleeting Decorative / Expression of Incomes For Sacrifices / Activity",
+    "ground_truth": "signed",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1881,
+        2948,
+        4181,
+        5299
+    ]
+}

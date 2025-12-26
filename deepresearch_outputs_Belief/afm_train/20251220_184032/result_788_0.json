@@ -1,0 +1,17 @@
+{
+    "answer": "The lawyers of Vice President Duterte asked the Supreme Court on Tuesday, Feb. 17, 2025, to void her impeachment and block a Senate trial.",
+    "ground_truth": "Filed documents asking to annul her impeachment",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        2096
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "\"Economics, Actually, our 2025 hit list\"",
+    "ground_truth": "ING Global Outlook (Economics, Actually: our 2025 hit list, ING Think, 2024)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2067
+    ]
+}

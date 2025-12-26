@@ -1,0 +1,21 @@
+{
+    "answer": "Published by ACRL, authored by A An, 2015, PDF available at https://www.ala.org/sites/default/files/acrl/content/publications/whitepapers/stewart_building.pdf",
+    "ground_truth": "February 2015, Christopher Stewart",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        2013,
+        2998,
+        4205
+    ]
+}

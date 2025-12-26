@@ -1,0 +1,17 @@
+{
+    "answer": "The S&P 500 index rose 3 percent in the past three months, despite rising bond yields, according to the Atlantic Council's 'US economic outlook 2025: It\u2019s the productivity, stupid!' report.",
+    "ground_truth": "increased by more than 3%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        1281
+    ]
+}

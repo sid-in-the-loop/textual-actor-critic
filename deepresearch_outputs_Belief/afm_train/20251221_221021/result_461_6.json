@@ -1,0 +1,25 @@
+{
+    "answer": "Caren Winstead",
+    "ground_truth": "Andrea Sorrentino",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        913,
+        2029,
+        2349,
+        2685,
+        3074,
+        4361
+    ]
+}

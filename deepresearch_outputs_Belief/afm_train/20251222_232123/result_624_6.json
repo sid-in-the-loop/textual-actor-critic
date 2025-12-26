@@ -1,0 +1,23 @@
+{
+    "answer": "Yes",
+    "ground_truth": "No academic chart, axes, titles, or units",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        964,
+        2172,
+        2658,
+        3221,
+        3486
+    ]
+}

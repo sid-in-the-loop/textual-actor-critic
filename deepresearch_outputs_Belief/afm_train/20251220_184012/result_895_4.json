@@ -1,0 +1,17 @@
+{
+    "answer": "Almost 338 GW of new solar energy capacity, with 65.5 GW installed in 2024, totaling almost 403.5 GW.",
+    "ground_truth": "surpassed the halfway mark",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        2569
+    ]
+}

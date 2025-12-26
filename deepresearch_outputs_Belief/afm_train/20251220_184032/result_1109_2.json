@@ -1,0 +1,17 @@
+{
+    "answer": "Guide for authors - Your Paper Your Way - Elsevier",
+    "ground_truth": "Elsevier \u51fa\u7248\u6d41\u7a0b\u6307\u5357",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        1733
+    ]
+}

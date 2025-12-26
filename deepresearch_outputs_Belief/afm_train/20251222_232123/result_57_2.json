@@ -1,0 +1,27 @@
+{
+    "answer": "Information about how the volatility distribution of the unemployment rate in Hong Kong prior to January 2025 is depicted in Figure 0 of the official document is not publicly available through web search.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        886,
+        2044,
+        3198,
+        4274,
+        5588,
+        6840,
+        8054
+    ]
+}

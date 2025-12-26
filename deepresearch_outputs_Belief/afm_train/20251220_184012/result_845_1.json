@@ -1,0 +1,17 @@
+{
+    "answer": "2016",
+    "ground_truth": "March 2, 2016",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        2085
+    ]
+}

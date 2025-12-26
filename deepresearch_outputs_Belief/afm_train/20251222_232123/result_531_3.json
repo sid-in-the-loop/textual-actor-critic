@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, Figure 1 features a chart or data visualization related to average government grants to listed companies in MIC25.",
+    "ground_truth": "Only U.S. Chamber of Commerce logo and branding",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        846,
+        2066,
+        3384
+    ]
+}

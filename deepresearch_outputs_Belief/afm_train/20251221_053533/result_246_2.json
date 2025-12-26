@@ -1,0 +1,27 @@
+{
+    "answer": "Regulatory",
+    "ground_truth": "Dentons Insights: Artificial Intelligence",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        753,
+        1806,
+        1988,
+        3144,
+        3748,
+        4409,
+        5494
+    ]
+}

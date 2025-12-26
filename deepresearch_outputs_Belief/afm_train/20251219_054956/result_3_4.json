@@ -1,0 +1,29 @@
+{
+    "answer": "J.J. Brody",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        944,
+        2013,
+        3080,
+        3494,
+        4931,
+        5279,
+        6892,
+        8458
+    ]
+}

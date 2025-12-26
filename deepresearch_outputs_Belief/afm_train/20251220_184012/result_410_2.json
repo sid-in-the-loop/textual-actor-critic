@@ -1,0 +1,21 @@
+{
+    "answer": "Year in \"DGL Annual Report/Interim Report [Year]\"",
+    "ground_truth": "Summary of all financial reports of Delegat Group Limited",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1997,
+        3381,
+        4422
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "$16.5 million",
+    "ground_truth": "$16.5 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        2151,
+        2399,
+        3636
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Five months behind in reading",
+    "ground_truth": "3 months behind",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        2100,
+        2664,
+        2958,
+        3521,
+        4062,
+        4817
+    ]
+}

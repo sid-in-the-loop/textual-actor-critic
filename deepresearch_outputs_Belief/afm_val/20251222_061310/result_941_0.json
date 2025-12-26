@@ -1,0 +1,17 @@
+{
+    "answer": "AI is disrupting the video gaming, casino gaming, sports betting, and search markets, shifting traditional business models to meet consumer preferences.",
+    "ground_truth": "No empirical conclusions, research variables, or observable relationships",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2003
+    ]
+}

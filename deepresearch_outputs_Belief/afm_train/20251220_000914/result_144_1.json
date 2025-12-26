@@ -1,0 +1,29 @@
+{
+    "answer": "Respondents with a high sense of grievance are twice as likely to exhibit a zero-sum mindset.",
+    "ground_truth": "twice as likely",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        2059,
+        3348,
+        4625,
+        5810,
+        7157,
+        7577,
+        9112
+    ]
+}

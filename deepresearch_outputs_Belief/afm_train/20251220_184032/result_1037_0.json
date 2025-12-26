@@ -1,0 +1,19 @@
+{
+    "answer": "Art to be shared, live, with a community of people.",
+    "ground_truth": "art will gravitate towards context-rich experiences that go beyond immersive installations while still maintaining the importance of painting",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        2035,
+        2972
+    ]
+}

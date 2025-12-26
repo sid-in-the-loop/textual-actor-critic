@@ -1,0 +1,21 @@
+{
+    "answer": "aiding or abetting the tattooing of a minor",
+    "ground_truth": "Conspiracy to defraud and false accounting",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        875,
+        2115,
+        3181,
+        4243
+    ]
+}

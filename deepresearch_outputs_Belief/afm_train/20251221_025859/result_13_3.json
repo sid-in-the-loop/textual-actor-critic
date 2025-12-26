@@ -1,0 +1,19 @@
+{
+    "answer": "Cloudberry Clean Energy ASA's financial reports, including the fourth quarter 2024 report, are primarily hosted on their own investor relations page, specifically within sections titled \"Financial reports\" (or variations of this naming convention).",
+    "ground_truth": "Cloudberry Clean Energy ASA Periodic Financial Report Series",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1962,
+        3366
+    ]
+}

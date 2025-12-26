@@ -1,0 +1,29 @@
+{
+    "answer": "Official schedule/PDF for the UK central bank's Financial Policy Committee in 2025 is available on the Bank of England website (e.g., Financial Policy Committee Record - November 2025, Financial Policy Committee Record - August 2025). Key dates include April 9, July 9, August 6, October 8, November 25, December 1.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        884,
+        2138,
+        3422,
+        4772,
+        6156,
+        7829,
+        9843,
+        10414
+    ]
+}

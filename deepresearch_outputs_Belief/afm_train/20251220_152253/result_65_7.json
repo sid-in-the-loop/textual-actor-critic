@@ -1,0 +1,21 @@
+{
+    "answer": "The 2024 work programme published by the Joint Committee of the European Supervisory Authorities (ESMA chaired).",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        2154,
+        3636,
+        4860
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "P.S. Elijah",
+    "ground_truth": "Helen Margaret Spanton",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2498,
+        3284
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Nestl\u00e9's \"Our financial result announcements\" section is the most relevant.",
+    "ground_truth": "Nestl\u00e9 Investors - Results Announcements",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        807,
+        1779
+    ]
+}

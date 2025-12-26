@@ -1,0 +1,23 @@
+{
+    "answer": "Science and Technology: Physical Sciences, Life Sciences & Biomedicine, Earth Sciences, Environmental Sciences, and Computer Science.\nSocial Sciences: Behavioral Sciences, Economics, History, Political Science, Psychology, and Demography.\nArts and Humanities: Literature, Philosophy, Anthropology, Linguistics, Fine Arts, and Psychology.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1880,
+        3136,
+        4995,
+        5339
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The unique specific document is not found within the provided information.",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2043,
+        3544,
+        4735,
+        6252
+    ]
+}

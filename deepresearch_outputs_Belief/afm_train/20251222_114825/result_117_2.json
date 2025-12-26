@@ -1,0 +1,27 @@
+{
+    "answer": "MPC meetings for 2025 are confirmed for:\n- February 4, 2025\n- February 6, 2025\n- May 8, 2025\n- June 19, 2025\n- August 7, 2025\n- September 18, 2025",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        2024,
+        3365,
+        4591,
+        5851,
+        6929,
+        8293
+    ]
+}

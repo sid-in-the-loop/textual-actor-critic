@@ -1,0 +1,23 @@
+{
+    "answer": "13.25% of the Group's consolidated revenue was attributable to its operations in Spain during the first three months of 2025.",
+    "ground_truth": "41%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        785,
+        2075,
+        3592,
+        4814,
+        6216
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "27 years",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        1694,
+        2755,
+        3759
+    ]
+}

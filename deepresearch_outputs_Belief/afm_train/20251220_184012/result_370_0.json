@@ -1,0 +1,21 @@
+{
+    "answer": "Guide for Authors",
+    "ground_truth": "Nature For Authors (for-authors)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        705,
+        1396,
+        2326,
+        3144
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Reports & Briefs Archives",
+    "ground_truth": "Hanover Research Reports & Briefs",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1619
+    ]
+}

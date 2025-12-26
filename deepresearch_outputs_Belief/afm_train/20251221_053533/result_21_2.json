@@ -1,0 +1,25 @@
+{
+    "answer": "USS MacArthur (Fleet 17 while President Quezon was in the Philippines)",
+    "ground_truth": "At the Malaca\u00f1ang Palace",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        1829,
+        3211,
+        4697,
+        6421,
+        8249
+    ]
+}

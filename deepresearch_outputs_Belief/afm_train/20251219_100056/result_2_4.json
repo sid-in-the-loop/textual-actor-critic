@@ -1,0 +1,21 @@
+{
+    "answer": "Squadron Leader Chris Howarth's P-38J Lightning, the \"Flying Legends\" display at Duxford in 1996.",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2099,
+        3339,
+        4497
+    ]
+}

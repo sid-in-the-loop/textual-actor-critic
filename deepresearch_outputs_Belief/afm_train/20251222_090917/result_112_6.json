@@ -1,0 +1,27 @@
+{
+    "answer": "53%, 5 companies",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        1781,
+        2960,
+        3984,
+        5150,
+        6370,
+        7397
+    ]
+}

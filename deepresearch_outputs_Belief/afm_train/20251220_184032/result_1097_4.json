@@ -1,0 +1,23 @@
+{
+    "answer": "No specific information was found in the search results regarding outlier spikes in matching elasticity for the Tokai region after 2020 in Figure 2014\u20132025 of the identified paper.",
+    "ground_truth": "Sharp upward spikes observed in Tokai region after 2020",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        826,
+        2075,
+        1013,
+        2420,
+        3754
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The specific agreement or names/designated person for the \"Action for Children full-time post\" in the 2025 National Community Conference and Seminar is not found in the official documentation.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        869,
+        2178,
+        3357,
+        4002,
+        4710
+    ]
+}

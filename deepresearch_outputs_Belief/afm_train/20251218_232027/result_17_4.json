@@ -1,0 +1,27 @@
+{
+    "answer": "2024 Cosentyx Net Sales: USD 6.1 billion (reported +22%, constant currency +24%). 2023 Cosentyx Reported Net Sales (immunology segment) deducted Xolair sales: USD 1,303 million (FY +21%, US sales +21%). Full year 2023 (immunology segment) Segment Revenue: $13.0 billion.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        935,
+        2816,
+        4503,
+        5888,
+        7442,
+        9012,
+        10650
+    ]
+}

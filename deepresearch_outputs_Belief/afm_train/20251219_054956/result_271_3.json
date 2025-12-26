@@ -1,0 +1,25 @@
+{
+    "answer": "Online-Civic-Engagement Report",
+    "ground_truth": "Pew Research Center Global Social Media and Democracy Relationship Survey Report (2022)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        2192,
+        3641,
+        5010,
+        5498,
+        5949
+    ]
+}

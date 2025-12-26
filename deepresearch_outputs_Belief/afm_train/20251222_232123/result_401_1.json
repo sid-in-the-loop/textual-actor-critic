@@ -1,0 +1,23 @@
+{
+    "answer": "141.1 billion, 341.06% increase",
+    "ground_truth": "\u20ac141.1 billion on 2025-03-31; 4% increase from \u20ac135.6 billion on 2024-12-31",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        876,
+        2148,
+        3486,
+        4798,
+        6159
+    ]
+}

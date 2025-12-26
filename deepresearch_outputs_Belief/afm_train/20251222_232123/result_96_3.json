@@ -1,0 +1,25 @@
+{
+    "answer": "\u300aZhenhui Tongbao\u300b",
+    "ground_truth": "\u4e2d\u56fd\u62a5\u5b66\u53f2",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        874,
+        2245,
+        3750,
+        5404,
+        7182,
+        8820
+    ]
+}

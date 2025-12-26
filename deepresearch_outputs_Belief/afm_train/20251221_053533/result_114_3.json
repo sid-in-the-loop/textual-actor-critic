@@ -1,0 +1,23 @@
+{
+    "answer": "Disclosures about Management-Defined Performance Measures (MDPMs) in a single note to the financial statements, along with specific disclosures about the classification of income and expenses by nature in the statement of profit or loss.",
+    "ground_truth": "Item 18. Financial Statements",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        2062,
+        3244,
+        4417,
+        5723
+    ]
+}

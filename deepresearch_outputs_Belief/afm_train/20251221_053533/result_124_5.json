@@ -1,0 +1,23 @@
+{
+    "answer": "Amicable Cremation and Scattering Allowance for Chen Guangcheng",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        989,
+        2377,
+        3834,
+        5479,
+        7505
+    ]
+}

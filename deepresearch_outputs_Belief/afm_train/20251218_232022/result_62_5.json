@@ -1,0 +1,25 @@
+{
+    "answer": "The question cannot be answered because an exact percentage increase was not found in returned search results, although general terms like \"Spring 2024\" and \"graduate certificate enrollments\" related to the \"2025 Landscape of Higher Education Report\" were found in summaries.",
+    "ground_truth": "10%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        819,
+        1496,
+        1922,
+        2464,
+        3190,
+        3701
+    ]
+}

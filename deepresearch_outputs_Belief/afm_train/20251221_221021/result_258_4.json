@@ -1,0 +1,21 @@
+{
+    "answer": "India's AUM increased from under one trillion dollars in 2005 to $17 trillion by 2025, representing 19.9% of GDP as of March 2025.",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2040,
+        3345,
+        4671
+    ]
+}

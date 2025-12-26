@@ -1,0 +1,27 @@
+{
+    "answer": "Higher ChatGPT usage was significantly associated with lower levels of self-control and academic wellbeing.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2073,
+        3232,
+        4450,
+        5710,
+        6975,
+        8332
+    ]
+}

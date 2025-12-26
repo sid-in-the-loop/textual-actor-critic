@@ -1,0 +1,19 @@
+{
+    "answer": "FY 2025 Congressional Budget Justification and Annual Performance Plan - OPM",
+    "ground_truth": "FY 2025 Congressional Budget Justification and Annual Performance Plan (OPM)",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        1780,
+        2874
+    ]
+}

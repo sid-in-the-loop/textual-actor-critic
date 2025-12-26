@@ -1,0 +1,27 @@
+{
+    "answer": "The article \"Conservative Project at Supreme Court Meets Trump's Push to Oust Independent Agencies\" published on December 7, 2025, focuses on the 2025 U.S. presidential expansion of executive power and plans for increasing control over government agencies.",
+    "ground_truth": "Trump Plans to Expand Presidential Power Over Agencies in 2025 - The New York Times",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1075,
+        2423,
+        2816,
+        4047,
+        4388,
+        5146
+    ]
+}

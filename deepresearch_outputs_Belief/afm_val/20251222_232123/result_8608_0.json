@@ -1,0 +1,17 @@
+{
+    "answer": "Justin Trudeau's failed multilateral relations.",
+    "ground_truth": "faces calls to step down",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        1780
+    ]
+}

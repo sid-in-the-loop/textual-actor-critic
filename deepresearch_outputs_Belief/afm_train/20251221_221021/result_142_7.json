@@ -1,0 +1,21 @@
+{
+    "answer": "Over two billion people",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        2262,
+        3842,
+        5104
+    ]
+}

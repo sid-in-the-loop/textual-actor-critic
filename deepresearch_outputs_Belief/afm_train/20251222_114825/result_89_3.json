@@ -1,0 +1,19 @@
+{
+    "answer": "No American television series is explicitly noted for the \"Perfect Fool\" character of an actor/comedian as its main character.",
+    "ground_truth": "The Twilight Zone",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1920,
+        3130
+    ]
+}

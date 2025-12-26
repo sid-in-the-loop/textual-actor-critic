@@ -1,0 +1,19 @@
+{
+    "answer": "Economics and Trade (\u7ecf\u6d4e\u8d38\u6613) or Economic and Business Administration (\u7ecf\u6d4e\u7ba1\u7406)",
+    "ground_truth": "Statistics (stat)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        889,
+        1955,
+        2753
+    ]
+}

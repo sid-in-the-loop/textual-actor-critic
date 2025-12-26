@@ -1,0 +1,17 @@
+{
+    "answer": "TechCrunch named it 'notable recognition' in summer 2021.",
+    "ground_truth": "Named among TechCrunch's favourite startups of summer 2021",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        913,
+        1844
+    ]
+}

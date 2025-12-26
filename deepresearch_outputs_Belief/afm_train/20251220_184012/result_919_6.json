@@ -1,0 +1,23 @@
+{
+    "answer": "IMF increased its 2026 global GDP growth projection by 0.1 percentage points from its January 2025 forecast, rising from 3.1% to 3.2%.",
+    "ground_truth": "3.0% (April 2025); 3.3% (January 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        926,
+        2517,
+        3889,
+        5102,
+        6527
+    ]
+}

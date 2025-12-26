@@ -1,0 +1,25 @@
+{
+    "answer": "Bank of England Financial Policy Committee 2025 meeting schedule is available on the official Bank of England website under the Financial Policy Committee section.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        1984,
+        3229,
+        4619,
+        5837,
+        7166
+    ]
+}

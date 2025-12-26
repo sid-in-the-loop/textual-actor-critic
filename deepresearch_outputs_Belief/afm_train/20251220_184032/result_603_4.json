@@ -1,0 +1,17 @@
+{
+    "answer": "No article matching the criteria has been published.",
+    "ground_truth": "Tectonic events are reshaping the world: How will the global politics of 2025 be defined? - ABC News",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1792
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "No specific numerical value of financial losses prevented by Maharashtra Cyber since 2019 was found in *Economic Times* searches, despite focused efforts to locate articles.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        913,
+        2820,
+        5028,
+        5701,
+        6952,
+        1661
+    ]
+}

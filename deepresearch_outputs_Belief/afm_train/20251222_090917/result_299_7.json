@@ -1,0 +1,25 @@
+{
+    "answer": "The specific page number is not provided in the search results.",
+    "ground_truth": "Page 26",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1914,
+        3117,
+        3518,
+        4863,
+        5351
+    ]
+}

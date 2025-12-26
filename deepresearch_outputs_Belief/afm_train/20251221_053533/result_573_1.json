@@ -1,0 +1,29 @@
+{
+    "answer": "AN INVITATION was sent to Unison Health & Community Services in November 2025 regarding participation in the Adult Social Care Negotiating Body, as mentioned in their 2025/2024 annual reports.",
+    "ground_truth": "asked to join FPA working group by Department of Health and Social Care",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        2174,
+        2571,
+        3207,
+        4467,
+        4930,
+        5544,
+        6959
+    ]
+}

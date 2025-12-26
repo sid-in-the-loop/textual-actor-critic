@@ -1,0 +1,25 @@
+{
+    "answer": "16 aircraft added (6.67% growth)",
+    "ground_truth": "36%; 193; 262",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        1019,
+        1306,
+        1603,
+        2124,
+        3481
+    ]
+}

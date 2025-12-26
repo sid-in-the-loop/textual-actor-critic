@@ -1,0 +1,23 @@
+{
+    "answer": "Scientific Reports was downgraded from a higher tier to a third-tier position, affecting its perception and impact among researchers.",
+    "ground_truth": "How does the reduction of Scientific Reports from Zone 2 to Zone 3 affect? -AJE American Journal Expert",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        1970,
+        2976,
+        4139,
+        5399
+    ]
+}

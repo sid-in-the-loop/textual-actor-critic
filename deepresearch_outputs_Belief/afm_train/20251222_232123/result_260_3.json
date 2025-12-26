@@ -1,0 +1,27 @@
+{
+    "answer": "Red Bull",
+    "ground_truth": "Chevrolet, represented by the RML Group",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1034,
+        2195,
+        3185,
+        4402,
+        5550,
+        6772,
+        7833
+    ]
+}

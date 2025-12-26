@@ -1,0 +1,29 @@
+{
+    "answer": "The \"The Mobile Economy 2025\" report by GSMA does not explicitly list specific frequency bands for 6G expansion in WRC-27, based on available search results.",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        765,
+        996,
+        2304,
+        2734,
+        3307,
+        4585,
+        7169,
+        7932
+    ]
+}

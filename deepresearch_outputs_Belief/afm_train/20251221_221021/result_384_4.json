@@ -1,0 +1,23 @@
+{
+    "answer": "Spain Revenue / Consolidated Revenue",
+    "ground_truth": "41%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        893,
+        2111,
+        3347,
+        4679,
+        5962
+    ]
+}

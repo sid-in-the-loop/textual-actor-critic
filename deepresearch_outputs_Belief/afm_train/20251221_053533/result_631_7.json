@@ -1,0 +1,19 @@
+{
+    "answer": "Over-70% chance of La Ni\u00f1a emerging, potential heavy rains in some areas of the Americas and Asia.",
+    "ground_truth": "over 70% chance",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2412,
+        3659
+    ]
+}

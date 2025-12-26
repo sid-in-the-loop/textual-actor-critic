@@ -1,0 +1,17 @@
+{
+    "answer": "Mohammed Umar Khan stabbed Harvey Willgoose twice in the heart.",
+    "ground_truth": "stabbed three times in a school courtyard while pupils watched",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        1974
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The self-adaptable encoding (SAE) algorithm automatically identifies and adjusts attention weights to screen critical features, enabling efficient computation. It scales by adapting to the specific features of the problem, thus allowing a larger input volume while maintaining useful output.",
+    "ground_truth": "O(n) computational scaling",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        1956,
+        3219
+    ]
+}

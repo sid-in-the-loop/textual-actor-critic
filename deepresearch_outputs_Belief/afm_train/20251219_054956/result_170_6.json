@@ -1,0 +1,27 @@
+{
+    "answer": "Aldrin Brachet",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        3029,
+        3616,
+        5533,
+        6475,
+        8032,
+        9827
+    ]
+}

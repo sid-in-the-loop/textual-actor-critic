@@ -1,0 +1,25 @@
+{
+    "answer": "Molecular Processes as Quantum Information Resources",
+    "ground_truth": "more than 9,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        2555,
+        2826,
+        4341,
+        4719,
+        6185
+    ]
+}

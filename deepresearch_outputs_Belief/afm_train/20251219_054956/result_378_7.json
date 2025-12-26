@@ -1,0 +1,21 @@
+{
+    "answer": "The review reports that empirical studies on ChatGPT's impact on student well-being are notably scarce.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        790,
+        2253,
+        3526,
+        5239
+    ]
+}

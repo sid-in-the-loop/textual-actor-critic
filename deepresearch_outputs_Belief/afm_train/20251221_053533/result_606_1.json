@@ -1,0 +1,25 @@
+{
+    "answer": "S",
+    "ground_truth": "Man in an apron using a tablet among stools and furnishings",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1042,
+        1350,
+        2484,
+        2765,
+        3405,
+        4252
+    ]
+}

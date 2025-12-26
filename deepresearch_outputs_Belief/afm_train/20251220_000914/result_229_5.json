@@ -1,0 +1,21 @@
+{
+    "answer": "Key factors influencing students' academic performance (DOI: 10.1186/s43067-024-00166-w)",
+    "ground_truth": "Key factors influencing students\u2019 academic performance | Journal of Electrical Systems and Information Technology | Full Text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        2099,
+        2789,
+        3395
+    ]
+}

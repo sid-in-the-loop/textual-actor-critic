@@ -1,0 +1,23 @@
+{
+    "answer": "PBS NewsHour special report \"Project 2025 Is Real\" published April 24, 2025.",
+    "ground_truth": "PBS NewsHour \"Project 2025\" special report collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        862,
+        2292,
+        2722,
+        3243,
+        4817
+    ]
+}

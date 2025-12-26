@@ -1,0 +1,23 @@
+{
+    "answer": "Once Upon a Time in the Northeast",
+    "ground_truth": " \u8bef\u6740",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        2041,
+        3376,
+        4792,
+        6180
+    ]
+}

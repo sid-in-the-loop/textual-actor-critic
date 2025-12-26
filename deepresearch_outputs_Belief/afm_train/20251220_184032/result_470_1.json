@@ -1,0 +1,23 @@
+{
+    "answer": "Year of Discovery and Innovation",
+    "ground_truth": "Annual Collection of Scientific Breakthrough Topics on Study Finds Website",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1829,
+        2922,
+        4285,
+        5557
+    ]
+}

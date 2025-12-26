@@ -1,0 +1,19 @@
+{
+    "answer": "Annual Reviews Impact Report",
+    "ground_truth": "Sustainability trends for 2025 (Economist Impact)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        1863,
+        2736
+    ]
+}

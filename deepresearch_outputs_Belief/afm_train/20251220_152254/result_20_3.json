@@ -1,0 +1,19 @@
+{
+    "answer": "The Scientific Reports journal's submission guidelines are located on nature.com/srep/author-instructions/submission-guidelines. Key requirements include: using Times New Roman 12pt font, line numbered, double-spaced, without a left-hand margin, a covering letter, explicitly stating any competing interests for each author, and including a maximum of 4500 words for the main text within 11 typeset pages.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        633,
+        1546,
+        2605
+    ]
+}

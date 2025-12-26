@@ -1,0 +1,25 @@
+{
+    "answer": "Outstanding legal proceedings and their related contingent liabilities are disclosed in Note B4 of the 2024/2025 half-year financial report.",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        2179,
+        3477,
+        4724,
+        5903,
+        7086
+    ]
+}

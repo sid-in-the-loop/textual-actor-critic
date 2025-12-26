@@ -1,0 +1,27 @@
+{
+    "answer": "The payee\u2019s account details are different, NameCheck *will* prompt you.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2214,
+        3886,
+        4227,
+        4731,
+        5267,
+        6975
+    ]
+}

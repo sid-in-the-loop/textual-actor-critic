@@ -1,0 +1,19 @@
+{
+    "answer": "Exoskeleton innovations",
+    "ground_truth": "LIFTEX 2025 \u5c06\u5c55\u793a\u7535\u68af\u6280\u672f\u7684\u6700\u65b0\u521b\u65b0",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1941,
+        2973
+    ]
+}

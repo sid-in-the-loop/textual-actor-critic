@@ -1,0 +1,29 @@
+{
+    "answer": "Upward/downward",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        885,
+        2749,
+        3377,
+        3832,
+        4221,
+        5039,
+        5512,
+        6067
+    ]
+}

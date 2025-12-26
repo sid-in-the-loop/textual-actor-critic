@@ -1,0 +1,23 @@
+{
+    "answer": "97.2%, 98.5%, 32 duplication counts",
+    "ground_truth": "Score: 0.90\u20131.00; Valid rate: 500; Duplication: <20",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        908,
+        1458,
+        2499,
+        3570,
+        4702
+    ]
+}

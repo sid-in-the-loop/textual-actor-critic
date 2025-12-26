@@ -1,0 +1,25 @@
+{
+    "answer": "None explicitly named",
+    "ground_truth": "Computer Vision and Pattern Recognition (cs.CV)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        1886,
+        3488,
+        5179,
+        6357,
+        7858
+    ]
+}

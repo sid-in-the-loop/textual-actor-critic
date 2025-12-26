@@ -1,0 +1,19 @@
+{
+    "answer": "The Intel Foundry segment revenue decreased by $9.4 billion in 2023 compared to 2022.",
+    "ground_truth": "$0.5 billion",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        2315,
+        3855
+    ]
+}

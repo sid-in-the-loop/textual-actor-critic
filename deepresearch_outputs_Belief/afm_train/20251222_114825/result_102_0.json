@@ -1,0 +1,25 @@
+{
+    "answer": "High levels of food insecurity and low student access to food, with increased rates of anxiety",
+    "ground_truth": "Financially insecure students were 15 times more likely to experience food insecurity; 6.5% and 48% (statistical outcomes reported).",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        1875,
+        2370,
+        2902,
+        3233,
+        3927
+    ]
+}

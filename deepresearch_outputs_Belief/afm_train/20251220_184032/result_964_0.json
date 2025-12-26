@@ -1,0 +1,21 @@
+{
+    "answer": "www.frontiersin.org.cn/journal-introduction/",
+    "ground_truth": "Frontiers Media SA Open Access Journal List (frontiersin. org. cn)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1808,
+        2827,
+        4030
+    ]
+}

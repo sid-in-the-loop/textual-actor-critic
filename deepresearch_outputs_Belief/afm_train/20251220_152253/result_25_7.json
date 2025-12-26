@@ -1,0 +1,27 @@
+{
+    "answer": "subject category of the source publication",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        2317,
+        3382,
+        4381,
+        5901,
+        6873,
+        7535
+    ]
+}

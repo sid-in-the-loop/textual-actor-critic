@@ -1,0 +1,21 @@
+{
+    "answer": "\u6cd5\u56fd\u533b\u751fPhilipe Mouret",
+    "ground_truth": "\u7535\u89c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2318,
+        3589,
+        5217
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "The specific headline story from Yahoo Finance on March 9, 2025, detailing Scott Bessent's analysis on the \"open group net present value\" (NPV) of future social insurance obligations over 75 years starting in FY2024, could not be found with the available search results.",
+    "ground_truth": "($78,400,000,000,000)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        968,
+        2974,
+        3726,
+        4772,
+        5346,
+        6800,
+        8390
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Female students showed greater correlation to low financial literacy than male students",
+    "ground_truth": "Female students were 2.2 times more likely than male students to report having low financial literacy.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        648,
+        800,
+        1782,
+        1981,
+        2393,
+        2838,
+        2924,
+        3101
+    ]
+}

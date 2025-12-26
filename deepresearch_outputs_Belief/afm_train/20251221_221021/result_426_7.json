@@ -1,0 +1,21 @@
+{
+    "answer": "Ability EI shows the strongest association with academic performance (AP) compared to self-report and self-report mixed EI.",
+    "ground_truth": "ability: 0.31; self-report: 0.24; self-report mixed EI: 0.26",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        2363,
+        3567,
+        4734
+    ]
+}

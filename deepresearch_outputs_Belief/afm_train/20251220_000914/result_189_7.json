@@ -1,0 +1,21 @@
+{
+    "answer": "The protest opposed the Black Tent Bill and involved tens of thousands of people.",
+    "ground_truth": "More than 40,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2319,
+        3674,
+        5206
+    ]
+}

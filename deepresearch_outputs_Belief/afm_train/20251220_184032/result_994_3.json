@@ -1,0 +1,17 @@
+{
+    "answer": "12 Leading Curators Predict the Defining Art Trends of 2025",
+    "ground_truth": "Artsy -12 Leading Curators Predict the Defining Art Trends of 2025 (Artsy Special Planning)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        1953
+    ]
+}

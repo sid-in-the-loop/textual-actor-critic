@@ -1,0 +1,23 @@
+{
+    "answer": "Bank of England Monetary Policy Committee (MPC) dates for 2025: 6 February, 20 March, 8 May, 19 June, 7 August, and 18 September.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        790,
+        2043,
+        3173,
+        4382,
+        5669
+    ]
+}

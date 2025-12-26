@@ -1,0 +1,19 @@
+{
+    "answer": "The official guide is \"Hospital Inpatient Quality Reporting Program Reference Guide\" (August 1, 2025) from Quality Reporting Center.",
+    "ground_truth": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2125,
+        3634
+    ]
+}

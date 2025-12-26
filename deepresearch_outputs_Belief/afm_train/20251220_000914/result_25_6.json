@@ -1,0 +1,29 @@
+{
+    "answer": "Web of Science categorizes subjects under main categories like Science, Technology, Social Sciences, and Arts and Humanities. It also includes Expanded Science Citation Index (ESCI) and Arts and Humanities Citation Index (AHCI) as primary subject classifications, along with subject keywords and author keywords for further categorization.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        1847,
+        3177,
+        4374,
+        5840,
+        7115,
+        8182,
+        9576
+    ]
+}

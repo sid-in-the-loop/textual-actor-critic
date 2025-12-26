@@ -1,0 +1,19 @@
+{
+    "answer": "The figure showing a failed attempt by GPT-4o to translate a famous Lebanese idiom, which is likely Figure 1 of the paper \"Fine-Tuning LLMs for Low-Resource Dialect Translation.\"",
+    "ground_truth": "Figure 6",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        2148,
+        3594
+    ]
+}

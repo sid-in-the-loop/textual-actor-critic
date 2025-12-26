@@ -1,0 +1,25 @@
+{
+    "answer": "45,000 people attended Dreamforce in San Francisco, representing more than 140 countries, with 300+ shows featured.",
+    "ground_truth": "45,000 people; 140 countries; 1,500 shows",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        874,
+        2227,
+        3667,
+        5325,
+        5940,
+        7613
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "https://www.nestle.com/investors/results",
+    "ground_truth": "Nestl\u00e9 Investors - Results Announcements",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1815,
+        2795,
+        3077
+    ]
+}

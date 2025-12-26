@@ -1,0 +1,21 @@
+{
+    "answer": "Public Services Workers' Union of TUC (PSWU)",
+    "ground_truth": "UNISON - the public service union",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        722,
+        1592,
+        2842,
+        3820
+    ]
+}

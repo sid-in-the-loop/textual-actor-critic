@@ -1,0 +1,23 @@
+{
+    "answer": "Not enough information is available in the search results regarding ALFWorld's performance with the specified selection extensions and a direct comparison to more complex task-specific approaches.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2029,
+        2607,
+        2882,
+        3425
+    ]
+}

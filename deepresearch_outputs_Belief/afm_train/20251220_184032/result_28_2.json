@@ -1,0 +1,21 @@
+{
+    "answer": "According to the FTC's enforcement of the FTC Act Section 5, OMICS Publishing Group was fined $50.1 million for predatory publishing practices in 2019.",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        765,
+        2077,
+        3409,
+        4956
+    ]
+}

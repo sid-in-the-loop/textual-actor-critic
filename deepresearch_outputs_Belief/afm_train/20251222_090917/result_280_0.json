@@ -1,0 +1,19 @@
+{
+    "answer": "Olympus Corporation achieved over 20% year-over-year growth in emerging markets, and the Endoscopic Solutions Division (ESD) also achieved over 20% year-over-year growth.",
+    "ground_truth": "over 20%",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        2243,
+        3657
+    ]
+}

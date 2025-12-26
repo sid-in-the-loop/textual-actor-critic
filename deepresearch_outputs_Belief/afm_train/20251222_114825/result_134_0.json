@@ -1,0 +1,21 @@
+{
+    "answer": "State of Florida Long-Range Financial Outlook",
+    "ground_truth": "Metro Vancouver 2025-2029 Financial Plan",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        2107,
+        2440,
+        2691
+    ]
+}

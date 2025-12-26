@@ -1,0 +1,19 @@
+{
+    "answer": "Forty years later, we're due for another big rethink about Canada's future",
+    "ground_truth": "Donald Trump is changing the political culture of the United States | Policy Options (2025\u5e743\u670817\u65e5)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        806,
+        1851,
+        3055
+    ]
+}

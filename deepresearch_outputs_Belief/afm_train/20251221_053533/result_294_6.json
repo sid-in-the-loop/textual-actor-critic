@@ -1,0 +1,29 @@
+{
+    "answer": "Not available in the search results and the article notes it is \"well-funded\" without specifying an amount.",
+    "ground_truth": "$200,000,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        891,
+        2087,
+        3603,
+        4334,
+        5833,
+        7451,
+        9253,
+        10320
+    ]
+}

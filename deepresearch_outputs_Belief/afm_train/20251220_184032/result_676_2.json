@@ -1,0 +1,23 @@
+{
+    "answer": "No OACA, and a disadvantage.",
+    "ground_truth": "-20% to -15%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        906,
+        1951,
+        2269,
+        2546,
+        3965
+    ]
+}

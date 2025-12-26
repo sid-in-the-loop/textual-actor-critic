@@ -1,0 +1,23 @@
+{
+    "answer": "General Categories with specific subject areas.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1949,
+        3156,
+        4479,
+        5803
+    ]
+}

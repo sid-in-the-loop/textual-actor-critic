@@ -1,0 +1,19 @@
+{
+    "answer": "Annual stability and convergence programmes",
+    "ground_truth": "National medium-term fiscal-structural plans (MTPs)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        1872,
+        2923
+    ]
+}

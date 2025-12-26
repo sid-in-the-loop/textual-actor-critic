@@ -1,0 +1,19 @@
+{
+    "answer": "5GW AI data center approved for OpenAI, reflecting trend of large-scale AI infrastructure, with $100 billion investment and $40 billion annual revenue projected.",
+    "ground_truth": "No analytical or data-driven conclusions",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        938,
+        2255,
+        3634
+    ]
+}

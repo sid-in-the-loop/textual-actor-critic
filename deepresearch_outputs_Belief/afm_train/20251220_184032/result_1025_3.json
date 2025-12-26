@@ -1,0 +1,17 @@
+{
+    "answer": "April 15, 2025; The Star Brisbane integrated resort opened and its operations commenced.",
+    "ground_truth": "2024-08-29; casino, hotel, restaurants, bars, entertainment facilities",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        899,
+        1952
+    ]
+}

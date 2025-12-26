@@ -1,0 +1,21 @@
+{
+    "answer": "The report mentions that 15x more likely to have very low food security. It also examines the prevalence of food insecurity and its related outcomes, including its impact on health and academic performance.",
+    "ground_truth": "Financially insecure students were 15 times more likely to experience food insecurity; 6.5% and 48% (statistical outcomes reported).",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        2016,
+        2457,
+        3212
+    ]
+}

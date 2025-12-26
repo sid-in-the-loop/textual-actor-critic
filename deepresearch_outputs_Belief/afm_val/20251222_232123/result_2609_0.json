@@ -1,0 +1,19 @@
+{
+    "answer": "Global Trust Index 56%, 30-point gap, -4 percentage points",
+    "ground_truth": "No trust index scores or changes",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        2000,
+        3031
+    ]
+}

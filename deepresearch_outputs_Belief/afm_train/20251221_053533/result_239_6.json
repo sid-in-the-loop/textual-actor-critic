@@ -1,0 +1,21 @@
+{
+    "answer": "Audience Measurement and Industry Trends Report",
+    "ground_truth": "Communications Authority of Kenya Audience Measurement and Industry Trends Report series (2023/24 to 2024/25 multiple quarterly reports)",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2263,
+        3722,
+        4991
+    ]
+}

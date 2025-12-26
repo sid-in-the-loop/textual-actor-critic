@@ -1,0 +1,19 @@
+{
+    "answer": "The official document 'Budget in Brief' from the U.S. Department of Commerce for FY 2025 does not detail the specific actions of the Radiation Portal Monitors Replacement Program (RPM-RP) regarding cargo container screening at ports.",
+    "ground_truth": "screen 100% of inbound cargo containers",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        888,
+        2095,
+        3459
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Reviewer fatigue: a pressing concern and a calling for prompt innovation.",
+    "ground_truth": "The Future of Peer Review: Innovations and Challenges for 2024-2025",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        2064
+    ]
+}

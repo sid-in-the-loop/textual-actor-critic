@@ -1,0 +1,21 @@
+{
+    "answer": "Additional investments of up to \u20ac1.26bn are required by 2025",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        2028,
+        3240,
+        4620
+    ]
+}

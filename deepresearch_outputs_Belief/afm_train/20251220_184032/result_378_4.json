@@ -1,0 +1,21 @@
+{
+    "answer": "Positive relationship between AI use in higher education and student well-being.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        2057,
+        3312,
+        4785
+    ]
+}

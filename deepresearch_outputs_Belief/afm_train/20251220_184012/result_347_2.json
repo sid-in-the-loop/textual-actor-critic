@@ -1,0 +1,23 @@
+{
+    "answer": "PescaData was officially launched in 2022, enabling a peer-to-peer exchange of information to digitize these practices.",
+    "ground_truth": "Started: 2020; facilitated peer-to-peer learning among small-scale fishers in Latin America",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        877,
+        1931,
+        3157,
+        4305,
+        5633
+    ]
+}

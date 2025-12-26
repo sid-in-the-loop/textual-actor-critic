@@ -1,0 +1,29 @@
+{
+    "answer": "The target article's \"accepted date\" could not be found through any web searches.",
+    "ground_truth": "2024-03-04",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        932,
+        2153,
+        3491,
+        4718,
+        5289,
+        5884,
+        7095,
+        1519
+    ]
+}

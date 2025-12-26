@@ -1,0 +1,19 @@
+{
+    "answer": "Joint Guidelines on the system for the exchange of information relevant to fit",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        2186,
+        3643
+    ]
+}

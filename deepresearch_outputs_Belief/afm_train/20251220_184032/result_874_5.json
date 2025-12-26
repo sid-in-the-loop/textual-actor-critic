@@ -1,0 +1,23 @@
+{
+    "answer": "Otto Hafner",
+    "ground_truth": "General Luis Mena",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1071,
+        2344,
+        3803,
+        4881,
+        6165
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "351",
+    "ground_truth": "Jan-2025-WebEdition.pdf (Christ Lutheran Church official website)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        1827,
+        2925,
+        4102
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Bloomberg Law 2025: Predictions That Cut Through the Commotion",
+    "ground_truth": "Mathematics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1923,
+        3484,
+        4443
+    ]
+}

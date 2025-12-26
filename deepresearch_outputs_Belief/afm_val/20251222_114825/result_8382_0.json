@@ -1,0 +1,17 @@
+{
+    "answer": "Financial Plan (with Quarterly Updates)",
+    "ground_truth": "FY 2022 Enacted Budget Financial Plan (New York State Division of the Budget)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        1684
+    ]
+}

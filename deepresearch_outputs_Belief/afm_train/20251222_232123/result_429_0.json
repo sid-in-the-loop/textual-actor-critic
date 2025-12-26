@@ -1,0 +1,19 @@
+{
+    "answer": "Vance Parker (5) and Lt. Al Cisneros (7). USN 200th anniversary",
+    "ground_truth": "He became the first Hispanic pilot to serve with the Blue Angels",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        2015,
+        3230
+    ]
+}

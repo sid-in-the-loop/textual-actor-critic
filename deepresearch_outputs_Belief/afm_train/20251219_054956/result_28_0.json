@@ -1,0 +1,23 @@
+{
+    "answer": "The Federal Trade Commission (FTC) imposed a $50.1 million judgment on OMICS Publishing Group in 2019, and its classification in relation to scholarly publication and open access was found to be \"academic publishing\"",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1758,
+        2752,
+        3902,
+        5588
+    ]
+}

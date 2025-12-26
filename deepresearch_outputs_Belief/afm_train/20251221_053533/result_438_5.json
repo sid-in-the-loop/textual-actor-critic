@@ -1,0 +1,19 @@
+{
+    "answer": "The Japan Photo Journal did not report a cultural performance at a Kyoto temple on 2025/5/9.",
+    "ground_truth": "Buddha characters performed a traditional dance",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        2410,
+        3647
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Moody's downgraded the US government's credit rating from Aaa to Aa1.",
+    "ground_truth": "stripped of top credit rating",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        1905
+    ]
+}

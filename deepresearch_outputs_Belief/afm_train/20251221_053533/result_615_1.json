@@ -1,0 +1,23 @@
+{
+    "answer": "Be more adaptable and prepare to change and adjust strategies as needed to overcome challenges.",
+    "ground_truth": "dynamic supply chains and agile workforce management",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1021,
+        2270,
+        3544,
+        4793,
+        6054
+    ]
+}

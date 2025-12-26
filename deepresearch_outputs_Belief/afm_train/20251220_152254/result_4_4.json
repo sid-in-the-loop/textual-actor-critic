@@ -1,0 +1,25 @@
+{
+    "answer": "Boosting brand health and customer loyalty by building on the existing relationship with customers.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        1242,
+        2803,
+        3708,
+        5684,
+        6374
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Designing Political Order, pp. ... 5 Lake 2007, 50\u201353.",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        696,
+        2164,
+        2475,
+        2575,
+        3191,
+        3561,
+        5380
+    ]
+}

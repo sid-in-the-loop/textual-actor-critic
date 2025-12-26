@@ -1,0 +1,17 @@
+{
+    "answer": "World's Largest Photovoltaic and Energy Storage Project, China's largest integrated offshore PV project (solar, hydrogen, and energy storage), 1,000MW/6,000MWh electrochemical shared BESS project, Tibet's largest solar-storage project (250 MW solar, 250 MWh BESS), Ibri III solar, battery storage project (500 MW total, 100 MWp BESS), and China Energy Engineering Group Shanxi Electric Power Engineering's 500MW solar PV project.",
+    "ground_truth": "100GW Great Solar Wall in Inner Mongolia; 4GW Ruoqiang Solar Project; 1GW open-sea solar plant in Shandong",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2305
+    ]
+}

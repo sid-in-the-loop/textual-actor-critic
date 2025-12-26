@@ -1,0 +1,21 @@
+{
+    "answer": "A hospital facing a withdrawal must withdraw the NOP, potentially incurring a 25% penalty on their Medicare claims.",
+    "ground_truth": "One-fourth reduction in annual payment update; excluded from Hospital Value-Based Purchasing Program",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        914,
+        2355,
+        3617,
+        4891
+    ]
+}

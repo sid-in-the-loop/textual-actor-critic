@@ -1,0 +1,25 @@
+{
+    "answer": "Specific formatting requirements like 12-point Times New Roman, line-numbered, and double-spaced text are not explicitly detailed in the provided search results from Scientific Reports' submission guidelines.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        663,
+        1677,
+        2520,
+        2822,
+        3393,
+        4762
+    ]
+}

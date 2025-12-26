@@ -1,0 +1,23 @@
+{
+    "answer": "A 31 million increase in the global water-scarce urban population by 2050.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        951,
+        2282,
+        3281,
+        3701,
+        4462
+    ]
+}

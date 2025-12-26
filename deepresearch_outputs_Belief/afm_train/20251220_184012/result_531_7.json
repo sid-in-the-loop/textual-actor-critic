@@ -1,0 +1,21 @@
+{
+    "answer": "Yes, Figure 1 features a chart or data visualization.",
+    "ground_truth": "Only U.S. Chamber of Commerce logo and branding",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        881,
+        2386,
+        3700,
+        4864
+    ]
+}

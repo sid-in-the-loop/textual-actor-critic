@@ -1,0 +1,23 @@
+{
+    "answer": "Automatic one-fourth reduction of the applicable percentage increase.",
+    "ground_truth": "One-fourth reduction in annual payment update; excluded from Hospital Value-Based Purchasing Program",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2176,
+        2622,
+        3079,
+        4456
+    ]
+}

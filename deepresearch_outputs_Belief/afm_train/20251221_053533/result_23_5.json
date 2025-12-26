@@ -1,0 +1,27 @@
+{
+    "answer": "srep-checklist-for-initial-submissions.pdf",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1648,
+        2692,
+        3715,
+        5024,
+        6142,
+        6447
+    ]
+}

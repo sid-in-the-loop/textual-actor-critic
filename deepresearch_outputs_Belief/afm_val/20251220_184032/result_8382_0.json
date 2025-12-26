@@ -1,0 +1,17 @@
+{
+    "answer": "FY 2022 Enacted Budget - Division of the Budget - NY.Gov",
+    "ground_truth": "FY 2022 Enacted Budget Financial Plan (New York State Division of the Budget)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1808
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "There is no village in Hempstead that is home for a team John Paul Loviglio plays for.",
+    "ground_truth": "Freeport, New York",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2042,
+        2904,
+        3898
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "The film *The Coldest Winter in Peking* passed inspection by Hong Kong's film censors, so it was not canceled.",
+    "ground_truth": "\u300a\u7687\u5929\u540e\u571f\u300b\u82f1\u6587\u8bd1\u540d\u4e3a\nThe Coldest Winter in Peking ",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        806,
+        2177,
+        3309,
+        4484,
+        5785
+    ]
+}

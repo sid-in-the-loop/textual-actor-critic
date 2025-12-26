@@ -1,0 +1,27 @@
+{
+    "answer": "The Journal of Anthropological Theory",
+    "ground_truth": "Hispanic American Historical Review",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        937,
+        1295,
+        2742,
+        3505,
+        3995,
+        4840,
+        5840
+    ]
+}

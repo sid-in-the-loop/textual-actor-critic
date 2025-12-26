@@ -1,0 +1,21 @@
+{
+    "answer": "Outstanding legal proceedings, legal challenges, regulatory and legal provisions, and contingent liabilities.",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        863,
+        2365,
+        3936,
+        4473
+    ]
+}

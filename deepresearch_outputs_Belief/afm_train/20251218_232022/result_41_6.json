@@ -1,0 +1,21 @@
+{
+    "answer": "deploy AI on the battlefield and improve counter-unmanned aircraft systems capabilities",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        709,
+        1919,
+        3136,
+        4531
+    ]
+}

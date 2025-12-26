@@ -1,0 +1,17 @@
+{
+    "answer": "Market share and market growth in Region China",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        930,
+        2431
+    ]
+}

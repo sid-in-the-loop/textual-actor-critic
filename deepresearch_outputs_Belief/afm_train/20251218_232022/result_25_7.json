@@ -1,0 +1,21 @@
+{
+    "answer": "Web of Science defines subject categories through a hierarchical system that includes broad categories such as Engineering, Biomedical, Literature, and Physics within the broader Science and Technology domain, alongside distinct fields like Agronomy and Materials Sciences.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        1898,
+        3548,
+        4898
+    ]
+}

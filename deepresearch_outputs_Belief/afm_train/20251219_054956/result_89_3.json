@@ -1,0 +1,25 @@
+{
+    "answer": "Simple Simon (1930 Series)",
+    "ground_truth": "The Twilight Zone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        713,
+        1783,
+        3143,
+        990,
+        1348,
+        2448
+    ]
+}

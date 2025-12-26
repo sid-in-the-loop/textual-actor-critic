@@ -1,0 +1,21 @@
+{
+    "answer": "India's AUM has more than doubled, representing a significant portion of the nation's GDP, with specific figures detailed in the IBM Institute for Business Value's 2025 global banking and financial markets outlook.",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1958,
+        3281,
+        4552
+    ]
+}

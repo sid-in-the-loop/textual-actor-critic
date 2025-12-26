@@ -1,0 +1,23 @@
+{
+    "answer": "The provided information has not been comprehensively searched and compared to identify a report that strictly matches all specified criteria (annual analysis report, December 5, 2024, Research World, comprehensive list, STEEP framework, and UNICEF statistic on insufficient water supply).",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        2137,
+        3274,
+        4755,
+        6662
+    ]
+}

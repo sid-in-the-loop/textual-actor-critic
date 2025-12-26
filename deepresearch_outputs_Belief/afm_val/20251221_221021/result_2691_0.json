@@ -1,0 +1,17 @@
+{
+    "answer": "The forecast for Mexico's overnight interbank rate by the end of 2025 is 9.75%, starting January 2025, and this forecast is the same as the current rate, as it was 9.75% as of the press release.",
+    "ground_truth": "8%\u20138.25%, 9.5%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        2046
+    ]
+}

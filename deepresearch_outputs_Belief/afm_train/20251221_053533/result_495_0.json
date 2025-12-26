@@ -1,0 +1,23 @@
+{
+    "answer": "Today, U.S. News & World Report publishes its 42nd annual rankings of America's best colleges.",
+    "ground_truth": "The 2025 U.S. News & World Report Rankings Are Here\u2014What You Need To Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1959,
+        3254,
+        4502,
+        6043
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The document is not uniquely available through The Kraft Heinz Company's investor relations page for a comprehensive financial overview covering a visual comparison between Kraft Heinz stock and the S&P Consumer Staples Packaged Food & Soft Drinks index from 2022 to 2023. The most recent available information is Kraft Heinz's \"Third Quarter 2025 Results\" and \"Full Year 2025 Outlook\" (oct 29, 2025). Visual data on the requested period was not found.",
+    "ground_truth": "Outperformed from 2022 to 2023; converged near $120 on 2024-12-27",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        854,
+        2117,
+        3301,
+        4781
+    ]
+}

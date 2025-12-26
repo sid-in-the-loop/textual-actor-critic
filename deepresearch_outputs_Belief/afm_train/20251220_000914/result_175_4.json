@@ -1,0 +1,21 @@
+{
+    "answer": "Publications archive for investors",
+    "ground_truth": "Nestl\u00e9 Investors - Results Announcements",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        696,
+        1336,
+        2427,
+        3599
+    ]
+}

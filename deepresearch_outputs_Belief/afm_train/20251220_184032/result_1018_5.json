@@ -1,0 +1,21 @@
+{
+    "answer": "FlowMol: 0.23 mNet; GeoLDM: 0.18 mNet",
+    "ground_truth": "Intermediate mNet distances between the best (SemlaFlow, EQGAT-diff) and the worst (GCDM)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        1498,
+        2666,
+        3867
+    ]
+}

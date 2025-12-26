@@ -1,0 +1,25 @@
+{
+    "answer": "Not found in the provided snippets.",
+    "ground_truth": "2.1%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2303,
+        3747,
+        4985,
+        6762,
+        8150
+    ]
+}

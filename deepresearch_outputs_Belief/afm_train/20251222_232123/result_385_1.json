@@ -1,0 +1,21 @@
+{
+    "answer": "Key US Consumer Trends for 2025",
+    "ground_truth": "Top 10 Marketing Trends to Watch in 2025 & Beyond",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        1800,
+        2204,
+        3265
+    ]
+}

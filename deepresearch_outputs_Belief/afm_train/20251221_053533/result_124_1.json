@@ -1,0 +1,29 @@
+{
+    "answer": "Peng Zhen",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2273,
+        3831,
+        5778,
+        6039,
+        7676,
+        8879,
+        10383
+    ]
+}

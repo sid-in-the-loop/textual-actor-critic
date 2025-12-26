@@ -1,0 +1,21 @@
+{
+    "answer": "2018 repression score dropped to 0, indicating widespread political repression and a significant increase from previous years.",
+    "ground_truth": "35th percentile to 0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1207,
+        2336,
+        4527
+    ]
+}

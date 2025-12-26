@@ -1,0 +1,23 @@
+{
+    "answer": "Increasing number of children in preschool and kindergarten.",
+    "ground_truth": "a new baby boom entering preschool and kindergarten",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2103,
+        3465,
+        4825,
+        6176
+    ]
+}

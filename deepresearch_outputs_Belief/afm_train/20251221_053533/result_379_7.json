@@ -1,0 +1,23 @@
+{
+    "answer": "The Data Center and AI (DCAI) segment revenue decreased by 20% in 2024 as compared to 2023.",
+    "ground_truth": "$0.2 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        816,
+        2251,
+        2880,
+        4345,
+        5369
+    ]
+}

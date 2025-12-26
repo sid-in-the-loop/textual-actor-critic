@@ -1,0 +1,23 @@
+{
+    "answer": "The full year 2024 reported net sales for the immunology segment are not available in the supplementary financial data report, nor are the changes compared to 2023 for both reported and constant currency adjustments. The overall full year 2024 net sales are USD 50.3 billion (+11%, +12% cc) in the company, excluding immunology segment-specific data.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2077,
+        4264,
+        4741,
+        6325
+    ]
+}

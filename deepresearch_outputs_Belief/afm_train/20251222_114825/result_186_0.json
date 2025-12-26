@@ -1,0 +1,19 @@
+{
+    "answer": "Chapter 1: Global Prospects",
+    "ground_truth": "Predictions 2025 section",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1849,
+        2924
+    ]
+}

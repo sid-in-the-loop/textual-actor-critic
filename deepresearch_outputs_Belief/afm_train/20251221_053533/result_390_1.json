@@ -1,0 +1,23 @@
+{
+    "answer": "The Academic Writers' Space",
+    "ground_truth": "EssayPro\u7f51\u7ad9\uff08essaypro.com\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        1711,
+        3207,
+        4667,
+        6098
+    ]
+}

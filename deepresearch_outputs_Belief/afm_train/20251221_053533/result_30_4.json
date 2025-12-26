@@ -1,0 +1,29 @@
+{
+    "answer": "The specific alert phrase for \"NameCheck\" not matching bank records is not available in the specified document.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        940,
+        2355,
+        3062,
+        3682,
+        4802,
+        5418,
+        1276,
+        1776
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Neutral",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1005,
+        2341,
+        2721,
+        3223,
+        4682,
+        6227
+    ]
+}

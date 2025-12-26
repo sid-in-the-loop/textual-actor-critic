@@ -1,0 +1,29 @@
+{
+    "answer": "Figure 8, Table 1",
+    "ground_truth": "Remains close to zero in almost all quarters",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        1966,
+        3035,
+        3856,
+        4592,
+        5432,
+        6059,
+        6904
+    ]
+}

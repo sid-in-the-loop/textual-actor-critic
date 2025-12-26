@@ -1,0 +1,17 @@
+{
+    "answer": "3.9 trillion yuan, an increase of 100 billion yuan compared to the previous year.",
+    "ground_truth": "4.4 trillion yuan; 500 billion yuan increase",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        2121
+    ]
+}

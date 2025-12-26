@@ -1,0 +1,21 @@
+{
+    "answer": "The subject categorization system in Web of Science includes main categories such as Science and Technology, Social Sciences, and Arts and Humanities, with over 2500 subject categories (including 55 specialized ones). The system uses \"categories\" which may be broad (e.g., \"Science and Technology\") or refined to specific \"subject areas\" (e.g., Agricultural Sciences). It also employs a \"Research Areas\" system for certain core collections.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1897,
+        3034,
+        4362
+    ]
+}

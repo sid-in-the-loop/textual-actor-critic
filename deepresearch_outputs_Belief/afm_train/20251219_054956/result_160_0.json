@@ -1,0 +1,23 @@
+{
+    "answer": "Recommendation of the recent Australian Productivity Commission into Mental Health [111].",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2099,
+        2867,
+        3604,
+        4369
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Meta First Quarter 2025 Financial Highlights",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        2235,
+        2676,
+        4708,
+        6145
+    ]
+}

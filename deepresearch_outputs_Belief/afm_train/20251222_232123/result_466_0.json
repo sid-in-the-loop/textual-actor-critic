@@ -1,0 +1,25 @@
+{
+    "answer": "Not explicitly stated in the \"Solar Futures Study\" as a projected increase in solar cell efficiency.",
+    "ground_truth": "25% to 35%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1931,
+        3221,
+        4322,
+        5339,
+        6390
+    ]
+}

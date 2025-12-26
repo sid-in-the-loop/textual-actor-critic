@@ -1,0 +1,19 @@
+{
+    "answer": "Meta reports first quarter of fiscal year ending March 31, 2025 disclosures at SEC.gov: `https://www.sec.gov/Archives/edgar/data/1326801/000162828025000050/meta-03312025xexhibit991.htm`",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2231,
+        3726
+    ]
+}

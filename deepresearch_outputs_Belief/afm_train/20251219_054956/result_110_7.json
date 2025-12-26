@@ -1,0 +1,23 @@
+{
+    "answer": "The casino licence of The Star Sydney was suspended, and the length of time for this suspension was not explicitly stated, with its extension and the new term of the Manager's appointment not fully detailed in the available snippets. Management details were reported in discussions concerning guidance and final reports around 2025-2024.",
+    "ground_truth": "Suspended until at least 2025-09-30; Manager's appointment extended until 2025-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        2112,
+        2589,
+        3004,
+        4562
+    ]
+}

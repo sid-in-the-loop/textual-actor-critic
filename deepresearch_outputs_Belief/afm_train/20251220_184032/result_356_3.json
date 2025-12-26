@@ -1,0 +1,21 @@
+{
+    "answer": "In 2006, Microsoft Academic Search introduced a citation importing capability supporting bibliography managers such as EndNote, RefMan, RefWorks, and BibTeX.",
+    "ground_truth": "Citation importing feature, 2006, RefWorks, RefMan, EndNote, BibTeX",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        1707,
+        2664,
+        3869
+    ]
+}

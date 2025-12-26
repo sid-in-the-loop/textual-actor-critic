@@ -1,0 +1,17 @@
+{
+    "answer": "UnitedHealth Group newsroom 2025-16-01-uhg-reports-fourth-quarter-results.html",
+    "ground_truth": "UnitedHealth Group Reports 2024 Results\uff08\u5b98\u65b9\u4e1a\u7ee9\u516c\u544a\u9875\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        2134
+    ]
+}

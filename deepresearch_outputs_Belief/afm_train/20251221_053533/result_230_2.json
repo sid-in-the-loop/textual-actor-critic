@@ -1,0 +1,21 @@
+{
+    "answer": "On January 20, 2025, President Donald Trump withdrew the United States from the Paris Agreement.",
+    "ground_truth": "Withdrew US from Paris Agreement on his first day in office",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        1872,
+        3348,
+        4676
+    ]
+}

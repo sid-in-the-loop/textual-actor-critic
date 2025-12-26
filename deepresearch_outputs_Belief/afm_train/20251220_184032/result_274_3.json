@@ -1,0 +1,23 @@
+{
+    "answer": "Reduced inclination",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        941,
+        2281,
+        3588,
+        5036,
+        6387
+    ]
+}

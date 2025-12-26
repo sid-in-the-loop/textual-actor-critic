@@ -1,0 +1,21 @@
+{
+    "answer": "Monumenta",
+    "ground_truth": "Hispanic American Historical Review",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        880,
+        1280,
+        2662,
+        3005
+    ]
+}

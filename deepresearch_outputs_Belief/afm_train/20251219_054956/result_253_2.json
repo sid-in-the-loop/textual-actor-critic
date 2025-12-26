@@ -1,0 +1,25 @@
+{
+    "answer": "Parral, Chile",
+    "ground_truth": "Santiago, Chile",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        912,
+        2306,
+        4324,
+        4612,
+        6037,
+        7179
+    ]
+}

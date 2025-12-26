@@ -1,0 +1,17 @@
+{
+    "answer": "Apple's reports record revenue for Q1 2025",
+    "ground_truth": "Apple reports first quarter results - Apple",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1846
+    ]
+}

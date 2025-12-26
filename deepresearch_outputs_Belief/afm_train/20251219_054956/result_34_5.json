@@ -1,0 +1,21 @@
+{
+    "answer": "Senior Fellow on Foreign Policy and National Security at Asia Society Policy Institute (CCA); Research Fellow at RAND Corporation from 2011-2016; Senior Policy Analyst at RAND Corporation from 2016-2022.",
+    "ground_truth": "Senior policy analyst",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        2105,
+        2793,
+        3511
+    ]
+}

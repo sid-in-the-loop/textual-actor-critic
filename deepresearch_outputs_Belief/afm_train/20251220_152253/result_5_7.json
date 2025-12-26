@@ -1,0 +1,19 @@
+{
+    "answer": "Novartis quarterly financial results page: `https://www.novartis.com/investors/financial-data/quarterly-results`",
+    "ground_truth": "Novartis 2024\u5e74\u5ea6\u5b63\u5ea6\u8d22\u62a5\u7cfb\u5217\uff08Quarterly Financial Results / Financial Data Collection\uff09",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        2108,
+        3242
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Prologis Supply Chain Intelligence Report",
+    "ground_truth": "Prologis 2025 Supply Chain Outlook Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2425,
+        3887
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Not identified.",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        819,
+        1978,
+        3200,
+        4698,
+        6105,
+        7802,
+        9918,
+        1455
+    ]
+}

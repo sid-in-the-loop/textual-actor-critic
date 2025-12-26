@@ -1,0 +1,23 @@
+{
+    "answer": "No research report collection systematically analyzes the 900+ page 'Mandate for Leadership' policy agenda from Project 2025, focusing on its impacts from a critical perspective. Document analysis of internal policy agenda details is not publicly available as a formal research report collection.",
+    "ground_truth": "Democracy Forward Foundation\u7814\u7a76\u62a5\u544a\u96c6\u5408(The People\u2019s Guide to Project 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        708,
+        2156,
+        3578,
+        4636,
+        5934
+    ]
+}

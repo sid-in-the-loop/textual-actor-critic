@@ -1,0 +1,21 @@
+{
+    "answer": "-4042 mod 1000 = 56",
+    "ground_truth": "53",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        888,
+        2398,
+        4408,
+        4819
+    ]
+}

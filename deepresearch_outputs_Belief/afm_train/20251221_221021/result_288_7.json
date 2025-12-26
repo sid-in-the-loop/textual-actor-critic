@@ -1,0 +1,21 @@
+{
+    "answer": "Increased climate finance is urgently needed to address the negative impact of climate change and natural disasters on long-term economic development.",
+    "ground_truth": "Accurate and independent analysis",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        2138,
+        3319,
+        4331
+    ]
+}

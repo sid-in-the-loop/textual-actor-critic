@@ -1,0 +1,29 @@
+{
+    "answer": "Artificial Intelligence: Five Trends to Watch in 2025 \u00b7 Key Takeaways \u00b7 Trend 1: Monetization Paves Way for Industry Expansion \u00b7 Trend 2: ...",
+    "ground_truth": "Global X ETFs Insights (Five AI Trends for 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1910,
+        3058,
+        4196,
+        5435,
+        6727,
+        8068,
+        9364
+    ]
+}

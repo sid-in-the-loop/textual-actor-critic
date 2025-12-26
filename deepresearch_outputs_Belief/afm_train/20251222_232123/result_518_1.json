@@ -1,0 +1,17 @@
+{
+    "answer": "Lethal Company",
+    "ground_truth": "Limbo\uff08\u5730\u72f1\u8fb9\u5883\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        2153
+    ]
+}

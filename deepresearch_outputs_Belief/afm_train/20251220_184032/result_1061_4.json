@@ -1,0 +1,23 @@
+{
+    "answer": "Breaking News! 2025 Chinese Academy of Sciences Journal ...",
+    "ground_truth": "Academic Journal Trends 2025 Summary Articles on Publishers State. com",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        1912,
+        3219,
+        4603,
+        5779
+    ]
+}

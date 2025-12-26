@@ -1,0 +1,27 @@
+{
+    "answer": "https://economictimes.indiatimes.com/news/politics-and-nation",
+    "ground_truth": "Economic Times Politics section",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        721,
+        1730,
+        3045,
+        4521,
+        5546,
+        7370,
+        7803
+    ]
+}

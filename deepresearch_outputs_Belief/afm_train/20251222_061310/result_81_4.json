@@ -1,0 +1,19 @@
+{
+    "answer": "Enabling Time-Dependent Hierarchy Functionality",
+    "ground_truth": "SAP Business Planning and Consolidation\uff08SAP BW/4HANA \u7248\uff09\u5e94\u7528\u7a0b\u5e8f\u6587\u6863 - \u65f6\u95f4\u76f8\u5173\u7684\u5c42\u6b21\u7ed3\u6784",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2338,
+        3621
+    ]
+}

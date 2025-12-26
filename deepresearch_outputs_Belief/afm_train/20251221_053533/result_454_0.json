@@ -1,0 +1,27 @@
+{
+    "answer": "From the first fiscal year to the end of the year of the last fiscal year.",
+    "ground_truth": "Q1 2025 Financial Reporting Season",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        600,
+        1835,
+        3029,
+        4130,
+        5142,
+        5980,
+        6614
+    ]
+}

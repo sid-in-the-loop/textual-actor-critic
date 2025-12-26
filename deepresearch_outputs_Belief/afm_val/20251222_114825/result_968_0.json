@@ -1,0 +1,19 @@
+{
+    "answer": "Future date (April 29, 2025) and pro forma liquidity information not yet available in Q1 2025 financial disclosures.",
+    "ground_truth": "April 29, 2025; removed springing lien; cancelled $150 million sidecar; $605 million liquidity as of 2025-03-31",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        882,
+        1566,
+        2859
+    ]
+}

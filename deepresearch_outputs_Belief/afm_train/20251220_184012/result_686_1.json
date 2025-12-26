@@ -1,0 +1,19 @@
+{
+    "answer": "\"The Business World in 2025: Four Scenarios to Stress Test Your Strategy\"",
+    "ground_truth": "IMD Business School Scenario Planning Report Series",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        1863,
+        2721
+    ]
+}

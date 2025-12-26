@@ -1,0 +1,23 @@
+{
+    "answer": "The specific content of Figure 1 regarding binary outcomes is not available through the provided search results.",
+    "ground_truth": "-0.00005 to +0.00005; 95% confidence intervals include zero",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        1924,
+        3203,
+        4404,
+        5777
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "U.S. Not-For-Profit Higher Education Outlook 2025 - The Credit Quality Divide Widens",
+    "ground_truth": "S&P Global Ratings Higher Education Credit Outlook Report 2025",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2093
+    ]
+}

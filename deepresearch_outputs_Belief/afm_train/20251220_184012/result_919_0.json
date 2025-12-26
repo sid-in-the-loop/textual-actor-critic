@@ -1,0 +1,17 @@
+{
+    "answer": "Revised down by 0.2 percentage points.",
+    "ground_truth": "3.0% (April 2025); 3.3% (January 2025)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        925,
+        2164
+    ]
+}

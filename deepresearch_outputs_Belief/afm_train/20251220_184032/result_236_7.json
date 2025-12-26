@@ -1,0 +1,17 @@
+{
+    "answer": "arXiv:2504.20565 DLCM... for heterogeneous multicellular systems",
+    "ground_truth": "DLCM: a versatile multi-level solver for heterogeneous multicellular systems",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        2138
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Chart/Graph: Global economic growth projections for 2025",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        1931,
+        2974,
+        4259
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "ahmetbersoz/chatgpt-prompts-for-academic-writing",
+    "ground_truth": "Literature Review Generator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        861,
+        2308,
+        3556,
+        4790
+    ]
+}

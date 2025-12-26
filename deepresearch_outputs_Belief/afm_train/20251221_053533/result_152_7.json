@@ -1,0 +1,29 @@
+{
+    "answer": "No specific CFR \"special article\" matching all criteria could be found.",
+    "ground_truth": "What We're Watching Around the Globe in 2025 (CFR Special Article)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2141,
+        2540,
+        4301,
+        6450,
+        7032,
+        7437,
+        7997
+    ]
+}

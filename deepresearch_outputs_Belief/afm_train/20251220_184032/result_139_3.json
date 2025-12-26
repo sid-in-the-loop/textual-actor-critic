@@ -1,0 +1,19 @@
+{
+    "answer": "Design and Application of Multimodal Large Language Model Based System for End to End Automation of Accident Dataset Generation",
+    "ground_truth": "Design and Application of Multimodal Large Language Model Based System for End to End Automation of Accident Dataset Generation",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1937,
+        3033
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "The Human-Robot Interaction (HRI) conference",
+    "ground_truth": "Hitachi Research Institute Research Report\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        2172,
+        3872,
+        5320,
+        6500,
+        7587
+    ]
+}

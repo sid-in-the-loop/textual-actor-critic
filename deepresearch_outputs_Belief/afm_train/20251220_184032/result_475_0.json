@@ -1,0 +1,21 @@
+{
+    "answer": "Reduced.",
+    "ground_truth": "almost 90% drop",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        1985,
+        2248,
+        2653
+    ]
+}

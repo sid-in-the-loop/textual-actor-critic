@@ -1,0 +1,27 @@
+{
+    "answer": "UNICEF reports that 125 million people worldwide lack access to sufficient water.",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2289,
+        3655,
+        4963,
+        5565,
+        6846,
+        7343
+    ]
+}

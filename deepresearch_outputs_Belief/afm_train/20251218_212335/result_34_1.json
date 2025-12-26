@@ -1,0 +1,29 @@
+{
+    "answer": "Furry Services Company Consultant Afghanistan Noncooperative Resistance war aircraft heart.",
+    "ground_truth": "Senior policy analyst",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        593,
+        721,
+        1832,
+        1893,
+        2760,
+        3551,
+        3621,
+        4160
+    ]
+}

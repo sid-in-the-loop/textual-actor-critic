@@ -1,0 +1,17 @@
+{
+    "answer": "Teach time management skills and encourage regular rest periods.",
+    "ground_truth": "collaboration among parents, schools, mental health professionals, and students",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        1293
+    ]
+}

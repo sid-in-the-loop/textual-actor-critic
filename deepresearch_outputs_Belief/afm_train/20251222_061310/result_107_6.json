@@ -1,0 +1,21 @@
+{
+    "answer": "The Minister of Music is the head of the Music Promotion Foundation (Fundaci\u00f3n para el Arte Musical).",
+    "ground_truth": "Steve Wysocki",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        885,
+        2093,
+        3259,
+        4307
+    ]
+}

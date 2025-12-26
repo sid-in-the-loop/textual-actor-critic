@@ -1,0 +1,23 @@
+{
+    "answer": "Official website: https://www.starentertainmentgroup.com.au/annual-reports/",
+    "ground_truth": "The Star Entertainment Group Limited Financial Results\uff08https://www.starentertainmentgroup.com.au/financial-results/\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1487,
+        2608,
+        3656,
+        4705
+    ]
+}

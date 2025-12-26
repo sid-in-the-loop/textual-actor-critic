@@ -1,0 +1,23 @@
+{
+    "answer": "Ra\u00edssa Rocha Machado",
+    "ground_truth": "Wang Ping",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2085,
+        3679,
+        4678,
+        6198
+    ]
+}

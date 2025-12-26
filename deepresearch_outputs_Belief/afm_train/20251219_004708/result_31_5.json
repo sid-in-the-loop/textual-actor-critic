@@ -1,0 +1,21 @@
+{
+    "answer": "Shift to perspectivism and strategic framing.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        1712,
+        3915,
+        4149
+    ]
+}

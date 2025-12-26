@@ -1,0 +1,27 @@
+{
+    "answer": "Resonance-stabilized radical clustering bridges the gap between gaseous precursors and soot in the inception stage",
+    "ground_truth": "'Prevalence and ultrasonographic patterns of gynecological emergencies in southeastern Nigeria' by Emmanuel Odumeru, Xavier Akimuhana, Eric Kirezi, Costelia Njoku",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2125,
+        3188,
+        4394,
+        5735,
+        7336,
+        8959
+    ]
+}

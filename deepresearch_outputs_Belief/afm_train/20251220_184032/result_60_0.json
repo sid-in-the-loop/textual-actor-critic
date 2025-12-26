@@ -1,0 +1,19 @@
+{
+    "answer": "Main Title: Our 2025 Trends Report explores the impactful trends, people and conversations shaping travel and driving innovation at. Hilton and across. Introductory Theme: Our 2025 Trends Report explores the impactful trends, people and conversations shaping travel and driving innovation at. Hilton and across.",
+    "ground_truth": "2025 Hilton Trends Report: The Vacation Maximized",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2343,
+        3785
+    ]
+}

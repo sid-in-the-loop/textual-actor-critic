@@ -1,0 +1,21 @@
+{
+    "answer": "At Issue",
+    "ground_truth": "What does Canada face in 2025? | Radio-Canada.ca",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        1776,
+        2970,
+        4195
+    ]
+}

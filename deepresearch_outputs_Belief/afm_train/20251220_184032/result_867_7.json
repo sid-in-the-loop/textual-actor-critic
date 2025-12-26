@@ -1,0 +1,23 @@
+{
+    "answer": "Killer Song",
+    "ground_truth": "\u522b\u4eba\u7684\u5929\u957f\u5730\u4e45",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1010,
+        2172,
+        3209,
+        4288,
+        5589
+    ]
+}

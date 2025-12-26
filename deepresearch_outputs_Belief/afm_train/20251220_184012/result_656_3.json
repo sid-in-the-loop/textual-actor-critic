@@ -1,0 +1,23 @@
+{
+    "answer": "positive growth",
+    "ground_truth": "Stabilized after Q2 2023",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2245,
+        3586,
+        4933,
+        6885
+    ]
+}

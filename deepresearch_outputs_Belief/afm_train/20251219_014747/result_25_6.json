@@ -1,0 +1,21 @@
+{
+    "answer": "The Web of Science subject categorization system includes \"Physical Sciences,\" \"Life Sciences & Biomedicine,\" and \"Arts & Humanities\" under its main categories, such as \"Science and Technology\" (possibly mapping to \"Physical Sciences\") and \"Social Sciences\" (which typically refers to \"Social Sciences\").",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        1888,
+        3045,
+        4400
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Full year 2024: $6.0 billion (reported +26%, constant currency +22%). Full year 2023: $4.1 billion (reported +8%, constant currency +18%).",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        2609,
+        4000,
+        5149,
+        6457
+    ]
+}

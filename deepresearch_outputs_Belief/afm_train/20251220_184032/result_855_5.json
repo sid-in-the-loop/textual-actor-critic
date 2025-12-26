@@ -1,0 +1,23 @@
+{
+    "answer": "The question cannot be answered with the available information. A specific percentage identifying 'Inflation & Economy' as a key obstacle to achieving financial security in 2025 is not explicitly stated in the research summary.",
+    "ground_truth": "56%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        1960,
+        3294,
+        4762,
+        5236
+    ]
+}

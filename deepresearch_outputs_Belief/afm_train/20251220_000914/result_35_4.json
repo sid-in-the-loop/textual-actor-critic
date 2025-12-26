@@ -1,0 +1,27 @@
+{
+    "answer": "IBM Research Publications \u2013 JID",
+    "ground_truth": "IBM Research Publications Catalog",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        708,
+        1793,
+        2822,
+        3920,
+        5213,
+        6475,
+        7547
+    ]
+}

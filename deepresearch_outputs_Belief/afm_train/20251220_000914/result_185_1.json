@@ -1,0 +1,25 @@
+{
+    "answer": "tax evasion, fraud, corruption",
+    "ground_truth": "Conspiracy to defraud and false accounting",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        975,
+        2343,
+        3472,
+        4671,
+        6159,
+        7325
+    ]
+}

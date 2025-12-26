@@ -1,0 +1,21 @@
+{
+    "answer": "Thomas Shedd, previous role as Director of DOL Technology Transformation Services and Director of DOGE.",
+    "ground_truth": "Thomas Shedd; former Tesla software engineer",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        1253,
+        1608,
+        2063
+    ]
+}

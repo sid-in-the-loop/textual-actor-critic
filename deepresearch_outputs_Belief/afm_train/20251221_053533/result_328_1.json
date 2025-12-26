@@ -1,0 +1,21 @@
+{
+    "answer": "\"The State of Academic Publishing Today: What's Broken, What's Changing, and What's Next. 5 June 2025\"",
+    "ground_truth": "Academic Publishing in 2025: How Research Will Transform | PublishingState.com",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        725,
+        1070,
+        2506,
+        3252
+    ]
+}

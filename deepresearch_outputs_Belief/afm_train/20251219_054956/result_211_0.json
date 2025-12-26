@@ -1,0 +1,27 @@
+{
+    "answer": "Means the characteristic values or data points of different terms that represent distinct aspects of DNA, RNA, or protein structures.",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        2190,
+        3147,
+        3973,
+        4405,
+        5377,
+        6804
+    ]
+}

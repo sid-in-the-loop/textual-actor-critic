@@ -1,0 +1,17 @@
+{
+    "answer": "Figure 3, observed as a saddle-node; at \u03be < 3, the predator population equilibrium is a saddle-node.",
+    "ground_truth": "\u03be below 3: equilibrium zero; both saddle and unstable node types",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2061
+    ]
+}

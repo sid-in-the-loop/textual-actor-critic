@@ -1,0 +1,25 @@
+{
+    "answer": "The exact number of contributions related to sustainable fisheries management by Ocean Action Panel 5 for the 2025 UN Ocean Conference global consultation could not be definitively found through the provided search results and documentation from the extraction process of the stakeholders\u2019 contributions.",
+    "ground_truth": "217",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2094,
+        2721,
+        3395,
+        4181,
+        4776
+    ]
+}

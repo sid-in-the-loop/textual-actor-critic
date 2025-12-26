@@ -1,0 +1,27 @@
+{
+    "answer": "This transaction will be returned to you.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        945,
+        2971,
+        3525,
+        3924,
+        4487,
+        5087,
+        5493
+    ]
+}

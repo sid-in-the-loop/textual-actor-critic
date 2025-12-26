@@ -1,0 +1,23 @@
+{
+    "answer": "iPhone 16e",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        974,
+        2179,
+        3308,
+        4992,
+        6507
+    ]
+}

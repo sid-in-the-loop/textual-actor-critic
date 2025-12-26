@@ -1,0 +1,19 @@
+{
+    "answer": "Bloomberg Law 2025: Predictions That Cut Through the Commotion",
+    "ground_truth": "Bloomberg Law Unveils 2025 Report Highlighting Key Trends in Legal Industry",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        2076,
+        3383
+    ]
+}

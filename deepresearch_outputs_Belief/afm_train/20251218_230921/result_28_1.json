@@ -1,0 +1,25 @@
+{
+    "answer": "The $50.1 million fine was imposed under copyright law's \"discrimination\" or \"Other Affected Class\" doctrine within the context of \"academic publishing\" and \"open access,\" acting as a disciplinary action for a dominant market player.",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2285,
+        2832,
+        4102,
+        6024,
+        6555
+    ]
+}

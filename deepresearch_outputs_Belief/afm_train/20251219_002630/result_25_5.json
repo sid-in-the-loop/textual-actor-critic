@@ -1,0 +1,19 @@
+{
+    "answer": "The Web of Science subject categorization system is a three-tier hierarchy: Main categories include Science and Technology, Social Sciences, and Arts and Humanities. It consists of approximately 225 subject categories, commonly classified under these main categories, for journal-level indexing and query capabilities.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        2082,
+        3359
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "AI will boost drug development in 2025 and drive major advancements in cancer vaccines, fusion power, and other critical technologies.",
+    "ground_truth": "Shifting from the public to the private sector.",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        832,
+        2168
+    ]
+}

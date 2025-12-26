@@ -1,0 +1,23 @@
+{
+    "answer": "Not found; although \"Maharashtra Achieves Historic Cybercrime Recovery Milestone\" indicates around Rs 1,000 crore in seized funds, the specific figure for \"financial losses prevented\" is not explicitly stated in The Times Group's sections.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        2128,
+        3383,
+        5070,
+        6936
+    ]
+}

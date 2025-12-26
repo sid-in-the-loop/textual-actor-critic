@@ -1,0 +1,25 @@
+{
+    "answer": "Not found in specified Yahoo Finance headline story for March 9, 2025, attributed to Treasury Secretary Scott Bessent's economic outlook.",
+    "ground_truth": "($78,400,000,000,000)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        977,
+        2552,
+        3957,
+        5923,
+        6364,
+        7741
+    ]
+}

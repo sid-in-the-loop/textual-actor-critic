@@ -1,0 +1,19 @@
+{
+    "answer": "Public and Commercial Services Union",
+    "ground_truth": "UNISON - the public service union",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1753,
+        2670
+    ]
+}

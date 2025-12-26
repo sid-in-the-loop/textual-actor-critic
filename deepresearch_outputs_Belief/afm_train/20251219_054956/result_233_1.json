@@ -1,0 +1,25 @@
+{
+    "answer": "Uniqueness of labor distribution: \u03c3=5, \u03b1 defines framework for thresholds for uniqueness at \u03c3=5, implying greater uniqueness for lower \u03b1.",
+    "ground_truth": "inverse hyperbolic relationship",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        1489,
+        1902,
+        2833,
+        3565,
+        4332
+    ]
+}

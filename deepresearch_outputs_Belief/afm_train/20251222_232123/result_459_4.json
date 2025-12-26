@@ -1,0 +1,29 @@
+{
+    "answer": "NCSC Brief Higher Education Legislation in 2025",
+    "ground_truth": "HOUSE BILL REPORT HB 1136",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1995,
+        3243,
+        4254,
+        5486,
+        6610,
+        7846,
+        9090
+    ]
+}

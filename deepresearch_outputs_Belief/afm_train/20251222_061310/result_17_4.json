@@ -1,0 +1,17 @@
+{
+    "answer": "Cosentyx's net sales for the full year 2024 were USD 50.3 billion, representing a +11% increase (reported) and +12% increase (constant currency) compared to the full year 2023.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1021,
+        2546
+    ]
+}

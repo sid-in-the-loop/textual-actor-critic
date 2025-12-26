@@ -1,0 +1,29 @@
+{
+    "answer": "Words of Radiance",
+    "ground_truth": "\u72b9\u683c\u7d22\u6258\u65af\u7684\u5ead\u9662",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        2607,
+        3655,
+        4033,
+        5277,
+        6419,
+        7929,
+        9618
+    ]
+}

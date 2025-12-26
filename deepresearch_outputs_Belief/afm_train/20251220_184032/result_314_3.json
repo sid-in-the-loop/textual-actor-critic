@@ -1,0 +1,21 @@
+{
+    "answer": "Deloitte Global Health Care Outlook 2025",
+    "ground_truth": "Deloitte 2025 Life Sciences and Health Care Industry Outlooks",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        978,
+        2383,
+        3677,
+        4818
+    ]
+}

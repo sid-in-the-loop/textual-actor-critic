@@ -1,0 +1,27 @@
+{
+    "answer": "Parent-Child Relationship",
+    "ground_truth": "Bloom's Taxonomy",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        885,
+        2094,
+        3205,
+        4267,
+        5348,
+        6676,
+        8223
+    ]
+}

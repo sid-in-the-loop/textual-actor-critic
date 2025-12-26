@@ -1,0 +1,17 @@
+{
+    "answer": "ACRL Occasional Report, published February 2015.",
+    "ground_truth": "February 2015, Christopher Stewart",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        1879
+    ]
+}

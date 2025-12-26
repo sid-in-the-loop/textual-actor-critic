@@ -1,0 +1,25 @@
+{
+    "answer": "Beaumaris Modern series is still in print, but it is not confirmed if an introduction by Chris Abel is part of it.",
+    "ground_truth": "No, it is out of print",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1894,
+        3037,
+        4260,
+        5420,
+        6565
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Return to Paradise",
+    "ground_truth": "\u8537\u8587\u4e4b\u604b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        2279,
+        3401,
+        4496,
+        5610,
+        6757,
+        7887
+    ]
+}

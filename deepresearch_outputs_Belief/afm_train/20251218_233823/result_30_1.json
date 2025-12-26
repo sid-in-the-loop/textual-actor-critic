@@ -1,0 +1,23 @@
+{
+    "answer": "You will be notified if the payee\u2019s account details do not match those held by the bank.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        877,
+        2275,
+        3471,
+        4722,
+        5770
+    ]
+}

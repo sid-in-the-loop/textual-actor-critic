@@ -1,0 +1,19 @@
+{
+    "answer": "The UNISON annual report - 2024\u20132025",
+    "ground_truth": "asked to join FPA working group by Department of Health and Social Care",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        2282,
+        2771
+    ]
+}

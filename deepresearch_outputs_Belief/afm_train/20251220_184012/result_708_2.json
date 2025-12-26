@@ -1,0 +1,19 @@
+{
+    "answer": "Revenue: $124.3 billion, Adjusted Operating Income: $40.2 billion, Adjusted EBITDA: $49.6 billion, Net Income: $36.33 billion",
+    "ground_truth": "Apple FY2025 First Quarter Financial Results Press Release",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        2048,
+        3397
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "\u8336\u827a (Chinese Tea Ceremony)",
+    "ground_truth": "\u5185\u753b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        951,
+        2702,
+        3919,
+        5353,
+        6725
+    ]
+}

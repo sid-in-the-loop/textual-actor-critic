@@ -1,0 +1,29 @@
+{
+    "answer": "The requested open group net present value (NPV) of future revenue less future expenditures for current and future participants (social insurance), projected over the next 75 years starting in FY2024, could not be found in the official Treasury communication cited in the headline story featured as the top main news report by Yahoo Finance on March 9, 2025, as per the detailed search results.",
+    "ground_truth": "($78,400,000,000,000)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        2320,
+        3002,
+        3480,
+        4025,
+        4588,
+        5119,
+        5629
+    ]
+}

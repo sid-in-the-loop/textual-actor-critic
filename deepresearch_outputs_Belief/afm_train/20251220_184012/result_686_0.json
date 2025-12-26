@@ -1,0 +1,21 @@
+{
+    "answer": "IMD Research and Thought Leadership",
+    "ground_truth": "IMD Business School Scenario Planning Report Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1945,
+        3136,
+        3917
+    ]
+}

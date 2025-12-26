@@ -1,0 +1,29 @@
+{
+    "answer": "NameCheck is an indication: a mismatched name, BSB, or account number (any of these combined) is confirmed as not matching CBA records.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1045,
+        2191,
+        2841,
+        3317,
+        4523,
+        5564,
+        6085,
+        6693
+    ]
+}

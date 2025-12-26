@@ -1,0 +1,27 @@
+{
+    "answer": "No distinct, official annual research report specifically titled under IBM Consulting with a name is widely recognized.",
+    "ground_truth": "IBM Institute for Business Value Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        751,
+        2089,
+        3270,
+        4864,
+        6589,
+        7875,
+        1225
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The National CIO Review",
+    "ground_truth": "ISBN 9781394254941",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2158,
+        3850,
+        5976
+    ]
+}

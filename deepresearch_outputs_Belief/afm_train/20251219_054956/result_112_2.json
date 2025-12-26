@@ -1,0 +1,25 @@
+{
+    "answer": "The Wikipedia article \"Academic publishing\" (https://en.wikipedia.org/wiki/Academic_publishing) is the main subfield dedicated to the dissemination of scholarly research results. Available data indicates that for-profit companies dominated academic publishing, with a group of five (Reed-Elsevier, Taylor & Francis, Wiley-Blackwell, Springer, and Sage) accounting for more than 50% of academic publishing. However, specific percentage of *articles* published in 2013 by these for-profit companies, or the exact number of companies contributing to this \"market share\" as articles, is not detailed in the main Wikipedia article or through targeted searches for this granular data (Article sources).",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1895,
+        3068,
+        4351,
+        5903,
+        6434
+    ]
+}

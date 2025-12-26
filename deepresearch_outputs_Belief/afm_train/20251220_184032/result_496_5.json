@@ -1,0 +1,19 @@
+{
+    "answer": "UUID",
+    "ground_truth": "Tianyi Think Tank (Zhihu Column)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        655,
+        1670,
+        2835
+    ]
+}

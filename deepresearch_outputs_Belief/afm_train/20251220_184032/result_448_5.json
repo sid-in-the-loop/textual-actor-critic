@@ -1,0 +1,23 @@
+{
+    "answer": "above 82% (AI and machine learning specialists)",
+    "ground_truth": "over 25% yearly",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        1969,
+        2947,
+        4000,
+        5424
+    ]
+}

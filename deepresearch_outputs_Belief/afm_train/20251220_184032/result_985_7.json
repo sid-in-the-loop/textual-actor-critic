@@ -1,0 +1,15 @@
+{
+    "answer": "arXiv subject categories",
+    "ground_truth": "arXiv\u9884\u5370\u672c\u5206\u533a\u4f53\u7cfb",
+    "rewards": [
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 1,
+    "search count": 0,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743
+    ]
+}

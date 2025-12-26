@@ -1,0 +1,23 @@
+{
+    "answer": "Advancing meaningful dialogue, collective action, and innovative solutions in a delicate balancing act, including climate action, countering foreign interference, and inclusive growth.",
+    "ground_truth": "hopes to host",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        852,
+        2025,
+        3594,
+        1107,
+        2466
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Cosentyx's reported immunology segment net sales for the full year 2024 were USD 50.3 billion, representing a 11% increase compared to the full year 2023. On a constant currency basis, immunology segment net sales for the full year 2024 were 60.0% of total net sales (compared with 58.3% full year 2023).",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        935,
+        2701,
+        4850,
+        5898,
+        6294,
+        7843
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Indirectly, Climate Energy Finance's finding that global solar PV manufacturing capacity will reach 1.8TW by the end of 2025, and IEA's projections for $4.5 trillion in clean energy investment by the early 2030s to limit warming to 1.5\u00b0C, align on this venture. The $45 billion figure would be an extrapolated annual investment needed goal sometime around 2030, according to some sources.",
+    "ground_truth": "$4.5 trillion by 2030",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2129,
+        3549
+    ]
+}

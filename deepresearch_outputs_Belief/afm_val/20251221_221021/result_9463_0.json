@@ -1,0 +1,17 @@
+{
+    "answer": "3% per ASM; 508 aircraft before and 495 aircraft after",
+    "ground_truth": "42%; 130; 75",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        1951
+    ]
+}

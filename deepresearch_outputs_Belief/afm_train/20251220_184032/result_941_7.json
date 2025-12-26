@@ -1,0 +1,21 @@
+{
+    "answer": "Yes, the report highlights the rise of generative AI as a paradigm shift.",
+    "ground_truth": "No empirical conclusions, research variables, or observable relationships",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        2049,
+        3264,
+        4473
+    ]
+}

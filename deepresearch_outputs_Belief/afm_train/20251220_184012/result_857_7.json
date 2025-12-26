@@ -1,0 +1,23 @@
+{
+    "answer": "A magazine has a masthead, cover, and table of contents, whereas a website does not, as it contains contiguous content.",
+    "ground_truth": "Global Addis",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        707,
+        1822,
+        2738,
+        3764,
+        4692
+    ]
+}

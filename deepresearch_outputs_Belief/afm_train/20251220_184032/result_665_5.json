@@ -1,0 +1,17 @@
+{
+    "answer": "Journals identified by the 'fully open access' filter on Springer Nature's OA journal directory.",
+    "ground_truth": "Springer Nature fully open access journals",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1765
+    ]
+}

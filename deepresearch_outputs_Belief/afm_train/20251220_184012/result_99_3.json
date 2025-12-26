@@ -1,0 +1,23 @@
+{
+    "answer": "The Unpaid Labor of Academic Publishing by PublishingState.com",
+    "ground_truth": "10 Academic Journal Trends in 2025: An Era of Openness, Innovation, and Inclusivity | PublishingState.com",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        940,
+        1775,
+        1848,
+        2370
+    ]
+}

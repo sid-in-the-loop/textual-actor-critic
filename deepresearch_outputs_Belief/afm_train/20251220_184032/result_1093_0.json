@@ -1,0 +1,17 @@
+{
+    "answer": "Yes",
+    "ground_truth": "at least one Open Access article published on 2025-05-08",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        1878
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Significant increase in artificial intelligence and related tech spending, with AI's true impact becoming apparent in 2025.",
+    "ground_truth": "Shifting from the public to the private sector.",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        2037
+    ]
+}

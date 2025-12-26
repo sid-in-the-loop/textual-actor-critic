@@ -1,0 +1,23 @@
+{
+    "answer": "NameCheck: If information entered is incorrect, name will not be shown. Report: CBA 2025 H1 Half Year Results Presentation.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        940,
+        2326,
+        2756,
+        4566,
+        5236
+    ]
+}

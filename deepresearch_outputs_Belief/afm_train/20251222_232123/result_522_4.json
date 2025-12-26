@@ -1,0 +1,27 @@
+{
+    "answer": "51 or higher",
+    "ground_truth": "healthy eating index score >51",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        1958,
+        2201,
+        2741,
+        3058,
+        3333,
+        3486
+    ]
+}

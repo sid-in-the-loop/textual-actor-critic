@@ -1,0 +1,29 @@
+{
+    "answer": "Ideally within 10 days of receiving a manuscript.",
+    "ground_truth": "within two weeks or according to an agreed time limit",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1857,
+        2118,
+        3281,
+        4234,
+        4720,
+        5250,
+        6825
+    ]
+}

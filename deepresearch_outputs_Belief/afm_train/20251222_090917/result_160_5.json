@@ -1,0 +1,25 @@
+{
+    "answer": "There is no unique recommendation specifically for student mental health in the 2019 Productivity Commission Inquiry. The full report was released in November 2020.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1885,
+        2823,
+        3865,
+        5010,
+        6296
+    ]
+}

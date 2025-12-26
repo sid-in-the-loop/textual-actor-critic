@@ -1,0 +1,29 @@
+{
+    "answer": "1. Semantic Scholar (Free) 2. Litmaps (Free) 3. SciSpace (Free with limitations) 4. Elicit (Free) 5. Avidnote (Free) 6. JQuery (Free) 7. AI Blaze (Free) 8. MyStylus (Free) 9. Anara AI (formerly Unriddle AI) (Free) 10. Consensus ($10/month) 11. Deep Review ($90/month Advanced Plan) 12. Keenious (Open Alex: Free with paid subscriptions) 13. Julius (Free tier, dataset limits) 14. Vizly (Free, dataset limits)",
+    "ground_truth": "15+ Best AI Tools for Academic Research (Free+Paid) 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        2006,
+        3079,
+        4216,
+        5338,
+        6759,
+        7931,
+        9624
+    ]
+}

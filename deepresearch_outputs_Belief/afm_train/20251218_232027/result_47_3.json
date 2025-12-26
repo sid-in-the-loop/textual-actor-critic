@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to determine flashpoint status; the specific \"in-depth segment on the origins and objectives of a project\" was not found in the available content of the PBS News Hour episode for May 1, 2025.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        873,
+        2267,
+        2594,
+        3970,
+        5272,
+        7344,
+        7979
+    ]
+}

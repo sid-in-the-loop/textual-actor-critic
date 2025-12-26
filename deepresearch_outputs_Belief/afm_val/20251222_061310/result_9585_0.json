@@ -1,0 +1,17 @@
+{
+    "answer": "Privileged access to Gale Primary Sources, the Gale Digital Scholar Lab, and support from members of the Gale team. Each fellowship grant provides access to these resources.",
+    "ground_truth": "six months' access to the Gale Digital Scholar Lab and a relevant Gale Primary Sources archive",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        1835
+    ]
+}

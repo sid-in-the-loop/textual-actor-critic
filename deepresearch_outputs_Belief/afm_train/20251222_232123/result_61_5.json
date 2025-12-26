@@ -1,0 +1,27 @@
+{
+    "answer": "Text-based, providing transaction volume and value forecasts for the pre-owned business jet market.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1112,
+        2393,
+        2716,
+        3124,
+        3572,
+        3933
+    ]
+}

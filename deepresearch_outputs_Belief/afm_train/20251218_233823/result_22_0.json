@@ -1,0 +1,27 @@
+{
+    "answer": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "ground_truth": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        2112,
+        2696,
+        3766,
+        4268,
+        6045,
+        6654
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Partnering with Anduril on a speculative AI system in 2025.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        1032,
+        2178,
+        2694
+    ]
+}

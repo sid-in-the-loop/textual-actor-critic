@@ -1,0 +1,29 @@
+{
+    "answer": "12,000, 15,000, and 18,000",
+    "ground_truth": "1,690 thousand tons of products transported (January to March 2025), 95 thousand tons less than same period 2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        1998,
+        2247,
+        2537,
+        2924,
+        3305,
+        3687,
+        3911
+    ]
+}

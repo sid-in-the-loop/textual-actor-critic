@@ -1,0 +1,21 @@
+{
+    "answer": "State funeral for Jiang Zemin held at the Great Hall of the People in Beijing with ashes scattered into the Bohai Sea, excluding foreign heads of state.",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        894,
+        2070,
+        3362,
+        4593
+    ]
+}

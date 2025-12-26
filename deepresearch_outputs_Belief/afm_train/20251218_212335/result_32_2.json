@@ -1,0 +1,27 @@
+{
+    "answer": "Orange Order began",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        629,
+        1777,
+        1840,
+        2660,
+        3580,
+        4515,
+        5631
+    ]
+}

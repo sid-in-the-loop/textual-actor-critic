@@ -1,0 +1,19 @@
+{
+    "answer": "Strada San Giorgio",
+    "ground_truth": "Carrubeo recto",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        2122,
+        3359
+    ]
+}

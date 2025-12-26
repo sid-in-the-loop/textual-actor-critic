@@ -1,0 +1,23 @@
+{
+    "answer": "Self-Generated In-Context Examples Improve LLM Agents for Sequential Decision-Making Tasks achieves an ALFWorld performance of 91%, with exemplar-level selection retaining individual trajectories to improve performance in comparison to more complex, task-specific approaches.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1088,
+        2241,
+        3656,
+        5143
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "\"[Time and Version Dependency of Hierarchies](https://help.sap.com/docs/SAP_BW_4HANA_BUSINESS_CONSOLIDATION_ADDON/773b52d468eb47eb810eb7db448b712e/d2a6c6535e601e4be10000000a174cb4.html)\"",
+    "ground_truth": "SAP Business Planning and Consolidation\uff08SAP BW/4HANA \u7248\uff09\u5e94\u7528\u7a0b\u5e8f\u6587\u6863 - \u65f6\u95f4\u76f8\u5173\u7684\u5c42\u6b21\u7ed3\u6784",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2368,
+        4344,
+        6331
+    ]
+}

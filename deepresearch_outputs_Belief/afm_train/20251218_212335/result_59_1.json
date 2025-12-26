@@ -1,0 +1,29 @@
+{
+    "answer": "K\u00fctle . MODULA \u00e4r ett procentuell\u1ea3ngming av gravitationskraften *",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        688,
+        1686,
+        1762,
+        3247,
+        3752,
+        3918,
+        5215,
+        5330
+    ]
+}

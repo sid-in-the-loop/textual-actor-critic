@@ -1,0 +1,21 @@
+{
+    "answer": "Access to Information - World Bank requests",
+    "ground_truth": "Official Information Disclosure Platform of World Bank Group",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        682,
+        1707,
+        2501,
+        3423
+    ]
+}

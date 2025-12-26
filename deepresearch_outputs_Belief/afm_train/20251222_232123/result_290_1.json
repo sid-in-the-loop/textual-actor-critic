@@ -1,0 +1,23 @@
+{
+    "answer": "Orbital height of BPM 3066 relative to the galactic plane could not be found in the specified paper.",
+    "ground_truth": "lower than 1 kpc",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1010,
+        1863,
+        3055,
+        4082,
+        4860
+    ]
+}

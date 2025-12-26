@@ -1,0 +1,19 @@
+{
+    "answer": "Energy Finance and the Global Energy",
+    "ground_truth": "\u6c14\u5019\u91d1\u878d\u4e0e\u80fd\u6e90\u91d1\u878d\u7814\u7a76\u9886\u57df",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1575,
+        2447
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "For full year 2024:\n*   Reported: USD 13.9 billion (immunology segment)\n*   Constant Currency: USD 14.0 billion (immunology segment)\n*   Change compared to 2023: USD 15.5 billion (immunology segment).",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        873,
+        2330,
+        3558,
+        5176
+    ]
+}

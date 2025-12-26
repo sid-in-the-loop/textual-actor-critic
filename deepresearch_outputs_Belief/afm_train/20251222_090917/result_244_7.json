@@ -1,0 +1,27 @@
+{
+    "answer": "16 GW",
+    "ground_truth": "Closely tracks the lower bound",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        2151,
+        3544,
+        4958,
+        6457,
+        7911,
+        9145
+    ]
+}

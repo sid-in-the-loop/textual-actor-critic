@@ -1,0 +1,19 @@
+{
+    "answer": "Score: ?; Valid Rate: ?; Duplication Counts: ?",
+    "ground_truth": "Score: 0.90\u20131.00; Valid rate: 500; Duplication: <20",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        1996,
+        3151
+    ]
+}

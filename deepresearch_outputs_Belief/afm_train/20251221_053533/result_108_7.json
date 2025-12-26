@@ -1,0 +1,29 @@
+{
+    "answer": "QInvariant",
+    "ground_truth": "Garrick",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        2106,
+        3294,
+        4490,
+        6002,
+        7451,
+        9344,
+        10070
+    ]
+}

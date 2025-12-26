@@ -1,0 +1,21 @@
+{
+    "answer": "11%, roughly $5.23 billion (range)",
+    "ground_truth": "2024: $7,500,000,000,000; increase: 7.5%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2237,
+        3449,
+        4723
+    ]
+}

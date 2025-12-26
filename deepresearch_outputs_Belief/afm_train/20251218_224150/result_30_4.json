@@ -1,0 +1,23 @@
+{
+    "answer": "The alert is \u201c**NameCheck**\u201d or the equivalent \"**Confirmation of Payee (CoP)**\", and it is the system that detects when the payee\u2019s name and account details do not match.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        940,
+        2458,
+        2848,
+        3983,
+        5520
+    ]
+}

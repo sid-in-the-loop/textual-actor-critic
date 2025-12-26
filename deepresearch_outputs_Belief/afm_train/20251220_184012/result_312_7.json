@@ -1,0 +1,21 @@
+{
+    "answer": "World Politics, Volume 77, Number 1, January 2025, pp. 155-194",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        2032,
+        2248,
+        3451
+    ]
+}

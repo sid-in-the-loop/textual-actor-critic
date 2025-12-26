@@ -1,0 +1,19 @@
+{
+    "answer": "Periodic Report: Update on Outstanding Lending Facilities",
+    "ground_truth": "Periodic Report: Update on Outstanding Lending Facilities Authorized by the Board under Section 13(3) of the Federal Reserve Act (2025)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        2062,
+        3350
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "SEC Filiings (and a related SEC Filings catalog on the investor page itself)",
+    "ground_truth": "International Paper Company Annual Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        1952,
+        3493,
+        4680
+    ]
+}

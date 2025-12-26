@@ -1,0 +1,17 @@
+{
+    "answer": "Health-related universal credit for existing claimants was frozen at the current rate of \u00a397 a week until 2029/30.",
+    "ground_truth": "Health-related payments frozen at \u00a397 per week until 2030",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1895
+    ]
+}

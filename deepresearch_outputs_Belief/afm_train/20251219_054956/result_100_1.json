@@ -1,0 +1,25 @@
+{
+    "answer": "Not found.",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        884,
+        2315,
+        3794,
+        5915,
+        6808,
+        1287
+    ]
+}

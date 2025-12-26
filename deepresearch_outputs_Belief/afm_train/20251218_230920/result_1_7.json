@@ -1,0 +1,29 @@
+{
+    "answer": "Pew-Knight Initiative, Project Citizen Research Program",
+    "ground_truth": "Pew Research Center and Knight Foundation\u8054\u5408\u9879\u76ee\uff08Pew-Knight Initiative\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1991,
+        3170,
+        4235,
+        5499,
+        6695,
+        8209,
+        9215
+    ]
+}

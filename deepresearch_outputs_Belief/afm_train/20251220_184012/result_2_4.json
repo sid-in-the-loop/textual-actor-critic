@@ -1,0 +1,23 @@
+{
+    "answer": "Lockheed P-38 Lightning",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        1999,
+        3092,
+        4441,
+        5581
+    ]
+}

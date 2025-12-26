@@ -1,0 +1,19 @@
+{
+    "answer": "\u00a32.45 billion",
+    "ground_truth": "\u00a32,851,000,000 annually until 2023-2024",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        894,
+        2267,
+        3692
+    ]
+}

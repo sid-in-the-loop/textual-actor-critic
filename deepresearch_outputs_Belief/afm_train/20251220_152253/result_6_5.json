@@ -1,0 +1,25 @@
+{
+    "answer": "Meg Turner was born in 1987, and Rooster Teeth was founded in 2003. So, Rooster Teeth is 13 years older.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        695,
+        1614,
+        2562,
+        3749,
+        5007,
+        6111
+    ]
+}

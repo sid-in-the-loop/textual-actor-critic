@@ -1,0 +1,19 @@
+{
+    "answer": "The Facilities team modified in December 2024 to enhance barrier-free banking, which they did in partnership with the Rick Hansen Foundation.",
+    "ground_truth": "Redesigned the facilities and workplace request process",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        2010,
+        2364
+    ]
+}

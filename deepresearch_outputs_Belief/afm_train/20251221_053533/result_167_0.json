@@ -1,0 +1,23 @@
+{
+    "answer": "Paul Jones is designated to fill the Action for Children full-time post until the end of October 2025.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        1913,
+        3372,
+        3674,
+        3935
+    ]
+}

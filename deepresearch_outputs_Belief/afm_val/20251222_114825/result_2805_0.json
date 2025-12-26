@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to find the specific number of cargo containers processed through CBP ports in the 2025 U.S. federal budget document using web searches.",
+    "ground_truth": "36.6 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        2077,
+        2572,
+        2927,
+        3300,
+        3677,
+        4000
+    ]
+}

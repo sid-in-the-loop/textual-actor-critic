@@ -1,0 +1,25 @@
+{
+    "answer": "FY 2025 Federal Payments Annual Report to Congress",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        1975,
+        2962,
+        4061,
+        5279,
+        6596
+    ]
+}

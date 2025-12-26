@@ -1,0 +1,29 @@
+{
+    "answer": "According to Guideline no. 39, enel Group reports Net Financial Debt by removing Current Assets: Financial and Cash and Cash Equivalents, while including all Debt and Other Non-current Liabilities. The strategic plan targets a Net Financial Debt/EBITDA ratio by 2027.",
+    "ground_truth": "Sum of long-term borrowings, short-term borrowings, current portion of long-term borrowings, other non-current and current financial liabilities, minus cash and cash equivalents, minus other current and non-current financial assets; reported per ESMA Guideline no. 39 (2021-03-04), effective from 2021-05-05, and CONSOB Warning Notice no. 5/21 (2021-04-29)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        954,
+        2616,
+        4390,
+        6121,
+        7028,
+        8140,
+        9154,
+        1609
+    ]
+}

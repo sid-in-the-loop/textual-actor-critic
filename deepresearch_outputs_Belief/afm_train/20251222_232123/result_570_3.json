@@ -1,0 +1,21 @@
+{
+    "answer": "Georges Lema\u00eetre",
+    "ground_truth": "The belief that Belgians were 'reluctant imperialists'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        991,
+        2137,
+        3202,
+        4112
+    ]
+}

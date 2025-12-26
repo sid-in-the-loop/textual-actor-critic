@@ -1,0 +1,23 @@
+{
+    "answer": "Computational scaling is addressed by the self-adaptable encoding algorithm.",
+    "ground_truth": "O(n) computational scaling",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        1948,
+        2274,
+        2809,
+        3363
+    ]
+}

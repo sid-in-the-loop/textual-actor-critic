@@ -1,0 +1,19 @@
+{
+    "answer": "Wikipedia:Classification_of_sources",
+    "ground_truth": "Category:Publishing (Wikipedia)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        1586,
+        2644
+    ]
+}

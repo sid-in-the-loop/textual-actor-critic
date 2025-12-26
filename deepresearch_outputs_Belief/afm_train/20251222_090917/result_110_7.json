@@ -1,0 +1,27 @@
+{
+    "answer": "casino licence will remain suspended and that the Manager's term has been extended; duration and future dates for the Manager's appointment are not provided in the document.",
+    "ground_truth": "Suspended until at least 2025-09-30; Manager's appointment extended until 2025-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        2028,
+        2405,
+        2790,
+        3203,
+        3628,
+        3987
+    ]
+}

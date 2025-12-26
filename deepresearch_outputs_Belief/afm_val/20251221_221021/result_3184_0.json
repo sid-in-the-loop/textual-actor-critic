@@ -1,0 +1,21 @@
+{
+    "answer": "Unable to locate specific percentage increase for 'intricate' in the requested timeframe.",
+    "ground_truth": "117%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        1888,
+        3149,
+        4264
+    ]
+}

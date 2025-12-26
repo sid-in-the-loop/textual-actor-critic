@@ -1,0 +1,19 @@
+{
+    "answer": "The Universal Registration Document 2024",
+    "ground_truth": "2024 Management report and Annual consolidated financial statements (ENGIE)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        2181,
+        3545
+    ]
+}

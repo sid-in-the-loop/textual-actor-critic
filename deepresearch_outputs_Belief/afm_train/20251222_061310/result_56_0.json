@@ -1,0 +1,19 @@
+{
+    "answer": "AI and Publishing",
+    "ground_truth": "PublishingState.com\u5b66\u672f\u51fa\u7248\u884c\u4e1a\u8d8b\u52bf\u4e13\u680f\u6587\u7ae0\u96c6\u5408",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        790,
+        1808,
+        2605
+    ]
+}

@@ -21,11 +21,15 @@ from pydantic import BaseModel  # type: ignore
 
 
 
-MODEL_ID = "gemini-2.5-flash"
-# Load environment variables from keys.env file
-load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key=GEMINI_API_KEY)
+# COMMENTED OUT: Gemini API initialization (not needed for trajectory collection)
+# MODEL_ID = "gemini-2.5-flash"
+# # Load environment variables from keys.env file
+# load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# client = genai.Client(api_key=GEMINI_API_KEY)
+MODEL_ID = None
+GEMINI_API_KEY = None
+client = None
 
 timestamp_suffix = None
 
@@ -65,6 +69,9 @@ The agent recognizes previous errors and takes actions to correct its course.
 def call_llm_with_json_schema(prompt: str, schema: BaseModel, max_try_times: int = 3) -> str:
     for _ in range(max_try_times):
         try:
+            # COMMENTED OUT: Gemini API call (not needed for trajectory collection)
+            if client is None:
+                return None  # Return None if Gemini client is not initialized
             response = client.models.generate_content(
                 model=MODEL_ID,
                 contents=prompt,

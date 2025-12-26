@@ -1,0 +1,29 @@
+{
+    "answer": "Autar Alanis: Deloitte United Economics And Legal Developments partner.",
+    "ground_truth": "KPMG LLP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        1679,
+        2920,
+        4462,
+        6418,
+        7455,
+        9192,
+        10466
+    ]
+}

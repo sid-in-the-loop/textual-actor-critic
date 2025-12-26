@@ -1,0 +1,21 @@
+{
+    "answer": "2nd China Lake Symposium",
+    "ground_truth": "He became the first Hispanic pilot to serve with the Blue Angels",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        785,
+        2044,
+        3408,
+        4596
+    ]
+}

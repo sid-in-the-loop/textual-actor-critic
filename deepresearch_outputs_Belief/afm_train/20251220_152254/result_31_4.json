@@ -1,0 +1,21 @@
+{
+    "answer": "Challenging traditional objectivity by incorporating literary techniques to present news as a style of discourse, with authors often taking a central role.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1590,
+        2680,
+        3742
+    ]
+}

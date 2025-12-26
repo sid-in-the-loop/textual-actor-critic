@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in the 2025 Bureau of Immigration Philippines annual report for foreign nationals' registration.",
+    "ground_truth": "3.03%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        1976,
+        3144,
+        4377,
+        5579,
+        6855,
+        8122
+    ]
+}

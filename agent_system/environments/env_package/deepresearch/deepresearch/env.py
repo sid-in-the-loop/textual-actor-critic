@@ -41,6 +41,11 @@ class DeepResearchEnv():
         os.makedirs(self.log_dir, exist_ok=True)
         os.makedirs(self.answer_dir, exist_ok=True)
 
+        # For JSONL trajectory storage (full evidence, no truncation)
+        self.trajectory_jsonl_path = None  # Will be set in reset()
+        self.trajectory_data = []  # Store full trajectory data
+        self.accumulated_evidence = []  # Store full evidence K_t at each turn
+
     def reset(self, question, question_id, rollout_idx, ground_truth, critique):
         prompt_wo_critique = ''
         if self.mode == "qa":
@@ -74,6 +79,11 @@ class DeepResearchEnv():
         self.need_format_reminder = False # whether need format reminder prompt
         self.rewards = []
         self.done = False
+        self.accumulated_evidence = []  # Reset accumulated evidence
+        self.trajectory_jsonl_path = os.path.join(self.log_dir, f"trajectory_{self.question_id}_{self.rollout_idx}.jsonl")
+        # Ensure log directory exists
+        os.makedirs(self.log_dir, exist_ok=True)
+        self.trajectory_data = []  # Reset trajectory data
         self.info = { 
            "question": question, # question text
            "question_id": question_id, # question id
@@ -112,6 +122,9 @@ class DeepResearchEnv():
         # Create log file paths
         trajectory_log = os.path.join(self.log_dir, f"trajectory_{self.question_id}_{self.rollout_idx}.md")
         search_log = os.path.join(self.log_dir, f"search_{self.question_id}_{self.rollout_idx}.log")
+
+        # Ensure log directory exists
+        os.makedirs(self.log_dir, exist_ok=True)
         
         self._record_trajectory(self.state, original_response, trajectory_log)
         context_length = tokenize(self.state) + tokenize(original_response)
@@ -135,10 +148,12 @@ class DeepResearchEnv():
         if done or self.turn_id + 1 >= self.max_steps:
             answer = self._compose_final_output(original_response)
             if done:
+                # Pass log_dir for debugging reward assignments
+                debug_log_dir = os.path.join(self.log_dir, 'reward_debug') if self.log_dir else None
                 if self.config['mode'] == "qa":
-                    reward = evaluation_reward_fn(self.question_id, self.question, answer, mode=self.config['mode'], ground_truth=self.ground_truth)
+                    reward = evaluation_reward_fn(self.question_id, self.question, answer, mode=self.config['mode'], ground_truth=self.ground_truth, debug_log_dir=debug_log_dir)
                 else:
-                    reward = evaluation_reward_fn(self.question_id, self.question, answer, mode=self.config['mode'])
+                    reward = evaluation_reward_fn(self.question_id, self.question, answer, mode=self.config['mode'], debug_log_dir=debug_log_dir)
                 self.done = True
             else:
                 reward = 0
@@ -148,8 +163,16 @@ class DeepResearchEnv():
 
         self.turn_id += 1
         self.rewards.append(reward)
+        
+        # Add accumulated evidence for belief computation BEFORE logging
+        K_t = self.accumulated_evidence.copy()
+        self.info['K_t_combined'] = "\n\n".join(K_t) if K_t else ""
+        
+        # Store trajectory data for JSONL (full evidence, no truncation)
+        self._log_trajectory_jsonl(original_response, action, next_obs, reward, done)
+        
         if self.done:
-            self._log_result(answer)
+            self._log_result(answer)  # This will also write JSONL
         return next_input, reward, done, self.info
     
         
@@ -209,6 +232,8 @@ class DeepResearchEnv():
             self.info['consecutive_search_cnt'] += 1
             observation = f'<information>{search_results}</information>'
             next_obs = observation
+            # Store full evidence for JSONL (no truncation)
+            self.accumulated_evidence.append(search_results)
         elif action == 'plan':
             self.info['consecutive_search_cnt'] = 0
         elif action == 'scripts':
@@ -259,6 +284,9 @@ class DeepResearchEnv():
             response: response
             trajectory_log: path to trajectory log file
         """
+        # Ensure the directory exists
+        os.makedirs(os.path.dirname(trajectory_log), exist_ok=True)
+
         # if trajectory_log does not exist or is empty, write the header   
         if not os.path.exists(trajectory_log) or os.path.getsize(trajectory_log) == 0:
             with open(trajectory_log, 'w', encoding='utf-8') as f:
@@ -273,7 +301,9 @@ class DeepResearchEnv():
             response_length = tokenize(response)            
             
             # Create patterns for all action types and truncate long contents
-            for action in ['search', 'answer', 'plan', 'scripts', 'information']:
+            # BUT: Never truncate <information> tags (we need full evidence for IS analysis)
+            input_short = input
+            for action in ['search', 'answer', 'plan', 'scripts']:
                 pattern = f'<{action}>(.*?)</{action}>'
                 
                 def truncate_action_content(match):
@@ -285,7 +315,8 @@ class DeepResearchEnv():
                     else:
                         return match.group(0)  # Return original if short enough
                 
-                input_short = re.sub(pattern, truncate_action_content, input, flags=re.DOTALL)
+                input_short = re.sub(pattern, truncate_action_content, input_short, flags=re.DOTALL)
+            # Note: <information> tags are NOT truncated - they keep full content
             
             f.write(f"### Input:\n**length={input_length}**\n{input_short}\n\n")
             f.write(f"### Response:\n**length={response_length}**\n{response}\n\n--------------------------------\n\n")
@@ -342,6 +373,42 @@ class DeepResearchEnv():
         except Exception as e:
             return f'did not find answer'
 
+    def _log_trajectory_jsonl(self, response, action, next_obs, reward, done):
+        """Log trajectory data to JSONL format (full evidence, no truncation)."""
+        # Extract accumulated evidence K_t at this turn
+        K_t = self.accumulated_evidence.copy()  # Full evidence list
+        
+        turn_data = {
+            "turn": self.turn_id,
+            "question": self.question,
+            "question_id": self.question_id,
+            "ground_truth": self.ground_truth,
+            "response": response,
+            "action": action,
+            "next_obs": next_obs,
+            "reward": reward,
+            "done": done,
+            "K_t": K_t,  # Full evidence at this turn (list of search result strings)
+            "K_t_combined": "\n\n".join(K_t),  # Combined evidence string
+            "search_count": self.info['search_cnt'],
+            "context_length": self.info['context_cnt'][-1] if self.info['context_cnt'] else 0
+        }
+        self.trajectory_data.append(turn_data)
+    
+    def _write_trajectory_jsonl(self):
+        """Write complete trajectory to JSONL file."""
+        if not self.trajectory_jsonl_path:
+            return
+        
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(self.trajectory_jsonl_path), exist_ok=True)
+
+        # Write one JSON object per line (JSONL format)
+        with open(self.trajectory_jsonl_path, 'w', encoding='utf-8') as f:
+            for turn_data in self.trajectory_data:
+                json.dump(turn_data, f, ensure_ascii=False)
+                f.write('\n')
+
     def _log_result(self, answer):
         answer_file = f"{self.answer_dir}/result_{self.question_id}_{self.rollout_idx}.json"
         with open(answer_file, 'w', encoding='utf-8') as f:
@@ -357,6 +424,9 @@ class DeepResearchEnv():
                 "context lengths": self.info['context_cnt']
                 }
             json.dump(result, f, indent=4)
+        
+        # Write JSONL trajectory file when episode is done
+        self._write_trajectory_jsonl()
 
     def _search(self, query, num_docs, search_log):
         if self.search_engine == 'clueweb':

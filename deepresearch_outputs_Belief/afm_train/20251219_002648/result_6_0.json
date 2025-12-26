@@ -1,0 +1,29 @@
+{
+    "answer": "Rooster Teeth is 10 years old.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        665,
+        1656,
+        2812,
+        4359,
+        5682,
+        6921,
+        8153,
+        9295
+    ]
+}

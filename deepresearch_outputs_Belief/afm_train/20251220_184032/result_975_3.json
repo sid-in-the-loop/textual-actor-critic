@@ -1,0 +1,17 @@
+{
+    "answer": "National Science Digital Library",
+    "ground_truth": "\u79d1\u5b66\u542f\u8499\u6559\u80b2\u53ca\u79d1\u6280\u9879\u76ee\u8d44\u6e90\u7f51\u7ad9\uff08Science Buddies\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        1657
+    ]
+}

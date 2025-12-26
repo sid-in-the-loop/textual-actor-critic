@@ -1,0 +1,19 @@
+{
+    "answer": "Received: May 1, 2021; Accepted: October 1, 2021; Published: Jan 18, 2022",
+    "ground_truth": "Received: 2021-12-14; Accepted: 2022-06-16; Published: 2022-06-29",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        945,
+        2692
+    ]
+}

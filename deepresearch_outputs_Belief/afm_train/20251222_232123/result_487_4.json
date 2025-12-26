@@ -1,0 +1,21 @@
+{
+    "answer": "Services for people with mental health needs, learning disabilities and autism",
+    "ground_truth": "NHS funded secondary mental health, learning disabilities, and autism services (NHS England Digital Statistical Publication)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1685,
+        2782,
+        3677
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Final Year Placement Report 2022-24",
+    "ground_truth": "IITK-DoMS-PlacementReports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        2213,
+        3741
+    ]
+}

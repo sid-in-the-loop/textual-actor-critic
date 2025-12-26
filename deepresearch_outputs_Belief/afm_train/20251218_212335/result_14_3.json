@@ -1,0 +1,27 @@
+{
+    "answer": "AI to predict lung cancer and breast cancer years before diagnosis",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        1839,
+        3154,
+        3552,
+        4101,
+        4638,
+        5279
+    ]
+}

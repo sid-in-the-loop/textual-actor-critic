@@ -1,0 +1,19 @@
+{
+    "answer": "Not found in search results.",
+    "ground_truth": "More than 40,000",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        966,
+        2180,
+        3339
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Disruptive Trends and Innovation",
+    "ground_truth": "Charting Disruption: Outlook for 2025 and Beyond",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        2189,
+        3819,
+        4283
+    ]
+}

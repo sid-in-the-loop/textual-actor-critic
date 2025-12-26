@@ -1,0 +1,17 @@
+{
+    "answer": "Advances shared progress and prosperity at the G7.",
+    "ground_truth": "hopes to host",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2107
+    ]
+}

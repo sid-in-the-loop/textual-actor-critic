@@ -1,0 +1,25 @@
+{
+    "answer": "ESG performance: Definition and best practices",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        2151,
+        2457,
+        3488,
+        3856,
+        4732
+    ]
+}

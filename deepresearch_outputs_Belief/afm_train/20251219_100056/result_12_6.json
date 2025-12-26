@@ -1,0 +1,27 @@
+{
+    "answer": "The unique collection of inputs gathered during the global consultation phase for the concept papers of the Ocean Action Panels, including those of the 2025 UN Ocean Conference, does not explicitly state the number of contributions received by Ocean Action Panel 5 related to sustainable fisheries management.",
+    "ground_truth": "217",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2003,
+        2596,
+        2989,
+        3788,
+        4652,
+        5151
+    ]
+}

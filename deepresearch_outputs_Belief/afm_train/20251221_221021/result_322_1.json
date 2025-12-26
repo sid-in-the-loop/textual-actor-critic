@@ -1,0 +1,17 @@
+{
+    "answer": "What specific response was missing from the emails released by Blumenthal\u2019s office?",
+    "ground_truth": "no response from Mark Zuckerberg",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        2014
+    ]
+}

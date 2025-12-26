@@ -1,0 +1,23 @@
+{
+    "answer": "Autodelta",
+    "ground_truth": "Chevrolet, represented by the RML Group",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        2058,
+        3447,
+        4708,
+        5901
+    ]
+}

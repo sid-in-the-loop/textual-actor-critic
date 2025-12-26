@@ -1,0 +1,21 @@
+{
+    "answer": "Novartis Annual Reports",
+    "ground_truth": "Novartis Annual Reports Collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        1767,
+        2097,
+        2449
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Financial Disclosures (TCFD)",
+    "ground_truth": "2024 Management report and Annual consolidated financial statements (ENGIE)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        826,
+        2202,
+        2660,
+        3042,
+        3712,
+        4282,
+        4812,
+        5294
+    ]
+}

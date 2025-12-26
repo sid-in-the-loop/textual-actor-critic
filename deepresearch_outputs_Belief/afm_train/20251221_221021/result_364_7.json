@@ -1,0 +1,19 @@
+{
+    "answer": "Additional $22,000,000 in FY 2025 and FY 2026 for Mainframe procurement; FTE changes for migration to cloud infrastructure planned for Q4 FY 2025.",
+    "ground_truth": "$9,256,000, 0 FTE",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        2025,
+        3352
+    ]
+}

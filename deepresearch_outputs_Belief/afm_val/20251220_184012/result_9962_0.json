@@ -1,0 +1,21 @@
+{
+    "answer": "Investment Insights",
+    "ground_truth": "Wells Fargo Investment Institute Investment Insights and Reports Collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1675,
+        2793,
+        3870
+    ]
+}

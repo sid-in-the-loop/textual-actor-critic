@@ -1,0 +1,19 @@
+{
+    "answer": "Use of literary techniques in political reporting to inform and persuade the public.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        1593,
+        2441
+    ]
+}

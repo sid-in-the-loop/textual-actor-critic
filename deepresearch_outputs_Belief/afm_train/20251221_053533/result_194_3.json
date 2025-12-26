@@ -1,0 +1,21 @@
+{
+    "answer": "India's auto retail sector growth at 6.46% in FY'25, reports FADA",
+    "ground_truth": "FADA Releases FY'25 and March'25 Vehicle Retail Data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        2417,
+        3851,
+        5681
+    ]
+}

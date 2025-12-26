@@ -1,0 +1,19 @@
+{
+    "answer": "The requested open group net present value (NPV) for future social insurance revenue less expenditures over 75 years starting in FY2024 could not be found in the available information.",
+    "ground_truth": "($78,400,000,000,000)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        911,
+        2324,
+        3692
+    ]
+}

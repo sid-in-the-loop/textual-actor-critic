@@ -1,0 +1,23 @@
+{
+    "answer": "Structured data visualization",
+    "ground_truth": "No chart or structured data visualization",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        2149,
+        3366,
+        4508,
+        5564
+    ]
+}

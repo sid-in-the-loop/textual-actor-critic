@@ -1,0 +1,23 @@
+{
+    "answer": "2025 Bureau of Immigration Philippines Annual Report Agricultural Survey",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1834,
+        2770,
+        3185,
+        3662
+    ]
+}

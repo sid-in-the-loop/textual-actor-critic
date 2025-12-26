@@ -1,0 +1,29 @@
+{
+    "answer": "The number of recent submissions for Earth and Planetary Astrophysics is not specified as a separate entity in AGU's journallist statistics, making a direct comparison difficult.",
+    "ground_truth": "Yes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        1726,
+        2578,
+        3797,
+        4718,
+        5760,
+        6870,
+        8018
+    ]
+}

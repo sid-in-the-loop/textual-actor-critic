@@ -25,8 +25,14 @@ data:
 
 actor_rollout_ref:
   hybrid_engine: True
+  use_openai_agent: False  # Set to True to use OpenAI agent instead of local model
+  openai_config:
+    temperature: 0.7
+    max_tokens: 50  # Limit response length for concise answers
+    top_p: 1.0
   model:
     path: ~/models/deepseek-llm-7b-chat
+    tokenizer_path: null  # If null, uses model.path. Can be set to a different path or HuggingFace Hub model ID
     use_shm: False
     external_lib: null
     override_config: { }
@@ -97,6 +103,7 @@ actor_rollout_ref:
     log_prob_use_dynamic_bsz: ${actor_rollout_ref.actor.use_dynamic_bsz}
     log_prob_max_token_len_per_gpu: ${actor_rollout_ref.actor.ppo_max_token_len_per_gpu}
     ulysses_sequence_parallel_size: ${actor_rollout_ref.actor.ulysses_sequence_parallel_size} # sp size
+    max_model_len: null
   rollout:
     name: vllm
     mode: sync # sync: LLM, async: AsyncLLM
@@ -263,7 +270,7 @@ trainer:
   rollout_data_dir: null # directory for logging the rollout data, no dump if null
   validation_data_dir: null # directory for logging the validation data, no dump if null
   nnodes: 1
-  n_gpus_per_node: 8
+  n_gpus_per_node: 6
   save_freq: -1
   # auto: find the last ckpt to resume. If can't find, start from scratch
   resume_mode: auto # or disable or resume_path if resume_from_path is set
@@ -309,3 +316,11 @@ env:
   webshop:
     use_small: True
     human_goals: False
+  belief_shaped_grpo:
+    enable: False
+    alpha: 1.0
+    max_candidates: 5
+  pure_belief_grpo:
+    enable: False
+    alpha: 1.0
+    max_candidates: 5

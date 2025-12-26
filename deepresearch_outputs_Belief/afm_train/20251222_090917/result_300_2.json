@@ -1,0 +1,21 @@
+{
+    "answer": "AI-driven strategies, short-form video, influencer marketing, and soundless advertising are highlighted as key US marketing trends for 2025. The article also discusses the continued growth of these trends.",
+    "ground_truth": "10 key marketing trends for the US in 2025\uff08askattest.com\u6587\u7ae0\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        1587,
+        1999,
+        2681
+    ]
+}

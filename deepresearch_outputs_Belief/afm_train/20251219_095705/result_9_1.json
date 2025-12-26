@@ -1,0 +1,25 @@
+{
+    "answer": "Meta 8-K",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        723,
+        2142,
+        3475,
+        5523,
+        5992,
+        7539
+    ]
+}

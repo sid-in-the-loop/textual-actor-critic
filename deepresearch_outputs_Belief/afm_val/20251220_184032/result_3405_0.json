@@ -1,0 +1,23 @@
+{
+    "answer": "Visual representation (e.g., dashboard, charts) containing quantitative and analytical data on sustainable cotton procurement percentages and 2020 commitments.",
+    "ground_truth": "High-resolution photograph of a mature cotton boll; no quantitative or analytic data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        2099,
+        3339,
+        4757,
+        6202
+    ]
+}

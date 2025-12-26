@@ -1,0 +1,21 @@
+{
+    "answer": "No images, such as charts, graphs, axes, or units of measurement, suitable for data-driven analysis were found in the \"The Indian Payments Handbook \u2013 2020\u20132025\" PwC report.",
+    "ground_truth": "No academic chart, axes, titles, or units",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        992,
+        2238,
+        3630,
+        5086
+    ]
+}

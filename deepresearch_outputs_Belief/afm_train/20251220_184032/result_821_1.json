@@ -1,0 +1,21 @@
+{
+    "answer": "Travel emissions were reported in the BBC Future special report \"Seven big climate and nature moments coming in 2025\".",
+    "ground_truth": "0kg CO2",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2159,
+        2688,
+        3986
+    ]
+}

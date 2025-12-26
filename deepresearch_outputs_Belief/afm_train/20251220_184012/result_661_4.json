@@ -1,0 +1,17 @@
+{
+    "answer": "The daily television consumption rate was 26% in Q4 2023/24 and 30% in Q3 2024/25, representing a 4 percentage point increase.",
+    "ground_truth": "Declined from 54% to 49%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        919,
+        2281
+    ]
+}

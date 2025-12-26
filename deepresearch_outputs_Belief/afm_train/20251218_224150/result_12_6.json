@@ -1,0 +1,27 @@
+{
+    "answer": "The number of contributions related to sustainable fisheries management to Ocean Action Panel 5 is not explicitly stated in the provided search results from the ICSF \"Extract -Stakeholder Consultation\" document, even though it mentions inputs gathered for the concept papers.",
+    "ground_truth": "217",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2012,
+        2476,
+        4063,
+        4524,
+        5022,
+        5399
+    ]
+}

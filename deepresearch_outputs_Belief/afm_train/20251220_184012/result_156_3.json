@@ -1,0 +1,23 @@
+{
+    "answer": "What is NOT academic writing? The point of academic writing is not to \u201csound like a native.\u201d",
+    "ground_truth": "What is an academic article? What is an academic article",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        1701,
+        1986,
+        2311,
+        2676
+    ]
+}

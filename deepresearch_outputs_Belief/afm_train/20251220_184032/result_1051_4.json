@@ -1,0 +1,19 @@
+{
+    "answer": "Publications - CIDOB",
+    "ground_truth": "CIDOB (Barcelona Centre for International Affairs) Collection of Analytical Publications",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1723,
+        2708
+    ]
+}

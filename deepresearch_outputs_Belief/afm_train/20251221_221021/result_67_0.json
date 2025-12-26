@@ -1,0 +1,23 @@
+{
+    "answer": "Unable to retrieve specific data from the specified report as it was not found in the search results.",
+    "ground_truth": "5.17%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        2039,
+        3309,
+        4612,
+        5886
+    ]
+}

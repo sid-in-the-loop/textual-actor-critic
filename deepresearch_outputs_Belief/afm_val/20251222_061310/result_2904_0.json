@@ -1,0 +1,19 @@
+{
+    "answer": "Communities are collaborating through partnerships and shared strategies to support student well-being, as outlined in the \"Mental Health for Students and Families in 2025\" publication.",
+    "ground_truth": "collaboration among parents, schools, mental health professionals, and students",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        1176,
+        2267
+    ]
+}

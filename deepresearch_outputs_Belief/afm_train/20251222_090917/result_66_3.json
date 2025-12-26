@@ -1,0 +1,25 @@
+{
+    "answer": "The Economic Times, the relevant newspaper, does not explicitly state a total amount in financial losses prevented by Maharashtra Cyber through its anti-cyber fraud efforts since 2019 in its searches.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        881,
+        1870,
+        3219,
+        4574,
+        6071,
+        7538
+    ]
+}

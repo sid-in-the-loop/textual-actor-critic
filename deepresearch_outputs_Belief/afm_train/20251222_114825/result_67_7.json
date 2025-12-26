@@ -1,0 +1,27 @@
+{
+    "answer": "The reported yield of the Bloomberg Investment Grade Corporate index for 2024 could not be determined based on the provided search results from the 'Key Fixed Income Themes' section of the 2025 Investment Outlook & Themes report released by Ameriprise Financial on December 18, 2024.",
+    "ground_truth": "5.17%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        1933,
+        2491,
+        2740,
+        3282,
+        3691,
+        4065
+    ]
+}

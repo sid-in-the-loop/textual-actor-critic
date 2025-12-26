@@ -1,0 +1,27 @@
+{
+    "answer": "Initial submission - Nature",
+    "ground_truth": "Nature For Authors (for-authors)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        702,
+        1319,
+        1563,
+        2370,
+        3277,
+        4127,
+        5249
+    ]
+}

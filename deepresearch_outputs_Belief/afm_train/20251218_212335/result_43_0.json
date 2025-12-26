@@ -1,0 +1,27 @@
+{
+    "answer": "14.3.480-491",
+    "ground_truth": "Nature 602(7898):566-570",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        842,
+        943,
+        1790,
+        1959,
+        2959,
+        1580,
+        1779
+    ]
+}

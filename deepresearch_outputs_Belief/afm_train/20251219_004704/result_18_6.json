@@ -1,0 +1,19 @@
+{
+    "answer": "10.4018/978-1-5225-8431-5",
+    "ground_truth": "10.1186/s41239-023-00392-8",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1011,
+        2229,
+        3606
+    ]
+}

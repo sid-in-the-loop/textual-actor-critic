@@ -1,0 +1,19 @@
+{
+    "answer": "ICLR's cookie policy: https://www.iclr.co.uk/about/terms-and-conditions/cookies-policy/",
+    "ground_truth": "Cookies for essential functions only",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1672,
+        2581
+    ]
+}

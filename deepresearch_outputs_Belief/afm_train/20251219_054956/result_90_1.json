@@ -1,0 +1,29 @@
+{
+    "answer": "The \"Joint Committee Update on Risks and Vulnerabilities in the EU Financial System \u2013 Spring 2025\" (ESMA) titled [PDF link] is the most relevant document. While steps were taken to find the specific section or framework within this document that discusses pension funding ratios for DB pension schemes as of Q3 2024, the search results specifically did not provide the requested information in the snippets.",
+    "ground_truth": "Funding Ratios (DB schemes) section; Solvency II regulatory framework; Reference date: 2024-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        2177,
+        2638,
+        3055,
+        4049,
+        4832,
+        5637,
+        6467
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Database-level selection (population-based training) and exemplar-level selection improve ALFWorld's performance, achieving 93% success, surpassing approaches with more powerful LLMs or hand-crafted examples.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        899,
+        2162
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "The BEAT | October 2025",
+    "ground_truth": "The BEAT",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        2039
+    ]
+}

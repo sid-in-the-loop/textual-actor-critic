@@ -1,0 +1,19 @@
+{
+    "answer": "State of Education for Crisis-Affected Children and Adolescents: Access and Learning Outcomes, Global Estimates 2025 Update (reliefweb.int)",
+    "ground_truth": "Global Estimates 2025 Update | Education Cannot Wait",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        2122,
+        3176
+    ]
+}

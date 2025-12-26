@@ -1,0 +1,17 @@
+{
+    "answer": "Business and technology trends",
+    "ground_truth": "IBM Institute for Business Value Report Library",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        701,
+        1908
+    ]
+}

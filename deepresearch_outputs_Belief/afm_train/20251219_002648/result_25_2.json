@@ -1,0 +1,23 @@
+{
+    "answer": "Web of Science categories include \"Agricultural Sciences,\" \"Biology & Biochemistry,\" \"Chemistry,\" \"Clinical Medicine,\" \"Computer Science,\" \"Economics & Business,\" \"Engineering,\" \"Environment/Ecology,\" \"Particles & Fields,\" \"Literature,\" \"Romance,\" and \"Physics.\"",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1923,
+        3277,
+        4863,
+        6298
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "The study of the process of human development and transformation.",
+    "ground_truth": "EDUCATION & EDUCATIONAL RESEARCH (\u5b66\u79d1\u5206\u7c7b)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        718,
+        1781,
+        2970,
+        4608,
+        5140,
+        6437
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Minimum experience for Stellic academic advisor at TCU is not explicitly specified.",
+    "ground_truth": "2 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1860,
+        2858,
+        3787
+    ]
+}

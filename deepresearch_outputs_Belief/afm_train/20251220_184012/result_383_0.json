@@ -1,0 +1,23 @@
+{
+    "answer": "Top Trends in International Education for 2025 and Beyond",
+    "ground_truth": "ApplyBoard 2025 Top Trends in International Education for 2025 and Beyond",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        1100,
+        1412,
+        1854,
+        2944
+    ]
+}

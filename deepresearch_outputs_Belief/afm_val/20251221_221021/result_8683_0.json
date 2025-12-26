@@ -1,0 +1,17 @@
+{
+    "answer": "Monthly-China-Energy-Update-May-2025",
+    "ground_truth": "78GW (184GWh); 43.7GW (109.8GWh) annual additions; 103% year-on-year growth",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2180
+    ]
+}

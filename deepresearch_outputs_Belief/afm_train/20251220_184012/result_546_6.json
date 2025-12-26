@@ -1,0 +1,21 @@
+{
+    "answer": "AI will be used smarter to future-proof organizations, to prioritize the right things.",
+    "ground_truth": "personalized career progression plans, tailored reward packages, real-time performance feedback",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        1079,
+        1516,
+        2807
+    ]
+}

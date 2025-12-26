@@ -1,0 +1,19 @@
+{
+    "answer": "The Knight Frank Data Centres Global Report 2025 does not contain an image.",
+    "ground_truth": "No specific numerical or time-bound data",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        2088,
+        3294
+    ]
+}

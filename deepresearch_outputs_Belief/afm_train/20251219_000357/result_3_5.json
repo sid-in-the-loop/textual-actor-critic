@@ -1,0 +1,29 @@
+{
+    "answer": "Sarah Klassen",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        833,
+        1988,
+        3234,
+        3625,
+        4871,
+        6500,
+        1261,
+        1749
+    ]
+}

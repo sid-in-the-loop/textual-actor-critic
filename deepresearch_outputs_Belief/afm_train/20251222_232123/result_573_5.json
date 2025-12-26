@@ -1,0 +1,23 @@
+{
+    "answer": "UNISON was asked to participate in November 2025.",
+    "ground_truth": "asked to join FPA working group by Department of Health and Social Care",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2020,
+        2332,
+        3516,
+        4670
+    ]
+}

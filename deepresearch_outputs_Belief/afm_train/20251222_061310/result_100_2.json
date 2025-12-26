@@ -1,0 +1,19 @@
+{
+    "answer": "The total foreign exchange reserves increased by 9.15%, reaching US$16.64 billion as of May 27, 2025, compared to US$15.251 billion as of April 2025.",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        2263,
+        3809
+    ]
+}

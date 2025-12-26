@@ -1,0 +1,25 @@
+{
+    "answer": "The Minnesota Human Rights Archive (MHRA)",
+    "ground_truth": "Hitachi Research Institute Research Report\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        1757,
+        2990,
+        4261,
+        5411,
+        6642
+    ]
+}

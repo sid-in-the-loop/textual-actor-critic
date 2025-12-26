@@ -1,0 +1,29 @@
+{
+    "answer": "I Spy: Abuela (2021)",
+    "ground_truth": "The Twilight Zone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        1803,
+        2182,
+        2701,
+        3167,
+        5139,
+        6739,
+        7991
+    ]
+}

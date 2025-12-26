@@ -1,0 +1,21 @@
+{
+    "answer": "The paper does not exist as of the current date.",
+    "ground_truth": "'Safeguarding Mobility for the Future: A Global Call to Action for the Use of the Locomotive Syndrome Risk Test' by Ryo Nakagawa",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        1070,
+        1389,
+        1840
+    ]
+}

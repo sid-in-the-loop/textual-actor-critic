@@ -1,0 +1,23 @@
+{
+    "answer": "Formal proofs.",
+    "ground_truth": "Proven Results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        684,
+        1674,
+        2754,
+        3803,
+        4712
+    ]
+}

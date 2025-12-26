@@ -1,0 +1,23 @@
+{
+    "answer": "\u8282\u6c14\u4e60\u4fd7\u796d\u7956",
+    "ground_truth": "\u6211\u7684\u5965\u8fd0\u68a6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        3010,
+        5783,
+        7386,
+        8942
+    ]
+}

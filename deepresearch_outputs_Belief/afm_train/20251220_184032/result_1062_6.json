@@ -1,0 +1,17 @@
+{
+    "answer": "Official homepage of Socorro Independent School District (www.sisd.net)",
+    "ground_truth": "Socorro Independent School District Academic Calendars",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        687,
+        1914
+    ]
+}

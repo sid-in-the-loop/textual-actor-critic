@@ -1,0 +1,29 @@
+{
+    "answer": "the health care infrastructure is not set up for them",
+    "ground_truth": "limited recommendations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        2088,
+        2477,
+        2816,
+        3341,
+        4553,
+        4955,
+        5418
+    ]
+}

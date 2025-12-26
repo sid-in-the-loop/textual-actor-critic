@@ -1,0 +1,21 @@
+{
+    "answer": "I Spy (2002)",
+    "ground_truth": "The Twilight Zone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        1684,
+        2636,
+        3704
+    ]
+}

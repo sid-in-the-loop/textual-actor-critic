@@ -1,0 +1,21 @@
+{
+    "answer": "A 5% tax on cash payments sent by non-citizens to family in their home countries.",
+    "ground_truth": "5% tax",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        1765,
+        2096,
+        3003
+    ]
+}

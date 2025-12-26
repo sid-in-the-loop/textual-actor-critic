@@ -1,0 +1,19 @@
+{
+    "answer": "2024 IBM Research annual letter",
+    "ground_truth": "IBM Institute for Business Value Annual Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        653,
+        1972,
+        2936
+    ]
+}

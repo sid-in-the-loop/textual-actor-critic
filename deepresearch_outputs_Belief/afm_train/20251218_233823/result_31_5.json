@@ -1,0 +1,25 @@
+{
+    "answer": "More aggressive",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        1673,
+        2870,
+        4388,
+        6108,
+        7430
+    ]
+}

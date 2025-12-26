@@ -1,0 +1,21 @@
+{
+    "answer": "2 hours 56 minutes",
+    "ground_truth": "4 hours and 10 minutes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1488,
+        2614,
+        3698
+    ]
+}

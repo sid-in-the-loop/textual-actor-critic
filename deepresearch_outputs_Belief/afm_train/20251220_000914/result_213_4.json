@@ -1,0 +1,25 @@
+{
+    "answer": "The NPR report \"Federal health agencies including CDC, NIH, and FDA take stock of layoffs : Shots - Health News\" does not appear to state the specific number of CDC employees who received termination letters over the weekend in its publicly accessible snippets.",
+    "ground_truth": "750",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        749,
+        2083,
+        2372,
+        2879,
+        3487,
+        1405
+    ]
+}

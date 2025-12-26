@@ -1,0 +1,23 @@
+{
+    "answer": "Xu Zhimo",
+    "ground_truth": "\u738b\u4e1c\u65ed",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        888,
+        2089,
+        3006,
+        3323,
+        4729
+    ]
+}

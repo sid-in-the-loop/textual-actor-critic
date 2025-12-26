@@ -1,0 +1,17 @@
+{
+    "answer": "Launched in 2022, and it has facilitated the development and dissemination of the PescaData app, which enhances data collection, communications, and financial decision-making among small-scale fishers.",
+    "ground_truth": "Started: 2020; facilitated peer-to-peer learning among small-scale fishers in Latin America",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1789
+    ]
+}

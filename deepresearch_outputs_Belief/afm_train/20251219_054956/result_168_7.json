@@ -1,0 +1,27 @@
+{
+    "answer": "Trends",
+    "ground_truth": "PublishingState.com\u7f51\u7ad9\u51fa\u7248\u4e0e\u8d8b\u52bf\u4e13\u680f\u4e3b\u9875",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1996,
+        2263,
+        3497,
+        4612,
+        5778,
+        7017
+    ]
+}

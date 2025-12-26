@@ -1,0 +1,17 @@
+{
+    "answer": "Attorney General or a senior DOJ official",
+    "ground_truth": "Senator Chuck Grassley",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1111,
+        2441
+    ]
+}

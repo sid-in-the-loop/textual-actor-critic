@@ -1,0 +1,21 @@
+{
+    "answer": "\u667a\u80fd\u7535\u89c6",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        844,
+        2252,
+        3982,
+        5735
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Social Media Trends",
+    "ground_truth": "GWI Social Media Trends Report\u7cfb\u5217",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        705,
+        1873,
+        3179,
+        4261
+    ]
+}

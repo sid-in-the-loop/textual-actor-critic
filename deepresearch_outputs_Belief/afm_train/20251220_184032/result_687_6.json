@@ -1,0 +1,17 @@
+{
+    "answer": "No changes announced regarding health-related payments for existing claimants in the UK Chancellor's Spring Statement released on March 26, 2025.",
+    "ground_truth": "Health-related payments frozen at \u00a397 per week until 2030",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1976
+    ]
+}

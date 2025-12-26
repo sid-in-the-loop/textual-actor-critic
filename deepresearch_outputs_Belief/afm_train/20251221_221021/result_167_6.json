@@ -1,0 +1,19 @@
+{
+    "answer": "Agreement reached for one full-time post until end of October 2025, to be filled by the ...",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        854,
+        2020,
+        3389
+    ]
+}

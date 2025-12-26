@@ -1,0 +1,25 @@
+{
+    "answer": "Bar charts in SeqVISTA show protein feature comparisons, such as codon usage patterns or phylogenetic distances.",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        826,
+        1929,
+        3112,
+        4223,
+        5666,
+        6896
+    ]
+}

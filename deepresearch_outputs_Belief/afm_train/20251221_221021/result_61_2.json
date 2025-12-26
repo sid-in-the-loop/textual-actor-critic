@@ -1,0 +1,19 @@
+{
+    "answer": "Chart or infographic showing pre-owned business jet market forecasts for transaction volume and value.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        1923,
+        3119
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "10 \u519c\u6797\u79d1\u5b66",
+    "ground_truth": "Division of Major Disciplines of the Chinese Academy of Sciences (Environmental Science and Ecology)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2300,
+        3293,
+        4611,
+        5627
+    ]
+}

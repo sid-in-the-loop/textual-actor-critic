@@ -1,0 +1,27 @@
+{
+    "answer": "Data Submission Requirements Page.",
+    "ground_truth": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        2606,
+        3065,
+        4138,
+        4791,
+        5344,
+        6231
+    ]
+}

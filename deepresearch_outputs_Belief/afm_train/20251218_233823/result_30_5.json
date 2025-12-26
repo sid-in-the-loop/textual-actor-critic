@@ -1,0 +1,29 @@
+{
+    "answer": "Account no match: We haven't seen anyone else use a name similar to the one.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        945,
+        2267,
+        2770,
+        3487,
+        4455,
+        5505,
+        6278,
+        6807
+    ]
+}

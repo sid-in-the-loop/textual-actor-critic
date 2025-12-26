@@ -1,0 +1,29 @@
+{
+    "answer": "University of Edinburgh and School of Social and Political Science",
+    "ground_truth": "University of Edinburgh",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        1791,
+        2076,
+        2809,
+        3244,
+        3911,
+        4415,
+        4914
+    ]
+}

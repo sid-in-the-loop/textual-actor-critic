@@ -1,0 +1,27 @@
+{
+    "answer": "December 31, 2025",
+    "ground_truth": "2022-02-01",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        799,
+        1960,
+        2602,
+        3779,
+        4766,
+        5941,
+        7199
+    ]
+}

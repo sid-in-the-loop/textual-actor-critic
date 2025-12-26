@@ -1,0 +1,17 @@
+{
+    "answer": "No action was taken by the lawyers on Tuesday, Feb. 18, 2025, regarding the request to overturn an impeachment and prevent a Senate trial, as the Supreme Court ruled on impeachment against Vice President Sara Duterte on July 25, 2025, which was the reported date of the initial ruling.",
+    "ground_truth": "Filed documents asking to annul her impeachment",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        2517
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Artificial intelligence will continue to drive the technology sector in 2025, but firms will be under pressure to show returns.",
+    "ground_truth": "Shifting from the public to the private sector.",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1929,
+        3126
+    ]
+}

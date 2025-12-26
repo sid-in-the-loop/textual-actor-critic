@@ -1,0 +1,27 @@
+{
+    "answer": "Net financial debt (or net debt) is calculated as total long-term and short-term debt, the current portion of long-term debt, and other non-current and current financial liabilities, excluding accrued interest, adjustments after derivatives, working capital, and cash and cash equivalents. Gross and net debt exclude accrued interests and adjustments after derivatives, with net debt including cash.",
+    "ground_truth": "Sum of long-term borrowings, short-term borrowings, current portion of long-term borrowings, other non-current and current financial liabilities, minus cash and cash equivalents, minus other current and non-current financial assets; reported per ESMA Guideline no. 39 (2021-03-04), effective from 2021-05-05, and CONSOB Warning Notice no. 5/21 (2021-04-29)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1006,
+        2512,
+        3190,
+        3766,
+        5338,
+        6056,
+        8111
+    ]
+}

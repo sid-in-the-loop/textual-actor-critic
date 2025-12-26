@@ -1,0 +1,29 @@
+{
+    "answer": "The NPR report does not provide a number of specific CDC employees with termination letters for the query.",
+    "ground_truth": "750",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        700,
+        1245,
+        1666,
+        2117,
+        2733,
+        3856,
+        4357,
+        4754
+    ]
+}

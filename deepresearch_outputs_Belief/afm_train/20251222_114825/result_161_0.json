@@ -1,0 +1,27 @@
+{
+    "answer": "2024",
+    "ground_truth": "2025 Global Digital Trust Insights Survey (PwC)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2157,
+        3413,
+        4674,
+        5976,
+        7230,
+        8585
+    ]
+}

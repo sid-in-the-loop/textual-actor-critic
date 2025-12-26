@@ -1,0 +1,27 @@
+{
+    "answer": "Authors should list names surname first, followed by a comma and initials, use Roman text for article/dataset titles, include a data availability statement, no more than 60 references (not strictly enforced), acknowledgements optional, author contributions, titles within two lines (75 characters, avoid technical terms, abbreviations, active verbs), a fully referenced ~200 word summary paragraph, main text of 2,500 words, and for typical 6 page articles, 4 figures/tables. Research articles at most 7,000 words excluding reference list.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        681,
+        1667,
+        2439,
+        3528,
+        4100,
+        4756,
+        6054
+    ]
+}

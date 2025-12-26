@@ -1,0 +1,25 @@
+{
+    "answer": "The New Journalism style of politics news writing.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        710,
+        1660,
+        2787,
+        4054,
+        5162,
+        6100
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Yes.",
+    "ground_truth": "Sharp upward spikes observed in Tokai region after 2020",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        902,
+        2034,
+        3191,
+        4381
+    ]
+}

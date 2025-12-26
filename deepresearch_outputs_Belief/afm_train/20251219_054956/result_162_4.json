@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in search results.",
+    "ground_truth": "42 additional buses",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        893,
+        2017,
+        2310,
+        2623,
+        3310,
+        4441,
+        4805
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "\"Cortical mapping of sensory responses reveals strong brain-state\"",
+    "ground_truth": "Real-Time Brain-Computer Interface Control of Walking Exoskeleton with Bilateral Sensory Feedback",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        1950,
+        2315,
+        3350
+    ]
+}

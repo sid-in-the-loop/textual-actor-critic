@@ -1,0 +1,19 @@
+{
+    "answer": "Business Administration",
+    "ground_truth": "\u5de5\u5546\u7ba1\u7406\u4e00\u7ea7\u5b66\u79d1",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        718,
+        1937,
+        2712
+    ]
+}

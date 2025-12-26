@@ -1,0 +1,25 @@
+{
+    "answer": "Consistent",
+    "ground_truth": "Vertical bars of identical height for each month from August 2023 to August 2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        917,
+        2158,
+        3348,
+        4774,
+        6198,
+        7382
+    ]
+}

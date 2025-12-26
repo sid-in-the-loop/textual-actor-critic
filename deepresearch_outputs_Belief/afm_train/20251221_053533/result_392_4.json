@@ -1,0 +1,19 @@
+{
+    "answer": "Electrical and Computer Engineering",
+    "ground_truth": "Computer Science (cs)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        728,
+        1738,
+        3118
+    ]
+}

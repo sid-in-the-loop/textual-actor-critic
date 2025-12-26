@@ -1,0 +1,23 @@
+{
+    "answer": "Brave and the Bold, Aquaman",
+    "ground_truth": "\"Starman\" and \"Robin\"",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        679,
+        1939,
+        3045,
+        4207,
+        5367
+    ]
+}

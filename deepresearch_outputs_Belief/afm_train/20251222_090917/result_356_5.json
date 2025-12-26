@@ -1,0 +1,29 @@
+{
+    "answer": "Not found on BASE (Bielefeld Academic Search Engine) Wikipedia page",
+    "ground_truth": "Citation importing feature, 2006, RefWorks, RefMan, EndNote, BibTeX",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1683,
+        2861,
+        3860,
+        4956,
+        6024,
+        7115,
+        8151
+    ]
+}

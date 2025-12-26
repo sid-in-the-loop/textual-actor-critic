@@ -1,0 +1,23 @@
+{
+    "answer": "Reorganization of the Department of Justice and the elimination of the Criminal Division, and a likely increase of the Department of Homeland Security and Bureau of Inland Revenue within the DOJ, reported by Reuters in May 2024 utilizing unnamed Trump allies.",
+    "ground_truth": "restructure the Department of Justice and fill nonpartisan roles with conservatives",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        2284,
+        3931,
+        4672,
+        5390
+    ]
+}

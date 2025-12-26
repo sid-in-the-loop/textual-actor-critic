@@ -1,0 +1,27 @@
+{
+    "answer": "The article does not provide a specific, short phrase describing a \"launch announcement\" made to kick off the new year.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        909,
+        2309,
+        2900,
+        3410,
+        3823,
+        5125,
+        5646
+    ]
+}

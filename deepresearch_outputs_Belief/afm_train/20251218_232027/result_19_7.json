@@ -1,0 +1,19 @@
+{
+    "answer": "The section focused on Indian and global political news, analysis, and commentary, accessible as a primary news category, is \"Live Politics News from India, Latest Politics headlines\" and \"Latest Breaking News Today \u2013 Top Headlines & Live Updates\" on The Economic Times website.",
+    "ground_truth": "Economic Times Politics\u9891\u9053",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1626,
+        2656
+    ]
+}

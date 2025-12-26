@@ -1,0 +1,21 @@
+{
+    "answer": "Cosentyx reported net sales of USD 1,326 million (up +23%, +25% cc) in the immunology segment for full year 2024.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        923,
+        2446,
+        3607,
+        5558
+    ]
+}

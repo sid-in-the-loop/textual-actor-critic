@@ -1,0 +1,25 @@
+{
+    "answer": "The figure in arXiv/abs/2505.00581 titled \"Bubble rise velocities in m/s vs. bubble diameter in mm for water and different surfactant solutions\" (ResearchGate Fig.2_391369491) presents experimental data related to bubble rise velocities at different surfactant concentrations.",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1102,
+        2141,
+        2883,
+        3381,
+        4074
+    ]
+}

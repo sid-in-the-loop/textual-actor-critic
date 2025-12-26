@@ -1,0 +1,21 @@
+{
+    "answer": "Temporally-Constrained Video Reasoning Segmentation and Automated Benchmark Construction",
+    "ground_truth": "MINERVA : Evaluating Complex Video Reasoning",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        991,
+        1385,
+        2505
+    ]
+}

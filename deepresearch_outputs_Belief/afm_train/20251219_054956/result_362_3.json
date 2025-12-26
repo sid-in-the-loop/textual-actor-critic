@@ -1,0 +1,27 @@
+{
+    "answer": "Dr. Seuss",
+    "ground_truth": "Captain Beaky and His Band",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1011,
+        2386,
+        3752,
+        5202,
+        6292,
+        7224,
+        9135
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "29 countries",
+    "ground_truth": "Seven",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        2009,
+        3264,
+        4479,
+        5808
+    ]
+}

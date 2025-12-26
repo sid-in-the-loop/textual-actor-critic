@@ -1,0 +1,19 @@
+{
+    "answer": "Undermines the global financial order.",
+    "ground_truth": "Russia will do more than any other country to subvert the global order in 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        1780,
+        2828
+    ]
+}

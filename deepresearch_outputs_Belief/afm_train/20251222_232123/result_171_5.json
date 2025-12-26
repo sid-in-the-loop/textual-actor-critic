@@ -1,0 +1,29 @@
+{
+    "answer": "$1.4 billion",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        898,
+        2028,
+        2403,
+        3825,
+        5205,
+        6273,
+        6664,
+        7696
+    ]
+}

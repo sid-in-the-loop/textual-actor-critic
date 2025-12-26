@@ -1,0 +1,27 @@
+{
+    "answer": "Consolidated Statement of Income",
+    "ground_truth": "2024 Annual Report - Financial Summary Table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2256,
+        3562,
+        4892,
+        6307,
+        7609,
+        8913
+    ]
+}

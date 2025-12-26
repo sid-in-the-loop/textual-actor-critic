@@ -1,0 +1,23 @@
+{
+    "answer": "The Communications Authority of Kenya (CA) organizes its quarterly reports, such as \"Quarterly Sector Statistics Reports,\" under the financial year 2024/2025, which typically includes the 2023/2024 quarter within its quarter nomenclature.",
+    "ground_truth": "Sector Statistics Reports for the Financial Year 2023/2024 (Communications Authority of Kenya)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        2477,
+        4776,
+        5615,
+        6404
+    ]
+}

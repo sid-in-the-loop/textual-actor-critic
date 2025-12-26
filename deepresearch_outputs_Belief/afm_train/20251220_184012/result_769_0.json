@@ -1,0 +1,23 @@
+{
+    "answer": "Apr 21, 2025",
+    "ground_truth": "2025-04-21",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1803,
+        2837,
+        3124,
+        4398
+    ]
+}

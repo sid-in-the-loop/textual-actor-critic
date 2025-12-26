@@ -1,0 +1,21 @@
+{
+    "answer": "Fig. S4-S6",
+    "ground_truth": "Figure S3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1538,
+        1855,
+        2851
+    ]
+}

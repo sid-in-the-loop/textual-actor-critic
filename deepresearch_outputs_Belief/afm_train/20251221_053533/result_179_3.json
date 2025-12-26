@@ -1,0 +1,19 @@
+{
+    "answer": "Global M&A trends in financial services: 2025 outlook",
+    "ground_truth": "Financial Services in 2025 (PwC Report)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        1982,
+        3029
+    ]
+}

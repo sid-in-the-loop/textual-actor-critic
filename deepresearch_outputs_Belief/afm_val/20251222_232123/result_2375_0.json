@@ -1,0 +1,21 @@
+{
+    "answer": "Datong PV farms (Panda Power Plant): 1,000 MW, Datong, Shanxi Province",
+    "ground_truth": "100GW Great Solar Wall in Inner Mongolia; 4GW Ruoqiang Solar Project; 1GW open-sea solar plant in Shandong",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        880,
+        2214,
+        3503,
+        4443
+    ]
+}

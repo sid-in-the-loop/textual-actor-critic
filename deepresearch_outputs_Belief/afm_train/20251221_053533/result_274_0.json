@@ -1,0 +1,27 @@
+{
+    "answer": "The Global Outlook: looking ahead to 2025 (released September 24, 2024) indicates a reduced inclination towards diplomatic engagement by South Korea under President Yoon Suk-yeol compared to President Moon Jae-in.",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        831,
+        2204,
+        3458,
+        4632,
+        5171,
+        5872,
+        1236
+    ]
+}

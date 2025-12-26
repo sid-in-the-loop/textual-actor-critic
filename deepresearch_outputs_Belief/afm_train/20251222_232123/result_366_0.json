@@ -1,0 +1,21 @@
+{
+    "answer": "Geopolitical Risk \u2013 Regulatory fragmentation, contagion risks from third parties, resilience, securing consumer outcomes, and accountability/ timely remediation.",
+    "ground_truth": "Four regulatory priorities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1949,
+        3077,
+        4279
+    ]
+}

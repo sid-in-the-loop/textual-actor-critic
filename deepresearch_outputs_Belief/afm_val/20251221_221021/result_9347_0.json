@@ -1,0 +1,21 @@
+{
+    "answer": "Blockchain",
+    "ground_truth": "GLOBAL TRADE MANAGEMENT\uff08Thomson Reuters Institute\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        1985,
+        2286,
+        2737
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "SkyWest E175 fleet growth data not found in the cited document.",
+    "ground_truth": "36%; 193; 262",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1189,
+        1438,
+        1679,
+        2550,
+        3079
+    ]
+}

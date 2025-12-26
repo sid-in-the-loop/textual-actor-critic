@@ -1,0 +1,23 @@
+{
+    "answer": "The U.S. Department of Commerce FY2025 budget report does not specify the exact number of UH-60MH conversions or the exact amount allocated specifically for them.",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        1950,
+        3626,
+        5105,
+        6654
+    ]
+}

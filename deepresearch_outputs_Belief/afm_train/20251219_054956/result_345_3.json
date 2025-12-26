@@ -1,0 +1,25 @@
+{
+    "answer": "There is no specific trade union name uniquely identified as such in the search results for TUC-affiliated public service unions.",
+    "ground_truth": "UNISON - the public service union",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1968,
+        2942,
+        4676,
+        5365,
+        6878
+    ]
+}

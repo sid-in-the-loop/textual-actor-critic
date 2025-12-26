@@ -1,0 +1,23 @@
+{
+    "answer": "Bar chart or line graph of monthly IMF regional GDP estimates and global commodities (gold, commodities) data.",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        945,
+        2232,
+        3645,
+        4743,
+        6519
+    ]
+}

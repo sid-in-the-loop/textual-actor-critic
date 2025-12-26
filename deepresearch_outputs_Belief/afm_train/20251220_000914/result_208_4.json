@@ -1,0 +1,21 @@
+{
+    "answer": "The Novartis LLC Annual Report 2024",
+    "ground_truth": "Novartis 2024 Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        719,
+        2358,
+        4078,
+        5549
+    ]
+}

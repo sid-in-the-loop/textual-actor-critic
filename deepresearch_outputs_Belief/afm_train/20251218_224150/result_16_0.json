@@ -1,0 +1,25 @@
+{
+    "answer": "NIMO 2018, Problem 5",
+    "ground_truth": "Answer: NNNYYY",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1794,
+        3020,
+        4405,
+        5889,
+        7348,
+        9106
+    ]
+}

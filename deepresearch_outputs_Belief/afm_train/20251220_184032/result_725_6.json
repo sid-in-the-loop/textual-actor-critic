@@ -1,0 +1,21 @@
+{
+    "answer": "An Efficient Quantum Circuit for Block Encoding a Pairing ... (arXiv:2402.11205)",
+    "ground_truth": "Quantum simulation of CO2 chemisorption in an amine-functionalized metal-organic framework",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2239,
+        2474,
+        3841
+    ]
+}

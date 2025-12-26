@@ -1,0 +1,21 @@
+{
+    "answer": "Submission guidelines on nature.com/srep/author-instructions: Format of articles, include all authors, and author statement of responsibility.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        1463,
+        2381,
+        3197
+    ]
+}

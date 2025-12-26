@@ -1,0 +1,25 @@
+{
+    "answer": "Quarterly Report on Environmental Assessments and System Performance Reviews (EPR)",
+    "ground_truth": "2025 \u2013 1st Quarter Report: Support for Conducting Systems & Performance Audits of CASTNET Sites and NADP Monitoring Stations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        1070,
+        2397,
+        2700,
+        3184,
+        4422
+    ]
+}

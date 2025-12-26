@@ -1,0 +1,21 @@
+{
+    "answer": "Greg Bauer, Amanda Boggs, Melissa Dymek, Dan Joyce, Anand Krishna, Nick Mancini, Yani Najarian, Sylvia Yacoub",
+    "ground_truth": "Anand Krishna",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        1766,
+        2035,
+        2287
+    ]
+}

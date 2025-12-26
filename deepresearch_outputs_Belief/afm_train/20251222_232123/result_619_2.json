@@ -1,0 +1,17 @@
+{
+    "answer": "As far as I know, neither in breast nor lung [cancer] are there [NCCN guidelines on the] utilization of any AI tools.",
+    "ground_truth": "limited recommendations",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        1832
+    ]
+}

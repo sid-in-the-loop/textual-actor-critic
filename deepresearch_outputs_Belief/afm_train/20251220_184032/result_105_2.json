@@ -1,0 +1,17 @@
+{
+    "answer": "Apple announced results for Q1 FY2025 on January 30, 2025, listed as [[PDF] 01-30-25 Apple Reports First Quarter Results](https://www.apple.com/newsroom/pdfs/fy2025-q1/FY25_Q1_Consolidated_Financial_Statements.pdf)",
+    "ground_truth": "Apple reports first quarter results - Apple",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        765,
+        2220
+    ]
+}

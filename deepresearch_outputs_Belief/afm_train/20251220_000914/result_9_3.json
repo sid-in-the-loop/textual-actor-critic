@@ -1,0 +1,27 @@
+{
+    "answer": "10-Q Minor",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2317,
+        3730,
+        5331,
+        6753,
+        8209,
+        9789
+    ]
+}

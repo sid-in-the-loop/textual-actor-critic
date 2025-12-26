@@ -1,0 +1,29 @@
+{
+    "answer": "The Economic Times may not provide this specific financial loss prevention figures for Maharashtra Cyber since 2019 through its website snippets.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        942,
+        2522,
+        3053,
+        4691,
+        5120,
+        5600,
+        6270,
+        6748
+    ]
+}

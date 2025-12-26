@@ -1,0 +1,23 @@
+{
+    "answer": "Unavailable in The Economic Times search results.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2163,
+        3504,
+        5008,
+        6331
+    ]
+}

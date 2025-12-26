@@ -1,0 +1,17 @@
+{
+    "answer": "The Star Entertainment Group Limited released its financial results for 1HFY25 on Tuesday 15 April 2025 and is located at financial.results.starentertainmentgroup.com. They also have a PDF available on the site.",
+    "ground_truth": "Financial Results | The Star Entertainment Group Limited",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        2101
+    ]
+}

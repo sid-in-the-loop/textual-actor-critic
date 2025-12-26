@@ -1,0 +1,21 @@
+{
+    "answer": "China showcases flagship solar projects like the 500 MW/2,000 MWh battery energy storage system in Tongliao, Inner Mongolia; the 3,000 MW (3 GW) Nilka County PV Park in Xinjiang; and the 1km-wide space solar array, with details on scale and location provided.",
+    "ground_truth": "100GW Great Solar Wall in Inner Mongolia; 4GW Ruoqiang Solar Project; 1GW open-sea solar plant in Shandong",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1622,
+        1860,
+        3205,
+        4597
+    ]
+}

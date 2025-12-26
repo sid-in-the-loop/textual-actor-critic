@@ -1,0 +1,25 @@
+{
+    "answer": "Robert F. Kennedy Jr. described the prosecutor's actions as an agenda.",
+    "ground_truth": "intention to prosecute medical journals",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        2098,
+        2363,
+        2647,
+        3276,
+        3849
+    ]
+}

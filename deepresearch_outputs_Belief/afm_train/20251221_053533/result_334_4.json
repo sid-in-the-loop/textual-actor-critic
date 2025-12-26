@@ -1,0 +1,25 @@
+{
+    "answer": "Graphical Representation, Bank Claims Exceeding 25% of Balance Sheet in Low-Income Countries",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        1968,
+        3206,
+        3629,
+        4266,
+        5543
+    ]
+}

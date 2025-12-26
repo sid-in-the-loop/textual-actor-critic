@@ -1,0 +1,25 @@
+{
+    "answer": "Official Publications System, UN DESA Annual Highlights/Policy Briefs",
+    "ground_truth": "DESA Publications\uff08\u8054\u5408\u56fd\u7ecf\u6d4e\u548c\u793e\u4f1a\u4e8b\u52a1\u90e8\u51fa\u7248\u7269\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2395,
+        2922,
+        3663,
+        4766,
+        5431
+    ]
+}

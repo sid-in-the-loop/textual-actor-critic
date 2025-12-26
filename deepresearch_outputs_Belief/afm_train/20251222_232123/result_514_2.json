@@ -1,0 +1,23 @@
+{
+    "answer": "Yes",
+    "ground_truth": "'EASTMAN' logo appears prominently",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        818,
+        2115,
+        3633,
+        4930,
+        6240
+    ]
+}

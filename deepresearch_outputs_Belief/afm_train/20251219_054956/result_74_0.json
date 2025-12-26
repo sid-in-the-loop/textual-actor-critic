@@ -1,0 +1,27 @@
+{
+    "answer": "The specific percentage change in revenue for the Treasury Brisbane Hotel compared to the previous corresponding period, from The Star Entertainment Group Limited's 2024 Annual Report, could not be determined due to limitations in accessing the report's internal content directly.",
+    "ground_truth": "5.4%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        841,
+        2002,
+        3236,
+        4561,
+        6336,
+        1578,
+        2878
+    ]
+}

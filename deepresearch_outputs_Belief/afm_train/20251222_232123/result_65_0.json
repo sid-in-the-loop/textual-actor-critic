@@ -1,0 +1,17 @@
+{
+    "answer": "Establishing consolidated tapes in Europe",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2179
+    ]
+}

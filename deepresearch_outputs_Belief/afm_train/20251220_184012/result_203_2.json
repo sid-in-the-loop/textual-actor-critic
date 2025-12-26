@@ -1,0 +1,17 @@
+{
+    "answer": "The Universal Registration Document 2024 2024 contains the Management Report and Annual Consolidated Financial Statements.",
+    "ground_truth": "2024 Management report and Annual consolidated financial statements (ENGIE)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        2147
+    ]
+}

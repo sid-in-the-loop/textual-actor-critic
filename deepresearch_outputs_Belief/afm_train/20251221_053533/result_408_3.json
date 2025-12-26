@@ -1,0 +1,27 @@
+{
+    "answer": "Wikipedia \"2025 in science\"",
+    "ground_truth": "Nature Predictions of Major Science Events for 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        1067,
+        2269,
+        3356,
+        4389,
+        5640,
+        6068
+    ]
+}

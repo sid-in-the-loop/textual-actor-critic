@@ -1,0 +1,19 @@
+{
+    "answer": "OEM wise Market Share Data",
+    "ground_truth": "FADA Releases FY'25 and March'25 Vehicle Retail Data",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2495,
+        4090
+    ]
+}

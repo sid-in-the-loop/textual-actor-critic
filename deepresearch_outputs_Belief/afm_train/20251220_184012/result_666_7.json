@@ -1,0 +1,21 @@
+{
+    "answer": "The New York Times",
+    "ground_truth": "Harvard pledges reforms following internal reports on antisemitism and anti-Arab bias | AP News",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        2090,
+        3210,
+        4381
+    ]
+}

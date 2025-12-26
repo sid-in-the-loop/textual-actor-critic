@@ -1,0 +1,29 @@
+{
+    "answer": "r",
+    "ground_truth": "alternative",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        2205,
+        3408,
+        4507,
+        5711,
+        6758,
+        8016,
+        9177
+    ]
+}

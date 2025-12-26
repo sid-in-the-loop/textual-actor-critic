@@ -1,0 +1,25 @@
+{
+    "answer": "Hold, RM2.61, RM2.10",
+    "ground_truth": "RM1.70; September-October 2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2201,
+        3493,
+        4899,
+        6221,
+        7638
+    ]
+}

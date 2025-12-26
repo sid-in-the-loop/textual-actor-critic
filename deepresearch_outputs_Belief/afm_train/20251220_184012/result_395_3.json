@@ -1,0 +1,17 @@
+{
+    "answer": "Editors Cafe",
+    "ground_truth": "PublishingState.com\uff0cPeer Review in 2025: Analyzing the Current Landscape and Future Prospects",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2123
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Deutsche Bank",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        949,
+        2880,
+        3928,
+        4373,
+        5634,
+        7619,
+        8050,
+        9367
+    ]
+}

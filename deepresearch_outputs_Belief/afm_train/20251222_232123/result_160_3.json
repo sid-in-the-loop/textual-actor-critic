@@ -1,0 +1,19 @@
+{
+    "answer": "Develop a Mental Health and Suicide Prevention Agreement alongside a new whole-of-society strategy for student mental health and wellbeing.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1795,
+        2664
+    ]
+}

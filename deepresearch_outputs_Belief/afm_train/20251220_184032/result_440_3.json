@@ -1,0 +1,21 @@
+{
+    "answer": "A Multi-Scale Quantum Framework for Evaluating Metal-Organic Framework Materials (arXiv:2505.04527)",
+    "ground_truth": "Quantum simulation of CO2 chemisorption in an amine-functionalized metal-organic framework",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        708,
+        2031,
+        3180,
+        4469
+    ]
+}

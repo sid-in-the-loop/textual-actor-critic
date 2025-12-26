@@ -1,0 +1,17 @@
+{
+    "answer": "5.9% (fiscal 2025), 3% range (Bessent, 2025), 156% (debt-to-GDP ratio, 2055)",
+    "ground_truth": "3.1% average; 4.0% in 2045; 2.8% by 2099",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        968,
+        2644
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Factors Affecting Reserve Balances - H.4.1",
+    "ground_truth": "Periodic Report: Update on Outstanding Lending Facilities Authorized by the Board under Section 13(3) of the Federal Reserve Act (2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2156,
+        3672,
+        4336,
+        5312,
+        6840,
+        7578,
+        9160
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The survey on AI investment returns, based on the Google Cloud AI Business Trends 2025 report (ROI of AI 2025), disclosed a survey of 3,466 senior leaders, with average three-year ROI for a business using Google Cloud generative AI being 727% and 74% of executives reporting achieving ROI within the first year. The main source of the greatest returns was enterprise decision makers and research.",
+    "ground_truth": "More than 2,500",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        2080,
+        2395,
+        3991
+    ]
+}

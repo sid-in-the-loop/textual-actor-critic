@@ -1,0 +1,23 @@
+{
+    "answer": "The requested specific financial loss prevention figure by Maharashtra Cyber since 2019, directly from The Times of India articles, could not be found in accessible web search snippets.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1038,
+        2411,
+        2879,
+        3402,
+        3930
+    ]
+}

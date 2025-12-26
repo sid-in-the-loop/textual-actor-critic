@@ -1,0 +1,17 @@
+{
+    "answer": "Sigmoidal, inflection points around pH 4.89",
+    "ground_truth": "Sigmoidal curve with inflection points near pH 4 and pH 10.",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        1928
+    ]
+}

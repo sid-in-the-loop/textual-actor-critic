@@ -1,0 +1,21 @@
+{
+    "answer": "2026 Economic and Market Outlook",
+    "ground_truth": "Vanguard Our investment and economic outlook \u7cfb\u5217\u62a5\u544a",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        701,
+        1857,
+        2943,
+        4070
+    ]
+}

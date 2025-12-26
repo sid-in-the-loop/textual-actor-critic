@@ -1,0 +1,17 @@
+{
+    "answer": "Joint Guidelines (JC/GL 2024 88) on the system established by the ESAs for the exchange of information relevant to the assessment of the fitness and propriety of persons and entities.",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2303
+    ]
+}

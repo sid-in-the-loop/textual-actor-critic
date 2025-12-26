@@ -1,0 +1,21 @@
+{
+    "answer": "Stakeholders will have no choice but to come together to establish industrywide standards and apply them consistently.",
+    "ground_truth": "Increased collaboration between pharmaceutical manufacturers and independent pharmacies.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        1949,
+        3033,
+        4115
+    ]
+}

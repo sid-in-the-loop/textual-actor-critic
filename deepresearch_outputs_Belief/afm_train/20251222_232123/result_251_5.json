@@ -1,0 +1,19 @@
+{
+    "answer": "We will ask for your consent to use these cookies when you request the relevant service.",
+    "ground_truth": "Cookies for essential functions only",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1674,
+        2499
+    ]
+}

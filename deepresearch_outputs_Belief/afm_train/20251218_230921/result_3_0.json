@@ -1,0 +1,29 @@
+{
+    "answer": "Barbara Moulard",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        1923,
+        3517,
+        4258,
+        4869,
+        6492,
+        7432,
+        8724
+    ]
+}

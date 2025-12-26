@@ -1,0 +1,29 @@
+{
+    "answer": "The requested data on the percentage of consumers who intended to upgrade to 5G, surveyed between June and August 2024 across 12 major developed countries, is not available in the search snippets from the \"State of 5G 2024\" report or related results using the specified criteria.",
+    "ground_truth": "46%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        2083,
+        2421,
+        3033,
+        4748,
+        5516,
+        6222,
+        7161
+    ]
+}

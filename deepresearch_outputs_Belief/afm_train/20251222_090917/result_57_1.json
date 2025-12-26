@@ -1,0 +1,29 @@
+{
+    "answer": "Unable to determine the specific description of Figure 0's depiction of the volatility distribution of the unemployment rate in Hong Kong prior to January 2025 from the available search results.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        838,
+        2245,
+        3508,
+        4770,
+        6155,
+        7567,
+        8610,
+        9850
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "BBC iPlayer grew by 883 million year-on-year, and BBC Online's reach increased by 54% year-on-year (compared to 55% in 2023/24).",
+    "ground_truth": "BBC Online account usage grew 11% year-on-year in 2023; BBC iPlayer had a record-breaking year in 2023",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2114,
+        3562
+    ]
+}

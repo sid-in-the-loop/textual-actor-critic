@@ -1,0 +1,17 @@
+{
+    "answer": "Reconstruct diversity vague SIUNIT momentum corpus off platform debate trivia animated cold fusion caf\u00e9 cafe",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1716
+    ]
+}

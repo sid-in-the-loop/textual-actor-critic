@@ -1,0 +1,29 @@
+{
+    "answer": "Not explicitly identified as a single comprehensive listing with filter for 'official release of the Q1 2025 report'. Most results are individual company news/releases or general economic data.",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2199,
+        3451,
+        4952,
+        6372,
+        7975,
+        9634,
+        11201
+    ]
+}

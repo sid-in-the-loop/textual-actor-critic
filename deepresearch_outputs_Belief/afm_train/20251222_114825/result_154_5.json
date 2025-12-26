@@ -1,0 +1,25 @@
+{
+    "answer": "The increase in mandatory funding for VA benefit programs from FY2024 to FY2025 is $33 billion. This includes $24 billion for the Toxic Exposures Fund, $210.6 billion for traditional benefits (Compensation and Pensions, Readjustment Benefits, Housing and Insurance), and $20.3 billion for construction and cost of war in FY2024. The total mandatory funding requested for FY2025 was $369.3 billion, an increase of $33 billion over FY2024 ($336.1 billion).",
+    "ground_truth": "$41.8 billion or 21.6%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        2254,
+        3721,
+        4890,
+        6249,
+        7596
+    ]
+}

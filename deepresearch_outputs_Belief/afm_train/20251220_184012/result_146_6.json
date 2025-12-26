@@ -1,0 +1,23 @@
+{
+    "answer": "Annual Report on Form 10-K",
+    "ground_truth": "Novartis Annual Reports Collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        2107,
+        3526,
+        5092,
+        6462
+    ]
+}

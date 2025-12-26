@@ -1,0 +1,25 @@
+{
+    "answer": "FINE AND PERFORMING ARTS",
+    "ground_truth": "Art Studies",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        705,
+        1754,
+        2792,
+        4347,
+        1464,
+        2737
+    ]
+}

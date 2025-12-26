@@ -1,0 +1,23 @@
+{
+    "answer": "The main page for Novartis quarterly financial results is `https://www.novartis.com/investors/financial-data/quarterly-results/`. While this page provides links to individual quarter reports (e.g., Q3 2025, Q2 2025, Q1 2025, Q4 2024 releases), the \"collection by release date and quarter\" as a single navigable list is not explicitly presented on this page. It leads to specific reports or transcripts, but not for all 2024 quarters in a unified, filtered manner.",
+    "ground_truth": "Novartis 2024\u5e74\u5ea6\u5b63\u5ea6\u8d22\u62a5\u7cfb\u5217\uff08Quarterly Financial Results / Financial Data Collection\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        2147,
+        2696,
+        4024,
+        5555
+    ]
+}

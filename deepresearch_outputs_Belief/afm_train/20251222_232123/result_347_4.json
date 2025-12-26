@@ -1,0 +1,19 @@
+{
+    "answer": "2022, facilitated peer-to-peer learning through sharing bottom-up knowledge and experiences",
+    "ground_truth": "Started: 2020; facilitated peer-to-peer learning among small-scale fishers in Latin America",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        1862,
+        2783
+    ]
+}

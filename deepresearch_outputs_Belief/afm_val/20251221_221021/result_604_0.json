@@ -1,0 +1,17 @@
+{
+    "answer": "https://orcid.org/0000-0003-4532-8587",
+    "ground_truth": "0009-0006-2455-689X",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        1871
+    ]
+}

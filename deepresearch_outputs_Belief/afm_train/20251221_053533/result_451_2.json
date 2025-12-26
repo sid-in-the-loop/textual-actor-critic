@@ -1,0 +1,29 @@
+{
+    "answer": "Roughly half",
+    "ground_truth": "3 months behind",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        1959,
+        3323,
+        4634,
+        6011,
+        7417,
+        9140,
+        10880
+    ]
+}

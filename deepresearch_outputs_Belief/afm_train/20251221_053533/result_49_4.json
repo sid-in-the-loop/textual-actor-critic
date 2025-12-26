@@ -1,0 +1,29 @@
+{
+    "answer": "Our research findings",
+    "ground_truth": "Child Trends Publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        1628,
+        2974,
+        4151,
+        5230,
+        5744,
+        6956,
+        7455
+    ]
+}

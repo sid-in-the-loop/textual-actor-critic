@@ -1,0 +1,21 @@
+{
+    "answer": "Customized Retrieval Augmented Generation and Benchmarking for EDA tool documentation QA",
+    "ground_truth": "EnronQA: Towards Personalized RAG over Private Documents",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        2134,
+        3210,
+        4222
+    ]
+}

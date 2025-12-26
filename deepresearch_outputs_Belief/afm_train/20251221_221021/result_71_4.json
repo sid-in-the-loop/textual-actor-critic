@@ -1,0 +1,19 @@
+{
+    "answer": "Harriet Tubman",
+    "ground_truth": "New York Congressman Sereno E. Payne",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1023,
+        2115,
+        3286
+    ]
+}

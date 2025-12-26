@@ -1,0 +1,21 @@
+{
+    "answer": "Financial report for the period 1 January 2025 to 30 September 2025",
+    "ground_truth": "Novo Nordisk Investor presentation First three months of 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        2290,
+        3707,
+        5092
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Our Nation's Children",
+    "ground_truth": "Child Trends Publications",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        685,
+        1819,
+        2749
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "April 29, 1934",
+    "ground_truth": "2012",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        893,
+        2150,
+        3511,
+        4683,
+        6050,
+        7185
+    ]
+}

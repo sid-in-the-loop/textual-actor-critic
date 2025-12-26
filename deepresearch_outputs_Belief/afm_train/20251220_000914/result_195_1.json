@@ -1,0 +1,25 @@
+{
+    "answer": "https://investor.apple.com/investor-relations/default.aspx",
+    "ground_truth": "Apple Inc. Investor Relations \u8d22\u62a5\u6c47\u603b\u9875",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        712,
+        1676,
+        2889,
+        4337,
+        5263,
+        6426
+    ]
+}

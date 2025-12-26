@@ -1,0 +1,17 @@
+{
+    "answer": "Open Access classification; Supreme Court imposed a $50,100,000 judgment against OMICS Group in 2019.",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2086
+    ]
+}

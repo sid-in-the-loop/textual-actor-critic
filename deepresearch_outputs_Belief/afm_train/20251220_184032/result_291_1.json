@@ -1,0 +1,23 @@
+{
+    "answer": "Thematic publications from the United Nations Department of Economic and Social Affairs are classified and organized under the \"System of Environmental-Economic Accounting\u2014Ecosystem Accounting\" and \"SDG Classification System.\"",
+    "ground_truth": "DESA Publications\uff08\u8054\u5408\u56fd\u7ecf\u6d4e\u548c\u793e\u4f1a\u4e8b\u52a1\u90e8\u51fa\u7248\u7269\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1834,
+        2932,
+        3946,
+        5141
+    ]
+}

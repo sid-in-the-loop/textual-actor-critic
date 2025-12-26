@@ -1,0 +1,23 @@
+{
+    "answer": "Plan A Earth ESG Reporting",
+    "ground_truth": "Plan A Academy (ESG Knowledge Base and Learning Platform)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2464,
+        2750,
+        3921,
+        5028
+    ]
+}

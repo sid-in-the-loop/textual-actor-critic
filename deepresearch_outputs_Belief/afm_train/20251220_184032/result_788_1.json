@@ -1,0 +1,17 @@
+{
+    "answer": "Philippine Vice President Sara Duterte asked the Supreme Court to void her impeachment and block a Senate trial.",
+    "ground_truth": "Filed documents asking to annul her impeachment",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        920,
+        2912
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Every new year brings excitement and anticipation for what might happen over the next year.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        1894,
+        2350,
+        3812,
+        4982,
+        5692
+    ]
+}

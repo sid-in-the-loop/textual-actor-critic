@@ -1,0 +1,19 @@
+{
+    "answer": "Petition to compel Senate to start impeachment trial immediately.",
+    "ground_truth": "Filed documents asking to annul her impeachment",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2181,
+        3437
+    ]
+}

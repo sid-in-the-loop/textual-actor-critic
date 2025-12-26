@@ -1,0 +1,21 @@
+{
+    "answer": "On track to achieve the 600 GW AC (750 GW DC) REPowerEU target by 2030.",
+    "ground_truth": "surpassed the halfway mark",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        2112,
+        3308,
+        4566
+    ]
+}

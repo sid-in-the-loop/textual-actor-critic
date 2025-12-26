@@ -1,0 +1,25 @@
+{
+    "answer": "Not acknowledged.",
+    "ground_truth": "1943138",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1865,
+        2322,
+        2735,
+        3773,
+        4164
+    ]
+}

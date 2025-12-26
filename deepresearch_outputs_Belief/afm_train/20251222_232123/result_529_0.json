@@ -1,0 +1,17 @@
+{
+    "answer": "Ranking Big Ten football programs by 2025 NCAA academic ...",
+    "ground_truth": "2025 NCAA Academic Progress Rate\u6392\u540d\uff08Big Ten\uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        799,
+        2114
+    ]
+}

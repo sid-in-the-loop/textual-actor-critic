@@ -1,0 +1,17 @@
+{
+    "answer": "Approximately 2.5 points increase per standard deviation decrease in depression.",
+    "ground_truth": "2.5 points increase",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        2073
+    ]
+}

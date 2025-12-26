@@ -1,0 +1,21 @@
+{
+    "answer": "The researchers expected the FDA to approve a new type of immunotherapy, the launch of AI applications, early detection methods, cancer risk prediction models, and regulation on AI algorithms.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        909,
+        2219,
+        2834,
+        4629
+    ]
+}

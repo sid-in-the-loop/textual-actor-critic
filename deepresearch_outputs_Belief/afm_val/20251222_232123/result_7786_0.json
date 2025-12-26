@@ -1,0 +1,21 @@
+{
+    "answer": "Frontiers in Medical Case Reports",
+    "ground_truth": "Articles | Journal of Medical Case Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        1678,
+        2573,
+        3218
+    ]
+}

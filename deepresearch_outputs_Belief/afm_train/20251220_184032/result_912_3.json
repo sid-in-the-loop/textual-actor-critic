@@ -1,0 +1,21 @@
+{
+    "answer": "Target: H&E Equipment Services, Inc.; Deal value: $4.8 billion; Timing: January 2025; Committed bridge acquisition financing provided by Morgan Stanley and Wells Fargo.",
+    "ground_truth": "United Rentals acquired H&E Equipment Services, $4,800,000,000, January 2025, Morgan Stanley provided $3,800,000,000 bridge acquisition financing",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2193,
+        3424,
+        4771
+    ]
+}

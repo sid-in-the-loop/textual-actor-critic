@@ -1,0 +1,27 @@
+{
+    "answer": "The requested information is not available through public search results.",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        914,
+        2126,
+        2581,
+        3646,
+        4049,
+        4480,
+        4853
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "1. Otio 2. Zotero 3. Mendeley 4. Connected Papers 5. Scite AI 6. Paper Pilot 7. Otio: Your AI-Powered Research Assistant 8. Bit AI 9. Semantic Scholar 10. Writesonic 11. Jasper AI 12. Murf AI 13. Notion.so 14. AI Blaze 15. Unriddle (Anara)",
+    "ground_truth": "15+ Best AI Tools for Academic Research (Free+Paid) 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2043,
+        3145,
+        4161,
+        5335
+    ]
+}

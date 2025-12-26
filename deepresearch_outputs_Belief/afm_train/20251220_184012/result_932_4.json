@@ -1,0 +1,19 @@
+{
+    "answer": "2505.00530",
+    "ground_truth": "arXiv:2505.00530 [cs.LG]",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        712,
+        2006,
+        3122
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "State of Indiana 2025 FY Performance Report",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2012,
+        2635,
+        3095,
+        3611,
+        4948
+    ]
+}

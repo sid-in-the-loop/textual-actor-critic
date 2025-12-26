@@ -1,0 +1,29 @@
+{
+    "answer": "The specific number of additional buses projected to undergo rehabilitation within the Bus Rehabilitation Program by the summer of 2025, as indicated in the \"FY 2025 NYS Enacted Budget Financial Plan Mid-Year Update (October 2024)\", is not available in the accessible search results from the provided document.",
+    "ground_truth": "42 additional buses",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        904,
+        2186,
+        3323,
+        3667,
+        4136,
+        4977,
+        5666,
+        6324
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Identifying topics and scientific questions, appointing a committee, developing the guidelines, and finalizing/publishing the guidelines. These stages are interconnected through the collaborative process of identifying priorities, forming a committee, creating the guidelines, and officially releasing them.",
+    "ground_truth": "4 steps",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        968,
+        2487,
+        3966,
+        5322,
+        6626
+    ]
+}

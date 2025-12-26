@@ -1,0 +1,17 @@
+{
+    "answer": "The Royal Bank of Canada reported first-quarter 2024 results.",
+    "ground_truth": "Royal Bank of Canada Reports First Quarter 2025 Results (published 2024-02-28)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        753,
+        1982
+    ]
+}

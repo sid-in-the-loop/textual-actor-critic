@@ -1,0 +1,23 @@
+{
+    "answer": "Information on the percentage and number of articles from for-profit companies in 2013 specific to the \"Academic publishing\" Wikipedia article is not directly extractable from the provided search results snippets.",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        1663,
+        2741,
+        4170,
+        5359
+    ]
+}

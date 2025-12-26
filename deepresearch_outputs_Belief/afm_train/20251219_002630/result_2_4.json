@@ -1,0 +1,29 @@
+{
+    "answer": "339th Fighter Squadron",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2100,
+        3479,
+        4927,
+        5248,
+        7135,
+        8567,
+        9881
+    ]
+}

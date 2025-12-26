@@ -1,0 +1,19 @@
+{
+    "answer": "The image would likely display financial figures such as market share, sales volumes, operating profit, and revenue for International Operations in EMEA, Emerging Markets, APAC, and Region China for the first three months of 2025.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        863,
+        2433,
+        3796
+    ]
+}

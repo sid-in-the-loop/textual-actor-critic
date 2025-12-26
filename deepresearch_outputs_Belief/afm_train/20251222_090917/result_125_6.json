@@ -1,0 +1,17 @@
+{
+    "answer": "The Evolving Role of Peer Review in a Human-Driven Landscape",
+    "ground_truth": "The Future of Peer Review: Innovations and Challenges for 2024-2025",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        2171
+    ]
+}

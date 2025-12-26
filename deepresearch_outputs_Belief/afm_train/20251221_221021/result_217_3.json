@@ -1,0 +1,19 @@
+{
+    "answer": "Marco Pantani",
+    "ground_truth": "Mark Cavendish",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        936,
+        2171,
+        3505
+    ]
+}

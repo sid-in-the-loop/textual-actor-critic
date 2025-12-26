@@ -1,0 +1,17 @@
+{
+    "answer": "Enel's main business sectors are the Energy Group (Generation, Distribution, Retail), Enel Americas, Enel North America, Enel Green Power, and Enel X.",
+    "ground_truth": "Enel Group's main business segments",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1570
+    ]
+}

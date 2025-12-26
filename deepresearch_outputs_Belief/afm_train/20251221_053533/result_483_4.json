@@ -1,0 +1,29 @@
+{
+    "answer": "72,000 registered attendees from 150 countries",
+    "ground_truth": "45,000 people; 140 countries; 1,500 shows",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        918,
+        2117,
+        3478,
+        3905,
+        4476,
+        5804,
+        6277,
+        7648
+    ]
+}

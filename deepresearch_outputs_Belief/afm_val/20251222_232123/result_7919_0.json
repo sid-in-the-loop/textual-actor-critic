@@ -1,0 +1,21 @@
+{
+    "answer": "Impact of multipronged interventions in FMCG to accelerate category-wise growth, including specific revenue improvements and key strategic measures, is summarized on pages 14-15 of the document.",
+    "ground_truth": "Multipronged interventions accelerated category growth in FMCG; segment revenue increased by 1.7 times in Q2 FY25",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        2261,
+        3898,
+        5241
+    ]
+}

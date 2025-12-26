@@ -1,0 +1,23 @@
+{
+    "answer": "The projected Li-ion battery industry revenue and its market share in the 2025 GlobalData Strategic Intelligence report are not explicitly stated in the provided search results.",
+    "ground_truth": "$160bn, 95%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        2005,
+        3367,
+        4840,
+        6301
+    ]
+}

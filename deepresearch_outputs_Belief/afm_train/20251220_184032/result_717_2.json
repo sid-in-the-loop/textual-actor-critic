@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, the report contains specific numerical data like yields.",
+    "ground_truth": "No specific numerical or time-bound data",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        2246,
+        3595
+    ]
+}

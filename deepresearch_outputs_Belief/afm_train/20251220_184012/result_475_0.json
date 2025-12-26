@@ -1,0 +1,23 @@
+{
+    "answer": "MTS's Q3 net profits were almost 90% lower due to costs related to interest payments.",
+    "ground_truth": "almost 90% drop",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        2108,
+        2354,
+        2634,
+        3259
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Georges Lema\u00eetre's discovery of the expanding universe, not a simple notion of \"reluctant imperialism\", was the foundation of cosmological physics.",
+    "ground_truth": "The belief that Belgians were 'reluctant imperialists'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        838,
+        1953,
+        3398,
+        4412,
+        5269
+    ]
+}

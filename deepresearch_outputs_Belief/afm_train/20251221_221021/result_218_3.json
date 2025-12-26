@@ -1,0 +1,23 @@
+{
+    "answer": "120+168+264+280+385+520+812+912+962",
+    "ground_truth": "472",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1223,
+        2915,
+        4119,
+        6285,
+        6938
+    ]
+}

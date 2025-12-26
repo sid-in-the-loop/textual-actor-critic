@@ -1,0 +1,21 @@
+{
+    "answer": "Part III - Index to Consolidated Financial Statements",
+    "ground_truth": "Item 18. Financial Statements (Novartis Annual Report 2024)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1973,
+        3262,
+        4506
+    ]
+}

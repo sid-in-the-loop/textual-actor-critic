@@ -1,0 +1,17 @@
+{
+    "answer": "Financial and non-financial performance",
+    "ground_truth": "Profit Announcement For the half year ended 31 December 2024 - Commonwealth Bank of Australia",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1972
+    ]
+}

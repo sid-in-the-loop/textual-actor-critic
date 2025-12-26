@@ -1,0 +1,21 @@
+{
+    "answer": "\"The Islamic State in 2025: Evolving Threat, Waning Response\" (ICCT)",
+    "ground_truth": "Prospects for peace: Global conflict in 2025 | Political Violence Special Edition 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        1909,
+        3128,
+        4223
+    ]
+}

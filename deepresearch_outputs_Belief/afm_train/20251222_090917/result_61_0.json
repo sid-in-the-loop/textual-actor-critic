@@ -1,0 +1,27 @@
+{
+    "answer": "The image does not depict a chart, graph, or quantitative data.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        894,
+        1273,
+        1590,
+        1923,
+        2301,
+        2839,
+        3073
+    ]
+}

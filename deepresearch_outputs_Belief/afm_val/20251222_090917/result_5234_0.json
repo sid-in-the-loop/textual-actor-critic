@@ -1,0 +1,17 @@
+{
+    "answer": "Analysis of AI, open science, and blockchain as key 2025 trends in academic publishing.",
+    "ground_truth": "Academic Publishing 2025 Trends Special Article on Publishers State. com",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        816,
+        1972
+    ]
+}

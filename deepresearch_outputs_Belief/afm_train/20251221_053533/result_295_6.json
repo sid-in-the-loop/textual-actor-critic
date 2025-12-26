@@ -1,0 +1,21 @@
+{
+    "answer": "\"Cousin Marshall\"",
+    "ground_truth": "A tale of the Tyne",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1813,
+        2945,
+        4373
+    ]
+}

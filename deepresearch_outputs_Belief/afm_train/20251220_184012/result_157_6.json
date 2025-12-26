@@ -1,0 +1,23 @@
+{
+    "answer": "arXiv:2504.20679v2, 7 Jul 2025",
+    "ground_truth": "arXiv:2504.20679v1, 2025-04-29",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1988,
+        2997,
+        4402,
+        5553
+    ]
+}

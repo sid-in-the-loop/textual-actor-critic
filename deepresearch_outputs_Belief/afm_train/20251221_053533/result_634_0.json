@@ -1,0 +1,23 @@
+{
+    "answer": "100+ Research Vocabulary Words & Phrases - Wordvice",
+    "ground_truth": "100+ Research Vocabulary Words & Phrases - Wordvice",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1913,
+        3068,
+        3406,
+        3654
+    ]
+}

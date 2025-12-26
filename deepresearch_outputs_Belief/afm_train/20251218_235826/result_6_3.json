@@ -1,0 +1,19 @@
+{
+    "answer": "Rooster Teeth is older by 14 years (Meg Turner Turned 18 on March 12, 1987, and Rooster Teeth Founded in 2003).",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        693,
+        1839,
+        3042
+    ]
+}

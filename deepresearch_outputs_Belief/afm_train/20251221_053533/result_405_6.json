@@ -1,0 +1,21 @@
+{
+    "answer": "Stability and Growth Pact (SGP) fiscal rules / Regulations",
+    "ground_truth": "National medium-term fiscal-structural plans (MTPs)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        736,
+        1861,
+        3048,
+        4292
+    ]
+}

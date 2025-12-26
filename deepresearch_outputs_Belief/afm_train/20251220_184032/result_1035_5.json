@@ -1,0 +1,19 @@
+{
+    "answer": "UK Parliament Autumn Budget 2024: CBP-10124.pdf",
+    "ground_truth": "Budget Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        897,
+        2394,
+        3707
+    ]
+}

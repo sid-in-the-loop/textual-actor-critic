@@ -1,0 +1,17 @@
+{
+    "answer": "Volume 622, Issue 7982",
+    "ground_truth": "Nature 622(7982), 2023\u5e7410\u6708\u520a",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        2000
+    ]
+}

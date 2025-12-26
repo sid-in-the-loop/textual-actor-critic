@@ -1,0 +1,19 @@
+{
+    "answer": "Basque Country provides casting tools.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        976,
+        2881,
+        3028
+    ]
+}

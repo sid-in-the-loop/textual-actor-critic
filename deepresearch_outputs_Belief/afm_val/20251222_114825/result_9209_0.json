@@ -1,0 +1,25 @@
+{
+    "answer": "Not found in official source",
+    "ground_truth": "180mm",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1780,
+        2746,
+        3751,
+        4852,
+        5869
+    ]
+}

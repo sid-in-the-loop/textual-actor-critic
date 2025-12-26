@@ -1,0 +1,21 @@
+{
+    "answer": "Deloitte 2025 Life Sciences Executive Outlook",
+    "ground_truth": "Deloitte 2025 Life Sciences and Health Care Industry Outlooks",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        2282,
+        3511,
+        4778
+    ]
+}

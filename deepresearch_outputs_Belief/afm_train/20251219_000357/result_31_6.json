@@ -1,0 +1,27 @@
+{
+    "answer": "the dynamic interplay between cultural hegemony and declined domestic cultural authority, alongside representing others",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1718,
+        3060,
+        3669,
+        4791,
+        5388,
+        6674
+    ]
+}

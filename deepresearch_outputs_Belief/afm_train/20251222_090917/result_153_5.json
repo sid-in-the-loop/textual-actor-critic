@@ -1,0 +1,27 @@
+{
+    "answer": "Combined points do not exceed 2000.",
+    "ground_truth": "4\u20133, with the Canucks defeating the Coyotes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        887,
+        2023,
+        3200,
+        4361,
+        5567,
+        6627,
+        7396
+    ]
+}

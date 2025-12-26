@@ -1,0 +1,21 @@
+{
+    "answer": "Haru no Odori",
+    "ground_truth": "Buddha characters performed a traditional dance",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        704,
+        1993,
+        3366,
+        4664
+    ]
+}

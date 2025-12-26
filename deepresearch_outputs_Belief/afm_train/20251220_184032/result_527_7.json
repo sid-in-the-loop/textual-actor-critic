@@ -1,0 +1,17 @@
+{
+    "answer": "Revocation of Student and Exchange Visitor Program certification.",
+    "ground_truth": "revoke tax-exempt status; restrict ability to host international students",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        940,
+        2142
+    ]
+}

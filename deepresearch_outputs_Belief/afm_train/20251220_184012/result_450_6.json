@@ -1,0 +1,17 @@
+{
+    "answer": "Stability and Growth Pact (SGP)",
+    "ground_truth": "European Union Economic Governance Framework (\u6b27\u76df\u7ecf\u6d4e\u6cbb\u7406\u6846\u67b6)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1970
+    ]
+}

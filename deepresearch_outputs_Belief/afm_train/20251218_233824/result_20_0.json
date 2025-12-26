@@ -1,0 +1,21 @@
+{
+    "answer": "The main text should be no more than 4,500 words (not including Abstract).",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1606,
+        2858,
+        3125
+    ]
+}

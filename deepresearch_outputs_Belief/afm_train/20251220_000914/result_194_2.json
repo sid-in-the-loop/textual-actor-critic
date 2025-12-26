@@ -1,0 +1,25 @@
+{
+    "answer": "FADA Releases FY\u201925 and March\u201925 Vehicle Retail Data.pdf",
+    "ground_truth": "FADA Releases FY'25 and March'25 Vehicle Retail Data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        2074,
+        3299,
+        4754,
+        6565,
+        8342
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Harriet Tubman: From the Railroad to a Spy",
+    "ground_truth": "The Great Adventure",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2261,
+        4107,
+        4399,
+        5502
+    ]
+}

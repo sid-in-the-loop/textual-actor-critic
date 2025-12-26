@@ -1,0 +1,23 @@
+{
+    "answer": "The 2025 Ipsos ESG Council report does not specify the percentage SkyWest reduced its CRJ200 aircraft in scheduled service from 2021 to 2024, nor the corresponding fleet numbers before and after this reduction.",
+    "ground_truth": "42%; 130; 75",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        886,
+        1810,
+        2971,
+        3903,
+        5102
+    ]
+}

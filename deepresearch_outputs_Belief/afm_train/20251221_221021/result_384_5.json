@@ -1,0 +1,21 @@
+{
+    "answer": "45.5% (Spain's revenue was 45.5% of Group's consolidated revenue in the first three months of 2025)",
+    "ground_truth": "41%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2311,
+        3704,
+        5084
+    ]
+}

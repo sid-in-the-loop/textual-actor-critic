@@ -1,0 +1,29 @@
+{
+    "answer": "69112, 69113, 69684, 49500, 69696",
+    "ground_truth": "Social Science Category",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1133,
+        1577,
+        2137,
+        2782,
+        3175,
+        4195,
+        4989
+    ]
+}

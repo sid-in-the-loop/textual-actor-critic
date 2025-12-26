@@ -1,0 +1,23 @@
+{
+    "answer": "Axiom (Business News\u203aNews)",
+    "ground_truth": "The Economic Times\u65b0\u95fb\u7f51\u7ad9\uff08Politics\u9891\u9053\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        725,
+        1769,
+        2804,
+        3686,
+        4312
+    ]
+}

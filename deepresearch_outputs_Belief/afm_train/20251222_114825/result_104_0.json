@@ -1,0 +1,19 @@
+{
+    "answer": "Superman, Superboy, Robin",
+    "ground_truth": "\"Starman\" and \"Robin\"",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        710,
+        1639,
+        2654
+    ]
+}

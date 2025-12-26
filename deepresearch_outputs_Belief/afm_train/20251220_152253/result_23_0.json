@@ -1,0 +1,21 @@
+{
+    "answer": "2025 Annual Report to Congress - Office of Financial Research (OFR)",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        1957,
+        3382,
+        4756
+    ]
+}

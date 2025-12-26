@@ -1,0 +1,19 @@
+{
+    "answer": "Sustainable Development Planning",
+    "ground_truth": "\u53ef\u6301\u7eed\u53d1\u5c55\u4e0e\u793e\u4f1a\u8d23\u4efb\u7814\u7a76\u5b66\u79d1\uff08Sustainability and Social Responsibility Studies\uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        1848,
+        2804
+    ]
+}

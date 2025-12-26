@@ -1,0 +1,25 @@
+{
+    "answer": "NameCheck will prompt you if the account details on a new payment don't look right.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1045,
+        2276,
+        3527,
+        4047,
+        4539,
+        5591
+    ]
+}

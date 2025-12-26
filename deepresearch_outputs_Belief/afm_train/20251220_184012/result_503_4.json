@@ -1,0 +1,21 @@
+{
+    "answer": "The Nigerian Economic Transformation Roadmap: Medium-Term Priorities (NESG 2024)",
+    "ground_truth": "2024 NESG Macroeconomic Outlook Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        772,
+        2654,
+        2893,
+        3647
+    ]
+}

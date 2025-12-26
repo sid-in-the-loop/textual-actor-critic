@@ -483,6 +483,7 @@ class RayPPOTrainer:
         envs=None,
         val_envs=None,
         critique_envs=None,
+        openai_agent=None,
     ):
         """Initialize distributed PPO trainer with Ray backend."""
 
@@ -495,6 +496,7 @@ class RayPPOTrainer:
         self.val_envs = val_envs
         self.critique_envs = critique_envs
         self.traj_collector = traj_collector
+        self.openai_agent = openai_agent
 
         self.hybrid_engine = config.actor_rollout_ref.hybrid_engine
         assert self.hybrid_engine, "Currently, only support hybrid engine"
@@ -820,11 +822,12 @@ class RayPPOTrainer:
             # test_output_gen_batch = unpad_dataproto(test_output_gen_batch_padded, pad_size=pad_size)
 
             ################ agent-environment loop ###############
-            test_output_gen_batch = self.traj_collector.multi_turn_loop(
+            test_output_gen_batch, _ = self.traj_collector.multi_turn_loop(
                                                     gen_batch=test_gen_batch,
                                                     actor_rollout_wg=self.actor_rollout_wg,
                                                     envs=self.val_envs,
                                                     is_train=False,
+                                                    openai_agent=self.openai_agent,
                                                     )
             print('validation generation end')
             del test_batch
@@ -1102,7 +1105,6 @@ class RayPPOTrainer:
                 metrics = {}
                 timing_raw = {}
                 batch: DataProto = DataProto.from_single_dict(batch_dict)
-
                 # pop those keys for generation
                 batch_keys_to_pop = ["input_ids", "attention_mask", "position_ids"]
                 non_tensor_batch_keys_to_pop = ["raw_prompt_ids", "data_source"]
@@ -1122,20 +1124,14 @@ class RayPPOTrainer:
                 with _timer("step", timing_raw):
                     # generate a batch
                     with _timer("gen", timing_raw):
-                        # if not self.async_rollout_mode:
-                        #     gen_batch_output = self.actor_rollout_wg.generate_sequences(gen_batch)
-                        # else:
-                        #     self.async_rollout_manager.wake_up()
-                        #     gen_batch_output = self.async_rollout_manager.generate_sequences(gen_batch)
-                        #     self.async_rollout_manager.sleep()
-
                         ################ agent-environment loop ###############
-                        gen_batch_output = self.traj_collector.multi_turn_loop(
+                        gen_batch_output, belief_trajectories = self.traj_collector.multi_turn_loop(
                                                                 gen_batch=gen_batch,
                                                                 actor_rollout_wg=self.actor_rollout_wg,
                                                                 envs=self.envs,
                                                                 critique_envs=self.critique_envs,
                                                                 is_train=True,
+                                                                openai_agent=self.openai_agent,
                                                                 )
                     if self.config.algorithm.adv_estimator == AdvantageEstimator.REMAX:
                         with _timer("gen_max", timing_raw):
@@ -1178,7 +1174,6 @@ class RayPPOTrainer:
 
                     # compute global_valid tokens
                     batch.meta_info["global_token_num"] = torch.sum(batch.batch["attention_mask"], dim=-1).tolist()
-
                     with _timer("reward", timing_raw):
                         # compute reward model score
                         if self.use_rm:
@@ -1189,7 +1184,6 @@ class RayPPOTrainer:
                             future_reward = compute_reward_async.remote(batch, self.config, self.tokenizer)
                         else:
                             reward_tensor, reward_extra_infos_dict = compute_reward(batch, self.reward_fn)
-
                     # recompute old_log_probs
                     with _timer("old_log_prob", timing_raw):
                         old_log_prob = self.actor_rollout_wg.compute_log_prob(batch)
@@ -1252,6 +1246,31 @@ class RayPPOTrainer:
                         if reward_extra_infos_dict:
                             batch.non_tensor_batch.update({k: np.array(v) for k, v in reward_extra_infos_dict.items()})
 
+                        # Inject belief scores into token-level scores so PPO advantages reflect belief shaping
+                        belief_scores = None
+                        if hasattr(self.config.env, 'belief_shaped_grpo') and self.config.env.belief_shaped_grpo.get('enable', False):
+                            belief_scores = batch.non_tensor_batch.get('belief_scores_accumulated', None)
+                            mode = "shaped"
+                        elif hasattr(self.config.env, 'pure_belief_grpo') and self.config.env.pure_belief_grpo.get('enable', False):
+                            belief_scores = batch.non_tensor_batch.get('belief_scores_accumulated', None)
+                            mode = "pure"
+                        else:
+                            mode = None
+
+                        if belief_scores is not None:
+                            belief_scores = np.array(belief_scores)
+                            # Get response lengths, not full sequence lengths
+                            response_mask = batch.batch['response_mask']
+                            response_lengths = response_mask.sum(dim=-1)
+                            # Adjust token_level_scores at terminal response token
+                            for i, resp_len in enumerate(response_lengths):
+                                if resp_len > 0 and i < len(belief_scores):
+                                    if mode == "pure":
+                                        batch.batch["token_level_scores"][i, resp_len-1] = belief_scores[i]
+                                    else:
+                                        batch.batch["token_level_scores"][i, resp_len-1] += belief_scores[i]
+                            print(f"📊 Applied belief scores to token_level_scores (mode={mode}, total={belief_scores.sum():.4f})")
+
                         # compute rewards. apply_invalid_action_penalty if available
                         reward_coef=self.config.env.rule_reward_coef
                         if not self.config.env.use_dense_reward: # sparse reward, add all penalties at the end
@@ -1272,7 +1291,6 @@ class RayPPOTrainer:
                         # compute advantages, executed on the driver process
 
                         norm_adv_by_std_in_grpo = self.config.algorithm.get("norm_adv_by_std_in_grpo", True)  # GRPO adv normalization factor
-
                         batch = compute_advantage(
                             batch,
                             adv_estimator=self.config.algorithm.adv_estimator,
@@ -1346,6 +1364,27 @@ class RayPPOTrainer:
                 # TODO: implement actual tflpo and theoretical tflpo
                 n_gpus = self.resource_pool_manager.get_n_gpus()
                 metrics.update(compute_throughout_metrics(batch=batch, timing_raw=timing_raw, n_gpus=n_gpus))
+
+                # Log belief curves to wandb if available
+                if hasattr(self, 'traj_collector') and belief_trajectories:
+                    try:
+                        plot_figure = self.traj_collector.plot_belief_curves(belief_trajectories)
+                        if plot_figure is not None and "wandb" in self.logger.logger:
+                            import wandb
+                            # Convert matplotlib figure to wandb Image
+                            import io
+                            buf = io.BytesIO()
+                            plot_figure.savefig(buf, format='png', dpi=1200, bbox_inches='tight')
+                            buf.seek(0)
+                            plot_figure.close()
+
+                            # Log to wandb
+                            self.logger.logger["wandb"]._get_logger().log({
+                                "belief_curves": wandb.Image(buf, caption=f"Belief scores over turns (step {self.global_steps})")
+                            }, step=self.global_steps)
+                            buf.close()
+                    except Exception as e:
+                        print(f"Warning: Failed to log belief curves to wandb: {e}")
 
                 # TODO: make a canonical logger that supports various backend
                 logger.log(data=metrics, step=self.global_steps)

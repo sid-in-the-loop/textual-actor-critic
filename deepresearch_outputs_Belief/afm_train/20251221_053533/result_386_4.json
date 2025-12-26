@@ -1,0 +1,29 @@
+{
+    "answer": "Total tax assets as of March 31, 2025, are GBV of \u20ac141.1 billion (\"Group Managed Portfolio\") for the fiscal year ending December 31, 2022. The total tax assets increased from \u20ac136.0 billion (year-end 2024) to \u20ac141.1 billion (as of March 31, 2025).",
+    "ground_truth": "\u20ac101,385,000 (2025-03-31), decreased by \u20ac3,815,000 (3.6%) from \u20ac105,200,000 (2024-12-31)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        902,
+        2375,
+        2675,
+        3129,
+        3767,
+        4105,
+        5987,
+        8037
+    ]
+}

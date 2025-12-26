@@ -1,0 +1,17 @@
+{
+    "answer": "The Web of Science database uses a classification system with approximately 250 subject areas, maintaining broad categories encompassing Science and Technology, Social Sciences, and Arts and Humanities.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        1976
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "ita",
+    "ground_truth": "\u6559\u80b2\u79d1\u6280 (EdTech)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        578,
+        1360,
+        1522,
+        2263,
+        726,
+        1598
+    ]
+}

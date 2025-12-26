@@ -1,0 +1,29 @@
+{
+    "answer": "Mistaken or scam payments prevented by NameCheck",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2148,
+        2524,
+        2974,
+        3512,
+        4028,
+        4464,
+        4890
+    ]
+}

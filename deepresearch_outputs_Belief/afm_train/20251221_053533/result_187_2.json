@@ -1,0 +1,27 @@
+{
+    "answer": "Reportable Segments (or \"2024 Annual Report\")",
+    "ground_truth": "Competition",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        696,
+        1828,
+        3285,
+        3912,
+        4615,
+        5838,
+        7112
+    ]
+}

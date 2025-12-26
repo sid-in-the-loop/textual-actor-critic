@@ -1,0 +1,23 @@
+{
+    "answer": "The search has not found a Nature journal for 2025. Historical searches cited the \"State of High Tide Flooding and Annual Outlook (NOAA, 2021)\". Thus, no DOI for a Nature journal article could be found.",
+    "ground_truth": "https://doi.org/10.1038/d41586-024-04237-w",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        2085,
+        4133,
+        5181,
+        5672
+    ]
+}

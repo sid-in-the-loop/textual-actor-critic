@@ -1,0 +1,25 @@
+{
+    "answer": "Direct proof",
+    "ground_truth": "Proven Results",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        1705,
+        2742,
+        3808,
+        4951,
+        5967
+    ]
+}

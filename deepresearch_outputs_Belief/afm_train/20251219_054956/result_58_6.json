@@ -1,0 +1,25 @@
+{
+    "answer": "What is \u7b80\u79f0Ba Bao or Bi Bao in this context, please",
+    "ground_truth": "\u9526\u7070\u5806",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        980,
+        3121,
+        3576,
+        5142,
+        7050,
+        9079
+    ]
+}

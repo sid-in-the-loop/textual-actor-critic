@@ -1,0 +1,27 @@
+{
+    "answer": "\u0648\u064a**",
+    "ground_truth": "restructure the Department of Justice and fill nonpartisan roles with conservatives",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        875,
+        2563,
+        2908,
+        3325,
+        4039,
+        4727,
+        6000
+    ]
+}

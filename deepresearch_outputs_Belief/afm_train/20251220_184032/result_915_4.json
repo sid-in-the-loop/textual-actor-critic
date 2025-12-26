@@ -1,0 +1,21 @@
+{
+    "answer": "Ren\u00e9 Bellini",
+    "ground_truth": "\u963f\u5217\u514b\u8c22\u00b7\u963f\u5e03\u91cc\u79d1\u7d22\u592b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        2090,
+        2974,
+        4322
+    ]
+}

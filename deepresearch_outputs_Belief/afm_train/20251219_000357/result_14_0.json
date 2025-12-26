@@ -1,0 +1,23 @@
+{
+    "answer": "Time to accelerate: precision medicine, immunotherapy, AI, treating blood cancers, and addressing cancer disparities will advance.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        1116,
+        1398,
+        1603,
+        2986
+    ]
+}

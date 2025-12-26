@@ -1,0 +1,23 @@
+{
+    "answer": "Educational Assessment, Evaluation, and Research",
+    "ground_truth": "EDUCATION & EDUCATIONAL RESEARCH (\u5b66\u79d1\u5206\u7c7b)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        689,
+        1858,
+        3036,
+        4242,
+        5169
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Protecting Children from Social Media Act (social media age verification)",
+    "ground_truth": "New laws go into effect in 2025: Eggs, guns, social media impacted",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        2018,
+        2389,
+        3586
+    ]
+}

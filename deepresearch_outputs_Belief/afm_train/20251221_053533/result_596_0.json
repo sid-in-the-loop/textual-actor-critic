@@ -1,0 +1,29 @@
+{
+    "answer": "Percentage of characterised words framed 'Yes' campaigners as villains could not be found.",
+    "ground_truth": "58%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        1990,
+        2285,
+        2679,
+        3083,
+        3453,
+        3809,
+        4135
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Web of Science subjects categorize main categories like Science and Technology, Social Sciences, and Arts and Humanities, and include affiliated categories such as Life Sciences within Sciences.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        1855,
+        3072,
+        4244,
+        5438
+    ]
+}

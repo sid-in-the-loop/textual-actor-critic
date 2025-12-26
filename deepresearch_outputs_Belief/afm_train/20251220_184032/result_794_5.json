@@ -1,0 +1,21 @@
+{
+    "answer": "Art Shortlist Blog, The Art Journal",
+    "ground_truth": "Art Shortlist Journal\uff08https://artshortlist.com/en/journal\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        701,
+        1974,
+        2922,
+        3851
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Project 2025 was in a status of re-emergence, aligned with executive order restoration concerns.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        975,
+        2412,
+        3667
+    ]
+}

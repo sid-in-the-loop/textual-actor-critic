@@ -1,0 +1,19 @@
+{
+    "answer": "Global polysilicon prices declined by almost 50% in 2024, affecting solar module costs.",
+    "ground_truth": "20%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        805,
+        2101,
+        2679
+    ]
+}

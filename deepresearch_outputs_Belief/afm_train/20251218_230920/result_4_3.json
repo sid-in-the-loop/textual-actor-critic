@@ -1,0 +1,23 @@
+{
+    "answer": "First-party data and privacy regulations.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1303,
+        2931,
+        4122,
+        4800
+    ]
+}

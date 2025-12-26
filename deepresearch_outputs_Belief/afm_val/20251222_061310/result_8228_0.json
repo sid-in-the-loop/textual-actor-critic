@@ -1,0 +1,19 @@
+{
+    "answer": "Positive cash flow from operating activities as the company approaches 2024.",
+    "ground_truth": "Pronounced decline",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        891,
+        2228,
+        3579
+    ]
+}

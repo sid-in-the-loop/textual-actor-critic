@@ -1,0 +1,19 @@
+{
+    "answer": "AJBSR.MS.ID.003320",
+    "ground_truth": "Trend Overview 2025: Key Developments in Biomedical Science & Research (Anabel Tern\u00e8s von Hattburg, Am J Biomed Sci & Res. 2025 - 25(2), DOI: 10.34297/AJBSR.2025.25.003320)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        882,
+        2174,
+        3029
+    ]
+}

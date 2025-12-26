@@ -1,0 +1,21 @@
+{
+    "answer": "Global macroeconomic projections or data on key economic indicators.",
+    "ground_truth": "Photo of a person holding receipts and using a calculator at a table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        901,
+        2336,
+        2716,
+        4109
+    ]
+}

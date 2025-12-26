@@ -1,0 +1,23 @@
+{
+    "answer": "13VAD",
+    "ground_truth": "Art Studies",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        1780,
+        3058,
+        4220,
+        5371
+    ]
+}

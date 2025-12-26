@@ -1,0 +1,25 @@
+{
+    "answer": "Victor XC Bomber",
+    "ground_truth": "No. 55 Squadron RAF",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        1954,
+        3381,
+        4784,
+        6396,
+        7785
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Information not found in a recent news report about Scientific Reports.",
+    "ground_truth": "2.60%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        1979
+    ]
+}

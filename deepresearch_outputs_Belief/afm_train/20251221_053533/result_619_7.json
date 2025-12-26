@@ -1,0 +1,21 @@
+{
+    "answer": "According to the AACR blog, USPSTF limited AI recommendations for use in cancer screening guidelines.",
+    "ground_truth": "limited recommendations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        900,
+        2244,
+        2561,
+        2933
+    ]
+}

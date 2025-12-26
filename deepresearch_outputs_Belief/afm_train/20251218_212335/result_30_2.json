@@ -1,0 +1,27 @@
+{
+    "answer": "No specific alert within a specified report was found from the Commonwealth Bank of Australia Investor Centre.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1045,
+        2324,
+        3762,
+        4250,
+        4904,
+        5529,
+        5952
+    ]
+}

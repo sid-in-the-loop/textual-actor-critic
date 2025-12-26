@@ -1,0 +1,17 @@
+{
+    "answer": "Students in majority-white schools ended the school year 6 months behind in reading.",
+    "ground_truth": "3 months behind",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        2052
+    ]
+}

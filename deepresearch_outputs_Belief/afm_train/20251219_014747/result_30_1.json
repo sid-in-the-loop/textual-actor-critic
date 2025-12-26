@@ -1,0 +1,27 @@
+{
+    "answer": "NameCheck and Confirmation of Payee: prompt when account details on a first-time payment don't look right",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        877,
+        2089,
+        3593,
+        3992,
+        4387,
+        5339,
+        5800
+    ]
+}

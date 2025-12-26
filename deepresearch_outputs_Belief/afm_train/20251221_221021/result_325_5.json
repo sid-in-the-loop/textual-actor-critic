@@ -1,0 +1,27 @@
+{
+    "answer": "Linearly with the number of features",
+    "ground_truth": "O(n) computational scaling",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        1523,
+        2702,
+        3827,
+        5026,
+        6324,
+        7465
+    ]
+}

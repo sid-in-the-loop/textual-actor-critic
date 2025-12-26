@@ -1,0 +1,21 @@
+{
+    "answer": "Include a Data Availability Statement at the end of the main text, before the References section.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        643,
+        1537,
+        1898,
+        2127
+    ]
+}

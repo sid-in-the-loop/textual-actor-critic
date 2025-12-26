@@ -1,0 +1,21 @@
+{
+    "answer": "Lawrence M. Krauss",
+    "ground_truth": "\u57fa\u666e\u00b7\u7d22\u6069",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1021,
+        2185,
+        3334,
+        4292
+    ]
+}

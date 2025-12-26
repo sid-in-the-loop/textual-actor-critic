@@ -1,0 +1,25 @@
+{
+    "answer": "A smart first-party data approach \u2013 rooted in permission and.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        669,
+        1526,
+        2613,
+        3754,
+        4742,
+        5036
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "EPO 2025 First Quarter CASTNET Performance Review Report",
+    "ground_truth": "2025 \u2013 1st Quarter Report: Support for Conducting Systems & Performance Audits of CASTNET Sites and NADP Monitoring Stations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1974,
+        3503,
+        4838,
+        6014
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "A continuum thermodynamic model of the influence of non-ionic surfactant on mass transfer from gas bubbles",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        2155,
+        2729,
+        2983,
+        3679,
+        4957
+    ]
+}

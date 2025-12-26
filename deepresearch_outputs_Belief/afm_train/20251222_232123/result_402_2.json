@@ -1,0 +1,21 @@
+{
+    "answer": "90% of European financial institutions are offering services to support EV transition in 2025.",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2048,
+        2384,
+        3506
+    ]
+}

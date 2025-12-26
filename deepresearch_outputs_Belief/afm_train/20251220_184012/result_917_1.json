@@ -1,0 +1,21 @@
+{
+    "answer": "University of Massachusetts Amherst",
+    "ground_truth": "University of Hartford",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        686,
+        1475,
+        2366,
+        3273
+    ]
+}

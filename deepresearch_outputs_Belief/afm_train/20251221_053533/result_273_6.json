@@ -1,0 +1,27 @@
+{
+    "answer": "\u4e2d\u56fd\u4f20\u5a92\u5927\u5b66\u56fe\u4e66\u9986\u7f51\u7ad9 (ilib.cuc.edu.cn) \u53ef\u8bbf\u95ee\u201c\u672c\u9986\u8d44. \u6e90\u201d->\u201c\u6570\u5b57\u8d44\u6e90\u201d->\u201c\u5df2\u8d2d\u6570\u636e\u5e93\u201d\u76f4\u63a5\u67e5\u770b\u3002",
+    "ground_truth": "List of Purchased Databases in the Library of Communication University of China",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        1836,
+        2938,
+        4282,
+        5662,
+        7030,
+        8613
+    ]
+}

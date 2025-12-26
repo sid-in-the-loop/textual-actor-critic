@@ -1,0 +1,21 @@
+{
+    "answer": "Total quality service in digital era",
+    "ground_truth": "Digitalization and academic research: knowing of and using digital services and software to\u00a0develop scientific papers\n |  Emerald Insight",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        1847,
+        2068,
+        3028
+    ]
+}

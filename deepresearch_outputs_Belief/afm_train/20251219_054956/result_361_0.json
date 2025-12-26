@@ -1,0 +1,25 @@
+{
+    "answer": "Suggested path to Novartis's 2024 Annual Report disclosures on the Reporting and transparency hub",
+    "ground_truth": "Novartis-Disclosure-2024-CorpAR",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        718,
+        1987,
+        3157,
+        4225,
+        4858,
+        6428
+    ]
+}

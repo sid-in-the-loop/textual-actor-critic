@@ -1,0 +1,17 @@
+{
+    "answer": "Interim Financial Statements IAS 34 explained (30 June 2024)",
+    "ground_truth": "IAS 34 Interim Financial Reporting explained (BDO)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2391
+    ]
+}

@@ -19,12 +19,16 @@ from google.genai import types
 import google.generativeai as generativeai
 
 
-MODEL_ID = "gemini-2.5-flash"
-# Load environment variables from keys.env file
-load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-generativeai.configure(api_key=GEMINI_API_KEY)
-client = genai.Client(api_key=GEMINI_API_KEY)
+# COMMENTED OUT: Gemini API initialization (not needed for trajectory collection)
+# MODEL_ID = "gemini-2.5-flash"
+# # Load environment variables from keys.env file
+# load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# generativeai.configure(api_key=GEMINI_API_KEY)
+# client = genai.Client(api_key=GEMINI_API_KEY)
+MODEL_ID = None
+GEMINI_API_KEY = None
+client = None
 
 timestamp_suffix = None
 
@@ -40,6 +44,10 @@ def call_llm_for_critique(prompt, question_id=None):
     Returns:
         str: LLM generated critique content, returns empty string on failure
     """    
+    # COMMENTED OUT: Gemini API calls (not needed for trajectory collection)
+    if client is None:
+        return ""  # Return empty string if Gemini client is not initialized
+    
     max_try_times = 3
     for attempt in range(max_try_times):
         try:

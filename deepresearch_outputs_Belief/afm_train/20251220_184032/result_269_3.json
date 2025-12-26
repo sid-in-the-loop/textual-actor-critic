@@ -1,0 +1,21 @@
+{
+    "answer": "International Paper's 2024 Annual Report and 2023 Annual Report, accessed from the Financial Reports section investor page.",
+    "ground_truth": "International Paper Company Annual Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1889,
+        2231,
+        3530
+    ]
+}

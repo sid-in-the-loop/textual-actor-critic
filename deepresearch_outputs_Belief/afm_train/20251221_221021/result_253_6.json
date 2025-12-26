@@ -1,0 +1,21 @@
+{
+    "answer": "Museo de Historia Natural de Valpara\u00edso",
+    "ground_truth": "Santiago, Chile",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2197,
+        3613,
+        4880
+    ]
+}

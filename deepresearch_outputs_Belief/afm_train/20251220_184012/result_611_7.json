@@ -1,0 +1,21 @@
+{
+    "answer": "Budget of the United States Government, FY2025; Budget-in-Brief; Congressional Budget Justification; Budget Request; Budget Resolution (118th Congress)",
+    "ground_truth": "Enacted Budget Documents for Fiscal Year 2025 (2024-25)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        694,
+        1890,
+        3109,
+        4327
+    ]
+}

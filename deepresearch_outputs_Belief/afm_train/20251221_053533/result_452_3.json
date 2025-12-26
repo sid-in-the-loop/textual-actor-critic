@@ -1,0 +1,25 @@
+{
+    "answer": "Over the past 12 months, Kraft Heinz stock (KHC) underperformed the S&P 500 (GSPC) by -23% versus +14% growth, or -13.43% versus 16.79%. At the end of December 27, 2024, the KHC stock and the S&P 500 index would have converged based on the available data.",
+    "ground_truth": "Outperformed from 2022 to 2023; converged near $120 on 2024-12-27",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        895,
+        2242,
+        3486,
+        4899,
+        6381,
+        8038
+    ]
+}

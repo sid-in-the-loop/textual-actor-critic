@@ -1,0 +1,23 @@
+{
+    "answer": "Information about the specific impact of 'other operating (income) expense, net' on the Non-GAAP operating margin decrease could not be found in the search results.",
+    "ground_truth": "-0.4 percentage point",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2192,
+        3520,
+        4980,
+        6487
+    ]
+}

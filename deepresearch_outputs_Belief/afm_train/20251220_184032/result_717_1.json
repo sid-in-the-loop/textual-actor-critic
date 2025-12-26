@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, the report contains comprehensive analysis of investment fundamentals, capital flows, and yield profiles.",
+    "ground_truth": "No specific numerical or time-bound data",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        2109,
+        3252
+    ]
+}

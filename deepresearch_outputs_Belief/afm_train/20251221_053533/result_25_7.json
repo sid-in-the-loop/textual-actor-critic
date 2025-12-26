@@ -1,0 +1,29 @@
+{
+    "answer": "Primary subject categories include Sciences (Agricultural Sciences, Biological Sciences, Chemistry, Environmental Sciences, Engineering and Computer Science, Information Systems and Mathematics, Physical Sciences, Chemical Physics), Social Sciences (Archaeology, Astronomy & Astrophysics, Architecture, Behavioral Sciences, Economics & Business, Education, Politics), and Arts and Humanities (Literature, Philosophy, Anthropology, Fine Arts and Performing Arts, History, Art History).",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        1827,
+        3278,
+        4924,
+        5944,
+        7335,
+        9216,
+        9608
+    ]
+}

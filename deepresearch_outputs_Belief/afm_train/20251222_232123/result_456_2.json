@@ -1,0 +1,21 @@
+{
+    "answer": "Global stagflation and subsequent global recession.",
+    "ground_truth": "World economic scenarios and risks to 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        1696,
+        2044,
+        2405
+    ]
+}

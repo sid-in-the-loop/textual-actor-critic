@@ -1,0 +1,21 @@
+{
+    "answer": "Scientific Reports submission guidelines on nature.com state that articles should be no more than 11 typeset pages (with the main text not exceeding 4,500 words), include an abstract not longer than 250 words, and require a copyright statement, figures and tables to be suitable quality and incorporated within the manuscript text.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        633,
+        1562,
+        2654,
+        3729
+    ]
+}

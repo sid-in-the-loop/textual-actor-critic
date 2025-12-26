@@ -1,0 +1,27 @@
+{
+    "answer": "AI/ML will influence openness, innovation, and inclusivity in academic publishing practices in 2025 by enabling new tools and models for collaborative editors, content moderation, and author verification, thereby expanding access to knowledge and fostering more diverse and representative research communities.",
+    "ground_truth": "streamlining peer review, enhancing content discoverability, improving research analytics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        1118,
+        2389,
+        2676,
+        3005,
+        3333,
+        4649
+    ]
+}

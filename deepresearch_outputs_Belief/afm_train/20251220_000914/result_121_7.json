@@ -1,0 +1,23 @@
+{
+    "answer": "\u6ca1\u6709\u7535\u5f71\u56e0\u4e3a\u8fd9\u6b21\u4f1a\u6664\u800c\u5728\u9999\u6e2f\u4e0a\u6620",
+    "ground_truth": "\u300a\u7687\u5929\u540e\u571f\u300b\u82f1\u6587\u8bd1\u540d\u4e3a\nThe Coldest Winter in Peking ",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        2245,
+        3552,
+        5112,
+        5725
+    ]
+}

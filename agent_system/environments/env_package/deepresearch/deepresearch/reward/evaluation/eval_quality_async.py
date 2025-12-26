@@ -85,10 +85,9 @@ def evaluate_single_criterion(criterion, question, answer):
     # Use thread lock to prevent potential rate limit issues
     with client_lock:
         response = client.beta.chat.completions.parse(
-            model="gpt-4o-mini",
+            model="gpt-5-nano-2025-08-07",
             messages=chat_pattern,
             response_format=CriterionEvaluation,
-            temperature=0
         )
     
     result = json.loads(response.choices[0].message.content)

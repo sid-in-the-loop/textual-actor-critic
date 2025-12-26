@@ -1,0 +1,17 @@
+{
+    "answer": "630 million adults",
+    "ground_truth": "211.2 million to 476.0 million; 129.7% increase",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1953
+    ]
+}

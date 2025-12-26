@@ -1,0 +1,23 @@
+{
+    "answer": "James II and the Act for the Settlement of Ireland",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        695,
+        2043,
+        3119,
+        4274,
+        6150
+    ]
+}

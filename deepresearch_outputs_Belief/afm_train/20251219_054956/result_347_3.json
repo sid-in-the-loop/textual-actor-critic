@@ -1,0 +1,29 @@
+{
+    "answer": "PescaData Initiative was launched in 2022. It facilitates peer-to-peer learning among small-scale fishers by providing a forum for such communication.",
+    "ground_truth": "Started: 2020; facilitated peer-to-peer learning among small-scale fishers in Latin America",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        768,
+        1909,
+        3330,
+        1049,
+        2584,
+        4089,
+        5328,
+        6665
+    ]
+}

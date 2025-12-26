@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in the search results for the IBM Institute for Business Value 2025 global banking and financial markets outlook.",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        1989,
+        3493,
+        4917,
+        6320,
+        7732,
+        8880
+    ]
+}

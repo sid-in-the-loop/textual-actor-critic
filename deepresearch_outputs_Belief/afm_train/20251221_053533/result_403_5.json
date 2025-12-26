@@ -1,0 +1,21 @@
+{
+    "answer": "Session duration not specified, participants completed both the survey and focus group.",
+    "ground_truth": "2 h session; completed both survey and focus group",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1849,
+        3262,
+        4538
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Form 990",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2024,
+        3349,
+        4483,
+        5520,
+        7000,
+        8395
+    ]
+}

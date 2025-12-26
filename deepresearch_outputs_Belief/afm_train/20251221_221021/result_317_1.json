@@ -1,0 +1,17 @@
+{
+    "answer": "$58 million for one HH-60L conversion to UH-60L.",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2122
+    ]
+}

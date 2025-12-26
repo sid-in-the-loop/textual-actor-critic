@@ -1,0 +1,19 @@
+{
+    "answer": "NewsLens",
+    "ground_truth": "Pew Research Center and Knight Foundation\u8054\u5408\u9879\u76ee\uff08Pew-Knight Initiative\uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        2334,
+        3515
+    ]
+}

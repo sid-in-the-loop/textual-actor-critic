@@ -1,0 +1,25 @@
+{
+    "answer": "Germany",
+    "ground_truth": "Sweden",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2425,
+        4144,
+        5511,
+        6941,
+        8095
+    ]
+}

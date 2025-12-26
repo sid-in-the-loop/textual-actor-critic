@@ -1,0 +1,21 @@
+{
+    "answer": "Pedagogy of Technology Integration",
+    "ground_truth": "\u6559\u80b2\u79d1\u6280 (EdTech)",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        703,
+        1778,
+        3172,
+        4117
+    ]
+}

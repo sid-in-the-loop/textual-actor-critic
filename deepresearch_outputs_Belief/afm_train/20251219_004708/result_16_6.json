@@ -1,0 +1,27 @@
+{
+    "answer": "N",
+    "ground_truth": "Answer: NNNYYY",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1401,
+        2551,
+        3670,
+        3997,
+        4351,
+        5283,
+        5578
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Novartis Annual Report and Form 20-F",
+    "ground_truth": "Novartis Annual Reports Collection",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        826,
+        2090,
+        3360
+    ]
+}

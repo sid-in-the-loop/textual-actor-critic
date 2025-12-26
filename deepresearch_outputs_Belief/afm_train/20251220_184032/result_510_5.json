@@ -1,0 +1,23 @@
+{
+    "answer": "The ratio of good and moderate AQI reported in the specified report could not be determined due to the inability to access the full report.",
+    "ground_truth": "94.3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1613,
+        2917,
+        4208,
+        5404
+    ]
+}

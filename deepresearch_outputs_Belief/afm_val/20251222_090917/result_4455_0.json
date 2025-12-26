@@ -1,0 +1,19 @@
+{
+    "answer": "No, the figure in the City of Burnaby's approved five-year financial plan for 2025-2029 does not include an architectural rendering of the Burnaby Lake Recreation Complex.",
+    "ground_truth": "Architectural rendering of Burnaby Lake Recreation Complex included.",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2221,
+        3600
+    ]
+}

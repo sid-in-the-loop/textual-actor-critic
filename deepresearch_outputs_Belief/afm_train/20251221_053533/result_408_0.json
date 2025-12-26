@@ -1,0 +1,23 @@
+{
+    "answer": "Science in 2025: the events to watch for in the coming year - Nature",
+    "ground_truth": "Nature Predictions of Major Science Events for 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        1969,
+        2354,
+        2710,
+        4195
+    ]
+}

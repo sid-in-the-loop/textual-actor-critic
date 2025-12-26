@@ -1,0 +1,17 @@
+{
+    "answer": "The latest ranking is on Badgerswire.usatoday.com, published May 7, 2025.",
+    "ground_truth": "2025 NCAA Academic Progress Rate\u6392\u540d\uff08Big Ten\uff09",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        2147
+    ]
+}

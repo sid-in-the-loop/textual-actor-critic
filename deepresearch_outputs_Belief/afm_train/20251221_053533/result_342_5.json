@@ -1,0 +1,23 @@
+{
+    "answer": "West Bromwich",
+    "ground_truth": "Dudley",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        1708,
+        2927,
+        4784,
+        5146
+    ]
+}

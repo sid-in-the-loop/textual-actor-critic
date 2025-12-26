@@ -1,0 +1,17 @@
+{
+    "answer": "Submit your abstracts and case reports on the CHEST Annual Meeting website.",
+    "ground_truth": "CHEST\u202f2025 Call for Abstracts and Case Reports",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        1645
+    ]
+}

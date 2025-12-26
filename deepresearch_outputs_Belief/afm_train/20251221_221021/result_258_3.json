@@ -1,0 +1,27 @@
+{
+    "answer": "India's AUM was approximately $91 trillion by June 2025, with an organic growth rate of 2.2%. As of June 2025, India's AUM represented 6.8% of the nation's GDP, up from 3.4% in 2023 (with a 1.9% share in 2008).",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        1956,
+        3430,
+        4742,
+        6246,
+        7684,
+        9204
+    ]
+}

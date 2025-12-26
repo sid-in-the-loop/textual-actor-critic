@@ -1,0 +1,19 @@
+{
+    "answer": "Our fully open access portfolio",
+    "ground_truth": "Journals under SpringerOpen",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1854,
+        3148
+    ]
+}

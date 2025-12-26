@@ -1,0 +1,21 @@
+{
+    "answer": "2016-2018",
+    "ground_truth": "VR 2019-03471",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        1736,
+        2780,
+        3657
+    ]
+}

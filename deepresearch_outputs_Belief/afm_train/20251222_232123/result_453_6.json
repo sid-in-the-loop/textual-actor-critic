@@ -1,0 +1,29 @@
+{
+    "answer": "Central Valley 7.2%, Mid-Atlantic 7.3%",
+    "ground_truth": "regions 19 and 20: 0.12\u20130.15",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        1953,
+        2399,
+        2802,
+        3165,
+        3691,
+        4216,
+        4594
+    ]
+}

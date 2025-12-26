@@ -1,0 +1,25 @@
+{
+    "answer": "Volume 602, Issue 7898, pages 566-570",
+    "ground_truth": "Nature 602(7898):566-570",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        696,
+        1864,
+        2987,
+        3434,
+        4941,
+        5505
+    ]
+}

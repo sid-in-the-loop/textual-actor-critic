@@ -1,0 +1,23 @@
+{
+    "answer": "Value progression is illustrated by the color gradient bar. The monotonic trend is not explicitly stated in the search results.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2015,
+        2938,
+        3504,
+        4940
+    ]
+}

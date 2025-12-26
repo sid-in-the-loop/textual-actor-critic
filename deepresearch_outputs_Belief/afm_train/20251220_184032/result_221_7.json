@@ -1,0 +1,17 @@
+{
+    "answer": "Deloitte 2025 Predictions Report 'Generative AI: Paving the Way for the Future'",
+    "ground_truth": "TMT Predictions 2025 | Deloitte Insights",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        2093
+    ]
+}

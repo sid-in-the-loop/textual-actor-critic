@@ -1,0 +1,21 @@
+{
+    "answer": "Build resilience in uncertain times.",
+    "ground_truth": "dynamic supply chains and agile workforce management",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        887,
+        1791,
+        2860,
+        3848
+    ]
+}

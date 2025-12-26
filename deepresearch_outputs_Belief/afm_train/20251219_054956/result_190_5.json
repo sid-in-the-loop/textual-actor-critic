@@ -1,0 +1,25 @@
+{
+    "answer": "20-50 years",
+    "ground_truth": "30\u201340 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        717,
+        950,
+        2372,
+        4135,
+        5711,
+        7449
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Item 18 Item 18 5c",
+    "ground_truth": "Novartis 2024 Annual Results\u62a5\u544a",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        659,
+        1831,
+        2781,
+        3935,
+        4034,
+        5086,
+        5355
+    ]
+}

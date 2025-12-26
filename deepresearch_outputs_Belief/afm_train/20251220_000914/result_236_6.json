@@ -1,0 +1,17 @@
+{
+    "answer": "The paper is DLCM: a versatile multi-level solver for heterogeneous multicellular systems, published arXiv 2504.20565, in the q-bio.QM category.",
+    "ground_truth": "DLCM: a versatile multi-level solver for heterogeneous multicellular systems",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        741,
+        2089
+    ]
+}

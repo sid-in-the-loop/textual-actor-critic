@@ -1,0 +1,19 @@
+{
+    "answer": "The survey report states that female students were 2.2 times more likely than male students to report low financial literacy, but does not explicitly confirm this finding is statistically significant.",
+    "ground_truth": "Female students were 2.2 times more likely than male students to report having low financial literacy.",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        2403,
+        2923
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Politburo of the CPC Central Committee coined 2025 May 29",
+    "ground_truth": "At Shanghai Technology University",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        944,
+        2375,
+        4066,
+        5603
+    ]
+}

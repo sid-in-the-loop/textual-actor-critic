@@ -1,0 +1,23 @@
+{
+    "answer": "The specific annual clean technology investment needed to limit global warming to 1.5-2.0\u00b0C by 2030 is not explicitly stated in the available excerpts of the Climate Energy Finance report (March 24, 2025) or the World Energy Investment 2025 report (IEA), nor is there a direct IEA value provided to meet the criteria in the returned search results. The Climate Energy Finance report mainly discusses manufacturing trends, while the World Energy Investment 2025 report focuses on general investment figures but lacks the specific, annual clean tech investment for 2030 needed per the specified target.",
+    "ground_truth": "$4.5 trillion by 2030",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        806,
+        2253,
+        3480,
+        4807,
+        6562
+    ]
+}

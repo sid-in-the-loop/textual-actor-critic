@@ -1,0 +1,23 @@
+{
+    "answer": "the development of character traits",
+    "ground_truth": "EDUCATION & EDUCATIONAL RESEARCH (\u5b66\u79d1\u5206\u7c7b)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1959,
+        2942,
+        4210,
+        5368
+    ]
+}

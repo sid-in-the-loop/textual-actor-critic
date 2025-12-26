@@ -1,0 +1,17 @@
+{
+    "answer": "Environmental Finance",
+    "ground_truth": "\u6c14\u5019\u91d1\u878d\u4e0e\u80fd\u6e90\u91d1\u878d\u7814\u7a76\u9886\u57df",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        1748
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "India's AUM has more than doubled in the past five years, representing 60% of the nation's GDP.",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        793,
+        2249,
+        1102,
+        2630,
+        3938,
+        5308,
+        6762,
+        7187
+    ]
+}

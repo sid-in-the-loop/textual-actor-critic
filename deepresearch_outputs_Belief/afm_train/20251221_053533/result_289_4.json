@@ -1,0 +1,29 @@
+{
+    "answer": "There is no unique article \"in-depth analysis of the importance and development directions of interdisciplinary scientific research within the context of global trends, specifically focusing on the year 2025,\" as the \"Global Trends 2025: A Transformed World\" report published in 2008 by the US National Intelligence Council provides a summary of global trends for 2025, not an in-depth analysis of interdisciplinary scientific research within that context.",
+    "ground_truth": "Research World 2025\u5e74\u5ea6\u8d8b\u52bf\u5206\u6790\u6587\u7ae0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2328,
+        2876,
+        4005,
+        5411,
+        6759,
+        8228,
+        9620
+    ]
+}

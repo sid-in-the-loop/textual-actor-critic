@@ -1,0 +1,21 @@
+{
+    "answer": "Novartis SEC Form 20-F for the fiscal year ended December 31, 2024, filed on January 31, 2024.",
+    "ground_truth": "Novartis 2024 Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        2013,
+        3142,
+        4389
+    ]
+}

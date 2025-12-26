@@ -1,0 +1,27 @@
+{
+    "answer": "High. Chinese companies dominated over 80-90% of both PV module and BESS supply chains in 2024.",
+    "ground_truth": "nearly complete control in upstream stages; less in downstream stages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        901,
+        1305,
+        1675,
+        2136,
+        2671,
+        3363,
+        5120
+    ]
+}

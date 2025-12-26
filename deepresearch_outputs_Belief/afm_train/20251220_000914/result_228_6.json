@@ -1,0 +1,25 @@
+{
+    "answer": "redesigned facilities and workplace request process",
+    "ground_truth": "Redesigned the facilities and workplace request process",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        2033,
+        2493,
+        2840,
+        3315,
+        3618
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Official financial disclosure did not release Q1 2025 data, and the current available official data as of March 14, 2025, shows total liquid foreign exchange reserves of $16.0 billion. Therefore, the information could not be provided.",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        927,
+        2464,
+        4160,
+        6207,
+        6770,
+        8151
+    ]
+}

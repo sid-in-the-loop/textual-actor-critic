@@ -1,0 +1,19 @@
+{
+    "answer": "Approximate length varies by journal scope and impact factor.",
+    "ground_truth": "Rarely exceed 1,000 words",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1862,
+        2880
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Figures of speech",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        1609,
+        3046,
+        4289,
+        5402,
+        6717
+    ]
+}

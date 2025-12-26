@@ -1,0 +1,25 @@
+{
+    "answer": "\u519c\u6797\u79d1\u5b66 (Agricultural and Forestry Sciences)",
+    "ground_truth": "Division of Major Disciplines of the Chinese Academy of Sciences (Environmental Science and Ecology)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        728,
+        1815,
+        3013,
+        4204,
+        5436,
+        6469
+    ]
+}

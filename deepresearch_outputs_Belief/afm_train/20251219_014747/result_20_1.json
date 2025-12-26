@@ -1,0 +1,19 @@
+{
+    "answer": "References limited to 60, acknowledgements optional, author contributions needed, data availability mandatory.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        663,
+        1272,
+        1943
+    ]
+}

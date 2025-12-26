@@ -1,0 +1,27 @@
+{
+    "answer": "Ann Lewis appointed director of GSA's Technology Transformation Services, former chief technology officer at advisory firm.",
+    "ground_truth": "Thomas Shedd; former Tesla software engineer",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        1353,
+        2222,
+        3327,
+        4582,
+        5296,
+        7013
+    ]
+}

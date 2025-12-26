@@ -1,0 +1,23 @@
+{
+    "answer": "https://www.annualreports.com/Company/hershey-co, https://www.annualreports.com/HostedData/AnnualReportArchive/h/NYSE_HSY_2021.pdf, https://www.annualreports.com/HostedData/AnnualReportArchive/h/NYSE_HSY_2020.pdf, https://www.annualreports.com/HostedData/AnnualReportArchive/l/NYSE_LOW_2023.pdf, https://www.annualreports.com/HostedData/AnnualReportArchive/t/NYSE_HSY_2015.pdf, https://www.annualreports.com/HostedData/AnnualReportArchive/t/NYSE_HSY_2017.pdf, https://www.annualreports.com/HostedData/AnnualReportArchive/h/NYSE_HSY_2021.pdf, https://www.annualreports.com/HostedData/AnnualReportArchive/h/NYSE_HSY_2020.pdf, https://www.annualreports.com/HostedData/AnnualReportArchive/l/NYSE_LOW_2023.pdf",
+    "ground_truth": "Hershey Annual Report 2025; Hershey (HSY) Historical Annual Reports 2002-2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        1964,
+        3573,
+        4917,
+        6285
+    ]
+}

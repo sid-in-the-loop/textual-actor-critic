@@ -1,0 +1,23 @@
+{
+    "answer": "The Global Skills Report",
+    "ground_truth": "Coursera Skills Reports series (skills reports)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1721,
+        2897,
+        3884,
+        5220
+    ]
+}

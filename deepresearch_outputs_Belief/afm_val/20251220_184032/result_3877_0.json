@@ -1,0 +1,21 @@
+{
+    "answer": "ERAM",
+    "ground_truth": "EDUCATION & EDUCATIONAL RESEARCH \u5b66\u79d1\u9886\u57df",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        677,
+        1634,
+        2631,
+        3522
+    ]
+}

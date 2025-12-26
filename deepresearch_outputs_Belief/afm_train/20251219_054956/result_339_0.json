@@ -1,0 +1,23 @@
+{
+    "answer": "Discourage non-citizens from receiving cash transfers and benefits.",
+    "ground_truth": "5% tax",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        891,
+        2268,
+        2880,
+        3482,
+        4451
+    ]
+}

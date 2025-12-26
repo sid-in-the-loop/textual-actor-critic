@@ -1,0 +1,17 @@
+{
+    "answer": "March 27, 2025, to September 30, 2026",
+    "ground_truth": "2025-03-27, 2025-09-30",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        884,
+        2217
+    ]
+}

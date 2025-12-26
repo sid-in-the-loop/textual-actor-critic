@@ -1,0 +1,23 @@
+{
+    "answer": "Climate change mitigation through emissions abatement under the SSP1&RCP2.6 scenario cuts the projected rise in the global population living in urban areas facing water scarcity by 2050 by half.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        1417,
+        2659,
+        3778,
+        4914
+    ]
+}

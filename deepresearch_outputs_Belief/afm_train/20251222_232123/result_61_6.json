@@ -1,0 +1,29 @@
+{
+    "answer": "Unable to determine the type of content depicted by the image; search results provided only the report overview, not the image or its description.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        2009,
+        2371,
+        2718,
+        3067,
+        3465,
+        4672,
+        6014
+    ]
+}

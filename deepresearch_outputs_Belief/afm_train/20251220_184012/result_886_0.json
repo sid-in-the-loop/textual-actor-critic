@@ -1,0 +1,19 @@
+{
+    "answer": "Compilation of the People's Republic of China Constitution and Laws",
+    "ground_truth": "Proceedings of the National People's Congress",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1735,
+        2784
+    ]
+}

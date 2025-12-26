@@ -1,0 +1,25 @@
+{
+    "answer": "Pakistan caught unawares",
+    "ground_truth": "India\u2019s missiles hit Nur Khan Airbase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        725,
+        2228,
+        3743,
+        5222,
+        5920,
+        6879
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "The article: \"Towards a health promoting university: descriptive findings on health, wellbeing and academic performance amongst university students in Australia\" identifies 14,880 (26.4%) students who commenced the survey, with the response of \"18 or above\". International student status is mentioned as \"not specified\" and details regarding participants' access to their academic records are not available in the public domain. Additionally, the article provides a percentage aged 18 or above, but the percentage specifically aged between 18 and 25 is not provided in a public summary.",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1804,
+        2369,
+        2963,
+        4424,
+        4984,
+        6350
+    ]
+}

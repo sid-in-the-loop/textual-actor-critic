@@ -1,0 +1,21 @@
+{
+    "answer": "Image of International Operations sales growth of 19% for Q1 2025, driven by GLP-1 Diabetes and Obesity care.",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        972,
+        2134,
+        3432,
+        4746
+    ]
+}

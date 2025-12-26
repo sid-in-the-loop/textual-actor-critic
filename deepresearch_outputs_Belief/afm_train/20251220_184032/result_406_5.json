@@ -1,0 +1,19 @@
+{
+    "answer": "JPMorgan Global Economic Outlook May 2025, J.P. Morgan Research",
+    "ground_truth": "Market outlook 2025: Navigating cross-currents (J.P. Morgan Global Research)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        1940,
+        2892
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "https://marriott.gcs-web.com/annual",
+    "ground_truth": "Marriott International Annual Report 2025; Marriott International (MAR) Historical Annual Reports 2002-2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        968,
+        2210,
+        3433,
+        4480,
+        5660
+    ]
+}

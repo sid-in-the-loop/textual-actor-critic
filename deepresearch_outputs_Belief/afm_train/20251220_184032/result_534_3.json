@@ -1,0 +1,21 @@
+{
+    "answer": "The APSA ranked academic book publishers in 2007 based on their publications, with no Australian publisher achieving an A* rating.",
+    "ground_truth": "2007; book and journal publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        1830,
+        3001,
+        4232
+    ]
+}

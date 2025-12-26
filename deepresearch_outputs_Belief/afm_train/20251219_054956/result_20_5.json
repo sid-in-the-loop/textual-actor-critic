@@ -1,0 +1,19 @@
+{
+    "answer": "The journal \"Scientific Reports\" (published by Nature) provides details on manuscript requirements at its official author instructions page on nature.com/srep/author-instructions. Key requirements include formats, main text word limits (4,500 words, excluding abstract, and including appendices and figures), and the use of making sure there's no potential conflicting interest.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1464,
+        2478
+    ]
+}

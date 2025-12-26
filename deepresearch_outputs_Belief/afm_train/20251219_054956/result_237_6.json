@@ -1,0 +1,17 @@
+{
+    "answer": "If the emissions reduction measures under SSP1&RCP2.6 are adopted, the increase in global water-scarce urban population due to climate change will be cut by half (16 million).",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        907,
+        2122
+    ]
+}

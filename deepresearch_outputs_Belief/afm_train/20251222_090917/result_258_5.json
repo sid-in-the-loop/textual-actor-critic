@@ -1,0 +1,23 @@
+{
+    "answer": "Not found in the 2025 global banking and financial markets outlook by the IBM Institute for Business Value: India's AUM change over the past five years and the proportion of the nation's GDP it represents.",
+    "ground_truth": "More than doubled, over 30% of GDP",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1958,
+        3226,
+        4593,
+        5873
+    ]
+}

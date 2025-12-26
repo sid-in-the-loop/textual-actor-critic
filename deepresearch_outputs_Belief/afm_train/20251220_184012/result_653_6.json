@@ -1,0 +1,23 @@
+{
+    "answer": "Periodical literature consists of published works that appear in new releases on a regular schedule.",
+    "ground_truth": "Wikipedia: Academic Journal Article Page",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        1803,
+        2875,
+        3911,
+        5014
+    ]
+}

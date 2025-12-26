@@ -1,0 +1,27 @@
+{
+    "answer": "The \"About\" section does not contain a dedicated sub-section for detailed financial budget and performance data. Performance data and budget information is typically found within the \"Performance Data Pro\" or \"Performance\" sub-sections of the U.S. Department of Commerce website.",
+    "ground_truth": "Budget and Performance\uff08U.S. Department of Commerce\u5b98\u7f51\u680f\u76ee\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        712,
+        1728,
+        1997,
+        2493,
+        3246,
+        4202,
+        4909
+    ]
+}

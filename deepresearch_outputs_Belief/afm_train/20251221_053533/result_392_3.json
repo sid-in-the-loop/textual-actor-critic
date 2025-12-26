@@ -1,0 +1,29 @@
+{
+    "answer": "Engineering Technology (CIP Code 15.0000)",
+    "ground_truth": "Computer Science (cs)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        902,
+        1873,
+        2895,
+        3818,
+        4872,
+        6049,
+        7273,
+        8474
+    ]
+}

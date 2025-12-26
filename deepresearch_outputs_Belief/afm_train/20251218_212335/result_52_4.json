@@ -1,0 +1,23 @@
+{
+    "answer": "Hinman (2013)",
+    "ground_truth": "Hanover Research Reports & Briefs",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        705,
+        1367,
+        2294,
+        2516,
+        773
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Discovery of 28 Open Clusters with Gaia DR3",
+    "ground_truth": "Research on Cluster Search in Cygnus Sky Region Based on Gaia DR3 Data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        824,
+        2290,
+        2708,
+        3984
+    ]
+}

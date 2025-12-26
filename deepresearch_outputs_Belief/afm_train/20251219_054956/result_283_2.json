@@ -1,0 +1,21 @@
+{
+    "answer": "\"Other operating (income) expense, net\" is a major component of the Non-GAAP operating income line on the 2025 10-K Format 10-K, and its negative impact contributed to the operational margin decrease between 2023 and 2024, with specific details attributed to the \"Impairment and other charges (gains), net line\" part of said document.",
+    "ground_truth": "-0.4 percentage point",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        894,
+        2405,
+        4218,
+        6628
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Communities are collaborating through partnerships with local organizations, schools, and healthcare providers to provide comprehensive mental health resources and support for students and families.",
+    "ground_truth": "collaboration among parents, schools, mental health professionals, and students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        1175,
+        1550,
+        1932,
+        2222
+    ]
+}

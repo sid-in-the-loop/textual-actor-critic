@@ -1,0 +1,19 @@
+{
+    "answer": "Blanchard's 2025 Annual HR/L&D Trends Report",
+    "ground_truth": "2025 Learning and Development Trends Report | Blanchard",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        707,
+        1887,
+        3102
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The main title is \"The Vacation Maximized PDF.\" The introductory theme of the 2025 Hilton Trends Report includes \"The Year of the Travel Maximizer,\" highlighting the intersection of work and play, relaxation and adventure, and being alone but together.",
+    "ground_truth": "2025 Hilton Trends Report: The Vacation Maximized",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        2116,
+        3575
+    ]
+}

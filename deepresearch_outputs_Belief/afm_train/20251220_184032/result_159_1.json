@@ -1,0 +1,21 @@
+{
+    "answer": "https://lib.arizona.edu/find",
+    "ground_truth": "University of Arizona Libraries - Articles and journals\u9875\u9762",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        1669,
+        2857,
+        3793
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Unable to provide a launch announcement from within confined article snippets without full article access.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        909,
+        1977,
+        3014,
+        3398,
+        3992,
+        4546,
+        5437,
+        1431
+    ]
+}

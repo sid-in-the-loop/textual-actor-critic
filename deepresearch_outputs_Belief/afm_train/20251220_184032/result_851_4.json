@@ -1,0 +1,17 @@
+{
+    "answer": "HHS Budget in Brief",
+    "ground_truth": "HHS FY 2025 Budget Main Page\uff08 https://www.hhs.gov/about/budget/fy2025/index.html )",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1685
+    ]
+}

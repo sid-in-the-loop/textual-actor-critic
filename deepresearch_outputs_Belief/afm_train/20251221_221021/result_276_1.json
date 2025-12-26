@@ -1,0 +1,17 @@
+{
+    "answer": "An analysis of internal and external feedback in self-regulated learning activities mediated by self-regulated learning tools and open learner models.",
+    "ground_truth": "Development of a new model on utilizing online learning platforms to improve students\u2019 academic achievements and satisfaction",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1997
+    ]
+}

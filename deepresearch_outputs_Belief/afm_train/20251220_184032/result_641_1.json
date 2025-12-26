@@ -1,0 +1,21 @@
+{
+    "answer": "Yes, the report contains sales volume (YTD 293,495) for the Mazda CX-90, and it presents US market share. A chart titled 'MAZDA CX-90 First Half Sales Volume & US Market Share' is likely present.",
+    "ground_truth": "Chart is referenced but not present in image",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2105,
+        3524,
+        4958
+    ]
+}

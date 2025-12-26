@@ -1,0 +1,23 @@
+{
+    "answer": "10.2227-7102.2024.07.011",
+    "ground_truth": "10.1186/s41239-023-00392-8",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1038,
+        2274,
+        2667,
+        3859,
+        5056
+    ]
+}

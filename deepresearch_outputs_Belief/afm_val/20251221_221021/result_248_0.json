@@ -1,0 +1,21 @@
+{
+    "answer": "6 Article types that journals publish: A guide for early career researchers",
+    "ground_truth": "Planning to Write\u7cfb\u5217\uff08Types of articles: A guide for young researchers\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        704,
+        1586,
+        2733,
+        3874
+    ]
+}

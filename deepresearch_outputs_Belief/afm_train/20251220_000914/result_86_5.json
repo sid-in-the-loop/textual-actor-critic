@@ -1,0 +1,27 @@
+{
+    "answer": "HRI Conference Proceedings",
+    "ground_truth": "Hitachi Research Institute Research Report\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        1736,
+        2905,
+        3910,
+        4311,
+        5586,
+        6851
+    ]
+}

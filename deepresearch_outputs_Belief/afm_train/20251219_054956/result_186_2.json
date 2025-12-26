@@ -1,0 +1,17 @@
+{
+    "answer": "World Economic Outlook, April 2025: A Critical Juncture amid Policy ...",
+    "ground_truth": "Predictions 2025 section",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        725,
+        1959
+    ]
+}

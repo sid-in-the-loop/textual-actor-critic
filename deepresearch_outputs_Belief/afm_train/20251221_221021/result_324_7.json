@@ -1,0 +1,17 @@
+{
+    "answer": "BBC Online account usage grew 11% YoY, and BBC iPlayer saw record-breaking performance in 2023.",
+    "ground_truth": "BBC Online account usage grew 11% year-on-year in 2023; BBC iPlayer had a record-breaking year in 2023",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        2150
+    ]
+}

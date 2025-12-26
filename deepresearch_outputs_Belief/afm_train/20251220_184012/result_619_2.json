@@ -1,0 +1,23 @@
+{
+    "answer": "Barzilay stated that cancer screening guidelines from the National Comprehensive Cancer Network (NCCN) and the U.S. Preventive Services Task Force (USPSTF) have limited recommendations.",
+    "ground_truth": "limited recommendations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        838,
+        2347,
+        3842,
+        4327,
+        4767
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The Vacation Maximized, The Year of the Travel Maximizer",
+    "ground_truth": "2025 Hilton Trends Report: The Vacation Maximized",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        2194,
+        2841,
+        4282
+    ]
+}

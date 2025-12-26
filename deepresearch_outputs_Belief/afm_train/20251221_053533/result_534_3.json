@@ -1,0 +1,25 @@
+{
+    "answer": "The Australian Political Studies Association (APSA) ranked academic publishers in 2007, evaluating them and their journals using an A*, A, B, and C band scheme.",
+    "ground_truth": "2007; book and journal publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1905,
+        3081,
+        4056,
+        5252,
+        6419
+    ]
+}

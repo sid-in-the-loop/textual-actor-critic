@@ -1,0 +1,21 @@
+{
+    "answer": "ALFWorld achieves 91% performance with database-level selection.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        1066,
+        2194,
+        2489
+    ]
+}

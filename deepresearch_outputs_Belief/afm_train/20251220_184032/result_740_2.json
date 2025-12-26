@@ -1,0 +1,19 @@
+{
+    "answer": "Preakness 2025 starts at 4 p.m. ET on Peacock this Saturday.",
+    "ground_truth": "2:00 p.m. ET",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        2337,
+        4079
+    ]
+}

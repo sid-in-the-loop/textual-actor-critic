@@ -1,0 +1,21 @@
+{
+    "answer": "Environmental Science and Technology",
+    "ground_truth": "Division of Major Disciplines of the Chinese Academy of Sciences (Environmental Science and Ecology)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        2123,
+        3594,
+        4828
+    ]
+}

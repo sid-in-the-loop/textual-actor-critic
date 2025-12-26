@@ -1,0 +1,25 @@
+{
+    "answer": "\u9a86\u715c\u6c11",
+    "ground_truth": "\u80e1\u5f66\u658c",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        2424,
+        3262,
+        4915,
+        5841,
+        6839
+    ]
+}

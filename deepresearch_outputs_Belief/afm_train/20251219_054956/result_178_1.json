@@ -1,0 +1,29 @@
+{
+    "answer": "10.1037/hrd0000106",
+    "ground_truth": "https://doi.org/10.1186/s12889-022-14690-9",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        917,
+        2118,
+        2461,
+        2798,
+        4069,
+        4688,
+        5905,
+        7005
+    ]
+}

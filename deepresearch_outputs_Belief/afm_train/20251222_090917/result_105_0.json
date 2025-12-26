@@ -1,0 +1,17 @@
+{
+    "answer": "Consolidated Financial Statements - Apple - FY 2025 Q2",
+    "ground_truth": "Apple reports first quarter results - Apple",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1817
+    ]
+}

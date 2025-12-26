@@ -1,0 +1,17 @@
+{
+    "answer": "JC 2025 48",
+    "ground_truth": "Joint Committee Update on Risks and Vulnerabilities in the EU Financial System \u2013 Spring 2025",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        2183
+    ]
+}

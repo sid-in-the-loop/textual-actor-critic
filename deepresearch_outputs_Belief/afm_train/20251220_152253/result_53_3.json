@@ -1,0 +1,23 @@
+{
+    "answer": "\"First Quarter \u2013 2025 Report. U.S. EPA. CASTNET and NADP Sites\"",
+    "ground_truth": "2025 \u2013 1st Quarter Report: Support for Conducting Systems & Performance Audits of CASTNET Sites and NADP Monitoring Stations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        1925,
+        3211,
+        3539,
+        3944
+    ]
+}

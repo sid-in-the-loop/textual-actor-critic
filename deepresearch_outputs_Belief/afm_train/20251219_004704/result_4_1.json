@@ -1,0 +1,21 @@
+{
+    "answer": "85% of marketers now focus on owned data sources like CRMs and email lists.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        937,
+        2438,
+        4318,
+        4857
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Annemarie R\u00fcger",
+    "ground_truth": "Axel H\u00e4gerstr\u00f6m",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        1826
+    ]
+}

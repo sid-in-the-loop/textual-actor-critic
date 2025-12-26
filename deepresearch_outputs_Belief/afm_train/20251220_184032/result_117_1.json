@@ -1,0 +1,21 @@
+{
+    "answer": "Record of the Financial Policy Committee meeting - Bank of England",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        778,
+        2153,
+        3594,
+        5382
+    ]
+}

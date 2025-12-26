@@ -1,0 +1,23 @@
+{
+    "answer": "Future global urban water scarcity and potential solutions",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        1168,
+        1518,
+        1825,
+        2688
+    ]
+}

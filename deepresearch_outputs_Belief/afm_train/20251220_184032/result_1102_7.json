@@ -1,0 +1,21 @@
+{
+    "answer": "How Emerging Technologies Take Shape",
+    "ground_truth": "Stanford Emerging Technology Review 2025 Technology Areas",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        1823,
+        2885,
+        3973
+    ]
+}

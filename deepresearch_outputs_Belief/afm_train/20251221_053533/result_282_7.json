@@ -1,0 +1,23 @@
+{
+    "answer": "$6.6 million per year",
+    "ground_truth": "$6,600,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        2277,
+        3644,
+        5112,
+        6246
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "ReWatch-R1: Boosting Complex Video Reasoning in Large Vision-Language Models through Agentic Data Synthesis",
+    "ground_truth": "MINERVA : Evaluating Complex Video Reasoning",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        2021,
+        3416,
+        4504
+    ]
+}

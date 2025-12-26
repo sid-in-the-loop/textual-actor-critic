@@ -1,0 +1,23 @@
+{
+    "answer": "No relevant trend report was found with the specified criteria.",
+    "ground_truth": "10%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        1017,
+        1214,
+        1477,
+        1751
+    ]
+}

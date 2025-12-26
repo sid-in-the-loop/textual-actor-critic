@@ -1,0 +1,23 @@
+{
+    "answer": "Talkwalker Facebook catalog",
+    "ground_truth": "Hootsuite Social Media Research Archives",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1733,
+        2152,
+        2387,
+        3477
+    ]
+}

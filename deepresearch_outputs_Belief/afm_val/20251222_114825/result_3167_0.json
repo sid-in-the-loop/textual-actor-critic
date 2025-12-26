@@ -1,0 +1,23 @@
+{
+    "answer": "3.9 percentage points",
+    "ground_truth": "211.2 million to 476.0 million; 129.7% increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        846,
+        2059,
+        2482,
+        3941,
+        5280
+    ]
+}

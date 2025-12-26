@@ -1,0 +1,21 @@
+{
+    "answer": "Detection of multiple specific types of $\\epsilon$-physics",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1860,
+        2160,
+        2302
+    ]
+}

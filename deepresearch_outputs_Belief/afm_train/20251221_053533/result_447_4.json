@@ -1,0 +1,25 @@
+{
+    "answer": "news.northwesternmutual.com/studies-and-research",
+    "ground_truth": "Northwestern Mutual Studies & Research\uff08https://news.northwesternmutual.com/studies-and-research\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2073,
+        3222,
+        5100,
+        5444,
+        5995
+    ]
+}

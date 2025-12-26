@@ -1,0 +1,21 @@
+{
+    "answer": "Sales in international operations grew by 19% in the first 3 months of 2025, driven by GLP-1 products.",
+    "ground_truth": "Novo Nordisk Investor presentation First three months of 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        2114,
+        3429,
+        4866
+    ]
+}

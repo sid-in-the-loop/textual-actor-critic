@@ -1,0 +1,23 @@
+{
+    "answer": "https://www.novartis.com/investors/financial-data/quarterly-results (Q4 2024 - Q1 2024), organized by Oct 29, 2024 (Q3 2024 - Q2 2024 - Q1 2024 Date to be determined)",
+    "ground_truth": "Novartis 2024\u5e74\u5ea6\u5b63\u5ea6\u8d22\u62a5\u7cfb\u5217\uff08Quarterly Financial Results / Financial Data Collection\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        764,
+        2307,
+        949,
+        2712,
+        4055
+    ]
+}

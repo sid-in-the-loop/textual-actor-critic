@@ -1,0 +1,17 @@
+{
+    "answer": "Pakistan's total foreign exchange reserves increased by 10.29% (from $12.8 billion to $21.1 billion) in the first quarter of 2025.",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        2028
+    ]
+}

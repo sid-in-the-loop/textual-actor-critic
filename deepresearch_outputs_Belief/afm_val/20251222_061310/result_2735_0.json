@@ -1,0 +1,19 @@
+{
+    "answer": "The 4 steps are: (1) identifying the topics and supporting scientific questions, (2) appointing a Dietary, (3) developing the guidelines, and (4) updating and revising the guidelines. These steps are interconnected through a continuous cycle of scientific evaluation, stakeholder input, and policy implementation.",
+    "ground_truth": "4 steps",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        867,
+        2272,
+        3388
+    ]
+}

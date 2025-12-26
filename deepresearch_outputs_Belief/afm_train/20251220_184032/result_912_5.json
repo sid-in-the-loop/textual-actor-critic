@@ -1,0 +1,17 @@
+{
+    "answer": "United Rentals acquired H&E Equipment Services, Inc. for $92 per share, with $3.8 billion of committed bridge acquisition financing provided by Morgan Stanley.",
+    "ground_truth": "United Rentals acquired H&E Equipment Services, $4,800,000,000, January 2025, Morgan Stanley provided $3,800,000,000 bridge acquisition financing",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        2099
+    ]
+}

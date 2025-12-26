@@ -1,0 +1,21 @@
+{
+    "answer": "Two months.",
+    "ground_truth": "3 months behind",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        1994,
+        3034,
+        4696
+    ]
+}

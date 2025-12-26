@@ -1,0 +1,17 @@
+{
+    "answer": "The results for the first half of the year are provided in the Danone interim financial report (Rapport financier semestriel 2024 en).",
+    "ground_truth": "Half year 2024 financial results",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        678,
+        2294
+    ]
+}

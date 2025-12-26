@@ -1,0 +1,29 @@
+{
+    "answer": "The cricketer's first-class run total does not match the criteria.",
+    "ground_truth": "1995",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        2288,
+        3650,
+        4999,
+        6455,
+        7795,
+        9083,
+        10706
+    ]
+}

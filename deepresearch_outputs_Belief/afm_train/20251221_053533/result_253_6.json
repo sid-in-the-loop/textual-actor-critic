@@ -1,0 +1,27 @@
+{
+    "answer": "Lucerna",
+    "ground_truth": "Santiago, Chile",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        886,
+        2349,
+        3573,
+        4758,
+        6174,
+        7535,
+        9042
+    ]
+}

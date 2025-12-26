@@ -1,0 +1,21 @@
+{
+    "answer": "10.1023/B:JOHS.0000021836.43694.02",
+    "ground_truth": "https://doi.org/10.1186/s12889-022-14690-9",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        2020,
+        3341,
+        4699
+    ]
+}

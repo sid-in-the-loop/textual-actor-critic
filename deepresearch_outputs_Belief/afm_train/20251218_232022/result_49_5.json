@@ -1,0 +1,23 @@
+{
+    "answer": "The Child Trends DataBank",
+    "ground_truth": "Child Trends Publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        1606,
+        2303,
+        3253,
+        4307
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "438.5 million, 37.9% (from the 2025 Financial Plan)",
+    "ground_truth": "$232,900,000 (53.1%)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        869,
+        2083
+    ]
+}

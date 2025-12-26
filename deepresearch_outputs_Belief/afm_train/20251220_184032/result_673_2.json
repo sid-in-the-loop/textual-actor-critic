@@ -1,0 +1,19 @@
+{
+    "answer": "Report on Risks and Vulnerabilities",
+    "ground_truth": "Joint Committee Update on Risks and Vulnerabilities in the EU Financial System \u2013 Spring 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        785,
+        1981,
+        3478
+    ]
+}

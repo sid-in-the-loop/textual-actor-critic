@@ -91,7 +91,6 @@ async def aggregate_single_query(semaphore, key_point_dir, qid, model):
                     model=model,
                     messages=chat_pattern,
                     response_format=KeyPointAggregation,
-                    temperature=0
         )
         result = json.loads(response.choices[0].message.content)
         aggregated_points = result['points']
@@ -128,6 +127,6 @@ if __name__ == "__main__":
     
     key_point_dir = "key_point"
     model = "gpt-4.1-nano" # to reduce cost in debugging
-    # model = "gpt-4o-mini"
+    # model = "gpt-5-mini"
 
     asyncio.run(aggregate_all_queries(key_point_dir, model))

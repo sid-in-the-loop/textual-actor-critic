@@ -1,0 +1,29 @@
+{
+    "answer": "Game of Thrones",
+    "ground_truth": "\u8537\u8587\u4e4b\u604b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        808,
+        2150,
+        3354,
+        4678,
+        5823,
+        7090,
+        8267,
+        9478
+    ]
+}

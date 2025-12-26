@@ -1,0 +1,21 @@
+{
+    "answer": "Jeff Sessions",
+    "ground_truth": "Senator Chuck Grassley",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        954,
+        2077,
+        3303,
+        4515
+    ]
+}

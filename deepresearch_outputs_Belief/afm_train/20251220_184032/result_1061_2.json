@@ -1,0 +1,21 @@
+{
+    "answer": "Guest Post \u2013 An Early Look at the Impact of the Chinese Academy of Sciences journals warning list",
+    "ground_truth": "Academic Journal Trends 2025 Summary Articles on Publishers State. com",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        1871,
+        3037,
+        4307
+    ]
+}

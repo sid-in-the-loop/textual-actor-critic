@@ -1,0 +1,17 @@
+{
+    "answer": "The Economic Times does not appear to provide the specific financial losses prevented by Maharashtra Cyber since 2019 in its societal issues section.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        2266
+    ]
+}

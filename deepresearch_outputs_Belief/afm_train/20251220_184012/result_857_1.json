@@ -1,0 +1,23 @@
+{
+    "answer": "Institutional authority and collective decision-making process",
+    "ground_truth": "Global Addis",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        1792,
+        2779,
+        3780,
+        4996
+    ]
+}

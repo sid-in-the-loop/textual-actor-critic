@@ -1,0 +1,27 @@
+{
+    "answer": "The Times Group does not publish specific 'financial losses prevented' by individual security companies like Maharashtra Cyber in its mainstream business and financial sections.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        1992,
+        3426,
+        5157,
+        6455,
+        7797,
+        9262
+    ]
+}

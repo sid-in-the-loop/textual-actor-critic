@@ -1,0 +1,23 @@
+{
+    "answer": "Not found in the provided reports.",
+    "ground_truth": "Nine out of ten",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2030,
+        3228,
+        4496,
+        5621
+    ]
+}

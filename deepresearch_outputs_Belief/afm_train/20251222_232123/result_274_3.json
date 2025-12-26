@@ -1,0 +1,19 @@
+{
+    "answer": "South Korea's approach to diplomatic engagement with North Korea under President Yoon Suk Yeol has shifted from a more nuanced or less adversarial stance to a consistent and unrelenting designation of North Korea as an \"enemy,\" unlike his predecessor.",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        965,
+        2201,
+        3444
+    ]
+}

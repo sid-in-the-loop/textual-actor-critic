@@ -1,0 +1,23 @@
+{
+    "answer": "The paper states \"DLMO was also not significantly correlated with GPA (r = 0.37, p = 0.08).\" It does not explicitly provide the correlation between SRI and DLMO.",
+    "ground_truth": "r = -0.66; p < 0.001",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        1848,
+        3131,
+        3872,
+        4721
+    ]
+}

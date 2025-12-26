@@ -1,0 +1,25 @@
+{
+    "answer": "PolitiFact",
+    "ground_truth": "FactCheck.org Project 2025 Archives (https://www.factcheck.org/issue/project-2025/)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        1967,
+        3765,
+        5046,
+        6566,
+        8323
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Over 40,000 people attended Dreamforce 2025, representing over 50 countries. Over 1,000 shows were featured.",
+    "ground_truth": "45,000 people; 140 countries; 1,500 shows",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        1987,
+        3519,
+        3858,
+        4175,
+        5445,
+        6734
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "ChatGPT + AI Literacy Toolbox: Literature Reviews with Prompts",
+    "ground_truth": "Literature Review Generator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        2020,
+        3612,
+        4066,
+        4396
+    ]
+}

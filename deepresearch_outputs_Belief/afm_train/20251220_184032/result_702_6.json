@@ -1,0 +1,21 @@
+{
+    "answer": "I cannot find the requested information.",
+    "ground_truth": "65.3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        2022,
+        2494,
+        3016
+    ]
+}

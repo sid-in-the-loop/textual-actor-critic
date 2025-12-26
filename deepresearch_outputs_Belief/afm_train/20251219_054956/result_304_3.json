@@ -1,0 +1,27 @@
+{
+    "answer": "The specific paper is not found.",
+    "ground_truth": "streamlining peer review, enhancing content discoverability, improving research analytics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        885,
+        1153,
+        2295,
+        2931,
+        3607,
+        4144,
+        4441
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "La Ni\u00f1a could lead to heavy rains in some areas of the Americas and Asia. The probability of a strong La Ni\u00f1a is not explicitly stated, but a strong La Ni\u00f1a is forecasted.",
+    "ground_truth": "over 70% chance",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        2276,
+        2684,
+        3138,
+        3444
+    ]
+}

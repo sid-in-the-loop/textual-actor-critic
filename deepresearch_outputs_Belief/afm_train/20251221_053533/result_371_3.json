@@ -1,0 +1,23 @@
+{
+    "answer": "More than 680 GW of solar PV and BESS module shipments were driven by Chinese companies in 2024, according to data from REI and BNEF, which are cited in the section of the SEIA dashboard summarizing the 2024 global solar PV and BESS manufacturing trends. While this indicates a significant degree of Chinese company participation, it does not quantify their control across *every* stage of the solar supply chain. In the context of component distribution, China is the most powerful provider for PV modules.",
+    "ground_truth": "nearly complete control in upstream stages; less in downstream stages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        2347,
+        3636,
+        5255,
+        6719
+    ]
+}

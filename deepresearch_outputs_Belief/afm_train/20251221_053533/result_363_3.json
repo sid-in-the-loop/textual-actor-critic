@@ -1,0 +1,17 @@
+{
+    "answer": "Not applicable, as the Big Four are typically structured as separate legal entities, not LLPs.",
+    "ground_truth": "KPMG LLP",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2174
+    ]
+}

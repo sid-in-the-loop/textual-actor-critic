@@ -1,0 +1,27 @@
+{
+    "answer": "Subject categories within Web of Science are organized into main categories such as Science & Technology, Social Sciences, and Arts and Humanities; each of these further includes specific subject categories.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1882,
+        2916,
+        3949,
+        5204,
+        6323,
+        7638
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "You may not confirm",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        960,
+        2105,
+        3147,
+        3425,
+        4665,
+        4989,
+        5355,
+        6445
+    ]
+}

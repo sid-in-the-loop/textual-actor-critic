@@ -1,0 +1,27 @@
+{
+    "answer": "No article was found published on January 4, 2025, under the ABC News World Politics special feature that discusses major global changes.",
+    "ground_truth": "Tectonic events are reshaping the world: How will the global politics of 2025 be defined? - ABC News",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        2036,
+        3159,
+        4413,
+        5004,
+        5379,
+        5939
+    ]
+}

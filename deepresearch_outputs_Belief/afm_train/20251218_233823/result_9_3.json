@@ -1,0 +1,21 @@
+{
+    "answer": "Meta Platforms, Inc. first quarter 2025 disclosures were filed as Form 8-K, with SEC Accession No. 0001628280-25-036719.",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2409,
+        4077,
+        5463
+    ]
+}

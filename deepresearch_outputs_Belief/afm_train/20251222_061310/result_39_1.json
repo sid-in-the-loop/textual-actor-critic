@@ -1,0 +1,19 @@
+{
+    "answer": "LexisNexis offers various pricing tiers for its products, including Lexis Web, with charges ranging from $0 to $469 for searches, and Level 1/2 Search for LexisNexis products ranging from $0 to $50.",
+    "ground_truth": "free for up to three searches per day",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        696,
+        953,
+        2148
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "\"Sarcopenia's Prognostic Role in Acute Pancreatitis\"\nJournal.pone.0322409 (PLOS ONE), Academia.edu",
+    "ground_truth": "'Prevalence and ultrasonographic patterns of gynecological emergencies in southeastern Nigeria' by Emmanuel Odumeru, Xavier Akimuhana, Eric Kirezi, Costelia Njoku",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2094,
+        3406,
+        4846
+    ]
+}

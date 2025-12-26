@@ -1,0 +1,21 @@
+{
+    "answer": "Funding Ratios (DB schemes)",
+    "ground_truth": "Funding Ratios (DB schemes) section; Solvency II regulatory framework; Reference date: 2024-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2111,
+        3428,
+        4668
+    ]
+}

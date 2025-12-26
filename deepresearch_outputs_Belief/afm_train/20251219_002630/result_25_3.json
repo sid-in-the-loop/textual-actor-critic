@@ -1,0 +1,29 @@
+{
+    "answer": "Science and Technology: Chemistry, Inorganic & Nuclear, Geochemistry & Geophysics, Microscopy (Engineering).",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2027,
+        2572,
+        3683,
+        4872,
+        6046,
+        7437,
+        8168
+    ]
+}

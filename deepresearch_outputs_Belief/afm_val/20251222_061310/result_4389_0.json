@@ -1,0 +1,17 @@
+{
+    "answer": "Fact-Consistency Evaluation of Text-to-SQL Generation for Business Intelligence Using Exaone 3.5",
+    "ground_truth": "arXiv:2505.00060",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1929
+    ]
+}

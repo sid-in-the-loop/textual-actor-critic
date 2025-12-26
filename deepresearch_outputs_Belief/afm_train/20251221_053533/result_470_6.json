@@ -1,0 +1,27 @@
+{
+    "answer": "StudyFinds.org \"new research\" or \"science news\" section",
+    "ground_truth": "Annual Collection of Scientific Breakthrough Topics on Study Finds Website",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        814,
+        1785,
+        2988,
+        3257,
+        4511,
+        5591,
+        6749
+    ]
+}

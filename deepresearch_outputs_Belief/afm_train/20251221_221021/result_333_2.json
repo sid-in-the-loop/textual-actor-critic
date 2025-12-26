@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 2, Smoothed Impulse Response of GDP.",
+    "ground_truth": "Remains close to zero in almost all quarters",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        1735,
+        1998,
+        2870
+    ]
+}

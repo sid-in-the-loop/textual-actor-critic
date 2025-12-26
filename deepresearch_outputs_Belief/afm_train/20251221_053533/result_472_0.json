@@ -1,0 +1,25 @@
+{
+    "answer": "The requested information could not be found in the provided search results and is likely not publicly accessible.",
+    "ground_truth": "70%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        1127,
+        2466,
+        2765,
+        3200,
+        3848
+    ]
+}

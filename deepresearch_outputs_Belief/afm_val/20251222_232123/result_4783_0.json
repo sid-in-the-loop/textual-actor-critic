@@ -1,0 +1,19 @@
+{
+    "answer": "\u97f3\u4e50ology",
+    "ground_truth": " \u670d\u88c5\u8bbe\u8ba1",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        728,
+        1823,
+        2887
+    ]
+}

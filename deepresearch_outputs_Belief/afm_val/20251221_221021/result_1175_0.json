@@ -1,0 +1,19 @@
+{
+    "answer": "SOCIAL MEDIA TRENDS - 2 19 Hootsuite's annual report",
+    "ground_truth": "The History of Social Media in 33 Key Moments",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        750,
+        1737,
+        3050
+    ]
+}

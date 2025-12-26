@@ -1,0 +1,21 @@
+{
+    "answer": "New Journalism's blending of objective reporting with individual voices and social commentary.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1774,
+        2745,
+        4134
+    ]
+}

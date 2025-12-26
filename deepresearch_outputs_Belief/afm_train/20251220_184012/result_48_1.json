@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 1 (the referenced text in the arXiv preprint 'A continuum thermodynamic model of the influence of non-ionic surfactant on mass transfer from gas bubbles')",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        2103,
+        2541,
+        3139
+    ]
+}

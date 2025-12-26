@@ -1,0 +1,23 @@
+{
+    "answer": "Actions by the Radiation Portal Monitors Replacement Program (RPM-RP) would be detailed in the \"Congressional Budget Justification\" document related to the U.S. Department of Commerce.",
+    "ground_truth": "screen 100% of inbound cargo containers",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        1975,
+        3340,
+        4458,
+        5856
+    ]
+}

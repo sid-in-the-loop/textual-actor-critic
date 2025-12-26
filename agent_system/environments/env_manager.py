@@ -678,8 +678,9 @@ def make_envs(config):
         max_steps = config.env.max_steps
         is_evaluation = config.env.is_evaluation
         use_explicit_thinking = config.env.use_explicit_thinking
-        _envs = build_deepresearch_envs(dataset_name='train', seed=config.env.seed, env_num=config.data.train_batch_size, group_n=group_n, max_steps=max_steps, use_explicit_thinking=use_explicit_thinking)
-        _val_envs = build_deepresearch_envs(dataset_name='val', seed=config.env.seed + 1000, env_num=config.data.val_batch_size, group_n=1, max_steps=max_steps, use_explicit_thinking=use_explicit_thinking)
+        dataset_name = config.env.dataset
+        _envs = build_deepresearch_envs(dataset_name=f'{dataset_name}_train', seed=config.env.seed, env_num=config.data.train_batch_size, group_n=group_n, max_steps=max_steps, use_explicit_thinking=use_explicit_thinking)
+        _val_envs = build_deepresearch_envs(dataset_name=f'{dataset_name}_val', seed=config.env.seed + 1000, env_num=config.data.val_batch_size, group_n=1, max_steps=max_steps, use_explicit_thinking=use_explicit_thinking)
 
         projection_f = partial(deepresearch_projection)
         envs = DeepResearchEnvironmentManager(_envs, projection_f, config.env.env_name, config.env.dataset, is_train=True, is_evaluation=is_evaluation)

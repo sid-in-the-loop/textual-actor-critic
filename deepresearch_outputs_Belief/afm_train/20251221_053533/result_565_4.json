@@ -1,0 +1,27 @@
+{
+    "answer": "19th National Congress of the Chinese Communist Party",
+    "ground_truth": "At Shanghai Technology University",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        827,
+        2083,
+        3411,
+        4484,
+        5689,
+        7009,
+        8461
+    ]
+}

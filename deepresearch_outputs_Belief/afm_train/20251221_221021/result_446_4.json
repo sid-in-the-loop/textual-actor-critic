@@ -1,0 +1,21 @@
+{
+    "answer": "120-129 or 130-139",
+    "ground_truth": "Social Science Category",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2164,
+        3715,
+        5044
+    ]
+}

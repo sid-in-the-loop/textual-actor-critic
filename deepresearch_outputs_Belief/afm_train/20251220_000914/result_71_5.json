@@ -1,0 +1,25 @@
+{
+    "answer": "Henry C. Payne",
+    "ground_truth": "New York Congressman Sereno E. Payne",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        905,
+        2030,
+        3138,
+        4259,
+        5779,
+        7737
+    ]
+}

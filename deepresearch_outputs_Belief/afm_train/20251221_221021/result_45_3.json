@@ -1,0 +1,29 @@
+{
+    "answer": "Performance Data Pro",
+    "ground_truth": "Budget and Performance\uff08U.S. Department of Commerce\u5b98\u7f51\u680f\u76ee\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        710,
+        1700,
+        2851,
+        4050,
+        5499,
+        6950,
+        1542,
+        2695
+    ]
+}

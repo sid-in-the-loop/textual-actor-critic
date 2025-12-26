@@ -1,0 +1,27 @@
+{
+    "answer": "Angli/Sigur",
+    "ground_truth": "T\u00f3mas Ingi T\u00f3masson",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        1732,
+        2280,
+        3594,
+        5084,
+        6386,
+        7770
+    ]
+}

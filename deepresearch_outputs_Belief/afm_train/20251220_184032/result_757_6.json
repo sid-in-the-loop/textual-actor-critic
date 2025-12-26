@@ -1,0 +1,21 @@
+{
+    "answer": "Technological Risks: AI and frontier technologies",
+    "ground_truth": "Beyond The Illusion - The Real Threat Of AI: WEF Global Risks Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        1902,
+        3052,
+        4317
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Renewable Energy and Solar Research Report Trends Report 2025",
+    "ground_truth": "2025 Renewable Energy and Solar Research Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        976,
+        2196,
+        3306
+    ]
+}

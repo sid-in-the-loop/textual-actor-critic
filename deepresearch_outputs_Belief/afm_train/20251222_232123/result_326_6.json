@@ -1,0 +1,29 @@
+{
+    "answer": "I'm Down",
+    "ground_truth": "\u8537\u8587\u4e4b\u604b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        922,
+        2962,
+        4800,
+        6556,
+        7916,
+        9206,
+        9622,
+        10999
+    ]
+}

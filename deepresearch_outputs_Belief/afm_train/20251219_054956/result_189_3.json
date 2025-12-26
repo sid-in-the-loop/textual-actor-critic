@@ -1,0 +1,25 @@
+{
+    "answer": "The number of participants in the protest opposing the \"Renters' Rights Act 2025\" outside parliament last year could not be found based on the available information.",
+    "ground_truth": "More than 40,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2186,
+        3418,
+        3721,
+        5470,
+        6222
+    ]
+}

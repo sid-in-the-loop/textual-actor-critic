@@ -1,0 +1,23 @@
+{
+    "answer": "Trump allies plan to curtail DOJ independence and turn the nation's top law enforcement body into a subservient body, potentially involving transferring authority to other federal law enforcement arms.",
+    "ground_truth": "restructure the Department of Justice and fill nonpartisan roles with conservatives",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        1926,
+        2225,
+        3394,
+        4765
+    ]
+}

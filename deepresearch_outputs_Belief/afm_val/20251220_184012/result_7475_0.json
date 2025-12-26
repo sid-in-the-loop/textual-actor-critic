@@ -1,0 +1,19 @@
+{
+    "answer": "Paul Chambers: Prosecutors in Thailand drop royal defamation case",
+    "ground_truth": "US \u2018alarmed\u2019 as American faces years in jail on charges of insulting Thai monarchy | CNN",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        1778,
+        2112
+    ]
+}

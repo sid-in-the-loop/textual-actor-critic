@@ -1,0 +1,17 @@
+{
+    "answer": "Effect of breathwork on stress and mental health: A meta-analysis of ... s41598-022-27247-y",
+    "ground_truth": "Scientific Reports 2023 13:432 (PMCID: PMC9828383)",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        720,
+        1922
+    ]
+}

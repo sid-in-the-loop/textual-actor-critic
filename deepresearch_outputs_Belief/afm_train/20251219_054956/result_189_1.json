@@ -1,0 +1,21 @@
+{
+    "answer": "The information is unavailable.",
+    "ground_truth": "More than 40,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        2171,
+        3660,
+        4917
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The Home Depot - First Quarter Fiscal 2025 Financial Results",
+    "ground_truth": "Apple's Q1 2025 Financial Year Performance Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        2413,
+        4034
+    ]
+}

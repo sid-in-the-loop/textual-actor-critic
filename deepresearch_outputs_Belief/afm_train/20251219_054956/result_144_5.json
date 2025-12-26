@@ -1,0 +1,25 @@
+{
+    "answer": "The United Nations report (The Sustainable Development Goals Report 2025) does not provide a quantitative assessment indicating how much more likely respondents with a high sense of grievance are to exhibit a zero-sum mindset compared to those with a low sense of grievance.",
+    "ground_truth": "twice as likely",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        898,
+        2097,
+        3209,
+        4497,
+        6045,
+        7440
+    ]
+}

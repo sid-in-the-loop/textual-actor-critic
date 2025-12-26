@@ -1,0 +1,21 @@
+{
+    "answer": "53% of articles; 5 companies",
+    "ground_truth": "5; 50%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        1719,
+        2837,
+        3803
+    ]
+}

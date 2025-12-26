@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to find frequency bands from the 2025 GSMA \"The Mobile Economy\" report as it was inaccessible.",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        2266,
+        2803,
+        3134,
+        3554,
+        3959,
+        4472
+    ]
+}

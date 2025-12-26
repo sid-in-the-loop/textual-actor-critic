@@ -1,0 +1,21 @@
+{
+    "answer": "Meg Turner is 14 years older than the founder of Rooster Teeth.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1872,
+        2952,
+        3892
+    ]
+}

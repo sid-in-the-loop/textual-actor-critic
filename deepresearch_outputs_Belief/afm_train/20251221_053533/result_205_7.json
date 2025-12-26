@@ -1,0 +1,29 @@
+{
+    "answer": "Baijiu",
+    "ground_truth": "\u5185\u753b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        1068,
+        2437,
+        3573,
+        4646,
+        6061,
+        1135,
+        2998,
+        3508
+    ]
+}

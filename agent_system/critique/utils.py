@@ -1,13 +1,10 @@
 from transformers import AutoTokenizer
 
+# Use HuggingFace Hub Qwen3-1.7B tokenizer
+model_name = "Qwen/Qwen3-1.7B"
 
-model_name = "/data/group_data/cx_group/verl_agent_shared/Qwen3/Qwen3-8B"
-tokenizer = AutoTokenizer.from_pretrained(
-    model_name,
-    local_files_only=True,   # only read from local
-    # use_fast=True,         # if there is compatibility issue, change to False
-    # trust_remote_code=True # if the model has a custom tokenizer class and needs the source code, enable this
-)
+# Load tokenizer from HuggingFace Hub
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 def tokenize(input):
     tokens = tokenizer.encode(input)

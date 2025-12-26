@@ -1,0 +1,23 @@
+{
+    "answer": "The New Titans, The Adventures of Superman",
+    "ground_truth": "\"Starman\" and \"Robin\"",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        1800,
+        2877,
+        3909,
+        5124
+    ]
+}

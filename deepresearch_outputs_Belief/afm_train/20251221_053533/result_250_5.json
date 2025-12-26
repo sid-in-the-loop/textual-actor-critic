@@ -1,0 +1,23 @@
+{
+    "answer": "Bloomberg Law 2026: Sharp Outlooks Into an Uncertain Future",
+    "ground_truth": "Bloomberg Law Unveils 2025 Report Highlighting Key Trends in Legal Industry",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        1998,
+        3207,
+        3543,
+        4735
+    ]
+}

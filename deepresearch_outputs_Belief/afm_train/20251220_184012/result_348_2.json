@@ -1,0 +1,21 @@
+{
+    "answer": "Scientific Reports publishes open-access research from the natural sciences, psychology, medicine, and engineering, with an editorial process emphasizing robustness and validity, covering all areas of those disciplines.",
+    "ground_truth": "About Scientific Reports | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        703,
+        1470,
+        2370,
+        3214
+    ]
+}

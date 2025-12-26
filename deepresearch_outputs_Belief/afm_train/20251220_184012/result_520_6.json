@@ -1,0 +1,21 @@
+{
+    "answer": "The Future of Jobs Report 2025: The jobs of the future \u2013 and the skills you need to get them.",
+    "ground_truth": "Future of Jobs Report Specialists",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1945,
+        3287,
+        4806
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Corporate Compliance Answer Book, Charting a Path Forward in 2026: Q4 Healthcare Antitrust Report, D.C. Circuit to Reconsider Injunction Barring CFPB Reductions in Force, Environmental Compliance and Management, FDA Proposes to Expand List of Active Ingredients for Sunscreens, Private Equity Quarterly Report, Trends and Developments: USA \u2013 Florida, Trends and Developments: USA \u2013 California, Alerts and Newsletters, Understanding and Avoiding Liability in E-Discovery, Charting a Path Forward in 2026: Holland & Knight's Year-End Healthcare Antitrust Report, Holland & Knight Health Dose: December 16, 2025, D.C. Circuit to Reconsider Injunction Barring CFPB Reductions in Force, Environmental Compliance and Management, FDA Proposes to Expand List of Active Ingredients for Sunscreens, Private Equity Quarterly Report, Trends and Developments: USA \u2013 Florida, Trends and Developments: USA \u2013 California, Alerts and Newsletters, Understanding and Avoiding Liability in E-Discovery, Charting a Path Forward in 2026: Holland & Knight's Year-End Healthcare Antitrust Report, Holland & Knight Health Dose: December 16, 2025",
+    "ground_truth": "Holland & Knight Insights Publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        1848,
+        2979,
+        4413
+    ]
+}

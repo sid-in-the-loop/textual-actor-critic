@@ -1,0 +1,25 @@
+{
+    "answer": "AI and Big Data Skills",
+    "ground_truth": "Future of Jobs Report Specialists",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        1638,
+        2858,
+        4173,
+        5515,
+        6686
+    ]
+}

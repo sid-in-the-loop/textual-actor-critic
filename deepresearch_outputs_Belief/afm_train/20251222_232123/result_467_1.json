@@ -1,0 +1,27 @@
+{
+    "answer": "Orsted: 2 projects, TotalEnergies: 1 project",
+    "ground_truth": "Orsted and TotalEnergies each had multiple projects",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        2039,
+        3270,
+        4525,
+        5796,
+        7176,
+        8502
+    ]
+}

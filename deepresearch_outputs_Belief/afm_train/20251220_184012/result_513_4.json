@@ -1,0 +1,19 @@
+{
+    "answer": "Anti-abortion, Anti-communism, Social conservatism",
+    "ground_truth": "Conservatism in the United States (Wikipedia Category)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        1752,
+        2831
+    ]
+}

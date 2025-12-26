@@ -1,0 +1,17 @@
+{
+    "answer": "First-party data dependency among marketers is expected to increase in 2024.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        1992
+    ]
+}

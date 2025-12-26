@@ -1,0 +1,19 @@
+{
+    "answer": "Financial Performance / 2024 Formula 1: Net Revenue (EUR 669,652 thousand)",
+    "ground_truth": "Novartis 2024 Annual Results\u62a5\u544a",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        728,
+        1932,
+        3178
+    ]
+}

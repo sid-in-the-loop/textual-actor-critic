@@ -1,0 +1,27 @@
+{
+    "answer": "Yes, I can answer this question. The answer is 58%.",
+    "ground_truth": "Dentons Insights: Artificial Intelligence",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        749,
+        1979,
+        3120,
+        4224,
+        5857,
+        7002,
+        8423
+    ]
+}

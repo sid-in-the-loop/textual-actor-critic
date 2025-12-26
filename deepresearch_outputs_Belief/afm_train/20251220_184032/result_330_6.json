@@ -1,0 +1,19 @@
+{
+    "answer": "4.3 GW",
+    "ground_truth": "55-60GW per annum",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2251,
+        3525
+    ]
+}

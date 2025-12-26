@@ -1,0 +1,25 @@
+{
+    "answer": "The specified demographic information is not publicly available.",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        928,
+        2069,
+        3352,
+        3736,
+        5244,
+        6577
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Emerald",
+    "ground_truth": "Emerald Insight \u7ba1\u7406\u5b66\u4e0e\u4fe1\u606f\u79d1\u5b66\u671f\u520a\u5206\u7c7b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        836,
+        1817,
+        2911,
+        1216,
+        2664,
+        3511,
+        4432,
+        4925
+    ]
+}

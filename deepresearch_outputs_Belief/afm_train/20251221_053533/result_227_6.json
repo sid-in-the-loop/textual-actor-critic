@@ -1,0 +1,27 @@
+{
+    "answer": "The PwC Malaysia Budget 2025 feature page's \"PwC Centre Stage: Budget 2025 Overview\" section provides a comprehensive interpretation and analysis of the 2025 budget, serving as the unique entry point for these key insights.",
+    "ground_truth": "Budget 2025 Overview (PwC Malaysia)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        1973,
+        2487,
+        2922,
+        4668,
+        5124,
+        6900
+    ]
+}

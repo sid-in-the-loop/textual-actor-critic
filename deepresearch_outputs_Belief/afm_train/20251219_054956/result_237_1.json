@@ -1,0 +1,23 @@
+{
+    "answer": "Reduces urban water scarcity.",
+    "ground_truth": "from 31 million to 16 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1077,
+        1503,
+        1949,
+        3256
+    ]
+}

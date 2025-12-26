@@ -1,0 +1,23 @@
+{
+    "answer": "The article 'according to the article' with the specified criteria could not be found published on January 2, 2025 on the specified source.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1490,
+        1991,
+        2202,
+        2965
+    ]
+}

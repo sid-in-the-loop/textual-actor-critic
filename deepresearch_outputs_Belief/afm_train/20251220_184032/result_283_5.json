@@ -1,0 +1,21 @@
+{
+    "answer": "'Other operating (income) expense, net' contributed to the decrease.",
+    "ground_truth": "-0.4 percentage point",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        899,
+        2519,
+        4061,
+        5761
+    ]
+}

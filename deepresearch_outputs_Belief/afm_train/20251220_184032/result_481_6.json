@@ -1,0 +1,21 @@
+{
+    "answer": "Surveyed 3,466; AI agents.",
+    "ground_truth": "More than 2,500",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2095,
+        3356,
+        4638
+    ]
+}

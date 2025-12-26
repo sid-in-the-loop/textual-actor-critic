@@ -1,0 +1,21 @@
+{
+    "answer": "cs.",
+    "ground_truth": "arXiv Computer Science \u5206\u7c7b\u4f53\u7cfb",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1769,
+        3035,
+        4130
+    ]
+}

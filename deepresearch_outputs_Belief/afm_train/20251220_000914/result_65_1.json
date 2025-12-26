@@ -1,0 +1,23 @@
+{
+    "answer": "Identify clear supervisory objectives and outcomes across EU capital markets, focusing on high-priority cross-sectoral risks using the most.",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        2215,
+        2731,
+        3081,
+        3615
+    ]
+}

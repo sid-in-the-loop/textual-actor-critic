@@ -1,0 +1,25 @@
+{
+    "answer": "Peptide abundance differences and protein sequence annotations",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        1976,
+        3360,
+        4559,
+        5829,
+        7006
+    ]
+}

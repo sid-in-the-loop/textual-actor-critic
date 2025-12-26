@@ -1,0 +1,23 @@
+{
+    "answer": "\"Explore research and insights\"",
+    "ground_truth": "Deloitte Automotive Industry Insights and Research",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        691,
+        1757,
+        2909,
+        3301,
+        4428
+    ]
+}

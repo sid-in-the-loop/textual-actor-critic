@@ -1,0 +1,19 @@
+{
+    "answer": "[Brief guide for submission to Nature](https://www.nature.com/documents/nature_3a_initial_revised_submissions.pdf)",
+    "ground_truth": "Nature For Authors (for-authors)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1446,
+        2338
+    ]
+}

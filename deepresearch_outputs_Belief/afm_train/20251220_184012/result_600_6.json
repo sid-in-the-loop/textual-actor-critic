@@ -1,0 +1,23 @@
+{
+    "answer": "The 'enemy of my enemy' dynamic will resolve opposing PBM practices.",
+    "ground_truth": "Increased collaboration between pharmaceutical manufacturers and independent pharmacies.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        1997,
+        2355,
+        2646,
+        3160
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Pakistan's total foreign exchange reserves increased by 57%, or $5.19 billion, in the current financial year (to $19.59 billion).",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        2171,
+        3425,
+        4661
+    ]
+}

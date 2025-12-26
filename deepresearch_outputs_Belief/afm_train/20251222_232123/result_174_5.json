@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to find specific S&P 500 performance details over the past three months or its relationship to rising bond yields in the retrieved information from the Atlantic Council report.",
+    "ground_truth": "increased by more than 3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        1839,
+        2283,
+        2688,
+        3203,
+        3703,
+        4086
+    ]
+}

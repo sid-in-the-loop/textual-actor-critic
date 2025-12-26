@@ -1,0 +1,21 @@
+{
+    "answer": "S&P 500 responded well three months ago despite rising bond yields, with a focus on assessing which strategies were most effective.",
+    "ground_truth": "increased by more than 3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1041,
+        2291,
+        2605
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Include a data availability statement (mandatory), and acknowledgements (optional).",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        701,
+        1441,
+        1865,
+        2644,
+        3389
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "PMCID:PMC12372116, DOI:10.1038/s41598-022-27247-y, Authors:Guy William Fincham, Clara Strauss, Cavanagh K, Montero-Marin J",
+    "ground_truth": "Scientific Reports 2023 13:432 (PMCID: PMC9828383)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        1958,
+        3506,
+        4863
+    ]
+}

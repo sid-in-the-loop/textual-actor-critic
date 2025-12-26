@@ -1,0 +1,17 @@
+{
+    "answer": "OpenAI requested US approval for 5GW AI data centers, highlighting their expansion strategy and energy demands.",
+    "ground_truth": "No analytical or data-driven conclusions",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        972,
+        2319
+    ]
+}

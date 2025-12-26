@@ -1,0 +1,23 @@
+{
+    "answer": "Sample Publications and Reports",
+    "ground_truth": "Hitachi Research Institute Research Report\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        1663,
+        2499,
+        3651,
+        4864
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "The sum of all x from 100\u00b0 to 200\u00b0",
+    "ground_truth": "906",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        919,
+        3216,
+        4263,
+        5059
+    ]
+}

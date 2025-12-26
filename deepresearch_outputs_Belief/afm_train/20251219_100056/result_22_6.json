@@ -1,0 +1,23 @@
+{
+    "answer": "The Retirement of NAS (August vfinal 508.pdf))",
+    "ground_truth": "Fiscal Year 2025 Hospital Inpatient Quality Reporting Program Guide",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2276,
+        3179,
+        3618,
+        4122
+    ]
+}

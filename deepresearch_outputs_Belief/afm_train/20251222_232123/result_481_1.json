@@ -1,0 +1,21 @@
+{
+    "answer": "1,200 business and technology leaders; VC funds focused on AI investments",
+    "ground_truth": "More than 2,500",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        1825,
+        2940,
+        4004
+    ]
+}

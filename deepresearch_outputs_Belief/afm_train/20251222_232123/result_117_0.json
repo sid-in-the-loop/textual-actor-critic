@@ -1,0 +1,29 @@
+{
+    "answer": "April 8, July 9, October 8, December 2",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        846,
+        2060,
+        3370,
+        4515,
+        5674,
+        6937,
+        8276,
+        9596
+    ]
+}

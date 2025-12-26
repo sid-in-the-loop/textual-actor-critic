@@ -1,0 +1,19 @@
+{
+    "answer": "Every new year brings groundbreaking advances in cancer research and treatment.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        2094,
+        3334
+    ]
+}

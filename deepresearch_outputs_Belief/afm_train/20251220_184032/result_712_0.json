@@ -1,0 +1,19 @@
+{
+    "answer": "The FY 2025 Budget Request Overview Book (Volume I of the Budget in Brief) for the U.S. Department of Commerce.",
+    "ground_truth": "screen 100% of inbound cargo containers",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        965,
+        2285,
+        3509
+    ]
+}

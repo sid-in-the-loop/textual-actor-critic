@@ -1,0 +1,23 @@
+{
+    "answer": "Multiple search queries targeting the specific naming of subject categories within Web of Science, including \"Web of Science subject categorization system,\" \"internal names,\" and \"primary classifications,\" have not yielded a definitive, granular list of the *exact* subject categorization names used across its 225+ categories (e.g., \"Agricultural Sciences,\" \"Biology & Biochemistry,\" \"Chemistry,\" \"Clinical Medicine,\" \"Ethics,\" \"Interdisciplinary Applications\" from Zen Desk results). Primary source documentation and support pages provide general category examples and overarching categorization frameworks (\"Science, Technology, Social Sciences, and Arts and Humanities\") but do not offer a unified, granular naming convention for all subject categories in a structured, browsable Tables or accessible via search queries. Web of Science documentation primarily uses the public, descriptive naming convention.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1816,
+        3027,
+        4280,
+        5583
+    ]
+}

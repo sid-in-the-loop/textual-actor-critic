@@ -1,0 +1,19 @@
+{
+    "answer": "The European Union installed 65.5 GW of new solar PV capacity in 2024.",
+    "ground_truth": "surpassed the halfway mark",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        918,
+        2282,
+        3653
+    ]
+}

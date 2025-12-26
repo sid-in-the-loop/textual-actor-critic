@@ -1,0 +1,19 @@
+{
+    "answer": "Financial Results",
+    "ground_truth": "Overview of Conpet S.A. Q1 Financial Results 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        701,
+        2184,
+        3546
+    ]
+}

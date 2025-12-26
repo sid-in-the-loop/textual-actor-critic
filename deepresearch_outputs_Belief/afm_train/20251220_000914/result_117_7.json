@@ -1,0 +1,21 @@
+{
+    "answer": "Bank of England Financial Policy Committee Records published October 28, 2025, December 28, 2025; April 4, April 8, November 30, and December 28.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        808,
+        1908,
+        3244,
+        4589
+    ]
+}

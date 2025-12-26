@@ -1,0 +1,25 @@
+{
+    "answer": "The article \"9 Performance Marketing Trends To Watch In 2025\" published on January 31, 2025, by Forbes Council, states that marketers must rely on first-party data and community trust rather than third-party data to deliver more relevant experiences. It does not match the user's specified date, January 2, 2025.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        882,
+        1356,
+        2434,
+        3990,
+        4497,
+        6245
+    ]
+}

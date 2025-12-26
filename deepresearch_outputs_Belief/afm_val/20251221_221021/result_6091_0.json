@@ -1,0 +1,19 @@
+{
+    "answer": "January 1, 2021; less than 3.5%",
+    "ground_truth": "2019, less than 3.5%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        2088,
+        3431
+    ]
+}

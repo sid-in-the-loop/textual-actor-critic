@@ -1,0 +1,109 @@
+wandb: WARNING `start_method` is deprecated and will be removed in a future version of wandb. This setting is currently non-functional and safely ignored.
+wandb: Currently logged in as: ssmurali (ssmurali-cmu) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
++++ hostname
++++ whoami
+++ MACHINE_SPECIFIC_RAY_DIR=/tmp/ray_babel-o9-32_ssmurali_762820
+++ mkdir -p /tmp/ray_babel-o9-32_ssmurali_762820
+++ export RAY_TMPDIR=/tmp/ray_babel-o9-32_ssmurali_762820
+++ RAY_TMPDIR=/tmp/ray_babel-o9-32_ssmurali_762820
++++ nvidia-smi --query-gpu=name --format=csv,noheader
++++ head -n 1
+++ GPU_MODEL='NVIDIA L40S'
+++ [[ NVIDIA L40S == *\A\6\0\0\0* ]]
+++ [[ NVIDIA L40S == *\L\4\0\S* ]]
+++ echo 'Detected NVIDIA L40S, disabling NCCL P2P'
+++ export NCCL_P2P_DISABLE=1
+++ NCCL_P2P_DISABLE=1
+++ export VLLM_ATTENTION_BACKEND=XFORMERS
+++ VLLM_ATTENTION_BACKEND=XFORMERS
+++ export HYDRA_FULL_ERROR=1
+++ HYDRA_FULL_ERROR=1
+++ export RAY_DEBUG=0
+++ RAY_DEBUG=0
+++ export WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
+++ WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
+++ export HF_TOKEN=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
+++ HF_TOKEN=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
+++ export HUGGING_FACE_HUB_TOKEN=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
+++ HUGGING_FACE_HUB_TOKEN=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
+++ export OPENAI_API_KEY=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
+++ OPENAI_API_KEY=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
+++ export OPENAI_API_KEY=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
+++ OPENAI_API_KEY=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
+++ MODEL_DIR=/data/group_data/cx_group/verl_agent_shared
+++ train_data_size=32
+++ val_data_size=16
+++ group_size=8
+++ python3 -m verl.trainer.main_ppo algorithm.adv_estimator=grpo algorithm.use_kl_in_reward=False algorithm.compute_mean_std_cross_all_data=False data.train_files=dummy_data/text/train.parquet data.val_files=dummy_data/text/val.parquet data.train_batch_size=32 data.val_batch_size=16 data.max_prompt_length=20000 data.max_response_length=1024 data.filter_overlong_prompts=True data.truncation=error data.return_raw_chat=True actor_rollout_ref.rollout.temperature=1.0 actor_rollout_ref.model.path=/data/group_data/cx_group/behavior_priming/checkpoint/qwen3_1.7b/web_qwen_sft_behavior/checkpoint-924 actor_rollout_ref.model.use_remove_padding=True actor_rollout_ref.actor.use_kl_loss=True actor_rollout_ref.actor.kl_loss_coef=0.001 actor_rollout_ref.actor.kl_loss_type=low_var_kl actor_rollout_ref.actor.optim.lr=1e-6 actor_rollout_ref.actor.use_dynamic_bsz=True actor_rollout_ref.actor.ppo_max_token_len_per_gpu=22000 actor_rollout_ref.actor.ppo_mini_batch_size=32 actor_rollout_ref.actor.fsdp_config.param_offload=False actor_rollout_ref.actor.fsdp_config.optimizer_offload=False actor_rollout_ref.actor.ulysses_sequence_parallel_size=1 actor_rollout_ref.model.enable_activation_offload=False actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=64 actor_rollout_ref.rollout.tensor_model_parallel_size=1 actor_rollout_ref.rollout.name=vllm actor_rollout_ref.rollout.gpu_memory_utilization=0.5 actor_rollout_ref.rollout.enable_chunked_prefill=False actor_rollout_ref.rollout.enforce_eager=True actor_rollout_ref.rollout.free_cache_engine=True actor_rollout_ref.rollout.val_kwargs.temperature=0.4 actor_rollout_ref.rollout.val_kwargs.do_sample=True actor_rollout_ref.rollout.max_num_batched_tokens=22000 actor_rollout_ref.rollout.max_model_len=22000 actor_rollout_ref.rollout.disable_log_stats=False actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=64 actor_rollout_ref.ref.fsdp_config.param_offload=True actor_rollout_ref.ref.max_model_len=22000 actor_rollout_ref.actor.use_invalid_action_penalty=True env.rule_reward_coef=0 env.env_name=deepresearch env.dataset=afm env.seed=0 env.rollout.n=8 env.rollout.k=1 env.max_steps=8 env.use_explicit_thinking=False env.use_critique=False env.replace_input=False env.use_rule_reward=False env.rule_number=5 env.use_dense_reward=False env.belief_shaped_grpo.enable=True env.belief_shaped_grpo.alpha=1.0 env.belief_shaped_grpo.max_candidates=1 trainer.critic_warmup=0 'trainer.logger=[console,wandb]' trainer.project_name=DeepResearch_RL trainer.experiment_name=deepresearch_1.7b_belief_shaped_grpo_fast_reward trainer.n_gpus_per_node=4 trainer.nnodes=1 trainer.save_freq=5 trainer.test_freq=25 trainer.total_epochs=1 trainer.total_training_steps=50 trainer.resume_mode=disable trainer.default_local_dir=/data/group_data/cx_group/verl_agent_shared/checkpoint/deepresearch_1.7b_belief_shaped_grpo_fast_reward trainer.val_before_train=False trainer.log_val_generations=1
+2025-12-21 03:26:27,068	INFO worker.py:1942 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+[2025-12-21 03:26:27,071 I 762828 762828] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1
+[33m(raylet)[0m [2025-12-21 03:26:27,809 I 763845 763845] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1
+[36m(TaskRunner pid=767504)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+[36m(TaskRunner pid=767504)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+[36m(TaskRunner pid=767504)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+[36m(TaskRunner pid=767504)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[33m(raylet)[0m [2025-12-21 03:26:28,460 I 767504 767504] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1[32m [repeated 8x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(TaskRunner pid=767504)[0m building DeepResearchMultiProcessEnv with config: {'verbose': False, 'log_dir': '/home/ssmurali/verl-agent/agent_system/environments/env_package/deepresearch/../../../../deepresearch_logs_Belief/afm_train/20251221_032635', 'answer_dir': '/home/ssmurali/verl-agent/agent_system/environments/env_package/deepresearch/../../../../deepresearch_outputs_Belief/afm_train/20251221_032635', 'max_turns': 8, 'num_docs': 1, 'num_docs_to_read': 1, 'search_reminder_turn': 3, 'final_report_reminder_turn': 5, 'max_context_length': 8000, 'mode': 'qa', 'search_engine': 'serper', 'use_explicit_thinking': False, 'use_critique': False}
+[36m(TaskRunner pid=767504)[0m Init DeepResearchMultiProcessEnv, env_num: 32, group_n: 8, num_processes: 256
+[36m(TaskRunner pid=767504)[0m building DeepResearchMultiProcessEnv with config: {'verbose': False, 'log_dir': '/home/ssmurali/verl-agent/agent_system/environments/env_package/deepresearch/../../../../deepresearch_logs_Belief/afm_val/20251221_032635', 'answer_dir': '/home/ssmurali/verl-agent/agent_system/environments/env_package/deepresearch/../../../../deepresearch_outputs_Belief/afm_val/20251221_032635', 'max_turns': 8, 'num_docs': 1, 'num_docs_to_read': 1, 'search_reminder_turn': 3, 'final_report_reminder_turn': 5, 'max_context_length': 8000, 'mode': 'qa', 'search_engine': 'serper', 'use_explicit_thinking': False, 'use_critique': False}
+[36m(TaskRunner pid=767504)[0m Init DeepResearchMultiProcessEnv, env_num: 16, group_n: 1, num_processes: 16
+[33m(raylet)[0m [2025-12-21 03:26:40,405 I 773005 773005] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1[32m [repeated 135x across cluster][0m
+[36m(pid=768157)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+[36m(pid=768157)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+[36m(pid=768157)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+[36m(pid=768157)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[33m(raylet)[0m [2025-12-21 03:26:44,545 I 784550 784550] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1[32m [repeated 137x across cluster][0m
+[36m(pid=770417)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.[32m [repeated 84x across cluster][0m
+[36m(pid=770417)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.[32m [repeated 84x across cluster][0m
+[36m(pid=770417)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.[32m [repeated 84x across cluster][0m
+[36m(pid=770417)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.[32m [repeated 84x across cluster][0m
+[36m(TaskRunner pid=767504)[0m Filtering prompts longer than 20000 tokens:   0%|          | 0/1600 [00:00<?, ? examples/s]
+[36m(pid=772870)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.[32m [repeated 103x across cluster][0m
+[36m(pid=772870)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.[32m [repeated 103x across cluster][0m
+[36m(pid=772870)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.[32m [repeated 103x across cluster][0m
+[36m(pid=772870)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.[32m [repeated 103x across cluster][0m
+[36m(TaskRunner pid=767504)[0m Filtering prompts longer than 20000 tokens:  62%|██████▎   | 1000/1600 [00:07<00:04, 140.75 examples/s]
+[36m(pid=775715)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.[32m [repeated 75x across cluster][0m
+[36m(pid=775715)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.[32m [repeated 75x across cluster][0m
+[36m(pid=775715)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.[32m [repeated 75x across cluster][0m
+[36m(pid=775715)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.[32m [repeated 75x across cluster][0m
+[36m(TaskRunner pid=767504)[0m Filtering prompts longer than 20000 tokens: 100%|██████████| 1600/1600 [00:07<00:00, 244.78 examples/s]Filtering prompts longer than 20000 tokens: 100%|██████████| 1600/1600 [00:07<00:00, 214.91 examples/s]
+[36m(TaskRunner pid=767504)[0m Filtering prompts longer than 20000 tokens:   0%|          | 0/512 [00:00<?, ? examples/s]
+[36m(TaskRunner pid=767504)[0m Filtering prompts longer than 20000 tokens: 100%|██████████| 512/512 [00:00<00:00, 666.86 examples/s]Filtering prompts longer than 20000 tokens: 100%|██████████| 512/512 [00:00<00:00, 649.17 examples/s]
+[36m(TaskRunner pid=767504)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[33m(raylet)[0m [2025-12-21 03:27:03,154 I 790360 790360] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1
+[36m(pid=782564)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.[32m [repeated 9x across cluster][0m
+[36m(pid=782564)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.[32m [repeated 9x across cluster][0m
+[36m(pid=782564)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.[32m [repeated 9x across cluster][0m
+[36m(pid=782564)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.[32m [repeated 9x across cluster][0m
+[36m(TaskRunner pid=767504)[0m WARNING:2025-12-21 03:27:03,637:Waiting for register center actor zGx3e2_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[33m(raylet)[0m [2025-12-21 03:27:16,611 I 790716 790716] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=790888)[0m `torch_dtype` is deprecated! Use `dtype` instead!
+[33m(raylet)[0m [2025-12-21 03:27:17,299 I 790889 790889] logging.cc:303: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to 1[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=790889)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[36m(WorkerDict pid=790889)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+[36m(WorkerDict pid=790889)[0m `torch_dtype` is deprecated! Use `dtype` instead![32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=790887)[0m /home/ssmurali/miniconda3/envs/verl-agent/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=790887)[0m   warnings.warn(
+[36m(WorkerDict pid=790451)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`[32m [repeated 6x across cluster][0m
+[36m(WorkerDict pid=790451)[0m `torch_dtype` is deprecated! Use `dtype` instead![32m [repeated 3x across cluster][0m
+[36m(TaskRunner pid=767504)[0m wandb: WARNING `start_method` is deprecated and will be removed in a future version of wandb. This setting is currently non-functional and safely ignored.
+[36m(TaskRunner pid=767504)[0m wandb: Currently logged in as: ssmurali (ssmurali-cmu) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+[36m(TaskRunner pid=767504)[0m wandb: Tracking run with wandb version 0.21.3
+[36m(TaskRunner pid=767504)[0m wandb: Run data is saved locally in /home/ssmurali/verl-agent/wandb/run-20251221_032746-ix666k7h
+[36m(TaskRunner pid=767504)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(TaskRunner pid=767504)[0m wandb: Syncing run deepresearch_1.7b_belief_shaped_grpo_fast_reward
+[36m(TaskRunner pid=767504)[0m wandb: ⭐️ View project at https://wandb.ai/ssmurali-cmu/DeepResearch_RL
+[36m(TaskRunner pid=767504)[0m wandb: 🚀 View run at https://wandb.ai/ssmurali-cmu/DeepResearch_RL/runs/ix666k7h
+[36m(TaskRunner pid=767504)[0m Training Progress:   0%|          | 0/50 [00:00<?, ?it/s]
+[36m(TaskRunner pid=767504)[0m Reset 256 workers (env_num=32, group_n=8, dataset_name=afm_train)
+[36m(TaskRunner pid=767504)[0m Step 256 workers (env_num=32, group_n=8, dataset_name=afm_train)
+[36m(WorkerDict pid=790888)[0m /home/ssmurali/miniconda3/envs/verl-agent/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=790888)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+slurmstepd: error: *** JOB 5947101 ON babel-o9-32 CANCELLED AT 2025-12-21T03:31:04 ***
+*** SIGTERM received at time=1766305864 on cpu 22 ***
+PC: @     0x151dab08688a  (unknown)  __futex_abstimed_wait_common
+    @     0x151dab03e730  (unknown)  (unknown)
+[2025-12-21 03:31:04,142 E 762828 762828] logging.cc:474: *** SIGTERM received at time=1766305864 on cpu 22 ***
+[2025-12-21 03:31:04,143 E 762828 762828] logging.cc:474: PC: @     0x151dab08688a  (unknown)  __futex_abstimed_wait_common
+[2025-12-21 03:31:04,143 E 762828 762828] logging.cc:474:     @     0x151dab03e730  (unknown)  (unknown)

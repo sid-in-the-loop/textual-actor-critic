@@ -1,0 +1,17 @@
+{
+    "answer": "Free cash flow from continuing operations for the fourth quarter was USD 16.3 billion, representing a 24% increase compared to the same quarter in the previous year.",
+    "ground_truth": "$3.6 billion; 70%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        959,
+        2306
+    ]
+}

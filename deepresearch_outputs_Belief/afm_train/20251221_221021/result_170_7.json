@@ -1,0 +1,21 @@
+{
+    "answer": "2024\u5e745\u67087\u65e5",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        858,
+        2143,
+        3246,
+        4634
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Annual Report",
+    "ground_truth": "China Pipe Group Limited/Annual Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        2532,
+        2811,
+        4564,
+        5612,
+        6660,
+        7708,
+        7973
+    ]
+}

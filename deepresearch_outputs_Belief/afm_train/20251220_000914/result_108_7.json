@@ -1,0 +1,27 @@
+{
+    "answer": "Huntley & Webber",
+    "ground_truth": "Garrick",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        1828,
+        3021,
+        4325,
+        5507,
+        6976,
+        8285
+    ]
+}

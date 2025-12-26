@@ -1,0 +1,21 @@
+{
+    "answer": "6Wresearch",
+    "ground_truth": "Philippines Electric Vehicle Market (2025-2031) Industry Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        2209,
+        3409,
+        4502
+    ]
+}

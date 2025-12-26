@@ -1,0 +1,25 @@
+{
+    "answer": "economictimes.indiatimes.com/news/elections/loksabha/",
+    "ground_truth": "Economic Times Politics section",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        887,
+        1821,
+        2714,
+        3864,
+        5258,
+        6892
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The Ed Wynn Show",
+    "ground_truth": "The Twilight Zone",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        806,
+        1847,
+        2945
+    ]
+}

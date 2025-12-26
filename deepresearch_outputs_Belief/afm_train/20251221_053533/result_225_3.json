@@ -1,0 +1,23 @@
+{
+    "answer": "The Annual Report of the Bureau of Immigration Philippines",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        715,
+        1910,
+        3044,
+        4507,
+        6042
+    ]
+}

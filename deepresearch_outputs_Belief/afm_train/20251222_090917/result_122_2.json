@@ -1,0 +1,23 @@
+{
+    "answer": "Director of Programs",
+    "ground_truth": "strategic policy advisor",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1987,
+        3177,
+        4041,
+        4935
+    ]
+}

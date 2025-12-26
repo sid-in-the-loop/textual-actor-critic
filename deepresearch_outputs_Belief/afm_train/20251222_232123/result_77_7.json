@@ -1,0 +1,21 @@
+{
+    "answer": "Forbes",
+    "ground_truth": "ISBN 9781394254941",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        1096,
+        2192,
+        3393
+    ]
+}

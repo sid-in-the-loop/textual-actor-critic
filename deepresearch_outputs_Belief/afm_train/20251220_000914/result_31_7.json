@@ -1,0 +1,29 @@
+{
+    "answer": "A dedicated Wikipedia subcategory for this trend has not been found; the phenomenon is discussed on \"Political journalism\".",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        808,
+        1796,
+        2700,
+        3019,
+        5079,
+        5267,
+        5749,
+        6309
+    ]
+}

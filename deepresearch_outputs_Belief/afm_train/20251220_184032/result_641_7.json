@@ -1,0 +1,23 @@
+{
+    "answer": "The selected document contains sales volume and US market share data for the Mazda CX-90 for the first half of the year. However, no figure displaying this information uses the chart titled 'MAZDA CX-90 First Half Sales Volume & US Market Share'.",
+    "ground_truth": "Chart is referenced but not present in image",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        878,
+        2009,
+        3411,
+        3878,
+        5444
+    ]
+}

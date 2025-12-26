@@ -1,0 +1,17 @@
+{
+    "answer": "Comparative Analysis of Weather-Based Indexes and the Actuaries ...",
+    "ground_truth": "GLM and XGB yielded lower MAPE than GAM",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        1862
+    ]
+}

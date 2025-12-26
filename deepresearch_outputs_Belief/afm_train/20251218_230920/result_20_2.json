@@ -1,0 +1,25 @@
+{
+    "answer": "Max 4,500 words in main text, 11 typeset pages",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        712,
+        1675,
+        2366,
+        3155,
+        4320,
+        5391
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Web of Science Subject Categories",
+    "ground_truth": "SSCI (Social Sciences Citation Index) Discipline Classification System",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        753,
+        1880,
+        2192
+    ]
+}

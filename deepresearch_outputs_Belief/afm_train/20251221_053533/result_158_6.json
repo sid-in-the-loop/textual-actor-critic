@@ -1,0 +1,23 @@
+{
+    "answer": "The Research World website's \"2025 Trends\" article provides a comprehensive collection of content focused on major societal, technological, economic, ecological, and political changes for the year 2025.",
+    "ground_truth": "2025 Trends\uff08Research World\uff09\u4e13\u9898\u9875",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        2018,
+        2558,
+        2894,
+        4144
+    ]
+}

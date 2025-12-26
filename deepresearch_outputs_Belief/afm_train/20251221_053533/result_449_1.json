@@ -1,0 +1,23 @@
+{
+    "answer": "\"Dance of the Xiongnu\"",
+    "ground_truth": "signed",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        670,
+        1940,
+        3045,
+        4579,
+        4982
+    ]
+}

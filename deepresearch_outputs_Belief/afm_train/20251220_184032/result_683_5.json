@@ -1,0 +1,19 @@
+{
+    "answer": "The U.S. Department of Commerce's FY2025 budget proposes a $4.7 billion contingency fund for Office of Space Commerce and various other Commerce components, which is likely the funding for UH-60 conversion initiatives.",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        860,
+        2183,
+        3469
+    ]
+}

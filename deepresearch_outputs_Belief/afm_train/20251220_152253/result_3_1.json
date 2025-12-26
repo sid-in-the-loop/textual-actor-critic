@@ -1,0 +1,27 @@
+{
+    "answer": "No contributor is identified who contributed to pages that do not exist in the book 'Mimbres Pottery: Ancient Art of the American Southwest'.",
+    "ground_truth": "The contributors are not specified in the given text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        2430,
+        3380,
+        4009,
+        5687,
+        7534,
+        9000
+    ]
+}

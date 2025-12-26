@@ -1,0 +1,23 @@
+{
+    "answer": "Conpet showed appreciation 6.39 RON, compared to BET index growth of 82.53.",
+    "ground_truth": "Higher volatility and stronger appreciation",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        2457,
+        3744,
+        5092,
+        6569
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "S&P 500 Industrials",
+    "ground_truth": "$199.99",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        2063,
+        3419,
+        4877
+    ]
+}

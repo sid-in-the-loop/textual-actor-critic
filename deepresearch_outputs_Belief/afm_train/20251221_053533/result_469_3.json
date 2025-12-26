@@ -1,0 +1,21 @@
+{
+    "answer": "\u00a36.50 per month",
+    "ground_truth": "$45",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1798,
+        2946,
+        3756
+    ]
+}

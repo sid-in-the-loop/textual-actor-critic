@@ -1,0 +1,21 @@
+{
+    "answer": "Santiago, Chile",
+    "ground_truth": "Santiago, Chile",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2071,
+        3401,
+        4523
+    ]
+}

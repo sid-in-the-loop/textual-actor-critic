@@ -1,0 +1,27 @@
+{
+    "answer": "Decreased by $102.6 million, resulting in a 0.25 percentage point reduction in the Non-GAAP operating margin.",
+    "ground_truth": "-0.4 percentage point",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        856,
+        2324,
+        3855,
+        5488,
+        7039,
+        8503,
+        9852
+    ]
+}

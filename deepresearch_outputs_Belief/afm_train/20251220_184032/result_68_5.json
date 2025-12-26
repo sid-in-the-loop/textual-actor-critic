@@ -1,0 +1,23 @@
+{
+    "answer": "THE WORKING CLASS PROJECT: 2025 REPORT",
+    "ground_truth": "YouGov\u6c11\u8c03\u62a5\u544a\uff1aWhat Americans think about Project 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        780,
+        1059,
+        2584,
+        2965,
+        4139
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Bank of England Financial Policy Committee, recorded monthly, with publications on 25 November 2025, 1 December 2025, 8 April 2025, 2 October 2025, and 9 July 2025.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        806,
+        1965,
+        3095,
+        4434,
+        5706,
+        7063
+    ]
+}

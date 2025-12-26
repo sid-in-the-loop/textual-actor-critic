@@ -1,0 +1,21 @@
+{
+    "answer": "Require all tertiary education institutions to have a student mental health and wellbeing strategy.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1902,
+        3039,
+        4075
+    ]
+}

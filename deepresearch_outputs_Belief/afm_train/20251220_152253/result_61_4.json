@@ -1,0 +1,25 @@
+{
+    "answer": "Quantitative data exist, but no image is described as accompanying them on this page.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        948,
+        2078,
+        2423,
+        2876,
+        3605,
+        4119
+    ]
+}

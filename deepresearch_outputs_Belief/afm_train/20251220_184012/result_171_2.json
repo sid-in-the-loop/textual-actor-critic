@@ -1,0 +1,19 @@
+{
+    "answer": "contingent liabilities disclosed in Note B4 of the 1HFY25 Financial-Report.pdf",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        854,
+        2002,
+        2530
+    ]
+}

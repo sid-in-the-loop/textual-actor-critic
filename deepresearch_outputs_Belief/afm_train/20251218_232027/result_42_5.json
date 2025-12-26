@@ -1,0 +1,23 @@
+{
+    "answer": "Management is distinct from Business Administration as separate academic fields, not a primary discipline that contains Business Administration as its sole subordinate discipline.",
+    "ground_truth": "\u5de5\u5546\u7ba1\u7406\u4e00\u7ea7\u5b66\u79d1",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        2077,
+        3559,
+        4826,
+        6430
+    ]
+}

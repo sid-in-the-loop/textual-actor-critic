@@ -1,0 +1,17 @@
+{
+    "answer": "Minister of Music is not mentioned in the document.",
+    "ground_truth": "Steve Wysocki",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        1829
+    ]
+}

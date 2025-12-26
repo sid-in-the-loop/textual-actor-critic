@@ -1,0 +1,17 @@
+{
+    "answer": "FORM 10-Q - Apple Inc. 10Q Q1 2025 as filed.pdf",
+    "ground_truth": "Apple FY2025 First Quarter Financial Results Press Release",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        2138
+    ]
+}

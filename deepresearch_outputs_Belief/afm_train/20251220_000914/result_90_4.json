@@ -1,0 +1,29 @@
+{
+    "answer": "EIOPA document likely refers to definitions of funding targets, not specific numerical ratios.",
+    "ground_truth": "Funding Ratios (DB schemes) section; Solvency II regulatory framework; Reference date: 2024-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        799,
+        2036,
+        2487,
+        2828,
+        3789,
+        4414,
+        5915,
+        6422
+    ]
+}

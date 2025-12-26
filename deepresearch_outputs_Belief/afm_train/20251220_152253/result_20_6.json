@@ -1,0 +1,25 @@
+{
+    "answer": "The title should be no more than 20 words describing the main message, and subsequent paragraphs should describe a specific problem. A cover letter must accompany each manuscript.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        684,
+        1500,
+        1877,
+        2663,
+        3158,
+        3873
+    ]
+}

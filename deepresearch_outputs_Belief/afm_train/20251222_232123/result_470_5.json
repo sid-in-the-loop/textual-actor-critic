@@ -1,0 +1,21 @@
+{
+    "answer": "Study Finds",
+    "ground_truth": "Annual Collection of Scientific Breakthrough Topics on Study Finds Website",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1616,
+        2710,
+        3312
+    ]
+}

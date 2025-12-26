@@ -1,0 +1,27 @@
+{
+    "answer": "ALFWorld's performance is compared to more complex, task-specific approaches, with the extent of improvement indicated by \"low variance\" in performance achieved through database-level selection through population-based training and exemplar-level selection.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        922,
+        1144,
+        1341,
+        2387,
+        3069,
+        4229,
+        4862
+    ]
+}

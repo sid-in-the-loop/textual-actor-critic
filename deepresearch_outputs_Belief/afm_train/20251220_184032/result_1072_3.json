@@ -1,0 +1,19 @@
+{
+    "answer": "SBCTC must report annually to the Legislature on the Enrollment Program, beginning January 15, 2026, and the annual reporting requirement is to submit to the Legislature.",
+    "ground_truth": "2026-01-15",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1995,
+        3241
+    ]
+}

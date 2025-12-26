@@ -1,0 +1,25 @@
+{
+    "answer": "The Department of Commerce FY2025 budget request were not found.",
+    "ground_truth": "$14.8M; 1 conversion supported; 13 total conversions",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2549,
+        4369,
+        5795,
+        6699,
+        7272
+    ]
+}

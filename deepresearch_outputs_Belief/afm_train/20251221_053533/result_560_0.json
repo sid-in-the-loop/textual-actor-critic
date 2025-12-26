@@ -1,0 +1,17 @@
+{
+    "answer": "Investor Information - UnitedHealth Group (https://www.unitedhealthgroup.com/investors.html)",
+    "ground_truth": "UnitedHealth Group\u6295\u8d44\u8005\u5173\u7cfb\u4e3b\u9875",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        699,
+        1270
+    ]
+}

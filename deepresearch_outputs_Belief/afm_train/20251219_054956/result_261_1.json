@@ -1,0 +1,27 @@
+{
+    "answer": "Sankey diagram",
+    "ground_truth": "Photograph of Team Novo Nordisk cycling team",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        977,
+        2463,
+        3916,
+        5652,
+        6851,
+        8532,
+        9822
+    ]
+}

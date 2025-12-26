@@ -1,0 +1,23 @@
+{
+    "answer": "\u4e00\u4e2a\u6df7\u5408\u5206\u5e03\u7684\u4e24\u4e2a\u5206\u91cf\u5fc5\u987b\u6ee1\u8db3\u5728\u7ed9\u5b9a\u7684\u89c2\u6d4b\u6570\u636e\u4e0a\u5177\u6709\u4e00\u81f4\u7684\u4e8b\u4ef6\u53d1\u751f\u7684\u72ec\u7acb\u6027\u6761\u4ef6",
+    "ground_truth": "\u5047\u5b9a\u6837\u672c\u6240\u5360\u6bd4\u4f8b $p$ \u4e0d\u53d8",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2681,
+        3489,
+        4388,
+        5924
+    ]
+}

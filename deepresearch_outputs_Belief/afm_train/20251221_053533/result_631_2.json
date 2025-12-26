@@ -1,0 +1,27 @@
+{
+    "answer": "70% probability, with a potential negative impact on agricultural output and food inflation in 2024.",
+    "ground_truth": "over 70% chance",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        833,
+        2322,
+        2611,
+        3835,
+        4403,
+        4780,
+        6112
+    ]
+}

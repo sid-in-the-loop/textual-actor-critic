@@ -1,0 +1,19 @@
+{
+    "answer": "Agreement reached; specific person to fill the post is not named in the provided information.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2153,
+        3290
+    ]
+}

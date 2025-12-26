@@ -1,0 +1,17 @@
+{
+    "answer": "Atomically Dispersed Iron on Nitrogen-decorated Carbon for High-performance Oxygen Reduction and Zinc-Air Batteries",
+    "ground_truth": "Electrocatalytic Oxygen Reduction Using Metastable Zirconium Suboxide",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1019,
+        2442
+    ]
+}

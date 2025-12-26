@@ -1,0 +1,23 @@
+{
+    "answer": "Integrated Circuit Science and Engineering",
+    "ground_truth": "Statistics (stat)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2087,
+        3148,
+        4311,
+        5346
+    ]
+}

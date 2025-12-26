@@ -1,0 +1,21 @@
+{
+    "answer": "34.80 per cent, which exceeded the CBN's target of 21.40 per cent.",
+    "ground_truth": "34.8%, target 21%",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        925,
+        2154,
+        3233,
+        4504
+    ]
+}

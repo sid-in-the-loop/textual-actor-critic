@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, the \"Current Developments in SEC Enforcement for Public Companies and a Look Ahead to 2024 and 2025\" from Morgan Lewis includes visual charts or figures for January, February, and March 2025, as it details the monthly SEC filing deadlines and financial statement staleness dates for the year 2025.",
+    "ground_truth": "Firm logo only; no SEC deadlines or staleness charts",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        832,
+        2197,
+        3556
+    ]
+}

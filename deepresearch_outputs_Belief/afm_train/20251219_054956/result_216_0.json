@@ -1,0 +1,29 @@
+{
+    "answer": "The requested information could not be located within the 2025 Bureau of Immigration Philippines annual report (or a relevant document like the \"Citizens' Charter\").",
+    "ground_truth": "3.03%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        2184,
+        3494,
+        4687,
+        5370,
+        6820,
+        7908,
+        8373
+    ]
+}

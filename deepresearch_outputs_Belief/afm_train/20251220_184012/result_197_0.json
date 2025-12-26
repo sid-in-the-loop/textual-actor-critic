@@ -1,0 +1,21 @@
+{
+    "answer": "Plan A Offerings",
+    "ground_truth": "Plan A Academy (ESG Knowledge Base and Learning Platform)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        676,
+        1778,
+        2803,
+        3355
+    ]
+}

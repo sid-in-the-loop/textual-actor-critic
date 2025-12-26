@@ -1,0 +1,21 @@
+{
+    "answer": "THCU's loan growth percentage in 2023 for the 2025 edition Bureau of Immigration Philippines annual report could not be found in the snippets provided.",
+    "ground_truth": "3.03%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        766,
+        2395,
+        3904,
+        5110
+    ]
+}

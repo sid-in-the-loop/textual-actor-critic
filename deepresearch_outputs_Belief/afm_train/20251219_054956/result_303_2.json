@@ -1,0 +1,17 @@
+{
+    "answer": "International Energy Agency (IEA) Gas Market Report, Q1 2025",
+    "ground_truth": "Gas Market Report, Q1-2025 (IEA. CC BY 4.0) January 2025",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        2341
+    ]
+}

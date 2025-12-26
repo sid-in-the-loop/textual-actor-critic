@@ -1,0 +1,19 @@
+{
+    "answer": "Each article offers actionable priorities for the new administration.",
+    "ground_truth": "Actionable priorities to improve health outcomes for all Americans",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        736,
+        1874,
+        2406
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "AACR Announces its 2025 Annual Meeting and future research priorities.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        2014,
+        2341,
+        4077,
+        4670
+    ]
+}

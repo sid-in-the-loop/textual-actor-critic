@@ -1,0 +1,29 @@
+{
+    "answer": "Higher ChatGPT usage was significantly linked to lower motivation and a negative impact on student well-being.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        1956,
+        3188,
+        4457,
+        5814,
+        7204,
+        7629,
+        9195
+    ]
+}

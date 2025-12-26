@@ -1,0 +1,19 @@
+{
+    "answer": "the Tender of Union and a bill for an Act incorporating Scotland into one Commonwealth with England",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        2029,
+        3025
+    ]
+}

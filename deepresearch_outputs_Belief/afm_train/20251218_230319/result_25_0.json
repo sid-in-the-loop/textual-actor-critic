@@ -1,0 +1,19 @@
+{
+    "answer": "Acoustics, Biochemistry, Biomedical Science, Behavioral Science, Environmental Science, Economics, Chemical Engineering, Computer Science, Mathematics, Physical Science, Literary Studies, Architecture, Music, Philosophy, Religious Studies, History, Anthropology, Physics, Condensed Matter, Statistics, Psychology, Linguistics, Political Science, Economics, Business & Management, Geography, Criminology, Archaeology, History, Fine Arts, Music, Philosophy, Religion, American Studies, African Studies, Asian Studies, European Studies, Latin American Studies, Middle East Studies, Religious Studies, Film & Visual Studies, Comparative Literature, Anthropology, Physics, Linguistics, Philosophy, and Chemistry.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        1909,
+        3322
+    ]
+}

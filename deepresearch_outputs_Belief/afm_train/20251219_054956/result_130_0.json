@@ -1,0 +1,25 @@
+{
+    "answer": "no direct connection in identified 2025 \"The Mobile Economy\" report",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        2395,
+        3381,
+        3938,
+        4735,
+        5776
+    ]
+}

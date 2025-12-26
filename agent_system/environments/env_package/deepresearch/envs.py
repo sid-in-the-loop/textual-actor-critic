@@ -147,8 +147,8 @@ def build_deepresearch_envs(
 
     time_str = datetime.now().strftime("%Y%m%d_%H%M%S")
     home_dir = os.path.join(os.path.dirname(__file__), "../../../../")
-    log_dir = os.path.join(home_dir, f"deepresearch_logs/{dataset_name}/{time_str}")
-    answer_dir = os.path.join(home_dir, f"deepresearch_outputs/{dataset_name}/{time_str}")
+    log_dir = os.path.join(home_dir, f"deepresearch_logs_Belief/{dataset_name}/{time_str}")
+    answer_dir = os.path.join(home_dir, f"deepresearch_outputs_Belief/{dataset_name}/{time_str}")
 
     # Clear log and answer directories
     if os.path.exists(log_dir):

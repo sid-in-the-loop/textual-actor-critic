@@ -1,0 +1,21 @@
+{
+    "answer": "One of the fastest-growing areas of UNISON membership.",
+    "ground_truth": "fastest growing area of membership",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        2328,
+        3459,
+        4688
+    ]
+}

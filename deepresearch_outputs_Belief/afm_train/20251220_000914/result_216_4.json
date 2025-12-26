@@ -1,0 +1,27 @@
+{
+    "answer": "Not available.",
+    "ground_truth": "3.03%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        721,
+        2117,
+        3490,
+        1208,
+        2610,
+        4028,
+        4593
+    ]
+}

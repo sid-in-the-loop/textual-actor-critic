@@ -1,0 +1,17 @@
+{
+    "answer": "Pro forma total available liquidity as of March 31, 2025: $755 million",
+    "ground_truth": "April 29, 2025; removed springing lien; cancelled $150 million sidecar; $605 million liquidity as of 2025-03-31",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        913,
+        2234
+    ]
+}

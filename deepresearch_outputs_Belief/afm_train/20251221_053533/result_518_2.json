@@ -1,0 +1,29 @@
+{
+    "answer": "\u6050\u6016\u6e38\u620f",
+    "ground_truth": "Limbo\uff08\u5730\u72f1\u8fb9\u5883\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        2617,
+        3874,
+        5431,
+        6977,
+        8851,
+        10317,
+        11375
+    ]
+}

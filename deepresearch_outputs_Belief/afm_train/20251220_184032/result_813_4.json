@@ -1,0 +1,21 @@
+{
+    "answer": "The inflection points occur around pH 4.89 (pI) and pH 7.4 (physiological). The shape is typically a sigmoid or bell-shaped curve.",
+    "ground_truth": "Sigmoidal curve with inflection points near pH 4 and pH 10.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        761,
+        1019,
+        2282,
+        2944
+    ]
+}

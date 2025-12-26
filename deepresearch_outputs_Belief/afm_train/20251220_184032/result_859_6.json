@@ -1,0 +1,19 @@
+{
+    "answer": "Tracking engagement and ROI to inform future brand strategies in the creative supply chain optimization chapter.",
+    "ground_truth": "Brand Chem",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        2021,
+        3169
+    ]
+}

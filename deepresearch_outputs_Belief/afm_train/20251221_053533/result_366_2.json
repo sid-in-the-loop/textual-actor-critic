@@ -1,0 +1,17 @@
+{
+    "answer": "Modelling and stress testing for resilience, addressing risks from dependencies on critical third parties, preparing for market disruption and volatility, and delivering good outcomes for customers.",
+    "ground_truth": "Four regulatory priorities",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2065
+    ]
+}

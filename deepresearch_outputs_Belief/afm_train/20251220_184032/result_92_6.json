@@ -1,0 +1,21 @@
+{
+    "answer": "\u8bbe\u7f6e co-occurrence \u53c2\u6570",
+    "ground_truth": "alternative",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        961,
+        2319,
+        3506,
+        4590
+    ]
+}

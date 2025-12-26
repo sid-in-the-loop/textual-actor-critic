@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in search snippets.",
+    "ground_truth": "collaboration among parents, schools, mental health professionals, and students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        793,
+        1235,
+        1548,
+        1913,
+        3110,
+        3439,
+        3847
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "7.0, median; comparable to other models with scores around 7.0-7.4",
+    "ground_truth": "8\u20139",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        1602,
+        3063
+    ]
+}

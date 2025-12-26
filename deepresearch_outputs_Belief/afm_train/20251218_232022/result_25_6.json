@@ -1,0 +1,21 @@
+{
+    "answer": "A three-level categorization system: starting with broad categories like Science and Technology, Social Sciences, and Arts and Humanities; moving into detailed subject areas within these broad categories; and further breaking down these subject areas into more specific sub-areas.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        1858,
+        3240,
+        4780
+    ]
+}

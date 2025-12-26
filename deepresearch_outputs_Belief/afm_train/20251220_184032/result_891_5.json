@@ -1,0 +1,21 @@
+{
+    "answer": "Unable to find a specific internet penetration rate for South Korea on January 17, 2025, from a unique annual publication. The closest available data is the overall 2025 penetration rate or projected figures.",
+    "ground_truth": "97%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        1962,
+        2875,
+        3949
+    ]
+}

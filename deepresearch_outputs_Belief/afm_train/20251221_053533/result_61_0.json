@@ -1,0 +1,27 @@
+{
+    "answer": "The provided search results for the Jetcraft Ever Forward 2025 report do not depict a chart, graph, image, figure, or diagram with quantitative data for analysis. The results primarily focus on the report's content regarding transaction volume and value in the pre-owned business jet market.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        1944,
+        3213,
+        3527,
+        5251,
+        5981,
+        6714
+    ]
+}

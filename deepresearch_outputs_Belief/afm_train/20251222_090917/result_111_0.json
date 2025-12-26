@@ -1,0 +1,27 @@
+{
+    "answer": "Norway",
+    "ground_truth": "Norway",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        1893,
+        3188,
+        4370,
+        5377,
+        6850,
+        8060
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Pew-Knight Initiative",
+    "ground_truth": "Pew Research Center and Knight Foundation\u8054\u5408\u9879\u76ee\uff08Pew-Knight Initiative\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1631,
+        2661,
+        3741,
+        4790
+    ]
+}

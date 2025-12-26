@@ -1,0 +1,21 @@
+{
+    "answer": "compared",
+    "ground_truth": "GEOM Drugs less concentrated at QED > 0.8 than DrugBank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        2030,
+        3305,
+        4437
+    ]
+}

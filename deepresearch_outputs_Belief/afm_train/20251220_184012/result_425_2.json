@@ -1,0 +1,19 @@
+{
+    "answer": "Directly Repliant Deadline: 31 May 2024. Next Case Management Hearing: 6 June 2024.",
+    "ground_truth": "evidence due by 2025-06, next hearing 2025-07-02",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2208,
+        3625
+    ]
+}

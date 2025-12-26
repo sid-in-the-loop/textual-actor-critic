@@ -1,0 +1,27 @@
+{
+    "answer": "alpha",
+    "ground_truth": "alternative",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        910,
+        2206,
+        3267,
+        4572,
+        5823,
+        6914,
+        7962
+    ]
+}

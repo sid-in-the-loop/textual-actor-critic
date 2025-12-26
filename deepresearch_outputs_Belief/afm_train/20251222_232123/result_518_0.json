@@ -1,0 +1,29 @@
+{
+    "answer": "Deadly Premonition",
+    "ground_truth": "Limbo\uff08\u5730\u72f1\u8fb9\u5883\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        834,
+        1839,
+        2887,
+        4034,
+        5269,
+        6474,
+        7705,
+        8785
+    ]
+}

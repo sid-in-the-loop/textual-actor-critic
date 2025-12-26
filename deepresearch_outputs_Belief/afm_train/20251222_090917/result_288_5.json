@@ -1,0 +1,29 @@
+{
+    "answer": "Climate Finance is critical for climate justice, and Rajan Thapa emphasizes the urgent need for increased financial resources to address the growing vulnerability and risks to the poor in Nepal. (Source: ACT Alliance Final Report v2.1, 1.1 situation analysis)",
+    "ground_truth": "Accurate and independent analysis",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        2186,
+        3431,
+        4356,
+        5640,
+        6996,
+        8376,
+        9962
+    ]
+}

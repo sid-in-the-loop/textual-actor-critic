@@ -1,0 +1,23 @@
+{
+    "answer": "The Star Sydney licence suspension remains in effect with a deferred commencement date, and the Manager's appointment was extended, but the specific dates are not provided in the document.",
+    "ground_truth": "Suspended until at least 2025-09-30; Manager's appointment extended until 2025-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        2117,
+        3328,
+        3796,
+        5074
+    ]
+}

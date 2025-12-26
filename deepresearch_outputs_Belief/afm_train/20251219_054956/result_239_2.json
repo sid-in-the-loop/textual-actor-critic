@@ -1,0 +1,19 @@
+{
+    "answer": "Annual Report 2023/2024, Quarterly Statistics Report Q2 2024-2025, Quarterly Statistics Report Q3 2024-2025",
+    "ground_truth": "Communications Authority of Kenya Audience Measurement and Industry Trends Report series (2023/24 to 2024/25 multiple quarterly reports)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        870,
+        2425,
+        3990
+    ]
+}

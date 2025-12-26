@@ -1,0 +1,25 @@
+{
+    "answer": "1,085 Trainees",
+    "ground_truth": "68,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        1856,
+        2895,
+        4030,
+        4702,
+        5930
+    ]
+}

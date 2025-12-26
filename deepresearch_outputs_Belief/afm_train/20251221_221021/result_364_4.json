@@ -1,0 +1,21 @@
+{
+    "answer": "$9,256,000 / +0 FTE",
+    "ground_truth": "$9,256,000, 0 FTE",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        902,
+        2205,
+        3357,
+        4585
+    ]
+}

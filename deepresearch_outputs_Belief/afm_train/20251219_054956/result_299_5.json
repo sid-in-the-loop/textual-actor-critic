@@ -1,0 +1,27 @@
+{
+    "answer": "27",
+    "ground_truth": "Page 26",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        1101,
+        1712,
+        2784,
+        3191,
+        4309,
+        4861
+    ]
+}

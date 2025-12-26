@@ -1,0 +1,19 @@
+{
+    "answer": "2 (10): \"Generative AI Mental Health Chatbots as Therapeutic Tools\"",
+    "ground_truth": "Nature Vol. 622 Issue 7982",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        1670,
+        2767
+    ]
+}

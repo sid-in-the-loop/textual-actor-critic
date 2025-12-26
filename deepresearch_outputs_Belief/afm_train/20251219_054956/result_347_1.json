@@ -1,0 +1,21 @@
+{
+    "answer": "February 2021, facilitated peer-to-peer learning among small-scale fishers in Latin America by allowing them to share bottom-up information.",
+    "ground_truth": "Started: 2020; facilitated peer-to-peer learning among small-scale fishers in Latin America",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        909,
+        2501,
+        4052,
+        5626
+    ]
+}

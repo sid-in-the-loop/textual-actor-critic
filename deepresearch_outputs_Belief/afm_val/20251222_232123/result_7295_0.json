@@ -1,0 +1,17 @@
+{
+    "answer": "Professor of Cardiac Surgery",
+    "ground_truth": "Bishop of Viseu in Portugal",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        918,
+        1867
+    ]
+}

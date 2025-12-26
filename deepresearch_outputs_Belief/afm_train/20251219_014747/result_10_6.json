@@ -1,0 +1,23 @@
+{
+    "answer": "Statement of Unaudited Standalone Financial Results for ITC Ltd for Q2 FY2026",
+    "ground_truth": "ITC Investor Presentations Collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        705,
+        2156,
+        3697,
+        5418,
+        7020
+    ]
+}

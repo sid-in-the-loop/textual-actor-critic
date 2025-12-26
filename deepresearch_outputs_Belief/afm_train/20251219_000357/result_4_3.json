@@ -1,0 +1,23 @@
+{
+    "answer": "According to the \"Marketing Leaders Identify Key Trends for 2025\" article, marketers are increasingly relying on first-party data, with direct relationships replacing third-party cookies.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1104,
+        2592,
+        3575,
+        4074
+    ]
+}

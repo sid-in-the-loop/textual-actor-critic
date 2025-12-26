@@ -1,0 +1,21 @@
+{
+    "answer": "Office of Audit and Evaluation FY 2025 Work Plan",
+    "ground_truth": "FISCAL YEAR 2025 AUDIT PLAN",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        2133,
+        3308,
+        4402
+    ]
+}

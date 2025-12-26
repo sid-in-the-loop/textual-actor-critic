@@ -1,0 +1,21 @@
+{
+    "answer": "The SEC Filings section on the International Paper investor page for documents detailing yearly financial and operational disclosures.",
+    "ground_truth": "International Paper Company Annual Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        1938,
+        3346,
+        4635
+    ]
+}

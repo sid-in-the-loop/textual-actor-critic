@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 8 visually displays the dynamic GDP impulse response to policy narrative shocks. During quarters 0 to 22 after a shock, the GDP impulse response coefficient shows a rapid increase in the first six quarters, with a significant positive impact from a 1% increase in household narrative tone.",
+    "ground_truth": "Remains close to zero in almost all quarters",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        1125,
+        2265,
+        3517
+    ]
+}

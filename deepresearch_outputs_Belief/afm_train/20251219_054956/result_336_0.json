@@ -1,0 +1,23 @@
+{
+    "answer": "Unable to find the specific annual financial losses from phishing attacks in 2021 from the specified report.",
+    "ground_truth": "$383 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        959,
+        2257,
+        3120,
+        4147,
+        4412
+    ]
+}

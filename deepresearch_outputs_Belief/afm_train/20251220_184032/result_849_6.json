@@ -1,0 +1,23 @@
+{
+    "answer": "Formal communication channels were established as part of the \"Transition 2025 Series\" or the \"China 2025: What to Watch\" event.",
+    "ground_truth": "Jake Sullivan\u2019s visit to Beijing",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1880,
+        3122,
+        4387,
+        5674
+    ]
+}

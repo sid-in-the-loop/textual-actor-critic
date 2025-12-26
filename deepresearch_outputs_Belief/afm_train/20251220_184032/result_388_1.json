@@ -1,0 +1,23 @@
+{
+    "answer": "Public Discontent: What will drive protests in 2025?",
+    "ground_truth": "Prospects for peace: Global conflict in 2025 | Political Violence Special Edition 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1989,
+        2580,
+        3912,
+        4954
+    ]
+}

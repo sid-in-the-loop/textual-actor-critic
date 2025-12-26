@@ -1,0 +1,23 @@
+{
+    "answer": "Fall 2023",
+    "ground_truth": "2024-09 to 2024-11",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2304,
+        2985,
+        3394,
+        4711
+    ]
+}

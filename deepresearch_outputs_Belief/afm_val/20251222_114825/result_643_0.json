@@ -1,0 +1,17 @@
+{
+    "answer": "DeepCritic: Deliberate Critique with Large Language Models",
+    "ground_truth": "DeepCritic : Deliberate Critique with Large Language Models",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        1828
+    ]
+}

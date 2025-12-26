@@ -1,0 +1,19 @@
+{
+    "answer": "I am unable to provide the specific cookie usage policy for ICLR 2025 proceedings from the provided search results. While the search results indicate ICLR uses cookies for essential functions, the \"official cookie usage policy\" for the *proceedings* itself is not found within this search context.",
+    "ground_truth": "Cookies for essential functions only",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        2089,
+        3009
+    ]
+}

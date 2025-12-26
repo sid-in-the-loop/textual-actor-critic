@@ -1,0 +1,25 @@
+{
+    "answer": "The \"Other operating (income) expense, net\" increased, contributing to the decrease in Non-GAAP operating margin from 2023 to 2024.",
+    "ground_truth": "-0.4 percentage point",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        2205,
+        3581,
+        4981,
+        6430,
+        7784
+    ]
+}

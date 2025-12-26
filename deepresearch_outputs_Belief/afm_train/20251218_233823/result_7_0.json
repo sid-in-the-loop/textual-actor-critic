@@ -1,0 +1,29 @@
+{
+    "answer": "The specific demographic data (age, international student status, consent to academic records) for article \"Towards a health promoting university: descriptive findings on health, wellbeing and academic performance amongst university students in Australia\" within BMC Public Health could not be extracted from the provided search snippets.",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2092,
+        2826,
+        4025,
+        4335,
+        4708,
+        5396,
+        7032
+    ]
+}

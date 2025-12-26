@@ -1,0 +1,19 @@
+{
+    "answer": "Net income down 9%, higher effective tax rate, adjusted net income $4.1 billion.",
+    "ground_truth": "Royal Bank of Canada Reports First Quarter 2025 Results (published 2024-02-28)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1981,
+        3329
+    ]
+}

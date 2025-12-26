@@ -1,0 +1,23 @@
+{
+    "answer": "There's no single blog article identified that provides the only in-depth thematic analysis on the specified Hootsuite report themes. A search revealed that most Hootsuite blog posts discuss the trends or tools, but not the specific in-depth theme analysis requested.",
+    "ground_truth": "The 15 social media trends that will shape your 2025 strategy\uff08Hootsuite\u535a\u5ba2\u6587\u7ae0\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        2082,
+        3384,
+        4465,
+        5887
+    ]
+}

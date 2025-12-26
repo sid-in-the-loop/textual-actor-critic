@@ -1,0 +1,29 @@
+{
+    "answer": "No specific numerical change in Nicaragua's repression score from 2018 was mentioned in the accessible feature article. The article identified the country as having a highly centralized, authoritarian political system associated with \"not free\" status, which would indicate a level of political repression.",
+    "ground_truth": "35th percentile to 0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        875,
+        2076,
+        3259,
+        5708,
+        6416,
+        7206,
+        9137,
+        1529
+    ]
+}

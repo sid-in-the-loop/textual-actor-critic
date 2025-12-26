@@ -1,0 +1,23 @@
+{
+    "answer": "The solar share of electricity generation for Arizona in 2025 is not explicitly reported in the \"State of Clean Energy Deployment in 2025\" report by Cleanview. The report focuses on capacity additions and project data.",
+    "ground_truth": "14.7%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2021,
+        3476,
+        4884,
+        6294
+    ]
+}

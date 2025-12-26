@@ -1,0 +1,23 @@
+{
+    "answer": "SCMP ePaper for February 22, 2025 is not available in the search results.",
+    "ground_truth": "South China Morning Post 2025\u5e742\u670822\u65e5\u6574\u4efd\u7535\u5b50\u62a5",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        1809,
+        2959,
+        4886,
+        5160
+    ]
+}

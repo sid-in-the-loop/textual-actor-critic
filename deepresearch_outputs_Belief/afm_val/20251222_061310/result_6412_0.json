@@ -1,0 +1,23 @@
+{
+    "answer": "Yes, the OEM-wise market share data for January 2025 is clearly presented in the \"State of China's Auto Market - January 2025\" report by Automobility.io.",
+    "ground_truth": "No OEM-wise market share data visible",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        907,
+        2391,
+        3861,
+        5330,
+        6815
+    ]
+}

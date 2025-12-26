@@ -1,0 +1,21 @@
+{
+    "answer": "August 29, 2024; The Star Brisbane operations.",
+    "ground_truth": "2024-08-29; casino, hotel, restaurants, bars, entertainment facilities",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        2234,
+        3541,
+        4851
+    ]
+}

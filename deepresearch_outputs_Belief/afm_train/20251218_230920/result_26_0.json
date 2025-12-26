@@ -1,0 +1,17 @@
+{
+    "answer": "8, 1",
+    "ground_truth": "Humanities and Social Sciences Communications \u7b2c8\u5377\u7b2c1\u671f",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        2309
+    ]
+}

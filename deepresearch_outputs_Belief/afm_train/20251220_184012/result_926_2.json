@@ -1,0 +1,19 @@
+{
+    "answer": "2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016",
+    "ground_truth": "The Star Entertainment Group Limited\u5e74\u5ea6\u62a5\u544a\u5217\u8868",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        709,
+        1746,
+        2878
+    ]
+}

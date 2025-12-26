@@ -1,0 +1,17 @@
+{
+    "answer": "The House Republicans' domestic policy bill would outlaw cash payments sent by non-citizens to their families in their home countries.",
+    "ground_truth": "5% tax",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        820,
+        2004
+    ]
+}

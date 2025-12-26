@@ -1,0 +1,19 @@
+{
+    "answer": "\u00a3500m",
+    "ground_truth": "\u00a3500m over five years",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        1605,
+        2386
+    ]
+}

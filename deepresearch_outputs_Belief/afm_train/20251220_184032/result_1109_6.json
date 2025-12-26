@@ -1,0 +1,17 @@
+{
+    "answer": "Publish with us - Elsevier",
+    "ground_truth": "Elsevier \u51fa\u7248\u6d41\u7a0b\u6307\u5357",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        1652
+    ]
+}

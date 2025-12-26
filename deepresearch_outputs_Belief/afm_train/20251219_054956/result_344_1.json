@@ -1,0 +1,21 @@
+{
+    "answer": "NPR Opinion Section",
+    "ground_truth": "NPR Opinion \u4e13\u9898\u680f\u76ee",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        736,
+        1845,
+        3080,
+        4472
+    ]
+}

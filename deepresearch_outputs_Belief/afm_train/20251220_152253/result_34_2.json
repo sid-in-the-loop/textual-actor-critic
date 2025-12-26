@@ -1,0 +1,23 @@
+{
+    "answer": "Lyle Morris's role at the RAND Corporation from 2011 to 2022 was Senior Policy Analyst. The relevant CCA report, most recently identified as \"China 2026: What to Watch,\" is its report title.",
+    "ground_truth": "Senior policy analyst",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        748,
+        1913,
+        2897,
+        4265,
+        5712
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Approximately 86-90% of the airline's fleet operated under capacity purchase agreements",
+    "ground_truth": "91%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        1832,
+        3225,
+        4513,
+        5732,
+        6348,
+        6884
+    ]
+}

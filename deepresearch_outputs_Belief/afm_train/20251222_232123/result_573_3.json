@@ -1,0 +1,29 @@
+{
+    "answer": "UNISON was invited to participate in a negotiation process with the Department of Health and Social Care, specifically regarding the Adult Social Care Negotiating Body, as part of the Employment Rights Bill.",
+    "ground_truth": "asked to join FPA working group by Department of Health and Social Care",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2013,
+        2269,
+        2497,
+        2850,
+        3242,
+        3697,
+        3951
+    ]
+}

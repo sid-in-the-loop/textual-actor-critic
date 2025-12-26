@@ -1,0 +1,21 @@
+{
+    "answer": "James Quin",
+    "ground_truth": "Garrick",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        905,
+        1855,
+        3111,
+        3974
+    ]
+}

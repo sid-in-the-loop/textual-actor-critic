@@ -1,0 +1,27 @@
+{
+    "answer": "Armendjon",
+    "ground_truth": "Mark Cavendish",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        957,
+        2762,
+        3080,
+        4437,
+        4829,
+        6252,
+        6654
+    ]
+}

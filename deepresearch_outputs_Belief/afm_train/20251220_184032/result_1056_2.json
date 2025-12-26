@@ -1,0 +1,23 @@
+{
+    "answer": "176 pages",
+    "ground_truth": "176 pages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        799,
+        2258,
+        2562,
+        3036,
+        3466
+    ]
+}

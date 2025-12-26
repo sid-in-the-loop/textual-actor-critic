@@ -1,0 +1,21 @@
+{
+    "answer": "It is not possible to determine the exact number of CDC employees who received termination letters according to the provided search results.",
+    "ground_truth": "750",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        799,
+        1415,
+        1886,
+        3580
+    ]
+}

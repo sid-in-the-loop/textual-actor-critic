@@ -1,0 +1,21 @@
+{
+    "answer": "Emperor Wu of Han",
+    "ground_truth": "Empress Wu Zetian",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        931,
+        2084,
+        3241,
+        4287
+    ]
+}

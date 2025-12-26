@@ -1,0 +1,23 @@
+{
+    "answer": "Compass Diversified's First Incremental Facility Amendment (January 9, 2025) restored full access to its $100 million revolving credit facility, resulting in a pro forma total available liquidity of $100 million as of March 31, 2025.",
+    "ground_truth": "April 29, 2025; removed springing lien; cancelled $150 million sidecar; $605 million liquidity as of 2025-03-31",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1834,
+        3333,
+        4729,
+        6323
+    ]
+}

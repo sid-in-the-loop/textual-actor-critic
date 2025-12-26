@@ -1,0 +1,17 @@
+{
+    "answer": "Cloudberry Clean Energy ASA's financial reports are published under the name \"2024 Annual Report.\" Under this name, each report is uniquely identified by its reporting period (e.g., Q1 2024 Report). Reports also cover the 2025 Annual general meeting held in April 2025.",
+    "ground_truth": "Cloudberry Clean Energy ASA Periodic Financial Report Series",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2690
+    ]
+}

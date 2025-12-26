@@ -1,0 +1,21 @@
+{
+    "answer": "number of proteins assigned to each top-level context description",
+    "ground_truth": "Bar chart visualizations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        813,
+        1747,
+        2777,
+        3550
+    ]
+}

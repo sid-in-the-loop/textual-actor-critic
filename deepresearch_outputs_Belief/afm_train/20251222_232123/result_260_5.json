@@ -1,0 +1,23 @@
+{
+    "answer": "McLaren-Mercedes",
+    "ground_truth": "Chevrolet, represented by the RML Group",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1862,
+        2964,
+        4185,
+        5304
+    ]
+}

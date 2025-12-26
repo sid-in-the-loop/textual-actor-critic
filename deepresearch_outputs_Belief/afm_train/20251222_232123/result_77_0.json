@@ -1,0 +1,29 @@
+{
+    "answer": "No definitive article found matching the criteria.",
+    "ground_truth": "ISBN 9781394254941",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1132,
+        2247,
+        2569,
+        2858,
+        3201,
+        4462,
+        5655,
+        6926
+    ]
+}

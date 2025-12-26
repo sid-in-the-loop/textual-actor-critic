@@ -1,0 +1,27 @@
+{
+    "answer": "No, it is not greater.",
+    "ground_truth": "Yes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        849,
+        1874,
+        882,
+        1593,
+        2927,
+        4530,
+        6245
+    ]
+}

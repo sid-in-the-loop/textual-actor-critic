@@ -1,0 +1,17 @@
+{
+    "answer": "Investorpaper.com/annualreports/Marriott International, Inc. (PDF Annual Report) and stocklight.com/stocks/us/nasdaq-mar/marriott-international/annual-reports",
+    "ground_truth": "Marriott International Annual Report 2025; Marriott International (MAR) Historical Annual Reports 2002-2024",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1976
+    ]
+}

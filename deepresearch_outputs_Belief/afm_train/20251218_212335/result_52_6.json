@@ -1,0 +1,21 @@
+{
+    "answer": "Taylor August Rhus",
+    "ground_truth": "Hanover Research Reports & Briefs",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        621,
+        1422,
+        2246,
+        2304
+    ]
+}

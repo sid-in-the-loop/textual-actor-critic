@@ -1,0 +1,19 @@
+{
+    "answer": "5% of North America's GDP, contributing $1.6 trillion in economic value.",
+    "ground_truth": "40 million",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1929,
+        3609
+    ]
+}

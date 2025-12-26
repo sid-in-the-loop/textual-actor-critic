@@ -1,0 +1,27 @@
+{
+    "answer": "No findings on how respondents with a high sense of grievance are more likely to exhibit a zero-sum mindset compared to those with a low sense of grievance in the Sustainable Development Goals Report 2025.",
+    "ground_truth": "twice as likely",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        880,
+        1739,
+        2794,
+        3963,
+        5166,
+        6220,
+        7491
+    ]
+}

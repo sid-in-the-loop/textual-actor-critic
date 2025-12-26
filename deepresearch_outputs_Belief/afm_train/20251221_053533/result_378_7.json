@@ -1,0 +1,23 @@
+{
+    "answer": "Positive effect on academic performance (effect size of 0.924).",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1893,
+        3211,
+        4472,
+        5837
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Staggered axial periodicity across microfibril types.",
+    "ground_truth": "Chiral interactions between tropocollagen molecules",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1023,
+        2324,
+        2945,
+        3122
+    ]
+}

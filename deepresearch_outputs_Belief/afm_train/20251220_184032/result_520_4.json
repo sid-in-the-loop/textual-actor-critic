@@ -1,0 +1,17 @@
+{
+    "answer": "The Future of Jobs Report 2025: The jobs of the future \u2013 and the skills you need to get them - specifically analyzes AI and big data skills, new roles, and workforce challenges.",
+    "ground_truth": "Future of Jobs Report Specialists",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        1868
+    ]
+}

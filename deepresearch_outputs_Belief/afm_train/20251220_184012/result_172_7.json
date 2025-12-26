@@ -1,0 +1,21 @@
+{
+    "answer": "\u5b66\u79d1\u5206\u7c7b\u4e0e\u4ee3\u7801",
+    "ground_truth": "Classification and Code of National Standard Disciplines of the People's Republic of China",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        708,
+        1857,
+        3163,
+        4588
+    ]
+}

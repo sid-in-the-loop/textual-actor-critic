@@ -1,0 +1,19 @@
+{
+    "answer": "Materiality assessment: A guide to a better ESG performance",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1894,
+        2934
+    ]
+}

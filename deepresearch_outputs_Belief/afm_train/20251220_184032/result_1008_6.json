@@ -1,0 +1,23 @@
+{
+    "answer": "Ferdinand Foch",
+    "ground_truth": "Montmorency",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        937,
+        1388,
+        1748,
+        2943,
+        3324
+    ]
+}

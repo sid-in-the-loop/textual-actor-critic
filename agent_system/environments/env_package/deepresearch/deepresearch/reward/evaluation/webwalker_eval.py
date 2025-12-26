@@ -10,7 +10,7 @@ from langchain_openai import ChatOpenAI
 load_dotenv('keys.env')
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+llm = ChatOpenAI(model="gpt-5-nano-2025-08-07")
 evaluator = load_evaluator("cot_qa", llm=llm)
 
 

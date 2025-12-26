@@ -1,0 +1,23 @@
+{
+    "answer": "Lucie Content: \"Social Media Predictions for 2025 - Content Experimentation, Social Listening, and AI\"",
+    "ground_truth": "The 15 social media trends that will shape your 2025 strategy\uff08Hootsuite\u535a\u5ba2\u6587\u7ae0\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        732,
+        2075,
+        2482,
+        2799,
+        4074
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Not a single comprehensive listing; individual company reports or general financial data are available.",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        2400,
+        3583,
+        4923,
+        6084,
+        7499
+    ]
+}

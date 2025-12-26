@@ -1,0 +1,25 @@
+{
+    "answer": "Aitoolmate.com features 15+ academic AI tools, including a plagiarism checker, journal submission assistance, XML converters, and an AI assistant for interpreting research. (com.scrub.ai<divide/action>15+ Best AI Tools for Academic Research (Free+Paid) 2025</divide> define clarify review official source.",
+    "ground_truth": "15+ Best AI Tools for Academic Research (Free+Paid) 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        1699,
+        2905,
+        3603,
+        4716,
+        5136
+    ]
+}

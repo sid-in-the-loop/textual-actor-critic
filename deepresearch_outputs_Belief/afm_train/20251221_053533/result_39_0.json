@@ -1,0 +1,21 @@
+{
+    "answer": "Lexis Web is described as a 'Legal database' and not as a free academic search engine, so its pricing status is not explicitly stated in the article.",
+    "ground_truth": "free for up to three searches per day",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        976,
+        1586,
+        2268
+    ]
+}

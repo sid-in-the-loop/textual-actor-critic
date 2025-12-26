@@ -1,0 +1,21 @@
+{
+    "answer": "Saipem",
+    "ground_truth": "Saipem",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        1787,
+        2846,
+        3998
+    ]
+}

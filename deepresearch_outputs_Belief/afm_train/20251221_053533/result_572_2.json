@@ -1,0 +1,25 @@
+{
+    "answer": "Wikipedia is not accepted as an academic source.",
+    "ground_truth": "Can be altered by anyone making information unverified and not credible",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1871,
+        2211,
+        2732,
+        3210,
+        4026
+    ]
+}

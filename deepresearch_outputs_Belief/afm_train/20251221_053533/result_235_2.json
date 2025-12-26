@@ -1,0 +1,23 @@
+{
+    "answer": "Monetization Paves Way for Industry Expansion, Computer Vision Seeing the World, Asynchronous Network Communication, NLP Performance Saturation, Industrial Robotics Intelligence",
+    "ground_truth": "Global X ETFs Insights (Five AI Trends for 2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        2047,
+        2424,
+        3559,
+        4501
+    ]
+}

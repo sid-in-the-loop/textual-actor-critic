@@ -1,0 +1,21 @@
+{
+    "answer": "No such position is mentioned.",
+    "ground_truth": "Steve Wysocki",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        867,
+        2101,
+        3968,
+        4291
+    ]
+}

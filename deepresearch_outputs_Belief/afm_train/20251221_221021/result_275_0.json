@@ -1,0 +1,21 @@
+{
+    "answer": "Yanshan",
+    "ground_truth": "\u767d\u6c34\u53f0",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        882,
+        2498,
+        5172,
+        6608
+    ]
+}

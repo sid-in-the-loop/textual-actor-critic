@@ -1,0 +1,21 @@
+{
+    "answer": "OneRepublic",
+    "ground_truth": "\u80e1\u5f66\u658c",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        2436,
+        2891,
+        3996
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "The Capgemini report on financial services top trends 2025 does not explicitly state the existence of electric vehicle charging infrastructure in new urban developments as a trend.",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        2060,
+        3181
+    ]
+}

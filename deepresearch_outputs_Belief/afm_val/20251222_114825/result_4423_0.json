@@ -1,0 +1,21 @@
+{
+    "answer": "Engaging the Modern Learner: 2025 Report on the Preferences and Behaviors Shaping Higher Ed.",
+    "ground_truth": "2025 Landscape of Higher Education Report\uff08EducationDynamics\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1996,
+        2787,
+        3792
+    ]
+}

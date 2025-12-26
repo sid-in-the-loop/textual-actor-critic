@@ -1,0 +1,29 @@
+{
+    "answer": "Financial Summary of Citigroup's Income Statement",
+    "ground_truth": "2024 Annual Report - Financial Summary Table",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        758,
+        2342,
+        3833,
+        5406,
+        5830,
+        7218,
+        7687,
+        9284
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Meta Earnings Presentation Q1 2025",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2147,
+        3566,
+        4338
+    ]
+}

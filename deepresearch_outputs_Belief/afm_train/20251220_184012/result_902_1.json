@@ -1,0 +1,21 @@
+{
+    "answer": "Volume 17, Issue 1",
+    "ground_truth": "Predicting academic success in higher education: literature review and best practices | International Journal of Educational Technology in Higher Education | Full Text",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1807,
+        3038,
+        3415
+    ]
+}

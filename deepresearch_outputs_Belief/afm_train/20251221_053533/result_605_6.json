@@ -1,0 +1,21 @@
+{
+    "answer": "Conservative Project at Supreme Court Meets Trump's Push to Oust Officials, Dec 7, 2025",
+    "ground_truth": "Trump Plans to Expand Presidential Power Over Agencies in 2025 - The New York Times",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        826,
+        1136,
+        2512,
+        3847
+    ]
+}

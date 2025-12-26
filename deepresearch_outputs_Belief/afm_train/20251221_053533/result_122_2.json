@@ -1,0 +1,23 @@
+{
+    "answer": "Director of Programs at Asia Society (prior to joining Stanford in 2016)",
+    "ground_truth": "strategic policy advisor",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2071,
+        3105,
+        4080,
+        5297
+    ]
+}

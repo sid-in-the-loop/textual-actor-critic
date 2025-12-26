@@ -1,0 +1,21 @@
+{
+    "answer": "European Commission approved for HR+/HER2- early breast cancer at high risk of recurrence.",
+    "ground_truth": "Treating hormone receptor-positive/human epidermal growth factor receptor 2-negative early breast cancer (adjuvant)",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        774,
+        2075,
+        3515,
+        4758
+    ]
+}

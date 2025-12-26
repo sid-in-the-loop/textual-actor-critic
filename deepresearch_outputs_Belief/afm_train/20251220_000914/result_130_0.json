@@ -1,0 +1,23 @@
+{
+    "answer": "The 2025 edition of 'The Mobile Economy' reports \"the Mobile Economy\" but it does *not* list specific frequency bands for potential future 6G expansion according to the available web search snippets, though information about WRC-27 and future spectrum planning is consistently mentioned.",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        2109,
+        2723,
+        3189,
+        4849
+    ]
+}

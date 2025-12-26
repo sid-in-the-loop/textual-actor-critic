@@ -1,0 +1,19 @@
+{
+    "answer": "HM-Group Annual and sustainability report 2024",
+    "ground_truth": "H&M Group 2024/25 regular financial report series",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1599,
+        1805,
+        2982
+    ]
+}

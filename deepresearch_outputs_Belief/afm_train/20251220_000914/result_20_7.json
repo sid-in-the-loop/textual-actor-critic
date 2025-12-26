@@ -1,0 +1,19 @@
+{
+    "answer": "Manuscript formatting (12pt Times New Roman, double-spaced, line numbered, left-hand margin 4), covering letter, and Data Availability Statement.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        643,
+        1607,
+        2300
+    ]
+}

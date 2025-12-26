@@ -1,0 +1,29 @@
+{
+    "answer": "Future 6G spectrum planning for around 2030s, but specific frequency bands are not detailed in the 2025 edition of the GSMA 'The Mobile Economy' annual report.",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        1995,
+        2444,
+        2770,
+        4086,
+        4540,
+        5030,
+        5438
+    ]
+}

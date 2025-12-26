@@ -1,0 +1,29 @@
+{
+    "answer": "Green Jelly",
+    "ground_truth": "Captain Beaky and His Band",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        940,
+        2302,
+        2922,
+        4080,
+        5127,
+        6377,
+        7379,
+        8610
+    ]
+}

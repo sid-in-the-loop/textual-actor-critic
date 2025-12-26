@@ -1,0 +1,23 @@
+{
+    "answer": "I will provide the name of the 'part' or 'section' of \"Presentation and Disclosure\" requirements under IFRS 18.",
+    "ground_truth": "Item 18. Financial Statements",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        707,
+        1957,
+        3028,
+        4255,
+        5597
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "NameCheck attempts verification",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2294,
+        2533,
+        3007,
+        3689,
+        4406
+    ]
+}

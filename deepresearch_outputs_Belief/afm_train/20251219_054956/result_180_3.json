@@ -1,0 +1,19 @@
+{
+    "answer": "The magazine might be the same one that was first published in March 1980, with an \"official title\" which is typically its default branding.",
+    "ground_truth": "Policy Options March 2025 issue",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        785,
+        2227,
+        3326
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Access duration: up to 3 months or 6 months. Gale digital resources: Gale Digital Scholar Lab and Gale Primary Sources archives (for AAS-Gale, IASFM, SHAFR, and Bodleian Libraries fellowships).",
+    "ground_truth": "six months' access to the Gale Digital Scholar Lab and a relevant Gale Primary Sources archive",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        1983,
+        3178,
+        4204
+    ]
+}

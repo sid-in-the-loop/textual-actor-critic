@@ -1,0 +1,21 @@
+{
+    "answer": "Hydrothermal synthesis of highly pure brookite-type titanium oxide powder from aqueous sols of titanate nanosheets",
+    "ground_truth": "Precursor-directed synthesis of well-faceted brookite TiO \n 2\n \u200b\n  single crystals for efficient photocatalytic performances",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        881,
+        2264,
+        2641,
+        3751
+    ]
+}

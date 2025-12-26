@@ -1,0 +1,23 @@
+{
+    "answer": "2025 Tech Trends Report - Future Today Strategy Group",
+    "ground_truth": "2025 Technology Predictions (IEEE Computer Society Tech Predictions Report)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        2180,
+        3459,
+        5028,
+        6609
+    ]
+}

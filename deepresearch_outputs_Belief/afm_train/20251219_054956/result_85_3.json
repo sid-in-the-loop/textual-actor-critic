@@ -1,0 +1,27 @@
+{
+    "answer": "Not available in the 1HFY25 LBITDA section for The Star Brisbane; only segment-level figures are provided for main operations (Sydney, Gold Coast).",
+    "ground_truth": "$19.9 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2326,
+        3463,
+        3968,
+        4668,
+        5123,
+        5799
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "Teaching and learning process",
+    "ground_truth": "EDUCATION & EDUCATIONAL RESEARCH (\u5b66\u79d1\u5206\u7c7b)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1730,
+        1967,
+        3267,
+        5025,
+        5571
+    ]
+}

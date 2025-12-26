@@ -1,0 +1,21 @@
+{
+    "answer": "Academia Medicine and Health, April 29, 2025, Prevalence and ultrasonographic patterns of gynecological emergencies in southeastern Nigeria. Emmanuel Odumeru, Xavier Akimuhana, Eric Kirezi.",
+    "ground_truth": "'Prevalence and ultrasonographic patterns of gynecological emergencies in southeastern Nigeria' by Emmanuel Odumeru, Xavier Akimuhana, Eric Kirezi, Costelia Njoku",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        829,
+        2009,
+        3250,
+        3560
+    ]
+}

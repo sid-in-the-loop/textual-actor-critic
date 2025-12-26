@@ -1,0 +1,25 @@
+{
+    "answer": "Project 2025 documents from The Heritage Foundation",
+    "ground_truth": "FactCheck.org Project 2025 Archives (https://www.factcheck.org/issue/project-2025/)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1931,
+        3187,
+        4277,
+        6132,
+        6797
+    ]
+}

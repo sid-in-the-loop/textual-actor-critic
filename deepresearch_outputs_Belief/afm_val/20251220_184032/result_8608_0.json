@@ -1,0 +1,23 @@
+{
+    "answer": "The political challenge Trudeau faces is the Liberal Party's uncertain future and internal divisions.",
+    "ground_truth": "faces calls to step down",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        753,
+        2026,
+        3301,
+        4642,
+        6058
+    ]
+}

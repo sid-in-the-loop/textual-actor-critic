@@ -1,0 +1,21 @@
+{
+    "answer": "Sigmoidal, with inflection points at the pKa values of the Asp/Glu cluster.",
+    "ground_truth": "Sigmoidal curve with inflection points near pH 4 and pH 10.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        735,
+        1939,
+        3226,
+        4561
+    ]
+}

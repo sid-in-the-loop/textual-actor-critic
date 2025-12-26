@@ -1,0 +1,21 @@
+{
+    "answer": "Compliance and Investigations hub",
+    "ground_truth": "Dentons AI: Global Solutions Hub",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        818,
+        1950,
+        3367,
+        4541
+    ]
+}

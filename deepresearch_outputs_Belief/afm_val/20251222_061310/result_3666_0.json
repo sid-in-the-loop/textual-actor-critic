@@ -1,0 +1,17 @@
+{
+    "answer": "Key Findings from the 2025 Landscape of Higher Education Report",
+    "ground_truth": "Key Findings from the 2025 Landscape of Higher Education Report\u00a0\u00a0 - EducationDynamics",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        1841
+    ]
+}

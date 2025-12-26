@@ -1,0 +1,23 @@
+{
+    "answer": "The increase in mandatory funding from FY2024 to FY2025 is $10.9 billion. This includes an increase of $139.8 billion for Compensation and Pensions, Readjustment Benefits, and Veterans Insurance and Indemnities (to $195.85 billion in FY2025), a decrease of $4.2 billion for Housing and Insurance, and an increase of $4.2 billion for the Toxic Exposures Fund.",
+    "ground_truth": "$41.8 billion or 21.6%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        942,
+        2569,
+        4282,
+        5034,
+        6488
+    ]
+}

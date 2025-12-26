@@ -1,0 +1,21 @@
+{
+    "answer": "Scholarly communication",
+    "ground_truth": "Category:Academic publishing",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        745,
+        1882,
+        2957,
+        3836
+    ]
+}

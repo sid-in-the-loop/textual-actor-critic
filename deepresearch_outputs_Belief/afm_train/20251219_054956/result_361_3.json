@@ -1,0 +1,25 @@
+{
+    "answer": "20-F",
+    "ground_truth": "Novartis-Disclosure-2024-CorpAR",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1908,
+        3383,
+        4855,
+        6352,
+        7458
+    ]
+}

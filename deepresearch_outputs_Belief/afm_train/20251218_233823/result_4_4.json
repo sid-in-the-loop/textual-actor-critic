@@ -1,0 +1,21 @@
+{
+    "answer": "First-party data is promoted as the new gold standard due to privacy concerns and the necessity of obtaining transparent consent.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        865,
+        1220,
+        2794,
+        4727
+    ]
+}

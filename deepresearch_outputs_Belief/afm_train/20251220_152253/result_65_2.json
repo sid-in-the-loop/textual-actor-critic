@@ -1,0 +1,19 @@
+{
+    "answer": "Implementation of the Digital Operational Resilience Act (DORA)",
+    "ground_truth": "Regular Joint Committee report of the European Supervisory Authorities",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        762,
+        2146,
+        3186
+    ]
+}

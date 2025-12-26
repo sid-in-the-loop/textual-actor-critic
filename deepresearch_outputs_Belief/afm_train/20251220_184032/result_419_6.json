@@ -1,0 +1,21 @@
+{
+    "answer": "Economics",
+    "ground_truth": "Statistics (stat)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        1908,
+        3212,
+        3524
+    ]
+}

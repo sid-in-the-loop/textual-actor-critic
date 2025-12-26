@@ -1,0 +1,21 @@
+{
+    "answer": "Quarterly Report on Form 2025",
+    "ground_truth": "Economic Times Politics section",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        682,
+        1606,
+        2713,
+        3761
+    ]
+}

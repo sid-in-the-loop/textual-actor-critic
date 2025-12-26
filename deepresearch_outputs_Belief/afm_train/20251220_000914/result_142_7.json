@@ -1,0 +1,19 @@
+{
+    "answer": "The Research World annual analysis report published on December 5, 2024, regarding UNICEF statistics on water supply, has not been found in the available search results and is not expected to exist at that time.",
+    "ground_truth": "over two billion",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        832,
+        2142,
+        3341
+    ]
+}

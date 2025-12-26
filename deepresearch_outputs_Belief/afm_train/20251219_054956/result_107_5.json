@@ -1,0 +1,21 @@
+{
+    "answer": "Minister of Music is not mentioned as a relevant position/holder in relation to registered foreign nationals or Bureau of Immigration compliance requirements.",
+    "ground_truth": "Steve Wysocki",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        1909,
+        3200,
+        4335
+    ]
+}

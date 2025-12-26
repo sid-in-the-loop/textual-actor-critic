@@ -1,0 +1,25 @@
+{
+    "answer": "https://theconversation.com/topics/culture-and-society-127073",
+    "ground_truth": "Society \u2013 News, Research and Analysis \u2013 The Conversation \u2013 page 1",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        1599,
+        2459,
+        3501,
+        4608,
+        5659
+    ]
+}

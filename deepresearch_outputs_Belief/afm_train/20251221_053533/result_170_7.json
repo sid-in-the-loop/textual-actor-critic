@@ -1,0 +1,25 @@
+{
+    "answer": "\u5bb6\u7528\u6c22\u80fd\u6e90\u7cfb\u7edf",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        863,
+        1938,
+        3059,
+        4203,
+        5657,
+        7046
+    ]
+}

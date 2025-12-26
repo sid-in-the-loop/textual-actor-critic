@@ -1,0 +1,23 @@
+{
+    "answer": "Unable to find the official homepage for the article.",
+    "ground_truth": "Publishing State. com homepage\uff08 https://publishingstate.com/academic-journal-trends-in-2025/2024/ \uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        1795,
+        3012,
+        4256,
+        5558
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "\u5b66\u79d1\u95e8\u7c7b",
+    "ground_truth": "Classification of Engineering Disciplines (National Standard Discipline Classification and Code of the People's Republic of China GB/T13745-92)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        2141,
+        3741
+    ]
+}

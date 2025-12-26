@@ -1,0 +1,17 @@
+{
+    "answer": "10.18162/ritpu-2020-v17n3-02",
+    "ground_truth": "https://doi.org/10.1186/s41239-020-0177-7",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        1993
+    ]
+}

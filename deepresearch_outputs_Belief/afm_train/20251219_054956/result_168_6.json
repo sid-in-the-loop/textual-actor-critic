@@ -1,0 +1,23 @@
+{
+    "answer": "The main information about trends and publishing can be found on the \"The past, the present, and the future of publishing\" page and the \"The publishing industry in 2026\" page, among others.",
+    "ground_truth": "PublishingState.com\u7f51\u7ad9\u51fa\u7248\u4e0e\u8d8b\u52bf\u4e13\u680f\u4e3b\u9875",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1846,
+        3268,
+        4391,
+        5956
+    ]
+}

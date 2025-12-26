@@ -1,0 +1,21 @@
+{
+    "answer": "The article mentions a mean age of 18.5 (SD = 8.30), but the range \"18\" refers to the age range of participants. The specific ages at which participants first recognized procrastination are not provided in the search results.",
+    "ground_truth": "Mean: 17.5 years; SD: 5.7 years; Range: 10 to 53 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        1917,
+        3307,
+        3721
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Richmond is the independent city served by WBTJ.",
+    "ground_truth": "Petersburg",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        1905,
+        2916,
+        3954
+    ]
+}

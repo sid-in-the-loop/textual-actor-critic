@@ -1,0 +1,21 @@
+{
+    "answer": "Philip S. Yu",
+    "ground_truth": "\u718a\u8f89",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        816,
+        2242,
+        2543,
+        4008
+    ]
+}

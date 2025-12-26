@@ -1,0 +1,21 @@
+{
+    "answer": "Business impact, Real-time data utilization, AI-enhanced cybersecurity, Customer first, Embedded finance, Personalized AI-driven experiences, Automation of key operational processes",
+    "ground_truth": "Top Trends 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        728,
+        1936,
+        3294,
+        4829
+    ]
+}

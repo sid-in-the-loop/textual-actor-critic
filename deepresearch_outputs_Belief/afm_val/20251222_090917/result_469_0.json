@@ -1,0 +1,23 @@
+{
+    "answer": "There is no universally agreed-upon standard digital subscription price per month as stated in \"Subscribe to read\" for all digital services. Prices vary by service and publisher.",
+    "ground_truth": "$45",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        709,
+        1860,
+        3238,
+        4298,
+        5654
+    ]
+}

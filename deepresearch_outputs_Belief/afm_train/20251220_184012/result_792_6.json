@@ -1,0 +1,21 @@
+{
+    "answer": "Yes, the anonymous attributed statement \"Leveraged finance markets are trending positively, and we expect markets to improve significantly over the course of 2025 and beyond into 2026 and 2027\" indicates an upward trend.",
+    "ground_truth": "Clear upward trend from 2024 to 2027",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        816,
+        2128,
+        2491,
+        3854
+    ]
+}

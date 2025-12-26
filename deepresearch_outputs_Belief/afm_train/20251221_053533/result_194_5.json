@@ -1,0 +1,29 @@
+{
+    "answer": "6.65%",
+    "ground_truth": "FADA Releases FY'25 and March'25 Vehicle Retail Data",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        832,
+        2403,
+        3766,
+        5143,
+        5457,
+        7118,
+        7822,
+        9437
+    ]
+}

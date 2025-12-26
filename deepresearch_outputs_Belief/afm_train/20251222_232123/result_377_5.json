@@ -1,0 +1,23 @@
+{
+    "answer": "Could not find the specific Yahoo Finance article from March 9, 2025, featuring Treasury Secretary Scott Bessent's outlook. Therefore, the open group net present value (NPV) cannot be determined from the provided information.",
+    "ground_truth": "($78,400,000,000,000)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2023,
+        3274,
+        4474,
+        5706
+    ]
+}

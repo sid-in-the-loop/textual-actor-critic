@@ -1,0 +1,21 @@
+{
+    "answer": "IEEE Transactions on IoT",
+    "ground_truth": "2025 Technology Predictions (IEEE Computer Society Tech Predictions Report)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        1947,
+        2346,
+        3845
+    ]
+}

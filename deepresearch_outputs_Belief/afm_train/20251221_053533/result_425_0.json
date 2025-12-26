@@ -1,0 +1,29 @@
+{
+    "answer": "Information regarding the specific ATO withholding tax penalty decision dated December 5, 2023, with its deadline for evidence submission and scheduled date of the next case management hearing, cannot be found in the provided Director's Report for the Half Year Ended 31 December 2024.",
+    "ground_truth": "evidence due by 2025-06, next hearing 2025-07-02",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        908,
+        2292,
+        2823,
+        3416,
+        3817,
+        4333,
+        5035,
+        5516
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Realigned budget use locations efficiency 2020-economic vermiculture",
+    "ground_truth": "Budget and Performance\uff08U.S. Department of Commerce\u5b98\u7f51\u680f\u76ee\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        672,
+        806,
+        1817,
+        1956,
+        2003,
+        2083,
+        2193,
+        3268
+    ]
+}

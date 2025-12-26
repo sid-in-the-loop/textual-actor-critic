@@ -1,0 +1,17 @@
+{
+    "answer": "ASM International, Materials Research Society (MRS), American Ceramic Society (ACerS), Minerals, Metals, and Materials Society (TMS), and American Society for Materials Science (ASM)",
+    "ground_truth": "Materials science organizations",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        1581
+    ]
+}

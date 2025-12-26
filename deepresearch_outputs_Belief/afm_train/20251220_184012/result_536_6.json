@@ -1,0 +1,17 @@
+{
+    "answer": "2025 Trends",
+    "ground_truth": "Research World official website 2025 Trends article (2025 Trends)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        684,
+        1719
+    ]
+}

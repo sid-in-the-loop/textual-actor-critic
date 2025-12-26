@@ -1,0 +1,25 @@
+{
+    "answer": "The article \"8 Mega-Trends That Matter For Marketing In 2025\" is the best candidate, published January 2, 2025, but search results do not confirm details about first-party data dependency specifically for 2024.",
+    "ground_truth": "rely more on first-party data gathered with consent",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2243,
+        2872,
+        3307,
+        4007,
+        4548
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "CCCM agreed to extend surgical manager's term until 30 September 2025, CASIO Court was suspended until March 31, 2026",
+    "ground_truth": "Suspended until at least 2025-09-30; Manager's appointment extended until 2025-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2326,
+        3016,
+        3417,
+        4400,
+        4714
+    ]
+}

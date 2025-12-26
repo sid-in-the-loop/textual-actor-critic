@@ -1,0 +1,21 @@
+{
+    "answer": "The document is \"Vision 2025: The future of Hong Kong's fund management industry\" (PDF).",
+    "ground_truth": "Vision 2025: The future of Hong Kong\u2019s fund management industry",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2181,
+        3566,
+        4976
+    ]
+}

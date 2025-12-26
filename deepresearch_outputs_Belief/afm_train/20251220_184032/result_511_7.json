@@ -1,0 +1,17 @@
+{
+    "answer": "Quantum Computing Inc. Reports Third Quarter 2025 Financial Results",
+    "ground_truth": "D-Wave - Quarterly Results",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        672,
+        1871
+    ]
+}

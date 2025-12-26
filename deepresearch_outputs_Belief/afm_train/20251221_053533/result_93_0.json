@@ -1,0 +1,27 @@
+{
+    "answer": "HISTORIAN",
+    "ground_truth": "Hispanic American Historical Review",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        903,
+        2256,
+        2860,
+        3992,
+        5658,
+        7101,
+        8820
+    ]
+}

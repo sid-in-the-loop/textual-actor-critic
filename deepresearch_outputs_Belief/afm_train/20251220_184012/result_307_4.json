@@ -1,0 +1,19 @@
+{
+    "answer": "The State of the World's Children 2025 Statistical Compendium",
+    "ground_truth": "Global Estimates 2025 Update | Education Cannot Wait",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        884,
+        2106,
+        3292
+    ]
+}

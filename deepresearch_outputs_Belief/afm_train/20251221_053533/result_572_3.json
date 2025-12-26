@@ -1,0 +1,21 @@
+{
+    "answer": "Wikipedia is not an academic source according to Mid Michigan College.",
+    "ground_truth": "Can be altered by anyone making information unverified and not credible",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1595,
+        2341,
+        3387
+    ]
+}

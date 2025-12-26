@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to locate the specific figure due to search limitations.",
+    "ground_truth": "$383 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        2291,
+        3786,
+        4397,
+        4734,
+        5541,
+        6812
+    ]
+}

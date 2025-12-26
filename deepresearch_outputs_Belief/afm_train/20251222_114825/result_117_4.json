@@ -1,0 +1,25 @@
+{
+    "answer": "The Bank of England publishes meeting dates for the Financial Policy Committee (FPC) in advance. Official schedule details are available on their website.",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        778,
+        2033,
+        3373,
+        4794,
+        1308,
+        2452
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Annual Review of Study Findings",
+    "ground_truth": "Annual Collection of Scientific Breakthrough Topics on Study Finds Website",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        974,
+        1768,
+        2197,
+        3472,
+        4875,
+        5616,
+        6831
+    ]
+}

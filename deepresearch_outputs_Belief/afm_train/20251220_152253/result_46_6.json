@@ -1,0 +1,21 @@
+{
+    "answer": "Operating results \u2013 Results of operations",
+    "ground_truth": "Novartis 2024 Annual Results\u62a5\u544a",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        2295,
+        3778,
+        5662
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Not available in the search results for this specific detail regarding MTS's Q3 net profits due to increased interest-related costs.",
+    "ground_truth": "almost 90% drop",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1069,
+        2142,
+        2776,
+        3182,
+        3655,
+        4295
+    ]
+}

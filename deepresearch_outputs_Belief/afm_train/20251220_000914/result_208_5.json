@@ -1,0 +1,25 @@
+{
+    "answer": "Novartis Annual Report 2024 consolidated financial statements",
+    "ground_truth": "Novartis 2024 Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2114,
+        3627,
+        5099,
+        6433,
+        7313
+    ]
+}

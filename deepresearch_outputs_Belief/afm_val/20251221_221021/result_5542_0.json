@@ -1,0 +1,19 @@
+{
+    "answer": "AI Supply Chains: An Emerging Ecosystem of AI Actors, Products and Services",
+    "ground_truth": "0.00 to 0.30",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        835,
+        2010,
+        2346
+    ]
+}

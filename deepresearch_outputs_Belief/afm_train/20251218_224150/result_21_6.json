@@ -1,0 +1,23 @@
+{
+    "answer": "Quebec City",
+    "ground_truth": "At the Malaca\u00f1ang Palace",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1185,
+        2307,
+        4350,
+        4698,
+        6147
+    ]
+}

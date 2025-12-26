@@ -1,0 +1,27 @@
+{
+    "answer": "Brooke and Brooke Farm. A Tale",
+    "ground_truth": "A tale of the Tyne",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1896,
+        2958,
+        4136,
+        5289,
+        6530,
+        7528
+    ]
+}

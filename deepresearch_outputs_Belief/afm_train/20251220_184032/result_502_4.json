@@ -1,0 +1,21 @@
+{
+    "answer": "Identification of Female Genital Cutting in the Context of Campus Antisemitism",
+    "ground_truth": "Presidential Task Force on Combating Antisemitism and Anti-Arab Bias at Harvard University\uff082025 Annual Report",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        2083,
+        3330,
+        4601
+    ]
+}

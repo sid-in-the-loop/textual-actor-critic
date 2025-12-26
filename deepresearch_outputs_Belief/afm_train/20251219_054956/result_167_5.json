@@ -1,0 +1,21 @@
+{
+    "answer": "Action for Children remain an accredited Real Living Wage Employer.",
+    "ground_truth": "one full-time post until 2025-10; UNISON co-ordinator",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        952,
+        2644,
+        3896,
+        4625
+    ]
+}

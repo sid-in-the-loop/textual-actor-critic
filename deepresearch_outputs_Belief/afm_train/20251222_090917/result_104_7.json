@@ -1,0 +1,27 @@
+{
+    "answer": "Thomas Grummett",
+    "ground_truth": "\"Starman\" and \"Robin\"",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        691,
+        1816,
+        2960,
+        3975,
+        5334,
+        6431,
+        7538
+    ]
+}

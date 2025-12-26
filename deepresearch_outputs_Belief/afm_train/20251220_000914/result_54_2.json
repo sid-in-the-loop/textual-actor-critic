@@ -1,0 +1,29 @@
+{
+    "answer": "Art",
+    "ground_truth": "Art Studies",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        721,
+        1604,
+        2917,
+        4233,
+        1376,
+        2480,
+        3698,
+        4945
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Shanghai Stock Exchange's 'Engineering College Daily Report' for Q1 2025 financials.",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        2329,
+        3590,
+        4773,
+        6315
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Women's financial inclusion reached 54.1 percent in June 2022, with a 192 percent growth from 2016 to June 2022, as highlighted in the Central Bank of Egypt's Financial Inclusion Strategy (2022-2025).",
+    "ground_truth": "Main Highlights of the Financial Inclusion Strategy (2022-2025)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        1939,
+        3196,
+        4505,
+        5970
+    ]
+}

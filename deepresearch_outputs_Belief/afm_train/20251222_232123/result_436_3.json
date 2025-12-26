@@ -1,0 +1,27 @@
+{
+    "answer": "Wallace B. Jefferson",
+    "ground_truth": "Judge Debra Lehrmann",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        718,
+        1673,
+        2764,
+        3819,
+        5044,
+        6150,
+        7128
+    ]
+}

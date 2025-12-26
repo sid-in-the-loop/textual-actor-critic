@@ -1,0 +1,17 @@
+{
+    "answer": "Social Sciences & Humanities Open",
+    "ground_truth": "Humanities and Social Sciences Communications",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        684,
+        1435
+    ]
+}

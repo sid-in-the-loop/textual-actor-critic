@@ -1,0 +1,21 @@
+{
+    "answer": "Quarterly GDP Release, 0.3 percent",
+    "ground_truth": "2025 Global Economic Outlook \u2013 A Highly Uncertain World",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2770,
+        3054,
+        4087
+    ]
+}

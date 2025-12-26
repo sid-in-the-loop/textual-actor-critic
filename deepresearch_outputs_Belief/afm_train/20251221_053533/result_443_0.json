@@ -1,0 +1,21 @@
+{
+    "answer": "It is highly improbable that a specific \"first-level discipline under the category of Natural Sciences in the People's Republic of China\" awards both science and economics degrees, as economics is typically a standalone academic discipline distinct from the broad natural sciences category.",
+    "ground_truth": "Statistics (stat)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        844,
+        1985,
+        3113,
+        4196
+    ]
+}

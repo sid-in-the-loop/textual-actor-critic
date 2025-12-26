@@ -1,0 +1,17 @@
+{
+    "answer": "According to multiple official reports, Pakistan's total foreign exchange reserves increased by 1.3 billion USD to reach 21.1 billion USD as of March 28, 2025. The \"official financial disclosure\" refers to publicly available financial reports by reliable sources, such as news agencies and financial institutions, which provide this data.",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        869,
+        2387
+    ]
+}

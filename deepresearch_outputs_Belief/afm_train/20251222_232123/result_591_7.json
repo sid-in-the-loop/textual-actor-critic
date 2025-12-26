@@ -1,0 +1,23 @@
+{
+    "answer": "29, 28",
+    "ground_truth": "53 in FY 2024; one more than FY 2023",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1865,
+        3020,
+        4140,
+        5104
+    ]
+}

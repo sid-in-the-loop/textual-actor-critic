@@ -1,0 +1,29 @@
+{
+    "answer": "The '28 Best Academic Search Engines That make your research easier 2025' list does not explicitly mention the pricing status of Lexis Web.",
+    "ground_truth": "free for up to three searches per day",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1133,
+        1499,
+        2850,
+        3429,
+        4578,
+        6509,
+        7157
+    ]
+}

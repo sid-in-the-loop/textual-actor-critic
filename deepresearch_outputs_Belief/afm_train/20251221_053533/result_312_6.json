@@ -1,0 +1,21 @@
+{
+    "answer": "Title: Localization in World Politics: Bridging Theory and Practice. Section: Introduction and Special Forum",
+    "ground_truth": "Current Issue | World Politics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        703,
+        1854,
+        2954,
+        4078
+    ]
+}

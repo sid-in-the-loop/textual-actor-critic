@@ -1,0 +1,21 @@
+{
+    "answer": "Department of Earth and Environmental Sciences, and \"Climate System Science Major\" or \"Earth Science Major\" or \"Environmental Science major\" in addition to \"Climate and Sustainability Major\".",
+    "ground_truth": "Department of Earth and Environmental Sciences (DEES) in the School of Arts and Sciences & Undergraduate Program in Sustainable Development (UPSD) in the Columbia Climate School",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1682,
+        2690,
+        3952
+    ]
+}

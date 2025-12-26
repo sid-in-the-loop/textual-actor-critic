@@ -1,0 +1,23 @@
+{
+    "answer": "The specific financial losses prevented by Maharashtra Cyber since 2019 are not explicitly stated in the available information.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        2078,
+        3719,
+        5241,
+        6838
+    ]
+}

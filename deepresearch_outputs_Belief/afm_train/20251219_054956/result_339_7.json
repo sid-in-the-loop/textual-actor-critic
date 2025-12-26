@@ -1,0 +1,21 @@
+{
+    "answer": "5% excise tax on remittance transfers",
+    "ground_truth": "5% tax",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        842,
+        2230,
+        2613,
+        4222
+    ]
+}

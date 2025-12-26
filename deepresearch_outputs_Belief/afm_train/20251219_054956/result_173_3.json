@@ -1,0 +1,23 @@
+{
+    "answer": "The 52nd Statistical Report on China's Internet Development",
+    "ground_truth": "GSMA Intelligence \u6570\u636e\u62a5\u544a\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        789,
+        2027,
+        3473,
+        4756,
+        6219
+    ]
+}

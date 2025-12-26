@@ -1,0 +1,19 @@
+{
+    "answer": "Articles should ideally be no more than 11 typeset pages and the main text should be no more than 4,500 words (not including Abstract, Figures, and Tables).",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        682,
+        1487,
+        2179
+    ]
+}

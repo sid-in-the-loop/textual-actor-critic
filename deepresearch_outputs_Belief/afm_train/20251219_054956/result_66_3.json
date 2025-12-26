@@ -1,0 +1,27 @@
+{
+    "answer": "The requested financial losses prevented by The Times Group and its English-language publication in its \"societal issues\" section for Maharashtra Cyber since 2019 could not be found with the specified search queries.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        856,
+        2272,
+        2854,
+        3283,
+        3861,
+        4144,
+        4837
+    ]
+}

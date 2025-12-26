@@ -1,0 +1,21 @@
+{
+    "answer": "Chart or graph showing transaction volume and value forecasts for pre-owned business jets.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        801,
+        999,
+        2160,
+        2545
+    ]
+}

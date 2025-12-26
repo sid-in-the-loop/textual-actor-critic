@@ -1,0 +1,21 @@
+{
+    "answer": "28.8 years (SD = 8.30; range 18\u201365)",
+    "ground_truth": "Mean: 17.5 years; SD: 5.7 years; Range: 10 to 53 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        2050,
+        2374,
+        3599
+    ]
+}

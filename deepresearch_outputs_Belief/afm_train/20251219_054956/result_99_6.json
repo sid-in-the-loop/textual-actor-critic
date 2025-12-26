@@ -1,0 +1,27 @@
+{
+    "answer": "No results found on PublishingState.com for the requested article.",
+    "ground_truth": "10 Academic Journal Trends in 2025: An Era of Openness, Innovation, and Inclusivity | PublishingState.com",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        1080,
+        1407,
+        1905,
+        2418,
+        3062,
+        3462
+    ]
+}

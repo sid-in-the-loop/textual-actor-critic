@@ -1,0 +1,19 @@
+{
+    "answer": "A \"Notice of Penalty Offenses\" or a \"Notice of Penalty Offenses\" imposing civil penalties",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        746,
+        2022,
+        3340
+    ]
+}

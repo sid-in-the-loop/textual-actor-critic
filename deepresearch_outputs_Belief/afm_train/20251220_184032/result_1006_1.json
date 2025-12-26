@@ -1,0 +1,17 @@
+{
+    "answer": "The collections budget for New Mexico State University was reduced by $800,000 for fiscal year 2021, primarily due to inflationary journal prices and COVID-19 considerations.",
+    "ground_truth": "$800,000; inflationary pressures, pandemic-related challenges",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        854,
+        2160
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Best of Computex 2025",
+    "ground_truth": "TechPowerUp Live @ Computex 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        745,
+        2053,
+        3231
+    ]
+}

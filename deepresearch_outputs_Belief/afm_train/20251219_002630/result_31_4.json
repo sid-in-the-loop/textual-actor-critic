@@ -1,0 +1,29 @@
+{
+    "answer": "Rhetorical aggressiveness by political leaders.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        791,
+        1571,
+        2465,
+        3791,
+        1280,
+        2686,
+        4007,
+        5182
+    ]
+}

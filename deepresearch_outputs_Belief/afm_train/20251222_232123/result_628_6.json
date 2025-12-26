@@ -1,0 +1,21 @@
+{
+    "answer": "Figure 6, shows the predator population equilibrium transitioning from a stable node to an unstable node as \u03be decreases below 3.",
+    "ground_truth": "\u03be below 3: equilibrium zero; both saddle and unstable node types",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        927,
+        1987,
+        3132,
+        3985
+    ]
+}

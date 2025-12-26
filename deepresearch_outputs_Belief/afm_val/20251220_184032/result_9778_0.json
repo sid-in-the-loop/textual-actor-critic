@@ -1,0 +1,21 @@
+{
+    "answer": "MOLECULAR EVENTS AT THE GENETIC LEVEL IN HEALTH AND DISEASE",
+    "ground_truth": "MOLECULAR EVENTS AT THE GENETIC LEVEL IN HEALTH AND DISEASE",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        734,
+        1639,
+        2647,
+        3694
+    ]
+}

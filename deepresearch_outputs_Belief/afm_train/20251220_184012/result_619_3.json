@@ -1,0 +1,23 @@
+{
+    "answer": "Current regulatory guidelines are not supportive of rapid changes in AI, according to Barzilay, who added regulators need to have better oversight of AI algorithms to ensure safety and effectiveness in clinical settings.",
+    "ground_truth": "limited recommendations",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        2339,
+        2785,
+        3222,
+        4654
+    ]
+}

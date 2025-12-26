@@ -1,0 +1,19 @@
+{
+    "answer": "Strategic planning and adaptability.",
+    "ground_truth": "dynamic supply chains and agile workforce management",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        791,
+        2062,
+        3308
+    ]
+}

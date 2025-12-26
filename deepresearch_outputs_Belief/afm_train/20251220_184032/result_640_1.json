@@ -1,0 +1,19 @@
+{
+    "answer": "The specific percentage of I&A analysis produced at the Secret- or Unclassified-level for the U.S. Department of Commerce's FY2025 budget is not available in the search results.",
+    "ground_truth": "85%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2156,
+        3553
+    ]
+}

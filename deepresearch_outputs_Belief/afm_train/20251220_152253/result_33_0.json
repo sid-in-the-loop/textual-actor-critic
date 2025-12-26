@@ -1,0 +1,25 @@
+{
+    "answer": "Intelligence Lab",
+    "ground_truth": "The Intelligence Lab (Knight Frank)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1814,
+        3465,
+        4052,
+        4846,
+        5972
+    ]
+}

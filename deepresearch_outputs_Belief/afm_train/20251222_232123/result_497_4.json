@@ -1,0 +1,21 @@
+{
+    "answer": "Buy, RM2.20, RM1.711",
+    "ground_truth": "RM1.70; September-October 2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        2211,
+        3567,
+        4626
+    ]
+}

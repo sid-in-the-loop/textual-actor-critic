@@ -1,0 +1,21 @@
+{
+    "answer": "Public Opinion Polling",
+    "ground_truth": "Political Issues - Research and data from Pew Research Center",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        821,
+        1762,
+        2669,
+        3646
+    ]
+}

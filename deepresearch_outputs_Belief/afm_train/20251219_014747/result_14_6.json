@@ -1,0 +1,23 @@
+{
+    "answer": "No direct launch announcement found on catalystcr.com related to the \"AACR experts forecast cancer research and treatment advances in 2025\" blog post's January 10, 2025 publication. The information (the title and publication date) indicates it is a source on a hosted AACR domain.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2265,
+        2531,
+        3111,
+        3689
+    ]
+}

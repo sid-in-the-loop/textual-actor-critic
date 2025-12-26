@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to find the specific percentage in the provided search results from the 2025 Global Automotive Consumer Study.",
+    "ground_truth": "22%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1918,
+        3008,
+        4090,
+        5457,
+        6841,
+        8258
+    ]
+}

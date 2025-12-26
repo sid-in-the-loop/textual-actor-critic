@@ -1,0 +1,17 @@
+{
+    "answer": "Specific threats concerning Harvard's tax-exempt status and its ability to admit international students are not mentioned in the provided news articles.",
+    "ground_truth": "revoke tax-exempt status; restrict ability to host international students",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        819,
+        2008
+    ]
+}

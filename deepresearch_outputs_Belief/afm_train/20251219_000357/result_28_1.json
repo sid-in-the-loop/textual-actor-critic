@@ -1,0 +1,25 @@
+{
+    "answer": "Federal Trade Commission",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        2184,
+        3345,
+        4553,
+        5920,
+        7134
+    ]
+}

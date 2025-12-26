@@ -1,0 +1,19 @@
+{
+    "answer": "Department of Earth and Environmental Sciences, Climate and Sustainability, Sustainable Development",
+    "ground_truth": "Department of Earth and Environmental Sciences (DEES) in the School of Arts and Sciences & Undergraduate Program in Sustainable Development (UPSD) in the Columbia Climate School",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        892,
+        1868,
+        2684
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "FTSG 2025 technical report",
+    "ground_truth": "2025 Technology Predictions (IEEE Computer Society Tech Predictions Report)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        1107,
+        2325,
+        3630,
+        4703,
+        5195,
+        6740
+    ]
+}

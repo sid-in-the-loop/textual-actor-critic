@@ -1,0 +1,21 @@
+{
+    "answer": "The Media Release - 1HFY Financial Results - The Star Entertainment Group Limited ... December 2024 (H1 FY25)",
+    "ground_truth": "The Star Entertainment Group Limited \u534a\u5e74\u8d22\u52a1\u62a5\u544a\uff08\u622a\u81f32024\u5e7412\u670831\u65e5\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        873,
+        2189,
+        3928,
+        5388
+    ]
+}

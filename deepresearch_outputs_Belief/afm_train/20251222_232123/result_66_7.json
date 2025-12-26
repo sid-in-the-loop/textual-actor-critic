@@ -1,0 +1,23 @@
+{
+    "answer": "Not found in the provided search results. General Indian cyber crime losses are mentioned, but specific losses prevented by Maharashtra Cyber since 2019 are not specified.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        1852,
+        2973,
+        4332,
+        5634
+    ]
+}

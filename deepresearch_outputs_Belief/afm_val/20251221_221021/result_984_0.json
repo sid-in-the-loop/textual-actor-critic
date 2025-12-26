@@ -1,0 +1,17 @@
+{
+    "answer": "Searchlight 2023",
+    "ground_truth": "Searchlight 2023 Childlight Annual Flagship Report",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1778
+    ]
+}

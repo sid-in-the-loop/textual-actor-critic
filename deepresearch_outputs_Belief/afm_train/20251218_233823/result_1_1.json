@@ -1,0 +1,21 @@
+{
+    "answer": "The Pew-Knight Initiative, supported by the John S. and James L. Knight Foundation. Subprojects include research on media, trust, technology, and how Americans navigate and participate in communities.",
+    "ground_truth": "Pew Research Center and Knight Foundation\u8054\u5408\u9879\u76ee\uff08Pew-Knight Initiative\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2049,
+        3095,
+        4280
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "200",
+    "ground_truth": "100 chat messages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        771,
+        1664,
+        2837,
+        3846
+    ]
+}

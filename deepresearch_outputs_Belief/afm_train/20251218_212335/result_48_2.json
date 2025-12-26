@@ -1,0 +1,23 @@
+{
+    "answer": "Experiment and Model in Interfaceserne y",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        715,
+        1822,
+        2809,
+        3038,
+        3967
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Polysilicon prices fell by almost 50% in 2024, reducing solar module costs to US$0.07-0.09 per watt.",
+    "ground_truth": "20%",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        2363
+    ]
+}

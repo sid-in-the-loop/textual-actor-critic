@@ -1,0 +1,25 @@
+{
+    "answer": "Yes, the OEM-wise market share data for January 2025 is clearly presented in the \"Explanatory Notes on Main Statistical Indicators\" of the GB/T 4754-2017 standard.",
+    "ground_truth": "No OEM-wise market share data visible",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        881,
+        2541,
+        3899,
+        5355,
+        6899,
+        8146
+    ]
+}

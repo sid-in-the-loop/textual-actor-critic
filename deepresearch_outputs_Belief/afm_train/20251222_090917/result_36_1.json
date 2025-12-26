@@ -1,0 +1,27 @@
+{
+    "answer": "1978, Brigitte Holzapfel, 2.32 meters, 1901",
+    "ground_truth": "1957",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        903,
+        2101,
+        3332,
+        4580,
+        6046,
+        7542,
+        9055
+    ]
+}

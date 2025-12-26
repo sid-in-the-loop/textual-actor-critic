@@ -1,0 +1,19 @@
+{
+    "answer": "More than 800",
+    "ground_truth": "over 700",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        891,
+        1852,
+        2976
+    ]
+}

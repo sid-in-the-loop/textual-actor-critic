@@ -1,0 +1,19 @@
+{
+    "answer": "The Star Sydney casino licence suspension remains in place with no set reinstatement date, and Manager Nicholas Weeks is reappointed until March 31, 2026.",
+    "ground_truth": "Suspended until at least 2025-09-30; Manager's appointment extended until 2025-09-30",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        851,
+        2221,
+        3344
+    ]
+}

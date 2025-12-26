@@ -1,0 +1,21 @@
+{
+    "answer": "Northwestern Library Workers voted to unionize with SEIU Local 73 on October 12, 2021, following furloughs, layoffs, and benefit cuts due to COVID-19.",
+    "ground_truth": "unionized with SEIU Local 73 due to pandemic austerity measures",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1009,
+        1462,
+        2651,
+        3179
+    ]
+}

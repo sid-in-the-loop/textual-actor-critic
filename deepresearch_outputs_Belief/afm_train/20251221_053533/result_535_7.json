@@ -1,0 +1,19 @@
+{
+    "answer": "Seven quiet wins for climate and nature in 2025",
+    "ground_truth": "BBC Future\u4e13\u9898\uff1a2025\u5e74\u6c14\u5019\u4e0e\u81ea\u7136\u7684\u4e03\u5927\u5173\u952e\u65f6\u523b",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1001,
+        2149
+    ]
+}

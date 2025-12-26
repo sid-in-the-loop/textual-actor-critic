@@ -1,0 +1,19 @@
+{
+    "answer": "2021-2022 Annual Report for Unison Health & Community Services",
+    "ground_truth": "UNISON Community Annual Report 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        738,
+        1710,
+        3033
+    ]
+}

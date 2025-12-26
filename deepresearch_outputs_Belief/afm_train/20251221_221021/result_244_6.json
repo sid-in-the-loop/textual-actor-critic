@@ -1,0 +1,21 @@
+{
+    "answer": "The realized global BESS capacity through 2024 is lower than the lower bound of capacity projections from December 2019 to 2023.",
+    "ground_truth": "Closely tracks the lower bound",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        855,
+        2265,
+        3687,
+        5042
+    ]
+}

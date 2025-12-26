@@ -1,0 +1,19 @@
+{
+    "answer": "Fusion power is moving from public to private sector.",
+    "ground_truth": "Shifting from the public to the private sector.",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        806,
+        2042,
+        3307
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Stock Exchange Letter",
+    "ground_truth": "Cloudberry Clean Energy ASA Periodic Financial Report Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        2067,
+        3300,
+        4912,
+        6245
+    ]
+}

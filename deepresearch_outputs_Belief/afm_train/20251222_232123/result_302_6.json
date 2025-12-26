@@ -1,0 +1,21 @@
+{
+    "answer": "Safeguarding Mobility for the Future: A Global Call to Action for the Use of the Locomotive Syndrome Risk Test, Nakamura, E., Nakamura, T., Sugawara, K.",
+    "ground_truth": "'Safeguarding Mobility for the Future: A Global Call to Action for the Use of the Locomotive Syndrome Risk Test' by Ryo Nakagawa",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        966,
+        1268,
+        2030,
+        3641
+    ]
+}

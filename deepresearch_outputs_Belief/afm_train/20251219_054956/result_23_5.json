@@ -1,0 +1,23 @@
+{
+    "answer": "2025 Annual Report to Congress",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        711,
+        1513,
+        2382,
+        3447,
+        4747
+    ]
+}

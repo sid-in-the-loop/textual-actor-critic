@@ -1,0 +1,29 @@
+{
+    "answer": "Not found.",
+    "ground_truth": "10.3389/fpsyg.2023.1020269",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1092,
+        1301,
+        2861,
+        3255,
+        3694,
+        4523,
+        4825
+    ]
+}

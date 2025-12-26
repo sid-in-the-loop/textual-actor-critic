@@ -1,0 +1,17 @@
+{
+    "answer": "christelca.org/latest-news/annual-report/",
+    "ground_truth": "Christ Lutheran Church Annual Report \u96c6\u5408\u9875\u9762",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        2236
+    ]
+}

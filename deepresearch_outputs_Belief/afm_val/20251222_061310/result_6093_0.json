@@ -1,0 +1,27 @@
+{
+    "answer": "Life cycle cost of acquisition programs administered by the Office of Program Accountability and Risk Management, as reported in the Budget of the United States Government, Fiscal Year 2025, is detailed in the Appendix.",
+    "ground_truth": "over $220.0B",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        888,
+        2019,
+        3203,
+        4284,
+        5524,
+        6680,
+        7942
+    ]
+}

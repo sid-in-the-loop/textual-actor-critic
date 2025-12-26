@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to provide a specific percentage, as the exact data point (THCU loan growth percentage in 2023) could not be extracted from the identified relevant reports.",
+    "ground_truth": "3.03%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        2093,
+        3181,
+        3533,
+        5053,
+        6853,
+        8338
+    ]
+}

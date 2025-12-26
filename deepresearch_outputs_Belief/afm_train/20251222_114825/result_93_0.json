@@ -1,0 +1,27 @@
+{
+    "answer": "Current Anthropology",
+    "ground_truth": "Hispanic American Historical Review",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        2032,
+        2253,
+        3797,
+        5124,
+        5547,
+        6847
+    ]
+}

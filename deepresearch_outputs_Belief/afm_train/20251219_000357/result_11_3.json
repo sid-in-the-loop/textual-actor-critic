@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to answer as the number of recent submissions on arXiv dynamically updates and no single source provides a stable count for 'recent' submissions for both Condensed Matter (cond-mat) and Earth and Planetary Astrophysics (astro-ph.EP) within the answer's context.",
+    "ground_truth": "Yes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        729,
+        1796,
+        3219,
+        4767,
+        6083,
+        7338,
+        9124
+    ]
+}

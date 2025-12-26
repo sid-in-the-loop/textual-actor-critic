@@ -1,0 +1,29 @@
+{
+    "answer": "10.1038/s43247-025-2433-8",
+    "ground_truth": "https://doi.org/10.1038/d41586-024-04237-w",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        2014,
+        2484,
+        2793,
+        4244,
+        5571,
+        6796,
+        8309
+    ]
+}

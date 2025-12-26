@@ -1,0 +1,19 @@
+{
+    "answer": "USNWR Best Undergraduate College rankings are the sum of weighted, normalized scores...",
+    "ground_truth": "The 2025 U.S. News & World Report Rankings Are Here\u2014What You Need To Know",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2078,
+        3285
+    ]
+}

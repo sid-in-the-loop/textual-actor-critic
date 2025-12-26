@@ -1,0 +1,19 @@
+{
+    "answer": "New Journalism integrated literary techniques into journalistic reporting, developing a Dostoyevskian sensibility.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1753,
+        3162
+    ]
+}

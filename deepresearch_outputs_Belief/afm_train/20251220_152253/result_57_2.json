@@ -1,0 +1,23 @@
+{
+    "answer": "No specific details regarding the volatility distribution depicted in Figure 0 for Hong Kong's unemployment rate prior to January 2025 are provided in the search results referencing the \"2024 Economic Background and 2025 Prospects\" report.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        937,
+        2215,
+        3628,
+        4084,
+        4491
+    ]
+}

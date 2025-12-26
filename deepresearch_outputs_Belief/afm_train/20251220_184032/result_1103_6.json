@@ -1,0 +1,19 @@
+{
+    "answer": "7 New Solar Panel Technology Trends for 2026",
+    "ground_truth": "International Solar PV and BESS Manufacturing Trends",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        2054,
+        3260
+    ]
+}

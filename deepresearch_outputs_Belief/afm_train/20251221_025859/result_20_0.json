@@ -1,0 +1,19 @@
+{
+    "answer": "The title should be no more than 20 words and a single scientifically accurate sentence, describing the main message of the article.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        697,
+        1524,
+        2199
+    ]
+}

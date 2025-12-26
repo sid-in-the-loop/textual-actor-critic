@@ -1,0 +1,27 @@
+{
+    "answer": "Annual Report MeSH Descriptor Data 2025",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2006,
+        3467,
+        5141,
+        5523,
+        6119,
+        6491
+    ]
+}

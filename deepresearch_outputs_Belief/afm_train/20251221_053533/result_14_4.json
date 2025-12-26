@@ -1,0 +1,27 @@
+{
+    "answer": "Fatal/Ongoing research/Unable to find specific January 10, 2025 blog post launch announcement.",
+    "ground_truth": "'Experts Forecast Cancer Research and Treatment Advances in 2025'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        1074,
+        1961,
+        2281,
+        2669,
+        3108,
+        3666
+    ]
+}

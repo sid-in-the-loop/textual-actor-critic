@@ -1,0 +1,23 @@
+{
+    "answer": "Attorney General Merrick Garland",
+    "ground_truth": "Senator Chuck Grassley",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        911,
+        2094,
+        3390,
+        4640,
+        5886
+    ]
+}

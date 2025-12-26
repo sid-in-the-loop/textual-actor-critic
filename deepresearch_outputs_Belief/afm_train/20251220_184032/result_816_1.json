@@ -1,0 +1,21 @@
+{
+    "answer": "Brookite (210) heterojunction photocatalysis of quasi-octahedral nanorods",
+    "ground_truth": "Precursor-directed synthesis of well-faceted brookite TiO \n 2\n \u200b\n  single crystals for efficient photocatalytic performances",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        981,
+        2393,
+        3891,
+        5374
+    ]
+}

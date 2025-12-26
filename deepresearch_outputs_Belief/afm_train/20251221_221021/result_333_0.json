@@ -1,0 +1,17 @@
+{
+    "answer": "Figure 5 shows the Impulse Response of Technology Expenditure. The trajectory of the GDP impulse response coefficient during quarters 0 to 22 after a shock is shown in Figure 5.",
+    "ground_truth": "Remains close to zero in almost all quarters",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        879,
+        1638
+    ]
+}

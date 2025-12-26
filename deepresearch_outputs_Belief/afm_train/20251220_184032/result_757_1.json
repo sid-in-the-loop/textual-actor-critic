@@ -1,0 +1,23 @@
+{
+    "answer": "Chapter 10: Overcoming Common Challenges",
+    "ground_truth": "Beyond The Illusion - The Real Threat Of AI: WEF Global Risks Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        844,
+        2147,
+        3453,
+        4650,
+        5909
+    ]
+}

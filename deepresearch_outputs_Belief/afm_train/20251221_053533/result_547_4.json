@@ -1,0 +1,19 @@
+{
+    "answer": "Chuck Grassley",
+    "ground_truth": "The Employment Non-Discrimination Act (ENDA)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        894,
+        2043,
+        3251
+    ]
+}

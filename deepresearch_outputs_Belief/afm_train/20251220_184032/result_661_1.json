@@ -1,0 +1,23 @@
+{
+    "answer": "It increased from 52% in Q3 2023/24 to 54% in Q4 2023/24; the data for Q3 2024/25 is not available.",
+    "ground_truth": "Declined from 54% to 49%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        888,
+        2696,
+        2933,
+        5013,
+        5558
+    ]
+}

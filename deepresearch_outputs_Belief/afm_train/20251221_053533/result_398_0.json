@@ -1,0 +1,23 @@
+{
+    "answer": "Yel (tunic/apron)",
+    "ground_truth": "The lapel opening was typically zuoren",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        982,
+        2404,
+        2713,
+        4265,
+        5730
+    ]
+}

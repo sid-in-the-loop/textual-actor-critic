@@ -1,0 +1,29 @@
+{
+    "answer": "No image content from its location was found by a search.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        832,
+        1180,
+        2847,
+        3748,
+        4379,
+        6001,
+        1368,
+        2592
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "To supplement our condensed consolidated financial statements",
+    "ground_truth": "1st Quarterly Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        2145,
+        2646,
+        4179,
+        5901,
+        6628,
+        8209
+    ]
+}

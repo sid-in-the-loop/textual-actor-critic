@@ -1,0 +1,21 @@
+{
+    "answer": "Beyond The Illusion - The Real Threat Of AI",
+    "ground_truth": "Beyond The Illusion - The Real Threat Of AI: WEF Global Risks Report 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        764,
+        1951,
+        3110,
+        4339
+    ]
+}

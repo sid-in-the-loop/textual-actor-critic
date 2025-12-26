@@ -1,0 +1,19 @@
+{
+    "answer": "A combination of general, broad Category and specific Topic Categories, with general categories often linked to UN classes. Users can identify subject lists using the \"Databases by Subject & A-Z\" or \"Master Journal List\".",
+    "ground_truth": "Web of Science \u6838\u5fc3\u5408\u96c6\u5b66\u79d1\u7c7b\u522b\u5217\u8868",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        1868,
+        3000
+    ]
+}

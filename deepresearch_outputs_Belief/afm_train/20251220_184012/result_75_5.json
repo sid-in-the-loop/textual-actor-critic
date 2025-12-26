@@ -1,0 +1,21 @@
+{
+    "answer": "IEEE Reveals Top Tech Trends of 2025",
+    "ground_truth": "2025 Technology Predictions (IEEE Computer Society Tech Predictions Report)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        752,
+        2120,
+        3316,
+        4747
+    ]
+}

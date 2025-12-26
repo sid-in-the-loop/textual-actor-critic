@@ -1,0 +1,27 @@
+{
+    "answer": "Chart, graph, or quantitative data; the report contains these elements.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        1095,
+        1365,
+        1691,
+        2874,
+        3302,
+        4366
+    ]
+}

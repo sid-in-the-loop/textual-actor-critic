@@ -1,0 +1,19 @@
+{
+    "answer": "EDC Paris Business School",
+    "ground_truth": "EDC Paris Business School",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        705,
+        1953,
+        2816
+    ]
+}

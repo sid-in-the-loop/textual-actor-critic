@@ -1,0 +1,17 @@
+{
+    "answer": "The Star Sydney casino licence remains suspended with no reinstate date, and the Manager's term has been extended as of March 28, 2025.",
+    "ground_truth": "Suspended until at least 2025-09-30; Manager's appointment extended until 2025-09-30",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        823,
+        2221
+    ]
+}

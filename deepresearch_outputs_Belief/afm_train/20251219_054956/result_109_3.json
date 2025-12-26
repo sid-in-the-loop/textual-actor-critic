@@ -1,0 +1,25 @@
+{
+    "answer": "Jawan",
+    "ground_truth": "A list of the highest-grossing Hindi cinema films released in 2025 is provided.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        819,
+        2117,
+        3519,
+        5477,
+        6170,
+        7573
+    ]
+}

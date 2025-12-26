@@ -1,0 +1,27 @@
+{
+    "answer": "The computational characteristics of the self-adaptable encoding algorithm are discussed within the study, focusing on its computational cost and general efficiency.",
+    "ground_truth": "O(n) computational scaling",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        1910,
+        2815,
+        3518,
+        5126,
+        6328,
+        7860
+    ]
+}

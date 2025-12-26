@@ -1,0 +1,21 @@
+{
+    "answer": "Recovery Journey Project",
+    "ground_truth": "Hitachi Research Institute Research Report\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        1995,
+        2934,
+        3893
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Specialties Breakdown, Business Segments, Geographic Areas, Medical Specialties",
+    "ground_truth": "Group activities by sector",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        1857,
+        3217,
+        4238
+    ]
+}

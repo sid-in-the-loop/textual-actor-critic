@@ -1,0 +1,19 @@
+{
+    "answer": "Future date data for March 31, 2025, is not available in fiscal year 2022 financial statements. Total tax assets as of December 31, 2022, are required, and historical changes from the target date are not applicable to the available data.",
+    "ground_truth": "\u20ac101,385,000 (2025-03-31), decreased by \u20ac3,815,000 (3.6%) from \u20ac105,200,000 (2024-12-31)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        900,
+        2432,
+        3955
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "GB/T 13745-2009 classifies and codes academic disciplines with principles, sorting methods, and a comprehensive classification system.",
+    "ground_truth": "Classification and Code of National Standard Disciplines of the People's Republic of China",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        762,
+        1942,
+        3177,
+        4295
+    ]
+}

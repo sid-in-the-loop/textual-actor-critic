@@ -1,0 +1,19 @@
+{
+    "answer": "Reftoolbar was moved to a site-wide script in February 2011.",
+    "ground_truth": "Google removed Scholar from the toolbars on its search pages",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        1769,
+        2880
+    ]
+}

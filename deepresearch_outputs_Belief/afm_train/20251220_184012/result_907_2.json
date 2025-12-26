@@ -1,0 +1,23 @@
+{
+    "answer": "Used \"dream maps\" in a meeting with her community.",
+    "ground_truth": "pointed to a spot on a map",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        864,
+        1441,
+        1661,
+        1979,
+        2873
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "graph paper carton informal staic\u0e01\u0e23\u0e30\u0e08\u0e32\u0e22",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1167,
+        1326,
+        2229,
+        2454,
+        2545,
+        3091
+    ]
+}

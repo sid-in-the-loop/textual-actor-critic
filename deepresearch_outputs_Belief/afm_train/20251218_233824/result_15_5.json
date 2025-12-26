@@ -1,0 +1,25 @@
+{
+    "answer": "ET News: Live Politics",
+    "ground_truth": "Economic Times Politics section",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        714,
+        1806,
+        3502,
+        4933,
+        6414,
+        7550
+    ]
+}

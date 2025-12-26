@@ -1,0 +1,27 @@
+{
+    "answer": "Classic Aruba Racing",
+    "ground_truth": "Chevrolet, represented by the RML Group",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1040,
+        2288,
+        3646,
+        5193,
+        6452,
+        7665,
+        8949
+    ]
+}

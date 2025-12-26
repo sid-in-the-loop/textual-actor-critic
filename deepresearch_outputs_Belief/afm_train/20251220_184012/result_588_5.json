@@ -1,0 +1,23 @@
+{
+    "answer": "Inflation in December 2024 was 24.7%, far exceeding the Central Bank of Nigeria (CBN) target of 21 percent.",
+    "ground_truth": "34.8%, target 21%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        975,
+        2200,
+        3493,
+        4782,
+        6238
+    ]
+}

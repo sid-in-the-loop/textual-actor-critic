@@ -1,0 +1,23 @@
+{
+    "answer": "The Annual and Quarterly Reports of Cloudberry Clean Energy ASA",
+    "ground_truth": "Cloudberry Clean Energy ASA Periodic Financial Report Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        2085,
+        3987,
+        4558,
+        5800
+    ]
+}

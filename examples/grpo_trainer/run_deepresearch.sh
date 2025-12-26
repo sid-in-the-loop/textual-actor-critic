@@ -15,7 +15,12 @@ fi
 
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export HYDRA_FULL_ERROR=1
-
+# Set credentials
+export WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
+export HF_TOKEN=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
+export HUGGING_FACE_HUB_TOKEN=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
+export OPENAI_API_KEY=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
+export CMU_GATEWAY_API_KEY=sk-sejf_6tjIhvazsxWCH-mZg
 MODEL_DIR=/data/group_data/cx_group/verl_agent_shared
 
 
@@ -38,7 +43,7 @@ python3 -m verl.trainer.main_ppo \
     data.truncation='error' \
     data.return_raw_chat=True \
     actor_rollout_ref.rollout.temperature=1.0 \
-    actor_rollout_ref.model.path=$MODEL_DIR/checkpoint/apm_sft_1.7b_2/checkpoint-900 \
+    actor_rollout_ref.model.path=/data/group_data/cx_group/behavior_priming/checkpoint/qwen3_1.7b/web_qwen_sft_behavior/checkpoint-924 \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.actor.use_kl_loss=True \
     actor_rollout_ref.actor.kl_loss_coef=0.001 \

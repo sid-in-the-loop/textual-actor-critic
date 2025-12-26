@@ -1,0 +1,25 @@
+{
+    "answer": "Review of the use of fully online (FO) mathematics teaching to enhance students' academic outcomes and satisfaction, from the perspective of communities of practice.",
+    "ground_truth": "Development of a new model on utilizing online learning platforms to improve students\u2019 academic achievements and satisfaction",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        782,
+        1778,
+        2606,
+        3012,
+        3330,
+        4374
+    ]
+}

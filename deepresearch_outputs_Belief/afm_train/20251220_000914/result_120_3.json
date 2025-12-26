@@ -1,0 +1,23 @@
+{
+    "answer": "10.1038/d41586-024-03943-9",
+    "ground_truth": "https://doi.org/10.1038/d41586-024-04237-w",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1804,
+        2347,
+        3455,
+        4814
+    ]
+}

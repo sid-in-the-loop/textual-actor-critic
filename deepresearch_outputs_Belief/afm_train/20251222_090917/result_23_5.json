@@ -1,0 +1,27 @@
+{
+    "answer": "The Financial Stability Oversight Council (Council or FSOC): A government body created by the Dodd-Frank Act that consists of the heads of nine federal agencies.",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        719,
+        1663,
+        2672,
+        3636,
+        4678,
+        5929,
+        7197
+    ]
+}

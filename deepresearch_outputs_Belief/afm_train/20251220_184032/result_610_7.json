@@ -1,0 +1,23 @@
+{
+    "answer": "Gaozu",
+    "ground_truth": "Empress Wu Zetian",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        849,
+        2123,
+        3160,
+        4475,
+        5684
+    ]
+}

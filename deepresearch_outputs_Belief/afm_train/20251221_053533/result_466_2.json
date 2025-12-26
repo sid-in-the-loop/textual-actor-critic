@@ -1,0 +1,23 @@
+{
+    "answer": "Not available in readily accessible reports and industry trends for a single, overarching projected increase in solar cell efficiency over the 2023-2033 period for the photovoltaic sector (subclass 3825).",
+    "ground_truth": "25% to 35%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        850,
+        2082,
+        3349,
+        4618,
+        5916
+    ]
+}

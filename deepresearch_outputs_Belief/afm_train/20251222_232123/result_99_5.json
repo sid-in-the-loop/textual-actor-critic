@@ -1,0 +1,19 @@
+{
+    "answer": "10 Emerging Academic Publishing Trends in 2025",
+    "ground_truth": "10 Academic Journal Trends in 2025: An Era of Openness, Innovation, and Inclusivity | PublishingState.com",
+    "rewards": [
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        759,
+        1818,
+        3022
+    ]
+}

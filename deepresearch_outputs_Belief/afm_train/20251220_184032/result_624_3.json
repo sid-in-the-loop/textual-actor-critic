@@ -1,0 +1,19 @@
+{
+    "answer": "Yes, the section contains images. Figures 1: UPI transactions are present.",
+    "ground_truth": "No academic chart, axes, titles, or units",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        884,
+        2039,
+        3294
+    ]
+}

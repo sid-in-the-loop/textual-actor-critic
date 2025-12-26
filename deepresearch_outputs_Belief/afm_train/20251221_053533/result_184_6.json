@@ -1,0 +1,27 @@
+{
+    "answer": "Not found in The Economic Times cybercrime section.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        836,
+        2285,
+        3744,
+        5092,
+        6332,
+        7697,
+        9094
+    ]
+}

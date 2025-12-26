@@ -1,0 +1,19 @@
+{
+    "answer": "Full year 2024 immunology segment net sales: USD 31.1 billion (+29% reported, +29.18% constant currency). Full year 2023 immunology segment net sales: USD 23.7 billion (+22% reported, +12% constant currency). Full year 2024 immunology segment net sales grew by +18% (reported) and +29% (constant currency) compared to 2023.",
+    "ground_truth": "$6,141,000,000; 23% increase (reported); 25% increase (constant currency)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        935,
+        2281,
+        4064
+    ]
+}

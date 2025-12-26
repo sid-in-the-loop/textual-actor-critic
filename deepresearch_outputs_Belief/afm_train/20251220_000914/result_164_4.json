@@ -1,0 +1,23 @@
+{
+    "answer": "HKEX Group Financial Results and Presentations page and official announcement PDF (e.g., HKEX-EPS_20250520_11678987_0.PDF)",
+    "ground_truth": "List of Q1 2025 Reports (Summary of Quarterly Financial Reports of Listed Companies and Related Organizations)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        777,
+        2104,
+        3529,
+        5108,
+        6833
+    ]
+}

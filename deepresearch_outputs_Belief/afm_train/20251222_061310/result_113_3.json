@@ -1,0 +1,23 @@
+{
+    "answer": "Color gradient bar illustrates value progression with categories progressing from low to high intensity. The visual encoding does not explicitly state a monotonic trend, given the report's focus on regulatory shifts and divergence.",
+    "ground_truth": "Monotonic progression from green to orange as values increase",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        890,
+        2054,
+        3261,
+        4558,
+        5943
+    ]
+}

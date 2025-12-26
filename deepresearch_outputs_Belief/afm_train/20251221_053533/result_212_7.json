@@ -1,0 +1,29 @@
+{
+    "answer": "Erik Blom and Stefan Engblom",
+    "ground_truth": "VR 2019-03471",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        1904,
+        2936,
+        3322,
+        4373,
+        5622,
+        6684,
+        8074
+    ]
+}

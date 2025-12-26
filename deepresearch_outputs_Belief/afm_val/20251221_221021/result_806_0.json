@@ -1,0 +1,17 @@
+{
+    "answer": "University of Arizona Libraries",
+    "ground_truth": "University of Arizona Libraries \u7f51\u7ad9\u4e3b\u9875",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        712,
+        1602
+    ]
+}

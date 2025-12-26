@@ -1,0 +1,27 @@
+{
+    "answer": "The alert displayed is 'subject to set-off' for failed \"NameCheck\" payments when payee account details do not match bank records, referencing Moda Payments Ltd's proprietary claim of subject-to-set-off scenarios in the context of targeted report disclosure.",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        940,
+        2231,
+        3108,
+        3612,
+        3889,
+        4478,
+        4932
+    ]
+}

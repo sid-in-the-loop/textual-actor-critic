@@ -1,0 +1,17 @@
+{
+    "answer": "V-Dem [Country-Year/Country-Date] Dataset v15",
+    "ground_truth": "V-Dem Dataset (Varieties of Democracy)",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        730,
+        1761
+    ]
+}

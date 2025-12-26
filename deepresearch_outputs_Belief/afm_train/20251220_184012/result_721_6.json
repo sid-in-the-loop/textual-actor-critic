@@ -1,0 +1,23 @@
+{
+    "answer": "Papers.ai",
+    "ground_truth": "SciSummary (scisummary.com)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        719,
+        1752,
+        2784,
+        3605,
+        4773
+    ]
+}

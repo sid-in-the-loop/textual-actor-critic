@@ -1,0 +1,19 @@
+{
+    "answer": "Develop a framework to measure and report the outcomes of mental health policies and investment.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1904,
+        3158
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "\"The State of the World's Children 2025: Ending Child Poverty: Our Shared Imperative\"",
+    "ground_truth": "Global Estimates 2025 Update | Education Cannot Wait",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        2115,
+        3447,
+        4820,
+        5770
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Iron-incorporated nitrogen-doped carbon materials as oxygen reduction catalysts for zinc-air batteries",
+    "ground_truth": "Electrocatalytic Oxygen Reduction Using Metastable Zirconium Suboxide",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1042,
+        2100
+    ]
+}

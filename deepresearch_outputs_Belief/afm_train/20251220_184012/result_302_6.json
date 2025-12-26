@@ -1,0 +1,19 @@
+{
+    "answer": "The full title is \"Safeguarding Mobility for the Future: A Global Call to Action for the Use of,\" and the author is Ryo Nakagawa.",
+    "ground_truth": "'Safeguarding Mobility for the Future: A Global Call to Action for the Use of the Locomotive Syndrome Risk Test' by Ryo Nakagawa",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        1228,
+        1775
+    ]
+}

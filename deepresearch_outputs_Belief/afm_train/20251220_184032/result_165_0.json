@@ -1,0 +1,23 @@
+{
+    "answer": "May 1, 2025; \"The Project\" explores Project 2025's origins and goals to reshape American culture",
+    "ground_truth": "PBS NewsHour \"Project 2025\" special report collection",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        2132,
+        2411,
+        3508,
+        5022
+    ]
+}

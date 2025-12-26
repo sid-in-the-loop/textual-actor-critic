@@ -1,0 +1,27 @@
+{
+    "answer": "South Korea's approach to diplomatic engagement with North Korea under President Yoon Suk Yeol has shifted toward increased outreach and dialogue, contrasting with his predecessor, who was characterized by hardline, adversary-focused policies.",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        859,
+        2225,
+        3298,
+        3795,
+        5350,
+        6002,
+        7437
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Personalized learning, development, and support customized for each employee's unique skills, needs, and preferences.",
+    "ground_truth": "personalized career progression plans, tailored reward packages, real-time performance feedback",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        783,
+        2297,
+        2789,
+        4208
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Writer Prompts \u2014 January 2025 - Medium",
+    "ground_truth": "524 Excellent Political Topics to Write about in 2025 - Custom-Writing.org\u535a\u6587",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        795,
+        1868,
+        2872,
+        3893,
+        5235
+    ]
+}

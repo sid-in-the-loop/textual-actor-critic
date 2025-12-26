@@ -1,0 +1,25 @@
+{
+    "answer": "\"We operate in a competitive environment in Europe, Latin America and North America.\"",
+    "ground_truth": "Competition",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        2008,
+        3192,
+        4446,
+        6035,
+        7490
+    ]
+}

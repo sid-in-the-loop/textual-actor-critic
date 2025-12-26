@@ -1,0 +1,23 @@
+{
+    "answer": "World Bank Group Annual Report 2025",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1582,
+        2705,
+        3843,
+        4915
+    ]
+}

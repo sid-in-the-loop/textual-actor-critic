@@ -1,0 +1,27 @@
+{
+    "answer": "25% increase, new total US$15.6 billion",
+    "ground_truth": "22%; US$ 15.6 billion",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        868,
+        2285,
+        2573,
+        3989,
+        5425,
+        6010,
+        7388
+    ]
+}

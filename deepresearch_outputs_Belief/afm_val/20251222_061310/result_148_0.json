@@ -1,0 +1,25 @@
+{
+    "answer": "GLM MAPE values were higher than both XGB and GAM across most regions.",
+    "ground_truth": "GLM and XGB yielded lower MAPE than GAM",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        873,
+        1974,
+        2402,
+        2914,
+        3469,
+        4070
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Scholarly Communication",
+    "ground_truth": "$50 million",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        787,
+        1772,
+        2805,
+        4011,
+        5314,
+        6449,
+        7483,
+        8772
+    ]
+}

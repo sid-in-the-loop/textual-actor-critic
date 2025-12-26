@@ -1,0 +1,17 @@
+{
+    "answer": "The Office of Inspector General provided the Department of Commerce's complete organizational performance information as of September 30, 2023, to Congress, as part of its accountability and financial reporting activities in FY2023.",
+    "ground_truth": "briefed more than 80 times",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        930,
+        2365
+    ]
+}

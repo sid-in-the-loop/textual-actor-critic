@@ -1,0 +1,21 @@
+{
+    "answer": "Include a description of the statistical treatment of error analysis in the figure legend. Each figure legend should begin with a brief title for the whole figure and continue with a short description of what is shown in each panel and the symbols used.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1808,
+        2249,
+        3251
+    ]
+}

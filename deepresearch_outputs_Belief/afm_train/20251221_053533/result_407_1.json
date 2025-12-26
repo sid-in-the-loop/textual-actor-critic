@@ -1,0 +1,29 @@
+{
+    "answer": "Chapter 3, \"Mapping the Human Brain from the Prenatal Period to Infancy Using 3D Magnetic Resonance Imaging,\" discusses \"Cortical Folding and Early Grey and White Maturation Processes\" by Arnaud Cachia, Jean-Fran\u00e7ois Mangin, and Jessica Dubois.",
+    "ground_truth": "MAPPING THE HUMAN BRAIN FROM THE PRENATAL PERIOD TO INFANCY USING 3D MAGNETIC RESONANCE IMAGING: CORTICAL FOLDING AND EARLY GREY AND WHITE MATURATION PROCESSES",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        2116,
+        2515,
+        2972,
+        3522,
+        4307,
+        5019,
+        6443
+    ]
+}

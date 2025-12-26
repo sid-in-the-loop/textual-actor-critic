@@ -1,0 +1,27 @@
+{
+    "answer": "LLaMA",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1034,
+        2838,
+        4507,
+        5826,
+        8088,
+        9197,
+        9889
+    ]
+}

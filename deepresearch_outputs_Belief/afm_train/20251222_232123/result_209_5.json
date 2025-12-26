@@ -1,0 +1,27 @@
+{
+    "answer": "68.33 ps/s",
+    "ground_truth": "330.76",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        932,
+        2146,
+        3241,
+        4383,
+        5808,
+        6925,
+        8033
+    ]
+}

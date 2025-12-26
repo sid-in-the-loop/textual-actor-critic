@@ -197,8 +197,22 @@ class ActorRolloutRefWorker(Worker):
 
         # note that we have to create model in fp32. Otherwise, the optimizer is in bf16, which is incorrect
         # TODO(zhangchi.usc1992): 1. support create from random initialized model. 2. Support init with FSDP directly
-        self.tokenizer = hf_tokenizer(local_path, trust_remote_code=trust_remote_code)
-        self.processor = hf_processor(local_path, trust_remote_code=trust_remote_code)
+        # Use tokenizer_path if specified, otherwise use model path
+        tokenizer_path = self.config.model.get("tokenizer_path", None)
+        if tokenizer_path is not None:
+            # Check if it's a HuggingFace Hub model ID (doesn't start with / or hdfs://)
+            from verl.utils.fs import is_non_local
+            if not is_non_local(tokenizer_path) and not os.path.exists(tokenizer_path):
+                # HuggingFace Hub model ID - use directly
+                tokenizer_load_path = tokenizer_path
+            else:
+                # Local or HDFS path - use copy_to_local
+                tokenizer_load_path = copy_to_local(tokenizer_path, use_shm=self.config.model.get("use_shm", False))
+        else:
+            tokenizer_load_path = local_path  # Fallback to model path
+        
+        self.tokenizer = hf_tokenizer(tokenizer_load_path, trust_remote_code=trust_remote_code)
+        self.processor = hf_processor(tokenizer_load_path, trust_remote_code=trust_remote_code)
 
         torch_dtype = fsdp_config.get("model_dtype", None)
         if torch_dtype is None:
@@ -558,8 +572,11 @@ class ActorRolloutRefWorker(Worker):
                 self.config.actor.use_fused_kernels = use_fused_kernels
             self.actor = DataParallelPPOActor(config=self.config.actor, actor_module=self.actor_module_fsdp, actor_optimizer=self.actor_optimizer)
 
-        if self._is_rollout:
+        if self._is_rollout and not self.config.get("use_openai_agent", False):
             self.rollout, self.rollout_sharding_manager = self._build_rollout(trust_remote_code=self.config.model.get("trust_remote_code", False))
+        elif self._is_rollout and self.config.get("use_openai_agent", False):
+            self.rollout = None
+            self.rollout_sharding_manager = None
 
         if self._is_ref:
             local_path = copy_to_local(self.config.model.path, use_shm=use_shm)
@@ -640,6 +657,10 @@ class ActorRolloutRefWorker(Worker):
 
         assert self._is_rollout
 
+        # If using OpenAI agent, rollout should not be initialized
+        if self.rollout is None or self.rollout_sharding_manager is None:
+            raise RuntimeError("Rollout not initialized - this should not happen when using OpenAI agent")
+
         meta_info = {
             "eos_token_id": self.generation_config.eos_token_id if self.generation_config is not None else self.tokenizer.eos_token_id,
             "pad_token_id": self.generation_config.pad_token_id if self.generation_config is not None else self.tokenizer.pad_token_id,
@@ -650,7 +671,7 @@ class ActorRolloutRefWorker(Worker):
 
             prompts = self.rollout_sharding_manager.preprocess_data(prompts)
             output = self.rollout.generate_sequences(prompts=prompts)
-            
+
             log_gpu_memory_usage("After rollout generation", logger=logger)
 
             output = self.rollout_sharding_manager.postprocess_data(output)

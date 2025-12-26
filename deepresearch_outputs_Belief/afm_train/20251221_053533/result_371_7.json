@@ -1,0 +1,21 @@
+{
+    "answer": "Over 30% Chinese control in 2024 China PV and BESS components.",
+    "ground_truth": "nearly complete control in upstream stages; less in downstream stages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        2222,
+        2541,
+        3473
+    ]
+}

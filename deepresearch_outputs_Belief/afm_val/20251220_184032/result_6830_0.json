@@ -1,0 +1,21 @@
+{
+    "answer": "Robert A. Heinlein",
+    "ground_truth": "\u57fa\u666e\u00b7\u7d22\u6069",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        1870,
+        3138,
+        4266
+    ]
+}

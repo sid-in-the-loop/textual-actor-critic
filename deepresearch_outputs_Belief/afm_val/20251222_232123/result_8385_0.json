@@ -1,0 +1,23 @@
+{
+    "answer": "Outlook for Emerging Markets equities relative to developed markets in 2025 is mixed, with factors including regulatory challenges, volatility, and potential impacts of geopolitical tensions, but specific details on the factors driving this expectation are not provided in the available information.",
+    "ground_truth": "Broadly match developed markets; supported by Fed rate cuts, GDP growth differentials",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        847,
+        2026,
+        3216,
+        4459,
+        5663
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "One percent.",
+    "ground_truth": "increased by more than 3%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        1165,
+        1509,
+        1911,
+        2326
+    ]
+}

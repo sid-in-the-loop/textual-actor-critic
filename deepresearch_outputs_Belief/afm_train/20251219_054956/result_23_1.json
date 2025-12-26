@@ -1,0 +1,21 @@
+{
+    "answer": "The Financial Report of the United States Government, Fiscal Year 2025",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        1801,
+        3619,
+        4123
+    ]
+}

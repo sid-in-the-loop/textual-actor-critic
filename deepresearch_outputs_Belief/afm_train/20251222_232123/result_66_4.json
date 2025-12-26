@@ -1,0 +1,23 @@
+{
+    "answer": "\u20b92,000 crore losses in Mumbai since 2020, with efforts by Maharashtra Cyber mentioned in the context of cyber financial fraud.",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        840,
+        2154,
+        2477,
+        4178,
+        5717
+    ]
+}

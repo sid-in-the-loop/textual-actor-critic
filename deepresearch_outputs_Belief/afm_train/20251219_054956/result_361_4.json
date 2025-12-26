@@ -1,0 +1,29 @@
+{
+    "answer": "2024 Annual Report on Form 20-F disclosures",
+    "ground_truth": "Novartis-Disclosure-2024-CorpAR",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        717,
+        2011,
+        3073,
+        4805,
+        6494,
+        7053,
+        7780,
+        8553
+    ]
+}

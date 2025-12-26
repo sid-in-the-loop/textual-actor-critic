@@ -1,0 +1,27 @@
+{
+    "answer": "APSA ranked academic publishers in 2007, taking into consideration both book and journal publication. The method of evaluation and specific criteria are not detailed in the available snippets.",
+    "ground_truth": "2007; book and journal publications",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        784,
+        1642,
+        2446,
+        3700,
+        4622,
+        5757,
+        6788
+    ]
+}

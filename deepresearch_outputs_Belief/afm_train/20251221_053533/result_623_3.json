@@ -1,0 +1,21 @@
+{
+    "answer": "A Guide on how to write a thesis",
+    "ground_truth": "Academic Scribes Blog Academic Writing Section",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        694,
+        1693,
+        2713,
+        2982
+    ]
+}

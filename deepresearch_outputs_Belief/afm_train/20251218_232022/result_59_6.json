@@ -1,0 +1,25 @@
+{
+    "answer": "Corporate Carbon Footprint: A comprehensive guide",
+    "ground_truth": "ESG performance: Definition and best practices\uff08Plan A Academy\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        733,
+        1023,
+        1262,
+        2407,
+        2885,
+        4438
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "Global retail sales value for the consumer products industry in 2024 was 10%, with a year-over-year percentage increase of 7.5%.",
+    "ground_truth": "2024: $7,500,000,000,000; increase: 7.5%",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        815,
+        2018,
+        3411
+    ]
+}

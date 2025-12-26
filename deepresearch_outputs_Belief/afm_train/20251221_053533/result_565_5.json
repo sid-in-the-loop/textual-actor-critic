@@ -1,0 +1,29 @@
+{
+    "answer": "China",
+    "ground_truth": "At Shanghai Technology University",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        843,
+        2287,
+        3688,
+        4976,
+        6294,
+        7810,
+        9203,
+        10345
+    ]
+}

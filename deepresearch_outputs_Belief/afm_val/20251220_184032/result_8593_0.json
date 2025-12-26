@@ -1,0 +1,23 @@
+{
+    "answer": "14.12%",
+    "ground_truth": "0.8 percentage points increase; 43.7% in 2023; 44.5% in 2024",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        846,
+        2585,
+        4185,
+        5805,
+        7220
+    ]
+}

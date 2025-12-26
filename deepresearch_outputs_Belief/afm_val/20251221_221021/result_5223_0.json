@@ -1,0 +1,23 @@
+{
+    "answer": "About Us",
+    "ground_truth": "RESOURCES section",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        769,
+        1703,
+        2801,
+        3790,
+        4737
+    ]
+}

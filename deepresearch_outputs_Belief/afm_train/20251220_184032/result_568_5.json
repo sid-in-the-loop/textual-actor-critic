@@ -1,0 +1,19 @@
+{
+    "answer": "Volume 65. No. 1 The Messenger",
+    "ground_truth": "Jan-2025-WebEdition.pdf (Christ Lutheran Church official website)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        747,
+        1597,
+        2826
+    ]
+}

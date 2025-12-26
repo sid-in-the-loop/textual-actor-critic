@@ -1,0 +1,21 @@
+{
+    "answer": "\\frac{2}{3}n",
+    "ground_truth": "\u5f53 $n \\geq 10^6$ \u65f6\uff0c$\\sum_{k=1}^{n} k p_k \\leq \\frac{n^2}{3} p_n - \\frac{n^3}{9} - \\frac{0.052 n^3}{\\ln n}$",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        853,
+        1139,
+        2358,
+        3356
+    ]
+}

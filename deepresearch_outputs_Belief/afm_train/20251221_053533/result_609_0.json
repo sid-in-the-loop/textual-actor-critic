@@ -1,0 +1,17 @@
+{
+    "answer": "Effect of breathwork on stress and mental health: A meta-analysis of ... (Scientific Reports, 2023, vol. 13, article 432, DOI:10.1038/s41598-022-27247-y)",
+    "ground_truth": "Effect of breathwork on stress and mental health: A meta-analysis of randomised-controlled trials - PMC",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        848,
+        2209
+    ]
+}

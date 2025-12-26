@@ -1,0 +1,23 @@
+{
+    "answer": "No specific inflation rate for 2026 was provided in the search results.",
+    "ground_truth": "2.1%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1862,
+        2163,
+        2505,
+        3864
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "Ritsumeikan Asia Pacific University Academic Information",
+    "ground_truth": "Ritsumeikan \u30a2\u30b8\u30a2 Pacific University Academic Information \u30b5\u30a4\u30c8: Academic Information\uff08 https://www.apu.ac.jp/academic/ \uff09",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        757,
+        1536
+    ]
+}

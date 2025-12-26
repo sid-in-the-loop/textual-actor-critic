@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to find the specific percentage of consumers who intended to upgrade to 5G in the provided search results from the annual global mobile economy report or the Global Consumer Survey 2025 by GSMA Intelligence.",
+    "ground_truth": "46%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        812,
+        2149,
+        2458,
+        4317,
+        5750,
+        7102,
+        7543
+    ]
+}

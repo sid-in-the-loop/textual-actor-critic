@@ -1,0 +1,17 @@
+{
+    "answer": "Learn from the MIT Technology Review \"What's next for AI in 2025\" article, OpenAI and Anduril partnership announced in December focused on taking down drones.",
+    "ground_truth": "Developing AI tools to counter drone threats",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        731,
+        1150
+    ]
+}

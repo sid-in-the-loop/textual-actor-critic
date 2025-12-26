@@ -1,0 +1,19 @@
+{
+    "answer": "Capgemini forecasts up to \u20ac1.26bn in investments for EV charging infrastructure in Germany by 2025, with plans for public charging points in new urban developments.",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        796,
+        2314,
+        3571
+    ]
+}

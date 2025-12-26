@@ -1,0 +1,23 @@
+{
+    "answer": "The official document does not specify the consequences for a hospital withdrawing.",
+    "ground_truth": "One-fourth reduction in annual payment update; excluded from Hospital Value-Based Purchasing Program",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        763,
+        2047,
+        2446,
+        3150,
+        3647
+    ]
+}

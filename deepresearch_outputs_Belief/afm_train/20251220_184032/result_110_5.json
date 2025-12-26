@@ -1,0 +1,21 @@
+{
+    "answer": "The Star Sydney licence suspension continues, with the Commercial Management Company ensuring a continuous operator and avoiding immediate closure. The Star Sydney Manager appointment was extended to March 2026. For The Star Gold Coast, the cinema and namely casino-specific licence suspensions were extended by the Queensland government until December 2024, after which the licence suspension for The Star Gold Coast was deferred until March 31, 2025, and subsequent deferrals until December 2024.",
+    "ground_truth": "Suspended until at least 2025-09-30; Manager's appointment extended until 2025-09-30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        819,
+        2376,
+        2796,
+        4550
+    ]
+}

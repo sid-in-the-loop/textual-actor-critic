@@ -1,0 +1,23 @@
+{
+    "answer": "Peterson's Magazine (1842-1898) had a longer publication run. Janus publications cited, if ongoing or completed, all have shorter run or lack specific end dates.",
+    "ground_truth": "Peterson's Magazine",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        695,
+        1811,
+        2905,
+        4325,
+        6139
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "The article numbered 432 in volume 13 of Scientific Reports published in 2023 could not be located using the provided search terms.",
+    "ground_truth": "Scientific Reports 2023 13:432 (PMCID: PMC9828383)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        722,
+        2029,
+        3419,
+        4550,
+        5044,
+        6394
+    ]
+}

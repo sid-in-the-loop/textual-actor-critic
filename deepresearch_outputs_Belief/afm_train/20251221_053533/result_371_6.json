@@ -1,0 +1,21 @@
+{
+    "answer": "Dominant position in module shipments for Chinese companies, implying a high degree of control across the supply chain.",
+    "ground_truth": "nearly complete control in upstream stages; less in downstream stages",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        861,
+        2279,
+        3513,
+        4920
+    ]
+}

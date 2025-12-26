@@ -1,0 +1,25 @@
+{
+    "answer": "The selection extensions boost ALFWorld's performance compared to simpler, task-specific approaches. They improve performance.",
+    "ground_truth": "91% on ALFWorld; matches more complex task-specific approaches",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        888,
+        1206,
+        1568,
+        1898,
+        2707,
+        3862
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "The percentage of respondents in 2024 who considered the integration of automation an important factor in supply chain management, as indicated in the relevant figure, is not found in the search results for the 2025 Prologis annual supply chain trends report.",
+    "ground_truth": "47%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        926,
+        1468,
+        1931,
+        2644,
+        3607,
+        1439,
+        1850,
+        2326
+    ]
+}

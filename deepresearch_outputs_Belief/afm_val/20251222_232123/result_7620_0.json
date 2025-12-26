@@ -1,0 +1,17 @@
+{
+    "answer": "Threatened to cut billions of dollars in funding.",
+    "ground_truth": "Trying to wield unprecedented and improper control over the university",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        804,
+        1880
+    ]
+}

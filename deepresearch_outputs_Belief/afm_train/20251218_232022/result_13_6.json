@@ -1,0 +1,21 @@
+{
+    "answer": "Annual reports, interim reports, earnings releases: all available through Cloudberry's investor relations site (https://www.cloudberry.no/investor-relations/reports-and-presentations).",
+    "ground_truth": "Cloudberry Clean Energy ASA Periodic Financial Report Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        2254,
+        3913,
+        5862
+    ]
+}

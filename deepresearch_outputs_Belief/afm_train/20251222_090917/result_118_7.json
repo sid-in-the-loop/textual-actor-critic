@@ -1,0 +1,23 @@
+{
+    "answer": "The 2024 roster of global systemically important banks (G-SIBs) lists 29 institutions. No single bank is explicitly distinguished as \"uniquely listed\" by name from the others based on the available information.",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        1892,
+        3183,
+        4388,
+        5732
+    ]
+}

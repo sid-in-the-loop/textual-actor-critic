@@ -1,0 +1,23 @@
+{
+    "answer": "The Global Estimates 2025 Update (UNESCO) or Global Estimates 2025 Update (Education Cannot Wait) provides the most recent global data update, with details on unique data identification from the September 2025 Global Education Data Release from the UNESCO Institute for Statistics (UIS).",
+    "ground_truth": "Global Estimates 2025 Update | Education Cannot Wait",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        788,
+        2071,
+        3339,
+        4793,
+        6130
+    ]
+}

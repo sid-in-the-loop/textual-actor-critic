@@ -1,0 +1,21 @@
+{
+    "answer": "14 days",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        811,
+        1891,
+        2616,
+        3807
+    ]
+}

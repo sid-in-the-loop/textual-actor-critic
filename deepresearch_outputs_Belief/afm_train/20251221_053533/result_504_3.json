@@ -1,0 +1,25 @@
+{
+    "answer": "A, B, C",
+    "ground_truth": "ACD",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1225,
+        2849,
+        3788,
+        4991,
+        6564,
+        8621
+    ]
+}

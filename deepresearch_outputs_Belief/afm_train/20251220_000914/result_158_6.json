@@ -1,0 +1,25 @@
+{
+    "answer": "Not found on Research World website",
+    "ground_truth": "2025 Trends\uff08Research World\uff09\u4e13\u9898\u9875",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        808,
+        2062,
+        3084,
+        4266,
+        5685,
+        6967
+    ]
+}

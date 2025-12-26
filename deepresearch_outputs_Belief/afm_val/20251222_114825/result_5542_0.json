@@ -1,0 +1,25 @@
+{
+    "answer": "Unable to locate the specific appendix figure and its associated equalized false positive rate (FPR) fairness gap data and range in the provided search results.",
+    "ground_truth": "0.00 to 0.30",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        1930,
+        3088,
+        4345,
+        5517,
+        6656
+    ]
+}

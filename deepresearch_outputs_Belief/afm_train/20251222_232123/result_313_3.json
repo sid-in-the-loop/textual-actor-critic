@@ -1,0 +1,19 @@
+{
+    "answer": "Search - Child Trends",
+    "ground_truth": "Child Trends\u671f\u520a\u62a5\u544a\u96c6\uff08childtrends.org/publications\uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        739,
+        1661,
+        2540
+    ]
+}

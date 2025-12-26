@@ -1,0 +1,19 @@
+{
+    "answer": "FoA revenue for the quarter ending December 31, 2024, was $17.5 billion, and this value represented the highest among all quarters included in the recast presentation.",
+    "ground_truth": "$47,302 million, highest among all quarters",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        893,
+        2280,
+        3875
+    ]
+}

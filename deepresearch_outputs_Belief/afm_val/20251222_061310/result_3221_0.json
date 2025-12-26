@@ -1,0 +1,21 @@
+{
+    "answer": "Increased digital literacy and access to technology in preschool and kindergarten environments by 2025.",
+    "ground_truth": "a new baby boom entering preschool and kindergarten",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        904,
+        2118,
+        3304,
+        4462
+    ]
+}

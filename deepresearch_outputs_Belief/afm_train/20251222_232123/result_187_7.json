@@ -1,0 +1,29 @@
+{
+    "answer": "Management's Discussion and Analysis of Financial Condition and Results of Operations",
+    "ground_truth": "Competition",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        744,
+        1957,
+        3053,
+        4161,
+        4786,
+        6077,
+        7321,
+        8718
+    ]
+}

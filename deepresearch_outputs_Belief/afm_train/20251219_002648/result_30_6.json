@@ -1,0 +1,27 @@
+{
+    "answer": "Confirmation of payee",
+    "ground_truth": "'BSB and account number not found'",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        2066,
+        2506,
+        2583,
+        3364,
+        3970,
+        5352
+    ]
+}

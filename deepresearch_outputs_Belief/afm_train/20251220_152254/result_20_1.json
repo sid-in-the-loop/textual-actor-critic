@@ -1,0 +1,21 @@
+{
+    "answer": "Scientific Reports publishes original research in two formats: Article and Registered Report. For Registered Reports, see section below.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        663,
+        1544,
+        2195,
+        2871
+    ]
+}

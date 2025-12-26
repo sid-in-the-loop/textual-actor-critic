@@ -1,0 +1,25 @@
+{
+    "answer": "Figure 1 or Figure 2 in arXiv:2505.00581v1.",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        762,
+        1953,
+        3222,
+        3619,
+        4072,
+        4699
+    ]
+}

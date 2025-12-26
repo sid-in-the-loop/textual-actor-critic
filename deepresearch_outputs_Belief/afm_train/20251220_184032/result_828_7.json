@@ -1,0 +1,23 @@
+{
+    "answer": "The Resolution on the Amendment to the Constitution of the Communist Party of China in October 2017.",
+    "ground_truth": "The 16th CCP Congress in 2002",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        1893,
+        2146,
+        3256,
+        3537
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "The following table details the main specialties provided by the Group, broken down geographically, by sector and by segment.",
+    "ground_truth": "Group activities by sector",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        792,
+        2009,
+        3219,
+        4507,
+        6017,
+        6518,
+        7110,
+        8534
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Single-column text without justification; Arabic numerals in footer pages",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        706,
+        1514,
+        2372,
+        2697,
+        2885
+    ]
+}

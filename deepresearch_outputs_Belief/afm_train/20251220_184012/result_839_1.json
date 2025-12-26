@@ -1,0 +1,19 @@
+{
+    "answer": "SEC Filings - Investor Relations | Marriott International (2025 Annual Report, 2024 Annual Report, 2024 Form 10-K)",
+    "ground_truth": "Marriott International Annual Report 2025; Marriott International (MAR) Historical Annual Reports 2002-2024",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        776,
+        2245,
+        3357
+    ]
+}

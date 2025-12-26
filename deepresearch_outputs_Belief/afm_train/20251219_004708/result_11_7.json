@@ -1,0 +1,25 @@
+{
+    "answer": "No, the number of recent submissions in Earth and Planetary Astrophysics (14,462) is greater than those in Condensed Matter (14,404) by 58.",
+    "ground_truth": "Yes",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        721,
+        1624,
+        2722,
+        3999,
+        5413,
+        6671
+    ]
+}

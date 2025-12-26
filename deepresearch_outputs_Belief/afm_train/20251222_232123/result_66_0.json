@@ -1,0 +1,25 @@
+{
+    "answer": "Unspecified",
+    "ground_truth": "Rupees 600 crore",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        2404,
+        3970,
+        5220,
+        6451,
+        7603
+    ]
+}

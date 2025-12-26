@@ -1,0 +1,25 @@
+{
+    "answer": "AI is redefining how marketers win attention \u00b7 Short-form video is still the fastest way to earn attention \u00b7 Influencer marketing is all ... Read more",
+    "ground_truth": "10 key marketing trends for the US in 2025\uff08askattest.com\u6587\u7ae0\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1609,
+        1994,
+        2483,
+        2959,
+        3456
+    ]
+}

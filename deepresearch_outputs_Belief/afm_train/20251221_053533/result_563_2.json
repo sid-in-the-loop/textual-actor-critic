@@ -1,0 +1,23 @@
+{
+    "answer": "98 percent; 535 percent",
+    "ground_truth": "98% (FY2024), 535% (2099)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        904,
+        2372,
+        3752,
+        4775,
+        6183
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Library of Congress Classification (formerly Dewey Decimal System)",
+    "ground_truth": "Emerald Insight \u7ba1\u7406\u5b66\u4e0e\u4fe1\u606f\u79d1\u5b66\u671f\u520a\u5206\u7c7b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        2070,
+        3082,
+        4382
+    ]
+}

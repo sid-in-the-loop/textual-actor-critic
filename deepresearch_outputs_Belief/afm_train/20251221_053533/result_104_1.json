@@ -1,0 +1,29 @@
+{
+    "answer": "Frank Miller, Brady Robinson",
+    "ground_truth": "\"Starman\" and \"Robin\"",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        726,
+        1839,
+        3019,
+        4839,
+        6419,
+        7939,
+        9445,
+        10888
+    ]
+}

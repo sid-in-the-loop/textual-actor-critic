@@ -1,0 +1,25 @@
+{
+    "answer": "Universal Decimal Classification (UDC)",
+    "ground_truth": "Emerald Insight \u7ba1\u7406\u5b66\u4e0e\u4fe1\u606f\u79d1\u5b66\u671f\u520a\u5206\u7c7b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1783,
+        2916,
+        3680,
+        4724,
+        5956
+    ]
+}

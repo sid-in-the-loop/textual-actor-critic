@@ -1,0 +1,25 @@
+{
+    "answer": "Outstanding legal proceedings and their related contingent liabilities as of 31 December 2024 are disclosed in Note B4 of the The Star Entertainment Group Limited 1HFY25 Financial Report, but the specific details are not provided in the search results.",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        860,
+        1962,
+        3374,
+        4604,
+        5930,
+        7233
+    ]
+}

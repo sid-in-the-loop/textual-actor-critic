@@ -1,0 +1,25 @@
+{
+    "answer": "New Journalism produced audience hunger for cultural and political trends and then satisfied that desire, a documented tactic since the 1960s.",
+    "ground_truth": "gaining popularity since the 1960s",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        831,
+        1926,
+        2885,
+        4088,
+        6297,
+        6790
+    ]
+}

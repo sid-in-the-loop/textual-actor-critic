@@ -1,0 +1,23 @@
+{
+    "answer": "Academic Publishing in 2025: How Research Will Transform",
+    "ground_truth": "Academic Publishing in 2025: How Research Will Transform | PublishingState.com",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        768,
+        1053,
+        1308,
+        2417,
+        2890
+    ]
+}

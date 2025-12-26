@@ -1,0 +1,23 @@
+{
+    "answer": "22%-23%",
+    "ground_truth": "over 15 years",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        1955,
+        3336,
+        3658,
+        4756
+    ]
+}

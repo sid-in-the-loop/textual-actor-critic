@@ -1,0 +1,27 @@
+{
+    "answer": "Unable to locate the specific Yahoo Finance article from March 9, 2025, that cites Treasury Secretary Scott Bessent's analysis of the U.S. economy for the open group net present value (NPV) of future social insurance revenue and expenditures over 75 years starting in FY2024.",
+    "ground_truth": "($78,400,000,000,000)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        800,
+        2080,
+        3375,
+        4648,
+        5986,
+        7274,
+        8610
+    ]
+}

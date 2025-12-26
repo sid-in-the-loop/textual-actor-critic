@@ -1,0 +1,21 @@
+{
+    "answer": "The Web of Science categorizes journals into 25 distinct areas, including Science and Technology, Social Sciences, Arts and Humanities, and the Sciences (e.g., Biology and Biochemistry, Chemistry, Computer Science, Engineering, Environmental Sciences, Law, Economics, Medicine, Physics, Psychology, Public Administration, Cultural Studies, Religious Studies, and Sociology).",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        754,
+        2025,
+        3201,
+        4414
+    ]
+}

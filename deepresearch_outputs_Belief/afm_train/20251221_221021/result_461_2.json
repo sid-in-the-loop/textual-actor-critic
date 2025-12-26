@@ -1,0 +1,25 @@
+{
+    "answer": "Darin S. Cape",
+    "ground_truth": "Andrea Sorrentino",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        794,
+        1823,
+        2775,
+        3810,
+        5087,
+        6338
+    ]
+}

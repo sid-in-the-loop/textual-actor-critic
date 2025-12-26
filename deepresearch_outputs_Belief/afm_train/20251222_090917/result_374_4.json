@@ -1,0 +1,25 @@
+{
+    "answer": "CYBERSEC",
+    "ground_truth": "GovTech Annual Security Predictions Series",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        751,
+        1792,
+        2899,
+        3937,
+        5177,
+        6039
+    ]
+}

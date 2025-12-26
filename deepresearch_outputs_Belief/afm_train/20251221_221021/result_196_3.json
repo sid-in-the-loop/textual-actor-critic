@@ -1,0 +1,19 @@
+{
+    "answer": "CIDR: COVID-19 Education Response",
+    "ground_truth": "McKinsey & Company COVID-19 Education Research Series",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        767,
+        2173,
+        3595
+    ]
+}

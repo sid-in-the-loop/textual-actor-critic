@@ -1,0 +1,19 @@
+{
+    "answer": "Women's Financial Inclusion",
+    "ground_truth": "Main Highlights of the Financial Inclusion Strategy (2022-2025)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        871,
+        1951,
+        3015
+    ]
+}

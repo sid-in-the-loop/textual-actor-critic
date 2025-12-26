@@ -1,0 +1,21 @@
+{
+    "answer": "Recommend that all tertiary education institutions must provide student mental health and wellbeing frameworks.",
+    "ground_truth": "better mental health promotion, detection, and management among university students",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        1865,
+        2191,
+        3426
+    ]
+}

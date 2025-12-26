@@ -1,0 +1,25 @@
+{
+    "answer": "The Act of Settlement 1662",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        852,
+        2207,
+        3370,
+        4468,
+        5711,
+        6923
+    ]
+}

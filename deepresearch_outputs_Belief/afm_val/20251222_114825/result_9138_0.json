@@ -1,0 +1,21 @@
+{
+    "answer": "Freedom of Information Act request",
+    "ground_truth": "An inconvenient data point was buried in the study's appendix.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        861,
+        2406,
+        3054,
+        3799
+    ]
+}

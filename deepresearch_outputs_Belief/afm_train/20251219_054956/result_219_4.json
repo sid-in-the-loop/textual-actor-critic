@@ -1,0 +1,29 @@
+{
+    "answer": "The specified article could not be found with the provided search terms.",
+    "ground_truth": "10.3389/fpsyg.2023.1020269",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        830,
+        1151,
+        1740,
+        3210,
+        3745,
+        5186,
+        6391,
+        6636
+    ]
+}

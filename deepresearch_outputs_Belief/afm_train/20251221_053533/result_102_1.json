@@ -1,0 +1,21 @@
+{
+    "answer": "15 times more likely to experience very low food security",
+    "ground_truth": "Financially insecure students were 15 times more likely to experience food insecurity; 6.5% and 48% (statistical outcomes reported).",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        937,
+        1388,
+        2054,
+        2489
+    ]
+}

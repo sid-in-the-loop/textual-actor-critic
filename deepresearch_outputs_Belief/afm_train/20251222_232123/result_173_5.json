@@ -1,0 +1,21 @@
+{
+    "answer": "GSMA Intelligence's The Mobile Economy 2023",
+    "ground_truth": "GSMA Intelligence \u6570\u636e\u62a5\u544a\u96c6",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        737,
+        1855,
+        2916,
+        4063
+    ]
+}

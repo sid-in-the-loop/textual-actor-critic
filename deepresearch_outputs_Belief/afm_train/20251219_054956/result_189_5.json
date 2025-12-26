@@ -1,0 +1,21 @@
+{
+    "answer": "It does not appear that an official count of participants who protested outside parliament opposing the \"Term of Parliament (Enabling 4-year Term) Legislation Amendment Bill\" last year is available within the specific legislative records provided.",
+    "ground_truth": "More than 40,000",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        779,
+        2031,
+        3408,
+        4157
+    ]
+}

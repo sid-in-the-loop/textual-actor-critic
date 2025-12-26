@@ -1,0 +1,19 @@
+{
+    "answer": "Promote constant work, effort, and the call to keep going.",
+    "ground_truth": "signed",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        2139,
+        3232
+    ]
+}

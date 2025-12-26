@@ -1,0 +1,23 @@
+{
+    "answer": "Montreal Expos",
+    "ground_truth": "Puerto Rican",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        837,
+        1843,
+        3304,
+        4615,
+        5906
+    ]
+}

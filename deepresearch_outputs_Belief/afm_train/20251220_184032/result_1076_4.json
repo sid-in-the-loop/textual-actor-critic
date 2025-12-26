@@ -1,0 +1,19 @@
+{
+    "answer": "Optum Health revenue: $105.4 billion; patients served: 99 million; expected additional patients 2025: 650,000.",
+    "ground_truth": "$105.4 billion revenue, 4.7 million served, 650,000 additional in 2025",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        839,
+        2213,
+        3606
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "Project 2025 was a flashpoint due to concerns about its military implications and potential escalation.",
+    "ground_truth": "became a flashpoint during the presidential campaign",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        921,
+        2217,
+        3424,
+        4666
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "answer": "Sebastiano del Piombo",
+    "ground_truth": "Garrick",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1121,
+        2313,
+        3565,
+        4933,
+        5979,
+        7306,
+        8695
+    ]
+}

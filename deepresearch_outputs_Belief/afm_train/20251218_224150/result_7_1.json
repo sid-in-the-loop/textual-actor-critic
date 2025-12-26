@@ -1,0 +1,29 @@
+{
+    "answer": "The proportion aged 18 and 25 is 73.6% (from 14,880 students).",
+    "ground_truth": "75% aged 18-25, 33% international students, 85% consented",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        817,
+        1797,
+        3050,
+        4148,
+        4677,
+        4937,
+        5335,
+        5765
+    ]
+}

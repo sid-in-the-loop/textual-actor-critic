@@ -1,0 +1,17 @@
+{
+    "answer": "Democracy Report",
+    "ground_truth": "DR25: 25 Years of Autocratization - Democracy Trumped?",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        810,
+        1735
+    ]
+}

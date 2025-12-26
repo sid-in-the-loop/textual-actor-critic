@@ -1,0 +1,19 @@
+{
+    "answer": "Publication 17 (2025), Your Federal Income Tax",
+    "ground_truth": "2025 tax filing season starts as IRS begins accepting tax returns today; taxpayers have many options for help (IRS.gov\u65b0\u95fb\u7a3f)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        2268,
+        3545
+    ]
+}

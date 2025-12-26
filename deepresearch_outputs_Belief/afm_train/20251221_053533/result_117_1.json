@@ -1,0 +1,23 @@
+{
+    "answer": "UK central bank (Bank of England) FPC: April 2, July 9, October 8, and November 25 2025 have official meeting/Record dates with corresponding publication dates (December 2 and 8). Bank of England official records on FPC meetings are available on https://www.bankofengland.co.uk/about/people/financial-policy-committee/ and https://www.bankofengland.co.uk/financial-policy-committee-record/2025/",
+    "ground_truth": "Financial Policy Committee dates for 2025 (Bank of England)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        1763,
+        3019,
+        4544,
+        5994
+    ]
+}

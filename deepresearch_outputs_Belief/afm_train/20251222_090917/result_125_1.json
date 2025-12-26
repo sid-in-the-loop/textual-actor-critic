@@ -1,0 +1,17 @@
+{
+    "answer": "What 2025 Taught Us About the Future of Peer Review",
+    "ground_truth": "The Future of Peer Review: Innovations and Challenges for 2024-2025",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        797,
+        2248
+    ]
+}

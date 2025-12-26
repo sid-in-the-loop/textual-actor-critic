@@ -1,0 +1,25 @@
+{
+    "answer": "Yes, the report discusses the development and expansion of electric vehicle charging infrastructure in urban areas as part of the financial services trends for 2025.",
+    "ground_truth": "Multiple functioning charging stations in newly constructed urban areas",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        819,
+        2191,
+        3239,
+        4512,
+        5693,
+        6910
+    ]
+}

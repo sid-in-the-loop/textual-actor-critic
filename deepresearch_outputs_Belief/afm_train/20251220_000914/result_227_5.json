@@ -1,0 +1,25 @@
+{
+    "answer": "Dive into Budget 2025 as we summarise and discuss its provisions",
+    "ground_truth": "Budget 2025 Overview (PwC Malaysia)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        802,
+        2309,
+        2787,
+        4006,
+        5751,
+        7541
+    ]
+}

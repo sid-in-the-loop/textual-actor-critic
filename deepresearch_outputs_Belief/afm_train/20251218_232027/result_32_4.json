@@ -1,0 +1,27 @@
+{
+    "answer": "Oath of Allegiance",
+    "ground_truth": "The I'Anson Baronetcy of Bassetbury",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        740,
+        2234,
+        3544,
+        5268,
+        5783,
+        7413,
+        8779
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "answer": "No information available",
+    "ground_truth": "18 units",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1061,
+        2940,
+        4193,
+        4781
+    ]
+}

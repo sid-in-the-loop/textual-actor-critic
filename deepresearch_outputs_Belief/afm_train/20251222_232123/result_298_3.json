@@ -1,0 +1,21 @@
+{
+    "answer": "6.9 trillion",
+    "ground_truth": "\u8054\u90a6\u653f\u5e9c\u5e74\u5ea6\u9884\u7b97\u603b\u989d\uff08\u4ee5\u767d\u5bab\u4e0e\u56fd\u4f1a\u901a\u8fc7\u7684\u8054\u90a6\u7edf\u4e00\u9884\u7b97\u65b9\u6848\u4e3a\u6807\u8bc6\uff09",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        725,
+        1624,
+        2620,
+        3499
+    ]
+}

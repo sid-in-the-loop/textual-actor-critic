@@ -1,0 +1,23 @@
+{
+    "answer": "Annual Stability and Growth Pact Compliance Report, European High-Level Economic and Financial Outlook",
+    "ground_truth": "National medium-term fiscal-structural plans (MTPs)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        845,
+        2003,
+        3211,
+        4628,
+        6095
+    ]
+}

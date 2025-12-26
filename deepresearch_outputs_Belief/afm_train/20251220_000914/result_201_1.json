@@ -1,0 +1,29 @@
+{
+    "answer": "Not found in the study.",
+    "ground_truth": "r = -0.66; p < 0.001",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        775,
+        2214,
+        2711,
+        3536,
+        4172,
+        4777,
+        6359,
+        8133
+    ]
+}

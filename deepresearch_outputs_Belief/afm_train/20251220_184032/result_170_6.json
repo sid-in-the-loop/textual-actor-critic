@@ -1,0 +1,23 @@
+{
+    "answer": "\u8c4c\u8c46",
+    "ground_truth": "Iphone",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        908,
+        2557,
+        4362,
+        5954,
+        8022
+    ]
+}

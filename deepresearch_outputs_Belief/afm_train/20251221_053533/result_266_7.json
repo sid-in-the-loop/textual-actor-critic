@@ -1,0 +1,25 @@
+{
+    "answer": "Ad:\n![](https://d1plcp96u89f5xm.cloudfront.net/download/ade.txt)\n\nDed:\n!",
+    "ground_truth": "Sum of long-term borrowings, short-term borrowings, current portion of long-term borrowings, other non-current and current financial liabilities, minus cash and cash equivalents, minus other current and non-current financial assets; reported per ESMA Guideline no. 39 (2021-03-04), effective from 2021-05-05, and CONSOB Warning Notice no. 5/21 (2021-04-29)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        996,
+        2890,
+        3151,
+        4556,
+        4974,
+        6542
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "answer": "The results suggest that AI-powered tools like ChatGPT have significant potential in offering emotional support, with high levels of user satisfaction.",
+    "ground_truth": "Increased happiness, reduced stress, improved academic engagement",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        862,
+        2065
+    ]
+}

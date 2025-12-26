@@ -1,0 +1,21 @@
+{
+    "answer": "Clara Blair Winters (Magdalene) is 69 years old.",
+    "ground_truth": "The Know",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        665,
+        1733,
+        2774,
+        3699
+    ]
+}

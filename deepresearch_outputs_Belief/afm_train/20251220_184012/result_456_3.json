@@ -1,0 +1,17 @@
+{
+    "answer": "Global economy is unstable, risks include tariffs, inflation, financial market turmoil.",
+    "ground_truth": "World economic scenarios and risks to 2025",
+    "rewards": [
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        1736
+    ]
+}

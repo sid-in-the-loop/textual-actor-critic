@@ -1,0 +1,21 @@
+{
+    "answer": "Rodin University International Journal of Hydrology and Earth System Sciences",
+    "ground_truth": "Elsevier",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        808,
+        2113,
+        3405,
+        4706
+    ]
+}

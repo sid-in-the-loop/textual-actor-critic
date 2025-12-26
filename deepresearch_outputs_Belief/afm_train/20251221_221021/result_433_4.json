@@ -1,0 +1,23 @@
+{
+    "answer": "Q4 2024 FoA revenue was $28.68 billion, which was the highest revenue quarter for the period.",
+    "ground_truth": "$47,302 million, highest among all quarters",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        974,
+        2314,
+        3668,
+        5124,
+        6589
+    ]
+}

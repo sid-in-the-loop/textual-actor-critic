@@ -1,0 +1,23 @@
+{
+    "answer": "WRC-27 will consider terahertz bands for potential future 6G spectrum expansion.",
+    "ground_truth": "4.5 GHz, 7\u20138 GHz, 14 GHz",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        803,
+        1897,
+        2572,
+        4267,
+        4878
+    ]
+}

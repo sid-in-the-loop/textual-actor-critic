@@ -1,0 +1,19 @@
+{
+    "answer": "Strategic upskilling and reskilling combined with AI-driven talent forecasting.",
+    "ground_truth": "innovative hiring strategies and upskilling opportunities",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        927,
+        2408,
+        3652
+    ]
+}

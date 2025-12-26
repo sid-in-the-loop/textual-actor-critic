@@ -1,0 +1,25 @@
+{
+    "answer": "Fiscal Year 2025 Annual Report of the United States Mint; FY2025 Agency Financial Report (referred to as AFR) - United States Government Secretariat; FY2025 Annual Report to Congress (OFR-AR-2025).",
+    "ground_truth": "ANNUAL REPORT 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        700,
+        1656,
+        2785,
+        3927,
+        5223,
+        6703
+    ]
+}

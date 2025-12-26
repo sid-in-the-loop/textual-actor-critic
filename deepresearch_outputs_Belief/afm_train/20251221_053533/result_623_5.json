@@ -1,0 +1,25 @@
+{
+    "answer": "https://academiascribes.com/blog/online-academic-writing-explained",
+    "ground_truth": "Academic Scribes Blog Academic Writing Section",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        727,
+        1726,
+        2912,
+        3913,
+        5151,
+        5391
+    ]
+}

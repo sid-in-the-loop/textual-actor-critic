@@ -1,0 +1,19 @@
+{
+    "answer": "The requested news feature by The Beijing News on May 15, 2025, could not be located.",
+    "ground_truth": "\u7279\u6717\u666e\u548c\u7f8e\u56fd\u9876\u5c16\u5927\u5b66\u7684\u201c\u6218\u4e89\u201d\uff08\u65b0\u4eac\u62a5 2025\u5e745\u670815\u65e5\u4e13\u9898\u62a5\u9053\uff09",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        877,
+        2193,
+        3296
+    ]
+}

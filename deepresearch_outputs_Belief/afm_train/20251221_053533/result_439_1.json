@@ -1,0 +1,29 @@
+{
+    "answer": "416 million",
+    "ground_truth": "2022-02-01",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        866,
+        2015,
+        2319,
+        2669,
+        3137,
+        4368,
+        4566,
+        4951
+    ]
+}

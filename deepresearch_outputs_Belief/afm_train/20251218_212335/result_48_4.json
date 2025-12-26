@@ -1,0 +1,23 @@
+{
+    "answer": "Slide as Abstract",
+    "ground_truth": "Figure 3",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        669,
+        2208,
+        3232,
+        3381,
+        3514
+    ]
+}

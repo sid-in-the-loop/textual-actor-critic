@@ -1,0 +1,21 @@
+{
+    "answer": "Computer Science, Economics, Electrical Engineering and Systems Science, Mathematics, Physics, Quantitative Biology, Quantitative Finance, Statistics",
+    "ground_truth": "arXiv Subject Areas",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        713,
+        1647,
+        2739,
+        3821
+    ]
+}

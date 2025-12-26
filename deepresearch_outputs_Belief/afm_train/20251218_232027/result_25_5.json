@@ -1,0 +1,25 @@
+{
+    "answer": "Web of Science's subject categorization is based on the Science and Technology, Social Sciences, and Arts and Humanities main categories, with each having broader facets within them.",
+    "ground_truth": "Web of Science Subject Categories",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 1,
+    "context lengths": [
+        737,
+        1900,
+        2932,
+        4000,
+        5175,
+        960
+    ]
+}

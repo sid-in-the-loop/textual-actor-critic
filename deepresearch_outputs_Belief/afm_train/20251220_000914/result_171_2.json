@@ -1,0 +1,19 @@
+{
+    "answer": "The Company has assessed there is no present obligation in respect of this matter, representing a contingent liability as of 31 December 2024.",
+    "ground_truth": "Outstanding legal proceedings and contingent liabilities for potential damages and insurance coverage",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        897,
+        2223,
+        3646
+    ]
+}

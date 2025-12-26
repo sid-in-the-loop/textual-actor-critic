@@ -1,0 +1,21 @@
+{
+    "answer": "Loss and damage finance",
+    "ground_truth": "Accurate and independent analysis",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        880,
+        2075,
+        2418,
+        3724
+    ]
+}

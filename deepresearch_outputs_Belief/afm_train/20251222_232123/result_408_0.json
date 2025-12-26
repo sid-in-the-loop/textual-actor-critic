@@ -1,0 +1,21 @@
+{
+    "answer": "AGU",
+    "ground_truth": "Nature Predictions of Major Science Events for 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        822,
+        1861,
+        3025,
+        4031
+    ]
+}

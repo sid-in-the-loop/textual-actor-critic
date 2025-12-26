@@ -1,0 +1,17 @@
+{
+    "answer": "News conference at the Capitol",
+    "ground_truth": "pointed to a spot on a map",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        913,
+        1969
+    ]
+}

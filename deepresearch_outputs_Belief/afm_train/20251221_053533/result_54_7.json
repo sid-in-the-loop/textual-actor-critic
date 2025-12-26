@@ -1,0 +1,23 @@
+{
+    "answer": "Code 13: Art/Art Studies, General",
+    "ground_truth": "Art Studies",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        724,
+        1884,
+        3008,
+        4299,
+        5485
+    ]
+}

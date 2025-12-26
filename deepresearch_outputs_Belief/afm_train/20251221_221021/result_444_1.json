@@ -1,0 +1,17 @@
+{
+    "answer": "Reports Of Cheating At Colleges Soar During The Pandemic",
+    "ground_truth": "NPR Reports Academic Integrity&Cheating News Compilation Page",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        743,
+        2134
+    ]
+}

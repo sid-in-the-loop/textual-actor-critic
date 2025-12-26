@@ -1,0 +1,19 @@
+{
+    "answer": "Hootsuite Social Media Trends Report",
+    "ground_truth": "Hootsuite 2025 Social Trends Report",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1003,
+        2066,
+        3285
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "2024 Financial Services regulatory priorities - KPMG International",
+    "ground_truth": "The year ahead in financial services regulation \u2013 2024/25 (Dentons)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        773,
+        2167,
+        3294,
+        4416,
+        4887
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Other operating (income) expense, net decreased by $0.139 billion from 2023 to 2024, contributing to the $0.101 billion decrease in Non-GAAP operating margin. (2023 Non-GAAP Operating Income: $11.6 billion; 2024 Non-GAAP Operating Income: $11.7 billion; Decrease in Non-GAAP Operating Income: $0.101 billion)",
+    "ground_truth": "-0.4 percentage point",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        872,
+        2317,
+        3737,
+        5243,
+        6800,
+        8416,
+        9962,
+        11830
+    ]
+}

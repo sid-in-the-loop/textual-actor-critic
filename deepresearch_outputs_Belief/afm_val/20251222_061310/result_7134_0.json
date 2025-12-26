@@ -1,0 +1,23 @@
+{
+    "answer": "Quarterly interquartile range funding ratios for DB schemes from 2021 Q4 to 2024 Q3 are available in the Pensions Regulator's 'Occupational defined benefit scheme funding analysis 2025'.",
+    "ground_truth": "115% to 140%",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        874,
+        2395,
+        3673,
+        5044,
+        6394
+    ]
+}

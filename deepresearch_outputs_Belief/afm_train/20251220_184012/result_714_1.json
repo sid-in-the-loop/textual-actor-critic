@@ -1,0 +1,21 @@
+{
+    "answer": "Thorough and potentially lengthy, with 100% genuine reviews and detailed testimonials.",
+    "ground_truth": "Rarely exceed 1,000 words",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        703,
+        1740,
+        2675,
+        3759
+    ]
+}

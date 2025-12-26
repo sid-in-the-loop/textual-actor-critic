@@ -1,0 +1,21 @@
+{
+    "answer": "NSF CAREER 1149728",
+    "ground_truth": "1943138",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        825,
+        1867,
+        2238,
+        2419
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "answer": "45% increase in website traffic; 20% increase in new customer sign-ups",
+    "ground_truth": "35% increase in website traffic, 10% lift in new customer sign-ups",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        874,
+        1106,
+        2139
+    ]
+}

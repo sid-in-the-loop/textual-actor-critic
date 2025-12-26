@@ -1,0 +1,29 @@
+{
+    "answer": "The webpage that reviews and ranks 15 AI research tools by their features and use cases for academic research in 2025 was not found in the search results or could not provide a complete list.",
+    "ground_truth": "15+ Best AI Tools for Academic Research (Free+Paid) 2025",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        828,
+        2117,
+        2498,
+        2812,
+        3607,
+        4153,
+        4871,
+        5409
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "answer": "Discusses AI/ML's influence on academic publishing in 2025, focusing on openness, innovation, and inclusivity, within the context of international academic publishing technology vendors.",
+    "ground_truth": "streamlining peer review, enhancing content discoverability, improving research analytics",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        884,
+        1934,
+        2880,
+        4000,
+        4344,
+        4781,
+        5916,
+        6989
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "Beijing Funeral Service Center",
+    "ground_truth": "No",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        882,
+        2218,
+        3741,
+        5401,
+        6713
+    ]
+}

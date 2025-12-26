@@ -1,0 +1,25 @@
+{
+    "answer": "Reduced diplomatic engagement with North Korea.",
+    "ground_truth": "reduced inclination",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "reward_sum": 1,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        857,
+        1942,
+        2274,
+        2663,
+        3124,
+        3487
+    ]
+}

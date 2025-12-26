@@ -1,0 +1,21 @@
+{
+    "answer": "Scientific Reports: ideal article length no more than 11 typeset pages; main text between 4,500 and 8,000 words (without abstract, figures, references, appendices, tables, and/or examples); submission files should be .doc or .docx.",
+    "ground_truth": "Submission guidelines | Scientific Reports",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        663,
+        1468,
+        2235,
+        2546
+    ]
+}

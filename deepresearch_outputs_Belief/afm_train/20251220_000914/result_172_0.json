@@ -1,0 +1,29 @@
+{
+    "answer": "The official classification and coding system for academic disciplines in China, defined by GB/T 13745-2009, is the Discipline Classification and Code system, which specifies the classification principles, disciplines, sorting, encoding, and discipline classification system and code.",
+    "ground_truth": "Classification and Code of National Standard Disciplines of the People's Republic of China",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        760,
+        2203,
+        3479,
+        4973,
+        6602,
+        8080,
+        9453,
+        11267
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "answer": "Justin Bieber",
+    "ground_truth": "\u80e1\u5f66\u658c",
+    "rewards": [
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 1,
+    "search count": 0,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        982
+    ]
+}

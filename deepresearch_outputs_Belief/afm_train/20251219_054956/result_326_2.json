@@ -1,0 +1,29 @@
+{
+    "answer": "\u201c\u6700Popular\u620f\u5267\u8282\u76ee\u5956\u201d",
+    "ground_truth": "\u8537\u8587\u4e4b\u604b",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        1086,
+        2350,
+        3766,
+        4065,
+        4608,
+        5681,
+        7350,
+        8095
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "answer": "More than 400 contributions.",
+    "ground_truth": "217",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        809,
+        2036,
+        2472,
+        2919,
+        3773
+    ]
+}

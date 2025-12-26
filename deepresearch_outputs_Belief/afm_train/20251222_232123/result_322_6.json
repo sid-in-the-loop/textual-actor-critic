@@ -1,0 +1,27 @@
+{
+    "answer": "CEOs' acknowledgment of their responsibility for child safety failures",
+    "ground_truth": "no response from Mark Zuckerberg",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 7,
+    "search count": 6,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        781,
+        1939,
+        2222,
+        2810,
+        3139,
+        3458,
+        3864
+    ]
+}

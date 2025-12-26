@@ -1,0 +1,17 @@
+{
+    "answer": "Optum Health served 99 million people in 2024, expects to serve 650,000 additional patients in 2025. UnitedHealth Group reported $45.7 billion in 2024 revenue and expects $450 billion to $455 billion in 2025 revenue.",
+    "ground_truth": "$105.4 billion revenue, 4.7 million served, 650,000 additional in 2025",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        841,
+        2318
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "answer": "The image depicts a chart or graph with quantitative data related to transaction volume and value in the pre-owned business jet market.",
+    "ground_truth": "Photograph of an airplane in flight; no chart, graph, or quantitative data.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        1102,
+        2190,
+        2520,
+        3759,
+        4978
+    ]
+}

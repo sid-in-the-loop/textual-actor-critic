@@ -1,0 +1,21 @@
+{
+    "answer": "Dhurandhar",
+    "ground_truth": "A list of the highest-grossing Hindi cinema films released in 2025 is provided.",
+    "rewards": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 4,
+    "search count": 3,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        917,
+        1984,
+        3063,
+        4113
+    ]
+}

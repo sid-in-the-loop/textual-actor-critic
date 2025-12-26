@@ -1,0 +1,17 @@
+{
+    "answer": "Trump withdrew from the Paris Agreement in early 2025.",
+    "ground_truth": "Withdrew US from Paris Agreement on his first day in office",
+    "rewards": [
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 2,
+    "search count": 1,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        786,
+        2002
+    ]
+}

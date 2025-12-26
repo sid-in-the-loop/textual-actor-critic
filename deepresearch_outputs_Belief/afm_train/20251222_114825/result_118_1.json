@@ -1,0 +1,25 @@
+{
+    "answer": "Two banks moving to different \"buckets\" in 2024, meaning they will have a higher or lower capital requirement.",
+    "ground_truth": "Deutsche Bank",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        798,
+        2128,
+        3463,
+        4777,
+        6408,
+        7791
+    ]
+}

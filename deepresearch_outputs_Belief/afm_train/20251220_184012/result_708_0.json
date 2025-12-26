@@ -1,0 +1,23 @@
+{
+    "answer": "Operating cash flow $96,625 million",
+    "ground_truth": "Apple FY2025 First Quarter Financial Results Press Release",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        756,
+        2228,
+        3424,
+        4693,
+        5958
+    ]
+}

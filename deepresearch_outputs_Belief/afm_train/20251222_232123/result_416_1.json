@@ -1,0 +1,19 @@
+{
+    "answer": "DOI: 10.1038/s41598-025-30050-0",
+    "ground_truth": "Scientific Reports 2023 13:432 (PMCID: PMC9828383)",
+    "rewards": [
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 3,
+    "search count": 2,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        755,
+        1834,
+        3012
+    ]
+}

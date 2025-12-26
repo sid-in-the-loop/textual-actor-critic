@@ -1,0 +1,23 @@
+{
+    "answer": "Generative AI lacks the human creativity to achieve scientific discovery from scratch.",
+    "ground_truth": "Abstracts written by ChatGPT fool scientists",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        770,
+        2360,
+        3593,
+        4833,
+        6357
+    ]
+}

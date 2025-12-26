@@ -1,0 +1,29 @@
+{
+    "answer": "Nottingham",
+    "ground_truth": "Dudley",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        924,
+        2055,
+        3258,
+        4377,
+        5502,
+        6755,
+        7998,
+        9306
+    ]
+}

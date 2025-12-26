@@ -1,0 +1,29 @@
+{
+    "answer": "The specific textual description of Figure 0 depicting the volatility distribution of the unemployment rate in Hong Kong prior to January 2025 is not available in the search results of accessible web pages. The information regarding the details of Figure 0's representation of unemployment rate volatility could only be provided if the document containing the figure was more readily accessible to display information such as a textual description of the figure.",
+    "ground_truth": "candlestick ranges",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        873,
+        2315,
+        2630,
+        3764,
+        4048,
+        4580,
+        5251,
+        5955
+    ]
+}

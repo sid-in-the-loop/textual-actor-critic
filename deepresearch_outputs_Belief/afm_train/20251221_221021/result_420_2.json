@@ -1,0 +1,25 @@
+{
+    "answer": "22% consumer loans, 14% corporate loans, 64% mixed pools",
+    "ground_truth": "Two-thirds real estate loans, one-third consumer, corporate, mixed loan pools",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 6,
+    "search count": 5,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        965,
+        2053,
+        2711,
+        3067,
+        4016,
+        5092
+    ]
+}

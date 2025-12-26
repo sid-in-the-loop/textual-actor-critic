@@ -1,0 +1,29 @@
+{
+    "answer": "Unable to find the highest quarterly growth rate for real personal consumption expenditure (PCE) in the first quarter of 2023 in Figure 1.1 of the IMF World Economic Outlook, April 2025 edition from search results.",
+    "ground_truth": "4.8% in Q1 2023",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 8,
+    "search count": 7,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        883,
+        2176,
+        3314,
+        4509,
+        5880,
+        7239,
+        8589,
+        9999
+    ]
+}

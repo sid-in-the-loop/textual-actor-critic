@@ -1,0 +1,23 @@
+{
+    "answer": "What will be left of financial services tomorrow?",
+    "ground_truth": "Financial Services in 2025 (PwC Report)",
+    "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "reward_sum": 0,
+    "turns": 5,
+    "search count": 4,
+    "script count": 0,
+    "summary count": 0,
+    "context lengths": [
+        742,
+        2270,
+        2936,
+        3360,
+        4808
+    ]
+}
