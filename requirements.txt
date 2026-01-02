@@ -19,7 +19,7 @@ cachetools==5.5.2
 catalogue==2.0.10
 certifi==2025.4.26
 cffi==1.17.1
-charset-normalizer==3.4.2
+charset-normalizer==3.4.4
 click==8.2.1
 cloudpathlib==0.21.1
 cloudpickle==3.1.1
