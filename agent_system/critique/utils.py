@@ -1,10 +1,10 @@
 from transformers import AutoTokenizer
 
-# Use HuggingFace Hub Qwen3-1.7B tokenizer
-model_name = "Qwen/Qwen3-1.7B"
+# Use local checkpoint tokenizer to avoid HuggingFace network issues
+model_path = "/data/group_data/cx_group/behavior_priming/checkpoint/qwen3_1.7b/web_qwen_sft_behavior/checkpoint-924"
 
-# Load tokenizer from HuggingFace Hub
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+# Load tokenizer from local checkpoint
+tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 def tokenize(input):
     tokens = tokenizer.encode(input)

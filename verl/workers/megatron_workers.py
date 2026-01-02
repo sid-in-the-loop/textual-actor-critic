@@ -106,10 +106,10 @@ class ActorRolloutRefWorker(MegatronWorker):
         set_random_seed(seed=self.config.actor.megatron.seed)
 
         self.role = role
-        assert self.role in ["actor", "rollout", "ref", "actor_rollout", "actor_rollout_ref"]
+        assert self.role in ["actor", "rollout", "ref", "actor_rollout", "actor_rollout_ref", "high_actor_rollout"]
 
-        self._is_actor = self.role in ["actor", "actor_rollout", "actor_rollout_ref"]
-        self._is_rollout = self.role in ["rollout", "actor_rollout", "actor_rollout_ref"]
+        self._is_actor = self.role in ["actor", "actor_rollout", "actor_rollout_ref", "high_actor_rollout"]
+        self._is_rollout = self.role in ["rollout", "actor_rollout", "actor_rollout_ref", "high_actor_rollout"]
         self._is_ref = self.role in ["ref", "actor_rollout_ref"]
 
         # TODO(sgm): Currently, we only support reference model param offload

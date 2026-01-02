@@ -33,7 +33,7 @@ echo "=== Starting IS Checkpoint 4 analysis at ${time} ==="
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export HYDRA_FULL_ERROR=1
 export WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
-export HF_TOKEN=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
+export HF_TOKEN=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
 export HUGGING_FACE_HUB_TOKEN=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
 export OPENAI_API_KEY=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
 export CMU_GATEWAY_API_KEY=sk-dUplmEab2H7EFRaOISG1Ew

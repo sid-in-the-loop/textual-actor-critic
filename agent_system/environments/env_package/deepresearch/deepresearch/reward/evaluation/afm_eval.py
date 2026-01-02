@@ -10,7 +10,7 @@ MODEL_NAME = "gpt-5-nano-2025-08-07"
 def get_openai_client():
     """Initialize OpenAI client for standard API."""
     return OpenAI(
-        api_key=os.getenv("OPENAI_API_KEY", "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"),
+        api_key=os.getenv("OPENAI_API_KEY", "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"),
         timeout=20
     )
 
@@ -108,14 +108,14 @@ def evaluate_answer_soft(question: str, predicted_answer: str, ground_truth: str
     def run_evaluation(prompt, eval_type):
         """Run a single evaluation and return results dict"""
         max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            response = client.chat.completions.create(
-                    model=MODEL_NAME,
-                    messages=[{"role": "user", "content": prompt}],
-                )
+        for attempt in range(max_retries):
+            try:
+                response = client.chat.completions.create(
+                        model=MODEL_NAME,
+                        messages=[{"role": "user", "content": prompt}],
+                    )
 
-            content = response.choices[0].message.content.strip()
+                content = response.choices[0].message.content.strip()
 
                 # Try to parse JSON response
                 try:
@@ -144,11 +144,11 @@ def evaluate_answer_soft(question: str, predicted_answer: str, ground_truth: str
                         'raw_response': content
                     }
 
-        except Exception as e:
-            if attempt < max_retries - 1:
+            except Exception as e:
+                if attempt < max_retries - 1:
                     print(f"{eval_type} evaluation failed (attempt {attempt + 1}), retrying: {e}")
                     time.sleep(1 * (2 ** attempt))
-        else:
+                else:
                     print(f"{eval_type} evaluation failed after {max_retries} attempts: {e}")
                     return {
                         'is_correct': False,

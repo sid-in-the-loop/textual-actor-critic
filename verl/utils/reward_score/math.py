@@ -14,16 +14,211 @@
 # Adapted from https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/hendrycks_math/utils.py
 
 
-def compute_score(solution_str, ground_truth) -> float:
+import os
+import json
+import time
+from typing import Tuple, Any, List
+import asyncio
+from openai import AsyncOpenAI
+
+# AsyncOpenAI client configuration (similar to belief_calculator.py)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "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")
+MODEL_NAME = "gpt-5-nano"
+
+# Global AsyncOpenAI client (similar to belief_calculator.py)
+_async_client = None
+
+def get_async_client():
+    """Get or create global AsyncOpenAI client"""
+    global _async_client
+    if _async_client is None:
+        _async_client = AsyncOpenAI(api_key=OPENAI_API_KEY)
+    return _async_client
+
+def log_llmasaj_event(data):
+    """Log LLMasaJ events silently to a separate file."""
+    try:
+        log_dir = "logs/judgements"
+        os.makedirs(log_dir, exist_ok=True)
+        log_path = os.path.join(log_dir, "llmasaj_debug.jsonl")
+        with open(log_path, "a") as f:
+            data["timestamp"] = time.strftime("%Y-%m-%d %H:%M:%S")
+            f.write(json.dumps(data) + "\n")
+    except:
+        pass
+
+async def _evaluate_semantic_async(full_response: str, ground_truth: str, question: str = "Math problem") -> Tuple[bool, str]:
+    """Async soft evaluation of FULL response vs ground truth using AsyncOpenAI GPT-4o-mini.
+
+    FAST-FAIL version for flaky WiFi.
+    """
+    if not OPENAI_API_KEY:
+        return False, "OPENAI_API_KEY not set"
+
+    client = get_async_client()
+
+    prompt = f"""
+    Evaluate if the model successfully generated a final answer and if it matches the ground truth.
+
+    **EVALUATION RULES:**
+    - If the model provides a final answer (in any form: boxed, unboxed, stated clearly, etc.), extract it and compare with ground truth.
+    - If the model does NOT provide any final answer at all (just reasoning without conclusion), mark as incorrect (0).
+    - **FLEXIBILITY:** Answers match if they contain the same core factual/mathematical information. Allow for minor wording differences, different but equivalent mathematical forms (e.g., 0.5 vs 1/2), or a very small margin of numerical error if applicable. If it "resembles" the ground truth in substance, mark it correct.
+    - Default to incorrect (0) only if there is a clear conceptual mismatch or a significant numerical error.
+
+    **TASK:** Determine if a final answer exists and if it matches ground truth. Binary decision: correct (1) or incorrect (0).
+
+    Question: {question}
+    Ground Truth Answer: {ground_truth}
+    Model's Full Response: {full_response[:3000]}  # Truncate if too long
+
+    Please respond with a JSON object: {{ "judgement": "correct" or "incorrect", "extracted_answer": "...", "rationale": "..." }}
+    """
+
+    # Reduced retries and fast timeout for bad WiFi
+    max_retries = 1 
+    for attempt in range(max_retries):
+        try:
+            start_t = time.time()
+            response = await client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[{"role": "user", "content": prompt}],
+                response_format={ "type": "json_object" },
+                timeout=10.0 # 10s timeout
+            )
+            duration = time.time() - start_t
+            content = response.choices[0].message.content.strip()
+            result = json.loads(content)
+            judgement = result.get('judgement', 'incorrect').lower()
+            rationale = result.get('rationale', '')
+            
+            log_llmasaj_event({
+                "mode": "async",
+                "judgement": judgement,
+                "duration": duration,
+                "rationale": rationale,
+                "gt": ground_truth
+            })
+            
+            return (judgement == 'correct'), rationale
+        except Exception as e:
+            log_llmasaj_event({"mode": "async", "error": str(e), "gt": ground_truth})
+                return False, f"API Error: {str(e)}"
+    return False, "Failed"
+
+async def compute_score_async(solution_str, ground_truth, extra_info=None, use_semantic: bool = True, **kwargs) -> float:
+    """Async version of compute_score - evaluates FULL response."""
     retval = 0.0
+
+    # 1. Semantic evaluation path
+    if use_semantic:
+        try:
+            is_correct, rationale = await _evaluate_semantic_async(solution_str, ground_truth)
+            if is_correct:
+                return 1.0
+        except:
+            pass
+
+    # 2. Rule-based evaluation path (fallback)
     try:
         string_in_last_boxed = last_boxed_only_string(solution_str)
         if string_in_last_boxed is not None:
             answer = remove_boxed(string_in_last_boxed)
-            if is_equiv(answer, ground_truth):
+            rule_based_result = is_equiv(answer, ground_truth)
+            if rule_based_result:
                 retval = 1.0
-    except Exception as e:
-        print(e)
+    except:
+        pass
+
+    return retval
+
+def _evaluate_semantic(full_response: str, ground_truth: str, question: str = "Math problem") -> Tuple[bool, str]:
+    """Soft evaluation of FULL response vs ground truth using OpenAI GPT-4o-mini.
+
+    FAST-FAIL version for flaky WiFi.
+    """
+    if not OPENAI_API_KEY:
+        return False, "OPENAI_API_KEY not set"
+
+        from openai import OpenAI
+    client = OpenAI(api_key=OPENAI_API_KEY)
+
+    prompt = f"""
+    Evaluate if the model successfully generated a final answer and if it matches the ground truth.
+
+    **EVALUATION RULES:**
+    - If the model provides a final answer (in any form: boxed, unboxed, stated clearly, etc.), extract it and compare with ground truth.
+    - If the model does NOT provide any final answer at all (just reasoning without conclusion), mark as incorrect (0).
+    - **FLEXIBILITY:** Answers match if they contain the same core factual/mathematical information. Allow for minor wording differences, different but equivalent mathematical forms (e.g., 0.5 vs 1/2), or a very small margin of numerical error if applicable. If it "resembles" the ground truth in substance, mark it correct.
+    - Default to incorrect (0) only if there is a clear conceptual mismatch or a significant numerical error.
+
+    **TASK:** Determine if a final answer exists and if it matches ground truth. Binary decision: correct (1) or incorrect (0).
+
+    Question: {question}
+    Ground Truth Answer: {ground_truth}
+    Model's Full Response: {full_response[:3000]}  # Truncate if too long
+
+    Please respond with a JSON object: {{ "judgement": "correct" or "incorrect", "extracted_answer": "...", "rationale": "..." }}
+    """
+
+    max_retries = 1
+    for attempt in range(max_retries):
+        try:
+            api_start = time.time()
+            response = client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.1,
+                max_tokens=500,
+                response_format={ "type": "json_object" },
+                timeout=10.0
+            )
+            duration = time.time() - api_start
+            content = response.choices[0].message.content.strip()
+            result = json.loads(content)
+            judgement = result.get('judgement', 'incorrect').lower()
+            rationale = result.get('rationale', '')
+            
+            log_llmasaj_event({
+                "mode": "sync",
+                "judgement": judgement,
+                "duration": duration,
+                "rationale": rationale,
+                "gt": ground_truth
+            })
+            
+            return (judgement == 'correct'), rationale
+        except Exception as e:
+            log_llmasaj_event({"mode": "sync", "error": str(e), "gt": ground_truth})
+                return False, f"API Error: {str(e)}"
+    return False, "Failed"
+
+def compute_score(solution_str, ground_truth, extra_info=None, use_semantic: bool = True, **kwargs) -> float:
+    """
+    Compute the score for a math solution - evaluates FULL response.
+    Silent fallback to rule-based.
+    """
+    retval = 0.0
+
+    # 1. Semantic evaluation path
+    if use_semantic:
+        try:
+            is_correct, rationale = _evaluate_semantic(solution_str, ground_truth)
+            if is_correct:
+                return 1.0
+        except:
+            pass
+
+    # 2. Rule-based evaluation path (fallback)
+    try:
+        string_in_last_boxed = last_boxed_only_string(solution_str)
+        if string_in_last_boxed is not None:
+            answer = remove_boxed(string_in_last_boxed)
+            rule_based_result = is_equiv(answer, ground_truth)
+            if rule_based_result:
+                retval = 1.0
+    except:
+        pass
 
     return retval
 

@@ -10,7 +10,7 @@
 
 # Load environment
 source /home/ssmurali/miniconda3/etc/profile.d/conda.sh
-conda activate verl-agent
+conda activate verl
 
 # Ensure unbuffered output for logging
 export PYTHONUNBUFFERED=1

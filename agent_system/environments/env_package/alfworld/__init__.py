@@ -13,5 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .projection import alfworld_projection
-from .envs import build_alfworld_envs
+try:
+    from .projection import alfworld_projection
+    from .envs import build_alfworld_envs
+except ImportError:
+    # alfworld is not installed, skipping
+    pass

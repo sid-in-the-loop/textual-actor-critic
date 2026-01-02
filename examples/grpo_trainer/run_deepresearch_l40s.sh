@@ -17,17 +17,17 @@ export VLLM_ATTENTION_BACKEND=XFORMERS
 export HYDRA_FULL_ERROR=1
 export RAY_DEBUG=0
 export WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
-export HF_TOKEN=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
-export HUGGING_FACE_HUB_TOKEN=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
+export HF_TOKEN=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
+export HUGGING_FACE_HUB_TOKEN=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
 export OPENAI_API_KEY=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
 export CMU_GATEWAY_API_KEY=sk-dUplmEab2H7EFRaOISG1Ew
 
 MODEL_DIR=/data/group_data/cx_group/verl_agent_shared
 
 
-train_data_size=8
-val_data_size=8
-group_size=2
+train_data_size=32
+val_data_size=16
+group_size=8
 
 
 python3 -m verl.trainer.main_ppo \
@@ -92,14 +92,14 @@ python3 -m verl.trainer.main_ppo \
     trainer.critic_warmup=0 \
     trainer.logger=['console'] \
     trainer.project_name='DeepResearch_RL' \
-    trainer.experiment_name='deepresearch_1.7b_sft_grpo_single_gpu' \
-    trainer.n_gpus_per_node=1 \
+    trainer.experiment_name='deepresearch_1.7b_sft_grpo_180steps_4gpu' \
+    trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=5 \
-    trainer.test_freq=1000 \
+    trainer.test_freq=25 \
     trainer.total_epochs=1 \
-    trainer.total_training_steps=2 \
-    trainer.resume_mode=auto \
-    trainer.default_local_dir=$MODEL_DIR/checkpoint/deepresearch_1.7b_sft_grpo\
+    trainer.total_training_steps=180 \
+    trainer.resume_mode=disable \
+    trainer.default_local_dir=$MODEL_DIR/checkpoint/afm_apm_sft_1.7b_all_positive_base_reward_grpo \
     trainer.val_before_train=False $@
 

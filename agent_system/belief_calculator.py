@@ -16,64 +16,58 @@
 """
 Belief Calculator for Belief-Shaped GRPO
 
-Integrates belief-based value function computation into the rollout process.
-Computes smoothed belief distributions and value functions during trajectory collection.
-
-ULTRA OPTIMIZED VERSION:
-- Simplified prompts for reduced latency (~60-70% fewer tokens)
-- max_candidates reduced to 1 (single hypothesis extraction)
-- ENTIRELY REMOVED ENTAILMENT CHECKS (75% API call reduction)
-- Belief = concentration only (add/subtract handles correctness)
-- Thread-safe caching with MD5 hashing
+ULTRA OPTIMIZED VERSION FOR UNLIMITED RATE LIMITS:
+- Removed ALL semaphores/rate limiting
+- Async locks for cache safety
+- True parallel execution of 256+ API calls
+- Fixed all blocking calls
 """
 
-from openai import OpenAI
+import asyncio
+from openai import AsyncOpenAI
 import json
 import re
 from collections import defaultdict
 from typing import Dict, List, Tuple, Optional
 import os
 import hashlib
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import threading
 
 
 class BeliefCalculator:
     """
     Computes belief-based value functions for shaping GRPO rewards.
-
-    This integrates the belief computation logic from is_checkpoint4.py
-    into the rollout process for real-time belief score calculation.
+    Optimized for unlimited OpenAI rate limits.
     """
 
-    def __init__(self, alpha: float = 1.0, max_candidates: int = 2, max_workers: int = 1):
+    def __init__(self, alpha: float = 1.0, max_candidates: int = 2):
         """
         Initialize the belief calculator.
 
         Args:
             alpha: Smoothing parameter for belief distribution (default: 1.0)
-            max_candidates: Maximum number of hypotheses to extract (default: 3)
-            max_workers: Maximum concurrent threads for API requests (default: 1)
+            max_candidates: Maximum number of hypotheses to extract (default: 2)
         """
         self.alpha = alpha
         self.max_candidates = max_candidates
-        self.max_workers = max_workers
 
-        # Initialize OpenAI client using standard OpenAI API
-        api_key = os.getenv("OPENAI_API_KEY", "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")
-        self.client = OpenAI(
-            api_key=api_key,
-        )
+        # Initialize AsyncOpenAI client
+        api_key = os.getenv("OPENAI_API_KEY", "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")
+        self.client = AsyncOpenAI(api_key=api_key)
 
-        self._executor = ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix="belief-api")
+        # Async-safe cache (will be initialized in async context)
+        self._cache_lock = None
         self._entailment_cache = {}
-        self._belief_cache = {}  # Cache for full belief computations
-        self._cache_lock = threading.Lock()  # Thread-safe cache access
+        self._belief_cache = {}
 
-        print(f"🔧 BeliefCalculator initialized with {max_workers} concurrent workers")
+        print(f"🔧 BeliefCalculator initialized - UNLIMITED RATE LIMIT MODE")
         print(f"⚡ ULTRA Optimizations: max_candidates={max_candidates}, NO ENTAILMENT, concentration-only belief")
 
-    def extract_candidate_hypotheses_with_support(self, evidence_docs: List[str], question: str) -> List[Dict]:
+    async def _ensure_cache_lock(self):
+        """Ensure async lock is created (can't create in __init__)"""
+        if self._cache_lock is None:
+            self._cache_lock = asyncio.Lock()
+
+    async def extract_candidate_hypotheses_with_support(self, evidence_docs: List[str], question: str) -> List[Dict]:
         """
         Extract candidate answer hypotheses with evidence support counts and snippets.
         OPTIMIZED: Simplified prompt with ~60% fewer tokens.
@@ -106,10 +100,9 @@ Example: [{{"hypothesis": "2015", "count": 3, "snippet": "Team promoted in 2015.
 """
 
         try:
-            response = self.client.chat.completions.create(
-                model="gpt-5-nano-2025-08-07",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=1.0
+            response = await self.client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "user", "content": prompt}]
             )
 
             content = response.choices[0].message.content.strip()
@@ -257,6 +250,57 @@ Example: [{{"hypothesis": "2015", "count": 3, "snippet": "Team promoted in 2015.
 
         return items
 
+    async def check_entailment_support(self, question: str, hypothesis_original: str, supporting_snippet: str) -> float:
+        """
+        Check if the supporting snippet entails the hypothesis as the answer.
+        ULTRA FAST: Verbatim match first, then LLM validation.
+        """
+        if hypothesis_original in ["NO_ANSWER", "OTHER"] or not supporting_snippet:
+            return 0.0
+
+        # ⚡ FAST PATH: If hypothesis appears verbatim in snippet, assume entailment
+        if hypothesis_original.lower() in supporting_snippet.lower():
+            return 1.0
+
+        # Async-safe cache check
+        await self._ensure_cache_lock()
+        snippet_hash = hashlib.md5(supporting_snippet.encode()).hexdigest()
+        cache_key = f"{question}|||{hypothesis_original}|||{snippet_hash}"
+
+        async with self._cache_lock:
+            if cache_key in self._entailment_cache:
+                return self._entailment_cache[cache_key]
+
+        # 🤖 LLM validation for ambiguous cases only
+        prompt = f"""Does the snippet clearly state that '{hypothesis_original}' is the answer to: {question}?
+
+Snippet: {supporting_snippet}
+
+Answer with only 1.0 (yes, clearly states this) or 0.0 (no, does not clearly state this)."""
+
+        try:
+            response = await self.client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0
+            )
+
+            content = response.choices[0].message.content.strip()
+            if "1.0" in content or "1" in content:
+                score = 1.0
+            else:
+                score = 0.0
+
+            async with self._cache_lock:
+                self._entailment_cache[cache_key] = score
+            return score
+
+        except Exception as e:
+            print(f"Error checking entailment: {e}")
+            async with self._cache_lock:
+                self._entailment_cache[cache_key] = 0.0
+            return 0.0
+
     def compute_belief_concentration(self, normalized_belief: List[Dict]) -> float:
         """
         Compute concentration from normalized belief distribution.
@@ -267,63 +311,8 @@ Example: [{{"hypothesis": "2015", "count": 3, "snippet": "Team promoted in 2015.
 
         return normalized_belief[0]["probability"]
 
-    def check_entailment_support(self, question: str, hypothesis_original: str, supporting_snippet: str) -> float:
-        """
-        Check if the supporting snippet entails the hypothesis as the answer.
-        OPTIMIZED: Skip LLM call if hypothesis appears verbatim in snippet.
-        """
-        if hypothesis_original in ["NO_ANSWER", "OTHER"] or not supporting_snippet:
-            return 0.0
 
-        # OPTIMIZATION: Fast path for verbatim matches
-        # If hypothesis appears in snippet (case-insensitive), assume entailment
-        if hypothesis_original.lower() in supporting_snippet.lower():
-            return 1.0
-
-        # Check cache - use hash of snippet to avoid truncation collisions
-        snippet_hash = hashlib.md5(supporting_snippet.encode()).hexdigest()
-        cache_key = f"{question}|||{hypothesis_original}|||{snippet_hash}"
-        with self._cache_lock:
-            if cache_key in self._entailment_cache:
-                return self._entailment_cache[cache_key]
-
-        # OPTIMIZED PROMPT: Reduced from ~250 tokens to ~80 tokens
-        prompt = f"""Does the snippet explicitly answer the question with this hypothesis?
-
-Question: {question}
-Hypothesis: {hypothesis_original}
-Snippet: {supporting_snippet}
-
-Score:
-1.0 = snippet clearly states this answer
-0.0 = snippet does not state this answer
-
-Return only: 1.0 or 0.0"""
-
-        try:
-            response = self.client.chat.completions.create(
-                model="gpt-5-nano-2025-08-07",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=1.0
-            )
-
-            content = response.choices[0].message.content.strip()
-            number_match = re.search(r'(\d+(?:\.\d+)?)', content)
-            if number_match:
-                score = float(number_match.group(1))
-                score = max(0.0, min(1.0, score))
-                with self._cache_lock:
-                    self._entailment_cache[cache_key] = score
-                return score
-
-        except Exception as e:
-            print(f"Error checking entailment: {e}")
-
-        with self._cache_lock:
-            self._entailment_cache[cache_key] = 0.0
-        return 0.0
-
-    def belief_based_value_function(self, evidence_docs: List[str], question: str,
+    async def belief_based_value_function(self, evidence_docs: List[str], question: str,
                                    previous_belief: Optional[float] = None,
                                    temporal_alpha: float = 0.3) -> Tuple[float, Dict]:
         """
@@ -345,7 +334,7 @@ Return only: 1.0 or 0.0"""
             }
 
         # Extract candidate hypotheses
-        raw_hypotheses = self.extract_candidate_hypotheses_with_support(evidence_docs, question)
+        raw_hypotheses = await self.extract_candidate_hypotheses_with_support(evidence_docs, question)
 
         # Build smoothed belief distribution with OTHER
         normalized_belief = self.build_normalized_belief(raw_hypotheses)
@@ -379,10 +368,10 @@ Return only: 1.0 or 0.0"""
 
         return value, metadata
 
-    def compute_belief_scores_batch(self, batch_data: List[Tuple[str, str, Optional[float]]]) -> List[Tuple[float, Dict]]:
+    async def compute_belief_scores_batch(self, batch_data: List[Tuple[str, str, Optional[float]]]) -> List[Tuple[float, Dict]]:
         """
         Compute belief scores for a batch of (k_t_combined, question, previous_belief) tuples.
-        Uses ThreadPoolExecutor for concurrent processing without asyncio conflicts.
+        Uses asyncio for truly concurrent processing.
 
         Args:
             batch_data: List of (k_t_combined, question, previous_belief) tuples
@@ -390,31 +379,54 @@ Return only: 1.0 or 0.0"""
         Returns:
             List of (belief_score, metadata) tuples
         """
-        # Submit all tasks to thread pool
-        future_to_index = {}
-        for i, (k_t, q, prev) in enumerate(batch_data):
-            future = self._executor.submit(self._compute_belief_score_sync, k_t, q, prev)
-            future_to_index[future] = i
+        await self._ensure_cache_lock()  # Ensure async primitives exist
 
-        # Collect results as they complete
-        results = [None] * len(batch_data)
-        for future in as_completed(future_to_index):
-            index = future_to_index[future]
-            try:
-                result = future.result()
-                results[index] = result
-            except Exception as e:
-                print(f"Error in concurrent belief computation for item {index}: {e}")
-                results[index] = (0.0, {})
+        import time
+        batch_start_time = time.time()
+        print(f"🔄 BELIEF BATCH: Processing {len(batch_data)} belief computations with UNLIMITED async...")
 
-        return results
+        # Create async tasks for all belief computations
+        # NO SEMAPHORE - unlimited rate limit means unlimited parallelism!
+        tasks = []
+        for k_t, q, prev in batch_data:
+            tasks.append(self._compute_belief_score_async(k_t, q, prev))
 
-    def _compute_belief_score_sync(self, k_t_combined: str, question: str, previous_belief: Optional[float] = None) -> Tuple[float, Dict]:
+        # Process all tasks concurrently with asyncio.gather
+        # This will fire ALL 256 API calls simultaneously
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        # Handle any exceptions that occurred
+        processed_results = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                print(f"❌ Error in async belief computation for item {i}: {result}")
+                processed_results.append((0.0, {}))
+            else:
+                processed_results.append(result)
+
+        batch_total_time = time.time() - batch_start_time
+        avg_time_per_item = batch_total_time / len(batch_data) if batch_data else 0.0
+        print(f"⚡ Belief batch completed in {batch_total_time:.3f}s")
+        print(f"⚡ Average time per item: {avg_time_per_item:.3f}s")
+        print(f"🚀 Effective speedup: {len(batch_data)}x parallelism!")
+
+        return processed_results
+
+    async def _compute_belief_score_async(self, k_t_combined: str, question: str, previous_belief: Optional[float] = None) -> Tuple[float, Dict]:
         """
-        Synchronous version of belief computation to avoid asyncio event loop issues.
+        Async version of belief computation for true concurrency.
+        WITH ASYNC-SAFE CACHING.
         """
+        await self._ensure_cache_lock()
+
         if not k_t_combined or not k_t_combined.strip():
             return 0.0, {}
+
+        # ✅ FIXED: Async-safe cache check
+        cache_key = hashlib.md5(f"{k_t_combined}|{question}|{previous_belief}".encode()).hexdigest()
+        async with self._cache_lock:
+            if cache_key in self._belief_cache:
+                return self._belief_cache[cache_key]
 
         # Split evidence into individual documents
         evidence_docs = [d.strip() for d in k_t_combined.split('\n\n') if d.strip()]
@@ -422,8 +434,8 @@ Return only: 1.0 or 0.0"""
         if not evidence_docs:
             return 0.0, {}
 
-        # Extract candidate hypotheses (synchronous)
-        raw_hypotheses = self._extract_candidate_hypotheses_sync(evidence_docs, question)
+        # Extract candidate hypotheses (async)
+        raw_hypotheses = await self.extract_candidate_hypotheses_with_support(evidence_docs, question)
 
         # Build smoothed belief distribution with OTHER
         normalized_belief = self.build_normalized_belief(raw_hypotheses)
@@ -432,12 +444,23 @@ Return only: 1.0 or 0.0"""
         concentration = self.compute_belief_concentration(normalized_belief)
         top_item = normalized_belief[0] if normalized_belief else {"hypothesis": "OTHER", "normalized": "OTHER", "snippet": ""}
 
-        # OPTIMIZATION: Remove entailment entirely - concentration alone suffices
-        # with add/subtract mechanism for correctness handling
-        support = 1.0 if top_item["normalized"] != "OTHER" else 0.0
+        # ⚡ SMART ENTAILMENT: Skip if OTHER has 100% probability (no good hypotheses)
+        other_prob = next((item["probability"] for item in normalized_belief if item["normalized"] == "OTHER"), 0.0)
+        if other_prob >= 1.0:
+            # No good hypotheses found - skip expensive entailment check
+            support = 0.0
+        elif top_item["normalized"] != "OTHER":
+            # STRICT ENTAILMENT CHECK: Validate top hypothesis against evidence
+            supporting_snippet = top_item.get("snippet", "")
+            if supporting_snippet:
+                support = await self.check_entailment_support(question, top_item["hypothesis"], supporting_snippet)
+            else:
+                support = 0.0
+        else:
+            support = 0.0
 
-        # Compute value: V = concentration (entailment removed for speed)
-        raw_value = concentration
+        # Compute value: V = concentration * entailment (strict validation)
+        raw_value = concentration * support
 
         temporal_alpha = 0.25
         if previous_belief is not None:
@@ -455,124 +478,12 @@ Return only: 1.0 or 0.0"""
             "raw_hypotheses": raw_hypotheses
         }
 
+        # ✅ FIXED: Async-safe cache write
+        async with self._cache_lock:
+            self._belief_cache[cache_key] = (value, metadata)
+
         return value, metadata
 
-    def _extract_candidate_hypotheses_sync(self, evidence_docs: List[str], question: str) -> List[Dict]:
-        """
-        Synchronous version of hypothesis extraction.
-        OPTIMIZED: Simplified prompt with ~60% fewer tokens.
-        """
-        # Format evidence consistently with main method
-        numbered_evidence = [f"[Doc {i+1}] {doc}" for i, doc in enumerate(evidence_docs)]
-        evidence_text = "\n\n".join(numbered_evidence)
-
-        # OPTIMIZED PROMPT: Reduced from ~400 tokens to ~150 tokens
-        prompt = f"""Extract candidate answers from evidence.
-
-Question: {question}
-
-Evidence:
-{evidence_text}
-
-Rules:
-- Extract answers matching question type (year→year, %→%, name→name)
-- Max {self.max_candidates} answers
-- Return NO_ANSWER if none found
-- Paraphrases of same value = same hypothesis
-
-Format each:
-{{"hypothesis": "answer", "count": supporting_docs, "snippet": "1-2 sentences"}}
-
-Return JSON array only.
-Example: [{{"hypothesis": "2015", "count": 3, "snippet": "Team promoted in 2015..."}}, {{"hypothesis": "1993", "count": 1, "snippet": "Restructured in 1993..."}}]
-"""
-
-        try:
-            response = self.client.chat.completions.create(
-                model="gpt-5-nano-2025-08-07",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=1.0
-            )
-
-            content = response.choices[0].message.content.strip()
-
-            try:
-                hypotheses = json.loads(content)
-                if isinstance(hypotheses, list):
-                    result = []
-                    for h in hypotheses[:self.max_candidates]:
-                        if isinstance(h, dict) and "hypothesis" in h:
-                            hyp = h["hypothesis"].strip()
-                            count = int(h.get("count", 0))
-                            snippet = h.get("snippet", "").strip()
-                            if hyp:
-                                result.append({
-                                    "hypothesis": hyp,
-                                    "count": count,
-                                    "snippet": snippet
-                                })
-                    return result
-            except json.JSONDecodeError:
-                pass
-
-        except Exception as e:
-            print(f"Error in sync hypothesis extraction: {e}")
-
-        return [{"hypothesis": "NO_ANSWER", "count": 0, "snippet": ""}]
-
-    def _check_entailment_support_sync(self, question: str, hypothesis_original: str, supporting_snippet: str) -> float:
-        """
-        Synchronous version of entailment checking.
-        OPTIMIZED: Skip LLM call if hypothesis appears verbatim in snippet.
-        """
-        if hypothesis_original in ["NO_ANSWER", "OTHER"] or not supporting_snippet:
-            return 0.0
-
-        # OPTIMIZATION: Fast path for verbatim matches
-        # If hypothesis appears in snippet (case-insensitive), assume entailment
-        if hypothesis_original.lower() in supporting_snippet.lower():
-            return 1.0
-
-        # Check cache - use hash of snippet to avoid truncation collisions
-        snippet_hash = hashlib.md5(supporting_snippet.encode()).hexdigest()
-        cache_key = f"{question}|||{hypothesis_original}|||{snippet_hash}"
-        with self._cache_lock:
-            if cache_key in self._entailment_cache:
-                return self._entailment_cache[cache_key]
-
-        # OPTIMIZED PROMPT: Reduced from ~250 tokens to ~80 tokens
-        prompt = f"""Does the snippet explicitly answer the question with this hypothesis?
-
-Question: {question}
-Hypothesis: {hypothesis_original}
-Snippet: {supporting_snippet}
-
-Score:
-1.0 = snippet clearly states this answer
-0.0 = snippet does not state this answer
-
-Return only: 1.0 or 0.0"""
-
-        try:
-            response = self.client.chat.completions.create(
-                model="gpt-5-nano-2025-08-07",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=1.0
-            )
-
-            content = response.choices[0].message.content.strip()
-            number_match = re.search(r'(\d+(?:\.\d+)?)', content)
-            if number_match:
-                score = float(number_match.group(1))
-                score = max(0.0, min(1.0, score))
-                with self._cache_lock:
-                    self._entailment_cache[cache_key] = score
-                return score
-
-        except Exception as e:
-            print(f"Error in sync entailment check: {e}")
-
-        return 0.0
 
     def compute_belief_score(self, k_t_combined: str, question: str, previous_belief: Optional[float] = None) -> Tuple[float, Dict]:
         """
@@ -593,7 +504,15 @@ Return only: 1.0 or 0.0"""
                 return self._belief_cache[cache_key]
 
         # For single computations, use the batch method with one item
-        results = self.compute_belief_scores_batch([(k_t_combined, question, previous_belief)])
+        if hasattr(self, '_event_loop'):
+            # Use persistent event loop if available
+            results = self._event_loop.run_until_complete(
+                self.compute_belief_scores_batch([(k_t_combined, question, previous_belief)])
+            )
+        else:
+            # Fallback for backward compatibility
+            import asyncio
+            results = asyncio.run(self.compute_belief_scores_batch([(k_t_combined, question, previous_belief)]))
         result = results[0]
 
         # Cache the result (thread-safe)
@@ -602,7 +521,14 @@ Return only: 1.0 or 0.0"""
 
         return result
 
-    def shutdown(self):
-        """Shutdown the thread pool executor."""
-        if hasattr(self, '_executor'):
-            self._executor.shutdown(wait=True)
+    def setup_event_loop(self):
+        """Set up a persistent event loop for the belief calculator."""
+        if not hasattr(self, '_event_loop'):
+            self._event_loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(self._event_loop)
+        return self._event_loop
+
+    async def shutdown(self):
+        """Shutdown the async client."""
+        if hasattr(self, 'client'):
+            await self.client.close()
