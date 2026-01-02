@@ -33,7 +33,7 @@ alfworld-play-tw
 WebShop requires Python <=3.10, so begin by creating a new `verl-agent-webshop` environment
 ```bash
 conda create -n verl-agent-webshop python==3.10 -y
-conda activate verl-agent-webshop
+conda activate verl-webshop
 ```
 
 Install WebShop

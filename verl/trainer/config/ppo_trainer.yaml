@@ -1,8 +1,8 @@
 data:
   tokenizer: null
   use_shm: False
-  train_files: ~/data/rlhf/gsm8k/train.parquet
-  val_files: ~/data/rlhf/gsm8k/test.parquet
+  train_files: null
+  val_files: null
   prompt_key: prompt
   reward_fn_key: data_source
   max_prompt_length: 512
@@ -275,7 +275,7 @@ trainer:
   # auto: find the last ckpt to resume. If can't find, start from scratch
   resume_mode: auto # or disable or resume_path if resume_from_path is set
   resume_from_path: null
-  val_before_train: True
+  val_before_train: false
   test_freq: -1
   critic_warmup: 0
   default_hdfs_dir: null
@@ -324,3 +324,58 @@ env:
     enable: False
     alpha: 1.0
     max_candidates: 5
+
+mlmt_rl:
+  enable: False
+  shared_actor: True
+  lambda_coef: 0.1
+  stop_value_gradients: True
+  use_llm_success_eval: False
+  llm_success_weight: 0.0
+  low_level:
+    model_path: ${actor_rollout_ref.model.path}
+    algorithm: grpo
+    freeze: False
+  high_level:
+    model_path: ${actor_rollout_ref.model.path}
+    algorithm: reinforce_plus_plus
+    freeze: False
+  value_fn:
+    model_path: roberta-base
+    freeze: False
+    lr: 3e-5
+    weight_decay: 0.01
+    update_steps_per_iter: 1
+    max_length: 512
+    tokenizer_path: null
+    use_gpu: False
+  llm_eval:
+    model: gpt-4o-mini
+    temperature: 0.0
+    max_length: 512
+    tokenizer_path: null
+
+hierarchical:
+  enabled: False
+  logging_enabled: False
+  experiment_id: "exp00" # Placeholder for experiment ID
+  context_source: none # none | pretrained | sft
+  num_context_samples: 1 # k in the paper
+  max_prompt_tokens: 2048 # Max total tokens (prompt + context)
+  ll_trainable: True # Whether the lower-level model is trainable
+  hl_model:
+    path: null # Path to the higher-level model checkpoint
+    tokenizer_path: null
+    device: auto # Device for the HL model (e.g., "cuda", "cpu", "auto")
+    trust_remote_code: False
+    max_new_tokens: 256 # Max tokens for context generation
+    temperature: 0.7
+    top_p: 0.95
+    top_k: 0
+    do_sample: True
+  kl_max:
+    enabled: False
+    lambda_coef: 0.0 # Lambda coefficient for KL-max reward
+    clip_tau: 10.0 # Tau' for clipping delta_logp
+    reference_prior: none # none | frozen_initial_ll | empty_context_ll_snapshot
+    reference_model_path: null # Path to the reference model for KL-max

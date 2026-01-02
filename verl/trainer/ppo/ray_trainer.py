@@ -20,6 +20,8 @@ This trainer supports model-agonistic model initialization with huggingface
 
 import json
 import os
+import random
+import time
 import uuid
 from collections import defaultdict
 from contextlib import contextmanager
@@ -64,6 +66,8 @@ from gigpo import core_gigpo
 
 from agent_system.multi_turn_rollout import TrajectoryCollector, adjust_batch
 
+from verl.trainer.hierarchical.context_manager import HierarchicalContextManager, HierarchicalLogger
+
 WorkerType = Type[Worker]
 
 
@@ -79,6 +83,7 @@ class Role(Enum):
     RefPolicy = 4
     RewardModel = 5
     ActorRolloutRef = 6
+    HighActorRollout = 7
 
 
 class AdvantageEstimator(str, Enum):
@@ -88,6 +93,7 @@ class AdvantageEstimator(str, Enum):
 
     GAE = "gae"
     GRPO = "grpo"
+    REINFORCE = "reinforce"
     REINFORCE_PLUS_PLUS = "reinforce_plus_plus"
     REINFORCE_PLUS_PLUS_BASELINE = "reinforce_plus_plus_baseline"
     REMAX = "remax"
@@ -330,7 +336,7 @@ def compute_advantage(data: DataProto, adv_estimator, gamma=1.0, lam=1.0, num_re
         num_repeat (int, optional): Number of times to repeat the computation. Defaults to 1.
         multi_turn (bool, optional): Whether the data is from a multi-turn conversation. Defaults to False.
         norm_adv_by_std_in_grpo (bool, optional): Whether to normalize advantages by standard deviation in GRPO. Defaults to True.
-        compute_mean_std_cross_all_data (bool, optional): Whether to compute mean and std across all data in the batch. Defaults to True.
+        compute_mean_std_cross_all_data (bool, optional): Whether to compute_mean_std across all data in the batch. Defaults to True.
     Returns:
         DataProto: The updated data with computed advantages and returns.
     """
@@ -380,6 +386,14 @@ def compute_advantage(data: DataProto, adv_estimator, gamma=1.0, lam=1.0, num_re
             index=data.non_tensor_batch["uid"],
             traj_index=data.non_tensor_batch['traj_uid'],
             norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
+        )
+        data.batch["advantages"] = advantages
+        data.batch["returns"] = returns
+    elif adv_estimator == AdvantageEstimator.REINFORCE:
+        advantages, returns = core_algos.compute_reinforce_outcome_advantage(
+            token_level_rewards=data.batch["token_level_rewards"],
+            response_mask=data.batch["response_mask"],
+            gamma=gamma,
         )
         data.batch["advantages"] = advantages
         data.batch["returns"] = returns
@@ -484,6 +498,8 @@ class RayPPOTrainer:
         val_envs=None,
         critique_envs=None,
         openai_agent=None,
+        high_level_tokenizer=None,
+        shared_actor=True,
     ):
         """Initialize distributed PPO trainer with Ray backend."""
 
@@ -492,11 +508,26 @@ class RayPPOTrainer:
         self.config = config
         self.reward_fn = reward_fn
         self.val_reward_fn = val_reward_fn
+        self.train_dataset = train_dataset
+        self.val_dataset = val_dataset
         self.envs = envs
         self.val_envs = val_envs
         self.critique_envs = critique_envs
         self.traj_collector = traj_collector
         self.openai_agent = openai_agent
+        self.high_level_tokenizer = high_level_tokenizer or tokenizer
+        self.shared_actor = shared_actor
+        self.mlmt_cfg = config.get("mlmt_rl", {})
+        self.mlmt_enabled = bool(self.mlmt_cfg.get("enable", False))
+        self.value_worker = None
+        self.value_cfg = None
+        # value_cfg_node = OmegaConf.select(self.config, "mlmt_rl.value_fn")
+        # if self.mlmt_enabled and value_cfg_node is not None:
+        #     from agent_system.value_function.roberta_worker import RobertaValueWorker
+        #     value_cfg = OmegaConf.to_container(value_cfg_node, resolve=True)
+        #     self.value_cfg = value_cfg
+        #     self.value_worker = RobertaValueWorker(value_cfg)
+        #     self.value_worker.init_model()
 
         self.hybrid_engine = config.actor_rollout_ref.hybrid_engine
         assert self.hybrid_engine, "Currently, only support hybrid engine"
@@ -511,6 +542,7 @@ class RayPPOTrainer:
         self.ray_worker_group_cls = ray_worker_group_cls
         self.device_name = device_name
         self.validation_generations_logger = ValidationGenerationsLogger()
+        self.high_actor_rollout_wg = None
 
         # if ref_in_actor is True, the reference policy will be actor without lora applied
         self.ref_in_actor = config.actor_rollout_ref.model.get('lora_rank', 0) > 0
@@ -525,6 +557,7 @@ class RayPPOTrainer:
         elif self.config.algorithm.adv_estimator in [
             AdvantageEstimator.GRPO,
             AdvantageEstimator.GRPO_PASSK,
+            AdvantageEstimator.REINFORCE,
             AdvantageEstimator.REINFORCE_PLUS_PLUS,
             AdvantageEstimator.REMAX,
             AdvantageEstimator.RLOO,
@@ -538,6 +571,17 @@ class RayPPOTrainer:
         self._validate_config()
         self._create_dataloader(train_dataset, val_dataset, collate_fn, train_sampler)
 
+        from pathlib import Path
+        # Hierarchical HICRL Integration
+        self.hierarchical_manager = HierarchicalContextManager(config.get('hierarchical'), self.tokenizer)
+        self.hierarchical_logger = HierarchicalLogger(
+            config.get('hierarchical'),
+            model_name=Path(config.actor_rollout_ref.model.path).name,
+            experiment_name=config.trainer.experiment_name,
+            tokenizer=self.tokenizer,
+            repeat_n=config.actor_rollout_ref.rollout.n
+        )
+
     def _validate_config(self):
         config = self.config
         # number of GPUs total
@@ -547,8 +591,6 @@ class RayPPOTrainer:
         real_train_batch_size = config.data.train_batch_size * config.actor_rollout_ref.rollout.n
         assert real_train_batch_size % n_gpus == 0, f"real_train_batch_size ({real_train_batch_size}) must be divisible by total n_gpus ({n_gpus})."
 
-        # A helper function to check "micro_batch_size" vs "micro_batch_size_per_gpu"
-        # We throw an error if the user sets both. The new convention is "..._micro_batch_size_per_gpu".
         def check_mutually_exclusive(mbs, mbs_per_gpu, name: str):
             settings = {
                 "actor_rollout_ref.actor": "micro_batch_size",
@@ -660,9 +702,9 @@ class RayPPOTrainer:
 
         if train_dataset is None:
             train_dataset = create_rl_dataset(self.config.data.train_files, self.config.data, self.tokenizer, self.processor)
-        if val_dataset is None:
-            val_dataset = create_rl_dataset(self.config.data.val_files, self.config.data, self.tokenizer, self.processor)
-        self.train_dataset, self.val_dataset = train_dataset, val_dataset
+        
+        self.train_dataset = train_dataset
+        self.val_dataset = val_dataset
 
         if train_sampler is None:
             train_sampler = create_rl_sampler(self.config.data, self.train_dataset)
@@ -680,23 +722,26 @@ class RayPPOTrainer:
             sampler=train_sampler,
         )
 
-        val_batch_size = self.config.data.val_batch_size  # Prefer config value if set
+        assert len(self.train_dataloader) >= 1, "Train dataloader is empty!"
+
+        self.val_dataloader = None
+        if self.val_dataset is not None:
+            val_batch_size = self.config.data.get("val_batch_size", None)  # Prefer config value if set
         if val_batch_size is None:
             val_batch_size = len(self.val_dataset)
 
-        self.val_dataloader = StatefulDataLoader(
-            dataset=self.val_dataset,
-            batch_size=val_batch_size,
-            num_workers=self.config.data.get("dataloader_num_workers", 8),
-            shuffle=False,
-            drop_last=False,
-            collate_fn=collate_fn,
-        )
-
-        assert len(self.train_dataloader) >= 1, "Train dataloader is empty!"
-        assert len(self.val_dataloader) >= 1, "Validation dataloader is empty!"
-
-        print(f"Size of train dataloader: {len(self.train_dataloader)}, Size of val dataloader: {len(self.val_dataloader)}")
+            self.val_dataloader = StatefulDataLoader(
+                dataset=self.val_dataset,
+                batch_size=val_batch_size,
+                num_workers=self.config.data.get("dataloader_num_workers", 8),
+                shuffle=False,
+                drop_last=False,
+                collate_fn=collate_fn,
+            )
+            assert len(self.val_dataloader) >= 1, "Validation dataloader is empty!"
+            print(f"Size of train dataloader: {len(self.train_dataloader)}, Size of val dataloader: {len(self.val_dataloader)}")
+        else:
+            print(f"Size of train dataloader: {len(self.train_dataloader)}. Validation is disabled.")
 
         total_training_steps = len(self.train_dataloader) * self.config.trainer.total_epochs
 
@@ -765,6 +810,8 @@ class RayPPOTrainer:
         self.validation_generations_logger.log(self.config.trainer.logger, samples, self.global_steps)
 
     def _validate(self):
+        if self.val_dataloader is None:
+            return {}
         print(f"--- begin validaion ---")
 
         reward_tensor_lst = []
@@ -805,6 +852,10 @@ class RayPPOTrainer:
                 non_tensor_batch_keys=non_tensor_batch_keys_to_pop,
             )
 
+            # Hierarchical HICRL Integration: Inject context and manage tokens
+            if self.hierarchical_manager.enabled:
+                test_gen_batch = self.hierarchical_manager.prepare_batch(test_gen_batch, split="val")
+
             test_gen_batch.meta_info = {
                 "eos_token_id": self.tokenizer.eos_token_id,
                 "pad_token_id": self.tokenizer.pad_token_id,
@@ -822,12 +873,15 @@ class RayPPOTrainer:
             # test_output_gen_batch = unpad_dataproto(test_output_gen_batch_padded, pad_size=pad_size)
 
             ################ agent-environment loop ###############
+            if self.mlmt_enabled and not self.shared_actor:
+                print("[MLMT] Validation: using dedicated high-level actor worker.")
             test_output_gen_batch, _ = self.traj_collector.multi_turn_loop(
                                                     gen_batch=test_gen_batch,
                                                     actor_rollout_wg=self.actor_rollout_wg,
                                                     envs=self.val_envs,
                                                     is_train=False,
                                                     openai_agent=self.openai_agent,
+                                                    high_actor_rollout_wg=self.high_actor_rollout_wg,
                                                     )
             print('validation generation end')
             del test_batch
@@ -842,6 +896,27 @@ class RayPPOTrainer:
             # evaluate using reward_function
             result = self.val_reward_fn(test_batch, return_dict=True)
             reward_tensor = result["reward_tensor"]
+            reward_extra_infos_dict = result.get("extra_info", {})
+            
+            # Display rewards
+            if reward_extra_infos_dict and "reward" in reward_extra_infos_dict:
+                rewards_list = reward_extra_infos_dict["reward"]
+                if rewards_list:
+                    rewards_array = np.array(rewards_list)
+                    mean_reward = rewards_array.mean()
+                    min_reward = rewards_array.min()
+                    max_reward = rewards_array.max()
+                    std_reward = rewards_array.std()
+                    print(f"\n🔍 Validation Batch Rewards:")
+                    print(f"   Individual: {[f'{r:.2f}' for r in rewards_list[:5]]}...")
+                    print(f"   Mean: {mean_reward:.2f}")
+                    print(f"   Range: [{min_reward:.2f}, {max_reward:.2f}]")
+                    print(f"   Std: {std_reward:.3f}")
+
+            # Hierarchical HICRL Integration: Log detailed samples
+            if self.hierarchical_logger.enabled:
+                self.hierarchical_logger.log_batch(split="val", batch=test_batch, step=self.global_steps)
+
             scores = reward_tensor.sum(-1).cpu().tolist()
             sample_scores.extend(scores)
 
@@ -879,6 +954,9 @@ class RayPPOTrainer:
         for k, v in success_rate.items():
             metric_dict[f'val/{k}'] = v
 
+        # Hierarchical HICRL Integration: Log validation metrics
+        self.hierarchical_logger.log_metrics(metric_dict)
+
         return metric_dict
 
     def init_workers(self):
@@ -901,6 +979,16 @@ class RayPPOTrainer:
                 role="actor_rollout",
             )
             self.resource_pool_to_cls[resource_pool]["actor_rollout"] = actor_rollout_cls
+            print(f"DEBUG RayPPOTrainer: mlmt_enabled={self.mlmt_enabled}, shared_actor={self.shared_actor}")
+            if self.mlmt_enabled and not self.shared_actor:
+                print(f"DEBUG: Trying to get HighActorRollout pool")
+                high_actor_pool = self.resource_pool_manager.get_resource_pool(Role.HighActorRollout)
+                high_actor_cls = RayClassWithInitArgs(
+                    cls=self.role_worker_mapping[Role.HighActorRollout],
+                    config=self.config.high_actor_rollout_ref,
+                    role="high_actor_rollout",
+                )
+                self.resource_pool_to_cls[high_actor_pool]["high_actor_rollout"] = high_actor_cls
         else:
             raise NotImplementedError
 
@@ -954,6 +1042,11 @@ class RayPPOTrainer:
         # we should create rollout at the end so that vllm can have a better estimation of kv cache memory
         self.actor_rollout_wg = all_wg["actor_rollout"]
         self.actor_rollout_wg.init_model()
+        if self.mlmt_enabled and not self.shared_actor:
+            self.high_actor_rollout_wg = all_wg["high_actor_rollout"]
+            self.high_actor_rollout_wg.init_model()
+        else:
+            self.high_actor_rollout_wg = self.actor_rollout_wg
 
         # create async rollout manager and request scheduler
         self.async_rollout_mode = False
@@ -965,87 +1058,64 @@ class RayPPOTrainer:
             )
 
     def _save_checkpoint(self):
-        # path: given_path + `/global_step_{global_steps}` + `/actor`
+        # path: given_path + `/global_step_{global_steps}` + `/low_actor` or `/high_actor`
         local_global_step_folder = os.path.join(self.config.trainer.default_local_dir, f"global_step_{self.global_steps}")
 
         print(f"local_global_step_folder: {local_global_step_folder}")
-        actor_local_path = os.path.join(local_global_step_folder, "actor")
-
-        actor_remote_path = None if self.config.trainer.default_hdfs_dir is None else os.path.join(self.config.trainer.default_hdfs_dir, f"global_step_{self.global_steps}", "actor")
+        low_actor_local_path = os.path.join(local_global_step_folder, "low_actor")
+        high_actor_local_path = os.path.join(local_global_step_folder, "high_actor")
 
         remove_previous_ckpt_in_save = self.config.trainer.get("remove_previous_ckpt_in_save", False)
-        if remove_previous_ckpt_in_save:
-            print("Warning: remove_previous_ckpt_in_save is deprecated," + " set max_actor_ckpt_to_keep=1 and max_critic_ckpt_to_keep=1 instead")
         max_actor_ckpt_to_keep = self.config.trainer.get("max_actor_ckpt_to_keep", None) if not remove_previous_ckpt_in_save else 1
-        max_critic_ckpt_to_keep = self.config.trainer.get("max_critic_ckpt_to_keep", None) if not remove_previous_ckpt_in_save else 1
 
-        self.actor_rollout_wg.save_checkpoint(actor_local_path, actor_remote_path, self.global_steps, max_ckpt_to_keep=max_actor_ckpt_to_keep)
+        # Save Low-Level Actor (Primary)
+        self.actor_rollout_wg.save_checkpoint(low_actor_local_path, None, self.global_steps, max_ckpt_to_keep=max_actor_ckpt_to_keep)
 
-        if self.use_critic:
-            critic_local_path = os.path.join(local_global_step_folder, "critic")
-            critic_remote_path = None if self.config.trainer.default_hdfs_dir is None else os.path.join(self.config.trainer.default_hdfs_dir, f"global_step_{self.global_steps}", "critic")
-            self.critic_wg.save_checkpoint(critic_local_path, critic_remote_path, self.global_steps, max_ckpt_to_keep=max_critic_ckpt_to_keep)
+        # Save High-Level Actor (Secondary) if separate
+        if self.mlmt_enabled and not self.shared_actor:
+            self.high_actor_rollout_wg.save_checkpoint(high_actor_local_path, None, self.global_steps, max_ckpt_to_keep=max_actor_ckpt_to_keep)
 
-        # save dataloader
-        dataloader_local_path = os.path.join(local_global_step_folder, "data.pt")
-        dataloader_state_dict = self.train_dataloader.state_dict()
-        torch.save(dataloader_state_dict, dataloader_local_path)
-
-        # latest checkpointed iteration tracker (for atomic usage)
+        # latest checkpointed iteration tracker
         local_latest_checkpointed_iteration = os.path.join(self.config.trainer.default_local_dir, "latest_checkpointed_iteration.txt")
         with open(local_latest_checkpointed_iteration, "w") as f:
             f.write(str(self.global_steps))
 
     def _load_checkpoint(self):
-        if self.config.trainer.resume_mode == "disable":
+        if self.config.trainer.get("resume_mode", "disable") == "disable":
             return 0
 
-        # load from hdfs
-        if self.config.trainer.default_hdfs_dir is not None:
-            raise NotImplementedError("load from hdfs is not implemented yet")
+        checkpoint_folder = self.config.trainer.default_local_dir
+        if not os.path.isabs(checkpoint_folder):
+            working_dir = os.getcwd()
+            checkpoint_folder = os.path.join(working_dir, checkpoint_folder)
+        
+        global_step_folder = None
+        if self.config.trainer.resume_mode == "resume_path":
+            global_step_folder = self.config.trainer.resume_from_path
         else:
-            checkpoint_folder = self.config.trainer.default_local_dir  # TODO: check path
-            if not os.path.isabs(checkpoint_folder):
-                working_dir = os.getcwd()
-                checkpoint_folder = os.path.join(working_dir, checkpoint_folder)
-            global_step_folder = find_latest_ckpt_path(checkpoint_folder)  # None if no latest
+            # Fallback to scratch if auto is requested but no logic to find latest is present here
+            print("Resume mode is auto but no specific path provided. Starting from scratch.")
+            return 0
 
-        # find global_step_folder
-        if self.config.trainer.resume_mode == "auto":
-            if global_step_folder is None:
-                print("Training from scratch")
-                return 0
-        else:
-            if self.config.trainer.resume_mode == "resume_path":
-                assert isinstance(self.config.trainer.resume_from_path, str), "resume ckpt must be str type"
-                assert "global_step_" in self.config.trainer.resume_from_path, "resume ckpt must specify the global_steps"
-                global_step_folder = self.config.trainer.resume_from_path
-                if not os.path.isabs(global_step_folder):
-                    working_dir = os.getcwd()
-                    global_step_folder = os.path.join(working_dir, global_step_folder)
-        print(f"Load from checkpoint folder: {global_step_folder}")
-        # set global step
+        if global_step_folder is None or not os.path.exists(global_step_folder):
+            print(f"No checkpoint found at {global_step_folder}, training from scratch")
+            return 0
+
+        print(f"Resuming from {global_step_folder}")
         self.global_steps = int(global_step_folder.split("global_step_")[-1])
 
-        print(f"Setting global step to {self.global_steps}")
-        print(f"Resuming from {global_step_folder}")
-
-        actor_path = os.path.join(global_step_folder, "actor")
-        critic_path = os.path.join(global_step_folder, "critic")
-        # load actor
-        self.actor_rollout_wg.load_checkpoint(actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
-        # load critic
-        if self.use_critic:
-            self.critic_wg.load_checkpoint(critic_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
-
-        # load dataloader,
-        # TODO: from remote not implemented yet
-        dataloader_local_path = os.path.join(global_step_folder, "data.pt")
-        if os.path.exists(dataloader_local_path):
-            dataloader_state_dict = torch.load(dataloader_local_path, weights_only=False)
-            self.train_dataloader.load_state_dict(dataloader_state_dict)
-        else:
-            print(f"Warning: No dataloader state found at {dataloader_local_path}, will start from scratch")
+        # Load Low-Level Actor
+        low_actor_path = os.path.join(global_step_folder, "low_actor")
+        if os.path.exists(low_actor_path):
+            self.actor_rollout_wg.load_checkpoint(low_actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
+        
+        # Load High-Level Actor
+        if self.mlmt_enabled and not self.shared_actor:
+            high_actor_path = os.path.join(global_step_folder, "high_actor")
+            if os.path.exists(high_actor_path):
+                self.high_actor_rollout_wg.load_checkpoint(high_actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
+        
+        return self.global_steps
 
     def _balance_batch(self, batch: DataProto, metrics, logging_prefix="global_seqlen"):
         """Reorder the data on single controller such that each dp rank gets similar total tokens"""
@@ -1059,6 +1129,333 @@ class RayPPOTrainer:
         batch.reorder(global_idx)
         global_balance_stats = log_seqlen_unbalance(seqlen_list=global_seqlen_lst, partitions=global_partition_lst, prefix=logging_prefix)
         metrics.update(global_balance_stats)
+
+    def _split_batches_by_actor(self, batch: DataProto):
+        if not self.mlmt_enabled or self.shared_actor:
+            return [("actor", None, batch)]
+
+        turns = batch.non_tensor_batch.get("turn", None)
+        if turns is None:
+            return [("actor", None, batch)]
+
+        turns = np.array(turns)
+        actor_batches = []
+
+        low_indices = np.where(turns != 2)[0]
+        if low_indices.size > 0:
+            actor_batches.append(("low", low_indices.tolist(), batch.select_idxs(low_indices.tolist())))
+
+        high_indices = np.where(turns == 2)[0]
+        if high_indices.size > 0:
+            actor_batches.append(("high", high_indices.tolist(), batch.select_idxs(high_indices.tolist())))
+
+        if not actor_batches:
+            actor_batches.append(("actor", None, batch))
+        return actor_batches
+
+    def _assert_turn_metadata(self, batch: DataProto):
+        if self.mlmt_enabled and not self.shared_actor:
+            if "turn" not in batch.non_tensor_batch:
+                raise ValueError("MLMT dual-actor mode requires 'turn' metadata in non_tensor_batch.")
+
+    @staticmethod
+    def _prefix_metrics(metrics_dict, prefix):
+        if not prefix:
+            return metrics_dict
+        return {f"{prefix}/{k}": v for k, v in metrics_dict.items()}
+
+    def _train_single_actor(self, batch: DataProto, actor_wg, prefix: str, timing_raw: Dict[str, float], is_last_step: bool):
+        local_metrics = {}
+        value_training_samples = []
+        value_aug_tensor = None
+        llm_success_tensor = None
+        turn_tensor = None
+        reward_tensor = None
+        reward_extra_infos_dict = {}
+        rewards_list = []
+        rewards_array = np.array([])
+        llm_success_weight = float(self.mlmt_cfg.get("llm_success_weight", 0.0))
+
+        # Resolve algorithm and freeze status for MLMT
+        adv_estimator = self.config.algorithm.adv_estimator
+        freeze = False
+        if self.mlmt_enabled:
+            if prefix == "high":
+                adv_estimator = self.mlmt_cfg.high_level.get("algorithm", adv_estimator)
+                freeze = bool(self.mlmt_cfg.high_level.get("freeze", False))
+            elif prefix == "low":
+                adv_estimator = self.mlmt_cfg.low_level.get("algorithm", adv_estimator)
+                freeze = bool(self.mlmt_cfg.low_level.get("freeze", False))
+        batch = adjust_batch(self.config, batch)
+        batch.batch["response_mask"] = compute_response_mask(batch)
+
+        if self.config.trainer.balance_batch:
+            balance_metrics = {}
+            self._balance_batch(batch, metrics=balance_metrics, logging_prefix="global_seqlen")
+            local_metrics.update(self._prefix_metrics(balance_metrics, prefix))
+
+        batch.meta_info["global_token_num"] = torch.sum(batch.batch["attention_mask"], dim=-1).tolist()
+
+        turn_indices = batch.non_tensor_batch.get("turn", None)
+        if turn_indices is not None:
+            turn_tensor = torch.tensor(np.array(turn_indices).astype(np.int64), device=batch.batch["responses"].device)
+        value_text_nt = batch.non_tensor_batch.get("value_text", None)
+        episode_rewards_nt = batch.non_tensor_batch.get("episode_rewards", None)
+        value_aug_tensor = None
+
+        reward_extra_infos_dict = {}
+        if self.use_rm:
+            reward_tensor = self.rm_wg.compute_rm_score(batch)
+            batch = batch.union(reward_tensor)
+
+        if self.config.reward_model.launch_reward_fn_async:
+            future_reward = compute_reward_async.remote(batch, self.config, self.tokenizer)
+        else:
+            reward_start = time.time()
+            reward_tensor, reward_extra_infos_dict = compute_reward(batch, self.reward_fn)
+            batch.batch["token_level_scores"] = reward_tensor
+            print(f"⏱️ Reward Computation (including Judge) took {time.time() - reward_start:.2f}s")
+
+        with _timer("old_log_prob", timing_raw):
+            old_log_prob = actor_wg.compute_log_prob(batch)
+            entropys = old_log_prob.batch["entropys"]
+            response_masks = batch.batch["response_mask"]
+            loss_agg_mode = self.config.actor_rollout_ref.actor.loss_agg_mode
+            entropy_loss = agg_loss(loss_mat=entropys, loss_mask=response_masks, loss_agg_mode=loss_agg_mode)
+            old_log_prob_metrics = {"actor/entropy_loss": entropy_loss.detach().item()}
+            local_metrics.update(self._prefix_metrics(old_log_prob_metrics, prefix))
+            old_log_prob.batch.pop("entropys")
+            batch = batch.union(old_log_prob)
+
+            if "rollout_log_probs" in batch.batch:
+                rollout_old_log_probs = batch.batch["rollout_log_probs"]
+                actor_old_log_probs = batch.batch["old_log_probs"]
+                attention_mask = batch.batch["attention_mask"]
+                responses = batch.batch["responses"]
+                response_length = responses.size(1)
+                response_mask = attention_mask[:, -response_length:]
+
+                rollout_probs = torch.exp(rollout_old_log_probs)
+                actor_probs = torch.exp(actor_old_log_probs)
+                rollout_probs_diff = torch.abs(rollout_probs - actor_probs)
+                rollout_probs_diff = torch.masked_select(rollout_probs_diff, response_mask.bool())
+                rollout_diff_metrics = {
+                    "training/rollout_probs_diff_max": float(torch.max(rollout_probs_diff).detach().item()),
+                    "training/rollout_probs_diff_mean": float(torch.mean(rollout_probs_diff).detach().item()),
+                    "training/rollout_probs_diff_std": float(torch.std(rollout_probs_diff).detach().item()),
+                }
+                local_metrics.update(self._prefix_metrics(rollout_diff_metrics, prefix))
+
+                if self.use_reference_policy:
+                    with _timer("ref", timing_raw):
+                        ref_worker = self.ref_policy_wg if not self.ref_in_actor else actor_wg
+                        ref_log_prob = ref_worker.compute_ref_log_prob(batch)
+                        batch = batch.union(ref_log_prob)
+
+                if self.use_critic:
+                    with _timer("values", timing_raw):
+                        values = self.critic_wg.compute_values(batch)
+                        batch = batch.union(values)
+
+                if self.config.reward_model.launch_reward_fn_async:
+                    reward_tensor, reward_extra_infos_dict = ray.get(future_reward)
+                    batch.batch["token_level_scores"] = reward_tensor
+
+                if reward_extra_infos_dict:
+                    batch.non_tensor_batch.update({k: np.array(v) for k, v in reward_extra_infos_dict.items()})
+
+        llm_scores = batch.non_tensor_batch.get("llm_success", None)
+        if llm_success_weight > 0 and llm_scores is not None:
+            llm_success_tensor = torch.tensor(llm_scores, dtype=batch.batch["token_level_scores"].dtype, device=batch.batch["token_level_scores"].device)
+            local_metrics.update(self._prefix_metrics({"llm_success/mean": float(llm_success_tensor.mean().item())}, prefix))
+
+        if llm_success_weight > 0 and llm_success_tensor is not None and turn_tensor is not None:
+            response_mask = batch.batch["response_mask"]
+            for i in range(len(batch.batch)):
+                if turn_tensor[i] == 3:
+                    response_len = response_mask[i].sum().long()
+                    if response_len > 0:
+                        batch.batch["token_level_scores"][i, response_len - 1] += llm_success_weight * llm_success_tensor[i]
+
+        if self.mlmt_enabled and turn_tensor is not None:
+            from agent_system.multi_turn_rollout.mlmt_utils import apply_symmetric_reaping
+            lambda_coef = self.config.get("mlmt_lambda", 0.1)
+            use_symmetric = self.config.get("mlmt_use_symmetric_rewards", True)
+            response_mask = batch.batch["response_mask"]
+            values = batch.batch.get("values", None)
+
+            if use_symmetric:
+                pass
+
+            print(f"MLMT-RL Bi-Level Training (Final Reward Only)")
+
+            if reward_extra_infos_dict and "reward" in reward_extra_infos_dict:
+                rewards_list = reward_extra_infos_dict["reward"]
+                if rewards_list:
+                    rewards_array = np.array(rewards_list)
+                    prefix_str = prefix or "actor"
+                    print(f"\n{prefix_str} Rewards:")
+                    print(f"   Individual: {[f'{r:.2f}' for r in rewards_list[:5]]}...")
+                    print(f"   Mean: {rewards_array.mean():.2f}")
+                    print(f"   Range: [{rewards_array.min():.2f}, {rewards_array.max():.2f}]")
+                    print(f"   Std: {rewards_array.std():.3f}")
+                    # --- MODIFICATION: BOLD PPRWINT REWARD ---
+                    print(f"\033[1m🚀 [{prefix_str.upper()}] STEP MEAN REWARD: {rewards_array.mean():.4f}\033[0m")
+
+        belief_scores = None
+        mode = None
+        if hasattr(self.config.env, "belief_shaped_grpo") and self.config.env.belief_shaped_grpo.get("enable", False):
+            belief_scores = batch.non_tensor_batch.get("belief_scores_accumulated", None)
+            mode = "shaped"
+        elif hasattr(self.config.env, "pure_belief_grpo") and self.config.env.pure_belief_grpo.get("enable", False):
+            belief_scores = batch.non_tensor_batch.get("belief_scores_accumulated", None)
+            mode = "pure"
+
+        if belief_scores is not None:
+            belief_scores = np.array(belief_scores)
+            response_mask = batch.batch["response_mask"]
+            response_lengths = response_mask.sum(dim=-1)
+            for i, resp_len in enumerate(response_lengths):
+                if resp_len > 0 and i < len(belief_scores):
+                    if mode == "pure":
+                        batch.batch["token_level_scores"][i, resp_len - 1] = belief_scores[i]
+                    else:
+                        batch.batch["token_level_scores"][i, resp_len - 1] += belief_scores[i]
+            print(f"📊 Applied belief scores to token_level_scores (mode={mode}, total={belief_scores.sum():.4f})")
+
+        reward_coef = self.config.env.rule_reward_coef
+        if not self.config.env.use_dense_reward:
+            reward_coef = 0.0
+        batch, invalid_metrics = apply_invalid_action_penalty(
+            batch,
+            reward_coef=reward_coef,
+            rule_number=self.config.env.rule_number,
+        )
+        local_metrics.update(self._prefix_metrics(invalid_metrics, prefix))
+
+        if self.hierarchical_manager.enabled and self.config.hierarchical.kl_max.enabled:
+            kl_cfg = self.config.hierarchical.kl_max
+            if "old_log_probs" in batch.batch and "ref_log_prob" in batch.batch:
+                response_mask = batch.batch["response_mask"]
+                logp_ctx = (batch.batch["old_log_probs"] * response_mask).sum(-1)
+                logp_noctx = (batch.batch["ref_log_prob"] * response_mask).sum(-1)
+                delta_logp = logp_ctx - logp_noctx
+                
+                tau_prime = kl_cfg.get("clip_tau", 10.0)
+                lambda_coef = kl_cfg.get("lambda_coef", 0.0)
+                clipped_delta = torch.clamp(delta_logp, max=tau_prime)
+                
+                response_lengths = response_mask.sum(-1).long()
+                for i in range(len(batch.batch)):
+                    last_idx = response_lengths[i] - 1
+                    if last_idx >= 0:
+                        batch.batch["token_level_scores"][i, last_idx] += lambda_coef * clipped_delta[i]
+
+        if self.hierarchical_logger.enabled:
+            self.hierarchical_logger.log_batch(split="train", batch=batch, step=self.global_steps)
+
+        if self.config.algorithm.use_kl_in_reward:
+            batch, kl_metrics = apply_kl_penalty(batch, kl_ctrl=self.kl_ctrl_in_reward, kl_penalty=self.config.algorithm.kl_penalty)
+            local_metrics.update(self._prefix_metrics(kl_metrics, prefix))
+        else:
+            batch.batch["token_level_rewards"] = batch.batch["token_level_scores"]
+
+        if freeze:
+            print(f"❄️ {prefix or 'actor'} is frozen. Skipping update.")
+            return local_metrics, reward_extra_infos_dict, batch, value_training_samples
+
+        # --- MODIFICATION #2: Alternating Updates ---
+        tL = self.config.get("mlmt_rl", {}).get("low_level", {}).get("update_frequency", 1)
+        tH = self.config.get("mlmt_rl", {}).get("high_level", {}).get("update_frequency", 1)
+        
+        is_high_level = (prefix == "high")
+
+        # If 1:1, both are updated at the same time
+        if tL == 1 and tH == 1:
+            should_update = True
+        else:
+            cycle_len = tL + tH
+            current_step_in_cycle = (self.global_steps) % cycle_len
+            
+            if is_high_level:
+                should_update = (current_step_in_cycle >= tL or tL == 0)
+            else:
+                should_update = (current_step_in_cycle < tL or tH == 0)
+            
+        if not should_update:
+            print(f"⏳ {prefix or 'actor'} skipping update this step (Freq: tL={tL}, tH={tH}, Step={self.global_steps}, CycleIdx={current_step_in_cycle})")
+            return local_metrics, reward_extra_infos_dict, batch, value_training_samples
+
+        #Single HL Update per Step (Average) ---
+        # If LL is gRPO (n > 1) and we are updating the High Level, 
+        # force one update per batch by setting mini_batch_size to total samples.
+        n = self.config.actor_rollout_ref.rollout.n
+        if is_high_level and n > 1:
+            total_samples = len(batch)
+            print(f"⚖️ HL Averaging: LL is gRPO (n={n}), forcing HL to perform 1 update on {total_samples} samples.")
+            # We temporarily inject this into the worker's update call if possible, 
+            # or just rely on the fact that if we use the whole batch, it's one update.
+            batch.meta_info["force_single_update"] = True
+
+        print(f"🚀 Training {prefix or 'actor'} with {adv_estimator} algorithm")
+        norm_adv_by_std_in_grpo = self.config.algorithm.get("norm_adv_by_std_in_grpo", True)
+        batch = compute_advantage(
+            batch,
+            adv_estimator=adv_estimator,
+            gamma=self.config.algorithm.gamma,
+            lam=self.config.algorithm.lam,
+            num_repeat=self.config.actor_rollout_ref.rollout.n,
+            norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
+            multi_turn=self.config.actor_rollout_ref.rollout.multi_turn.enable,
+            compute_mean_std_cross_all_data=self.config.algorithm.compute_mean_std_cross_all_data,
+            use_pf_ppo=self.config.algorithm.use_pf_ppo,
+            pf_ppo_reweight_method=self.config.algorithm.pf_ppo.reweight_method,
+            pf_ppo_weight_pow=self.config.algorithm.pf_ppo.weight_pow,
+            step_advantage_w=self.config.algorithm.gigpo.step_advantage_w,
+            gigpo_mode=self.config.algorithm.gigpo.mode,
+                        )
+
+        if self.use_critic and (not self.hierarchical_manager.enabled or self.hierarchical_manager.ll_trainable):
+            with _timer("update_critic", timing_raw):
+                update_start = time.time()
+                critic_output = self.critic_wg.update_critic(batch)
+                critic_output_metrics = reduce_metrics(critic_output.meta_info["metrics"])
+                local_metrics.update(self._prefix_metrics(critic_output_metrics, prefix))
+                print(f"⏱️ Critic Update took {time.time() - update_start:.2f}s")
+
+        if self.config.trainer.critic_warmup <= self.global_steps:
+            if not self.hierarchical_manager.enabled or self.hierarchical_manager.ll_trainable:
+                with _timer("update_actor", timing_raw):
+                    update_start = time.time()
+                    batch.meta_info["multi_turn"] = self.config.actor_rollout_ref.rollout.multi_turn.enable
+                    actor_output = actor_wg.update_actor(batch)
+                    actor_output_metrics = reduce_metrics(actor_output.meta_info["metrics"])
+                    print(f"⏱️ Actor Update took {time.time() - update_start:.2f}s")
+                local_metrics.update(self._prefix_metrics(actor_output_metrics, prefix))
+
+        return local_metrics, reward_extra_infos_dict, batch, value_training_samples
+
+    def _update_value_worker(self, samples):
+        if self.value_worker is None or not samples:
+            return {}
+        update_steps = self.value_cfg.get("update_steps_per_iter", 1) if self.value_cfg else 1
+        batch_size = min(len(samples), 32)
+        metrics_accum = {}
+        for _ in range(update_steps):
+            if not samples:
+                break
+            if len(samples) > batch_size:
+                batch_samples = random.sample(samples, batch_size)
+            else:
+                batch_samples = samples
+            texts, targets = zip(*batch_samples)
+            update_metrics = self.value_worker.update_value_fn(list(texts), list(targets))
+            for k, v in update_metrics.items():
+                metrics_accum[k] = metrics_accum.get(k, 0.0) + v
+        if metrics_accum:
+            for k in metrics_accum:
+                metrics_accum[k] /= update_steps
+        return metrics_accum
 
     def fit(self):
         """
@@ -1080,6 +1477,9 @@ class RayPPOTrainer:
 
         self.global_steps = 0
 
+        # Hierarchical HICRL Integration: Log run metadata
+        self.hierarchical_logger.log_run_meta(self.config)
+
         # load checkpoint before doing anything
         self._load_checkpoint()
 
@@ -1087,9 +1487,9 @@ class RayPPOTrainer:
         # currently, we only support validation using the reward_function.
         if self.val_reward_fn is not None and self.config.trainer.get("val_before_train", True):
             val_metrics = self._validate()
-            assert val_metrics, f"{val_metrics=}"
-            pprint(f"Initial validation metrics: {val_metrics}")
-            logger.log(data=val_metrics, step=self.global_steps)
+            if val_metrics:
+                pprint(f"Initial validation metrics: {val_metrics}")
+                logger.log(data=val_metrics, step=self.global_steps)
             if self.config.trainer.get("val_only", False):
                 return
 
@@ -1119,20 +1519,28 @@ class RayPPOTrainer:
                     non_tensor_batch_keys=non_tensor_batch_keys_to_pop,
                 )
 
+                # Hierarchical HICRL Integration: Inject context and manage tokens
+                if self.hierarchical_manager.enabled:
+                    gen_batch = self.hierarchical_manager.prepare_batch(gen_batch, split="train")
+
                 is_last_step = self.global_steps >= self.total_training_steps
 
                 with _timer("step", timing_raw):
                     # generate a batch
                     with _timer("gen", timing_raw):
                         ################ agent-environment loop ###############
+                        print(f"DEBUG [Pre-Rollout]: Global Step={self.global_steps}, Batch Size={self.config.data.train_batch_size}")
+                        if self.mlmt_enabled and not self.shared_actor:
+                            print("[MLMT] Training: using dedicated high-level actor worker.")
                         gen_batch_output, belief_trajectories = self.traj_collector.multi_turn_loop(
-                                                                gen_batch=gen_batch,
-                                                                actor_rollout_wg=self.actor_rollout_wg,
-                                                                envs=self.envs,
-                                                                critique_envs=self.critique_envs,
-                                                                is_train=True,
-                                                                openai_agent=self.openai_agent,
-                                                                )
+                            gen_batch=gen_batch,
+                            actor_rollout_wg=self.actor_rollout_wg,
+                            envs=self.envs,
+                            critique_envs=self.critique_envs,
+                            is_train=True,
+                            openai_agent=self.openai_agent,
+                            high_actor_rollout_wg=self.high_actor_rollout_wg,
+                        )
                     if self.config.algorithm.adv_estimator == AdvantageEstimator.REMAX:
                         with _timer("gen_max", timing_raw):
                             gen_baseline_batch = deepcopy(gen_batch)
@@ -1162,175 +1570,61 @@ class RayPPOTrainer:
                             gamma=self.config.algorithm.gamma
                         )
                         batch.batch['step_rewards'] = step_rewards_tensor
-                    
-                    batch = adjust_batch(self.config, batch)
 
-                    batch.batch["response_mask"] = compute_response_mask(batch)
-                    # balance the number of valid tokens on each dp rank.
-                    # Note that this breaks the order of data inside the batch.
-                    # Please take care when you implement group based adv computation such as GRPO and rloo
-                    if self.config.trainer.balance_batch:
-                        self._balance_batch(batch, metrics=metrics)
+                    self._assert_turn_metadata(batch)
+                    actor_batches = self._split_batches_by_actor(batch)
+                    reward_extra_infos_dict = {}
+                    value_training_buffer = []
 
-                    # compute global_valid tokens
-                    batch.meta_info["global_token_num"] = torch.sum(batch.batch["attention_mask"], dim=-1).tolist()
-                    with _timer("reward", timing_raw):
-                        # compute reward model score
-                        if self.use_rm:
-                            reward_tensor = self.rm_wg.compute_rm_score(batch)
-                            batch = batch.union(reward_tensor)
+                    original_batch = batch
+                    # Keys that are typically added or updated during training sub-steps
+                    keys_to_update = ['token_level_scores', 'token_level_rewards', 'advantages', 'returns', 'values', 'old_log_probs', 'ref_log_prob']
 
-                        if self.config.reward_model.launch_reward_fn_async:
-                            future_reward = compute_reward_async.remote(batch, self.config, self.tokenizer)
+                    for prefix, indices, actor_batch in actor_batches:
+                        actor_wg = self.high_actor_rollout_wg if prefix == "high" else self.actor_rollout_wg
+                        prefix_name = prefix if self.mlmt_enabled and not self.shared_actor else None
+                        sub_metrics, reward_info, trained_batch, value_samples = self._train_single_actor(actor_batch, actor_wg, prefix_name, timing_raw, is_last_step)
+                        metrics.update(sub_metrics)
+                        value_training_buffer.extend(value_samples)
+
+                        if indices is not None:
+                            # Update original batch with computed tensors for global logging
+                            for k in keys_to_update:
+                                if k in trained_batch.batch:
+                                    val = trained_batch.batch[k]
+                                    if k not in original_batch.batch:
+                                        shape = (len(original_batch), *val.shape[1:])
+                                        original_batch.batch[k] = torch.zeros(shape, dtype=val.dtype, device=val.device)
+                                    original_batch.batch[k][indices] = val
+
+                            # Sync non-tensor metadata (rewards, info, etc.)
+                            for k, v in trained_batch.non_tensor_batch.items():
+                                if k not in original_batch.non_tensor_batch:
+                                    original_batch.non_tensor_batch[k] = np.empty(len(original_batch), dtype=object)
+                                # Ensure we don't overwrite with None if already present
+                                original_batch.non_tensor_batch[k][indices] = v
+
+                            # Aggregate reward extra info for dumping
+                            if reward_info:
+                                for k, v in reward_info.items():
+                                    if k not in reward_extra_infos_dict:
+                                        reward_extra_infos_dict[k] = [None] * len(original_batch)
+                                    for i, idx in enumerate(indices):
+                                        reward_extra_infos_dict[k][idx] = v[i]
                         else:
-                            reward_tensor, reward_extra_infos_dict = compute_reward(batch, self.reward_fn)
-                    # recompute old_log_probs
-                    with _timer("old_log_prob", timing_raw):
-                        old_log_prob = self.actor_rollout_wg.compute_log_prob(batch)
-                        entropys = old_log_prob.batch["entropys"]
-                        response_masks = batch.batch["response_mask"]
-                        loss_agg_mode = self.config.actor_rollout_ref.actor.loss_agg_mode
-                        entropy_loss = agg_loss(loss_mat=entropys, loss_mask=response_masks, loss_agg_mode=loss_agg_mode)
-                        old_log_prob_metrics = {"actor/entropy_loss": entropy_loss.detach().item()}
-                        metrics.update(old_log_prob_metrics)
-                        old_log_prob.batch.pop("entropys")
-                        batch = batch.union(old_log_prob)
+                            # Single actor case
+                            original_batch = trained_batch
+                            reward_extra_infos_dict = reward_info
 
-                        if "rollout_log_probs" in batch.batch.keys():
-                            # TODO: we may want to add diff of probs too.
-                            rollout_old_log_probs = batch.batch["rollout_log_probs"]
-                            actor_old_log_probs = batch.batch["old_log_probs"]
-                            attention_mask = batch.batch["attention_mask"]
-                            responses = batch.batch["responses"]
-                            response_length = responses.size(1)
-                            response_mask = attention_mask[:, -response_length:]
+                    batch = original_batch
+                    logging_batch = batch
 
-                            rollout_probs = torch.exp(rollout_old_log_probs)
-                            actor_probs = torch.exp(actor_old_log_probs)
-                            rollout_probs_diff = torch.abs(rollout_probs - actor_probs)
-                            rollout_probs_diff = torch.masked_select(rollout_probs_diff, response_mask.bool())
-                            rollout_probs_diff_max = torch.max(rollout_probs_diff)
-                            rollout_probs_diff_mean = torch.mean(rollout_probs_diff)
-                            rollout_probs_diff_std = torch.std(rollout_probs_diff)
-                            metrics.update(
-                                {
-                                    "training/rollout_probs_diff_max": rollout_probs_diff_max.detach().item(),
-                                    "training/rollout_probs_diff_mean": rollout_probs_diff_mean.detach().item(),
-                                    "training/rollout_probs_diff_std": rollout_probs_diff_std.detach().item(),
-                                }
-                            )
-
-                    if self.use_reference_policy:
-                        # compute reference log_prob
-                        with _timer("ref", timing_raw):
-                            if not self.ref_in_actor:
-                                ref_log_prob = self.ref_policy_wg.compute_ref_log_prob(batch)
-                            else:
-                                ref_log_prob = self.actor_rollout_wg.compute_ref_log_prob(batch)
-                            batch = batch.union(ref_log_prob)
-
-                    # compute values
-                    if self.use_critic:
-                        with _timer("values", timing_raw):
-                            values = self.critic_wg.compute_values(batch)
-                            batch = batch.union(values)
-
-                    with _timer("adv", timing_raw):
-                        # we combine with rule-based rm
-                        reward_extra_infos_dict: dict[str, list]
-                        if self.config.reward_model.launch_reward_fn_async:
-                            reward_tensor, reward_extra_infos_dict = ray.get(future_reward)
-                        batch.batch["token_level_scores"] = reward_tensor
-
-                        print(f"{list(reward_extra_infos_dict.keys())=}")
-                        if reward_extra_infos_dict:
-                            batch.non_tensor_batch.update({k: np.array(v) for k, v in reward_extra_infos_dict.items()})
-
-                        # Inject belief scores into token-level scores so PPO advantages reflect belief shaping
-                        belief_scores = None
-                        if hasattr(self.config.env, 'belief_shaped_grpo') and self.config.env.belief_shaped_grpo.get('enable', False):
-                            belief_scores = batch.non_tensor_batch.get('belief_scores_accumulated', None)
-                            mode = "shaped"
-                        elif hasattr(self.config.env, 'pure_belief_grpo') and self.config.env.pure_belief_grpo.get('enable', False):
-                            belief_scores = batch.non_tensor_batch.get('belief_scores_accumulated', None)
-                            mode = "pure"
-                        else:
-                            mode = None
-
-                        if belief_scores is not None:
-                            belief_scores = np.array(belief_scores)
-                            # Get response lengths, not full sequence lengths
-                            response_mask = batch.batch['response_mask']
-                            response_lengths = response_mask.sum(dim=-1)
-                            # Adjust token_level_scores at terminal response token
-                            for i, resp_len in enumerate(response_lengths):
-                                if resp_len > 0 and i < len(belief_scores):
-                                    if mode == "pure":
-                                        batch.batch["token_level_scores"][i, resp_len-1] = belief_scores[i]
-                                    else:
-                                        batch.batch["token_level_scores"][i, resp_len-1] += belief_scores[i]
-                            print(f"📊 Applied belief scores to token_level_scores (mode={mode}, total={belief_scores.sum():.4f})")
-
-                        # compute rewards. apply_invalid_action_penalty if available
-                        reward_coef=self.config.env.rule_reward_coef
-                        if not self.config.env.use_dense_reward: # sparse reward, add all penalties at the end
-                            reward_coef = 0.0
-                        batch, invalid_metrics = apply_invalid_action_penalty(batch,
-                                                                                reward_coef=reward_coef,
-                                                                                rule_number=self.config.env.rule_number,
-                                                                                )
-                        metrics.update(invalid_metrics)
-
-                        # compute rewards. apply_kl_penalty if available
-                        if self.config.algorithm.use_kl_in_reward:
-                            batch, kl_metrics = apply_kl_penalty(batch, kl_ctrl=self.kl_ctrl_in_reward, kl_penalty=self.config.algorithm.kl_penalty)
-                            metrics.update(kl_metrics)
-                        else:
-                            batch.batch["token_level_rewards"] = batch.batch["token_level_scores"]
-
-                        # compute advantages, executed on the driver process
-
-                        norm_adv_by_std_in_grpo = self.config.algorithm.get("norm_adv_by_std_in_grpo", True)  # GRPO adv normalization factor
-                        batch = compute_advantage(
-                            batch,
-                            adv_estimator=self.config.algorithm.adv_estimator,
-                            gamma=self.config.algorithm.gamma,
-                            lam=self.config.algorithm.lam,
-                            num_repeat=self.config.actor_rollout_ref.rollout.n,
-                            norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
-                            multi_turn=self.config.actor_rollout_ref.rollout.multi_turn.enable,
-                            compute_mean_std_cross_all_data=self.config.algorithm.compute_mean_std_cross_all_data,
-                            use_pf_ppo=self.config.algorithm.use_pf_ppo,
-                            pf_ppo_reweight_method=self.config.algorithm.pf_ppo.reweight_method,
-                            pf_ppo_weight_pow=self.config.algorithm.pf_ppo.weight_pow,
-                            step_advantage_w=self.config.algorithm.gigpo.step_advantage_w,
-                            gigpo_mode=self.config.algorithm.gigpo.mode,
-                        )
-
-                    # update critic
-                    if self.use_critic:
-                        with _timer("update_critic", timing_raw):
-                            critic_output = self.critic_wg.update_critic(batch)
-                        critic_output_metrics = reduce_metrics(critic_output.meta_info["metrics"])
-                        metrics.update(critic_output_metrics)
-
-                    # implement critic warmup
-                    if self.config.trainer.critic_warmup <= self.global_steps:
-                        # update actor
-                        with _timer("update_actor", timing_raw):
-                            batch.meta_info["multi_turn"] = self.config.actor_rollout_ref.rollout.multi_turn.enable
-                            actor_output = self.actor_rollout_wg.update_actor(batch)
-                        actor_output_metrics = reduce_metrics(actor_output.meta_info["metrics"])
-                        metrics.update(actor_output_metrics)
-
-                    # Log rollout generations if enabled
                     rollout_data_dir = self.config.trainer.get("rollout_data_dir", None)
                     if rollout_data_dir:
                         with _timer("dump_rollout_generations", timing_raw):
-                            print(batch.batch.keys())
-                            inputs = self.tokenizer.batch_decode(batch.batch["prompts"], skip_special_tokens=True)
-                            outputs = self.tokenizer.batch_decode(batch.batch["responses"], skip_special_tokens=True)
-                            scores = batch.batch["token_level_scores"].sum(-1).cpu().tolist()
+                            inputs = self.tokenizer.batch_decode(logging_batch.batch["prompts"], skip_special_tokens=True)
+                            outputs = self.tokenizer.batch_decode(logging_batch.batch["responses"], skip_special_tokens=True)
+                            scores = logging_batch.batch["token_level_scores"].sum(-1).cpu().tolist()
                             self._dump_generations(
                                 inputs=inputs,
                                 outputs=outputs,
@@ -1338,6 +1632,9 @@ class RayPPOTrainer:
                                 reward_extra_infos_dict=reward_extra_infos_dict,
                                 dump_path=rollout_data_dir,
                             )
+
+                    value_metrics = self._update_value_worker(value_training_buffer)
+                    metrics.update(value_metrics)
 
                     # validate
                     if self.val_reward_fn is not None and self.config.trainer.test_freq > 0 and (is_last_step or self.global_steps % self.config.trainer.test_freq == 0):

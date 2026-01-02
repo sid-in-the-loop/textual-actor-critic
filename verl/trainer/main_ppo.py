@@ -16,10 +16,12 @@ Note that we don't combine the main with ray_trainer as ray_trainer is used by o
 """
 
 import os
+from copy import deepcopy
 
 import hydra
 import ray
 
+from omegaconf import open_dict
 from verl.trainer.ppo.ray_trainer import RayPPOTrainer
 from verl.trainer.ppo.reward import load_reward_manager
 
@@ -32,8 +34,19 @@ def main(config):
 def run_ppo(config) -> None:
     if not ray.is_initialized():
         # this is for local ray cluster
+        env_vars = {
+            "TOKENIZERS_PARALLELISM": "true",
+            "NCCL_DEBUG": "WARN",
+            "VLLM_LOGGING_LEVEL": "WARN",
+            "VLLM_ALLOW_RUNTIME_LORA_UPDATING": "true"
+        }
+        for key in ["HF_TOKEN", "OPENAI_API_KEY"]:
+            if key in os.environ:
+                env_vars[key] = os.environ[key]
+
         ray.init(
-            runtime_env={"env_vars": {"TOKENIZERS_PARALLELISM": "true", "NCCL_DEBUG": "WARN", "VLLM_LOGGING_LEVEL": "WARN", "VLLM_ALLOW_RUNTIME_LORA_UPDATING": "true"}},
+            include_dashboard=False,
+            runtime_env={"env_vars": env_vars},
             num_cpus=config.ray_init.num_cpus,
         )
 
@@ -54,14 +67,35 @@ class TaskRunner:
         pprint(OmegaConf.to_container(config, resolve=True))  # resolve=True will eval symbol values
         OmegaConf.resolve(config)
 
+        mlmt_enabled = config.get('mlmt_rl', {}).get('enable', False)
+        shared_actor = config.get('mlmt_rl', {}).get('shared_actor', True)
+
+        with open_dict(config):
+            if mlmt_enabled:
+                mlmt_cfg = config.mlmt_rl
+                low_model_path = mlmt_cfg.low_level.get("model_path") or config.actor_rollout_ref.model.path
+                config.actor_rollout_ref.model.path = low_model_path
+
+                if not shared_actor:
+                    high_actor_cfg = deepcopy(config.actor_rollout_ref)
+                    high_actor_cfg.model.path = mlmt_cfg.high_level.get("model_path", high_actor_cfg.model.path)
+                    config.high_actor_rollout_ref = high_actor_cfg
+                else:
+                    config.high_actor_rollout_ref = config.actor_rollout_ref
+            else:
+                config.high_actor_rollout_ref = config.actor_rollout_ref
+
         # download the checkpoint from hdfs
-        local_path = copy_to_local(config.actor_rollout_ref.model.path, use_shm=config.actor_rollout_ref.model.get("use_shm", False))
+        low_model_local_path = copy_to_local(config.actor_rollout_ref.model.path, use_shm=config.actor_rollout_ref.model.get("use_shm", False))
 
         from agent_system.environments import make_envs
 
         critique_envs = None
         if config.env.use_critique:
-            envs, val_envs, critique_envs = make_envs(config)
+            res = make_envs(config)
+            envs = res[0]
+            val_envs = res[1]
+            critique_envs = res[2]
         else:
             envs, val_envs = make_envs(config)
 
@@ -80,9 +114,23 @@ class TaskRunner:
                 # Local or HDFS path - use copy_to_local
                 tokenizer_local_path = copy_to_local(tokenizer_path, use_shm=config.actor_rollout_ref.model.get("use_shm", False))
         else:
-            tokenizer_local_path = local_path
+            tokenizer_local_path = low_model_local_path
         tokenizer = hf_tokenizer(tokenizer_local_path, trust_remote_code=trust_remote_code)
         processor = hf_processor(tokenizer_local_path, trust_remote_code=trust_remote_code, use_fast=True)  # used for multimodal LLM, could be none
+
+        high_tokenizer = tokenizer
+        if mlmt_enabled and not shared_actor:
+            high_model_path = config.high_actor_rollout_ref.model.path
+            high_tokenizer_path = config.high_actor_rollout_ref.model.get("tokenizer_path", None)
+            if high_tokenizer_path is not None:
+                if not high_tokenizer_path.startswith("/") and not high_tokenizer_path.startswith("hdfs://"):
+                    high_tokenizer_local = high_tokenizer_path
+                else:
+                    high_tokenizer_local = copy_to_local(high_tokenizer_path, use_shm=config.high_actor_rollout_ref.model.get("use_shm", False))
+            else:
+                high_model_local_path = copy_to_local(high_model_path, use_shm=config.high_actor_rollout_ref.model.get("use_shm", False))
+                high_tokenizer_local = high_model_local_path
+            high_tokenizer = hf_tokenizer(high_tokenizer_local, trust_remote_code=trust_remote_code)
         # vllm early verify
         
         if config.actor_rollout_ref.rollout.name in ["vllm"]:
@@ -120,13 +168,39 @@ class TaskRunner:
         }
 
         global_pool_id = "global_pool"
-        resource_pool_spec = {
-            global_pool_id: [config.trainer.n_gpus_per_node] * config.trainer.nnodes,
-        }
-        mapping = {
-            Role.ActorRollout: global_pool_id,
-            Role.Critic: global_pool_id,
-        }
+        if mlmt_enabled and not shared_actor:
+            # Partition GPUs between the two actors to avoid vLLM process conflict
+            # Assuming an even number of GPUs. 
+            n_gpus = config.trainer.n_gpus_per_node
+            assert n_gpus >= 2, "Need at least 2 GPUs to separate high and low level actors"
+            
+            low_gpus = n_gpus // 2
+            high_gpus = n_gpus - low_gpus
+            
+            high_pool_id = "high_pool"
+            resource_pool_spec = {
+                global_pool_id: [low_gpus] * config.trainer.nnodes,
+                high_pool_id: [high_gpus] * config.trainer.nnodes,
+            }
+            mapping = {
+                Role.ActorRollout: global_pool_id,
+                Role.Critic: global_pool_id,
+                Role.RefPolicy: global_pool_id,
+                Role.HighActorRollout: high_pool_id,
+            }
+        else:
+            resource_pool_spec = {
+                global_pool_id: [config.trainer.n_gpus_per_node] * config.trainer.nnodes,
+            }
+            mapping = {
+                Role.ActorRollout: global_pool_id,
+                Role.Critic: global_pool_id,
+                    Role.RefPolicy: global_pool_id,
+            }
+
+        if mlmt_enabled and not shared_actor:
+            role_worker_mapping[Role.HighActorRollout] = ray.remote(actor_rollout_cls)
+            # mapping already set above
 
         # we should adopt a multi-source reward function here
         # - for rule-based rm, we directly call a reward score
@@ -147,7 +221,7 @@ class TaskRunner:
         # use reference model
         if config.algorithm.use_kl_in_reward or config.actor_rollout_ref.actor.use_kl_loss:
             role_worker_mapping[Role.RefPolicy] = ray.remote(ActorRolloutRefWorker)
-            mapping[Role.RefPolicy] = global_pool_id
+            # mapping already set in resource pool setup block above
 
         reward_manager_name = config.reward_model.get("reward_manager", "episode")
         if reward_manager_name == 'episode':
@@ -159,13 +233,31 @@ class TaskRunner:
         reward_fn = reward_manager_cls(tokenizer=tokenizer, num_examine=0, normalize_by_length=False)
 
         # Note that we always use function-based RM for validation
-        val_reward_fn = reward_manager_cls(tokenizer=tokenizer, num_examine=1, normalize_by_length=False)
+        val_reward_fn = None
+        if config.data.get('val_files'):
+            val_reward_fn = reward_manager_cls(tokenizer=tokenizer, num_examine=1, normalize_by_length=False)
 
+        print(f"DEBUG: mlmt_enabled={mlmt_enabled}, shared_actor={shared_actor}")
+        print(f"DEBUG: resource_pool_spec={resource_pool_spec}")
+        print(f"DEBUG: mapping={mapping}")
         resource_pool_manager = ResourcePoolManager(resource_pool_spec=resource_pool_spec, mapping=mapping)
 
-        assert config.actor_rollout_ref.rollout.n == 1, "In verl, actor_rollout_ref.rollout.n>1 is for GRPO. In verl+env, we keep n=1, and achieve GRPO by env.rollout.n"
+        if config.env.env_name != "none":
+            # If MLMT is enabled, we allow n > 1 because our TrajectoryCollector handles 
+            # the multi-turn group sampling using verl's rollout workers.
+            # Also allow n > 1 if the algorithm explicitly requires it (GRPO, REINFORCE).
+            is_multi_sample_algo = config.algorithm.adv_estimator in ['grpo', 'reinforce', 'reinforce_plus_plus', 'rloo']
+            if not mlmt_enabled and not is_multi_sample_algo:
+                assert config.actor_rollout_ref.rollout.n == 1, "In verl, actor_rollout_ref.rollout.n>1 is for GRPO. In verl+env, we keep n=1, and achieve GRPO by env.rollout.n"
+        
         from agent_system.multi_turn_rollout import TrajectoryCollector
-        traj_collector = TrajectoryCollector(config=config, tokenizer=tokenizer, processor=processor)
+        traj_collector = TrajectoryCollector(
+            config=config,
+            tokenizer=tokenizer,
+            processor=processor,
+            high_level_tokenizer=high_tokenizer,
+            shared_actor=shared_actor,
+        )
 
         # Initialize OpenAI agent if configured
         openai_agent = None
@@ -178,7 +270,11 @@ class TaskRunner:
         from verl.utils.dataset.rl_dataset import collate_fn
 
         train_dataset = create_rl_dataset(config.data.train_files, config.data, tokenizer, processor)
-        val_dataset = create_rl_dataset(config.data.val_files, config.data, tokenizer, processor)
+        val_dataset = None
+        if config.data.get('val_files'):
+            val_dataset = create_rl_dataset(config.data.val_files, config.data, tokenizer, processor)
+        else:
+            val_dataset = None
         train_sampler = create_rl_sampler(config.data, train_dataset)
         trainer = RayPPOTrainer(
             config=config,
@@ -199,6 +295,8 @@ class TaskRunner:
             val_envs=val_envs,
             critique_envs=critique_envs,
             openai_agent=openai_agent,
+            high_level_tokenizer=high_tokenizer,
+            shared_actor=shared_actor,
         )
         trainer.init_workers()
         trainer.fit()

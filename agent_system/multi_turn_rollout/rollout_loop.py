@@ -27,6 +27,7 @@ from transformers import PreTrainedTokenizer
 import uuid
 from verl.models.transformers.qwen2_vl import get_rope_index
 from agent_system.multi_turn_rollout.utils import process_image, to_list_of_dict, torch_to_numpy, filter_group_data
+from agent_system.multi_turn_rollout.llm_success_evaluator import LLMSuccessEvaluator
 from agent_system.environments import EnvironmentManagerBase
 from agent_system.critique.critique import *
 from agent_system.critique.rule_reward_new import *
@@ -35,9 +36,11 @@ from typing import List, Dict
 from tensordict import TensorDict
 import time
 import sys
+import asyncio
+from verl.utils.reward_score.math import compute_score_async
 
 class TrajectoryCollector:
-    def __init__(self, config, tokenizer: PreTrainedTokenizer, processor=None):
+    def __init__(self, config, tokenizer: PreTrainedTokenizer, processor=None, high_level_tokenizer: PreTrainedTokenizer = None, shared_actor: bool = True):
         """
         Initialize the TrajectoryProcessor class.
         
@@ -48,13 +51,23 @@ class TrajectoryCollector:
         """
         self.config = config
         self.tokenizer = tokenizer
+        self.low_level_tokenizer = tokenizer
+        self.high_level_tokenizer = high_level_tokenizer or tokenizer
+        self.shared_actor = shared_actor
         self.processor = processor
+        self.mlmt_cfg = self.config.get("mlmt_rl", {})
+        self.use_llm_success_eval = bool(self.mlmt_cfg.get("use_llm_success_eval", False))
+        self.llm_success_evaluator = None
+        if self.use_llm_success_eval:
+            eval_cfg = self.mlmt_cfg.get("llm_eval", {})
+            self.llm_success_evaluator = LLMSuccessEvaluator(eval_cfg)
 
     def preprocess_single_sample(
         self,
         item: int,
         gen_batch: DataProto,
         obs: Dict,
+        tokenizer: PreTrainedTokenizer = None,
     ):
         """
         Process a single observation sample, organizing environment observations (text and/or images) 
@@ -68,6 +81,8 @@ class TrajectoryCollector:
         Returns:
             dict: Contains processed input data such as input_ids, attention_mask, etc.
         """
+
+        tokenizer = tokenizer or self.tokenizer
 
         raw_prompt = gen_batch.non_tensor_batch['raw_prompt'][item]
         data_source = gen_batch.non_tensor_batch['data_source'][item]
@@ -102,7 +117,7 @@ class TrajectoryCollector:
         }])
         
         # Apply chat template
-        prompt_with_chat_template = self.tokenizer.apply_chat_template(
+        prompt_with_chat_template = tokenizer.apply_chat_template(
             chat,
             add_generation_prompt=True,
             tokenize=False
@@ -138,9 +153,9 @@ class TrajectoryCollector:
             raw_prompt = prompt_with_chat_template
         
         input_ids, attention_mask = verl_F.tokenize_and_postprocess_data(prompt=prompt_with_chat_template,
-                                                                            tokenizer=self.tokenizer,
+                                                                            tokenizer=tokenizer,
                                                                             max_length=self.config.data.max_prompt_length,
-                                                                            pad_token_id=self.tokenizer.pad_token_id,
+                                                                            pad_token_id=tokenizer.pad_token_id,
                                                                             left_pad=True,
                                                                             truncation=self.config.data.truncation,)
         
@@ -157,7 +172,7 @@ class TrajectoryCollector:
         else:
             position_ids = compute_position_id_with_mask(attention_mask)
 
-        raw_prompt_ids = self.tokenizer.encode(raw_prompt, add_special_tokens=False)
+        raw_prompt_ids = tokenizer.encode(raw_prompt, add_special_tokens=False)
         if len(raw_prompt_ids) > self.config.data.max_prompt_length:
             if self.config.data.truncation == "left":
                 raw_prompt_ids = raw_prompt_ids[-self.config.data.max_prompt_length :]
@@ -190,6 +205,7 @@ class TrajectoryCollector:
         self,
         gen_batch: DataProto, 
         obs: Dict, 
+        tokenizer: PreTrainedTokenizer = None,
     ) -> DataProto:
         """
         Process a batch of observation samples, converting environment observations into model-processable format.
@@ -208,12 +224,15 @@ class TrajectoryCollector:
         processed_samples = []
         
         # Process each sample in parallel
+        tokenizer = tokenizer or self.tokenizer
+
         for item in range(batch_size):
             # Extract per-sample observations
             processed = self.preprocess_single_sample(
                 item=item,
                 gen_batch=gen_batch,
                 obs=obs,
+                tokenizer=tokenizer,
             )
             processed_samples.append(processed)
         
@@ -676,27 +695,45 @@ class TrajectoryCollector:
             alpha = self.config.env.pure_belief_grpo.get('alpha', 1.0)
             max_candidates = self.config.env.pure_belief_grpo.get('max_candidates', 5)
             print(f"🔬 INITIALIZING Pure Belief GRPO with alpha={alpha}, max_candidates={max_candidates}")
-            belief_calculator = BeliefCalculator(alpha=alpha, max_candidates=max_candidates, max_workers=8)
+            belief_calculator = BeliefCalculator(alpha=alpha, max_candidates=max_candidates)
+            # Set up persistent event loop for async operations
+            belief_calculator.setup_event_loop()
             use_pure_belief_grpo = True
             print(f"✅ Pure Belief GRPO enabled - USING ONLY BELIEF SCORES AS REWARD")
         elif hasattr(self.config.env, 'belief_shaped_grpo') and self.config.env.belief_shaped_grpo.get('enable', False):
             alpha = self.config.env.belief_shaped_grpo.get('alpha', 1.0)
             max_candidates = self.config.env.belief_shaped_grpo.get('max_candidates', 5)
             print(f"🔬 INITIALIZING Belief-shaped GRPO with alpha={alpha}, max_candidates={max_candidates}")
-            belief_calculator = BeliefCalculator(alpha=alpha, max_candidates=max_candidates, max_workers=8)
+            belief_calculator = BeliefCalculator(alpha=alpha, max_candidates=max_candidates)
+            # Set up persistent event loop for async operations
+            belief_calculator.setup_event_loop()
             print(f"✅ Belief-shaped GRPO enabled - ADDING BELIEF SCORES TO TERMINAL REWARDS")
 
         print(f"🎯 Belief calculator initialized: {belief_calculator is not None}")
         
         # Trajectory collection loop
+        # Initialize timing tracking
+        step_timings = []
+        total_preprocessing_time = 0.0
+        total_generation_time = 0.0
+        total_environment_time = 0.0
+        total_belief_time = 0.0
+        total_reward_processing_time = 0.0
+
         for _step in range(self.config.env.max_steps):
-            
+            step_start_time = time.time()
+
             active_masks = np.logical_not(is_done)
             completed_count = is_done.sum()
             active_count = batch_size - completed_count
             print(f"{time.strftime('%Y-%m-%d %H:%M:%S')} [Rollout Loop] step {_step + 1}: {completed_count}/{batch_size} completed, {active_count} active")
 
+            # Measure preprocessing time
+            preprocessing_start = time.time()
             batch = self.preprocess_batch(gen_batch=gen_batch, obs=obs)
+            preprocessing_time = time.time() - preprocessing_start
+            total_preprocessing_time += preprocessing_time
+            print(f"⏱️ Preprocessing took {preprocessing_time:.3f}s")
 
             batch_keys_to_pop = ["input_ids", "attention_mask", "position_ids"]
             non_tensor_batch_keys_to_pop = ["raw_prompt_ids"]
@@ -713,6 +750,8 @@ class TrajectoryCollector:
 
             batch_input.meta_info = gen_batch.meta_info
 
+            # Measure generation time
+            generation_start = time.time()
             # Use OpenAI agent if provided, otherwise use model worker
             if openai_agent is not None:
                 print(f"[Rollout Loop] Using OpenAI agent for generation (step {_step + 1})")
@@ -720,15 +759,23 @@ class TrajectoryCollector:
             else:
                 print(f"[Rollout Loop] Using local model worker for generation (step {_step + 1})")
                 batch_output = actor_rollout_wg.generate_sequences(batch_input)
+            generation_time = time.time() - generation_start
+            total_generation_time += generation_time
+            print(f"⏱️ Generation took {generation_time:.3f}s")
 
             batch.non_tensor_batch['uid'] = uid_batch
             batch.non_tensor_batch['traj_uid'] = traj_uid
 
             batch = batch.union(batch_output)
-            
+
             responses = self.tokenizer.batch_decode(batch.batch['responses'], skip_special_tokens=True)
-            
+
+            # Measure environment step time
+            env_step_start = time.time()
             next_input, rewards, dones, infos = envs.step(responses)
+            env_step_time = time.time() - env_step_start
+            total_environment_time += env_step_time
+            print(f"⏱️ Environment step took {env_step_time:.3f}s")
 
             if len(rewards.shape) == 2:
                 rewards = rewards.squeeze(1)
@@ -757,6 +804,7 @@ class TrajectoryCollector:
 
             # Belief-shaped GRPO: Compute and accumulate belief scores
             if belief_calculator is not None:
+                belief_computation_start = time.time()
                 print(f"🧠 BELIEF COMPUTATION: Step {_step + 1}, active_envs={active_count}")
                 print(f"🎯 Belief mode: {'PURE BELIEF GRPO' if self.config.env.pure_belief_grpo.enable else 'BELIEF-SHAPED GRPO'}")
                 belief_scores = np.zeros(batch_size, dtype=np.float32)
@@ -791,7 +839,10 @@ class TrajectoryCollector:
                 if batch_belief_data:
                     print(f"🔍 Batch computing belief for {len(batch_belief_data)} environments (step {_step + 1})...")
                     try:
-                        batch_results = belief_calculator.compute_belief_scores_batch(batch_belief_data)
+                        # ✅ CORRECT: Use the persistent loop
+                        batch_results = belief_calculator._event_loop.run_until_complete(
+                            belief_calculator.compute_belief_scores_batch(batch_belief_data)
+                        )
 
                         # Assign results back to belief_scores array
                         for idx, (belief_score, metadata) in enumerate(batch_results):
@@ -820,8 +871,14 @@ class TrajectoryCollector:
 
                 # Add belief scores to the batch for logging
                 batch.non_tensor_batch['belief_scores'] = belief_scores
+                belief_time = time.time() - belief_computation_start
+                total_belief_time += belief_time
+                print(f"⏱️ Belief computation took {belief_time:.3f}s")
             else:
                 print(f"🤔 No belief calculator for step {_step + 1}")
+
+            # Measure reward processing time
+            reward_processing_start = time.time()
 
             # Create reward tensor, only assign rewards for active environments
             episode_rewards += torch_to_numpy(rewards) * torch_to_numpy(active_masks)
@@ -830,7 +887,7 @@ class TrajectoryCollector:
             assert len(rewards) == batch_size, f"env should return rewards for all environments, got {len(rewards)} rewards for {batch_size} environments"
             batch.non_tensor_batch['rewards'] = torch_to_numpy(rewards, is_object=True)
             batch.non_tensor_batch['active_masks'] = torch_to_numpy(active_masks, is_object=True)
-            
+
             # Update episode lengths for active environments
             batch_list: list[dict] = to_list_of_dict(batch)
 
@@ -839,6 +896,15 @@ class TrajectoryCollector:
                 batch_list[i]['belief_scores_accumulated'] = float(belief_scores_accumulated[i])
                 total_batch_list[i].append(batch_list[i])
                 total_infos[i].append(infos[i])
+
+            reward_processing_time = time.time() - reward_processing_start
+            total_reward_processing_time += reward_processing_time
+            print(f"⏱️ Reward processing took {reward_processing_time:.3f}s")
+
+            # Track total step time
+            step_total_time = time.time() - step_start_time
+            step_timings.append(step_total_time)
+            print(f"⏱️ Step {len(step_timings)} total time: {step_total_time:.3f}s")
 
             # Update done states
             is_done = np.logical_or(is_done, dones)
@@ -863,7 +929,30 @@ class TrajectoryCollector:
             # Break if all environments are done
             if is_done.all():
                 break
-        
+
+        # Print timing summary
+        total_trajectory_time = sum(step_timings)
+        avg_step_time = total_trajectory_time / len(step_timings) if step_timings else 0.0
+        print("\n🔍 TIMING ANALYSIS SUMMARY:")
+        print(f"Total trajectory time: {total_trajectory_time:.3f}s")
+        print(f"Average step time: {avg_step_time:.3f}s")
+        print(f"Preprocessing: {total_preprocessing_time:.3f}s")
+        print(f"Generation: {total_generation_time:.3f}s")
+        print(f"Environment: {total_environment_time:.3f}s")
+        print(f"Belief: {total_belief_time:.3f}s")
+        print(f"Reward processing: {total_reward_processing_time:.3f}s")
+        # Calculate percentages
+        if total_trajectory_time > 0:
+            preprocessing_pct = (total_preprocessing_time / total_trajectory_time) * 100
+            generation_pct = (total_generation_time / total_trajectory_time) * 100
+            env_step_pct = (total_environment_time / total_trajectory_time) * 100
+            belief_pct = (total_belief_time / total_trajectory_time) * 100
+            reward_pct = (total_reward_processing_time / total_trajectory_time) * 100
+            print(".1f")
+            print(".1f")
+            print(".1f")
+            print(".1f")
+            print(".1f")
         # Belief GRPO: Handle reward computation
         if belief_calculator is not None:
             if use_pure_belief_grpo:
@@ -1018,6 +1107,358 @@ class TrajectoryCollector:
 
         return total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid
 
+    def mlmt_multi_turn_loop(
+            self,
+            gen_batch: DataProto, 
+            actor_rollout_wg, 
+            envs: EnvironmentManagerBase,
+            high_actor_rollout_wg=None,
+            openai_agent=None,
+            ) -> DataProto:
+        """
+        MLMT-RL three-turn loop:
+        1. Turn 1 (Solver): sample z ~ π_L(·|x)
+        2. Turn 2 (Feedback): sample g ~ π_H(·|x, z)
+        3. Turn 3 (Refine): sample ŷ ~ π_L(·|x, z, g)
+        """
+        loop_start = time.time()
+        from agent_system.multi_turn_rollout.mlmt_utils import (
+            prepare_mlmt_turn1_prompt,
+            prepare_mlmt_feedback_prompt,
+            prepare_mlmt_refinement_prompt,
+            prepare_mlmt_code_turn1_prompt,
+            prepare_mlmt_code_feedback_prompt,
+            prepare_mlmt_code_refinement_prompt
+        )
+
+        # Choose actor workers
+        if high_actor_rollout_wg is None:
+            high_actor_rollout_wg = actor_rollout_wg
+
+        low_tokenizer = self.low_level_tokenizer
+        high_tokenizer = self.high_level_tokenizer
+
+        # Initial observations from the environment
+        obs, infos = envs.reset()
+        base_batch_size = len(gen_batch.batch['input_ids'])
+        
+        # Optimized Sampling Logic based on Case 1 / Case 2:
+        # We branch (n > 1) ONLY if the lower level is trainable AND uses gRPO.
+        is_low_trainable = self.mlmt_cfg.get('low_level', {}).get('algorithm', 'none') != 'none'
+        low_algo = self.mlmt_cfg.get('low_level', {}).get('algorithm', 'none')
+        
+        if is_low_trainable and low_algo == 'grpo':
+            n_to_use = self.config.env.rollout.n if self.config.env.rollout.n > 0 else 8
+        else:
+            # Case 1 (Frozen) or LL-REINFORCE: No branching.
+            n_to_use = 1
+            
+        n = n_to_use
+        total_samples = base_batch_size * n
+        
+        # Determine environment type
+        data_sources = gen_batch.non_tensor_batch.get('data_source', ['math'] * base_batch_size)
+        is_code = 'mbpp' in data_sources[0].lower() or 'code' in data_sources[0].lower()
+        
+        # Turn 1: Solver initial attempt z
+        # Prepare prompts for Turn 1
+        questions = []
+        ground_truths = []
+        for i, info in enumerate(infos):
+            # Try to get question from info, then fallback to gen_batch
+            q = None
+            gt = None
+            if isinstance(info, dict):
+                q = info.get('question')
+                gt = info.get('ground_truth')
+            
+            if q is None:
+                # In verl, non_tensor_batch items are usually lists
+                prompts = gen_batch.non_tensor_batch.get('prompt')
+                if prompts and i < len(prompts):
+                    q = prompts[i]
+            
+            if q is None:
+                # Final fallback to raw_prompt if available
+                raw_prompts = gen_batch.non_tensor_batch.get('raw_prompt')
+                if raw_prompts and i < len(raw_prompts):
+                    q = raw_prompts[i]
+            
+            if q is None:
+                q = "" # Extreme fallback
+            
+            if gt is None:
+                # Fallback for ground truth from non_tensor_batch
+                gts = gen_batch.non_tensor_batch.get('answer') or gen_batch.non_tensor_batch.get('ground_truth')
+                if gts and i < len(gts):
+                    gt = gts[i]
+
+            questions.append(q)
+            ground_truths.append(gt)
+
+        if is_code:
+            turn1_prompts = [prepare_mlmt_code_turn1_prompt(q) for q in questions]
+        else:
+            turn1_prompts = [prepare_mlmt_turn1_prompt(q) for q in questions]
+        
+        # For Turn 1
+        turn1_obs = {'text': turn1_prompts, 'image': None, 'anchor': None}
+        turn1_batch = self.preprocess_batch(gen_batch=gen_batch, obs=turn1_obs, tokenizer=low_tokenizer)
+        
+        # Generate Turn 1 response z
+        batch_input_t1 = turn1_batch.pop(
+            batch_keys=["input_ids", "attention_mask", "position_ids"],
+            non_tensor_batch_keys=["raw_prompt_ids"]
+        )
+        batch_input_t1.meta_info = gen_batch.meta_info
+        # Set branching multiplicity for Turn 1
+        batch_input_t1.meta_info['n'] = n
+        # Set max_tokens for Turn 1 if specified, otherwise defaults to response_length
+        if 'max_tokens_turn1' in self.mlmt_cfg.get('low_level', {}):
+            batch_input_t1.meta_info['max_tokens'] = self.mlmt_cfg['low_level']['max_tokens_turn1']
+        
+        print(f"[MLMT Loop] Step 1 ({'Code' if is_code else 'Math'}): Generating initial solutions z (n={n})...")
+        t1_start = time.time()
+        batch_output_t1 = actor_rollout_wg.generate_sequences(batch_input_t1)
+        print(f"⏱️ Turn 1 Generation took {time.time() - t1_start:.2f}s")
+        
+        # Expansion: if n > 1, repeat input questions and metadata to match output
+        if n > 1:
+            expanded_questions = []
+            expanded_gts = []
+            for q, gt in zip(questions, ground_truths):
+                expanded_questions.extend([q] * n)
+                expanded_gts.extend([gt] * n)
+            questions = expanded_questions
+            ground_truths = expanded_gts
+            
+            # Repeat turn1_batch to match batch_output_t1 (128 -> 1024)
+            # DataProto.repeat(n) handles both batch and non_tensor_batch
+            turn1_batch = turn1_batch.repeat(n)
+            
+        z_responses = low_tokenizer.batch_decode(batch_output_t1.batch['responses'], skip_special_tokens=True)
+        
+        # Turn 2: Feedback policy g
+        if is_code:
+            turn2_prompts = [prepare_mlmt_code_feedback_prompt(q, z) for q, z in zip(questions, z_responses)]
+        else:
+            turn2_prompts = [prepare_mlmt_feedback_prompt(q, z) for q, z in zip(questions, z_responses)]
+        turn2_obs = {'text': turn2_prompts, 'image': None, 'anchor': None}
+        
+        # Note: we need a DataProto of size total_samples for the next stages
+        # We use a dummy gen_batch of the right size
+        dummy_gen_batch = gen_batch.repeat(n) if n > 1 else gen_batch
+        turn2_batch = self.preprocess_batch(gen_batch=dummy_gen_batch, obs=turn2_obs, tokenizer=high_tokenizer)
+        
+        batch_input_t2 = turn2_batch.pop(
+            batch_keys=["input_ids", "attention_mask", "position_ids"],
+            non_tensor_batch_keys=["raw_prompt_ids"]
+        )
+        batch_input_t2.meta_info = dummy_gen_batch.meta_info
+        # Set max_tokens for feedback generation to limit response length
+        batch_input_t2.meta_info['max_tokens'] = self.mlmt_cfg.get('high_level', {}).get('max_tokens', 512)
+        # Turn 2 is always REINFORCE (1-to-1)
+        batch_input_t2.meta_info['n'] = 1
+
+        print(f"[MLMT Loop] Step 2: Generating feedback g...")
+        # For multi-turn feedback, we must remove the n=1 override as verl dispatcher only accepts DataProto
+        t2_start = time.time()
+        batch_output_t2 = high_actor_rollout_wg.generate_sequences(batch_input_t2)
+        print(f"⏱️ Turn 2 Generation took {time.time() - t2_start:.2f}s")
+        
+        # If n > 1, the worker generated n feedbacks for each input solution.
+        # We only need 1-to-1 mapping, so we take the first feedback of each group.
+        if n > 1:
+            batch_output_t2 = batch_output_t2[0:len(batch_output_t2):n]
+            
+        g_feedbacks = high_tokenizer.batch_decode(batch_output_t2.batch['responses'], skip_special_tokens=True)
+        
+        # Turn 3: Refinement policy y_hat
+        if is_code:
+            turn3_prompts = [prepare_mlmt_code_refinement_prompt(q, z, g) for q, z, g in zip(questions, z_responses, g_feedbacks)]
+        else:
+            turn3_prompts = [prepare_mlmt_refinement_prompt(q, g) for q, g in zip(questions, g_feedbacks)]
+        turn3_obs = {'text': turn3_prompts, 'image': None, 'anchor': None}
+        turn3_batch = self.preprocess_batch(gen_batch=dummy_gen_batch, obs=turn3_obs, tokenizer=low_tokenizer)
+        
+        batch_input_t3 = turn3_batch.pop(
+            batch_keys=["input_ids", "attention_mask", "position_ids"],
+            non_tensor_batch_keys=["raw_prompt_ids"]
+        )
+        batch_input_t3.meta_info = dummy_gen_batch.meta_info
+        # Set max_tokens for Turn 3 to limit response length and prevent hallucinations
+        batch_input_t3.meta_info['max_tokens'] = self.mlmt_cfg.get('low_level', {}).get('max_tokens_turn3', 1024)
+        # Turn 3 is always 1-to-1 mapping
+        batch_input_t3.meta_info['n'] = 1
+        
+        print(f"[MLMT Loop] Step 3: Generating refined solutions y_hat...")
+        t3_start = time.time()
+        batch_output_t3 = actor_rollout_wg.generate_sequences(batch_input_t3)
+        print(f"⏱️ Turn 3 Generation took {time.time() - t3_start:.2f}s")
+        
+        # Again, slice to maintain 1-to-1 mapping if n > 1
+        if n > 1:
+            batch_output_t3 = batch_output_t3[0:len(batch_output_t3):n]
+            
+        y_hat_responses = low_tokenizer.batch_decode(batch_output_t3.batch['responses'], skip_special_tokens=True)
+        
+        # Get rewards from environment for the final refined responses
+        _, rewards, dones, infos = envs.step(y_hat_responses)
+
+        # --- MODIFICATION: Define correctness for logging ---
+        async def get_turn1_correctness():
+            tasks = [compute_score_async(z, gt) for z, gt in zip(z_responses, ground_truths)]
+            return await asyncio.gather(*tasks)
+            
+        try:
+            # We use the existing asyncio loop or create a new one for this synchronous-looking call
+            turn1_correctness = asyncio.run(get_turn1_correctness())
+        except:
+            turn1_correctness = [0.0] * total_samples
+            
+        turn3_correctness = [float(r) for r in rewards]
+
+        # Logging for inspection
+        try:
+            import json
+            with open("trajectories.jsonl", "a") as f:
+                for i in range(len(questions)):
+                    log_entry = {
+                        "question": questions[i],
+                        "turn1_z": z_responses[i],
+                        "turn2_g": g_feedbacks[i],
+                        "turn3_y_hat": y_hat_responses[i],
+                        "reward": float(rewards[i])
+                    }
+                    f.write(json.dumps(log_entry) + "\n")
+        except Exception as e:
+            print(f"Failed to log trajectories: {e}")
+        
+        # total_batch_list[env_idx][step_idx]
+        total_batch_list = [[] for _ in range(total_samples)]
+        traj_uids = [str(uuid.uuid4()) for _ in range(total_samples)]
+        
+        # Use a base UID for the question, but append turn for GRPO grouping if needed
+        if n > 0: # env grouping
+            base_uids = []
+            for i in range(base_batch_size):
+                uid = str(uuid.uuid4())
+                base_uids.extend([uid] * n)
+        else:
+            uid = str(uuid.uuid4())
+            base_uids = [uid for _ in range(total_samples)]
+        
+        value_texts = [
+            f"Question: {questions[i]}\nInitial Solution: {z_responses[i]}\nFeedback: {g_feedbacks[i]}\nRefined Solution: {y_hat_responses[i]}"
+            for i in range(total_samples)
+        ]
+        
+        # Success metrics
+        episode_rewards = rewards.numpy() if isinstance(rewards, torch.Tensor) else rewards
+        
+        # --- Consolidated Trajectory Logging ---
+        try:
+            import json
+            import os
+            trajectory_log_dir = "logs/trajectories"
+            os.makedirs(trajectory_log_dir, exist_ok=True)
+            log_path = os.path.join(trajectory_log_dir, "current_rollout.jsonl")
+            with open(log_path, "a") as f:
+                for i in range(total_samples):
+                    data = {
+                        "question": questions[i],
+                        "ground_truth": ground_truths[i],
+                        "turn1_z": z_responses[i],
+                        "turn1_correct": bool(turn1_correctness[i]),
+                        "turn2_g": g_feedbacks[i],
+                        "turn3_y_hat": y_hat_responses[i],
+                        "turn3_correct": bool(turn3_correctness[i]),
+                        "reward": float(episode_rewards[i])
+                    }
+                    f.write(json.dumps(data) + "\n")
+        except Exception as e:
+            print(f"Trajectory logging failed: {e}")
+        
+        episode_lengths = np.array([3] * total_samples)
+        traj_uid_arr = np.array(traj_uids, dtype=object)
+        
+        llm_success_scores = np.zeros(total_samples, dtype=np.float32)
+        llm_feedback_scores = np.zeros(total_samples, dtype=np.float32)
+        if self.use_llm_success_eval and self.llm_success_evaluator is not None:
+            try:
+                # Evaluate all 1024 refinements
+                eval_results = self.llm_success_evaluator.evaluate_batch(questions, y_hat_responses)
+                if eval_results:
+                    llm_success_scores = np.array([res.get('success', 0.0) for res in eval_results], dtype=np.float32)
+                    llm_feedback_scores = np.array([res.get('feedback_quality', 0.0) for res in eval_results], dtype=np.float32)
+            except Exception as exc:
+                print(f"LLM success evaluation failed: {exc}")
+
+        # Process Turn 1
+        t1_batch_full = turn1_batch.union(batch_output_t1)
+        if 'prompts' not in t1_batch_full.batch:
+            t1_batch_full.batch['prompts'] = turn1_batch.batch['input_ids']
+            
+        t1_list = to_list_of_dict(t1_batch_full)
+        for i in range(total_samples):
+            t1_list[i]['turn'] = 1
+            t1_list[i]['active_masks'] = True
+            t1_list[i]['uid'] = f"{base_uids[i]}_turn1"
+            t1_list[i]['traj_uid'] = traj_uids[i]
+            t1_list[i]['episode_rewards'] = float(episode_rewards[i]) 
+            t1_list[i]['episode_lengths'] = 3.0 
+            t1_list[i]['value_text'] = ""
+            t1_list[i]['llm_success'] = float(llm_success_scores[i])
+            t1_list[i]['llm_feedback_quality'] = float(llm_feedback_scores[i])
+            total_batch_list[i].append(t1_list[i])
+            
+        # Process Turn 2
+        t2_batch_full = turn2_batch.union(batch_output_t2)
+        if 'prompts' not in t2_batch_full.batch:
+            t2_batch_full.batch['prompts'] = turn2_batch.batch['input_ids']
+            
+        t2_list = to_list_of_dict(t2_batch_full)
+        for i in range(total_samples):
+            t2_list[i]['turn'] = 2
+            t2_list[i]['active_masks'] = True
+            t2_list[i]['uid'] = f"{base_uids[i]}_turn2"
+            t2_list[i]['traj_uid'] = traj_uids[i]
+            t2_list[i]['episode_rewards'] = float(episode_rewards[i])
+            t2_list[i]['episode_lengths'] = 3.0
+            t2_list[i]['value_text'] = value_texts[i]
+            t2_list[i]['llm_success'] = float(llm_success_scores[i])
+            t2_list[i]['llm_feedback_quality'] = float(llm_feedback_scores[i])
+            total_batch_list[i].append(t2_list[i])
+            
+        # Process Turn 3
+        t3_batch_full = turn3_batch.union(batch_output_t3)
+        if 'prompts' not in t3_batch_full.batch:
+            t3_batch_full.batch['prompts'] = turn3_batch.batch['input_ids']
+            
+        t3_list = to_list_of_dict(t3_batch_full)
+        for i in range(total_samples):
+            t3_list[i]['turn'] = 3
+            t3_list[i]['active_masks'] = True
+            t3_list[i]['uid'] = f"{base_uids[i]}_turn3"
+            t3_list[i]['traj_uid'] = traj_uids[i]
+            t3_list[i]['episode_rewards'] = float(episode_rewards[i])
+            t3_list[i]['episode_lengths'] = 3.0
+            t3_list[i]['value_text'] = ""
+            t3_list[i]['llm_success'] = float(llm_success_scores[i])
+            t3_list[i]['llm_feedback_quality'] = float(llm_feedback_scores[i])
+            total_batch_list[i].append(t3_list[i])
+            
+        success = {
+            'success': (episode_rewards > 0),
+            'turn1_success': np.array(turn1_correctness),
+            'turn3_success': (episode_rewards > 0),
+            'llm_success': llm_success_scores,
+            'llm_feedback_quality': llm_feedback_scores
+        }
+        
+        print(f"⏱️ Total MLMT Rollout Loop took {time.time() - loop_start:.2f}s")
+        return total_batch_list, episode_rewards, episode_lengths, success, traj_uid_arr, []
+
     def multi_turn_loop(
             self,
             gen_batch: DataProto, 
@@ -1026,6 +1467,7 @@ class TrajectoryCollector:
             critique_envs: EnvironmentManagerBase = None,
             is_train: bool = True,
             openai_agent=None,
+            high_actor_rollout_wg=None,
             ) -> DataProto:
         """
         Select and run the appropriate rollout loop (dynamic or vanilla).
@@ -1047,6 +1489,16 @@ class TrajectoryCollector:
                 gen_batch=gen_batch,
                 actor_rollout_wg=actor_rollout_wg,
                 envs=envs,
+            )
+        elif self.mlmt_cfg.get('enable', False):
+            # MLMT-RL Sampling
+            total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid, belief_trajectories = \
+                self.mlmt_multi_turn_loop(
+                gen_batch=gen_batch,
+                actor_rollout_wg=actor_rollout_wg,
+                envs=envs,
+                high_actor_rollout_wg=high_actor_rollout_wg,
+                openai_agent=openai_agent,
             )
         elif self.config.env.use_critique and is_train:
             # Critique Sampling

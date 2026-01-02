@@ -589,6 +589,101 @@ class DeepResearchEnvironmentManager(EnvironmentManagerBase):
         for item in self.dataset:
             item['finished'] = False
 
+class MathEnvironmentManager(EnvironmentManagerBase):
+    def __init__(self, config, is_train=True):
+        import pandas as pd
+        import asyncio
+        super().__init__(None, None, config)
+        self.is_train = is_train
+        file_path = config.data.train_files if is_train else config.data.val_files
+        if file_path is None:
+            self.df = None
+            return
+        self.df = pd.read_parquet(file_path)
+        self.last_idx = 0
+        
+        self.env_num = config.data.train_batch_size if is_train else config.data.val_batch_size
+        self.group_n = config.env.rollout.n if (is_train and config.env.rollout.n > 0) else 1
+        self.num_processes = self.env_num * self.group_n
+        
+        self.current_grounds = None
+        self._event_loop = None
+
+    def _get_event_loop(self):
+        import asyncio
+        if self._event_loop is None:
+            try:
+                self._event_loop = asyncio.get_event_loop()
+            except RuntimeError:
+                self._event_loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(self._event_loop)
+        return self._event_loop
+        
+    def reset(self):
+        questions, grounds, ids = [], [], []
+        for _ in range(self.env_num):
+            row = self.df.iloc[self.last_idx % len(self.df)]
+            # Preprocessed MATH data uses prompt=[{'role':'user', 'content':'...'}]
+            prompt_data = row['prompt']
+            q = prompt_data[0]['content'] if isinstance(prompt_data, (list, np.ndarray)) else prompt_data
+            
+            # reward_model column contains {'ground_truth': '...'}
+            reward_model_data = row['reward_model']
+            g = reward_model_data['ground_truth'] if isinstance(reward_model_data, dict) else row.get('answer', '')
+            
+            i = str(row.get('id', self.last_idx))
+            
+            # Repeat for group_n
+            for _ in range(self.group_n):
+                questions.append(q)
+                grounds.append(g)
+                ids.append(i)
+            
+            self.last_idx += 1
+        
+        self.current_grounds = grounds
+        infos = [{'ground_truth': g, 'question_id': i} for g, i in zip(grounds, ids)]
+        return {'text': questions, 'image': None, 'anchor': questions}, infos
+
+    async def _compute_scores_async(self, text_actions: List[str]):
+        from verl.utils.reward_score.math import compute_score_async
+        import asyncio
+        tasks = []
+        for i in range(len(text_actions)):
+            # Enable semantic grading but make it ASYNC
+            tasks.append(compute_score_async(text_actions[i], self.current_grounds[i], use_semantic=True))
+        
+        return await asyncio.gather(*tasks)
+
+    def step(self, text_actions: List[str]):
+        # DEBUG: Show final lines and ground truth for verification
+        print("\n" + "="*80)
+        print("DEBUG [MODEL OUTPUT VERIFICATION]")
+        print("="*80)
+        for i in range(min(3, len(text_actions))):  # Show first 3 examples
+            print(f"\n📝 Example {i}:")
+            print(f"   Ground Truth: {self.current_grounds[i]}")
+            print(f"   Model Final Line: '{text_actions[i].strip().split(chr(10))[-1]}'")
+            print(f"   Full Response Length: {len(text_actions[i])} chars")
+            print("-" * 50)
+
+        import asyncio
+        loop = self._get_event_loop()
+        rewards = np.array(loop.run_until_complete(self._compute_scores_async(text_actions)))
+
+        # DEBUG: Show computed rewards
+        print(f"\n🎯 Rewards: {rewards[:10].tolist()}")
+        print("="*80 + "\n")
+
+        batch_size = len(text_actions)
+        dones = np.ones(batch_size, dtype=bool)
+        # Match 'won' key expected by EnvironmentManagerBase.success_evaluator (if used)
+        infos = [{'won': rewards[i] > 0} for i in range(batch_size)]
+        return {'text': text_actions, 'image': None, 'anchor': text_actions}, rewards, dones, infos
+
+    def close(self):
+        pass
+
 def make_envs(config):
     """
     Create enviroments 
@@ -607,6 +702,10 @@ def make_envs(config):
         val_envs = GymCardEnvironmentManager(_val_envs, projection_f, config)
         return envs, val_envs
     elif "alfworld" in config.env.env_name.lower():
+        import sys
+        alfworld_dir = os.path.join(os.path.dirname(__file__), 'env_package/alfworld')
+        if alfworld_dir not in sys.path:
+            sys.path.insert(0, alfworld_dir)
         from agent_system.environments.env_package.alfworld import build_alfworld_envs, alfworld_projection
         if config.env.env_name == 'alfworld/AlfredThorEnv':
             alf_config_path = os.path.join(os.path.dirname(__file__), 'env_package/alfworld/configs/config_tw.yaml')
@@ -692,7 +791,26 @@ def make_envs(config):
             return envs, val_envs, critique_envs
         else:
             return envs, val_envs
-       
+    elif "math" in config.env.env_name.lower():
+        mlmt_enabled = config.get('mlmt_rl', {}).get('enable', False)
+        if mlmt_enabled:
+            from agent_system.environments.mlmt_envs import MLMTMathEnvironmentManager
+            envs = MLMTMathEnvironmentManager(config, is_train=True)
+            val_envs = MLMTMathEnvironmentManager(config, is_train=False) if config.data.get('val_files') else None
+        else:
+        envs = MathEnvironmentManager(config, is_train=True)
+            val_envs = MathEnvironmentManager(config, is_train=False) if config.data.get('val_files') else None
+        return envs, val_envs
+    elif "mbpp" in config.env.env_name.lower() or "code" in config.env.env_name.lower():
+        from agent_system.environments.mlmt_envs import MLMTCodeEnvironmentManager
+        envs = MLMTCodeEnvironmentManager(config, is_train=True)
+        val_envs = MLMTCodeEnvironmentManager(config, is_train=False) if config.data.get('val_files') else None
+        return envs, val_envs
+    elif "physics" in config.env.env_name.lower() or "gpqa" in config.env.env_name.lower():
+        from agent_system.environments.mlmt_envs import MLMTPhysicsEnvironmentManager
+        envs = MLMTPhysicsEnvironmentManager(config, is_train=True)
+        val_envs = MLMTPhysicsEnvironmentManager(config, is_train=False) if config.data.get('val_files') else None
+        return envs, val_envs
     else:
         print("Environment not supported")
         exit(1)

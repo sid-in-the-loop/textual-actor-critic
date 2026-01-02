@@ -148,6 +148,8 @@ def compute_grpo_outcome_advantage(
     scores = token_level_rewards.sum(dim=-1)
 
     print(f"advatage is computed using all step data for a question: {compute_mean_std_cross_all_data}")
+    print(f"DEBUG [Advantage]: scores shape={scores.shape}, mean={scores.mean().item():.4f}, std={scores.std().item():.4f}")
+    print(f"DEBUG [Advantage]: scores sample: {scores[:10].tolist()}")
 
     id2score = defaultdict(list)
     id2mean = {}
@@ -166,8 +168,12 @@ def compute_grpo_outcome_advantage(
                 id2mean[idx] = torch.tensor(0.0)
                 id2std[idx] = torch.tensor(1.0)
             elif len(id2score[idx]) > 1:
-                id2mean[idx] = torch.mean(torch.tensor(id2score[idx]))
-                id2std[idx] = torch.std(torch.tensor([id2score[idx]]))
+                scores_tensor = torch.tensor(id2score[idx], dtype=torch.float32)
+                id2mean[idx] = torch.mean(scores_tensor)
+                id2std[idx] = torch.std(scores_tensor)
+                # Ensure std is not zero to avoid NaN gradients
+                if id2std[idx] == 0:
+                    id2std[idx] = torch.tensor(1.0)
             else:
                 raise ValueError(f"no score in prompt index: {idx}")
         for i in range(bsz):
@@ -176,6 +182,11 @@ def compute_grpo_outcome_advantage(
             else:
                 scores[i] = scores[i] - id2mean[index[i]]
         scores = scores.unsqueeze(-1) * response_mask
+
+    print(f"DEBUG [Advantage]: Final normalized scores shape={scores.shape}, mean={scores.mean().item():.4f}, std={scores.std().item():.4f}")
+    print(f"DEBUG [Advantage]: Any NaN in scores? {torch.isnan(scores).any().item()}")
+    print(f"DEBUG [Advantage]: Any inf in scores? {torch.isinf(scores).any().item()}")
+
     return scores, scores
 
 
@@ -285,6 +296,37 @@ def compute_reinforce_plus_plus_baseline_outcome_advantage(token_level_rewards: 
         scores = verl_F.masked_whiten(scores, response_mask) * response_mask
 
     return scores, scores
+
+
+def compute_reinforce_outcome_advantage(token_level_rewards: torch.Tensor, response_mask: torch.Tensor, gamma: torch.Tensor):
+    """
+    Compute advantage for plain REINFORCE (Williams, 1992) using raw returns without normalization.
+
+    Args:
+        token_level_rewards: `(torch.Tensor)`
+            shape: (bs, response_length)
+        response_mask: `(torch.Tensor)`
+            shape: (bs, response_length)
+        gamma: `(torch.Tensor)` or scalar used as discount factor
+
+    Returns:
+        advantages: `(torch.Tensor)`
+            shape: (bs, response_length)
+        Returns: `(torch.Tensor)`
+            shape: (bs, response_length)
+    """
+    with torch.no_grad():
+        returns = torch.zeros_like(token_level_rewards)
+        running_return = 0
+
+        for t in reversed(range(token_level_rewards.shape[1])):
+            running_return = token_level_rewards[:, t] + gamma * running_return
+            returns[:, t] = running_return
+            running_return = running_return * response_mask[:, t]
+
+        advantages = returns * response_mask
+
+    return advantages, returns
 
 
 def compute_rloo_outcome_advantage(token_level_rewards: torch.Tensor, response_mask: torch.Tensor, index: np.ndarray, traj_index: np.ndarray, epsilon: float = 1e-6, compute_mean_std_cross_all_data: bool = True):

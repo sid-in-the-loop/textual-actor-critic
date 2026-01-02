@@ -1,0 +1,86 @@
+data:
+  tokenizer: null
+  use_shm: False
+  train_files: /home/ssmurali/mlmt/data/mlmt/math/train.parquet
+  val_files: null
+  prompt_key: prompt
+  reward_fn_key: data_source
+  max_prompt_length: 1024
+  max_response_length: 1024
+  train_batch_size: 16
+  val_batch_size: null
+  return_raw_input_ids: False
+  return_raw_chat: False
+  return_full_prompt: False
+  shuffle: True
+  filter_overlong_prompts: True
+  filter_overlong_prompts_workers: 8
+  truncation: error
+
+actor_rollout_ref:
+  hybrid_engine: True
+  model:
+    path: ~/models/deepseek-llm-7b-chat # Placeholder, override in run script
+    use_remove_padding: True
+    enable_gradient_checkpointing: True
+  actor:
+    strategy: fsdp
+    ppo_mini_batch_size: 64
+    ppo_micro_batch_size_per_gpu: 1
+    use_kl_loss: True # Required for GRPO
+    kl_loss_coef: 0.001
+    kl_loss_type: low_var_kl
+    ppo_epochs: 1
+    loss_agg_mode: "token-mean"
+    optim:
+      lr: 1e-6
+      lr_warmup_steps_ratio: 0.1
+      warmup_style: cosine
+  rollout:
+    name: vllm
+    temperature: 1.0
+    n: 8 # GRPO group size
+    gpu_memory_utilization: 0.6
+
+critic:
+  strategy: fsdp
+  model:
+    path: ~/models/deepseek-llm-7b-chat # Placeholder
+    enable_gradient_checkpointing: True
+  ppo_micro_batch_size_per_gpu: 1
+
+algorithm:
+  adv_estimator: grpo
+  gamma: 1.0
+  lam: 1.0
+  norm_adv_by_std_in_grpo: True
+  compute_mean_std_cross_all_data: True
+
+trainer:
+  total_epochs: 10
+  project_name: mlmt_rl
+  experiment_name: math_competition
+  logger: [ 'console', 'wandb' ]
+  n_gpus_per_node: 8
+  nnodes: 1
+  save_freq: 50
+  test_freq: -1
+  val_before_train: False
+
+env:
+  env_name: math
+  max_steps: 1
+  rollout:
+    n: 8 # Matches rollout.n
+
+# MLMT-RL Specific Knobs
+mlmt_enabled: true
+mlmt_lambda: 0.1
+stop_value_gradients: true
+mlmt_use_symmetric_rewards: false # Reverted to 0/1 as per user request
+
+
+
+
+
+

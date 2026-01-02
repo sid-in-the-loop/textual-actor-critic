@@ -192,7 +192,7 @@ def copy_to_local(src: str, cache_dir=None, filelock=".file.lock", verbose=False
     """Copy files/directories from HDFS to local cache with validation.
 
     Args:
-        src (str): Source path - HDFS path (hdfs://...) or local filesystem path
+        src (str): Source path - HDFS path (hdfs://...), local filesystem path, or Hugging Face model ID
         cache_dir (str, optional): Local directory for cached files. Uses system tempdir if None
         filelock (str): Base name for file lock. Defaults to ".file.lock"
         verbose (bool): Enable copy operation logging. Defaults to False
@@ -204,6 +204,40 @@ def copy_to_local(src: str, cache_dir=None, filelock=".file.lock", verbose=False
     """
     # Save to a local path for persistence.
     local_path = copy_local_path_from_hdfs(src, cache_dir, filelock, verbose, always_recopy)
+
+    # Check if this looks like a HuggingFace Hub model ID
+    # Pattern: "org/model-name" (e.g., "Qwen/Qwen3-1.7B")
+    is_hf_hub_path = (
+        isinstance(local_path, str)
+        and "/" in local_path
+        and not local_path.startswith(_HDFS_PREFIX)
+        and not os.path.isabs(local_path)
+        and not local_path.startswith("~")
+        and not os.path.exists(local_path)
+        and len(local_path.split("/")) == 2  # org/model format
+    )
+
+    # Download from HuggingFace Hub if needed
+    if is_hf_hub_path or (use_shm and isinstance(local_path, str) and not os.path.exists(local_path)):
+        try:
+            from huggingface_hub import snapshot_download
+            import os as os_module
+
+            # Get HF token from environment
+            hf_token = os_module.getenv("HF_TOKEN") or os_module.getenv("HUGGING_FACE_HUB_TOKEN")
+            if verbose:
+                print(f"Downloading model from HuggingFace Hub: {local_path}")
+
+            resolved = snapshot_download(local_path, token=hf_token)
+            if isinstance(resolved, str) and os.path.exists(resolved):
+                local_path = resolved
+                if verbose:
+                    print(f"Model downloaded to: {local_path}")
+        except ImportError:
+            pass
+        except Exception as e:
+            print(f"WARNING: Failed to download model from Hugging Face: {e}")
+
     # Load into shm to improve efficiency.
     if use_shm:
         return copy_to_shm(local_path)

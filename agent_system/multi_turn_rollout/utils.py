@@ -94,7 +94,7 @@ def adjust_batch(config, data: DataProto, mode="copy") -> DataProto:
     remainder = bs % size_divisor
     if remainder == 0:
         return data
-    
+
     if mode == "delete":
         # Generate indices to remove, rather than indices to keep
         remove_indices = np.random.choice(bs, remainder, replace=False)
@@ -113,7 +113,8 @@ def adjust_batch(config, data: DataProto, mode="copy") -> DataProto:
         del data
     elif mode == "copy":
         to_add = size_divisor - remainder
-        dup_indices = np.random.choice(bs, to_add, replace=False)
+        # Allow replace=True if we need to add more samples than we have (for small debug batches)
+        dup_indices = np.random.choice(bs, to_add, replace=(to_add > bs))
         dup_proto = data.select_idxs(dup_indices)
 
         adjusted_batch = DataProto.concat([data, dup_proto])
