@@ -17,7 +17,7 @@ import time
 # CMU Gateway configuration
 CMU_GATEWAY_BASE_URL = "https://ai-gateway.andrew.cmu.edu"
 # Prefer the single user-provided key by default
-GATEWAY_API_KEY = os.getenv("CMU_GATEWAY_API_KEY", "sk-dUplmEab2H7EFRaOISG1Ew")
+GATEWAY_API_KEY = os.getenv("CMU_GATEWAY_API_KEY", "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")
 MODEL_NAME = "gpt-4o-mini-2024-07-18"
 
 

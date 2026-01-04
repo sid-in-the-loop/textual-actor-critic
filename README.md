@@ -15,8 +15,12 @@ We recommend using **Conda** for environment management. This project requires *
 conda create -n mlmt python=3.12 -y
 conda activate mlmt
 
-# Install dependencies (pinned for stability)
-pip install -r requirements.txt
+# Install dependencies
+pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+pip install numpy psutil  # Required for flash-attn build
+pip install flash-attn==2.7.4.post1 --no-build-isolation
+pip install -e .
+pip install vllm==0.8.5 google-genai google-generativeai boto3 gymnasium langchain langchain-openai
 
 # Install the project (verl) in editable mode
 pip install -e .
@@ -54,6 +58,7 @@ These scripts are used for training on mathematical reasoning tasks:
 *   `HLT_LLT_RR_1_1.sh`: HL and LL both trainable
 *   `HLT_LLT_RR_1_15.sh`: HL and LL both trainable
 *   `HLT_LLT_RR_1_20.sh`: HL and LL both trainable
+*   `run_1gpu_shared.sh`: Optimized for 1 GPU using shared actor weights.
 *   `submit_mlmt.sbatch`: Slurm submission script for launching MLMT training on a cluster.
 
 
@@ -85,3 +90,20 @@ We use **Weights & Biases (W&B)** for experiment tracking. Ensure you are logged
 wandb login
 ```
 All training runs, including rewards and KL divergence, are logged under the project `mlmt_rl`.
+
+---
+
+## 🚀 Core Engineering & vLLM Expertise
+
+This project demonstrates advanced engineering in distributed RL and high-performance inference, specifically optimized for **vLLM** and **Ray**.
+
+### 🧠 Multi-Turn Bi-Level Optimization (HRL)
+- **Hierarchical In-Context RL (HICRL)**: Architected a bi-level optimization framework where a **High-Level (HL)** context generator and a **Low-Level (LL)** task solver are optimized via alternating RL loops.
+- **Context Utilization Engineering**: Developed a KL-Maximization objective to force "forced dependency" on generated demonstrations, ensuring the LL utilizes the HL feedback rather than bypassing it.
+- **Multi-Turn Trajectory Management**: Engineered complex state-tracking for 3-turn RL loops (Initial Solve → Feedback → Refinement) with specialized advantage estimation.
+
+### ⚡ High-Performance vLLM & Distributed Systems
+- **vLLM-Native Rollouts**: Deeply integrated vLLM as the backbone for high-throughput RL rollouts. Leveraged **PagedAttention** and **Batching** to handle the compounding sequence lengths of hierarchical prompts (Context + Reasoning Trace).
+- **Asynchronous RL Serving**: Orchestrated asynchronous generation across distributed **Ray** actors, minimizing latency in the bi-level sampling process.
+- **Inference-Aware Reward Shaping**: Implemented real-time reward calculation using vLLM-generated log-probabilities (logp) to track and optimize model confidence and context dependency.
+- **Backend Interop**: Managed weight synchronization and sharding between training backends (**Megatron-LM**, **FSDP**) and vLLM inference engines for zero-redundancy model updates.

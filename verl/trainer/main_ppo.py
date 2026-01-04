@@ -75,10 +75,29 @@ class TaskRunner:
                 mlmt_cfg = config.mlmt_rl
                 low_model_path = mlmt_cfg.low_level.get("model_path") or config.actor_rollout_ref.model.path
                 config.actor_rollout_ref.model.path = low_model_path
+                
+                # Explicitly override low-level model params if provided
+                if "use_lora" in mlmt_cfg.low_level:
+                    config.actor_rollout_ref.model.use_lora = mlmt_cfg.low_level.use_lora
+                if "lora_rank" in mlmt_cfg.low_level:
+                    config.actor_rollout_ref.model.lora_rank = mlmt_cfg.low_level.lora_rank
+                if "lora_alpha" in mlmt_cfg.low_level:
+                    config.actor_rollout_ref.model.lora_alpha = mlmt_cfg.low_level.lora_alpha
+                if "target_modules" in mlmt_cfg.low_level:
+                    config.actor_rollout_ref.model.target_modules = mlmt_cfg.low_level.target_modules
 
                 if not shared_actor:
                     high_actor_cfg = deepcopy(config.actor_rollout_ref)
+                    # Explicitly override high-level model params if provided
                     high_actor_cfg.model.path = mlmt_cfg.high_level.get("model_path", high_actor_cfg.model.path)
+                    if "use_lora" in mlmt_cfg.high_level:
+                        high_actor_cfg.model.use_lora = mlmt_cfg.high_level.use_lora
+                    if "lora_rank" in mlmt_cfg.high_level:
+                        high_actor_cfg.model.lora_rank = mlmt_cfg.high_level.lora_rank
+                    if "lora_alpha" in mlmt_cfg.high_level:
+                        high_actor_cfg.model.lora_alpha = mlmt_cfg.high_level.lora_alpha
+                    if "target_modules" in mlmt_cfg.high_level:
+                        high_actor_cfg.model.target_modules = mlmt_cfg.high_level.target_modules
                     config.high_actor_rollout_ref = high_actor_cfg
                 else:
                     config.high_actor_rollout_ref = config.actor_rollout_ref

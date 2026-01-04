@@ -7,7 +7,7 @@
 #SBATCH --mem=184G
 #SBATCH --partition=general
 #SBATCH --time=24:00:00
-
+#SBATCH --exclude=babel-s5-24,babel-s9-24,babel-w5-32
 source /home/ssmurali/miniconda3/etc/profile.d/conda.sh
 conda activate mlmt
 
@@ -15,8 +15,8 @@ export PYTHONUNBUFFERED=1
 export RAY_BACKEND_LOG_LEVEL=warning
 export RAY_LOG_TO_STDERR=0
 export WANDB_MODE=offline
-export HF_TOKEN=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
-export OPENAI_API_KEY=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
+export HF_TOKEN=${HF_TOKEN}
+export OPENAI_API_KEY=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
 
 cd /home/ssmurali/mlmt
 

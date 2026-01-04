@@ -6,27 +6,14 @@ SAVE_DIR=${2:-/home/ssmurali/mlmt/checkpoints/math/HLT_LLT_RR_1_1}
 VALUE_MODEL=${3:-roberta-base}
 mkdir -p "$SAVE_DIR"
 
-export OPENAI_API_KEY=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
+export OPENAI_API_KEY=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
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export WANDB_MODE=online
 
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-RUN_NAME="HLT_LLT_RR_1_1_LoRA_${TIMESTAMP}"
+RUN_NAME="HLT_LLT_RR_1_1_${TIMESTAMP}"
 LOG_DIR="logs/mlmt/math/${RUN_NAME}"
 mkdir -p "$LOG_DIR"
-
-# Start Proxy in background (Automated workaround for internet on compute nodes)
-echo "Setting up SOCKS proxy via login1..."
-ssh -N -f -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ExitOnForwardFailure=yes -o ServerAliveInterval=60 -D 127.0.0.1:1080 login1
-
-export ALL_PROXY=socks5h://127.0.0.1:1080
-export HTTP_PROXY=$ALL_PROXY
-export HTTPS_PROXY=$ALL_PROXY
-export http_proxy=$ALL_PROXY
-export https_proxy=$ALL_PROXY
-
-# Ensure dependencies for proxy are installed
-pip install "httpx[socks]"
 
 python -m verl.trainer.main_ppo \
     data.train_files=/home/ssmurali/mlmt/data/mlmt/math/train.parquet \
@@ -40,15 +27,16 @@ python -m verl.trainer.main_ppo \
     trainer.project_name=mlmt_math \
     trainer.experiment_name=${RUN_NAME} \
     trainer.default_local_dir=${SAVE_DIR}/${RUN_NAME} \
-    trainer.total_epochs=5 \
+    trainer.total_epochs=3 \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=100 \
-    trainer.resume_mode=disable \
     actor_rollout_ref.model.path=$SHARED_MODEL \
+    actor_rollout_ref.model.use_lora=false \
     actor_rollout_ref.model.lora_rank=16 \
     actor_rollout_ref.model.lora_alpha=32 \
-    actor_rollout_ref.model.target_modules='all-linear' \
+    actor_rollout_ref.model.lora_dropout=0.05 \
+    actor_rollout_ref.model.target_modules='["q_proj","k_proj","v_proj","o_proj","gate_proj","up_proj","down_proj"]' \
     actor_rollout_ref.actor.ppo_mini_batch_size=128 \
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=4 \
     actor_rollout_ref.actor.optim.lr=5e-7 \
@@ -61,6 +49,11 @@ python -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.max_num_batched_tokens=16384 \
     actor_rollout_ref.rollout.tensor_model_parallel_size=1 \
     critic.model.path=$SHARED_MODEL \
+    critic.model.use_lora=false \
+    critic.model.lora_rank=16 \
+    critic.model.lora_alpha=32 \
+    critic.model.lora_dropout=0.05 \
+    critic.model.target_modules='["q_proj","k_proj","v_proj","o_proj","gate_proj","up_proj","down_proj"]' \
     algorithm.adv_estimator=reinforce \
     env.env_name=math \
     env.rollout.n=1 \
@@ -78,3 +71,4 @@ python -m verl.trainer.main_ppo \
     mlmt_rl.value_fn.model_path=$VALUE_MODEL \
     mlmt_rl.use_llm_success_eval=true \
     2>&1 | tee ${LOG_DIR}/train.log
+

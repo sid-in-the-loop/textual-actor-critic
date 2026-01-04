@@ -115,7 +115,7 @@ python scripts/augment_pddl_states.py --data_path $ALFWORLD_DATA/json_2.1.1/trai
 alfworld-generate --data_path $ALFWORLD_DATA/json_2.1.1 --save_path custom_dataset/ --goal_desc_human_anns_prob 1
 ```
 
-## Mask-RCNN Detector
+## Mask-proj-t-3jM9g14yGtzozJKYlWdtPW3nCuv8MoCKAkJPlQS7cBygKF6ur3tLm-pGfCEHxg5Jkk7lohYET3BlbkFJYfa6MImXvTLilGultWkvXMY8Cdcr6lofi2WkCxxuTZr37mtK8de78smZCWM3yLF6PiNIeNWEoA Detector
 
 #### Generating MaskRCNN training images from ALFRED
 

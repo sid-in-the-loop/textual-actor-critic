@@ -1,7 +1,8 @@
 import asyncio
 import json
 import os
-from typing import Dict, List
+from typing import Dict, List, Optional
+from verl.utils.reward_score.math import compute_score
 
 try:
     from openai import AsyncOpenAI
@@ -19,9 +20,9 @@ class LLMSuccessEvaluator:
         api_key = os.getenv("OPENAI_API_KEY")
         self.client = AsyncOpenAI(api_key=api_key) if (AsyncOpenAI and api_key) else None
 
-    async def _evaluate_single(self, question: str, answer: str) -> Dict[str, float]:
+    async def _evaluate_single(self, question: str, answer: str, ground_truth: Optional[str] = None) -> Dict[str, float]:
         if not self.client:
-            return self._heuristic_score(question, answer)
+            return self._heuristic_score(question, answer, ground_truth)
 
         prompt = (
             "You are an impartial evaluator for math and reasoning problems.\n"
@@ -45,29 +46,41 @@ class LLMSuccessEvaluator:
             return {"success": success, "feedback_quality": feedback_quality}
         except Exception as exc:  # pragma: no cover
             print(f"LLM success evaluator failed: {exc}")
-            return self._heuristic_score(question, answer)
+            return self._heuristic_score(question, answer, ground_truth)
 
-    async def _evaluate_batch_async(self, questions: List[str], answers: List[str]):
-        tasks = [self._evaluate_single(q, a) for q, a in zip(questions, answers)]
+    async def _evaluate_batch_async(self, questions: List[str], answers: List[str], ground_truths: Optional[List[str]] = None):
+        if ground_truths is None:
+            ground_truths = [None] * len(questions)
+        tasks = [self._evaluate_single(q, a, gt) for q, a, gt in zip(questions, answers, ground_truths)]
         return await asyncio.gather(*tasks)
 
-    def evaluate_batch(self, questions: List[str], answers: List[str]):
+    def evaluate_batch(self, questions: List[str], answers: List[str], ground_truths: Optional[List[str]] = None):
         if not questions:
             return []
         try:
-            return asyncio.run(self._evaluate_batch_async(questions, answers))
+            return asyncio.run(self._evaluate_batch_async(questions, answers, ground_truths))
         except RuntimeError:
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
-            results = loop.run_until_complete(self._evaluate_batch_async(questions, answers))
+            results = loop.run_until_complete(self._evaluate_batch_async(questions, answers, ground_truths))
             loop.close()
             return results
 
     @staticmethod
-    def _heuristic_score(question: str, answer: str) -> Dict[str, float]:
+    def _heuristic_score(question: str, answer: str, ground_truth: Optional[str] = None) -> Dict[str, float]:
         if not answer:
             return {"success": 0.0, "feedback_quality": 0.0}
-        answer = answer.lower()
-        success = 1.0 if "final answer" in answer else 0.3
+
+        # Fallback to rule-based evaluation if ground truth is available
+        if ground_truth:
+            try:
+                success = float(compute_score(answer, ground_truth))
+                feedback_quality = 0.8 if success > 0 else 0.2
+                return {"success": success, "feedback_quality": feedback_quality}
+            except Exception as e:
+                print(f"Heuristic fallback failed: {e}")
+
+        answer_lower = answer.lower()
+        success = 1.0 if "final answer" in answer_lower else 0.3
         feedback_quality = 0.5 if len(answer) > 20 else 0.2
         return {"success": success, "feedback_quality": feedback_quality}

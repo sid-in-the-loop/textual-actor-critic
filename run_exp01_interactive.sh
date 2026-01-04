@@ -7,9 +7,9 @@ cd /home/ssmurali/verl-agent
 export HYDRA_FULL_ERROR=1
 export RAY_DEBUG=0
 export WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
-export HF_TOKEN=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
-export HUGGING_FACE_HUB_TOKEN=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
-export CMU_GATEWAY_API_KEY=sk-sejf_6tjIhvazsxWCH-mZg
+export HF_TOKEN=${HF_TOKEN}
+export HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}
+export CMU_GATEWAY_API_KEY=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
 
 # Local Ray config (1 GPU)
 export RAY_TMPDIR="/tmp/ray_local_$$"

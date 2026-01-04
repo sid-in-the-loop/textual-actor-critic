@@ -798,7 +798,7 @@ def make_envs(config):
             envs = MLMTMathEnvironmentManager(config, is_train=True)
             val_envs = MLMTMathEnvironmentManager(config, is_train=False) if config.data.get('val_files') else None
         else:
-        envs = MathEnvironmentManager(config, is_train=True)
+            envs = MathEnvironmentManager(config, is_train=True)
             val_envs = MathEnvironmentManager(config, is_train=False) if config.data.get('val_files') else None
         return envs, val_envs
     elif "mbpp" in config.env.env_name.lower() or "code" in config.env.env_name.lower():

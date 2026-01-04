@@ -35,7 +35,7 @@ Fails at:
 - PyYAML==6.0.0
 
 Fails, because wrong versions installed
-- Werkzeug==2.2.2 (needs to be installed for Flask instead of 3.0.0 to work [https://stackoverflow.com/questions/77213053/why-did-flask-start-failing-with-importerror-cannot-import-name-url-quote-fr])
+- Werkzeug==2.2.2 (needs to be installed for Flask instead of 3.0.0 to work [https://stackoverflow.com/questions/77213053/why-did-flask-proj-t-3jM9g14yGtzozJKYlWdtPW3nCuv8MoCKAkJPlQS7cBygKF6ur3tLm-pGfCEHxg5Jkk7lohYET3BlbkFJYfa6MImXvTLilGultWkvXMY8Cdcr6lofi2WkCxxuTZr37mtK8de78smZCWM3yLF6PiNIeNWEoA])
 - numpy-1.24.4 (needs to be installed instead of numpy 1.22 [https://stackoverflow.com/questions/33859531/runtimeerror-module-compiled-against-api-version-a-but-this-version-of-numpy-is])
 
 **tokenizers fix**:

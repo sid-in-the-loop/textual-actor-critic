@@ -132,29 +132,36 @@ class FSDPVLLMShardingManager(BaseShardingManager):
                             lora_params = {name: param.full_tensor().detach().cpu() if hasattr(param, 'full_tensor') else param.detach().cpu() 
                                         for name, param in lora_params.items()}
                         else:
-                            model = self.module._fsdp_wrapped_module.base_model.model
-                            orig_dev = 'cpu' if 'cpu' in next(model.parameters()).device.type else 'cuda'
-                            model = model.to('cpu')
-                            for name, param in model.state_dict().items():
-                                if any(x in name for x in ['_flat_param', 'lora_']):
-                                    continue
-                                name = name.replace("_fsdp_wrapped_module.","").replace(".base_layer","")
-                                lora_params[name] = param.full_tensor().detach().cpu() if hasattr(param, 'full_tensor') else param.detach().cpu()
-                            model = model.to(orig_dev)
+                            # Optimize: Use summon_full_params instead of model.to('cpu')
+                            # Handle potential nested unsharding calls in MLMT multi-turn loops
+                            try:
+                                with FSDP.summon_full_params(self.module, writeback=False):
+                                    model_state = self.module._fsdp_wrapped_module.state_dict()
+                                    for name, param in model_state.items():
+                                        if 'lora_' in name or '_flat_param' in name:
+                                            continue
+                                        lora_params[name] = param.full_tensor().detach().cpu() if hasattr(param, 'full_tensor') else param.detach().cpu()
+                            except AssertionError as e:
+                                if "already unsharding parameters" in str(e):
+                                    # Already unsharded, collect directly
+                                    model_state = self.module._fsdp_wrapped_module.state_dict()
+                                    for name, param in model_state.items():
+                                        if 'lora_' in name or '_flat_param' in name:
+                                            continue
+                                        lora_params[name] = param.full_tensor().detach().cpu() if hasattr(param, 'full_tensor') else param.detach().cpu()
+                                else:
+                                    raise e
                     torch.cuda.empty_cache()
             else:
                 if self.base_sync_done:
                     lora_params = get_peft_model_state_dict(self.module._fsdp_wrapped_module)
                 else:
-                    model = self.module._fsdp_wrapped_module.base_model.model
-                    orig_dev = 'cpu' if 'cpu' in next(model.parameters()).device.type else 'cuda'
-                    model = model.to('cpu')
-                    for name, param in model.state_dict().items():
-                        if any(x in name for x in ['_flat_param', 'lora_']):
+                    # Collect raw keys from base model
+                    model_state = self.module._fsdp_wrapped_module.state_dict()
+                    for name, param in model_state.items():
+                        if 'lora_' in name or '_flat_param' in name:
                             continue
-                        name = name.replace("_fsdp_wrapped_module.","").replace(".base_layer","")
                         lora_params[name] = param.detach().cpu()
-                    model = model.to(orig_dev)
             return lora_params
 
         # NOTE: Basically, we only need `get_torch_device().empty_cache()` before vllm wake_up and
@@ -275,18 +282,45 @@ class FSDPVLLMShardingManager(BaseShardingManager):
                 logger.info(f"vLLM load weights, loaded_params: {len(updated_params)}")
                 return
             else:
-                def replace_lora_wrapper(k):
-                    stacked_params = ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']
-                    if any([k.endswith(f"{s}.weight") for s in stacked_params]):
-                        return k.replace(".weight", ".base_layer.weight")
-                    if any([k.endswith(f"{s}.bias") for s in stacked_params]):
-                        return k.replace(".bias", ".base_layer.bias")
-                    return k
-                updated_params = {replace_lora_wrapper(k): v for k, v in updated_params.items()}
+                # First-time base model sync.
+                pass
 
         patch_vllm_moe_model_weight_loader(model)
-        device = get_torch_device().current_device()  # used when fsdp2 set cpu_offload_policy
-        loaded_params = model.load_weights(((name, param.to(device, non_blocking=True).full_tensor() if isinstance(param, DTensor) else param) for name, param in updated_params.items()))
+        device = get_torch_device().current_device()
 
+        # Build a lookup table for updated_params by normalizing suffixes.
+        # This handles cases where Actor has prefixes like 'base_model.model.'
+        # but vLLM expects 'model.' or bare names.
+        def normalize_key(k):
+            return k.replace("_fsdp_wrapped_module.", "").replace(".base_layer", "")
+
+        param_lookup = {normalize_key(k): v for k, v in updated_params.items()}
+
+        def match_and_map_params():
+            matched_count = 0
+            # We iterate over WHAT THE LOCAL vLLM RANK ACTUALLY HAS
+            for vllm_name, _ in model.named_parameters():
+                found_match = False
+                # 1. Exact or normalized match
+                if vllm_name in param_lookup:
+                    param = param_lookup[vllm_name]
+                    found_match = True
+                else:
+                    # 2. Suffix match (e.g., 'embed_tokens.weight' matches 'model.embed_tokens.weight')
+                    # or 'model.layers.0...' matches 'base_model.model.model.layers.0...'
+                    for actor_name, param in param_lookup.items():
+                        if actor_name.endswith(vllm_name) or vllm_name.endswith(actor_name):
+                            found_match = True
+                            break
+                
+                if found_match:
+                    matched_count += 1
+                    yield vllm_name, (param.to(device, non_blocking=True).full_tensor() if isinstance(param, DTensor) else param)
+                else:
+                    logger.debug(f"vLLM rank is missing parameter: {vllm_name}")
+
+            logger.info(f"vLLM weight sync: matched {matched_count} parameters on this rank.")
+
+        loaded_params = model.load_weights(match_and_map_params())
         self.base_sync_done = True
         logger.info(f"vLLM load weights, loaded_params: {len(loaded_params) if loaded_params else -1}")

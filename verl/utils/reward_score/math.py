@@ -21,19 +21,29 @@ from typing import Tuple, Any, List
 import asyncio
 from openai import AsyncOpenAI
 
-# AsyncOpenAI client configuration (similar to belief_calculator.py)
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "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")
-MODEL_NAME = "gpt-5-nano"
+# AsyncOpenAI client configuration
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL_NAME = "gpt-4o-mini"
 
-# Global AsyncOpenAI client (similar to belief_calculator.py)
+# Global clients to avoid re-initialization overhead
 _async_client = None
+_sync_client = None
 
 def get_async_client():
     """Get or create global AsyncOpenAI client"""
     global _async_client
     if _async_client is None:
+        from openai import AsyncOpenAI
         _async_client = AsyncOpenAI(api_key=OPENAI_API_KEY)
     return _async_client
+
+def get_sync_client():
+    """Get or create global synchronous OpenAI client"""
+    global _sync_client
+    if _sync_client is None:
+        from openai import OpenAI
+        _sync_client = OpenAI(api_key=OPENAI_API_KEY)
+    return _sync_client
 
 def log_llmasaj_event(data):
     """Log LLMasaJ events silently to a separate file."""
@@ -49,7 +59,7 @@ def log_llmasaj_event(data):
 
 async def _evaluate_semantic_async(full_response: str, ground_truth: str, question: str = "Math problem") -> Tuple[bool, str]:
     """Async soft evaluation of FULL response vs ground truth using AsyncOpenAI GPT-4o-mini.
-
+    
     FAST-FAIL version for flaky WiFi.
     """
     if not OPENAI_API_KEY:
@@ -103,7 +113,7 @@ async def _evaluate_semantic_async(full_response: str, ground_truth: str, questi
             return (judgement == 'correct'), rationale
         except Exception as e:
             log_llmasaj_event({"mode": "async", "error": str(e), "gt": ground_truth})
-                return False, f"API Error: {str(e)}"
+            return False, f"API Error: {str(e)}"
     return False, "Failed"
 
 async def compute_score_async(solution_str, ground_truth, extra_info=None, use_semantic: bool = True, **kwargs) -> float:
@@ -134,14 +144,13 @@ async def compute_score_async(solution_str, ground_truth, extra_info=None, use_s
 
 def _evaluate_semantic(full_response: str, ground_truth: str, question: str = "Math problem") -> Tuple[bool, str]:
     """Soft evaluation of FULL response vs ground truth using OpenAI GPT-4o-mini.
-
+    
     FAST-FAIL version for flaky WiFi.
     """
     if not OPENAI_API_KEY:
         return False, "OPENAI_API_KEY not set"
 
-        from openai import OpenAI
-    client = OpenAI(api_key=OPENAI_API_KEY)
+    client = get_sync_client()
 
     prompt = f"""
     Evaluate if the model successfully generated a final answer and if it matches the ground truth.
@@ -156,7 +165,7 @@ def _evaluate_semantic(full_response: str, ground_truth: str, question: str = "M
 
     Question: {question}
     Ground Truth Answer: {ground_truth}
-    Model's Full Response: {full_response[:3000]}  # Truncate if too long
+    Model's Full Response: {full_response}  # Truncate if too long
 
     Please respond with a JSON object: {{ "judgement": "correct" or "incorrect", "extracted_answer": "...", "rationale": "..." }}
     """
@@ -190,7 +199,7 @@ def _evaluate_semantic(full_response: str, ground_truth: str, question: str = "M
             return (judgement == 'correct'), rationale
         except Exception as e:
             log_llmasaj_event({"mode": "sync", "error": str(e), "gt": ground_truth})
-                return False, f"API Error: {str(e)}"
+            return False, f"API Error: {str(e)}"
     return False, "Failed"
 
 def compute_score(solution_str, ground_truth, extra_info=None, use_semantic: bool = True, **kwargs) -> float:

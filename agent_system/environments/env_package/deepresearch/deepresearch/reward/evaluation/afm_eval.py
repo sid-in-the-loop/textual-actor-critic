@@ -10,7 +10,7 @@ MODEL_NAME = "gpt-5-nano-2025-08-07"
 def get_openai_client():
     """Initialize OpenAI client for standard API."""
     return OpenAI(
-        api_key=os.getenv("OPENAI_API_KEY", "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"),
+        api_key=os.getenv("OPENAI_API_KEY", "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"),
         timeout=20
     )
 

@@ -37,6 +37,7 @@ from tensordict import TensorDict
 import time
 import sys
 import asyncio
+import re
 from verl.utils.reward_score.math import compute_score_async
 
 class TrajectoryCollector:
@@ -51,7 +52,9 @@ class TrajectoryCollector:
         """
         self.config = config
         self.tokenizer = tokenizer
-        self.low_level_tokenizer = tokenizer
+        if self.tokenizer.pad_token_id is None:
+            self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
+        self.low_level_tokenizer = self.tokenizer
         self.high_level_tokenizer = high_level_tokenizer or tokenizer
         self.shared_actor = shared_actor
         self.processor = processor
@@ -111,10 +114,7 @@ class TrajectoryCollector:
         #     print(f"Warning: No text observation found!")
 
         
-        chat = np.array([{
-            "content": obs_content,
-            "role": "user",
-        }])
+        chat = np.array([{"content": obs_content, "role": "user"}])
         
         # Apply chat template
         prompt_with_chat_template = tokenizer.apply_chat_template(
@@ -153,11 +153,11 @@ class TrajectoryCollector:
             raw_prompt = prompt_with_chat_template
         
         input_ids, attention_mask = verl_F.tokenize_and_postprocess_data(prompt=prompt_with_chat_template,
-                                                                            tokenizer=tokenizer,
-                                                                            max_length=self.config.data.max_prompt_length,
-                                                                            pad_token_id=tokenizer.pad_token_id,
-                                                                            left_pad=True,
-                                                                            truncation=self.config.data.truncation,)
+                                                                             tokenizer=tokenizer,
+                                                                             max_length=self.config.data.max_prompt_length,
+                                                                             pad_token_id=tokenizer.pad_token_id,
+                                                                             left_pad=True,
+                                                                             truncation=self.config.data.truncation,)
         
         
 
@@ -197,7 +197,7 @@ class TrajectoryCollector:
         })
 
         if self.config.data.get('return_raw_chat', False):
-            row_dict['raw_prompt'] = chat.tolist()
+            row_dict['raw_prompt'] = chat
         
         return row_dict
 
@@ -688,9 +688,6 @@ class TrajectoryCollector:
         completed_belief_trajectories = []  # Store completed belief trajectories for plotting
         use_pure_belief_grpo = False
 
-        print(f"DEBUG: Checking belief GRPO config - pure_belief_grpo: {getattr(self.config.env, 'pure_belief_grpo', 'NOT_FOUND')}")
-        print(f"DEBUG: Checking belief GRPO config - belief_shaped_grpo: {getattr(self.config.env, 'belief_shaped_grpo', 'NOT_FOUND')}")
-
         if hasattr(self.config.env, 'pure_belief_grpo') and self.config.env.pure_belief_grpo.get('enable', False):
             alpha = self.config.env.pure_belief_grpo.get('alpha', 1.0)
             max_candidates = self.config.env.pure_belief_grpo.get('max_candidates', 5)
@@ -1114,6 +1111,7 @@ class TrajectoryCollector:
             envs: EnvironmentManagerBase,
             high_actor_rollout_wg=None,
             openai_agent=None,
+            global_steps=0,
             ) -> DataProto:
         """
         MLMT-RL three-turn loop:
@@ -1159,7 +1157,6 @@ class TrajectoryCollector:
         # Determine environment type
         data_sources = gen_batch.non_tensor_batch.get('data_source', ['math'] * base_batch_size)
         is_code = 'mbpp' in data_sources[0].lower() or 'code' in data_sources[0].lower()
-        
         # Turn 1: Solver initial attempt z
         # Prepare prompts for Turn 1
         questions = []
@@ -1213,11 +1210,13 @@ class TrajectoryCollector:
         batch_input_t1.meta_info = gen_batch.meta_info
         # Set branching multiplicity for Turn 1
         batch_input_t1.meta_info['n'] = n
-        # Set max_tokens for Turn 1 if specified, otherwise defaults to response_length
-        if 'max_tokens_turn1' in self.mlmt_cfg.get('low_level', {}):
-            batch_input_t1.meta_info['max_tokens'] = self.mlmt_cfg['low_level']['max_tokens_turn1']
         
-        print(f"[MLMT Loop] Step 1 ({'Code' if is_code else 'Math'}): Generating initial solutions z (n={n})...")
+        env_name = 'Code' if is_code else 'Math'
+        print(f"[MLMT Loop] Step {global_steps} ({env_name}): Generating initial solutions z (n={n})...")
+        
+        # Timing instrumentation
+        t1_start = time.time()
+        
         t1_start = time.time()
         batch_output_t1 = actor_rollout_wg.generate_sequences(batch_input_t1)
         print(f"⏱️ Turn 1 Generation took {time.time() - t1_start:.2f}s")
@@ -1231,9 +1230,6 @@ class TrajectoryCollector:
                 expanded_gts.extend([gt] * n)
             questions = expanded_questions
             ground_truths = expanded_gts
-            
-            # Repeat turn1_batch to match batch_output_t1 (128 -> 1024)
-            # DataProto.repeat(n) handles both batch and non_tensor_batch
             turn1_batch = turn1_batch.repeat(n)
             
         z_responses = low_tokenizer.batch_decode(batch_output_t1.batch['responses'], skip_special_tokens=True)
@@ -1256,16 +1252,17 @@ class TrajectoryCollector:
         )
         batch_input_t2.meta_info = dummy_gen_batch.meta_info
         # Set max_tokens for feedback generation to limit response length
-        batch_input_t2.meta_info['max_tokens'] = self.mlmt_cfg.get('high_level', {}).get('max_tokens', 512)
+        batch_input_t2.meta_info['max_tokens'] = 512
         # Turn 2 is always REINFORCE (1-to-1)
         batch_input_t2.meta_info['n'] = 1
 
         print(f"[MLMT Loop] Step 2: Generating feedback g...")
+        
         # For multi-turn feedback, we must remove the n=1 override as verl dispatcher only accepts DataProto
         t2_start = time.time()
         batch_output_t2 = high_actor_rollout_wg.generate_sequences(batch_input_t2)
         print(f"⏱️ Turn 2 Generation took {time.time() - t2_start:.2f}s")
-        
+
         # If n > 1, the worker generated n feedbacks for each input solution.
         # We only need 1-to-1 mapping, so we take the first feedback of each group.
         if n > 1:
@@ -1287,15 +1284,16 @@ class TrajectoryCollector:
         )
         batch_input_t3.meta_info = dummy_gen_batch.meta_info
         # Set max_tokens for Turn 3 to limit response length and prevent hallucinations
-        batch_input_t3.meta_info['max_tokens'] = self.mlmt_cfg.get('low_level', {}).get('max_tokens_turn3', 1024)
+        batch_input_t3.meta_info['max_tokens'] = 1024
         # Turn 3 is always 1-to-1 mapping
         batch_input_t3.meta_info['n'] = 1
         
         print(f"[MLMT Loop] Step 3: Generating refined solutions y_hat...")
+        
         t3_start = time.time()
         batch_output_t3 = actor_rollout_wg.generate_sequences(batch_input_t3)
         print(f"⏱️ Turn 3 Generation took {time.time() - t3_start:.2f}s")
-        
+
         # Again, slice to maintain 1-to-1 mapping if n > 1
         if n > 1:
             batch_output_t3 = batch_output_t3[0:len(batch_output_t3):n]
@@ -1450,8 +1448,6 @@ class TrajectoryCollector:
             
         success = {
             'success': (episode_rewards > 0),
-            'turn1_success': np.array(turn1_correctness),
-            'turn3_success': (episode_rewards > 0),
             'llm_success': llm_success_scores,
             'llm_feedback_quality': llm_feedback_scores
         }
@@ -1468,6 +1464,7 @@ class TrajectoryCollector:
             is_train: bool = True,
             openai_agent=None,
             high_actor_rollout_wg=None,
+            global_steps=0,
             ) -> DataProto:
         """
         Select and run the appropriate rollout loop (dynamic or vanilla).
@@ -1490,7 +1487,7 @@ class TrajectoryCollector:
                 actor_rollout_wg=actor_rollout_wg,
                 envs=envs,
             )
-        elif self.mlmt_cfg.get('enable', False):
+        elif self.mlmt_cfg.get('enable', False) and is_train:
             # MLMT-RL Sampling
             total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid, belief_trajectories = \
                 self.mlmt_multi_turn_loop(
@@ -1499,6 +1496,7 @@ class TrajectoryCollector:
                 envs=envs,
                 high_actor_rollout_wg=high_actor_rollout_wg,
                 openai_agent=openai_agent,
+                global_steps=global_steps,
             )
         elif self.config.env.use_critique and is_train:
             # Critique Sampling

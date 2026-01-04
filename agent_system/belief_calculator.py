@@ -51,7 +51,7 @@ class BeliefCalculator:
         self.max_candidates = max_candidates
 
         # Initialize AsyncOpenAI client
-        api_key = os.getenv("OPENAI_API_KEY", "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")
+        api_key = os.getenv("OPENAI_API_KEY")
         self.client = AsyncOpenAI(api_key=api_key)
 
         # Async-safe cache (will be initialized in async context)

@@ -32,11 +32,11 @@ Provide a concise list of "pitfalls to avoid" or "hints" to solve the problem co
 Do NOT solve the problem. Use short, direct instructions (e.g., "Do X, avoid Y").
 
 Example:
-Problem: What is the derivative of x^2 + 5x?
-Student Attempt: 2x.
+Problem: Find the area of a circle with radius 5.
+Student Attempt: Area = 2 * pi * r = 10pi.
 Pitfalls to Avoid:
-- Don't forget to differentiate all terms in the expression.
-- Remember the derivative of a constant times x is just the constant.
+- Don't confuse the circumference formula (2*pi*r) with the area formula (pi*r^2).
+- Ensure you square the radius before multiplying by pi.
 
 Problem: {question}
 Student Attempt: {z_solution}
@@ -47,22 +47,20 @@ TURN3_TEMPLATE = """Problem: {question}
 
 Thinking Process:
 Think deeply about the problem and pay close attention to the following pitfalls. Solve the question step-by-step from scratch.
-If you find that the initial steps were correct and the pitfalls do not apply, simply provide your full, clear solution. You do not need to force a correction if none is needed.
 
 PITFALLS TO AVOID:
 {g_feedback}
 
 Example:
-Problem: What is the derivative of x^2 + 5x?
+Problem: Find the area of a circle with radius 5.
 PITFALLS TO AVOID:
-- Don't forget to differentiate all terms in the expression.
-- Remember the derivative of a constant times x is just the constant.
+- Don't confuse the circumference formula (2*pi*r) with the area formula (pi*r^2).
+- Ensure you square the radius before multiplying by pi.
 Thinking Process:
-1. Identify the terms: x^2 and 5x.
-2. Differentiate x^2 using the power rule: 2x.
-3. Differentiate 5x using the power rule: 5.
-4. Add the results: 2x + 5.
-5. Final Answer: The final answer is $2x+5$. I hope it is correct.
+1. Formula: Area = pi * r^2.
+2. Substitution: Area = pi * (5^2).
+3. Calculation: Area = 25 * pi.
+4. Final Answer: The final answer is $25\\pi$. I hope it is correct.
 
 Now, solve the following problem:
 Problem: {question}

@@ -6,7 +6,7 @@ SAVE_DIR=${2:-/home/ssmurali/mlmt/checkpoints/math/HLT_LLT_RR_shared}
 VALUE_MODEL=${3:-roberta-base}
 mkdir -p "$SAVE_DIR"
 
-export OPENAI_API_KEY=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
+export OPENAI_API_KEY=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
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export WANDB_MODE=offline
 
@@ -27,7 +27,7 @@ python -m verl.trainer.main_ppo \
     trainer.project_name=mlmt_math \
     trainer.experiment_name=${RUN_NAME} \
     trainer.default_local_dir=${SAVE_DIR}/${RUN_NAME} \
-    trainer.total_epochs=5 \
+    trainer.total_epochs=3 \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=100 \

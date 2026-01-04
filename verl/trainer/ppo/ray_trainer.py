@@ -521,13 +521,13 @@ class RayPPOTrainer:
         self.mlmt_enabled = bool(self.mlmt_cfg.get("enable", False))
         self.value_worker = None
         self.value_cfg = None
-        # value_cfg_node = OmegaConf.select(self.config, "mlmt_rl.value_fn")
-        # if self.mlmt_enabled and value_cfg_node is not None:
-        #     from agent_system.value_function.roberta_worker import RobertaValueWorker
-        #     value_cfg = OmegaConf.to_container(value_cfg_node, resolve=True)
-        #     self.value_cfg = value_cfg
-        #     self.value_worker = RobertaValueWorker(value_cfg)
-        #     self.value_worker.init_model()
+        value_cfg_node = OmegaConf.select(self.config, "mlmt_rl.value_fn")
+        if self.mlmt_enabled and value_cfg_node is not None:
+            from agent_system.value_function.roberta_worker import RobertaValueWorker
+            value_cfg = OmegaConf.to_container(value_cfg_node, resolve=True)
+            self.value_cfg = value_cfg
+            self.value_worker = RobertaValueWorker(value_cfg)
+            self.value_worker.init_model()
 
         self.hybrid_engine = config.actor_rollout_ref.hybrid_engine
         assert self.hybrid_engine, "Currently, only support hybrid engine"
@@ -979,9 +979,7 @@ class RayPPOTrainer:
                 role="actor_rollout",
             )
             self.resource_pool_to_cls[resource_pool]["actor_rollout"] = actor_rollout_cls
-            print(f"DEBUG RayPPOTrainer: mlmt_enabled={self.mlmt_enabled}, shared_actor={self.shared_actor}")
             if self.mlmt_enabled and not self.shared_actor:
-                print(f"DEBUG: Trying to get HighActorRollout pool")
                 high_actor_pool = self.resource_pool_manager.get_resource_pool(Role.HighActorRollout)
                 high_actor_cls = RayClassWithInitArgs(
                     cls=self.role_worker_mapping[Role.HighActorRollout],
@@ -1058,64 +1056,104 @@ class RayPPOTrainer:
             )
 
     def _save_checkpoint(self):
-        # path: given_path + `/global_step_{global_steps}` + `/low_actor` or `/high_actor`
+        # path: given_path + `/global_step_{global_steps}` + `/actor`
         local_global_step_folder = os.path.join(self.config.trainer.default_local_dir, f"global_step_{self.global_steps}")
 
         print(f"local_global_step_folder: {local_global_step_folder}")
         low_actor_local_path = os.path.join(local_global_step_folder, "low_actor")
         high_actor_local_path = os.path.join(local_global_step_folder, "high_actor")
 
+        actor_remote_root = None if self.config.trainer.default_hdfs_dir is None else os.path.join(self.config.trainer.default_hdfs_dir, f"global_step_{self.global_steps}")
+        low_actor_remote_path = None if actor_remote_root is None else os.path.join(actor_remote_root, "low_actor")
+        high_actor_remote_path = None if actor_remote_root is None else os.path.join(actor_remote_root, "high_actor")
+
         remove_previous_ckpt_in_save = self.config.trainer.get("remove_previous_ckpt_in_save", False)
+        if remove_previous_ckpt_in_save:
+            print("Warning: remove_previous_ckpt_in_save is deprecated," + " set max_actor_ckpt_to_keep=1 and max_critic_ckpt_to_keep=1 instead")
         max_actor_ckpt_to_keep = self.config.trainer.get("max_actor_ckpt_to_keep", None) if not remove_previous_ckpt_in_save else 1
+        
+        lora_only = self.config.trainer.get("lora_only_save", False)
 
-        # Save Low-Level Actor (Primary)
-        self.actor_rollout_wg.save_checkpoint(low_actor_local_path, None, self.global_steps, max_ckpt_to_keep=max_actor_ckpt_to_keep)
+        self.actor_rollout_wg.save_checkpoint(
+            low_actor_local_path,
+            low_actor_remote_path,
+            self.global_steps,
+            max_ckpt_to_keep=max_actor_ckpt_to_keep,
+            lora_only=lora_only,
+        )
 
-        # Save High-Level Actor (Secondary) if separate
         if self.mlmt_enabled and not self.shared_actor:
-            self.high_actor_rollout_wg.save_checkpoint(high_actor_local_path, None, self.global_steps, max_ckpt_to_keep=max_actor_ckpt_to_keep)
+            # Dual-actor setup: persist the dedicated high-level policy.
+            self.high_actor_rollout_wg.save_checkpoint(
+                high_actor_local_path,
+                high_actor_remote_path,
+                self.global_steps,
+                max_ckpt_to_keep=max_actor_ckpt_to_keep,
+                lora_only=lora_only,
+            )
 
-        # latest checkpointed iteration tracker
+        # latest checkpointed iteration tracker (for atomic usage)
         local_latest_checkpointed_iteration = os.path.join(self.config.trainer.default_local_dir, "latest_checkpointed_iteration.txt")
         with open(local_latest_checkpointed_iteration, "w") as f:
             f.write(str(self.global_steps))
 
     def _load_checkpoint(self):
-        if self.config.trainer.get("resume_mode", "disable") == "disable":
+        if self.config.trainer.resume_mode == "disable":
             return 0
 
-        checkpoint_folder = self.config.trainer.default_local_dir
-        if not os.path.isabs(checkpoint_folder):
-            working_dir = os.getcwd()
-            checkpoint_folder = os.path.join(working_dir, checkpoint_folder)
-        
-        global_step_folder = None
-        if self.config.trainer.resume_mode == "resume_path":
-            global_step_folder = self.config.trainer.resume_from_path
+        # load from hdfs
+        if self.config.trainer.default_hdfs_dir is not None:
+            raise NotImplementedError("load from hdfs is not implemented yet")
         else:
-            # Fallback to scratch if auto is requested but no logic to find latest is present here
-            print("Resume mode is auto but no specific path provided. Starting from scratch.")
-            return 0
+            checkpoint_folder = self.config.trainer.default_local_dir  # TODO: check path
+            if not os.path.isabs(checkpoint_folder):
+                working_dir = os.getcwd()
+                checkpoint_folder = os.path.join(working_dir, checkpoint_folder)
+            global_step_folder = find_latest_ckpt_path(checkpoint_folder)  # None if no latest
 
-        if global_step_folder is None or not os.path.exists(global_step_folder):
-            print(f"No checkpoint found at {global_step_folder}, training from scratch")
-            return 0
-
-        print(f"Resuming from {global_step_folder}")
+        # find global_step_folder
+        if self.config.trainer.resume_mode == "auto":
+            if global_step_folder is None:
+                print("Training from scratch")
+                return 0
+        else:
+            if self.config.trainer.resume_mode == "resume_path":
+                assert isinstance(self.config.trainer.resume_from_path, str), "resume ckpt must be str type"
+                assert "global_step_" in self.config.trainer.resume_from_path, "resume ckpt must specify the global_steps"
+                global_step_folder = self.config.trainer.resume_from_path
+                if not os.path.isabs(global_step_folder):
+                    working_dir = os.getcwd()
+                    global_step_folder = os.path.join(working_dir, global_step_folder)
+        print(f"Load from checkpoint folder: {global_step_folder}")
+        # set global step
         self.global_steps = int(global_step_folder.split("global_step_")[-1])
 
-        # Load Low-Level Actor
+        print(f"Setting global step to {self.global_steps}")
+        print(f"Resuming from {global_step_folder}")
+
         low_actor_path = os.path.join(global_step_folder, "low_actor")
-        if os.path.exists(low_actor_path):
-            self.actor_rollout_wg.load_checkpoint(low_actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
-        
-        # Load High-Level Actor
+        legacy_actor_path = os.path.join(global_step_folder, "actor")
+        if not os.path.exists(low_actor_path):
+            if os.path.exists(legacy_actor_path):
+                print("Low-level checkpoint not found, falling back to legacy 'actor' directory.")
+                low_actor_path = legacy_actor_path
+            else:
+                raise FileNotFoundError(f"Missing low-level actor checkpoint under {global_step_folder}")
+        self.actor_rollout_wg.load_checkpoint(low_actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
+
         if self.mlmt_enabled and not self.shared_actor:
             high_actor_path = os.path.join(global_step_folder, "high_actor")
-            if os.path.exists(high_actor_path):
-                self.high_actor_rollout_wg.load_checkpoint(high_actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
-        
-        return self.global_steps
+            if not os.path.exists(high_actor_path):
+                if os.path.exists(legacy_actor_path):
+                    print("High-level checkpoint not found, falling back to legacy 'actor' directory.")
+                    high_actor_path = legacy_actor_path
+                else:
+                    print("High-level checkpoint missing; initializing from low-level weights.")
+                    high_actor_path = low_actor_path
+            self.high_actor_rollout_wg.load_checkpoint(
+                high_actor_path,
+                del_local_after_load=self.config.trainer.del_local_ckpt_after_load,
+            )
 
     def _balance_batch(self, batch: DataProto, metrics, logging_prefix="global_seqlen"):
         """Reorder the data on single controller such that each dp rank gets similar total tokens"""
@@ -1289,18 +1327,25 @@ class RayPPOTrainer:
 
             print(f"MLMT-RL Bi-Level Training (Final Reward Only)")
 
-            if reward_extra_infos_dict and "reward" in reward_extra_infos_dict:
-                rewards_list = reward_extra_infos_dict["reward"]
-                if rewards_list:
-                    rewards_array = np.array(rewards_list)
-                    prefix_str = prefix or "actor"
-                    print(f"\n{prefix_str} Rewards:")
-                    print(f"   Individual: {[f'{r:.2f}' for r in rewards_list[:5]]}...")
-                    print(f"   Mean: {rewards_array.mean():.2f}")
-                    print(f"   Range: [{rewards_array.min():.2f}, {rewards_array.max():.2f}]")
-                    print(f"   Std: {rewards_array.std():.3f}")
-                    # --- MODIFICATION: BOLD PPRWINT REWARD ---
-                    print(f"\033[1m🚀 [{prefix_str.upper()}] STEP MEAN REWARD: {rewards_array.mean():.4f}\033[0m")
+        if reward_extra_infos_dict and "reward" in reward_extra_infos_dict:
+            rewards_list = reward_extra_infos_dict["reward"]
+            if rewards_list:
+                rewards_array = np.array(rewards_list) 
+                
+                # Check for NaNs/Infs in rewards
+                if not np.all(np.isfinite(rewards_array)):
+                    print(f"\n\033[1;31m🚨 CRITICAL: Non-finite rewards detected in {prefix or 'actor'}!\033[0m")
+                    print(f"   NaNs: {np.isnan(rewards_array).sum()}, Infs: {np.isinf(rewards_array).sum()}")
+                    print(f"   Values: {rewards_array}")
+                
+                prefix_str = prefix or "actor"
+                print(f"\n{prefix_str} Rewards:")
+                print(f"   Individual: {[f'{r:.2f}' for r in rewards_list[:5]]}...")
+                print(f"   Mean: {rewards_array.mean():.2f}")
+                print(f"   Range: [{rewards_array.min():.2f}, {rewards_array.max():.2f}]")
+                print(f"   Std: {rewards_array.std():.3f}")
+                # --- MODIFICATION: BOLD PPRWINT REWARD ---
+                print(f"\033[1m🚀 [{prefix_str.upper()}] STEP MEAN REWARD: {rewards_array.mean():.4f}\033[0m")
 
         belief_scores = None
         mode = None
@@ -1524,12 +1569,10 @@ class RayPPOTrainer:
                     gen_batch = self.hierarchical_manager.prepare_batch(gen_batch, split="train")
 
                 is_last_step = self.global_steps >= self.total_training_steps
-
                 with _timer("step", timing_raw):
                     # generate a batch
                     with _timer("gen", timing_raw):
                         ################ agent-environment loop ###############
-                        print(f"DEBUG [Pre-Rollout]: Global Step={self.global_steps}, Batch Size={self.config.data.train_batch_size}")
                         if self.mlmt_enabled and not self.shared_actor:
                             print("[MLMT] Training: using dedicated high-level actor worker.")
                         gen_batch_output, belief_trajectories = self.traj_collector.multi_turn_loop(
@@ -1540,6 +1583,7 @@ class RayPPOTrainer:
                             is_train=True,
                             openai_agent=self.openai_agent,
                             high_actor_rollout_wg=self.high_actor_rollout_wg,
+                            global_steps=self.global_steps,
                         )
                     if self.config.algorithm.adv_estimator == AdvantageEstimator.REMAX:
                         with _timer("gen_max", timing_raw):

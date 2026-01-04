@@ -17,7 +17,7 @@ from openai import OpenAI
 
 # CMU Gateway configuration
 CMU_GATEWAY_BASE_URL = "https://ai-gateway.andrew.cmu.edu"
-GATEWAY_API_KEY = "sk-sejf_6tjIhvazsxWCH-mZg"
+GATEWAY_API_KEY = "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"
 MODEL_NAME = "gpt-5-mini"
 
 def get_cmu_client():

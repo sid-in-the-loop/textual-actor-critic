@@ -59,11 +59,15 @@ logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 # NOTE(sgm): add for verl. We can optimize it by making the dataloader yield List[int] without padding.
 def _pre_process_inputs(pad_token_id, prompt_token_ids: torch.Tensor) -> List[int]:
-    # remove the left padding in the prompt token_id
-    # pad_token_id = self.llm_engine.tokenizer.pad_token_id if self.llm_engine.tokenizer.pad_token_id
-    # is not None else self.llm_engine.tokenizer.eos_token_id
-    non_pad_index = torch.nonzero(prompt_token_ids != pad_token_id, as_tuple=False)[0][0]
-    token_ids = prompt_token_ids[non_pad_index:].tolist()
+    if pad_token_id is None:
+        return prompt_token_ids.tolist()
+    # remove both left and right padding in the prompt token_id
+    non_pad_indices = torch.nonzero(prompt_token_ids != pad_token_id, as_tuple=False)
+    if non_pad_indices.numel() == 0:
+        return []
+    first_idx = non_pad_indices[0][0]
+    last_idx = non_pad_indices[-1][0]
+    token_ids = prompt_token_ids[first_idx : last_idx + 1].tolist()
     return token_ids
 
 
@@ -87,6 +91,7 @@ class vLLMRollout(BaseRollout):
         """
         super().__init__()
         self.config = config
+        self.model_path = model_path
         assert not (not config.enforce_eager and config.free_cache_engine), "disable CUDA graph (enforce_eager = False) if free cache engine"
 
         tensor_parallel_size = self.config.get("tensor_model_parallel_size", 1)
@@ -224,10 +229,14 @@ class vLLMRollout(BaseRollout):
         ):
             self.inference_engine.init_cache_engine()
 
-        idx = prompts.batch["input_ids"]  # (bs, prompt_length)
+        idx = prompts.batch.get("input_ids", None) if prompts.batch is not None else None
+        if idx is None:
+            # Fallback for diagnostic DataProtos that might have missing batch
+            idx = torch.tensor(prompts.non_tensor_batch.get("input_ids", []), device=torch.cuda.current_device())
+
         # left-padded attention_mask
-        attention_mask = prompts.batch["attention_mask"]
-        position_ids = prompts.batch["position_ids"]
+        attention_mask = prompts.batch.get("attention_mask", None) if prompts.batch is not None else None
+        position_ids = prompts.batch.get("position_ids", None) if prompts.batch is not None else None
 
         # used to construct attention_mask
         eos_token_id = prompts.meta_info["eos_token_id"]
@@ -287,7 +296,9 @@ class vLLMRollout(BaseRollout):
             lora_int_ids = list(self.inference_engine.llm_engine.list_loras())
             if len(lora_int_ids) > 0:
                 lora_int_id=lora_int_ids[0]
-                lora_requests = [LoRARequest(lora_name=f"{lora_int_id}",lora_int_id=lora_int_id,lora_path="/simon-stub-path")] * batch_size
+                # Use the model path instead of the stub path to avoid tokenizer lookup delays
+                model_path = self.model_path
+                lora_requests = [LoRARequest(lora_name=f"{lora_int_id}",lora_int_id=lora_int_id,lora_path=model_path)] * batch_size
 
         # users can customize different sampling_params at different run
         with self.update_sampling_params(**kwargs):

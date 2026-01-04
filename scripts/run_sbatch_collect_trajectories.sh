@@ -33,10 +33,10 @@ echo "=== Starting trajectory collection at ${time} ==="
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export HYDRA_FULL_ERROR=1
 export WANDB_API_KEY=1e255990efc627595f0c805e0546cc7f0ff08b17
-export HF_TOKEN=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
-export HUGGING_FACE_HUB_TOKEN=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
-export OPENAI_API_KEY=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
-export CMU_GATEWAY_API_KEY=sk-dUplmEab2H7EFRaOISG1Ew
+export HF_TOKEN=${HF_TOKEN}
+export HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}
+export OPENAI_API_KEY=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
+export CMU_GATEWAY_API_KEY=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
 
 # Create logs directory if it doesn't exist
 mkdir -p slurm_logs
