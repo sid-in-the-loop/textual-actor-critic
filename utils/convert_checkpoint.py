@@ -5,13 +5,13 @@ from glob import glob
 from collections import defaultdict
 from tqdm import tqdm
 
-fsdp_checkpoint_path = "/data/group_data/cx_group/verl_agent_shared/checkpoint/webwalker_1.7b_sft_grpo_no_action_penalty/global_step_60/actor"
-huggingface_model_path = "/data/group_data/cx_group/verl_agent_shared/Qwen3/Qwen3-1.7B"
-output_path = fsdp_checkpoint_path.replace("actor", "huggingface")
+fsdp_checkpoint_path = "/data/group_data/cx_group/ssmurali/mlmt_checkpoints/math/HLT_LLT_RR_1_15/HLT_LLT_RR_1_15_20260103_195834/global_step_100/high_actor"
+huggingface_model_path = "meta-llama/Llama-3.2-1B-Instruct"
+output_path = fsdp_checkpoint_path.replace("high_actor", "high_actor_hf")
 def main():
     state_dict = defaultdict(list)
 
-    world_size = 8  # modify to match your checkpoint format
+    world_size = 2  # modify to match your checkpoint format
     for rank in tqdm(range(world_size), desc="Loading checkpoints"):
         filepath = f"{fsdp_checkpoint_path}/model_world_size_{world_size}_rank_{rank}.pt"
         print('loading', filepath)

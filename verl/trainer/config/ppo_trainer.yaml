@@ -358,6 +358,33 @@ mlmt_rl:
     temperature: 0.0
     max_length: 512
     tokenizer_path: null
+  score_mode:
+    enable: False
+    batch_size: 128
+    # Stage schedule is evaluated sequentially; when `steps` is None the stage lasts until training ends.
+    stages:
+      - name: stage1
+        steps: 250
+      - name: stage2
+        steps: null
+    alpha: 10.0                # progress bonus coefficient
+    beta_turn1_stage1: 0.1     # strong KL on turn-1 during stage 1
+    beta_turn1_stage2: 0.01    # optional KL on turn-1 during stage 2
+    beta_turn2: 0.01           # KL on turn-2 (all stages)
+    reward_turn1_stage2: True  # whether to give base reward to turn-1 during stage 2
+    random_seed_offset: 0
+    prompts:
+      turn1: |
+        Solve the following math problem step by step.
+
+        Problem:
+        {question}
+
+        Solution:
+      turn2_instruction: |
+        There might be an error in the solution above due to a misunderstanding of the problem.
+        Please carefully check the reasoning, correct any mistakes if they exist,
+        and rewrite the full solution.
 
 hierarchical:
   enabled: False

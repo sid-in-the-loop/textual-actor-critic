@@ -32,7 +32,7 @@ python -m verl.trainer.main_ppo \
     trainer.nnodes=1 \
     trainer.save_freq=100 \
     actor_rollout_ref.model.path=$SHARED_MODEL \
-    actor_rollout_ref.actor.ppo_mini_batch_size=256 \
+    actor_rollout_ref.actor.ppo_mini_batch_size=128 \
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=4 \
     actor_rollout_ref.actor.optim.lr=5e-7 \
     actor_rollout_ref.actor.optim.total_training_steps=315 \

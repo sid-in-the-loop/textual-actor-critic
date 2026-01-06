@@ -27,6 +27,7 @@ from transformers import PreTrainedTokenizer
 import uuid
 from verl.models.transformers.qwen2_vl import get_rope_index
 from agent_system.multi_turn_rollout.utils import process_image, to_list_of_dict, torch_to_numpy, filter_group_data
+from agent_system.multi_turn_rollout.mlmt_utils import build_score_turn1_prompt, build_score_turn2_prompt
 from agent_system.multi_turn_rollout.llm_success_evaluator import LLMSuccessEvaluator
 from agent_system.environments import EnvironmentManagerBase
 from agent_system.critique.critique import *
@@ -59,6 +60,8 @@ class TrajectoryCollector:
         self.shared_actor = shared_actor
         self.processor = processor
         self.mlmt_cfg = self.config.get("mlmt_rl", {})
+        self.score_mode_cfg = self.mlmt_cfg.get("score_mode", {})
+        self.score_mode_enabled = bool(self.score_mode_cfg.get("enable", False))
         self.use_llm_success_eval = bool(self.mlmt_cfg.get("use_llm_success_eval", False))
         self.llm_success_evaluator = None
         if self.use_llm_success_eval:
@@ -1274,7 +1277,7 @@ class TrajectoryCollector:
         if is_code:
             turn3_prompts = [prepare_mlmt_code_refinement_prompt(q, z, g) for q, z, g in zip(questions, z_responses, g_feedbacks)]
         else:
-            turn3_prompts = [prepare_mlmt_refinement_prompt(q, g) for q, g in zip(questions, g_feedbacks)]
+            turn3_prompts = [prepare_mlmt_refinement_prompt(q, z, g) for q, z, g in zip(questions, z_responses, g_feedbacks)]
         turn3_obs = {'text': turn3_prompts, 'image': None, 'anchor': None}
         turn3_batch = self.preprocess_batch(gen_batch=dummy_gen_batch, obs=turn3_obs, tokenizer=low_tokenizer)
         
@@ -1360,7 +1363,7 @@ class TrajectoryCollector:
             import os
             trajectory_log_dir = "logs/trajectories"
             os.makedirs(trajectory_log_dir, exist_ok=True)
-            log_path = os.path.join(trajectory_log_dir, "current_rollout.jsonl")
+            log_path = os.path.join(trajectory_log_dir, "current_rollout_2.jsonl")
             with open(log_path, "a") as f:
                 for i in range(total_samples):
                     data = {
@@ -1454,6 +1457,161 @@ class TrajectoryCollector:
         
         print(f"⏱️ Total MLMT Rollout Loop took {time.time() - loop_start:.2f}s")
         return total_batch_list, episode_rewards, episode_lengths, success, traj_uid_arr, []
+    
+    def score_two_turn_loop(
+            self,
+            gen_batch: DataProto,
+            actor_rollout_wg,
+            envs: EnvironmentManagerBase,
+            global_steps: int = 0,
+    ):
+        """SCoRe-style two-turn rollout (solve + self-correct)."""
+        loop_start = time.time()
+        prompts_cfg = self.score_mode_cfg.get("prompts", {})
+        turn1_template = prompts_cfg.get("turn1")
+        turn2_instruction = prompts_cfg.get("turn2_instruction")
+        print(f"[SCoRe] 🚀 Initiating two-turn rollout (global_step={global_steps})")
+
+        obs, infos = envs.reset()
+        env_batch_size = len(obs['text']) if obs['text'] is not None else len(obs['image'])
+        if len(gen_batch.batch) != env_batch_size:
+            gen_batch = gen_batch.truncate(truncate_length=env_batch_size)
+        assert len(gen_batch.batch) == env_batch_size, "gen_batch must align with env reset batch size"
+
+        questions = []
+        ground_truths = []
+        for i, info in enumerate(infos):
+            q = info.get('question') if isinstance(info, dict) else None
+            if q is None:
+                prompts = gen_batch.non_tensor_batch.get('prompt')
+                if prompts and i < len(prompts):
+                    q = prompts[i]
+            if q is None:
+                raw_prompts = gen_batch.non_tensor_batch.get('raw_prompt')
+                if raw_prompts and i < len(raw_prompts):
+                    q = raw_prompts[i]
+            questions.append(q or "")
+
+            gt = info.get('ground_truth') if isinstance(info, dict) else None
+            if gt is None:
+                gts = gen_batch.non_tensor_batch.get('answer') or gen_batch.non_tensor_batch.get('ground_truth')
+                if gts and i < len(gts):
+                    gt = gts[i]
+            ground_truths.append(gt or "")
+
+        # Turn 1 generation
+        turn1_prompts = [build_score_turn1_prompt(q, template=turn1_template) for q in questions]
+        turn1_obs = {'text': turn1_prompts, 'image': None, 'anchor': None}
+        turn1_batch = self.preprocess_batch(gen_batch=gen_batch, obs=turn1_obs, tokenizer=self.low_level_tokenizer)
+        batch_input_t1 = turn1_batch.pop(
+            batch_keys=["input_ids", "attention_mask", "position_ids"],
+            non_tensor_batch_keys=["raw_prompt_ids"],
+        )
+        batch_input_t1.meta_info = gen_batch.meta_info
+        t1_start = time.time()
+        batch_output_t1 = actor_rollout_wg.generate_sequences(batch_input_t1)
+        print(f"[SCoRe] Turn-1 generation time: {time.time() - t1_start:.2f}s")
+        turn1_responses = self.low_level_tokenizer.batch_decode(batch_output_t1.batch['responses'], skip_special_tokens=True)
+
+        # Turn 2 generation (self-correction)
+        turn2_prompts = [
+            build_score_turn2_prompt(q, z, instruction=turn2_instruction)
+            for q, z in zip(questions, turn1_responses, strict=True)
+        ]
+        turn2_obs = {'text': turn2_prompts, 'image': None, 'anchor': None}
+        turn2_batch = self.preprocess_batch(gen_batch=gen_batch, obs=turn2_obs, tokenizer=self.low_level_tokenizer)
+        batch_input_t2 = turn2_batch.pop(
+            batch_keys=["input_ids", "attention_mask", "position_ids"],
+            non_tensor_batch_keys=["raw_prompt_ids"],
+        )
+        batch_input_t2.meta_info = gen_batch.meta_info
+        t2_start = time.time()
+        batch_output_t2 = actor_rollout_wg.generate_sequences(batch_input_t2)
+        print(f"[SCoRe] Turn-2 generation time: {time.time() - t2_start:.2f}s")
+        turn2_responses = self.low_level_tokenizer.batch_decode(batch_output_t2.batch['responses'], skip_special_tokens=True)
+
+        # Environment evaluation (compatibility)
+        _, env_rewards, _, _ = envs.step(turn2_responses)
+        if isinstance(env_rewards, torch.Tensor):
+            env_rewards = env_rewards.cpu().numpy()
+        else:
+            env_rewards = np.array(env_rewards, dtype=np.float32)
+
+        # Turn 1 correctness (rule-based)
+        async def get_turn1_correctness():
+            tasks = [compute_score_async(z, gt) for z, gt in zip(turn1_responses, ground_truths)]
+            return await asyncio.gather(*tasks)
+
+        try:
+            turn1_correct = np.array(asyncio.run(get_turn1_correctness()), dtype=np.float32)
+        except Exception as exc:
+            print(f"[SCoRe] ⚠️ Turn-1 judge failed ({exc}), defaulting to zeros.")
+            turn1_correct = np.zeros(len(turn1_responses), dtype=np.float32)
+
+        # Turn 2 semantic reward (LLM judge)
+        if self.use_llm_success_eval and self.llm_success_evaluator is not None:
+            try:
+                eval_results = self.llm_success_evaluator.evaluate_batch(questions, turn2_responses)
+                if eval_results:
+                    llm_success_scores = np.array([res.get('success', 0.0) for res in eval_results], dtype=np.float32)
+                else:
+                    llm_success_scores = env_rewards.astype(np.float32)
+            except Exception as exc:
+                print(f"[SCoRe] ⚠️ Semantic judge error ({exc}), using env rewards.")
+                llm_success_scores = env_rewards.astype(np.float32)
+        else:
+            llm_success_scores = env_rewards.astype(np.float32)
+
+        print(f"[SCoRe] Turn-1 judge accuracy: {turn1_correct.mean():.3f}")
+        print(f"[SCoRe] Turn-2 semantic accuracy: {llm_success_scores.mean():.3f}")
+
+        total_samples = len(questions)
+        traj_uids = np.array([str(uuid.uuid4()) for _ in range(total_samples)], dtype=object)
+        total_batch_list: List[List[dict]] = [[] for _ in range(total_samples)]
+        episode_rewards = llm_success_scores.copy()
+        episode_lengths = np.array([2] * total_samples, dtype=np.int32)
+
+        # Turn 1 batch records
+        t1_batch_full = turn1_batch.union(batch_output_t1)
+        if 'prompts' not in t1_batch_full.batch:
+            t1_batch_full.batch['prompts'] = turn1_batch.batch['input_ids']
+        t1_list = to_list_of_dict(t1_batch_full)
+        for i in range(total_samples):
+            t1_list[i]['turn'] = 1
+            t1_list[i]['active_masks'] = True
+            t1_list[i]['uid'] = traj_uids[i]
+            t1_list[i]['traj_uid'] = traj_uids[i]
+            t1_list[i]['episode_rewards'] = float(episode_rewards[i])
+            t1_list[i]['episode_lengths'] = 2.0
+            t1_list[i]['score_turn_reward'] = float(turn1_correct[i])
+            t1_list[i]['score_turn1_reward'] = float(turn1_correct[i])
+            t1_list[i]['score_env_reward'] = float(env_rewards[i])
+            total_batch_list[i].append(t1_list[i])
+
+        # Turn 2 batch records
+        t2_batch_full = turn2_batch.union(batch_output_t2)
+        if 'prompts' not in t2_batch_full.batch:
+            t2_batch_full.batch['prompts'] = turn2_batch.batch['input_ids']
+        t2_list = to_list_of_dict(t2_batch_full)
+        for i in range(total_samples):
+            t2_list[i]['turn'] = 2
+            t2_list[i]['active_masks'] = True
+            t2_list[i]['uid'] = traj_uids[i]
+            t2_list[i]['traj_uid'] = traj_uids[i]
+            t2_list[i]['episode_rewards'] = float(episode_rewards[i])
+            t2_list[i]['episode_lengths'] = 2.0
+            t2_list[i]['score_turn_reward'] = float(llm_success_scores[i])
+            t2_list[i]['score_turn1_reward'] = float(turn1_correct[i])
+            t2_list[i]['score_env_reward'] = float(env_rewards[i])
+            total_batch_list[i].append(t2_list[i])
+
+        success = {
+            'score_turn1_accuracy': turn1_correct,
+            'score_turn2_accuracy': llm_success_scores,
+        }
+
+        print(f"[SCoRe] ⏱️ Total two-turn loop time: {time.time() - loop_start:.2f}s")
+        return total_batch_list, episode_rewards, episode_lengths, success, traj_uids
 
     def multi_turn_loop(
             self,
@@ -1487,6 +1645,15 @@ class TrajectoryCollector:
                 actor_rollout_wg=actor_rollout_wg,
                 envs=envs,
             )
+        elif self.score_mode_enabled and is_train:
+            total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid = \
+                self.score_two_turn_loop(
+                gen_batch=gen_batch,
+                actor_rollout_wg=actor_rollout_wg,
+                envs=envs,
+                global_steps=global_steps,
+            )
+            belief_trajectories = []
         elif self.mlmt_cfg.get('enable', False) and is_train:
             # MLMT-RL Sampling
             total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid, belief_trajectories = \

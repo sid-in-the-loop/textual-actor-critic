@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer
 
 # Use local checkpoint tokenizer to avoid HuggingFace network issues
-model_path = "/data/group_data/cx_group/behavior_priming/checkpoint/qwen3_1.7b/web_qwen_sft_behavior/checkpoint-924"
+model_path = "meta-llama/Llama-3.2-1B-Instruct"
 
 # Load tokenizer from local checkpoint
 tokenizer = AutoTokenizer.from_pretrained(model_path)

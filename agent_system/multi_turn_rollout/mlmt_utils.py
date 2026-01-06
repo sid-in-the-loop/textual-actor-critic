@@ -13,16 +13,6 @@ Thinking Process:
 3. Execute the steps clearly.
 4. State the final answer in the required format.
 
-Example:
-Problem: What is 2+2?
-Thinking Process:
-1. Core component: Addition of two single-digit integers.
-2. Plan: Add 2 and 2.
-3. Execution: 2 + 2 = 4.
-4. Final Answer: The final answer is $4$. I hope it is correct.
-
-Now, solve the following problem:
-Problem: {question}
 Thinking Process:"""
 
 # --- Turn 2: Pitfalls/Feedback Template ---
@@ -31,13 +21,6 @@ Identify the critical pitfalls, conceptual errors, or calculation mistakes.
 Provide a concise list of "pitfalls to avoid" or "hints" to solve the problem correctly.
 Do NOT solve the problem. Use short, direct instructions (e.g., "Do X, avoid Y").
 
-Example:
-Problem: Find the area of a circle with radius 5.
-Student Attempt: Area = 2 * pi * r = 10pi.
-Pitfalls to Avoid:
-- Don't confuse the circumference formula (2*pi*r) with the area formula (pi*r^2).
-- Ensure you square the radius before multiplying by pi.
-
 Problem: {question}
 Student Attempt: {z_solution}
 Pitfalls to Avoid:"""
@@ -45,27 +28,18 @@ Pitfalls to Avoid:"""
 # --- Turn 3: Refined Solution Template ---
 TURN3_TEMPLATE = """Problem: {question}
 
-Thinking Process:
-Think deeply about the problem and pay close attention to the following pitfalls. Solve the question step-by-step from scratch.
+Your Initial Attempt:
+{z_solution}
 
-PITFALLS TO AVOID:
+Potential Suggestions for Improvement:
 {g_feedback}
 
-Example:
-Problem: Find the area of a circle with radius 5.
-PITFALLS TO AVOID:
-- Don't confuse the circumference formula (2*pi*r) with the area formula (pi*r^2).
-- Ensure you square the radius before multiplying by pi.
 Thinking Process:
-1. Formula: Area = pi * r^2.
-2. Substitution: Area = pi * (5^2).
-3. Calculation: Area = 25 * pi.
-4. Final Answer: The final answer is $25\\pi$. I hope it is correct.
+1. Identify the core components of the problem.
+2. Formulate a step-by-step plan to solve it.
+3. Execute the steps clearly.
+4. State the final answer in the required format.
 
-Now, solve the following problem:
-Problem: {question}
-PITFALLS TO AVOID:
-{g_feedback}
 Thinking Process:"""
 
 def prepare_mlmt_turn1_prompt(question):
@@ -74,8 +48,8 @@ def prepare_mlmt_turn1_prompt(question):
 def prepare_mlmt_feedback_prompt(question, z_solution):
     return TURN2_TEMPLATE.format(question=question, z_solution=z_solution)
 
-def prepare_mlmt_refinement_prompt(question, g_feedback):
-    return TURN3_TEMPLATE.format(question=question, g_feedback=g_feedback)
+def prepare_mlmt_refinement_prompt(question, z_solution, g_feedback):
+    return TURN3_TEMPLATE.format(question=question, z_solution=z_solution, g_feedback=g_feedback)
 
 # Code Templates
 CODE_TURN1_TEMPLATE = """You are an expert programmer. Below is a programming problem. Write a solution in python.
@@ -128,3 +102,32 @@ def apply_symmetric_reaping(rewards):
     if isinstance(rewards, torch.Tensor):
         return torch.where(rewards > 0, torch.ones_like(rewards), -torch.ones_like(rewards))
     return np.where(rewards > 0, 1.0, 0.0)
+
+# --- SCoRe Prompt Templates ---
+SCORE_TURN1_TEMPLATE = """Solve the following math problem step by step.
+
+Problem:
+{question}
+
+Solution:
+"""
+
+SCORE_TURN2_INSTRUCTION = """There might be an error in the solution above due to a misunderstanding of the problem.
+Please carefully check the reasoning, correct any mistakes if they exist,
+and rewrite the full solution."""
+
+
+def build_score_turn1_prompt(question: str, template: str | None = None) -> str:
+    """Construct the stage-agnostic first-turn prompt for SCoRe."""
+    tmpl = template or SCORE_TURN1_TEMPLATE
+    return tmpl.format(question=question.strip())
+
+
+def build_score_turn2_prompt(question: str, turn1_solution: str, instruction: str | None = None) -> str:
+    """Construct the self-correction turn prompt given the question and turn-1 text."""
+    extra_instruction = instruction or SCORE_TURN2_INSTRUCTION
+    return (
+        f"Problem:\n{question.strip()}\n\n"
+        f"Solution:\n{turn1_solution.strip()}\n\n"
+        f"{extra_instruction.strip()}\n"
+    )

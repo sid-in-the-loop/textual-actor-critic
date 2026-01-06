@@ -86,6 +86,37 @@ class Role(Enum):
     HighActorRollout = 7
 
 
+@dataclass
+class ScoreStageTracker:
+    """Utility to keep track of SCoRe stage schedules."""
+
+    stages: list
+    current_index: int = 0
+    steps_in_stage: int = 0
+    total_steps: int = 0
+
+    def current_stage(self):
+        if not self.stages:
+            return {"name": "stage1", "steps": None}
+        return self.stages[self.current_index]
+
+    def stage_id(self) -> int:
+        return self.current_index + 1
+
+    def mark_step_end(self) -> bool:
+        """Advance counters after a training step; return True if stage changed."""
+        self.steps_in_stage += 1
+        self.total_steps += 1
+        current = self.current_stage()
+        limit = current.get("steps")
+        if limit is not None and self.steps_in_stage >= int(limit or 0):
+            if self.current_index + 1 < len(self.stages):
+                self.current_index += 1
+                self.steps_in_stage = 0
+                return True
+        return False
+
+
 class AdvantageEstimator(str, Enum):
     """
     Using an enumeration class to avoid spelling errors in adv_estimator
@@ -518,6 +549,15 @@ class RayPPOTrainer:
         self.high_level_tokenizer = high_level_tokenizer or tokenizer
         self.shared_actor = shared_actor
         self.mlmt_cfg = config.get("mlmt_rl", {})
+        self.score_mode_cfg = self.mlmt_cfg.get("score_mode", {})
+        self.score_mode_enabled = bool(self.score_mode_cfg.get("enable", False))
+        self.score_stage_tracker = ScoreStageTracker(self.score_mode_cfg.get("stages", [])) if self.score_mode_enabled else None
+        self._score_last_logged_stage = None
+        if self.score_mode_enabled:
+            print(
+                "[SCoRe] Mode enabled – random on-policy sampling activated "
+                f"(batch_size={self.score_mode_cfg.get('batch_size', config.data.train_batch_size)})"
+            )
         self.mlmt_enabled = bool(self.mlmt_cfg.get("enable", False))
         self.value_worker = None
         self.value_cfg = None
@@ -568,6 +608,8 @@ class RayPPOTrainer:
         else:
             raise NotImplementedError
 
+        if self.score_mode_enabled:
+            self._apply_score_mode_overrides()
         self._validate_config()
         self._create_dataloader(train_dataset, val_dataset, collate_fn, train_sampler)
 
@@ -760,6 +802,37 @@ class RayPPOTrainer:
                     self.config.critic.optim.total_training_steps = total_training_steps
         except Exception as e:
             print(f"Warning: Could not set total_training_steps in config. Structure missing? Error: {e}")
+    def _apply_score_mode_overrides(self):
+        """Inject dataset overrides required for SCoRe mode."""
+        if not self.score_mode_enabled:
+            return
+        batch_size = int(self.score_mode_cfg.get("batch_size", self.config.data.train_batch_size))
+        seed_offset = int(self.score_mode_cfg.get("random_seed_offset", 0))
+        base_seed = int(getattr(self.config.env, "seed", 0))
+        random_seed = base_seed + seed_offset
+        with open_dict(self.config):
+            self.config.data.train_batch_size = batch_size
+            self.config.data.gen_batch_size = batch_size
+            self.config.data.random_sample_each_get = True
+            self.config.data.random_sample_seed = random_seed
+        self._log_score_stage_banner(force=True)
+
+    def _log_score_stage_banner(self, force: bool = False):
+        if not self.score_mode_enabled or self.score_stage_tracker is None:
+            return
+        stage = self.score_stage_tracker.current_stage()
+        stage_name = stage.get("name", f"stage{self.score_stage_tracker.stage_id()}")
+        if force or self._score_last_logged_stage != stage_name:
+            limit = stage.get("steps", "∞")
+            print(f"[SCoRe] ▶ Stage '{stage_name}' active (limit={limit})")
+            self._score_last_logged_stage = stage_name
+
+    def _maybe_advance_score_stage_after_step(self):
+        if not self.score_mode_enabled or self.score_stage_tracker is None:
+            return
+        changed = self.score_stage_tracker.mark_step_end()
+        if changed:
+            self._log_score_stage_banner(force=True)
 
     def _dump_generations(self, inputs, outputs, scores, reward_extra_infos_dict, dump_path):
         """Dump rollout/validation samples as JSONL."""
@@ -1028,21 +1101,27 @@ class RayPPOTrainer:
         if self.use_critic:
             self.critic_wg = all_wg["critic"]
             self.critic_wg.init_model()
+            print("[Init] ✅ Critic worker initialized.")
 
         if self.use_reference_policy and not self.ref_in_actor:
             self.ref_policy_wg = all_wg["ref"]
             self.ref_policy_wg.init_model()
+            print("[Init] ✅ Reference policy initialized.")
 
         if self.use_rm:
             self.rm_wg = all_wg["rm"]
             self.rm_wg.init_model()
+            print("[Init] ✅ Reward model worker initialized.")
 
         # we should create rollout at the end so that vllm can have a better estimation of kv cache memory
         self.actor_rollout_wg = all_wg["actor_rollout"]
-        self.actor_rollout_wg.init_model()
+        resume_path = self.config.trainer.get('resume_from_path', None)
+        self.actor_rollout_wg.init_model(resume_path=resume_path)
+        print("[Init] ✅ Actor-rollout weights loaded.")
         if self.mlmt_enabled and not self.shared_actor:
             self.high_actor_rollout_wg = all_wg["high_actor_rollout"]
-            self.high_actor_rollout_wg.init_model()
+            self.high_actor_rollout_wg.init_model(resume_path=resume_path)
+            print("[Init] ✅ Dedicated high-level actor initialized.")
         else:
             self.high_actor_rollout_wg = self.actor_rollout_wg
 
@@ -1368,6 +1447,11 @@ class RayPPOTrainer:
                         batch.batch["token_level_scores"][i, resp_len - 1] += belief_scores[i]
             print(f"📊 Applied belief scores to token_level_scores (mode={mode}, total={belief_scores.sum():.4f})")
 
+        if self.score_mode_enabled and turn_tensor is not None:
+            score_metrics = self._apply_score_objective(batch, turn_tensor)
+            if score_metrics:
+                local_metrics.update(score_metrics)
+
         reward_coef = self.config.env.rule_reward_coef
         if not self.config.env.use_dense_reward:
             reward_coef = 0.0
@@ -1404,6 +1488,24 @@ class RayPPOTrainer:
             local_metrics.update(self._prefix_metrics(kl_metrics, prefix))
         else:
             batch.batch["token_level_rewards"] = batch.batch["token_level_scores"]
+
+        # --- MODIFICATION: Compute advantages and returns before any early returns to ensure metrics can be logged ---
+        norm_adv_by_std_in_grpo = self.config.algorithm.get("norm_adv_by_std_in_grpo", True)
+        batch = compute_advantage(
+            batch,
+            adv_estimator=adv_estimator,
+            gamma=self.config.algorithm.gamma,
+            lam=self.config.algorithm.lam,
+            num_repeat=self.config.actor_rollout_ref.rollout.n,
+            norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
+            multi_turn=self.config.actor_rollout_ref.rollout.multi_turn.enable,
+            compute_mean_std_cross_all_data=self.config.algorithm.compute_mean_std_cross_all_data,
+            use_pf_ppo=self.config.algorithm.use_pf_ppo,
+            pf_ppo_reweight_method=self.config.algorithm.pf_ppo.reweight_method,
+            pf_ppo_weight_pow=self.config.algorithm.pf_ppo.weight_pow,
+            step_advantage_w=self.config.algorithm.gigpo.step_advantage_w,
+            gigpo_mode=self.config.algorithm.gigpo.mode,
+        )
 
         if freeze:
             print(f"❄️ {prefix or 'actor'} is frozen. Skipping update.")
@@ -1443,22 +1545,6 @@ class RayPPOTrainer:
             batch.meta_info["force_single_update"] = True
 
         print(f"🚀 Training {prefix or 'actor'} with {adv_estimator} algorithm")
-        norm_adv_by_std_in_grpo = self.config.algorithm.get("norm_adv_by_std_in_grpo", True)
-        batch = compute_advantage(
-            batch,
-            adv_estimator=adv_estimator,
-            gamma=self.config.algorithm.gamma,
-            lam=self.config.algorithm.lam,
-            num_repeat=self.config.actor_rollout_ref.rollout.n,
-            norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
-            multi_turn=self.config.actor_rollout_ref.rollout.multi_turn.enable,
-            compute_mean_std_cross_all_data=self.config.algorithm.compute_mean_std_cross_all_data,
-            use_pf_ppo=self.config.algorithm.use_pf_ppo,
-            pf_ppo_reweight_method=self.config.algorithm.pf_ppo.reweight_method,
-            pf_ppo_weight_pow=self.config.algorithm.pf_ppo.weight_pow,
-            step_advantage_w=self.config.algorithm.gigpo.step_advantage_w,
-            gigpo_mode=self.config.algorithm.gigpo.mode,
-                        )
 
         if self.use_critic and (not self.hierarchical_manager.enabled or self.hierarchical_manager.ll_trainable):
             with _timer("update_critic", timing_raw):
@@ -1501,6 +1587,97 @@ class RayPPOTrainer:
             for k in metrics_accum:
                 metrics_accum[k] /= update_steps
         return metrics_accum
+
+    def _apply_score_objective(self, batch, turn_tensor):
+        """Rewrite token_level_scores according to the SCoRe stage objective."""
+        metrics = {}
+        if not self.score_mode_enabled:
+            return metrics
+        score_values = batch.non_tensor_batch.get("score_turn_reward")
+        if score_values is None:
+            return metrics
+
+        device = batch.batch["token_level_scores"].device
+        dtype = batch.batch["token_level_scores"].dtype
+        num_rows = batch.batch["token_level_scores"].shape[0]
+
+        def _to_tensor(key, default_value=0.0):
+            raw = batch.non_tensor_batch.get(key)
+            if raw is None:
+                return torch.full((num_rows,), float(default_value), device=device, dtype=dtype)
+            arr = np.array(raw, dtype=np.float32)
+            return torch.as_tensor(arr, device=device, dtype=dtype)
+
+        score_turn_reward = _to_tensor("score_turn_reward")
+        score_turn1_reward = _to_tensor("score_turn1_reward")
+        turn_tensor = turn_tensor.to(device=device, dtype=torch.long)
+        token_scores = batch.batch["token_level_scores"]
+        token_scores.zero_()
+        response_mask = batch.batch["response_mask"]
+
+        seq_kl = torch.zeros(num_rows, device=device, dtype=dtype)
+        if "old_log_probs" in batch.batch and "ref_log_prob" in batch.batch:
+            seq_kl = ((batch.batch["old_log_probs"] - batch.batch["ref_log_prob"]) * response_mask).sum(dim=-1)
+        else:
+            metrics["score/kl_missing"] = 1.0
+
+        turn1_mask = turn_tensor == 1
+        turn2_mask = turn_tensor == 2
+        stage_idx = self.score_stage_tracker.stage_id() if self.score_stage_tracker else 1
+        stage_name = self.score_stage_tracker.current_stage().get("name", f"stage{stage_idx}") if self.score_stage_tracker else f"stage{stage_idx}"
+        metrics["score/stage_id"] = float(stage_idx)
+
+        beta_t1_stage1 = float(self.score_mode_cfg.get("beta_turn1_stage1", 0.0))
+        beta_t1_stage2 = float(self.score_mode_cfg.get("beta_turn1_stage2", 0.0))
+        beta_t2 = float(self.score_mode_cfg.get("beta_turn2", 0.0))
+        alpha = float(self.score_mode_cfg.get("alpha", 0.0))
+        reward_turn1_stage2 = bool(self.score_mode_cfg.get("reward_turn1_stage2", True))
+
+        if stage_idx == 1:
+            self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, score_turn_reward)
+            if beta_t1_stage1 != 0.0 and turn1_mask.any():
+                penalty = -beta_t1_stage1 * seq_kl
+                self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, penalty)
+        else:
+            if reward_turn1_stage2 and turn1_mask.any():
+                turn1_values = score_turn_reward.clone()
+                if beta_t1_stage2 != 0.0:
+                    turn1_values = turn1_values - beta_t1_stage2 * seq_kl
+                self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, turn1_values)
+
+            turn2_values = score_turn_reward.clone()
+            progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
+            if turn2_mask.any():
+                metrics["score/progress_bonus_mean"] = float(progress_bonus[turn2_mask].mean().item())
+                prev = score_turn1_reward[turn2_mask]
+                curr = score_turn_reward[turn2_mask]
+                wrong_to_right = torch.logical_and(prev < 0.5, curr >= 0.5)
+                right_to_wrong = torch.logical_and(prev >= 0.5, curr < 0.5)
+                metrics["score/wrong_to_right_rate"] = float(wrong_to_right.float().mean().item())
+                metrics["score/right_to_wrong_rate"] = float(right_to_wrong.float().mean().item())
+            turn2_values = turn2_values + progress_bonus
+            if beta_t2 != 0.0:
+                turn2_values = turn2_values - beta_t2 * seq_kl
+            self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
+
+        if turn1_mask.any():
+            metrics["score/turn1_accuracy"] = float(score_turn_reward[turn1_mask].mean().item())
+            metrics["score/kl_turn1_mean"] = float(seq_kl[turn1_mask].mean().item())
+        if turn2_mask.any():
+            metrics["score/turn2_accuracy"] = float(score_turn_reward[turn2_mask].mean().item())
+            metrics["score/kl_turn2_mean"] = float(seq_kl[turn2_mask].mean().item())
+
+        return metrics
+
+    def _assign_last_token_reward(self, token_scores, response_mask, turn_tensor, target_turn, values):
+        """Add reward values to the final generated token of sequences matching the turn."""
+        response_lengths = response_mask.sum(dim=-1).long()
+        for idx in range(token_scores.size(0)):
+            if target_turn is not None and turn_tensor[idx] != target_turn:
+                continue
+            last_idx = response_lengths[idx] - 1
+            if last_idx >= 0:
+                token_scores[idx, last_idx] += values[idx]
 
     def fit(self):
         """
@@ -1699,6 +1876,9 @@ class RayPPOTrainer:
                         "training/epoch": epoch,
                     }
                 )
+                if self.score_mode_enabled and self.score_stage_tracker is not None:
+                    metrics["score/stage_id"] = float(self.score_stage_tracker.stage_id())
+                    metrics["score/stage_name"] = self.score_stage_tracker.current_stage().get("name", f"stage{self.score_stage_tracker.stage_id()}")
                 # collect metrics
                 metrics.update(compute_data_metrics(batch=batch, use_critic=self.use_critic))
                 metrics.update(compute_timing_metrics(batch=batch, timing_raw=timing_raw))
@@ -1731,6 +1911,7 @@ class RayPPOTrainer:
                 logger.log(data=metrics, step=self.global_steps)
 
                 progress_bar.update(1)
+                self._maybe_advance_score_stage_after_step()
                 self.global_steps += 1
                 if is_last_step:
                     pprint(f"Final validation metrics: {last_val_metrics}")

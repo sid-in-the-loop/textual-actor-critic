@@ -115,6 +115,13 @@ class RLHFDataset(Dataset):
         self.need_tools_kwargs = config.get("need_tools_kwargs", False)
         self.filter_prompts = config.get("filter_prompts", True)
         self.serialize_dataset = False
+        self.random_sample_each_get = bool(config.get("random_sample_each_get", False))
+        self.random_sample_seed = int(config.get("random_sample_seed", 0))
+        self._default_rng = np.random.default_rng(self.random_sample_seed)
+        self._worker_rng: dict[int, np.random.Generator] = {}
+
+        if self.random_sample_each_get:
+            print(f"[RLHFDataset] Random-per-fetch sampling enabled (seed={self.random_sample_seed}). Each __getitem__ ignores incoming indices.")
         self._download()
         self._read_files_and_tokenize()
 
@@ -182,6 +189,16 @@ class RLHFDataset(Dataset):
         """
         Note that we also return the raw_input_ids so that it can be combined with other chat template
         """
+        if self.random_sample_each_get:
+            worker_info = torch.utils.data.get_worker_info()
+            if worker_info is not None:
+                if worker_info.id not in self._worker_rng:
+                    self._worker_rng[worker_info.id] = np.random.default_rng(self.random_sample_seed + worker_info.id)
+                rng = self._worker_rng[worker_info.id]
+            else:
+                rng = self._default_rng
+            item = int(rng.integers(0, len(self.dataframe)))
+
         row_dict: dict = self.dataframe[item]
         messages = self._build_messages(row_dict)
         model_inputs = {}

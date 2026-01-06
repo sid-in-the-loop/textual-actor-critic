@@ -5,18 +5,18 @@
 #SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=184G
-#SBATCH --partition=general
-#SBATCH --time=24:00:00
-#SBATCH --exclude=babel-s5-24,babel-s9-24,babel-w5-32
+#SBATCH --partition=preempt
+#SBATCH --time=4-00:00:00
+#SBATCH --exclude=babel-s5-24,babel-s9-24,babel-w5-32,babel-x5-24,babel-y9-12
 source /home/ssmurali/miniconda3/etc/profile.d/conda.sh
 conda activate mlmt
 
 export PYTHONUNBUFFERED=1
 export RAY_BACKEND_LOG_LEVEL=warning
 export RAY_LOG_TO_STDERR=0
-export WANDB_MODE=offline
+export WANDB_MODE=online
 export HF_TOKEN=${HF_TOKEN}
-export OPENAI_API_KEY=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
+export OPENAI_API_KEY=${OPENAI_API_KEY}
 
 cd /home/ssmurali/mlmt
 

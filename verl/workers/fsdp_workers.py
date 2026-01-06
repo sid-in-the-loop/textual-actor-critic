@@ -512,7 +512,7 @@ class ActorRolloutRefWorker(Worker):
         return rollout, rollout_sharding_manager
 
     @register(dispatch_mode=Dispatch.ONE_TO_ALL)
-    def init_model(self):
+    def init_model(self, resume_path=None):
         from verl.workers.actor import DataParallelPPOActor
 
         # This is used to import external_lib into the huggingface systems
@@ -608,6 +608,25 @@ class ActorRolloutRefWorker(Worker):
                 processing_class=self.processor if self.processor is not None else self.tokenizer,
                 checkpoint_contents=self.config.actor.checkpoint.contents,
             )
+
+            # MLMT: Handle manual resume from high_actor/low_actor subdirectories
+            if resume_path is not None:
+                mlmt_path = None
+                if self.role == "high_actor_rollout":
+                    mlmt_path = os.path.join(resume_path, "high_actor")
+                    role_desc = "High-Level Actor"
+                elif self.role in ["actor", "actor_rollout", "actor_rollout_ref"]:
+                    mlmt_path = os.path.join(resume_path, "low_actor")
+                    role_desc = "Low-Level Actor"
+                
+                if mlmt_path and os.path.exists(mlmt_path):
+                    if torch.distributed.get_rank() == 0:
+                        print(f"🚀 [MLMT Resume] Loading {role_desc} weights from: {mlmt_path}")
+                    self.load_checkpoint(local_path=mlmt_path)
+                elif mlmt_path:
+                    if torch.distributed.get_rank() == 0:
+                        print(f"⚠️ [MLMT Resume] Warning: Subdirectory {mlmt_path} not found. "
+                              f"Falling back to base model for {role_desc}.")
 
     @register(dispatch_mode=Dispatch.DP_COMPUTE_PROTO)
     def update_actor(self, data: DataProto):

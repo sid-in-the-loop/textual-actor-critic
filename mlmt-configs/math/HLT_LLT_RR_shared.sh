@@ -9,6 +9,7 @@ mkdir -p "$SAVE_DIR"
 export OPENAI_API_KEY=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
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export WANDB_MODE=offline
+export HYDRA_FULL_ERROR=1
 
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 RUN_NAME="HLT_LLT_RR_shared_${TIMESTAMP}"
@@ -32,7 +33,7 @@ python -m verl.trainer.main_ppo \
     trainer.nnodes=1 \
     trainer.save_freq=100 \
     actor_rollout_ref.model.path=$SHARED_MODEL \
-    actor_rollout_ref.actor.ppo_mini_batch_size=256 \
+    actor_rollout_ref.actor.ppo_mini_batch_size=128 \
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=4 \
     actor_rollout_ref.actor.optim.lr=5e-7 \
     actor_rollout_ref.actor.optim.total_training_steps=315 \

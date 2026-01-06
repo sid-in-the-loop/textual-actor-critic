@@ -75,7 +75,7 @@ class TaskRunner:
                 mlmt_cfg = config.mlmt_rl
                 low_model_path = mlmt_cfg.low_level.get("model_path") or config.actor_rollout_ref.model.path
                 config.actor_rollout_ref.model.path = low_model_path
-                
+
                 # Explicitly override low-level model params if provided
                 if "use_lora" in mlmt_cfg.low_level:
                     config.actor_rollout_ref.model.use_lora = mlmt_cfg.low_level.use_lora
@@ -151,7 +151,7 @@ class TaskRunner:
                 high_tokenizer_local = high_model_local_path
             high_tokenizer = hf_tokenizer(high_tokenizer_local, trust_remote_code=trust_remote_code)
         # vllm early verify
-        
+
         if config.actor_rollout_ref.rollout.name in ["vllm"]:
             from verl.utils.vllm_utils import is_version_ge
 
@@ -189,13 +189,13 @@ class TaskRunner:
         global_pool_id = "global_pool"
         if mlmt_enabled and not shared_actor:
             # Partition GPUs between the two actors to avoid vLLM process conflict
-            # Assuming an even number of GPUs. 
+            # Assuming an even number of GPUs.
             n_gpus = config.trainer.n_gpus_per_node
             assert n_gpus >= 2, "Need at least 2 GPUs to separate high and low level actors"
-            
+
             low_gpus = n_gpus // 2
             high_gpus = n_gpus - low_gpus
-            
+
             high_pool_id = "high_pool"
             resource_pool_spec = {
                 global_pool_id: [low_gpus] * config.trainer.nnodes,
@@ -214,8 +214,26 @@ class TaskRunner:
             mapping = {
                 Role.ActorRollout: global_pool_id,
                 Role.Critic: global_pool_id,
-                    Role.RefPolicy: global_pool_id,
+                Role.RefPolicy: global_pool_id,
             }
+
+        if mlmt_enabled:
+            with open_dict(config):
+                # Safety check: ppo_mini_batch_size cannot exceed train_batch_size
+                # because the HL actor only has 1x samples (no Turn 3 repeat).
+                train_bs = config.data.train_batch_size
+                if config.actor_rollout_ref.actor.ppo_mini_batch_size > train_bs:
+                    print(f"[Warning] Overriding ppo_mini_batch_size ({config.actor_rollout_ref.actor.ppo_mini_batch_size}) to {train_bs} for HL actor safety.")
+                    config.actor_rollout_ref.actor.ppo_mini_batch_size = train_bs
+
+                # Force rollout.n = 1. Multi-turn branching is handled in mlmt_multi_turn_loop.
+                if config.actor_rollout_ref.rollout.n != 1:
+                    print(f"[Warning] Overriding actor_rollout_ref.rollout.n ({config.actor_rollout_ref.rollout.n}) to 1 for MLMT.")
+                    config.actor_rollout_ref.rollout.n = 1
+
+                if not shared_actor:
+                    config.high_actor_rollout_ref.actor.ppo_mini_batch_size = min(config.high_actor_rollout_ref.actor.ppo_mini_batch_size, train_bs)
+                    config.high_actor_rollout_ref.rollout.n = 1
 
         if mlmt_enabled and not shared_actor:
             role_worker_mapping[Role.HighActorRollout] = ray.remote(actor_rollout_cls)
@@ -262,13 +280,13 @@ class TaskRunner:
         resource_pool_manager = ResourcePoolManager(resource_pool_spec=resource_pool_spec, mapping=mapping)
 
         if config.env.env_name != "none":
-            # If MLMT is enabled, we allow n > 1 because our TrajectoryCollector handles 
+            # If MLMT is enabled, we allow n > 1 because our TrajectoryCollector handles
             # the multi-turn group sampling using verl's rollout workers.
             # Also allow n > 1 if the algorithm explicitly requires it (GRPO, REINFORCE).
             is_multi_sample_algo = config.algorithm.adv_estimator in ['grpo', 'reinforce', 'reinforce_plus_plus', 'rloo']
             if not mlmt_enabled and not is_multi_sample_algo:
                 assert config.actor_rollout_ref.rollout.n == 1, "In verl, actor_rollout_ref.rollout.n>1 is for GRPO. In verl+env, we keep n=1, and achieve GRPO by env.rollout.n"
-        
+
         from agent_system.multi_turn_rollout import TrajectoryCollector
         traj_collector = TrajectoryCollector(
             config=config,
