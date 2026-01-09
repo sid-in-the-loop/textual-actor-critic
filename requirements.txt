@@ -3,7 +3,7 @@ numpy
 psutil
 transformers==4.51.1
 vllm==0.8.5
-ray==2.43.0
+ray==2.53.0
 xformers==0.0.29.post2
 einops==0.8.1
 datasets==4.4.2
