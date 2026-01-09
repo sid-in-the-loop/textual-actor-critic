@@ -4,7 +4,7 @@ psutil
 transformers==4.51.1
 vllm==0.8.5
 ray==2.43.0
-xformers==0.0.29.post2
+xformers==0.0.33.post2
 einops==0.8.1
 datasets==4.4.2
 pandas==2.3.3
