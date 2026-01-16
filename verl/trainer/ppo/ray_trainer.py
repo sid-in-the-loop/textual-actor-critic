@@ -90,10 +90,16 @@ class Role(Enum):
 class ScoreStageTracker:
     """Utility to keep track of SCoRe stage schedules."""
 
-    stages: list
-    current_index: int = 0
-    steps_in_stage: int = 0
-    total_steps: int = 0
+    def __init__(self, stages: list):
+        self.stages = stages
+        self.current_index = 0
+        self.steps_in_stage = 0
+        self.total_steps = 0
+
+    def reset(self):
+        self.current_index = 0
+        self.steps_in_stage = 0
+        self.total_steps = 0
 
     def current_stage(self):
         if not self.stages:
@@ -531,6 +537,7 @@ class RayPPOTrainer:
         openai_agent=None,
         high_level_tokenizer=None,
         shared_actor=True,
+        mlmt_stage_cfg=None,
     ):
         """Initialize distributed PPO trainer with Ray backend."""
 
@@ -549,6 +556,19 @@ class RayPPOTrainer:
         self.high_level_tokenizer = high_level_tokenizer or tokenizer
         self.shared_actor = shared_actor
         self.mlmt_cfg = config.get("mlmt_rl", {})
+        self.stage_cfg = mlmt_stage_cfg or {}
+        if not self.stage_cfg:
+            self.stage_cfg = {"stage_id": 1}
+        self.stage_id = int(self.stage_cfg.get("stage_id", 1))
+        self.stage_schedule = self.stage_cfg.get("schedule", [])
+        self.stage_coeffs = {
+            "beta2": float(self.stage_cfg.get("beta2", 0.0)),
+            "beta1": float(self.stage_cfg.get("beta1", 0.0)),
+            "beta_L": float(self.stage_cfg.get("beta_L", 0.0)),
+            "beta_H": float(self.stage_cfg.get("beta_H", 0.0)),
+            "alpha": float(self.stage_cfg.get("alpha", 0.0)),
+        }
+        self._stage_schedule_idx = 0
         self.score_mode_cfg = self.mlmt_cfg.get("score_mode", {})
         self.score_mode_enabled = bool(self.score_mode_cfg.get("enable", False))
         self.score_stage_tracker = ScoreStageTracker(self.score_mode_cfg.get("stages", [])) if self.score_mode_enabled else None
@@ -559,6 +579,8 @@ class RayPPOTrainer:
                 f"(batch_size={self.score_mode_cfg.get('batch_size', config.data.train_batch_size)})"
             )
         self.mlmt_enabled = bool(self.mlmt_cfg.get("enable", False))
+        self.low_freeze = bool(self.mlmt_cfg.get("low_level", {}).get("freeze", False))
+        self.high_freeze = bool(self.mlmt_cfg.get("high_level", {}).get("freeze", False))
         self.value_worker = None
         self.value_cfg = None
         value_cfg_node = OmegaConf.select(self.config, "mlmt_rl.value_fn")
@@ -769,8 +791,8 @@ class RayPPOTrainer:
         self.val_dataloader = None
         if self.val_dataset is not None:
             val_batch_size = self.config.data.get("val_batch_size", None)  # Prefer config value if set
-        if val_batch_size is None:
-            val_batch_size = len(self.val_dataset)
+            if val_batch_size is None:
+                val_batch_size = len(self.val_dataset)
 
             self.val_dataloader = StatefulDataLoader(
                 dataset=self.val_dataset,
@@ -827,12 +849,110 @@ class RayPPOTrainer:
             print(f"[SCoRe] ▶ Stage '{stage_name}' active (limit={limit})")
             self._score_last_logged_stage = stage_name
 
+    def _log_training_objectives(self):
+        """Prints the mathematical objective being optimized for LL and HL models."""
+        # Priority 1: SCoRe Stage Tracker
+        if self.score_mode_enabled:
+            coeffs = self.stage_coeffs
+            stage_idx = self.score_stage_tracker.stage_id() if self.score_stage_tracker else 1
+            
+            b1 = self.score_mode_cfg.get("beta_turn1_stage2", coeffs.get("beta1", 0.0))
+            b2 = self.score_mode_cfg.get("beta_turn1_stage1", coeffs.get("beta2", 0.0))
+            bL = self.score_mode_cfg.get("beta_turn2", coeffs.get("beta_L", 0.0))
+            a = self.score_mode_cfg.get("alpha", coeffs.get("alpha", 0.0))
+            
+            print(f"\n" + "="*80)
+            print(f"🎯 TRAINING OBJECTIVES [SCoRe STAGE {stage_idx}]")
+            print("="*80)
+            if stage_idx == 1:
+                print(f"SOLVER (Turns 1 & 2):")
+                print(f"  Turn 1: -{b2} * KL(y1 || ref)")
+                print(f"  Turn 2: r(y2, y*) - {bL} * KL(y2 || ref)")
+            else:
+                print(f"SOLVER (Turns 1 & 2):")
+                print(f"  Turn 1: r(y1, y*) - {b1} * KL(y1 || ref)")
+                print(f"  Turn 2: r(y2, y*) + {a} * (r(y2) - r(y1)) - {bL} * KL(y2 || ref)")
+            print("="*80 + "\n")
+
+        # Priority 2: Hierarchical MLMT-RL
+        elif self.mlmt_enabled:
+            coeffs = self.stage_coeffs
+            stage_idx = self.stage_id
+            b1, b2, bL, bH, a = coeffs['beta1'], coeffs['beta2'], coeffs['beta_L'], coeffs['beta_H'], coeffs['alpha']
+            
+            print(f"\n" + "="*80)
+            print(f"🎯 TRAINING OBJECTIVES [MLMT-RL STAGE {stage_idx}]")
+            print("="*80)
+            if stage_idx == 1:
+                print(f"LOW-LEVEL (LL) Solver:")
+                print(f"  Turn 1 (y1): -{b2} * KL(y1 || ref)")
+                print(f"  Turn 3 (y2): r(y2, y*) - {bL} * KL(y2 || ref)")
+            else:
+                print(f"LOW-LEVEL (LL) Solver:")
+                print(f"  Turn 1 (y1): r(y1, y*) - {b1} * KL(y1 || ref)")
+                print(f"  Turn 3 (y2): r(y2, y*) + {a} * (r(y2) - r(y1)) - {bL} * KL(y2 || ref)")
+            
+            print(f"HIGH-LEVEL (HL) Feedback:")
+            print(f"  Turn 2 (f):  r(y2, y*) - {bH} * KL(f || ref_H)")
+            print("="*80 + "\n")
+
     def _maybe_advance_score_stage_after_step(self):
-        if not self.score_mode_enabled or self.score_stage_tracker is None:
+        # 1. Advance SCoRe Stage Tracker
+        if self.score_mode_enabled and self.score_stage_tracker is not None:
+            changed = self.score_stage_tracker.mark_step_end()
+            if changed:
+                self._log_score_stage_banner(force=True)
+                self._log_training_objectives()
+        
+        # 2. Advance Hierarchical Stage based on schedule
+        if self.mlmt_enabled:
+            stage_ctrl = self.mlmt_cfg.get("stage_control", {})
+            schedule = stage_ctrl.get("schedule", [])
+            
+            # If Hydra didn't parse it into a list, try to fix it
+            if isinstance(schedule, str) and schedule.startswith("["):
+                import json
+                try:
+                    # Replace key names without quotes to key names with quotes for JSON parsing
+                    # e.g., [{step:250}] -> [{"step":250}]
+                    import re
+                    json_str = re.sub(r'(\w+):', r'"\1":', schedule).replace("'", "\"")
+                    schedule = json.loads(json_str)
+                except:
+                    pass
+
+            if schedule and not isinstance(schedule, str):
+                for entry in schedule:
+                    if self.global_steps == int(entry.get("step")):
+                        print(f"🚀 [MLMT] Hierarchical Stage Advanced at step {self.global_steps} based on schedule.")
+                        self.stage_id = int(entry.get("stage_id", self.stage_id))
+                        # Update internal coefficients used in _apply_score_objective
+                        for key in ["beta1", "beta2", "beta_L", "beta_H", "alpha"]:
+                            if key in entry:
+                                self.stage_coeffs[key] = entry[key]
+                                print(f"   - Updated {key} to {entry[key]}")
+                        self._log_training_objectives()
+        self._maybe_update_mlmt_stage()
+
+    def _maybe_update_mlmt_stage(self):
+        if not self.stage_schedule:
             return
-        changed = self.score_stage_tracker.mark_step_end()
-        if changed:
-            self._log_score_stage_banner(force=True)
+        while self._stage_schedule_idx < len(self.stage_schedule):
+            boundary = self.stage_schedule[self._stage_schedule_idx]
+            boundary_step = boundary.get("step", float("inf"))
+            if self.global_steps >= boundary_step:
+                new_stage = boundary.get("stage_id", self.stage_id)
+                if new_stage != self.stage_id:
+                    self.stage_id = int(new_stage)
+                    self.stage_coeffs["beta2"] = float(boundary.get("beta2", self.stage_coeffs["beta2"]))
+                    self.stage_coeffs["beta1"] = float(boundary.get("beta1", self.stage_coeffs["beta1"]))
+                    self.stage_coeffs["beta_L"] = float(boundary.get("beta_L", self.stage_coeffs["beta_L"]))
+                    self.stage_coeffs["beta_H"] = float(boundary.get("beta_H", self.stage_coeffs["beta_H"]))
+                    self.stage_coeffs["alpha"] = float(boundary.get("alpha", self.stage_coeffs["alpha"]))
+                    print(f"[Stage Control] Switched to stage {self.stage_id} at global step {self.global_steps}")
+                self._stage_schedule_idx += 1
+            else:
+                break
 
     def _dump_generations(self, inputs, outputs, scores, reward_extra_infos_dict, dump_path):
         """Dump rollout/validation samples as JSONL."""
@@ -1139,36 +1259,55 @@ class RayPPOTrainer:
         local_global_step_folder = os.path.join(self.config.trainer.default_local_dir, f"global_step_{self.global_steps}")
 
         print(f"local_global_step_folder: {local_global_step_folder}")
-        low_actor_local_path = os.path.join(local_global_step_folder, "low_actor")
+        actor_local_path = os.path.join(local_global_step_folder, "actor")
         high_actor_local_path = os.path.join(local_global_step_folder, "high_actor")
+        critic_local_path = os.path.join(local_global_step_folder, "critic")
 
         actor_remote_root = None if self.config.trainer.default_hdfs_dir is None else os.path.join(self.config.trainer.default_hdfs_dir, f"global_step_{self.global_steps}")
-        low_actor_remote_path = None if actor_remote_root is None else os.path.join(actor_remote_root, "low_actor")
+        actor_remote_path = None if actor_remote_root is None else os.path.join(actor_remote_root, "actor")
         high_actor_remote_path = None if actor_remote_root is None else os.path.join(actor_remote_root, "high_actor")
+        critic_remote_path = None if actor_remote_root is None else os.path.join(actor_remote_root, "critic")
 
         remove_previous_ckpt_in_save = self.config.trainer.get("remove_previous_ckpt_in_save", False)
         if remove_previous_ckpt_in_save:
             print("Warning: remove_previous_ckpt_in_save is deprecated," + " set max_actor_ckpt_to_keep=1 and max_critic_ckpt_to_keep=1 instead")
         max_actor_ckpt_to_keep = self.config.trainer.get("max_actor_ckpt_to_keep", None) if not remove_previous_ckpt_in_save else 1
+        max_critic_ckpt_to_keep = self.config.trainer.get("max_critic_ckpt_to_keep", None) if not remove_previous_ckpt_in_save else 1
         
         lora_only = self.config.trainer.get("lora_only_save", False)
 
-        self.actor_rollout_wg.save_checkpoint(
-            low_actor_local_path,
-            low_actor_remote_path,
-            self.global_steps,
-            max_ckpt_to_keep=max_actor_ckpt_to_keep,
-            lora_only=lora_only,
-        )
-
-        if self.mlmt_enabled and not self.shared_actor:
-            # Dual-actor setup: persist the dedicated high-level policy.
-            self.high_actor_rollout_wg.save_checkpoint(
-                high_actor_local_path,
-                high_actor_remote_path,
+        # Save low-level actor (or shared actor) if not frozen
+        if not self.low_freeze:
+            self.actor_rollout_wg.save_checkpoint(
+                actor_local_path,
+                actor_remote_path,
                 self.global_steps,
                 max_ckpt_to_keep=max_actor_ckpt_to_keep,
                 lora_only=lora_only,
+            )
+        else:
+            print(f"❄️ Low-level actor is frozen. Skipping save at step {self.global_steps}.")
+
+        # Save high-level actor if not shared and not frozen
+        if self.mlmt_enabled and not self.shared_actor:
+            if not self.high_freeze:
+                self.high_actor_rollout_wg.save_checkpoint(
+                    high_actor_local_path,
+                    high_actor_remote_path,
+                    self.global_steps,
+                    max_ckpt_to_keep=max_actor_ckpt_to_keep,
+                    lora_only=lora_only,
+                )
+            else:
+                print(f"❄️ High-level actor is frozen. Skipping save at step {self.global_steps}.")
+
+        # Save critic if enabled
+        if self.use_critic:
+            self.critic_wg.save_checkpoint(
+                critic_local_path,
+                critic_remote_path,
+                self.global_steps,
+                max_ckpt_to_keep=max_critic_ckpt_to_keep,
             )
 
         # latest checkpointed iteration tracker (for atomic usage)
@@ -1210,29 +1349,62 @@ class RayPPOTrainer:
         print(f"Setting global step to {self.global_steps}")
         print(f"Resuming from {global_step_folder}")
 
-        low_actor_path = os.path.join(global_step_folder, "low_actor")
-        legacy_actor_path = os.path.join(global_step_folder, "actor")
-        if not os.path.exists(low_actor_path):
-            if os.path.exists(legacy_actor_path):
-                print("Low-level checkpoint not found, falling back to legacy 'actor' directory.")
-                low_actor_path = legacy_actor_path
-            else:
-                raise FileNotFoundError(f"Missing low-level actor checkpoint under {global_step_folder}")
-        self.actor_rollout_wg.load_checkpoint(low_actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
+        # Synchronize stage trackers with resumed step
+        if self.score_mode_enabled and self.score_stage_tracker:
+            print(f"[Resume] Fast-forwarding SCoRe Stage Tracker to step {self.global_steps}")
+            # The tracker works by consuming steps. We simulate the past steps.
+            # We reset and then advance.
+            self.score_stage_tracker.reset()
+            for _ in range(self.global_steps):
+                self.score_stage_tracker.mark_step_end()
+            print(f"[Resume] SCoRe Stage now: {self.score_stage_tracker.stage_id()} ({self.score_stage_tracker.current_stage().get('name')})")
+
+        if self.mlmt_enabled and self.stage_schedule:
+            print(f"[Resume] Fast-forwarding MLMT Stage Schedule to step {self.global_steps}")
+            self._stage_schedule_idx = 0
+            while self._stage_schedule_idx < len(self.stage_schedule):
+                stage_cfg = self.stage_schedule[self._stage_schedule_idx]
+                if self.global_steps >= stage_cfg.get('step', float('inf')):
+                    self.stage_id = int(stage_cfg.get('stage_id', self.stage_id))
+                    # Update coefficients
+                    for k in self.stage_coeffs:
+                        if k in stage_cfg:
+                            self.stage_coeffs[k] = float(stage_cfg[k])
+                    self._stage_schedule_idx += 1
+                else:
+                    break
+            print(f"[Resume] MLMT Stage now: {self.stage_id}, Coefficients: {self.stage_coeffs}")
+
+        actor_path = os.path.join(global_step_folder, "actor")
+        low_actor_path = os.path.join(global_step_folder, "low_actor") # legacy name
+        
+        load_actor_path = None
+        if os.path.exists(actor_path):
+            load_actor_path = actor_path
+        elif os.path.exists(low_actor_path):
+            print("Found legacy 'low_actor' directory, using it.")
+            load_actor_path = low_actor_path
+        else:
+            raise FileNotFoundError(f"Missing actor checkpoint under {global_step_folder}")
+            
+        self.actor_rollout_wg.load_checkpoint(load_actor_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
 
         if self.mlmt_enabled and not self.shared_actor:
             high_actor_path = os.path.join(global_step_folder, "high_actor")
             if not os.path.exists(high_actor_path):
-                if os.path.exists(legacy_actor_path):
-                    print("High-level checkpoint not found, falling back to legacy 'actor' directory.")
-                    high_actor_path = legacy_actor_path
-                else:
-                    print("High-level checkpoint missing; initializing from low-level weights.")
-                    high_actor_path = low_actor_path
+                print("High-level checkpoint missing; initializing from low-level weights.")
+                high_actor_path = load_actor_path
             self.high_actor_rollout_wg.load_checkpoint(
                 high_actor_path,
                 del_local_after_load=self.config.trainer.del_local_ckpt_after_load,
             )
+
+        if self.use_critic:
+            critic_path = os.path.join(global_step_folder, "critic")
+            if os.path.exists(critic_path):
+                self.critic_wg.load_checkpoint(critic_path, del_local_after_load=self.config.trainer.del_local_ckpt_after_load)
+            else:
+                print(f"Warning: Critic checkpoint not found at {critic_path}. Skipping critic load.")
 
     def _balance_batch(self, batch: DataProto, metrics, logging_prefix="global_seqlen"):
         """Reorder the data on single controller such that each dp rank gets similar total tokens"""
@@ -1447,8 +1619,13 @@ class RayPPOTrainer:
                         batch.batch["token_level_scores"][i, resp_len - 1] += belief_scores[i]
             print(f"📊 Applied belief scores to token_level_scores (mode={mode}, total={belief_scores.sum():.4f})")
 
-        if self.score_mode_enabled and turn_tensor is not None:
-            score_metrics = self._apply_score_objective(batch, turn_tensor)
+        if (self.score_mode_enabled or self.mlmt_enabled) and turn_tensor is not None:
+            score_metrics = self._apply_score_objective(
+                batch,
+                turn_tensor,
+                stage_id=self.stage_id,
+                stage_coeffs=self.stage_coeffs,
+            )
             if score_metrics:
                 local_metrics.update(score_metrics)
 
@@ -1588,10 +1765,10 @@ class RayPPOTrainer:
                 metrics_accum[k] /= update_steps
         return metrics_accum
 
-    def _apply_score_objective(self, batch, turn_tensor):
+    def _apply_score_objective(self, batch, turn_tensor, stage_id=None, stage_coeffs=None):
         """Rewrite token_level_scores according to the SCoRe stage objective."""
         metrics = {}
-        if not self.score_mode_enabled:
+        if not self.score_mode_enabled and not self.mlmt_enabled:
             return metrics
         score_values = batch.non_tensor_batch.get("score_turn_reward")
         if score_values is None:
@@ -1623,49 +1800,119 @@ class RayPPOTrainer:
 
         turn1_mask = turn_tensor == 1
         turn2_mask = turn_tensor == 2
-        stage_idx = self.score_stage_tracker.stage_id() if self.score_stage_tracker else 1
+        turn3_mask = turn_tensor == 3
+
+        stage_idx = stage_id or (self.score_stage_tracker.stage_id() if self.score_stage_tracker else 1)
         stage_name = self.score_stage_tracker.current_stage().get("name", f"stage{stage_idx}") if self.score_stage_tracker else f"stage{stage_idx}"
         metrics["score/stage_id"] = float(stage_idx)
 
-        beta_t1_stage1 = float(self.score_mode_cfg.get("beta_turn1_stage1", 0.0))
-        beta_t1_stage2 = float(self.score_mode_cfg.get("beta_turn1_stage2", 0.0))
-        beta_t2 = float(self.score_mode_cfg.get("beta_turn2", 0.0))
-        alpha = float(self.score_mode_cfg.get("alpha", 0.0))
-        reward_turn1_stage2 = bool(self.score_mode_cfg.get("reward_turn1_stage2", True))
+        coeffs = stage_coeffs or self.stage_coeffs
+        beta2 = float(coeffs.get("beta2", 0.0))
+        beta1 = float(coeffs.get("beta1", 0.0))
+        beta_L = float(coeffs.get("beta_L", 0.0))
+        beta_H = float(coeffs.get("beta_H", 0.0))
+        alpha = float(coeffs.get("alpha", 0.0))
 
-        if stage_idx == 1:
-            self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, score_turn_reward)
-            if beta_t1_stage1 != 0.0 and turn1_mask.any():
-                penalty = -beta_t1_stage1 * seq_kl
-                self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, penalty)
+        if self.mlmt_enabled:
+            # Hierarchical Feedback (3-turn) logic
+            if stage_idx == 1:
+                # Stage I: Solver optimized for final correctness only; T1 KL constrained.
+                # Turn 1: KL penalty only (beta2)
+                if turn1_mask.any():
+                    penalty = -beta2 * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, penalty)
+                
+                # Turn 2: Feedback optimized for final reward (beta_H)
+                if turn2_mask.any():
+                    turn2_values = score_turn_reward.clone()
+                    if beta_H != 0.0:
+                        turn2_values = turn2_values - beta_H * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
+                
+                # Turn 3: Solver Revision optimized for final reward (beta_L)
+                if turn3_mask.any():
+                    turn3_values = score_turn_reward.clone()
+                    if beta_L != 0.0:
+                        turn3_values = turn3_values - beta_L * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 3, turn3_values)
+            else:
+                # Stage II: Joint optimization with progress shaping
+                # Turn 1: Solver Turn 1 correctness + beta1 KL
+                if turn1_mask.any():
+                    turn1_values = score_turn_reward.clone()
+                    if beta1 != 0.0:
+                        turn1_values = turn1_values - beta1 * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, turn1_values)
+                
+                # Turn 2: Feedback Turn 2 correctness (final reward) + beta_H KL
+                if turn2_mask.any():
+                    turn2_values = score_turn_reward.clone()
+                    if beta_H != 0.0:
+                        turn2_values = turn2_values - beta_H * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
+                
+                # Turn 3: Solver Revision correctness + progress bonus + beta_L KL
+                if turn3_mask.any():
+                    turn3_values = score_turn_reward.clone()
+                    progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
+                    metrics["score/progress_bonus_mean"] = float(progress_bonus[turn3_mask].mean().item())
+                    turn3_values = turn3_values + progress_bonus
+                    if beta_L != 0.0:
+                        turn3_values = turn3_values - beta_L * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 3, turn3_values)
         else:
-            if reward_turn1_stage2 and turn1_mask.any():
-                turn1_values = score_turn_reward.clone()
-                if beta_t1_stage2 != 0.0:
-                    turn1_values = turn1_values - beta_t1_stage2 * seq_kl
-                self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, turn1_values)
+            # Baseline SCoRe (2-turn) logic
+            beta_t1_stage1 = float(self.score_mode_cfg.get("beta_turn1_stage1", beta2))
+            beta_t1_stage2 = float(self.score_mode_cfg.get("beta_turn1_stage2", beta1))
+            beta_t2 = float(self.score_mode_cfg.get("beta_turn2", beta_L))
+            reward_turn1_stage2 = bool(self.score_mode_cfg.get("reward_turn1_stage2", stage_idx != 1))
 
-            turn2_values = score_turn_reward.clone()
-            progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
-            if turn2_mask.any():
-                metrics["score/progress_bonus_mean"] = float(progress_bonus[turn2_mask].mean().item())
-                prev = score_turn1_reward[turn2_mask]
-                curr = score_turn_reward[turn2_mask]
-                wrong_to_right = torch.logical_and(prev < 0.5, curr >= 0.5)
-                right_to_wrong = torch.logical_and(prev >= 0.5, curr < 0.5)
-                metrics["score/wrong_to_right_rate"] = float(wrong_to_right.float().mean().item())
-                metrics["score/right_to_wrong_rate"] = float(right_to_wrong.float().mean().item())
-            turn2_values = turn2_values + progress_bonus
-            if beta_t2 != 0.0:
-                turn2_values = turn2_values - beta_t2 * seq_kl
-            self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
+            if stage_idx == 1:
+                turn2_values = score_turn_reward.clone()
+                if beta_t2 != 0.0:
+                    turn2_values = turn2_values - beta_t2 * seq_kl
+                self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
+                if beta_t1_stage1 != 0.0 and turn1_mask.any():
+                    penalty = -beta_t1_stage1 * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, penalty)
+                metrics["score/turn1_rewarded"] = 0.0
+            else:
+                if reward_turn1_stage2 and turn1_mask.any():
+                    turn1_values = score_turn_reward.clone()
+                    if beta_t1_stage2 != 0.0:
+                        turn1_values = turn1_values - beta_t1_stage2 * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, turn1_values)
+
+                turn2_values = score_turn_reward.clone()
+                progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
+                if turn2_mask.any():
+                    metrics["score/progress_bonus_mean"] = float(progress_bonus[turn2_mask].mean().item())
+                    prev = score_turn1_reward[turn2_mask]
+                    curr = score_turn_reward[turn2_mask]
+                    wrong_to_right = torch.logical_and(prev < 0.5, curr >= 0.5)
+                    right_to_wrong = torch.logical_and(prev >= 0.5, curr < 0.5)
+                    metrics["score/wrong_to_right_rate"] = float(wrong_to_right.float().mean().item())
+                    metrics["score/right_to_wrong_rate"] = float(right_to_wrong.float().mean().item())
+                turn2_values = turn2_values + progress_bonus
+                if beta_t2 != 0.0:
+                    turn2_values = turn2_values - beta_t2 * seq_kl
+                self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
 
         if turn1_mask.any():
             metrics["score/turn1_accuracy"] = float(score_turn_reward[turn1_mask].mean().item())
             metrics["score/kl_turn1_mean"] = float(seq_kl[turn1_mask].mean().item())
+            # --- MODIFICATION: EXPLICIT CONSOLE LOGGING ---
+            t1_acc = metrics["score/turn1_accuracy"]
+            print(f"📊 [CORRECTNESS] Turn 1 Average Accuracy: {t1_acc:.4f}")
         if turn2_mask.any():
             metrics["score/turn2_accuracy"] = float(score_turn_reward[turn2_mask].mean().item())
             metrics["score/kl_turn2_mean"] = float(seq_kl[turn2_mask].mean().item())
+        if turn3_mask.any():
+            metrics["score/turn3_accuracy"] = float(score_turn_reward[turn3_mask].mean().item())
+            metrics["score/kl_turn3_mean"] = float(seq_kl[turn3_mask].mean().item())
+            # --- MODIFICATION: EXPLICIT CONSOLE LOGGING ---
+            t3_acc = metrics["score/turn3_accuracy"]
+            print(f"📊 [CORRECTNESS] Turn 3 Average Accuracy: {t3_acc:.4f}")
 
         return metrics
 
@@ -1705,6 +1952,9 @@ class RayPPOTrainer:
         # load checkpoint before doing anything
         self._load_checkpoint()
 
+        # Log initial training objectives
+        self._log_training_objectives()
+
         # perform validation before training
         # currently, we only support validation using the reward_function.
         if self.val_reward_fn is not None and self.config.trainer.get("val_before_train", True):
@@ -1724,6 +1974,11 @@ class RayPPOTrainer:
 
         for epoch in range(self.config.trainer.total_epochs):
             for batch_dict in self.train_dataloader:
+                if self.global_steps > self.total_training_steps:
+                    pprint(f"Reached total_training_steps ({self.total_training_steps}). Exiting training loop.")
+                    progress_bar.close()
+                    return
+                
                 metrics = {}
                 timing_raw = {}
                 batch: DataProto = DataProto.from_single_dict(batch_dict)

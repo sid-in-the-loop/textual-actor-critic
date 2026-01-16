@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=184G
 #SBATCH --partition=preempt
-#SBATCH --time=4-00:00:00
+#SBATCH --time=20:00:00
 #SBATCH --exclude=babel-s5-24,babel-s9-24,babel-w5-32,babel-x5-24,babel-y9-12
 source /home/ssmurali/miniconda3/etc/profile.d/conda.sh
 conda activate mlmt
@@ -20,9 +20,10 @@ export OPENAI_API_KEY=${OPENAI_API_KEY}
 
 cd /home/ssmurali/mlmt
 
-# Usage: sbatch mlmt-configs/math/submit_mlmt.sbatch <config_script_path>
-CONFIG_SCRIPT=${1:-mlmt-configs/math/HLF_LLT_RR.sh}
+# Usage: sbatch mlmt-configs/math/submit_mlmt.sbatch <config_script_path> [extra_args...]
+CONFIG_SCRIPT=$1
+shift # Shift to get the rest of the arguments
 
 echo "Launching training with config: $CONFIG_SCRIPT"
-bash "$CONFIG_SCRIPT"
+bash "$CONFIG_SCRIPT" "$@"
 

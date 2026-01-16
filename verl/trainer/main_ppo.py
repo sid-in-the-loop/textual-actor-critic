@@ -70,9 +70,29 @@ class TaskRunner:
         mlmt_enabled = config.get('mlmt_rl', {}).get('enable', False)
         shared_actor = config.get('mlmt_rl', {}).get('shared_actor', True)
 
+        # Apply SCoRe overrides BEFORE env creation to ensure batch size consistency
+        score_mode_cfg = config.get("mlmt_rl", {}).get("score_mode", {})
+        if bool(score_mode_cfg.get("enable", False)):
+            with open_dict(config):
+                batch_size = int(score_mode_cfg.get("batch_size", config.data.train_batch_size))
+                config.data.train_batch_size = batch_size
+                config.data.gen_batch_size = batch_size
+                config.data.random_sample_each_get = True
+                print(f"[SCoRe] Early override: train_batch_size set to {batch_size} for environment consistency.")
+
         with open_dict(config):
             if mlmt_enabled:
                 mlmt_cfg = config.mlmt_rl
+                stage_cfg = mlmt_cfg.get("stage_control", {})
+                if not stage_cfg:
+                    stage_cfg = {"stage_id": 1}
+                stage_cfg.setdefault("stage_id", 1)
+                stage_cfg.setdefault("beta2", 0.0)
+                stage_cfg.setdefault("beta1", 0.0)
+                stage_cfg.setdefault("beta_L", config.algorithm.kl_ctrl.get("kl_coef", 0.0))
+                stage_cfg.setdefault("beta_H", 0.0)
+                stage_cfg.setdefault("alpha", 0.0)
+                mlmt_cfg["stage_control"] = stage_cfg
                 low_model_path = mlmt_cfg.low_level.get("model_path") or config.actor_rollout_ref.model.path
                 config.actor_rollout_ref.model.path = low_model_path
 
@@ -307,12 +327,30 @@ class TaskRunner:
         from verl.utils.dataset.rl_dataset import collate_fn
 
         train_dataset = create_rl_dataset(config.data.train_files, config.data, tokenizer, processor)
+
+        # --- MODIFICATION: Stage I Downsampling for SCoRe regime ---
+        if mlmt_enabled and config.mlmt_rl.stage_control.get("stage_id") == 1:
+            downsample_size = 240
+            if len(train_dataset) > downsample_size:
+                import random
+                from torch.utils.data import Subset
+                subset_seed = config.data.get("seed", 42)
+                rng = random.Random(subset_seed)
+                # Sample unique indices for the Stage I pool
+                indices = rng.sample(range(len(train_dataset)), downsample_size)
+                train_dataset = Subset(train_dataset, indices)
+                print(f"[SCoRe] Stage I: Downsampled training pool to {downsample_size} unique samples (seed={subset_seed}).")
+
         val_dataset = None
         if config.data.get('val_files'):
             val_dataset = create_rl_dataset(config.data.val_files, config.data, tokenizer, processor)
         else:
             val_dataset = None
         train_sampler = create_rl_sampler(config.data, train_dataset)
+        mlmt_stage_cfg = None
+        if config.get("mlmt_rl", {}).get("enable", False):
+            mlmt_stage_cfg = config.mlmt_rl.get("stage_control")
+
         trainer = RayPPOTrainer(
             config=config,
             tokenizer=tokenizer,
@@ -334,6 +372,7 @@ class TaskRunner:
             openai_agent=openai_agent,
             high_level_tokenizer=high_tokenizer,
             shared_actor=shared_actor,
+            mlmt_stage_cfg=mlmt_stage_cfg,
         )
         trainer.init_workers()
         trainer.fit()

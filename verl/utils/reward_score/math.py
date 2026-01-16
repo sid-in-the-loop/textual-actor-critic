@@ -216,7 +216,7 @@ def compute_score(solution_str, ground_truth, extra_info=None, use_semantic: boo
             if is_correct:
                 return 1.0
         except:
-            pass
+            print(f"Semantic evaluation failed")
 
     # 2. Rule-based evaluation path (fallback)
     try:

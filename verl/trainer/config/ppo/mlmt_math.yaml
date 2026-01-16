@@ -73,11 +73,27 @@ env:
   rollout:
     n: 8 # Matches rollout.n
 
-# MLMT-RL Specific Knobs
-mlmt_enabled: true
+# MLMT-RL Configuration
+mlmt_rl:
+  enable: true
+  shared_actor: true
+  stage_control:
+    stage_id: 1      # Start in Stage I: Final-Turn Optimization only
+    beta2: 0.05      # Stage I: Strong "anti-collapse" KL penalty on Turn 1
+    beta1: 0.01      # Stage II: Standard KL penalty on Turn 1
+    beta_L: 0.01     # Revision KL penalty (pi_L(y2) || pi_ref)
+    alpha: 1.0       # Stage II: Progress shaping bonus coefficient α(r2 - r1)
+    schedule:        # Optional: automated stage switching
+      - step: 50
+        stage_id: 2
+        beta1: 0.01
+        alpha: 1.0
+
+# Legacy/Extra Knobs (Optional)
 mlmt_lambda: 0.1
 stop_value_gradients: true
-mlmt_use_symmetric_rewards: false # Reverted to 0/1 as per user request
+mlmt_use_symmetric_rewards: false
+
 
 
 
