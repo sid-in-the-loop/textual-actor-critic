@@ -35,6 +35,7 @@ from agent_system.critique.rule_reward_new import *
 from agent_system.belief_calculator import BeliefCalculator
 from typing import List, Dict
 from tensordict import TensorDict
+from concurrent.futures import ThreadPoolExecutor
 import time
 import sys
 import asyncio
@@ -67,6 +68,9 @@ class TrajectoryCollector:
         if self.use_llm_success_eval:
             eval_cfg = self.mlmt_cfg.get("llm_eval", {})
             self.llm_success_evaluator = LLMSuccessEvaluator(eval_cfg)
+        
+        # Initialize executor for async evaluations
+        self.executor = ThreadPoolExecutor(max_workers=2) # One for Turn 1, one for Turn 3
 
     def preprocess_single_sample(
         self,
@@ -557,17 +561,23 @@ class TrajectoryCollector:
         )
         return gen_batch_output
 
-    def _log_trajectories(self, log_data: List[Dict], mode: str = "mlmt"):
-        """Log detailed trajectory information to a JSONL file."""
+    def _log_trajectories(self, log_data: List[Dict], mode: str = "mlmt", global_steps: int = 0):
+        """Log detailed trajectory information to a JSONL file with filtering and organized structure."""
         try:
-            log_dir = "logs/generations"
+            # Filter for specific steps as requested by user
+            log_steps = [1, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550]
+            if global_steps not in log_steps:
+                return
+
+            run_name = self.config.trainer.get("experiment_name", "unknown_run")
+            log_dir = os.path.join("logs/trajectories", run_name)
             os.makedirs(log_dir, exist_ok=True)
-            timestamp = time.strftime("%Y%m%d_%H%M%S")
-            log_path = os.path.join(log_dir, f"{mode}_generations_{timestamp}.jsonl")
+            
+            log_path = os.path.join(log_dir, f"roll_{global_steps}.jsonl")
             
             with open(log_path, "a") as f:
                 for entry in log_data:
-                    f.write(json.dumps(entry) + "\n")
+                    f.write(json.dumps(entry, ensure_ascii=False) + "\n")
         except Exception as e:
             print(f"⚠️ [Logging] Failed to log trajectories: {e}")
 
@@ -664,8 +674,13 @@ class TrajectoryCollector:
                 - Shape: (batch_size,), dtype: object (UUID strings)
                 - Each element uniquely identifies one environment's trajectory (different from uid which groups trajectories by question)
         """
+        # Calculate how many unique environment instances we need
+        num_envs_needed = len(gen_batch.batch['input_ids'])
+        if self.config.env.rollout.n > 0 and is_train:
+            num_envs_needed = num_envs_needed // self.config.env.rollout.n
+
         # Initial observations from the environment
-        obs, infos = envs.reset()
+        obs, infos = envs.reset(num=num_envs_needed)
 
         # Initialize trajectory collection
         lenght_obs = len(obs['text']) if obs['text'] is not None else len(obs['image'])
@@ -1129,6 +1144,7 @@ class TrajectoryCollector:
             high_actor_rollout_wg=None,
             openai_agent=None,
             global_steps=0,
+            reg_ref_solver_wg=None,
             ) -> DataProto:
         """
         MLMT-RL three-turn loop:
@@ -1143,7 +1159,8 @@ class TrajectoryCollector:
             prepare_mlmt_refinement_prompt,
             prepare_mlmt_code_turn1_prompt,
             prepare_mlmt_code_feedback_prompt,
-            prepare_mlmt_code_refinement_prompt
+            prepare_mlmt_code_refinement_prompt,
+            extract_math_final_answer
         )
 
         # Choose actor workers
@@ -1179,7 +1196,7 @@ class TrajectoryCollector:
         is_code = 'mbpp' in data_sources[0].lower() or 'code' in data_sources[0].lower()
 
         # MLMT-RL specific configuration overrides
-        self.use_llm_success_eval = False  # Disable LLM Judge for rewards
+        self.use_llm_success_eval = True  # Enable LLM Judge for rewards
         
         # Turn 1: Solver initial attempt z
         # Prepare prompts for Turn 1
@@ -1221,6 +1238,8 @@ class TrajectoryCollector:
         batch_input_t1.meta_info = gen_batch.meta_info
         # Set branching multiplicity for Turn 1
         batch_input_t1.meta_info['n'] = n
+        # Fix truncation by setting max_tokens for Turn 1
+        batch_input_t1.meta_info['max_tokens'] = self.config.data.max_response_length
         
         env_name = 'Code' if is_code else 'Math'
         print(f"[MLMT Loop] Step {global_steps} ({env_name}): Generating initial solutions z (n={n})...")
@@ -1265,13 +1284,26 @@ class TrajectoryCollector:
             from verl.utils.reward_score.math import compute_score
             for z, gt in zip(z_responses, ground_truths):
                 try:
-                    score = compute_score(solution_str=z, ground_truth_str=gt)
+                    # Disable redundant semantic eval in compute_score since we use custom LLM judge
+                    score = compute_score(solution_str=z, ground_truth_str=gt, use_semantic=False)
                     turn1_correctness.append(float(score))
                 except Exception:
                     turn1_correctness.append(0.0)
             turn1_tests_passed = [bool(c) for c in turn1_correctness]
             turn1_pass_rates = [float(c) for c in turn1_correctness]
             turn1_failed_tests = ["" for _ in turn1_correctness]
+
+        # --- LLM Judge Evaluation for Turn 1 (autoritative for rewards) ---
+        llm_turn1_future = None
+        if self.use_llm_success_eval and self.llm_success_evaluator is not None:
+            try:
+                print(f"🤖 [LLM Judge] Starting async evaluation for {total_samples} initial attempts (Turn 1)...")
+                llm_turn1_future = self.executor.submit(
+                    self.llm_success_evaluator.evaluate_batch, 
+                    questions, z_responses, ground_truths=ground_truths
+                )
+            except Exception as exc:
+                print(f"⚠️ Failed to submit Turn 1 LLM evaluation: {exc}")
 
         # Turn 2: Feedback policy g (Mentor)
         if is_code:
@@ -1333,21 +1365,33 @@ class TrajectoryCollector:
         
         # For multi-turn feedback, we must remove the n=1 override as verl dispatcher only accepts DataProto
         t2_start = time.time()
-        batch_output_t2 = high_actor_rollout_wg.generate_sequences(batch_input_t2)
-        print(f"⏱️ Turn 2 Generation took {time.time() - t2_start:.2f}s")
-
-        # If n > 1, the worker generated n feedbacks for each input solution.
-        # We only need 1-to-1 mapping, so we take the first feedback of each group.
-        if n > 1:
-            batch_output_t2 = batch_output_t2[0:len(batch_output_t2):n]
-            
-        g_feedbacks = high_tokenizer.batch_decode(batch_output_t2.batch['responses'], skip_special_tokens=True)
+        if self.score_mode_enabled:
+            print(f"⏩ [Score Mode] Bypassing Turn 2 feedback generation (fixed empty string)")
+            # In Score Mode, Turn 2 is not a model generation phase but a fixed empty string feedback
+            g_feedbacks = [""] * total_samples
+            # Create dummy output to satisfy subsequent processing
+            batch_output_t2 = DataProto(batch=batch_input_t2.batch.clone())
+            # responses shape (batch, 1), values 0
+            batch_output_t2.batch['responses'] = torch.zeros((batch_input_t2.batch['input_ids'].shape[0], 1), 
+                                                           dtype=torch.long, 
+                                                           device=batch_input_t2.batch['input_ids'].device)
+        else:
+            batch_output_t2 = high_actor_rollout_wg.generate_sequences(batch_input_t2)
+            # If n > 1, the worker generated n feedbacks for each input solution.
+            # We only need 1-to-1 mapping, so we take the first feedback of each group.
+            if n > 1:
+                batch_output_t2 = batch_output_t2[0:len(batch_output_t2):n]
+            g_feedbacks = high_tokenizer.batch_decode(batch_output_t2.batch['responses'], skip_special_tokens=True)
+        
+        print(f"⏱️ Turn 2 Generation took {time.time() - t2_start:.4f}s")
         
         # Turn 3: Refinement policy y_hat
         if is_code:
             turn3_prompts = [prepare_mlmt_code_refinement_prompt(q, z, g) for q, z, g in zip(questions, z_responses, g_feedbacks)]
         else:
-            turn3_prompts = [prepare_mlmt_refinement_prompt(q, z, g) for q, z, g in zip(questions, z_responses, g_feedbacks)]
+            # Extract final answers for Turn 3 to make the prompt more concise
+            turn1_final_answers = [extract_math_final_answer(z) for z in z_responses]
+            turn3_prompts = [prepare_mlmt_refinement_prompt(q, ans, g) for q, ans, g in zip(questions, turn1_final_answers, g_feedbacks)]
         turn3_obs = {'text': turn3_prompts, 'image': None, 'anchor': None}
         turn3_batch = self.preprocess_batch(gen_batch=dummy_gen_batch, obs=turn3_obs, tokenizer=low_tokenizer)
         
@@ -1401,8 +1445,74 @@ class TrajectoryCollector:
             
         y_hat_responses = low_tokenizer.batch_decode(batch_output_t3.batch['responses'], skip_special_tokens=True)
         
-        # Get rewards from environment for the final refined responses
+        # --- LLM Judge Evaluation for Turn 3 (authoritative for rewards) ---
+        llm_turn3_future = None
+        if self.use_llm_success_eval and self.llm_success_evaluator is not None:
+            try:
+                print(f"🤖 [LLM Judge] Starting async evaluation for {total_samples} revised attempts (Turn 3)...")
+                llm_turn3_future = self.executor.submit(
+                    self.llm_success_evaluator.evaluate_batch,
+                    questions, y_hat_responses, ground_truths=ground_truths
+                )
+            except Exception as exc:
+                print(f"⚠️ Failed to submit Turn 3 LLM evaluation: {exc}")
+
+        # Get rewards from environment for the final refined responses (Rule-based / Sandbox)
         _, rewards, dones, infos = envs.step(y_hat_responses)
+
+        # --- Await LLM Judge results ---
+        llm_turn1_scores = np.zeros(total_samples, dtype=np.float32)
+        llm_turn3_scores = np.zeros(total_samples, dtype=np.float32)
+        
+        eval_start = time.time()
+        if llm_turn1_future is not None:
+            try:
+                t1_eval = llm_turn1_future.result()
+                if t1_eval:
+                    llm_turn1_scores = np.array([res.get('success', 0.0) for res in t1_eval], dtype=np.float32)
+            except Exception as exc:
+                print(f"⚠️ Async LLM evaluation for Turn 1 failed: {exc}")
+        
+        if llm_turn3_future is not None:
+            try:
+                t3_eval = llm_turn3_future.result()
+                if t3_eval:
+                    llm_turn3_scores = np.array([res.get('success', 0.0) for res in t3_eval], dtype=np.float32)
+            except Exception as exc:
+                print(f"⚠️ Async LLM evaluation for Turn 3 failed: {exc}")
+        
+        if self.use_llm_success_eval:
+            print(f"⏱️ Total time spent waiting for Async LLM Judge: {time.time() - eval_start:.2f}s")
+
+        # --- MODIFICATION: Dual Rollout for Contrastive Regularization ---
+        score_ref_rewards = np.zeros(total_samples, dtype=np.float32)
+        if reg_ref_solver_wg is not None:
+            print(f"🕵️ [Contrastive Reg] Performing reference Solver rollout for Turn 3...")
+            # Generate Turn 3 responses using the reference Solver
+            batch_output_t3_ref = reg_ref_solver_wg.generate_sequences(batch_input_t3)
+            
+            # Again, slice to maintain 1-to-1 mapping if n > 1
+            if n > 1:
+                batch_output_t3_ref = batch_output_t3_ref[0:len(batch_output_t3_ref):n]
+                
+            y_hat_responses_ref = low_tokenizer.batch_decode(batch_output_t3_ref.batch['responses'], skip_special_tokens=True)
+            
+            # Use LLM Judge for reference rewards to ensure parity with the current Actor evaluation
+            if self.use_llm_success_eval:
+                try:
+                    reg_eval = self.llm_success_evaluator.evaluate_batch(questions, y_hat_responses_ref, ground_truths=ground_truths)
+                    if reg_eval:
+                        score_ref_rewards = np.array([res.get('success', 0.0) for res in reg_eval], dtype=np.float32)
+                except Exception as exc:
+                    print(f"⚠️ LLM success evaluation failed for Reference Solver: {exc}")
+                    # Fallback to rules if LLM fails
+                    ref_rewards = self.env.compute_score(y_hat_responses_ref, ground_truths, use_semantic=False)
+                    score_ref_rewards = np.array(ref_rewards, dtype=np.float32)
+            else:
+                ref_rewards = self.env.compute_score(y_hat_responses_ref, ground_truths, use_semantic=False)
+                score_ref_rewards = np.array(ref_rewards, dtype=np.float32)
+
+            print(f"📊 [Contrastive Reg] Reference Solver Mean Reward: {score_ref_rewards.mean():.4f}")
 
         turn3_tests_passed = []
         turn3_pass_rates = []
@@ -1450,61 +1560,16 @@ class TrajectoryCollector:
             for i in range(total_samples)
         ]
         
-        # Success metrics
-        episode_rewards = rewards.numpy() if isinstance(rewards, torch.Tensor) else rewards
+        # Success metrics (Using LLM Judge as the final word)
+        episode_rewards = llm_turn3_scores
         
-        # --- Consolidated Trajectory Logging ---
-        try:
-            import json
-            import os
-            trajectory_log_dir = "/home/ssmurali/mlmt/logs/trajectories"
-            os.makedirs(trajectory_log_dir, exist_ok=True)
-            log_path = os.path.join(trajectory_log_dir, f"roll_{global_steps}.jsonl")
-            with open(log_path, "a") as f:
-                for i in range(total_samples):
-                    data = {
-                        "question": questions[i],
-                        "ground_truth": ground_truths[i],
-                        "turn1_z": z_responses[i],
-                        "turn1_correct": bool(turn1_correctness[i]),
-                        "turn2_g": g_feedbacks[i],
-                        "turn3_y_hat": y_hat_responses[i],
-                        "turn3_correct": bool(turn3_correctness[i]),
-                        "reward": float(episode_rewards[i])
-                    }
-                    if is_code:
-                        data["turn1_tests_passed"] = bool(turn1_tests_passed[i])
-                        data["turn3_tests_passed"] = bool(turn3_tests_passed[i])
-                        data["turn1_pass_rate"] = float(turn1_pass_rates[i])
-                        data["turn3_pass_rate"] = float(turn3_pass_rates[i])
-                        if turn1_failed_tests[i]:
-                            data["turn1_failed_tests"] = turn1_failed_tests[i]
-                        if turn3_failed_tests[i]:
-                            data["turn3_failed_tests"] = turn3_failed_tests[i]
-                    f.write(json.dumps(data) + "\n")
-        except Exception as e:
-            print(f"Trajectory logging failed: {e}")
-        
-        episode_lengths = np.array([3] * total_samples)
+        # Calculate episode lengths based on active turns
+        if self.score_mode_enabled:
+            # Turns 1 and 3 are active (Turn 2 is bypassed)
+            episode_lengths = np.array([2] * total_samples)
+        else:
+            episode_lengths = np.array([3] * total_samples)
         traj_uid_arr = np.array(traj_uids, dtype=object)
-        
-        # --- MODIFICATION: LLM judge for Turn 1 and Turn 3 ---
-        llm_turn1_scores = np.zeros(total_samples, dtype=np.float32)
-        llm_turn3_scores = np.zeros(total_samples, dtype=np.float32)
-        
-        if self.use_llm_success_eval and self.llm_success_evaluator is not None:
-            try:
-                print(f"🤖 [LLM Judge] Evaluating {total_samples} initial attempts (Turn 1)...")
-                t1_eval = self.llm_success_evaluator.evaluate_batch(questions, z_responses, ground_truths=ground_truths)
-                if t1_eval:
-                    llm_turn1_scores = np.array([res.get('success', 0.0) for res in t1_eval], dtype=np.float32)
-                
-                print(f"🤖 [LLM Judge] Evaluating {total_samples} revised attempts (Turn 3)...")
-                t3_eval = self.llm_success_evaluator.evaluate_batch(questions, y_hat_responses, ground_truths=ground_truths)
-                if t3_eval:
-                    llm_turn3_scores = np.array([res.get('success', 0.0) for res in t3_eval], dtype=np.float32)
-            except Exception as exc:
-                print(f"⚠️ LLM success evaluation failed: {exc}")
 
         # Process Turn 1
         t1_batch_full = turn1_batch.union(batch_output_t1)
@@ -1531,25 +1596,33 @@ class TrajectoryCollector:
             t1_list[i]['uid'] = f"{base_uids[i]}_turn1"
             t1_list[i]['traj_uid'] = traj_uids[i]
             t1_list[i]['episode_rewards'] = float(episode_rewards[i]) 
-            t1_list[i]['episode_lengths'] = 3.0 
+            t1_list[i]['episode_lengths'] = 2.0 if self.score_mode_enabled else 3.0 
             t1_list[i]['value_text'] = ""
             t1_list[i]['llm_success'] = float(llm_turn1_scores[i])
-            # Use sandbox score for primary accuracy logging (episode reward)
-            t1_list[i]['score_turn_reward'] = float(turn1_correctness[i])
-            t1_list[i]['score_turn1_reward'] = float(turn1_correctness[i])
+            # Use LLM Judge score for primary accuracy logging and rewards
+            t1_list[i]['score_turn_reward'] = float(llm_turn1_scores[i])
+            t1_list[i]['score_turn1_reward'] = float(llm_turn1_scores[i])
             
             # Turn 2
             t2_list[i]['turn'] = 2
-            t2_list[i]['active_masks'] = True
+            t2_list[i]['active_masks'] = False if self.score_mode_enabled else True # Disable RL loss for Turn 2 in Score Mode
             t2_list[i]['uid'] = f"{base_uids[i]}_turn2"
             t2_list[i]['traj_uid'] = traj_uids[i]
             t2_list[i]['episode_rewards'] = float(episode_rewards[i])
-            t2_list[i]['episode_lengths'] = 3.0
+            t2_list[i]['episode_lengths'] = 2.0 if self.score_mode_enabled else 3.0
             t2_list[i]['value_text'] = value_texts[i]
             t2_list[i]['llm_success'] = float(llm_turn3_scores[i]) # Turn 2 is judged by Turn 3 outcome
-            # Use sandbox score for primary accuracy logging
-            t2_list[i]['score_turn_reward'] = float(turn3_correctness[i])
-            t2_list[i]['score_turn1_reward'] = float(turn1_correctness[i])
+            
+            # Use LLM Judge score for primary accuracy logging
+            # Apply Contrastive Reward Equation for High-Level (Guider) update: (1+lambda)*R_curr - lambda*R_ref
+            if reg_ref_solver_wg is not None:
+                reg_lambda = self.mlmt_cfg.get('reg_lambda', 1.0)
+                contrastive_reward = (1.0 + reg_lambda) * llm_turn3_scores[i] - (reg_lambda * score_ref_rewards[i])
+                t2_list[i]['score_turn_reward'] = float(contrastive_reward)
+            else:
+                t2_list[i]['score_turn_reward'] = float(llm_turn3_scores[i])
+                
+            t2_list[i]['score_turn1_reward'] = float(llm_turn1_scores[i])
             
             # Turn 3
             t3_list[i]['turn'] = 3
@@ -1557,15 +1630,16 @@ class TrajectoryCollector:
             t3_list[i]['uid'] = f"{base_uids[i]}_turn3"
             t3_list[i]['traj_uid'] = traj_uids[i]
             t3_list[i]['episode_rewards'] = float(episode_rewards[i])
-            t3_list[i]['episode_lengths'] = 3.0
+            t3_list[i]['episode_lengths'] = 2.0 if self.score_mode_enabled else 3.0
             t3_list[i]['value_text'] = ""
             t3_list[i]['llm_success'] = float(llm_turn3_scores[i])
-            # Use sandbox score for primary accuracy logging
-            t3_list[i]['score_turn_reward'] = float(turn3_correctness[i])
-            t3_list[i]['score_turn1_reward'] = float(turn1_correctness[i])
+            # Use LLM Judge score for primary accuracy logging
+            t3_list[i]['score_turn_reward'] = float(llm_turn3_scores[i])
+            t3_list[i]['score_turn1_reward'] = float(llm_turn1_scores[i])
 
             # Maintain DataProto consistency by adding code-specific fields to ALL turns
             for turn_dict in [t1_list[i], t2_list[i], t3_list[i]]:
+                turn_dict['score_ref_reward'] = float(score_ref_rewards[i])
                 if is_code:
                     turn_dict['turn1_tests_passed'] = bool(turn1_tests_passed[i])
                     turn_dict['turn3_tests_passed'] = bool(turn3_tests_passed[i])
@@ -1575,7 +1649,8 @@ class TrajectoryCollector:
                     turn_dict['turn3_pass_rate'] = float(turn3_pass_rates[i])
             
             total_batch_list[i].append(t1_list[i])
-            total_batch_list[i].append(t2_list[i])
+            if not self.score_mode_enabled:
+                total_batch_list[i].append(t2_list[i])
             total_batch_list[i].append(t3_list[i])
             
         success = {
@@ -1605,7 +1680,7 @@ class TrajectoryCollector:
                     log_entries[-1]["turn1_failed_tests"] = turn1_failed_tests[i]
                 if turn3_failed_tests[i]:
                     log_entries[-1]["turn3_failed_tests"] = turn3_failed_tests[i]
-        self._log_trajectories(log_entries, mode="mlmt")
+        self._log_trajectories(log_entries, mode="mlmt", global_steps=global_steps)
         
         print(f"⏱️ Total MLMT Rollout Loop took {time.time() - loop_start:.2f}s")
         return total_batch_list, episode_rewards, episode_lengths, success, traj_uid_arr, []
@@ -1698,7 +1773,8 @@ class TrajectoryCollector:
         turn1_correct = []
         for z, gt in zip(turn1_responses, ground_truths):
             try:
-                score = compute_score(solution_str=z, ground_truth_str=gt)
+                # Disable redundant semantic eval
+                score = compute_score(solution_str=z, ground_truth_str=gt, use_semantic=False)
                 turn1_correct.append(float(score))
             except:
                 turn1_correct.append(0.0)
@@ -1796,7 +1872,7 @@ class TrajectoryCollector:
                 "turn2_score": float(llm_success_scores[i]),
                 "final_reward": float(episode_rewards[i])
             })
-        self._log_trajectories(log_entries, mode="score")
+        self._log_trajectories(log_entries, mode="mlmt", global_steps=global_steps)
 
         print(f"[SCoRe] ⏱️ Total two-turn loop time: {time.time() - loop_start:.2f}s")
         return total_batch_list, episode_rewards, episode_lengths, success, traj_uids
@@ -1811,6 +1887,7 @@ class TrajectoryCollector:
             openai_agent=None,
             high_actor_rollout_wg=None,
             global_steps=0,
+            reg_ref_solver_wg=None,
             ) -> DataProto:
         """
         Select and run the appropriate rollout loop (dynamic or vanilla).
@@ -1843,6 +1920,7 @@ class TrajectoryCollector:
                 high_actor_rollout_wg=high_actor_rollout_wg,
                 openai_agent=openai_agent,
                 global_steps=global_steps,
+                reg_ref_solver_wg=reg_ref_solver_wg,
             )
         elif self.score_mode_enabled and is_train:
             total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid = \

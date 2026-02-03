@@ -828,10 +828,53 @@ class ActorRolloutRefWorker(Worker):
 
     @register(dispatch_mode=Dispatch.ONE_TO_ALL)
     def load_checkpoint(self, local_path, hdfs_path=None, del_local_after_load=False):
+        if local_path is None:
+            return
+
         if self._is_offload_param:
             load_fsdp_model_to_gpu(self.actor_module_fsdp)
 
-        self.checkpoint_manager.load_checkpoint(local_path=local_path, hdfs_path=hdfs_path, del_local_after_load=del_local_after_load)
+        # Check if sharded weights exist. If not, try loading LoRA adapter only.
+        import os
+        from safetensors.torch import load_file
+        from peft import set_peft_model_state_dict
+        import torch.distributed as dist
+        
+        # Heuristic check for sharded weight file for current rank
+        shard_file = f"model_world_size_{dist.get_world_size()}_rank_{dist.get_rank()}.pt"
+        shard_path = os.path.join(local_path, shard_file)
+        
+        if os.path.exists(shard_path):
+            if dist.get_rank() == 0:
+                print(f"🚀 [rank-0]: Sharded weights found. Loading full checkpoint from {local_path}")
+            self.checkpoint_manager.load_checkpoint(local_path=local_path, hdfs_path=hdfs_path, del_local_after_load=del_local_after_load)
+        else:
+            lora_path = os.path.join(local_path, "lora_adapter", "adapter_model.safetensors")
+            if self._is_lora and os.path.exists(lora_path):
+                if dist.get_rank() == 0:
+                    print(f"🚀 [rank-0]: Sharded weights missing. Loading LoRA adapter from {lora_path}")
+                
+                # Load adapter weights (all ranks load to populate their shards)
+                adapter_weights = load_file(lora_path, device='cpu')
+                
+                from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
+                from torch.distributed.fsdp import StateDictType, FullStateDictConfig
+                
+                # Use FULL_STATE_DICT to load weights into the sharded model
+                # All ranks have the full dict, so rank0_only=False is used
+                load_policy = FullStateDictConfig(offload_to_cpu=True, rank0_only=False)
+                with FSDP.state_dict_type(self.actor_module_fsdp, StateDictType.FULL_STATE_DICT, load_policy):
+                    # set_peft_model_state_dict handles the key prefixing for the underlying model
+                    set_peft_model_state_dict(self.actor_module, adapter_weights)
+                
+                # Still try to load extra state (scheduler/rng) if they exist
+                try:
+                    self.checkpoint_manager.load_checkpoint(local_path=local_path, hdfs_path=hdfs_path, del_local_after_load=del_local_after_load)
+                except Exception:
+                    if dist.get_rank() == 0:
+                        print(f"ℹ️ [rank-0]: Optimizer/Scheduler state not found in {local_path}. Starting fresh from adapter.")
+            else:
+                raise FileNotFoundError(f"Neither sharded weights nor LoRA adapter found in {local_path}")
 
         if self._is_offload_param:
             offload_fsdp_model_to_cpu(self.actor_module_fsdp)

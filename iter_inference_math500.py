@@ -99,9 +99,11 @@ def extract_question(prompt_col):
 def run_iter_inference():
     parser = argparse.ArgumentParser(description="Iterative Adaptive Multi-turn Inference for Math500")
     parser.add_argument("--base_model", type=str, default="meta-llama/Llama-3.2-1B-Instruct", 
-                        help="Base model (always used for High Level Guider)")
+                        help="Base model (High Level Guider)")
     parser.add_argument("--model", type=str, default="meta-llama/Llama-3.2-1B-Instruct", 
-                        help="Actor model (Low Level - can be adapter or base)")
+                        help="Actor model (Low Level)")
+    parser.add_argument("--guider_model", type=str, default=None,
+                        help="Guider model (High Level). Defaults to base_model if not set.")
     parser.add_argument("--data_path", type=str, default="/home/ssmurali/mlmt/data/mlmt/math/test.parquet", help="Path to Math500 parquet")
     parser.add_argument("--input_path", type=str, default=None, help="Path to previous results (CSV or JSONL) to resume from")
     parser.add_argument("--turns", type=int, default=3, help="Max total number of turns (T = 2K+1)")
@@ -112,7 +114,6 @@ def run_iter_inference():
     parser.add_argument("--hf_token", type=str, default=None, help="Hugging Face API token")
     parser.add_argument("--openai_api_key", type=str, required=True, help="OpenAI API key for semantic judge")
     parser.add_argument("--workers", type=int, default=32, help="Parallel workers for OpenAI judge")
-    parser.add_argument("--tp", type=int, default=1, help="Tensor parallel size")
     args = parser.parse_args()
 
     if args.hf_token:
@@ -123,23 +124,50 @@ def run_iter_inference():
     if args.output_path is None:
         args.output_path = f"results/math500_T{args.turns}_iterative_results.jsonl"
 
-    use_lora = (args.model != args.base_model)
+    use_actor_lora = False
+    use_guider_lora = False
     
-    print(f"🚀 Initializing vLLM in bfloat16 with Base: {args.base_model} (TP={args.tp})")
-    llm = LLM(
-        model=args.base_model, 
-        enable_lora=use_lora, 
-        max_loras=1 if use_lora else 0,
-        trust_remote_code=True, 
-        gpu_memory_utilization=args.gpu_memory_utilization,
-        tensor_parallel_size=args.tp,
-        dtype="bfloat16" # Ensure bf16 parity with inference_math500.py
-    )
-    
+    # Check Actor
+    if args.model != args.base_model and os.path.isdir(args.model) and os.path.exists(os.path.join(args.model, "adapter_config.json")):
+        use_actor_lora = True
+        print(f"Detected Actor LoRA adapter at {args.model}")
+        
+    # Check Guider
+    if args.guider_model and args.guider_model != args.base_model and os.path.isdir(args.guider_model) and os.path.exists(os.path.join(args.guider_model, "adapter_config.json")):
+        use_guider_lora = True
+        print(f"Detected Guider LoRA adapter at {args.guider_model}")
+
+    if not getattr(args, 'use_separate_llm', False):
+        max_loras = int(use_actor_lora) + int(use_guider_lora)
+        print(f"🚀 Initializing vLLM (Single Instance) with Base: {args.base_model} | Max LoRAs: {max_loras}")
+        llm = LLM(
+            model=args.base_model, 
+            enable_lora=(max_loras > 0), 
+            max_loras=max(max_loras, 1),
+            dtype="bfloat16",
+            gpu_memory_utilization=args.gpu_memory_utilization,
+        )
+        actor_llm = llm
+        guider_llm = llm
+        actor_lora = LoRARequest("actor_lora", 1, args.model) if use_actor_lora else None
+        guider_lora = LoRARequest("guider_lora", 2, args.guider_model) if use_guider_lora else None
+    else:
+        print(f"🚀 Initializing vLLM (Dual Instances)")
+        
+        actor_llm = LLM(
+            model=args.model, 
+            dtype="bfloat16",
+        )
+        
+        guider_llm = LLM(
+            model=args.base_model, 
+            dtype="bfloat16",
+        )
+        actor_lora = None
+
     tokenizer = AutoTokenizer.from_pretrained(args.base_model)
-    actor_lora = LoRARequest("actor_lora", 1, args.model) if use_lora else None
     
-    # Sampling params - matched with inference_math500.py
+    # Sampling params - Matched to your "worked before" script
     params_turn1 = SamplingParams(temperature=0.0, max_tokens=2048, n=1)
     params_turn_feedback = SamplingParams(temperature=args.temperature, max_tokens=512, n=1)
     params_turn_refine = SamplingParams(temperature=args.temperature, max_tokens=2048, n=1)
@@ -207,17 +235,12 @@ def run_iter_inference():
     else:
         print(f"Loading data: {args.data_path}")
         df = pd.read_parquet(args.data_path)
-        if args.num_samples:
-            df = df.head(args.num_samples)
+        if args.num_samples: df = df.head(args.num_samples)
         for i, row in df.iterrows():
             samples.append({
-                "index": i,
-                "question": extract_question(row['prompt']),
+                "index": i, "question": extract_question(row['prompt']),
                 "ground_truth": row['reward_model']['ground_truth'],
-                "turns": {},
-                "resolved_at_turn": None,
-                "final_score": 0.0,
-                "active": True
+                "turns": {}, "resolved_at_turn": None, "final_score": 0.0, "active": True
             })
 
     # Main iterative loop
@@ -253,8 +276,9 @@ def run_iter_inference():
             elif not is_actor_turn: current_params = params_turn_feedback
             else: current_params = params_turn_refine
 
-            current_lora = actor_lora if is_actor_turn else None
-            outputs = llm.generate(prompts, current_params, lora_request=current_lora)
+            current_llm = actor_llm if is_actor_turn else guider_llm
+            current_lora = actor_lora if is_actor_turn else guider_lora
+            outputs = current_llm.generate(prompts, current_params, lora_request=current_lora)
             responses = [out.outputs[0].text for out in outputs]
 
             for s, resp in zip(active_samples, responses):

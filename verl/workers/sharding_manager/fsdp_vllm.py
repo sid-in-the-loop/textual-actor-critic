@@ -126,31 +126,27 @@ class FSDPVLLMShardingManager(BaseShardingManager):
                         raise ValueError("To use layered_summon, you must make sure base-model is preloaded in vllm, e.g. let rollout.load_format=safetensors")
                     lora_params = layered_summon_lora_params(self.module)
                 else:
-                    with FSDP.summon_full_params(self.module, writeback=False):
-                        if self.base_sync_done:
-                            lora_params = get_peft_model_state_dict(self.module._fsdp_wrapped_module)
-                            lora_params = {name: param.full_tensor().detach().cpu() if hasattr(param, 'full_tensor') else param.detach().cpu() 
-                                        for name, param in lora_params.items()}
-                        else:
-                            # Optimize: Use summon_full_params instead of model.to('cpu')
-                            # Handle potential nested unsharding calls in MLMT multi-turn loops
-                            try:
-                                with FSDP.summon_full_params(self.module, writeback=False):
-                                    model_state = self.module._fsdp_wrapped_module.state_dict()
-                                    for name, param in model_state.items():
-                                        if 'lora_' in name or '_flat_param' in name:
-                                            continue
-                                        lora_params[name] = param.full_tensor().detach().cpu() if hasattr(param, 'full_tensor') else param.detach().cpu()
-                            except AssertionError as e:
-                                if "already unsharding parameters" in str(e):
-                                    # Already unsharded, collect directly
-                                    model_state = self.module._fsdp_wrapped_module.state_dict()
-                                    for name, param in model_state.items():
-                                        if 'lora_' in name or '_flat_param' in name:
-                                            continue
-                                        lora_params[name] = param.full_tensor().detach().cpu() if hasattr(param, 'full_tensor') else param.detach().cpu()
+                    try:
+                        with FSDP.summon_full_params(self.module, writeback=False):
+                            model_state = self.module._fsdp_wrapped_module.state_dict()
+                            for name, param in model_state.items():
+                                if 'lora_' in name or '_flat_param' in name:
+                                    continue
+                                # Ensure we have a plain tensor for vLLM
+                                if hasattr(param, 'full_tensor'):
+                                    lora_params[name] = param.full_tensor().detach().cpu()
                                 else:
-                                    raise e
+                                    lora_params[name] = param.detach().cpu()
+                    except AssertionError as e:
+                        if "already unsharding" in str(e) or "_is_root" in str(e):
+                            # Fallback: collect directly if FSDP is already in a state we can't 'summon' from
+                            model_state = self.module._fsdp_wrapped_module.state_dict()
+                            for name, param in model_state.items():
+                                if 'lora_' in name or '_flat_param' in name:
+                                    continue
+                                lora_params[name] = param.detach().cpu()
+                        else:
+                            raise e
                     torch.cuda.empty_cache()
             else:
                 if self.base_sync_done:
@@ -271,15 +267,49 @@ class FSDPVLLMShardingManager(BaseShardingManager):
         if peft_config:
             if self.base_sync_done:
                 lora_int_id=int(time.time_ns() % 0x7FFFFFFF)
+
+                def normalize_lora_key(name: str) -> str:
+                    """Try a few variants to match vLLM's expected LoRA key patterns."""
+                    variants = []
+                    # strip base_model.model.
+                    if name.startswith("base_model.model."):
+                        variants.append(name.removeprefix("base_model.model."))
+                    # strip base_model.
+                    if name.startswith("base_model."):
+                        variants.append(name.removeprefix("base_model."))
+                    # strip trailing .base_layer
+                    if name.endswith(".base_layer"):
+                        variants.append(name.removesuffix(".base_layer"))
+                    # fallback to original
+                    variants.append(name)
+                    # return first variant that actually changed the name (if any), else original
+                    for v in variants:
+                        if v != name:
+                            return v
+                    return name
+
+                # Normalize keys and ensure plain tensors (no DTensor) for vLLM
+                processed_params = {}
+                for k, v in updated_params.items():
+                    # Skip frozen base weights – vLLM already has the base model
+                    if ".base_layer." in k or k.endswith(".base_layer"):
+                        continue
+                    # Only send actual LoRA adapter params
+                    if "lora_" not in k:
+                        continue
+                    new_k = normalize_lora_key(k)
+                    tensor_v = v.full_tensor() if hasattr(v, "full_tensor") else v
+                    processed_params[new_k] = tensor_v
+
                 lora_reqest = TensorLoRARequest(
                     lora_name=f"{lora_int_id}",
                     lora_int_id=lora_int_id,
                     lora_path="simon_lora_path",
                     peft_config=asdict(peft_config),
-                    lora_tensors=updated_params,
+                    lora_tensors=processed_params,
                 )
                 self.inference_engine.llm_engine.add_lora(lora_reqest)
-                logger.info(f"vLLM load weights, loaded_params: {len(updated_params)}")
+                logger.info(f"vLLM load weights, loaded_params: {len(processed_params)}")
                 return
             else:
                 # First-time base model sync.

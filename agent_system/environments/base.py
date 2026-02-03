@@ -45,7 +45,7 @@ class EnvironmentManagerBase:
         self.projection_f = projection_f
         self.config = config
 
-    def reset(self) -> Dict[str, Any]:
+    def reset(self, num=None) -> Dict[str, Any]:
         """
         Reset all environments and return the initial observations.
         
@@ -55,7 +55,10 @@ class EnvironmentManagerBase:
           - 'image' (np.ndarray or torch.Tensor): The image observation as either a NumPy array or a PyTorch tensor.
           - 'anchor' (None or Any): Anchor observation without any histories or additional info. (for GiGPO only).
         """
-        obs, infos = self.envs.reset()
+        try:
+            obs, infos = self.envs.reset(num=num)
+        except TypeError:
+            obs, infos = self.envs.reset()
         return {'text': None, 'image': obs, 'anchor': None}, infos
     
     def step(self, text_actions: List[str]):

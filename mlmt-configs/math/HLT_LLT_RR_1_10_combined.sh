@@ -11,8 +11,12 @@ export OPENAI_API_KEY=${OPENAI_API_KEY}
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export WANDB_MODE=online
 
+if [ -z "${RUN_NAME:-}" ]; then
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 RUN_NAME="HLT_LLT_RR_1_10_combined_${TIMESTAMP}"
+else
+    echo "Resuming experiment: $RUN_NAME"
+fi
 LOG_DIR="logs/mlmt/math/${RUN_NAME}"
 mkdir -p "$LOG_DIR"
 
@@ -32,15 +36,16 @@ python -m verl.trainer.main_ppo \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=50 \
-    trainer.total_training_steps=500 \
+    trainer.resume_mode=auto \
+    trainer.total_training_steps=400 \
     +trainer.lora_only_save=false \
     actor_rollout_ref.model.path=$SHARED_MODEL \
     actor_rollout_ref.model.use_lora=false \
     actor_rollout_ref.model.lora_rank=0 \
     actor_rollout_ref.actor.ppo_mini_batch_size=128 \
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=4 \
-    actor_rollout_ref.actor.optim.lr=2e-6 \
-    actor_rollout_ref.actor.optim.total_training_steps=500 \
+    actor_rollout_ref.actor.optim.lr=5e-7 \
+    actor_rollout_ref.actor.optim.total_training_steps=400 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=4 \
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=4 \
     actor_rollout_ref.rollout.n=1 \
@@ -77,5 +82,4 @@ python -m verl.trainer.main_ppo \
     +mlmt_rl.stage_control.beta_L=0.01 \
     +mlmt_rl.stage_control.beta_H=0.0 \
     +mlmt_rl.stage_control.alpha=10.0 \
-    +mlmt_rl.stage_control.schedule="[{step:250,stage_id:2,beta2:0.0,beta1:0.01,beta_L:0.01,beta_H:0.0}]" \
-    2>&1 | tee ${LOG_DIR}/train.log
+    +mlmt_rl.stage_control.schedule="[{step:200,stage_id:2,beta2:0.0,beta1:0.01,beta_L:0.01,beta_H:0.0}]"

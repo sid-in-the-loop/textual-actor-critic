@@ -5,8 +5,8 @@
 #SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=184G
-#SBATCH --partition=preempt
-#SBATCH --time=20:00:00
+#SBATCH --partition=general
+#SBATCH --time=24:00:00
 #SBATCH --exclude=babel-s5-24,babel-s9-24,babel-w5-32,babel-x5-24,babel-y9-12
 source /home/ssmurali/miniconda3/etc/profile.d/conda.sh
 conda activate mlmt

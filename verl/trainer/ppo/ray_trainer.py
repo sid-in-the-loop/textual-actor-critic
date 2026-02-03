@@ -84,6 +84,7 @@ class Role(Enum):
     RewardModel = 5
     ActorRolloutRef = 6
     HighActorRollout = 7
+    RegRefSolver = 8
 
 
 @dataclass
@@ -149,13 +150,13 @@ class ResourcePoolManager:
     mapping: dict[Role, str]
     resource_pool_dict: dict[str, RayResourcePool] = field(default_factory=dict)
 
-    def create_resource_pool(self):
+    def create_resource_pool(self, max_colocate_count: int = 1):
         for resource_pool_name, process_on_nodes in self.resource_pool_spec.items():
             # max_colocate_count means the number of WorkerGroups (i.e. processes) in each RayResourcePool
             # For FSDP backend, we recommend using max_colocate_count=1 that merge all WorkerGroups into one.
             # For Megatron backend, we recommend using max_colocate_count>1
             # that can utilize different WorkerGroup for differnt models
-            resource_pool = RayResourcePool(process_on_nodes=process_on_nodes, use_gpu=True, max_colocate_count=1, name_prefix=resource_pool_name)
+            resource_pool = RayResourcePool(process_on_nodes=process_on_nodes, use_gpu=True, max_colocate_count=max_colocate_count, name_prefix=resource_pool_name)
             self.resource_pool_dict[resource_pool_name] = resource_pool
 
         self._check_resource_available()
@@ -579,12 +580,16 @@ class RayPPOTrainer:
                 f"(batch_size={self.score_mode_cfg.get('batch_size', config.data.train_batch_size)})"
             )
         self.mlmt_enabled = bool(self.mlmt_cfg.get("enable", False))
+        self.reg_enabled = bool(self.mlmt_cfg.get("reg_enabled", False))
+        self.reg_lambda = float(self.mlmt_cfg.get("reg_lambda", 0.1))
+        self.reg_gap = int(self.mlmt_cfg.get("reg_gap", 20))
+        self.reg_ref_weights = None
         self.low_freeze = bool(self.mlmt_cfg.get("low_level", {}).get("freeze", False))
         self.high_freeze = bool(self.mlmt_cfg.get("high_level", {}).get("freeze", False))
         self.value_worker = None
         self.value_cfg = None
         value_cfg_node = OmegaConf.select(self.config, "mlmt_rl.value_fn")
-        if self.mlmt_enabled and value_cfg_node is not None:
+        if self.mlmt_enabled and value_cfg_node is not None and not self.reg_enabled:
             from agent_system.value_function.roberta_worker import RobertaValueWorker
             value_cfg = OmegaConf.to_container(value_cfg_node, resolve=True)
             self.value_cfg = value_cfg
@@ -1159,7 +1164,10 @@ class RayPPOTrainer:
         1. Ray resource pools from configuration
         2. Worker groups for each role (actor, critic, etc.)
         """
-        self.resource_pool_manager.create_resource_pool()
+        max_colocate_count = 1
+        if self.reg_enabled:
+            max_colocate_count = 2
+        self.resource_pool_manager.create_resource_pool(max_colocate_count=max_colocate_count)
 
         self.resource_pool_to_cls = {pool: {} for pool in self.resource_pool_manager.resource_pool_dict.values()}
 
@@ -1192,7 +1200,10 @@ class RayPPOTrainer:
         # create reference policy if needed
         if self.use_reference_policy:
             resource_pool = self.resource_pool_manager.get_resource_pool(Role.RefPolicy)
-            ref_policy_cls = RayClassWithInitArgs(self.role_worker_mapping[Role.RefPolicy], config=self.config.actor_rollout_ref, role="ref")
+            # Use 'actor_rollout' role if regularization is enabled to allow sequence generation
+            # while avoiding the redundant ref model built by 'actor_rollout_ref'
+            ref_role = "actor_rollout" if self.reg_enabled else "ref"
+            ref_policy_cls = RayClassWithInitArgs(self.role_worker_mapping[Role.RefPolicy], config=self.config.actor_rollout_ref, role=ref_role)
             self.resource_pool_to_cls[resource_pool]["ref"] = ref_policy_cls
 
         # create a reward model if reward_fn is None
@@ -1213,17 +1224,26 @@ class RayPPOTrainer:
             wg_kwargs["ray_wait_register_center_timeout"] = self.config.trainer.ray_wait_register_center_timeout
 
         for resource_pool, class_dict in self.resource_pool_to_cls.items():
-            worker_dict_cls = create_colocated_worker_cls(class_dict=class_dict)
-            wg_dict = self.ray_worker_group_cls(resource_pool=resource_pool, ray_cls_with_init=worker_dict_cls, device_name=self.device_name, **wg_kwargs)
-            spawn_wg = wg_dict.spawn(prefix_set=class_dict.keys())
-            all_wg.update(spawn_wg)
+            # If reg_enabled is True, we move "ref" out of colocation to avoid vLLM process conflict.
+            # They will share the GPU via Ray's fractional GPU support (num_gpus=0.5).
+            if self.reg_enabled and "ref" in class_dict:
+                ref_cls = class_dict.pop("ref")
+                ref_wg_dict = self.ray_worker_group_cls(resource_pool=resource_pool, ray_cls_with_init=ref_cls, device_name=self.device_name, **wg_kwargs)
+                spawn_ref_wg = ref_wg_dict.spawn(prefix_set=["ref"])
+                all_wg.update(spawn_ref_wg)
+
+            if class_dict:
+                worker_dict_cls = create_colocated_worker_cls(class_dict=class_dict)
+                wg_dict = self.ray_worker_group_cls(resource_pool=resource_pool, ray_cls_with_init=worker_dict_cls, device_name=self.device_name, **wg_kwargs)
+                spawn_wg = wg_dict.spawn(prefix_set=class_dict.keys())
+                all_wg.update(spawn_wg)
 
         if self.use_critic:
             self.critic_wg = all_wg["critic"]
             self.critic_wg.init_model()
             print("[Init] ✅ Critic worker initialized.")
 
-        if self.use_reference_policy and not self.ref_in_actor:
+        if self.use_reference_policy:
             self.ref_policy_wg = all_wg["ref"]
             self.ref_policy_wg.init_model()
             print("[Init] ✅ Reference policy initialized.")
@@ -1770,6 +1790,9 @@ class RayPPOTrainer:
         metrics = {}
         if not self.score_mode_enabled and not self.mlmt_enabled:
             return metrics
+        
+        prefix = "mlmt" if self.mlmt_enabled else "score"
+
         score_values = batch.non_tensor_batch.get("score_turn_reward")
         if score_values is None:
             return metrics
@@ -1787,6 +1810,8 @@ class RayPPOTrainer:
 
         score_turn_reward = _to_tensor("score_turn_reward")
         score_turn1_reward = _to_tensor("score_turn1_reward")
+        llm_success_scores = _to_tensor("llm_success")
+
         turn_tensor = turn_tensor.to(device=device, dtype=torch.long)
         token_scores = batch.batch["token_level_scores"]
         token_scores.zero_()
@@ -1796,15 +1821,14 @@ class RayPPOTrainer:
         if "old_log_probs" in batch.batch and "ref_log_prob" in batch.batch:
             seq_kl = ((batch.batch["old_log_probs"] - batch.batch["ref_log_prob"]) * response_mask).sum(dim=-1)
         else:
-            metrics["score/kl_missing"] = 1.0
+            metrics[f"{prefix}/kl_missing"] = 1.0
 
         turn1_mask = turn_tensor == 1
         turn2_mask = turn_tensor == 2
         turn3_mask = turn_tensor == 3
 
         stage_idx = stage_id or (self.score_stage_tracker.stage_id() if self.score_stage_tracker else 1)
-        stage_name = self.score_stage_tracker.current_stage().get("name", f"stage{stage_idx}") if self.score_stage_tracker else f"stage{stage_idx}"
-        metrics["score/stage_id"] = float(stage_idx)
+        metrics[f"{prefix}/stage_id"] = float(stage_idx)
 
         coeffs = stage_coeffs or self.stage_coeffs
         beta2 = float(coeffs.get("beta2", 0.0))
@@ -1825,6 +1849,11 @@ class RayPPOTrainer:
                 # Turn 2: Feedback optimized for final reward (beta_H)
                 if turn2_mask.any():
                     turn2_values = score_turn_reward.clone()
+                    if self.reg_enabled:
+                        score_ref_reward = _to_tensor("score_ref_reward")
+                        turn2_values = (1.0 + self.reg_lambda) * score_turn_reward - self.reg_lambda * score_ref_reward
+                        metrics[f"{prefix}/reg_bonus_mean"] = float((turn2_values - score_turn_reward).mean().item())
+
                     if beta_H != 0.0:
                         turn2_values = turn2_values - beta_H * seq_kl
                     self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
@@ -1847,6 +1876,11 @@ class RayPPOTrainer:
                 # Turn 2: Feedback Turn 2 correctness (final reward) + beta_H KL
                 if turn2_mask.any():
                     turn2_values = score_turn_reward.clone()
+                    if self.reg_enabled:
+                        score_ref_reward = _to_tensor("score_ref_reward")
+                        turn2_values = (1.0 + self.reg_lambda) * score_turn_reward - self.reg_lambda * score_ref_reward
+                        metrics[f"{prefix}/reg_bonus_mean"] = float((turn2_values - score_turn_reward).mean().item())
+
                     if beta_H != 0.0:
                         turn2_values = turn2_values - beta_H * seq_kl
                     self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
@@ -1855,7 +1889,7 @@ class RayPPOTrainer:
                 if turn3_mask.any():
                     turn3_values = score_turn_reward.clone()
                     progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
-                    metrics["score/progress_bonus_mean"] = float(progress_bonus[turn3_mask].mean().item())
+                    metrics[f"{prefix}/progress_bonus_mean"] = float(progress_bonus[turn3_mask].mean().item())
                     turn3_values = turn3_values + progress_bonus
                     if beta_L != 0.0:
                         turn3_values = turn3_values - beta_L * seq_kl
@@ -1875,7 +1909,7 @@ class RayPPOTrainer:
                 if beta_t1_stage1 != 0.0 and turn1_mask.any():
                     penalty = -beta_t1_stage1 * seq_kl
                     self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, penalty)
-                metrics["score/turn1_rewarded"] = 0.0
+                metrics[f"{prefix}/turn1_rewarded"] = 0.0
             else:
                 if reward_turn1_stage2 and turn1_mask.any():
                     turn1_values = score_turn_reward.clone()
@@ -1886,33 +1920,37 @@ class RayPPOTrainer:
                 turn2_values = score_turn_reward.clone()
                 progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
                 if turn2_mask.any():
-                    metrics["score/progress_bonus_mean"] = float(progress_bonus[turn2_mask].mean().item())
+                    metrics[f"{prefix}/progress_bonus_mean"] = float(progress_bonus[turn2_mask].mean().item())
                     prev = score_turn1_reward[turn2_mask]
                     curr = score_turn_reward[turn2_mask]
                     wrong_to_right = torch.logical_and(prev < 0.5, curr >= 0.5)
                     right_to_wrong = torch.logical_and(prev >= 0.5, curr < 0.5)
-                    metrics["score/wrong_to_right_rate"] = float(wrong_to_right.float().mean().item())
-                    metrics["score/right_to_wrong_rate"] = float(right_to_wrong.float().mean().item())
+                    metrics[f"{prefix}/wrong_to_right_rate"] = float(wrong_to_right.float().mean().item())
+                    metrics[f"{prefix}/right_to_wrong_rate"] = float(right_to_wrong.float().mean().item())
                 turn2_values = turn2_values + progress_bonus
                 if beta_t2 != 0.0:
                     turn2_values = turn2_values - beta_t2 * seq_kl
                 self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
 
         if turn1_mask.any():
-            metrics["score/turn1_accuracy"] = float(score_turn_reward[turn1_mask].mean().item())
-            metrics["score/kl_turn1_mean"] = float(seq_kl[turn1_mask].mean().item())
+            metrics[f"{prefix}/turn1_accuracy"] = float(score_turn_reward[turn1_mask].mean().item())
+            metrics[f"{prefix}/llm_judge_turn1_accuracy"] = float(llm_success_scores[turn1_mask].mean().item())
+            metrics[f"{prefix}/kl_turn1_mean"] = float(seq_kl[turn1_mask].mean().item())
             # --- MODIFICATION: EXPLICIT CONSOLE LOGGING ---
-            t1_acc = metrics["score/turn1_accuracy"]
-            print(f"📊 [CORRECTNESS] Turn 1 Average Accuracy: {t1_acc:.4f}")
+            t1_llm = metrics[f"{prefix}/llm_judge_turn1_accuracy"]
+            print(f"📊 [{prefix.upper()}] Turn 1 LLM Success: {t1_llm:.4f}")
         if turn2_mask.any():
-            metrics["score/turn2_accuracy"] = float(score_turn_reward[turn2_mask].mean().item())
-            metrics["score/kl_turn2_mean"] = float(seq_kl[turn2_mask].mean().item())
+            metrics[f"{prefix}/turn2_accuracy"] = float(score_turn_reward[turn2_mask].mean().item())
+            metrics[f"{prefix}/kl_turn2_mean"] = float(seq_kl[turn2_mask].mean().item())
         if turn3_mask.any():
-            metrics["score/turn3_accuracy"] = float(score_turn_reward[turn3_mask].mean().item())
-            metrics["score/kl_turn3_mean"] = float(seq_kl[turn3_mask].mean().item())
+            metrics[f"{prefix}/turn3_accuracy"] = float(score_turn_reward[turn3_mask].mean().item())
+            metrics[f"{prefix}/llm_judge_turn3_accuracy"] = float(llm_success_scores[turn3_mask].mean().item())
+            metrics[f"{prefix}/kl_turn3_mean"] = float(seq_kl[turn3_mask].mean().item())
             # --- MODIFICATION: EXPLICIT CONSOLE LOGGING ---
-            t3_acc = metrics["score/turn3_accuracy"]
-            print(f"📊 [CORRECTNESS] Turn 3 Average Accuracy: {t3_acc:.4f}")
+            t3_llm = metrics[f"{prefix}/llm_judge_turn3_accuracy"]
+            print(f"📊 [{prefix.upper()}] Turn 3 LLM Success: {t3_llm:.4f}")
+
+        return metrics
 
         return metrics
 
@@ -2000,6 +2038,13 @@ class RayPPOTrainer:
                 if self.hierarchical_manager.enabled:
                     gen_batch = self.hierarchical_manager.prepare_batch(gen_batch, split="train")
 
+                if self.reg_enabled and self.global_steps % self.reg_gap == 0:
+                    if self.use_reference_policy:
+                        print(f"🔄 [Contrastive Reg] Syncing reference Solver at step {self.global_steps}")
+                        checkpoint_path = os.path.join(self.config.trainer.default_local_dir, "reg_ref_checkpoint")
+                        self.actor_rollout_wg.save_checkpoint(checkpoint_path)
+                        self.ref_policy_wg.load_checkpoint(checkpoint_path)
+
                 is_last_step = self.global_steps >= self.total_training_steps
                 with _timer("step", timing_raw):
                     # generate a batch
@@ -2016,7 +2061,11 @@ class RayPPOTrainer:
                             openai_agent=self.openai_agent,
                             high_actor_rollout_wg=self.high_actor_rollout_wg,
                             global_steps=self.global_steps,
+                            reg_ref_solver_wg=self.ref_policy_wg if self.reg_enabled else None,
                         )
+                        # Add success metrics from LLM Judge if present in non_tensor_batch
+                        # They are usually already in gen_batch_output, but we can log them here too
+                        pass
                     if self.config.algorithm.adv_estimator == AdvantageEstimator.REMAX:
                         with _timer("gen_max", timing_raw):
                             gen_baseline_batch = deepcopy(gen_batch)
@@ -2109,8 +2158,9 @@ class RayPPOTrainer:
                                 dump_path=rollout_data_dir,
                             )
 
-                    value_metrics = self._update_value_worker(value_training_buffer)
-                    metrics.update(value_metrics)
+                    if not self.reg_enabled:
+                        value_metrics = self._update_value_worker(value_training_buffer)
+                        metrics.update(value_metrics)
 
                     # validate
                     if self.val_reward_fn is not None and self.config.trainer.test_freq > 0 and (is_last_step or self.global_steps % self.config.trainer.test_freq == 0):
@@ -2132,8 +2182,9 @@ class RayPPOTrainer:
                     }
                 )
                 if self.score_mode_enabled and self.score_stage_tracker is not None:
-                    metrics["score/stage_id"] = float(self.score_stage_tracker.stage_id())
-                    metrics["score/stage_name"] = self.score_stage_tracker.current_stage().get("name", f"stage{self.score_stage_tracker.stage_id()}")
+                    prefix = "mlmt" if self.mlmt_enabled else "score"
+                    metrics[f"{prefix}/stage_id"] = float(self.score_stage_tracker.stage_id())
+                    metrics[f"{prefix}/stage_name"] = self.score_stage_tracker.current_stage().get("name", f"stage{self.score_stage_tracker.stage_id()}")
                 # collect metrics
                 metrics.update(compute_data_metrics(batch=batch, use_critic=self.use_critic))
                 metrics.update(compute_timing_metrics(batch=batch, timing_raw=timing_raw))

@@ -1,24 +1,18 @@
 #!/bin/bash
 set -euo pipefail
 
-# Combined HLT_LLT_RR 1:50 - Stage 1 (240 samples) + Stage 2 (1020 samples)
+# HLT_LLT_RR 1:10:5 - Bi-Level Contrastive Regularization
+# HL update: 1, LL update: 10, Reg Gap: 5
 SHARED_MODEL=${1:-meta-llama/Llama-3.2-1B-Instruct}
-SAVE_DIR=${2:-/home/ssmurali/mlmt/checkpoints/math/HLT_LLT_RR_1_50_combined}
-VALUE_MODEL=${3:-roberta-base}
+SAVE_DIR=${2:-/home/ssmurali/mlmt/checkpoints/math/HLT_LLT_RR_1_10_5}
 mkdir -p "$SAVE_DIR"
 
 export OPENAI_API_KEY=${OPENAI_API_KEY}
 export VLLM_ATTENTION_BACKEND=XFORMERS
 export WANDB_MODE=online
 
-if [ -z "${RUN_NAME:-}" ]; then
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-RUN_NAME="HLT_LLT_RR_1_50_combined_${TIMESTAMP}"
-else
-    echo "Resuming experiment: $RUN_NAME"
-fi
-LOG_DIR="logs/mlmt/math/${RUN_NAME}"
-mkdir -p "$LOG_DIR"
+RUN_NAME="HLT_LLT_RR_1_10_5_${TIMESTAMP}"
 
 python -m verl.trainer.main_ppo \
     data.train_files=/home/ssmurali/mlmt/data/mlmt/math/train_1020.parquet \
@@ -36,7 +30,6 @@ python -m verl.trainer.main_ppo \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=50 \
-    trainer.resume_mode=auto \
     trainer.total_training_steps=400 \
     +trainer.lora_only_save=false \
     actor_rollout_ref.model.path=$SHARED_MODEL \
@@ -72,10 +65,12 @@ python -m verl.trainer.main_ppo \
     mlmt_rl.low_level.algorithm=reinforce \
     mlmt_rl.low_level.freeze=false \
     +mlmt_rl.high_level.update_frequency=1 \
-    +mlmt_rl.low_level.update_frequency=50 \
+    +mlmt_rl.low_level.update_frequency=10 \
     +mlmt_rl.high_level.max_tokens=512 \
-    mlmt_rl.value_fn.model_path=$VALUE_MODEL \
     mlmt_rl.use_llm_success_eval=true \
+    +mlmt_rl.reg_enabled=true \
+    +mlmt_rl.reg_lambda=1.0 \
+    +mlmt_rl.reg_gap=5 \
     +mlmt_rl.stage_control.stage_id=1 \
     +mlmt_rl.stage_control.beta2=0.1 \
     +mlmt_rl.stage_control.beta1=0.0 \

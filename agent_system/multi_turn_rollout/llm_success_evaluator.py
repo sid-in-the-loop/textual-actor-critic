@@ -5,17 +5,20 @@ from typing import List, Dict, Optional
 from openai import OpenAI
 from concurrent.futures import ThreadPoolExecutor
 
-PROMPT_TEMPLATE = """You are an expert math grader. Your task is to determine if a student's answer is mathematically equivalent to the ground truth answer.
+PROMPT_TEMPLATE = """Evaluate if the student's answer successfully generated a final answer and if it matches the ground truth.
 
-Guidelines:
+**EVALUATION RULES:**
 1. Focus on mathematical equivalence, not formatting.
 2. If the ground truth is a fraction like 1/2, then 0.5 is correct.
-3. If the ground truth is a simplified expression, the student's answer must be equivalent.
-4. Be strict but fair.
+3. If the model provides a final answer (in any form: boxed, unboxed, stated clearly, etc.), extract it and compare with ground truth.
+4. **FLEXIBILITY:** Answers match if they contain the same core factual/mathematical information. Allow for minor wording differences, different but equivalent mathematical forms, or a very small margin of numerical error if applicable. If it "resembles" the ground truth in substance, mark it correct.
+5. Default to incorrect only if there is a clear conceptual mismatch or a significant numerical error.
+
+**TASK:** Determine if a final answer exists and if it matches ground truth. Binary decision: correct or incorrect.
 
 Problem: {question}
-Ground Truth: {ground_truth}
-Predicted Answer: {answer}
+Ground Truth Answer: {ground_truth}
+Student's Response: {answer}
 
 Please respond with a JSON object:
 {{

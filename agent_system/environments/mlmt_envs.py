@@ -145,9 +145,11 @@ class MLMTMathEnvironmentManager(EnvironmentManagerBase):
                 asyncio.set_event_loop(self._event_loop)
         return self._event_loop
 
-    def reset(self):
+    def reset(self, num=None):
+        if num is None:
+            num = self.env_num
         questions, grounds, ids = [], [], []
-        for _ in range(self.env_num):
+        for _ in range(num):
             if self.use_local:
                 row = self.df.iloc[self.last_idx % len(self.df)]
                 # Check format from prepare_math_csv.py
@@ -476,9 +478,11 @@ class MLMTPhysicsEnvironmentManager(EnvironmentManagerBase):
         
         self.current_grounds = None
 
-    def reset(self):
+    def reset(self, num=None):
+        if num is None:
+            num = self.env_num
         questions, grounds, ids = [], [], []
-        for _ in range(self.env_num):
+        for _ in range(num):
             if self.use_local:
                 row = self.df.iloc[self.last_idx % len(self.df)]
                 prompt_data = row['prompt']
