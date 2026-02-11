@@ -13,8 +13,8 @@ def extract_math_final_answer(text: str) -> str:
     if boxed_match:
         return boxed_match.group(1).strip()
     
-    # 2. Search for "The final answer is: ..." or "The answer is: ..."
-    ans_match = re.search(r'(?:The final answer is|The answer is|Final Answer):\s*(.*)', text, re.IGNORECASE)
+    # 2. Search for "The final answer is: ...", "The answer is: ...", "Answer: ...", or "Final Answer: ..."
+    ans_match = re.search(r'(?:The final answer is|The answer is|Final Answer|Answer):\s*(.*)', text, re.IGNORECASE)
     if ans_match:
         return ans_match.group(1).strip()
     
@@ -60,7 +60,7 @@ Thinking Process:
 1. Analyze the received feedback and identify where the previous attempt went wrong.
 2. Identify the core components of the problem.
 3. Think through step-by-step and solve the problem correctly.
-5. State the final answer in the required format: "The final answer is: \\boxed{{...}}".
+5. State the final answer in the required format: "Answer: $Answer".
 
 Thinking Process:
 Solve the following math problem step by step."""

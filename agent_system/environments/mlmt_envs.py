@@ -186,11 +186,11 @@ class MLMTMathEnvironmentManager(EnvironmentManagerBase):
         return {'text': questions, 'image': None, 'anchor': questions}, infos
 
     async def _compute_scores_async(self, text_actions: List[str]):
-        from verl.utils.reward_score.math import compute_score_async
+        from verl.utils.reward_score.math import compute_score_simple_async
         import asyncio
         tasks = []
         for i in range(len(text_actions)):
-            tasks.append(compute_score_async(text_actions[i], self.current_grounds[i], use_semantic=True))
+            tasks.append(compute_score_simple_async(text_actions[i], self.current_grounds[i]))
         return await asyncio.gather(*tasks)
 
     def step(self, text_actions: List[str]):

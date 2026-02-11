@@ -630,6 +630,124 @@ class TrajectoryCollector:
             plt.close()
             return None
 
+    def null_feedback_multi_turn_loop(
+            self,
+            gen_batch: DataProto,
+            actor_rollout_wg,
+            envs: EnvironmentManagerBase,
+            num_turns: int = 2,
+            global_steps: int = 0,
+            ) -> DataProto:
+        """
+        Rollout loop for experiments where we repeat the refinement with null feedback.
+        """
+        loop_start = time.time()
+        low_tokenizer = self.tokenizer
+        
+        # Initial observations from the environment
+        obs, infos = envs.reset()
+        base_batch_size = len(obs['text'])
+        total_samples = base_batch_size
+        
+        questions = []
+        ground_truths = []
+        for i, info in enumerate(infos):
+            q = info.get('question') or gen_batch.non_tensor_batch.get('prompt')[i]
+            questions.append(str(q))
+            gt = info.get('ground_truth') or gen_batch.non_tensor_batch.get('answer')[i]
+            ground_truths.append(str(gt))
+
+        # We'll store data for each turn
+        turn_data_list = []
+        current_responses = None
+        
+        # Turn 1: Initial solution
+        turn1_prompts = [prepare_mlmt_turn1_prompt(q) for q in questions]
+        turn1_obs = {'text': turn1_prompts, 'image': None, 'anchor': None}
+        turn1_batch = self.preprocess_batch(gen_batch=gen_batch, obs=turn1_obs, tokenizer=low_tokenizer)
+        
+        batch_input_t1 = turn1_batch.pop(batch_keys=["input_ids", "attention_mask", "position_ids"], non_tensor_batch_keys=["raw_prompt_ids"])
+        batch_input_t1.meta_info = gen_batch.meta_info
+        batch_input_t1.meta_info['max_tokens'] = self.config.data.max_response_length
+        batch_input_t1.meta_info['n'] = 1
+        
+        print(f"[Null Feedback Loop] Turn 1: Generating initial solutions...")
+        batch_output_t1 = actor_rollout_wg.generate_sequences(batch_input_t1)
+        current_responses = low_tokenizer.batch_decode(batch_output_t1.batch['responses'], skip_special_tokens=True)
+        
+        # Evaluate Turn 1
+        llm_turn1_scores = np.array(envs.compute_score(current_responses, ground_truths), dtype=np.float32)
+        
+        t1_batch_full = turn1_batch.union(batch_output_t1)
+        t1_batch_full.batch['prompts'] = turn1_batch.batch['input_ids']
+        t1_dict_list = to_list_of_dict(t1_batch_full)
+        for i in range(total_samples):
+            t1_dict_list[i].update({
+                'turn': 1,
+                'active_masks': True,
+                'score_turn_reward': float(llm_turn1_scores[i]),
+                'score_turn1_reward': float(llm_turn1_scores[i]),
+            })
+        turn_data_list.append(t1_dict_list)
+        
+        # Subsequent Turns: Refinement with null feedback
+        for t in range(2, num_turns + 1):
+            print(f"[Null Feedback Loop] Turn {t}: Refining with null feedback...")
+            
+            # Prepare refinement prompt with null feedback
+            # Using current_responses from previous turn
+            turn_prompts = [prepare_mlmt_refinement_prompt(q, extract_math_final_answer(ans), "") for q, ans in zip(questions, current_responses)]
+            turn_obs = {'text': turn_prompts, 'image': None, 'anchor': None}
+            turn_batch = self.preprocess_batch(gen_batch=gen_batch, obs=turn_obs, tokenizer=low_tokenizer)
+            
+            batch_input = turn_batch.pop(batch_keys=["input_ids", "attention_mask", "position_ids"], non_tensor_batch_keys=["raw_prompt_ids"])
+            batch_input.meta_info = gen_batch.meta_info
+            batch_input.meta_info['max_tokens'] = self.config.data.max_response_length
+            batch_input.meta_info['n'] = 1
+            
+            batch_output = actor_rollout_wg.generate_sequences(batch_input)
+            current_responses = low_tokenizer.batch_decode(batch_output.batch['responses'], skip_special_tokens=True)
+            
+            # Evaluate current turn
+            llm_scores = np.array(envs.compute_score(current_responses, ground_truths), dtype=np.float32)
+            
+            t_batch_full = turn_batch.union(batch_output)
+            t_batch_full.batch['prompts'] = turn_batch.batch['input_ids']
+            t_dict_list = to_list_of_dict(t_batch_full)
+            for i in range(total_samples):
+                t_dict_list[i].update({
+                    'turn': t,
+                    'active_masks': True,
+                    'score_turn_reward': float(llm_scores[i]),
+                    'score_turn1_reward': float(llm_turn1_scores[i]),
+                })
+            turn_data_list.append(t_dict_list)
+
+        # Final reward for the episode is the last turn's score
+        final_scores = np.array([turn_data_list[-1][i]['score_turn_reward'] for i in range(total_samples)])
+        
+        # Assemble total_batch_list
+        total_batch_list = [[] for _ in range(total_samples)]
+        traj_uids = [str(uuid.uuid4()) for _ in range(total_samples)]
+        base_uids = [str(uuid.uuid4()) for _ in range(total_samples)]
+        
+        for t_idx, t_data in enumerate(turn_data_list):
+            for i in range(total_samples):
+                t_data[i].update({
+                    'uid': f"{base_uids[i]}_turn{t_idx+1}",
+                    'traj_uid': traj_uids[i],
+                    'episode_rewards': float(final_scores[i]),
+                    'episode_lengths': float(num_turns),
+                })
+                total_batch_list[i].append(t_data[i])
+        
+        success = {'success': (final_scores > 0)}
+        for t in range(1, num_turns + 1):
+            success[f'turn{t}_success_rate'] = np.array([turn_data_list[t-1][i]['score_turn_reward'] for i in range(total_samples)])
+
+        print(f"⏱️ Total Null Feedback Rollout Loop took {time.time() - loop_start:.2f}s")
+        return total_batch_list, final_scores, np.array([num_turns]*total_samples), success, np.array(traj_uids, dtype=object), []
+
     def vanilla_multi_turn_loop(
             self,
             gen_batch: DataProto, 
@@ -1921,6 +2039,16 @@ class TrajectoryCollector:
                 openai_agent=openai_agent,
                 global_steps=global_steps,
                 reg_ref_solver_wg=reg_ref_solver_wg,
+            )
+        elif self.mlmt_cfg.get("null_feedback_experiment", False) and is_train:
+            num_turns = self.mlmt_cfg.get("num_turns", 2)
+            total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid, belief_trajectories = \
+                self.null_feedback_multi_turn_loop(
+                gen_batch=gen_batch,
+                actor_rollout_wg=actor_rollout_wg,
+                envs=envs,
+                num_turns=num_turns,
+                global_steps=global_steps,
             )
         elif self.score_mode_enabled and is_train:
             total_batch_list, total_episode_rewards, total_episode_lengths, total_success, total_traj_uid = \

@@ -142,6 +142,20 @@ async def compute_score_async(solution_str, ground_truth, extra_info=None, use_s
 
     return retval
 
+async def compute_score_simple_async(solution_str, ground_truth, **kwargs) -> float:
+    """Simple version that checks if ground truth exists in the solution string."""
+    if not ground_truth:
+        return 0.0
+    
+    # Basic normalization: strip whitespace and convert to string
+    gt = str(ground_truth).strip()
+    sol = str(solution_str)
+    
+    # Check for exact match or existence
+    if gt in sol:
+        return 1.0
+    return 0.0
+
 def _evaluate_semantic(full_response: str, ground_truth: str, question: str = "Math problem") -> Tuple[bool, str]:
     """Soft evaluation of FULL response vs ground truth using OpenAI GPT-4o-mini.
     

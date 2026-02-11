@@ -1838,62 +1838,45 @@ class RayPPOTrainer:
         alpha = float(coeffs.get("alpha", 0.0))
 
         if self.mlmt_enabled:
-            # Hierarchical Feedback (3-turn) logic
+            # Hierarchical Feedback (Multi-turn) logic
             if stage_idx == 1:
-                # Stage I: Solver optimized for final correctness only; T1 KL constrained.
-                # Turn 1: KL penalty only (beta2)
-                if turn1_mask.any():
-                    penalty = -beta2 * seq_kl
-                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, penalty)
+                # Stage I: Mode collapse - maximize only the final turn reward.
+                # All intermediate turns get only KL penalty (beta2)
+                max_turn = int(turn_tensor.max().item())
+                for t in range(1, max_turn):
+                    if (turn_tensor == t).any():
+                        penalty = -beta2 * seq_kl
+                        self._assign_last_token_reward(token_scores, response_mask, turn_tensor, t, penalty)
                 
-                # Turn 2: Feedback optimized for final reward (beta_H)
-                if turn2_mask.any():
-                    turn2_values = score_turn_reward.clone()
-                    if self.reg_enabled:
-                        score_ref_reward = _to_tensor("score_ref_reward")
-                        turn2_values = (1.0 + self.reg_lambda) * score_turn_reward - self.reg_lambda * score_ref_reward
-                        metrics[f"{prefix}/reg_bonus_mean"] = float((turn2_values - score_turn_reward).mean().item())
-
-                    if beta_H != 0.0:
-                        turn2_values = turn2_values - beta_H * seq_kl
-                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
-                
-                # Turn 3: Solver Revision optimized for final reward (beta_L)
-                if turn3_mask.any():
-                    turn3_values = score_turn_reward.clone()
+                # Final Turn: Optimized for final reward
+                if (turn_tensor == max_turn).any():
+                    final_values = score_turn_reward.clone()
                     if beta_L != 0.0:
-                        turn3_values = turn3_values - beta_L * seq_kl
-                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 3, turn3_values)
+                        final_values = final_values - beta_L * seq_kl
+                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, max_turn, final_values)
             else:
-                # Stage II: Joint optimization with progress shaping
-                # Turn 1: Solver Turn 1 correctness + beta1 KL
-                if turn1_mask.any():
+                # Stage II: Joint optimization with progress shaping (delta rewards)
+                max_turn = int(turn_tensor.max().item())
+                
+                # Turn 1: Correctness + KL
+                if (turn_tensor == 1).any():
                     turn1_values = score_turn_reward.clone()
                     if beta1 != 0.0:
                         turn1_values = turn1_values - beta1 * seq_kl
                     self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 1, turn1_values)
                 
-                # Turn 2: Feedback Turn 2 correctness (final reward) + beta_H KL
-                if turn2_mask.any():
-                    turn2_values = score_turn_reward.clone()
-                    if self.reg_enabled:
-                        score_ref_reward = _to_tensor("score_ref_reward")
-                        turn2_values = (1.0 + self.reg_lambda) * score_turn_reward - self.reg_lambda * score_ref_reward
-                        metrics[f"{prefix}/reg_bonus_mean"] = float((turn2_values - score_turn_reward).mean().item())
-
-                    if beta_H != 0.0:
-                        turn2_values = turn2_values - beta_H * seq_kl
-                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
-                
-                # Turn 3: Solver Revision correctness + progress bonus + beta_L KL
-                if turn3_mask.any():
-                    turn3_values = score_turn_reward.clone()
-                    progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
-                    metrics[f"{prefix}/progress_bonus_mean"] = float(progress_bonus[turn3_mask].mean().item())
-                    turn3_values = turn3_values + progress_bonus
-                    if beta_L != 0.0:
-                        turn3_values = turn3_values - beta_L * seq_kl
-                    self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 3, turn3_values)
+                # Intermediate and Final Turns: Correctness + Progress Bonus + KL
+                for t in range(2, max_turn + 1):
+                    if (turn_tensor == t).any():
+                        turn_values = score_turn_reward.clone()
+                        progress_bonus = alpha * (score_turn_reward - score_turn1_reward)
+                        metrics[f"{prefix}/turn{t}_progress_bonus_mean"] = float(progress_bonus[turn_tensor == t].mean().item())
+                        turn_values = turn_values + progress_bonus
+                        
+                        beta_t = beta_L if t == max_turn else beta_H
+                        if beta_t != 0.0:
+                            turn_values = turn_values - beta_t * seq_kl
+                        self._assign_last_token_reward(token_scores, response_mask, turn_tensor, t, turn_values)
         else:
             # Baseline SCoRe (2-turn) logic
             beta_t1_stage1 = float(self.score_mode_cfg.get("beta_turn1_stage1", beta2))
@@ -1932,23 +1915,19 @@ class RayPPOTrainer:
                     turn2_values = turn2_values - beta_t2 * seq_kl
                 self._assign_last_token_reward(token_scores, response_mask, turn_tensor, 2, turn2_values)
 
-        if turn1_mask.any():
-            metrics[f"{prefix}/turn1_accuracy"] = float(score_turn_reward[turn1_mask].mean().item())
-            metrics[f"{prefix}/llm_judge_turn1_accuracy"] = float(llm_success_scores[turn1_mask].mean().item())
-            metrics[f"{prefix}/kl_turn1_mean"] = float(seq_kl[turn1_mask].mean().item())
-            # --- MODIFICATION: EXPLICIT CONSOLE LOGGING ---
-            t1_llm = metrics[f"{prefix}/llm_judge_turn1_accuracy"]
-            print(f"📊 [{prefix.upper()}] Turn 1 LLM Success: {t1_llm:.4f}")
-        if turn2_mask.any():
-            metrics[f"{prefix}/turn2_accuracy"] = float(score_turn_reward[turn2_mask].mean().item())
-            metrics[f"{prefix}/kl_turn2_mean"] = float(seq_kl[turn2_mask].mean().item())
-        if turn3_mask.any():
-            metrics[f"{prefix}/turn3_accuracy"] = float(score_turn_reward[turn3_mask].mean().item())
-            metrics[f"{prefix}/llm_judge_turn3_accuracy"] = float(llm_success_scores[turn3_mask].mean().item())
-            metrics[f"{prefix}/kl_turn3_mean"] = float(seq_kl[turn3_mask].mean().item())
-            # --- MODIFICATION: EXPLICIT CONSOLE LOGGING ---
-            t3_llm = metrics[f"{prefix}/llm_judge_turn3_accuracy"]
-            print(f"📊 [{prefix.upper()}] Turn 3 LLM Success: {t3_llm:.4f}")
+        # Log accuracy and KL for each turn dynamically
+        max_turn = int(turn_tensor.max().item())
+        for t in range(1, max_turn + 1):
+            mask = (turn_tensor == t)
+            if mask.any():
+                metrics[f"{prefix}/turn{t}_accuracy"] = float(score_turn_reward[mask].mean().item())
+                metrics[f"{prefix}/kl_turn{t}_mean"] = float(seq_kl[mask].mean().item())
+                if t == 1:
+                    metrics[f"{prefix}/llm_judge_turn1_accuracy"] = float(llm_success_scores[mask].mean().item())
+                    print(f"📊 [{prefix.upper()}] Turn 1 LLM Success: {metrics[f'{prefix}/llm_judge_turn1_accuracy']:.4f}")
+                elif t == max_turn:
+                    metrics[f"{prefix}/llm_judge_turn{t}_accuracy"] = float(llm_success_scores[mask].mean().item())
+                    print(f"📊 [{prefix.upper()}] Turn {t} LLM Success: {metrics[f'{prefix}/llm_judge_turn{t}_accuracy']:.4f}")
 
         return metrics
 
